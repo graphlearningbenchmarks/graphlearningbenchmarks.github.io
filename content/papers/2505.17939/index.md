@@ -84,40 +84,6 @@ results:
 - &id001
   dataset: Roman-empire
   rows:
-  - model: Dir-NT
-    model_key: dir-nt
-    model_plain: Dir-NT
-    value: 0.9477
-    std: 0.0031
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2604.08980'
-    title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware Graph
-      Learning'
-    date: Apr 10, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-10'
-    venue: arXiv.org
-    codebase_url: https://github.com/cf020031308/MoNT
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9477
-    sort_std: 0.0031
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
   - model: Dir-Poly
     model_key: dir-poly
     model_plain: Dir-Poly
@@ -144,7 +110,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 1
     sort_value: 0.9451
     sort_std: 0.0022
     comparison_type: global_top
@@ -177,9 +143,42 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 2
     sort_value: 0.9387
     sort_std: 0.0041
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: LargeScaleNet
+    model_key: largescalenet
+    model_plain: LargeScaleNet
+    value: 0.9358
+    std: 0.0024
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2411.19392'
+    title: Scale-aware Message Passing For Graph Node Classification
+    date: Nov 28, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-28'
+    venue: null
+    codebase_url: https://github.com/Qin87/ScaleNet
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9358
+    sort_std: 0.0024
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -242,8 +241,8 @@ results:
     value_note: ''
     sort_value: 0.9352
     sort_std: 0.0028
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 4
+    paper_rank: 4
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -311,8 +310,8 @@ results:
     value_note: ''
     sort_value: 0.9266
     sort_std: 0.006
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -359,8 +358,8 @@ results:
       Time'
     at_pub_source_date_iso: '2024-03-02'
     at_pub_source_date_label: ICLR 2024
-    value_gap_source_date_iso: '2026-04-10'
-    value_gap_source_date_label: '2026'
+    value_gap_source_date_iso: '2025-05-28'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -371,17 +370,16 @@ results:
     today_delta_significant: false
     true_value: 0.9123
     true_std: 0.0032
-    value_gap_source_arxiv: '2604.08980'
-    value_gap_source_title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware
-      Graph Learning'
+    value_gap_source_arxiv: '2505.22362'
+    value_gap_source_title: Directed Homophily-Aware Graph Neural Network
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9123
     sort_std: 0.0032
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -448,8 +446,8 @@ results:
     value_note: ''
     sort_value: 0.9106
     sort_std: 0.0027
-    global_rank: 29
-    paper_rank: 29
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -516,8 +514,8 @@ results:
     value_note: ''
     sort_value: 0.8876
     sort_std: 0.0063
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -541,18 +539,19 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_display: Aug 2025
-    date_iso: '2025-08-07'
-    venue: arXiv.org
-    codebase_url: ''
+    arxiv_id: '2507.14484'
+    title: 'ReDiSC: A Reparameterized Masked Diffusion Model for Scalable Node Classification
+      with Structured Predictions'
+    date: Jul 19, 2025
+    date_display: Jul 2025
+    date_iso: '2025-07-19'
+    venue: null
+    codebase_url: https://github.com/liyle3/REDISC
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 72
+    global_rank: 64
     sort_value: 0.8574
     sort_std: 0.0067
     comparison_type: global_top
@@ -585,7 +584,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 151
+    global_rank: 141
     sort_value: 0.6665
     sort_std: 0.0047
     comparison_type: global_top

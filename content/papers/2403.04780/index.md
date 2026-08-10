@@ -49,29 +49,29 @@ abstract: Graphs with abundant attributes are essential in modeling interconnect
   in enhancing the accuracy of graph-oriented downstream tasks while improving the
   generation abilities of LLMs.
 codebase_url: https://github.com/Melinda315/MuseGraph
-extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+extraction_model: google/gemma-4-26B-A4B-it
 has_results: true
 paper_type: method
 proposed_models:
 - Qwen2-7B-Instruct
 - InstructGLM
 - MuseGraph (LLaMA3-8B)
-mrr: 0.0172
-adjusted_mrr: 0.0115
-mrr_dataset_count: 2
+mrr: 0.02
+adjusted_mrr: 0.0067
+mrr_dataset_count: 1
 benchmark_categories:
 - Heterogeneous Graph Benchmarks
 benchmark_coverage:
 - benchmark: Heterogeneous Graph Benchmarks
   benchmark_slug: heterogeneous-graph-benchmarks
-  evaluated: 2
+  evaluated: 1
   total: 4
 task_categories:
 - node_classification
 experiment_scopes:
 - node-level
 results:
-- &id002
+- &id001
   dataset: Freebase
   rows:
   - model: ConCH
@@ -192,14 +192,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on Freebase
+    protocol_note: Heterogeneous Node Classification on Freebase split
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -262,14 +262,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on Freebase
+    protocol_note: Heterogeneous Node Classification on Freebase split
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -331,15 +331,15 @@ results:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on Freebase
+    protocol_note: Heterogeneous Node Classification on Freebase split
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -400,14 +400,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on Freebase
+    protocol_note: Heterogeneous Node Classification on Freebase split
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -470,14 +470,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on Freebase
+    protocol_note: Heterogeneous Node Classification on Freebase split
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -540,14 +540,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on Freebase
+    protocol_note: Heterogeneous Node Classification on Freebase split
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -608,14 +608,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on Freebase
+    protocol_note: Heterogeneous Node Classification on Freebase split
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -675,14 +675,15 @@ results:
     architecture_label: LLM
     architecture_title: LLM applied to graphs
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: llm_features
+    feature_source_evidence: OFA describes diverse text-attributed graphs using human-understandable
+      prompts and encodes them into a unified embedding space via LLMs
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on Freebase
+    protocol_note: Heterogeneous Node Classification on Freebase split
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -743,14 +744,15 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: llm_features
+    feature_source_evidence: employs LLMs to automatically summarize and classify
+      heterogeneous data
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on Freebase
+    protocol_note: Heterogeneous Node Classification on Freebase split
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -810,15 +812,15 @@ results:
     architecture_type: llm
     architecture_label: LLM
     architecture_title: LLM applied to graphs
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on Freebase
+    protocol_note: Heterogeneous Node Classification on Freebase split
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -878,15 +880,15 @@ results:
     architecture_type: llm
     architecture_label: LLM
     architecture_title: LLM applied to graphs
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on Freebase
+    protocol_note: Heterogeneous Node Classification on Freebase split
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -947,14 +949,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: llm_features
+    feature_source_evidence: converts different-level tasks to the graph-level task
+      with the unified graph and language prompts
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on Freebase
+    protocol_note: Heterogeneous Node Classification on Freebase split
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -1015,14 +1018,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on Freebase
+    protocol_note: Heterogeneous Node Classification on Freebase split
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -1078,19 +1081,19 @@ results:
     is_baseline: false
     is_overridden: false
     override_reason: ''
-    params_millions: null
+    params_millions: 7000.0
     architecture_type: llm
     architecture_label: LLM
     architecture_title: LLM applied to graphs
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on Freebase
+    protocol_note: Heterogeneous Node Classification on Freebase split
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -1150,15 +1153,15 @@ results:
     architecture_type: llm
     architecture_label: LLM
     architecture_title: LLM applied to graphs
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on Freebase
+    protocol_note: Heterogeneous Node Classification on Freebase split
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -1218,15 +1221,15 @@ results:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on Freebase
+    protocol_note: Heterogeneous Node Classification on Freebase split
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -1282,19 +1285,19 @@ results:
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: null
+    params_millions: 8000.0
     architecture_type: llm
     architecture_label: LLM
     architecture_title: LLM applied to graphs
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on Freebase
+    protocol_note: Heterogeneous Node Classification on Freebase split
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -1354,15 +1357,15 @@ results:
     architecture_type: llm
     architecture_label: LLM
     architecture_title: LLM applied to graphs
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on Freebase
+    protocol_note: Heterogeneous Node Classification on Freebase split
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -1418,19 +1421,19 @@ results:
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: null
+    params_millions: 7000.0
     architecture_type: llm
     architecture_label: LLM
     architecture_title: LLM applied to graphs
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on Freebase
+    protocol_note: Heterogeneous Node Classification on Freebase split
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -1486,19 +1489,19 @@ results:
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: null
+    params_millions: 7000.0
     architecture_type: llm
     architecture_label: LLM
     architecture_title: LLM applied to graphs
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on Freebase
+    protocol_note: Heterogeneous Node Classification on Freebase split
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -1554,19 +1557,19 @@ results:
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: null
+    params_millions: 7000.0
     architecture_type: llm
     architecture_label: LLM
     architecture_title: LLM applied to graphs
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on Freebase
+    protocol_note: Heterogeneous Node Classification on Freebase split
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -1619,1590 +1622,10 @@ results:
   metric: Macro-F1
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
-  dataset: IMDB
-  rows:
-  - model: GAT BGNN(m)-SC
-    model_key: gat bgnn(m)-sc
-    model_plain: GAT BGNN(m)-SC
-    value: 0.8133
-    std: 0.0179
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-12'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: ''
-    uses_external_data: true
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.8133
-    sort_std: 0.0179
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SAGE BAN
-    model_key: sage ban
-    model_plain: SAGE BAN
-    value: 0.8073
-    std: 0.002
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-12'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: ''
-    uses_external_data: true
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.8073
-    sort_std: 0.002
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GAT BGNN(m)-CS
-    model_key: gat bgnn(m)-cs
-    model_plain: GAT BGNN(m)-CS
-    value: 0.8033
-    std: 0.0094
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-12'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: ''
-    uses_external_data: true
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.8033
-    sort_std: 0.0094
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: MuseGraph (LLaMA3-8B)
-    model_key: musegraph (llama3-8b)
-    model_plain: MuseGraph (LLaMA3-8B)
-    value: 0.7657
-    std: null
-    paper_value: 0.7657
-    paper_std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: 13.631488
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on IMDB
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7657
-    true_std: null
-    value_gap_source_arxiv: '2403.04780'
-    value_gap_source_title: Graph-oriented Instruction Tuning of Large Language Models
-      for Generic Graph Mining
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7657
-    sort_std: null
-    global_rank: 27
-    paper_rank: 27
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.6423
-    std: null
-    paper_value: 0.6423
-    paper_std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on IMDB
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.6813
-    at_pub_std: 0.0083
-    at_pub_source_arxiv: '2305.19872'
-    at_pub_source_title: Spectral Heterogeneous Graph Convolutions via Positive Noncommutative
-      Polynomials
-    at_pub_source_date_iso: '2023-05-31'
-    at_pub_source_date_label: WWW 2023
-    value_gap_source_date_iso: '2023-05-31'
-    value_gap_source_date_label: WWW 2023
-    gap_vs_at_pub: 0.039000000000000035
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.6813
-    true_std: 0.0083
-    value_gap_source_arxiv: '2305.19872'
-    value_gap_source_title: Spectral Heterogeneous Graph Convolutions via Positive
-      Noncommutative Polynomials
-    value_gap_source_is_current_paper: false
-    value_gap: 0.039000000000000035
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6813
-    sort_std: 0.0083
-    global_rank: 45
-    paper_rank: 72
-    rank_delta: 27
-    rank_delta_abs: 27
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Spectral Heterogeneous Graph Convolutions via Positive
-      Noncommutative Polynomials
-    comparison_source_arxiv: '2305.19872'
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.6428
-    std: null
-    paper_value: 0.6428
-    paper_std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on IMDB
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.6808
-    at_pub_std: 0.0049
-    at_pub_source_arxiv: '2305.19872'
-    at_pub_source_title: Spectral Heterogeneous Graph Convolutions via Positive Noncommutative
-      Polynomials
-    at_pub_source_date_iso: '2023-05-31'
-    at_pub_source_date_label: WWW 2023
-    value_gap_source_date_iso: '2023-05-31'
-    value_gap_source_date_label: WWW 2023
-    gap_vs_at_pub: 0.03799999999999992
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.6808
-    true_std: 0.0049
-    value_gap_source_arxiv: '2305.19872'
-    value_gap_source_title: Spectral Heterogeneous Graph Convolutions via Positive
-      Noncommutative Polynomials
-    value_gap_source_is_current_paper: false
-    value_gap: 0.03799999999999992
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6808
-    sort_std: 0.0049
-    global_rank: 46
-    paper_rank: 72
-    rank_delta: 26
-    rank_delta_abs: 26
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Spectral Heterogeneous Graph Convolutions via Positive
-      Noncommutative Polynomials
-    comparison_source_arxiv: '2305.19872'
-    is_best: false
-    is_std_outlier: false
-  - model: HINormer
-    model_key: hinormer
-    model_plain: HINormer
-    value: 0.6763
-    std: null
-    paper_value: 0.6763
-    paper_std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on IMDB
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.6783
-    at_pub_std: 0.0034
-    at_pub_source_arxiv: '2302.11329'
-    at_pub_source_title: 'HINormer: Representation Learning On Heterogeneous Information
-      Networks with Graph Transformer'
-    at_pub_source_date_iso: '2023-02-22'
-    at_pub_source_date_label: WWW 2023
-    value_gap_source_date_iso: '2023-10-23'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.0020000000000000018
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.6783
-    true_std: 0.0034
-    value_gap_source_arxiv: '2310.14481'
-    value_gap_source_title: Efficient Heterogeneous Graph Learning via Random Projection
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0020000000000000018
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6783
-    sort_std: 0.0034
-    global_rank: 47
-    paper_rank: 49
-    rank_delta: 2
-    rank_delta_abs: 2
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: HGT
-    model_key: hgt
-    model_plain: HGT
-    value: 0.6695
-    std: null
-    paper_value: 0.6695
-    paper_std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on IMDB
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.672
-    at_pub_std: 0.0057
-    at_pub_source_arxiv: '2112.14936'
-    at_pub_source_title: Heterogeneous Graph Benchmarks
-    at_pub_source_date_iso: '2021-08-14'
-    at_pub_source_date_label: KDD 2021
-    value_gap_source_date_iso: '2024-05-03'
-    value_gap_source_date_label: ICML 2024
-    gap_vs_at_pub: 0.0025000000000000577
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.672
-    true_std: 0.0057
-    value_gap_source_arxiv: '2405.01927'
-    value_gap_source_title: 'SlotGAT: Slot-based Message Passing for Heterogeneous
-      Graphs'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0025000000000000577
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.672
-    sort_std: 0.0057
-    global_rank: 55
-    paper_rank: 56
-    rank_delta: 1
-    rank_delta_abs: 1
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: R-GCN
-    model_key: r-gcn
-    model_plain: R-GCN
-    value: 0.6298
-    std: null
-    paper_value: 0.6298
-    paper_std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on IMDB
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.6713
-    at_pub_std: null
-    at_pub_source_arxiv: '1912.10832'
-    at_pub_source_title: An Attention-based Graph Neural Network for Heterogeneous
-      Structural Learning
-    at_pub_source_date_iso: '2019-12-19'
-    at_pub_source_date_label: AAAI 2019
-    value_gap_source_date_iso: '2019-12-19'
-    value_gap_source_date_label: AAAI 2019
-    gap_vs_at_pub: 0.04149999999999998
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.6713
-    true_std: null
-    value_gap_source_arxiv: '1912.10832'
-    value_gap_source_title: An Attention-based Graph Neural Network for Heterogeneous
-      Structural Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.04149999999999998
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6713
-    sort_std: null
-    global_rank: 56
-    paper_rank: 82
-    rank_delta: 26
-    rank_delta_abs: 26
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: An Attention-based Graph Neural Network for Heterogeneous
-      Structural Learning
-    comparison_source_arxiv: '1912.10832'
-    is_best: false
-    is_std_outlier: false
-  - model: GHGRL
-    model_key: ghgrl
-    model_plain: GHGRL
-    value: 0.654
-    std: null
-    paper_value: 0.654
-    paper_std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: gao2025bootstrapping
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on IMDB
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-11-22'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.667
-    true_std: 0.011
-    value_gap_source_arxiv: '2511.17923'
-    value_gap_source_title: Towards Efficient LLM-aware Heterogeneous Graph Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.013000000000000012
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.667
-    sort_std: 0.011
-    global_rank: 57
-    paper_rank: 66
-    rank_delta: 9
-    rank_delta_abs: 9
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: RevGNN
-    model_key: revgnn
-    model_plain: RevGNN
-    value: 0.6503
-    std: null
-    paper_value: 0.6503
-    paper_std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on IMDB
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.6503
-    true_std: null
-    value_gap_source_arxiv: '2403.04780'
-    value_gap_source_title: Graph-oriented Instruction Tuning of Large Language Models
-      for Generic Graph Mining
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6503
-    sort_std: null
-    global_rank: 68
-    paper_rank: 68
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Qwen2-7B-Instruct
-    model_key: qwen2-7b-instruct
-    model_plain: Qwen2-7B-Instruct
-    value: 0.6483
-    std: null
-    paper_value: 0.6483
-    paper_std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on IMDB
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.6483
-    true_std: null
-    value_gap_source_arxiv: '2403.04780'
-    value_gap_source_title: Graph-oriented Instruction Tuning of Large Language Models
-      for Generic Graph Mining
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6483
-    sort_std: null
-    global_rank: 69
-    paper_rank: 69
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: OFA
-    model_key: ofa
-    model_plain: OFA
-    value: 0.6481
-    std: null
-    paper_value: 0.6481
-    paper_std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: liu2023one
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on IMDB
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.6481
-    true_std: null
-    value_gap_source_arxiv: '2403.04780'
-    value_gap_source_title: Graph-oriented Instruction Tuning of Large Language Models
-      for Generic Graph Mining
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6481
-    sort_std: null
-    global_rank: 70
-    paper_rank: 70
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.6206
-    std: null
-    paper_value: 0.6206
-    paper_std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on IMDB
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.6276
-    at_pub_std: null
-    at_pub_source_arxiv: '2105.11122'
-    at_pub_source_title: Heterogeneous Graph Representation Learning with Relation
-      Awareness
-    at_pub_source_date_iso: '2021-05-24'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2021-05-24'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: 0.007000000000000006
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.6276
-    true_std: null
-    value_gap_source_arxiv: '2105.11122'
-    value_gap_source_title: Heterogeneous Graph Representation Learning with Relation
-      Awareness
-    value_gap_source_is_current_paper: false
-    value_gap: 0.007000000000000006
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6276
-    sort_std: null
-    global_rank: 83
-    paper_rank: 86
-    rank_delta: 3
-    rank_delta_abs: 3
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Heterogeneous Graph Representation Learning with Relation
-      Awareness
-    comparison_source_arxiv: '2105.11122'
-    is_best: false
-    is_std_outlier: false
-  - model: All-In-One
-    model_key: all-in-one
-    model_plain: All-In-One
-    value: 0.6075
-    std: null
-    paper_value: 0.6075
-    paper_std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: sun2023all
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on IMDB
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.6075
-    true_std: null
-    value_gap_source_arxiv: '2403.04780'
-    value_gap_source_title: Graph-oriented Instruction Tuning of Large Language Models
-      for Generic Graph Mining
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6075
-    sort_std: null
-    global_rank: 93
-    paper_rank: 93
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: gpt-4
-    model_key: gpt-4
-    model_plain: gpt-4
-    value: 0.5947
-    std: null
-    paper_value: 0.5947
-    paper_std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on IMDB
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.5947
-    true_std: null
-    value_gap_source_arxiv: '2403.04780'
-    value_gap_source_title: Graph-oriented Instruction Tuning of Large Language Models
-      for Generic Graph Mining
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.5947
-    sort_std: null
-    global_rank: 98
-    paper_rank: 98
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: HiGPT
-    model_key: higpt
-    model_plain: HiGPT
-    value: 0.5672
-    std: null
-    paper_value: 0.5672
-    paper_std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on IMDB
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.5672
-    true_std: null
-    value_gap_source_arxiv: '2403.04780'
-    value_gap_source_title: Graph-oriented Instruction Tuning of Large Language Models
-      for Generic Graph Mining
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.5672
-    sort_std: null
-    global_rank: 109
-    paper_rank: 109
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GPT-3.5
-    model_key: gpt-3.5
-    model_plain: GPT-3.5
-    value: 0.5596
-    std: null
-    paper_value: 0.5596
-    paper_std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on IMDB
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.5596
-    true_std: null
-    value_gap_source_arxiv: '2403.04780'
-    value_gap_source_title: Graph-oriented Instruction Tuning of Large Language Models
-      for Generic Graph Mining
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.5596
-    sort_std: null
-    global_rank: 113
-    paper_rank: 113
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MLP
-    model_key: mlp
-    model_plain: MLP
-    value: 0.5514
-    std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2105.11122'
-    title: Heterogeneous Graph Representation Learning with Relation Awareness
-    date: May 24, 2021
-    date_display: May 2021
-    date_iso: '2021-05-24'
-    venue: IEEE Transactions on Knowledge and Data Engineering
-    codebase_url: https://github.com/yule-BUAA/R-HGNN
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 117
-    sort_value: 0.5514
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphGPT
-    model_key: graphgpt
-    model_plain: GraphGPT
-    value: 0.4452
-    std: null
-    paper_value: 0.4452
-    paper_std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on IMDB
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.4452
-    true_std: null
-    value_gap_source_arxiv: '2403.04780'
-    value_gap_source_title: Graph-oriented Instruction Tuning of Large Language Models
-      for Generic Graph Mining
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.4452
-    sort_std: null
-    global_rank: 140
-    paper_rank: 140
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Baichuan2-7B-Base
-    model_key: baichuan2-7b-base
-    model_plain: Baichuan2-7B-Base
-    value: 0.4057
-    std: null
-    paper_value: 0.4057
-    paper_std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on IMDB
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.4057
-    true_std: null
-    value_gap_source_arxiv: '2403.04780'
-    value_gap_source_title: Graph-oriented Instruction Tuning of Large Language Models
-      for Generic Graph Mining
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.4057
-    sort_std: null
-    global_rank: 144
-    paper_rank: 144
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Llama3-8B
-    model_key: llama3-8b
-    model_plain: Llama3-8B
-    value: 0.3751
-    std: null
-    paper_value: 0.3751
-    paper_std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on IMDB
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.3751
-    true_std: null
-    value_gap_source_arxiv: '2403.04780'
-    value_gap_source_title: Graph-oriented Instruction Tuning of Large Language Models
-      for Generic Graph Mining
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.3751
-    sort_std: null
-    global_rank: 150
-    paper_rank: 150
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: LLama2-7B
-    model_key: llama2-7b
-    model_plain: LLama2-7B
-    value: 0.3103
-    std: null
-    paper_value: 0.3103
-    paper_std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on IMDB
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.3103
-    true_std: null
-    value_gap_source_arxiv: '2403.04780'
-    value_gap_source_title: Graph-oriented Instruction Tuning of Large Language Models
-      for Generic Graph Mining
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.3103
-    sort_std: null
-    global_rank: 155
-    paper_rank: 155
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: LLaMA1-7B
-    model_key: llama1-7b
-    model_plain: LLaMA1-7B
-    value: 0.2257
-    std: null
-    paper_value: 0.2257
-    paper_std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on IMDB
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.2257
-    true_std: null
-    value_gap_source_arxiv: '2403.04780'
-    value_gap_source_title: Graph-oriented Instruction Tuning of Large Language Models
-      for Generic Graph Mining
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.2257
-    sort_std: null
-    global_rank: 157
-    paper_rank: 157
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: InstructGLM
-    model_key: instructglm
-    model_plain: InstructGLM
-    value: 0.1359
-    std: null
-    paper_value: 0.1359
-    paper_std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: ye2023natural
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Heterogeneous Node Classification on IMDB
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.1359
-    true_std: null
-    value_gap_source_arxiv: '2403.04780'
-    value_gap_source_title: Graph-oriented Instruction Tuning of Large Language Models
-      for Generic Graph Mining
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.1359
-    sort_std: null
-    global_rank: 159
-    paper_rank: 159
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  rank_metric: Micro-F1
-  higher_is_better: true
-  experiment_scope: node-level
-  dataset_primary_metric: Micro-F1
-  paper_metrics:
-  - Micro-F1
-  metric: Micro-F1
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
 results_grouped:
 - benchmark: Heterogeneous Graph Benchmarks
   datasets:
   - *id001
-  - *id002
 datasets_by_scope:
 - scope: node-level
   label: Node-level
@@ -3210,8 +1633,6 @@ datasets_by_scope:
   - benchmark: Heterogeneous Graph Benchmarks
     benchmark_slug: heterogeneous-graph-benchmarks
     datasets:
-    - dataset: IMDB
-      dataset_slug: imdb
     - dataset: Freebase
       dataset_slug: freebase
 main_figure: /figures/2403.04780/main_figure.jpegoptim.jpg

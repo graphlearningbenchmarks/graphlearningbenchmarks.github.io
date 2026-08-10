@@ -226,12 +226,12 @@ results:
     published_venue: ''
     published_conference: ''
     at_pub_value: 0.89
-    at_pub_std: 0.003
-    at_pub_source_arxiv: '2202.09346'
-    at_pub_source_title: Improving Molecular Contrastive Learning via Faulty Negative
-      Mitigation and Decomposed Fragment Contrast
-    at_pub_source_date_iso: '2022-02-18'
-    at_pub_source_date_label: '2022'
+    at_pub_std: null
+    at_pub_source_arxiv: '2106.09553'
+    at_pub_source_title: How Much Structural Information Large Scale Molecular Language
+      Representations Can Capture?
+    at_pub_source_date_iso: '2021-06-17'
+    at_pub_source_date_label: '2021'
     value_gap_source_date_iso: '2022-02-18'
     value_gap_source_date_label: '2022'
     gap_vs_at_pub: 0.06600000000000006
@@ -254,15 +254,15 @@ results:
     sort_value: 0.89
     sort_std: 0.003
     global_rank: 9
-    paper_rank: 116
-    rank_delta: 107
-    rank_delta_abs: 107
+    paper_rank: 121
+    rank_delta: 112
+    rank_delta_abs: 112
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Improving Molecular Contrastive Learning via Faulty Negative
-      Mitigation and Decomposed Fragment Contrast
-    comparison_source_arxiv: '2202.09346'
+    comparison_source_title: How Much Structural Information Large Scale Molecular
+      Language Representations Can Capture?
+    comparison_source_arxiv: '2106.09553'
     is_best: false
     is_std_outlier: false
   - model: KA-GCN
@@ -462,10 +462,10 @@ results:
     value_note: ''
     sort_value: 0.878
     sort_std: 0.032
-    global_rank: 19
-    paper_rank: 157
-    rank_delta: 138
-    rank_delta_abs: 138
+    global_rank: 20
+    paper_rank: 163
+    rank_delta: 143
+    rank_delta_abs: 143
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -532,8 +532,8 @@ results:
     value_note: ''
     sort_value: 0.873
     sort_std: 0.015
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -566,10 +566,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 41
+    global_rank: 43
     sort_value: 0.8646
     sort_std: 0.0081
     comparison_type: global_top
@@ -636,10 +636,10 @@ results:
     value_note: ''
     sort_value: 0.863
     sort_std: 0.015
-    global_rank: 43
-    paper_rank: 207
-    rank_delta: 164
-    rank_delta_abs: 164
+    global_rank: 45
+    paper_rank: 213
+    rank_delta: 168
+    rank_delta_abs: 168
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -706,8 +706,8 @@ results:
     value_note: ''
     sort_value: 0.863
     sort_std: 0.019
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 46
+    paper_rank: 46
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -775,8 +775,8 @@ results:
     value_note: ''
     sort_value: 0.857
     sort_std: 0.002
-    global_rank: 57
-    paper_rank: 57
+    global_rank: 61
+    paper_rank: 61
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -818,12 +818,12 @@ results:
     published_venue: ''
     published_conference: ''
     at_pub_value: 0.856
-    at_pub_std: 0.011
-    at_pub_source_arxiv: '2407.12136'
-    at_pub_source_title: Molecular Topological Profile (MOLTOP) - Simple and Strong
-      Baseline for Molecular Graph Classification
-    at_pub_source_date_iso: '2024-07-16'
-    at_pub_source_date_label: '2024'
+    at_pub_std: null
+    at_pub_source_arxiv: '2106.09553'
+    at_pub_source_title: How Much Structural Information Large Scale Molecular Language
+      Representations Can Capture?
+    at_pub_source_date_iso: '2021-06-17'
+    at_pub_source_date_label: '2021'
     value_gap_source_date_iso: '2026-05-07'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -844,8 +844,8 @@ results:
     value_note: ''
     sort_value: 0.856
     sort_std: 0.011
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 62
+    paper_rank: 62
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -886,13 +886,12 @@ results:
     date_iso: '2026-04-17'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.845
-    at_pub_std: 0.007
-    at_pub_source_arxiv: '2106.06130'
-    at_pub_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation Learning
-      for Property Prediction'
-    at_pub_source_date_iso: '2021-06-11'
-    at_pub_source_date_label: '2021'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-05-07'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -913,8 +912,8 @@ results:
     value_note: ''
     sort_value: 0.845
     sort_std: 0.007
-    global_rank: 79
-    paper_rank: 79
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -982,8 +981,8 @@ results:
     value_note: ''
     sort_value: 0.823
     sort_std: 0.011
-    global_rank: 122
-    paper_rank: 122
+    global_rank: 127
+    paper_rank: 127
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1050,8 +1049,8 @@ results:
     value_note: ''
     sort_value: 0.812
     sort_std: 0.009
-    global_rank: 144
-    paper_rank: 144
+    global_rank: 150
+    paper_rank: 150
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1119,8 +1118,8 @@ results:
     value_note: ''
     sort_value: 0.791
     sort_std: 0.013
-    global_rank: 196
-    paper_rank: 196
+    global_rank: 202
+    paper_rank: 202
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1188,8 +1187,8 @@ results:
     value_note: ''
     sort_value: 0.779
     sort_std: 0.015
-    global_rank: 214
-    paper_rank: 214
+    global_rank: 220
+    paper_rank: 220
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1257,8 +1256,8 @@ results:
     value_note: ''
     sort_value: 0.752
     sort_std: 0.011
-    global_rank: 246
-    paper_rank: 246
+    global_rank: 252
+    paper_rank: 252
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1326,8 +1325,8 @@ results:
     value_note: ''
     sort_value: 0.747
     sort_std: 0.009
-    global_rank: 249
-    paper_rank: 249
+    global_rank: 256
+    paper_rank: 256
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1509,10 +1508,10 @@ results:
     value_note: ''
     sort_value: 0.913
     sort_std: 0.026
-    global_rank: 25
-    paper_rank: 118
-    rank_delta: 93
-    rank_delta_abs: 93
+    global_rank: 26
+    paper_rank: 120
+    rank_delta: 94
+    rank_delta_abs: 94
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1579,10 +1578,10 @@ results:
     value_note: ''
     sort_value: 0.908
     sort_std: 0.05
-    global_rank: 29
-    paper_rank: 244
-    rank_delta: 215
-    rank_delta_abs: 215
+    global_rank: 31
+    paper_rank: 250
+    rank_delta: 219
+    rank_delta_abs: 219
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1614,10 +1613,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 32
+    global_rank: 34
     sort_value: 0.8875
     sort_std: 0.0049
     comparison_type: global_top
@@ -1683,10 +1682,10 @@ results:
     value_note: ''
     sort_value: 0.86
     sort_std: 0.034
-    global_rank: 47
-    paper_rank: 88
-    rank_delta: 41
-    rank_delta_abs: 41
+    global_rank: 49
+    paper_rank: 91
+    rank_delta: 42
+    rank_delta_abs: 42
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1752,8 +1751,8 @@ results:
     value_note: ''
     sort_value: 0.787
     sort_std: 0.014
-    global_rank: 60
-    paper_rank: 60
+    global_rank: 62
+    paper_rank: 62
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1820,8 +1819,8 @@ results:
     value_note: ''
     sort_value: 0.785
     sort_std: 0.021
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 63
+    paper_rank: 63
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1862,12 +1861,12 @@ results:
     published_venue: ''
     published_conference: ''
     at_pub_value: 0.736
-    at_pub_std: 0.005
-    at_pub_source_arxiv: '2202.09346'
-    at_pub_source_title: Improving Molecular Contrastive Learning via Faulty Negative
-      Mitigation and Decomposed Fragment Contrast
-    at_pub_source_date_iso: '2022-02-18'
-    at_pub_source_date_label: '2022'
+    at_pub_std: null
+    at_pub_source_arxiv: '2106.09553'
+    at_pub_source_title: How Much Structural Information Large Scale Molecular Language
+      Representations Can Capture?
+    at_pub_source_date_iso: '2021-06-17'
+    at_pub_source_date_label: '2021'
     value_gap_source_date_iso: '2022-02-18'
     value_gap_source_date_label: '2022'
     gap_vs_at_pub: 0.014000000000000012
@@ -1889,10 +1888,10 @@ results:
     value_note: ''
     sort_value: 0.736
     sort_std: 0.005
-    global_rank: 76
-    paper_rank: 94
-    rank_delta: 18
-    rank_delta_abs: 18
+    global_rank: 78
+    paper_rank: 95
+    rank_delta: 17
+    rank_delta_abs: 17
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1957,8 +1956,8 @@ results:
     value_note: ''
     sort_value: 0.734
     sort_std: 0.003
-    global_rank: 77
-    paper_rank: 77
+    global_rank: 79
+    paper_rank: 79
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2025,8 +2024,8 @@ results:
     value_note: ''
     sort_value: 0.731
     sort_std: 0.017
-    global_rank: 79
-    paper_rank: 79
+    global_rank: 81
+    paper_rank: 81
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2092,8 +2091,8 @@ results:
     value_note: ''
     sort_value: 0.729
     sort_std: 0.006
-    global_rank: 81
-    paper_rank: 81
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2160,8 +2159,8 @@ results:
     value_note: ''
     sort_value: 0.728
     sort_std: 0.019
-    global_rank: 84
-    paper_rank: 84
+    global_rank: 87
+    paper_rank: 87
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2202,12 +2201,12 @@ results:
     published_venue: ''
     published_conference: ''
     at_pub_value: 0.724
-    at_pub_std: 0.004
-    at_pub_source_arxiv: '2407.12136'
-    at_pub_source_title: Molecular Topological Profile (MOLTOP) - Simple and Strong
-      Baseline for Molecular Graph Classification
-    at_pub_source_date_iso: '2024-07-16'
-    at_pub_source_date_label: '2024'
+    at_pub_std: null
+    at_pub_source_arxiv: '2106.09553'
+    at_pub_source_title: How Much Structural Information Large Scale Molecular Language
+      Representations Can Capture?
+    at_pub_source_date_iso: '2021-06-17'
+    at_pub_source_date_label: '2021'
     value_gap_source_date_iso: '2026-05-07'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -2228,8 +2227,8 @@ results:
     value_note: ''
     sort_value: 0.724
     sort_std: 0.004
-    global_rank: 89
-    paper_rank: 89
+    global_rank: 92
+    paper_rank: 92
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2296,8 +2295,8 @@ results:
     value_note: ''
     sort_value: 0.721
     sort_std: 0.003
-    global_rank: 96
-    paper_rank: 96
+    global_rank: 97
+    paper_rank: 97
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2364,8 +2363,8 @@ results:
     value_note: ''
     sort_value: 0.697
     sort_std: 0.006
-    global_rank: 157
-    paper_rank: 157
+    global_rank: 160
+    paper_rank: 160
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2432,8 +2431,8 @@ results:
     value_note: ''
     sort_value: 0.691
     sort_std: 0.008
-    global_rank: 174
-    paper_rank: 174
+    global_rank: 177
+    paper_rank: 177
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2473,13 +2472,12 @@ results:
     date_iso: '2026-04-17'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.687
-    at_pub_std: 0.013
-    at_pub_source_arxiv: '2106.06130'
-    at_pub_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation Learning
-      for Property Prediction'
-    at_pub_source_date_iso: '2021-06-11'
-    at_pub_source_date_label: '2021'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-05-07'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -2500,8 +2498,8 @@ results:
     value_note: ''
     sort_value: 0.687
     sort_std: 0.013
-    global_rank: 183
-    paper_rank: 183
+    global_rank: 186
+    paper_rank: 186
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2568,8 +2566,8 @@ results:
     value_note: ''
     sort_value: 0.676
     sort_std: 0.014
-    global_rank: 212
-    paper_rank: 212
+    global_rank: 216
+    paper_rank: 216
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3025,9 +3023,9 @@ results:
     sort_value: 0.933
     sort_std: 0.02
     global_rank: 11
-    paper_rank: 57
-    rank_delta: 46
-    rank_delta_abs: 46
+    paper_rank: 58
+    rank_delta: 47
+    rank_delta_abs: 47
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3540,9 +3538,9 @@ results:
     sort_value: 0.865
     sort_std: 0.017
     global_rank: 49
-    paper_rank: 93
-    rank_delta: 44
-    rank_delta_abs: 44
+    paper_rank: 94
+    rank_delta: 45
+    rank_delta_abs: 45
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3608,8 +3606,8 @@ results:
     value_note: ''
     sort_value: 0.775
     sort_std: 0.04
-    global_rank: 110
-    paper_rank: 110
+    global_rank: 112
+    paper_rank: 112
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3676,8 +3674,8 @@ results:
     value_note: ''
     sort_value: 0.726
     sort_std: 0.015
-    global_rank: 154
-    paper_rank: 154
+    global_rank: 158
+    paper_rank: 158
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4098,9 +4096,9 @@ results:
     sort_value: 0.68
     sort_std: 0.011
     global_rank: 14
-    paper_rank: 205
-    rank_delta: 191
-    rank_delta_abs: 191
+    paper_rank: 207
+    rank_delta: 193
+    rank_delta_abs: 193
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4474,7 +4472,7 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 66
@@ -4611,10 +4609,10 @@ results:
     value_note: ''
     sort_value: 0.632
     sort_std: 0.023
-    global_rank: 83
-    paper_rank: 228
-    rank_delta: 145
-    rank_delta_abs: 145
+    global_rank: 82
+    paper_rank: 229
+    rank_delta: 147
+    rank_delta_abs: 147
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4681,8 +4679,8 @@ results:
     value_note: ''
     sort_value: 0.627
     sort_std: 0.008
-    global_rank: 93
-    paper_rank: 93
+    global_rank: 92
+    paper_rank: 92
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4749,8 +4747,8 @@ results:
     value_note: ''
     sort_value: 0.614
     sort_std: 0.005
-    global_rank: 132
-    paper_rank: 132
+    global_rank: 131
+    paper_rank: 131
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4818,8 +4816,8 @@ results:
     value_note: ''
     sort_value: 0.606
     sort_std: 0.032
-    global_rank: 158
-    paper_rank: 158
+    global_rank: 160
+    paper_rank: 160
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4965,7 +4963,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 16
+    global_rank: 14
     sort_value: 0.84
     sort_std: 0.004
     comparison_type: global_top
@@ -5031,10 +5029,10 @@ results:
     value_note: ''
     sort_value: 0.835
     sort_std: null
-    global_rank: 20
-    paper_rank: 123
-    rank_delta: 103
-    rank_delta_abs: 103
+    global_rank: 18
+    paper_rank: 118
+    rank_delta: 100
+    rank_delta_abs: 100
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -5100,8 +5098,8 @@ results:
     value_note: ''
     sort_value: 0.8
     sort_std: 0.006
-    global_rank: 63
-    paper_rank: 63
+    global_rank: 57
+    paper_rank: 57
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5169,8 +5167,8 @@ results:
     value_note: ''
     sort_value: 0.799
     sort_std: 0.018
-    global_rank: 66
-    paper_rank: 187
+    global_rank: 61
+    paper_rank: 182
     rank_delta: 121
     rank_delta_abs: 121
     rank_delta_direction: worse
@@ -5238,8 +5236,8 @@ results:
     value_note: ''
     sort_value: 0.799
     sort_std: 0.005
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 65
+    paper_rank: 65
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5307,10 +5305,10 @@ results:
     value_note: ''
     sort_value: 0.798
     sort_std: 0.007
-    global_rank: 72
-    paper_rank: 233
-    rank_delta: 161
-    rank_delta_abs: 161
+    global_rank: 67
+    paper_rank: 226
+    rank_delta: 159
+    rank_delta_abs: 159
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -5376,8 +5374,8 @@ results:
     value_note: ''
     sort_value: 0.797
     sort_std: 0.001
-    global_rank: 74
-    paper_rank: 74
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5444,8 +5442,8 @@ results:
     value_note: ''
     sort_value: 0.796
     sort_std: 0.005
-    global_rank: 77
-    paper_rank: 77
+    global_rank: 72
+    paper_rank: 72
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5512,8 +5510,8 @@ results:
     value_note: ''
     sort_value: 0.794
     sort_std: 0.005
-    global_rank: 84
-    paper_rank: 84
+    global_rank: 79
+    paper_rank: 79
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5582,8 +5580,8 @@ results:
     value_note: ''
     sort_value: 0.789
     sort_std: 0.013
-    global_rank: 98
-    paper_rank: 187
+    global_rank: 93
+    paper_rank: 182
     rank_delta: 89
     rank_delta_abs: 89
     rank_delta_direction: worse
@@ -5624,13 +5622,12 @@ results:
     date_iso: '2026-04-17'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.781
-    at_pub_std: 0.006
-    at_pub_source_arxiv: '2106.06130'
-    at_pub_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation Learning
-      for Property Prediction'
-    at_pub_source_date_iso: '2021-06-11'
-    at_pub_source_date_label: '2021'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-04-17'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -5652,8 +5649,8 @@ results:
     value_note: ''
     sort_value: 0.781
     sort_std: 0.006
-    global_rank: 124
-    paper_rank: 124
+    global_rank: 119
+    paper_rank: 119
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5720,8 +5717,8 @@ results:
     value_note: ''
     sort_value: 0.781
     sort_std: 0.001
-    global_rank: 126
-    paper_rank: 126
+    global_rank: 120
+    paper_rank: 120
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5788,8 +5785,8 @@ results:
     value_note: ''
     sort_value: 0.758
     sort_std: 0.009
-    global_rank: 196
-    paper_rank: 196
+    global_rank: 190
+    paper_rank: 190
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5856,8 +5853,8 @@ results:
     value_note: ''
     sort_value: 0.753
     sort_std: 0.007
-    global_rank: 219
-    paper_rank: 219
+    global_rank: 212
+    paper_rank: 212
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5924,8 +5921,8 @@ results:
     value_note: ''
     sort_value: 0.747
     sort_std: 0.005
-    global_rank: 244
-    paper_rank: 244
+    global_rank: 237
+    paper_rank: 237
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5992,8 +5989,8 @@ results:
     value_note: ''
     sort_value: 0.743
     sort_std: 0.009
-    global_rank: 261
-    paper_rank: 261
+    global_rank: 253
+    paper_rank: 253
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6060,8 +6057,8 @@ results:
     value_note: ''
     sort_value: 0.73
     sort_std: 0.012
-    global_rank: 287
-    paper_rank: 287
+    global_rank: 278
+    paper_rank: 278
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

@@ -12,7 +12,7 @@ stats:
   avg_nodes: 2277.0
   avg_edges: 36101.0
   num_classes: 5
-result_count: 442
+result_count: 469
 best_model:
   model: Hetero-S (GAT 8-layer)
   value: 0.8693
@@ -97,6 +97,10 @@ papers:
   title: Local Virtual Nodes for Alleviating Over-Squashing in Graph Neural Networks
   date_iso: '2025-08-28'
   venue: ''
+- arxiv_id: '2506.19343'
+  title: Discrepancy-Aware Graph Mask Auto-Encoder
+  date_iso: '2025-06-24'
+  venue: KDD 2025
 - arxiv_id: '2506.14291'
   title: 'Equivariance Everywhere All At Once: A Recipe for Graph Foundation Models'
   date_iso: '2025-06-17'
@@ -133,6 +137,10 @@ papers:
   title: Graph Neural Networks Need Cluster-Normalize-Activate Modules
   date_iso: '2024-12-05'
   venue: NeurIPS 2024
+- arxiv_id: '2411.19392'
+  title: Scale-aware Message Passing For Graph Node Classification
+  date_iso: '2024-11-28'
+  venue: ''
 - arxiv_id: '2410.02158'
   title: 'SCNode: Spatial and Contextual Coordinates for Graph Representation Learning'
   date_iso: '2024-10-03'
@@ -156,14 +164,15 @@ papers:
     Heterophilic Graphs'
   date_iso: '2024-06-18'
   venue: KDD 2024
+- arxiv_id: '2404.17099'
+  title: Unleashing the Potential of Fractional Calculus in Graph Neural Networks
+    with FROND
+  date_iso: '2024-04-26'
+  venue: ICLR 2024
 - arxiv_id: '2403.20221'
   title: Graph Neural Aggregation-diffusion with Metastability
   date_iso: '2024-03-29'
   venue: ''
-- arxiv_id: '2403.07954'
-  title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive Krylov Subspace Approach'
-  date_iso: '2024-03-12'
-  venue: WWW 2024
 - arxiv_id: '2401.09125'
   title: Understanding Heterophily for Graph Neural Networks
   date_iso: '2024-01-17'
@@ -271,6 +280,10 @@ papers:
   title: Discovering the Representation Bottleneck of Graph Neural Networks
   date_iso: '2022-05-15'
   venue: ''
+- arxiv_id: '2204.04874'
+  title: Augmentation-Free Graph Contrastive Learning with Performance Guarantee
+  date_iso: '2022-04-11'
+  venue: ''
 - arxiv_id: '2112.14531'
   title: 'Designing the Topology of Graph Neural Networks: A Novel Feature Fusion
     Perspective'
@@ -288,10 +301,6 @@ papers:
   title: Simplifying approach to Node Classification in Graph Neural Networks
   date_iso: '2021-11-12'
   venue: ''
-- arxiv_id: '2106.06134'
-  title: Is Homophily a Necessity for Graph Neural Networks?
-  date_iso: '2021-06-11'
-  venue: ICLR 2021
 - arxiv_id: '2105.07634'
   title: Improving Graph Neural Networks with Simple Architecture Design
   date_iso: '2021-05-17'
@@ -493,34 +502,6 @@ variants:
     metric_stds:
     - 0.0125
     - null
-  - model: Dir-GNN
-    model_plain: Dir-GNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2412.04064'
-    title: Graph Neural Networks Need Cluster-Normalize-Activate Modules
-    date: Dec 5, 2024
-    date_iso: '2024-12-05'
-    date_display: Dec 2024
-    codebase_url: https://github.com/ml-research/cna_modules
-    published_conference: NeurIPS 2024
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8048
-    - null
-    metric_stds:
-    - 0.0146
-    - null
   - model: FaberNet
     model_plain: FaberNet
     is_baseline: true
@@ -605,6 +586,34 @@ variants:
     metric_stds:
     - 0.0173
     - null
+  - model: ScaleNet
+    model_plain: ScaleNet
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2411.19392'
+    title: Scale-aware Message Passing For Graph Node Classification
+    date: Nov 28, 2024
+    date_iso: '2024-11-28'
+    date_display: Nov 2024
+    codebase_url: https://github.com/Qin87/ScaleNet
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.801
+    - null
+    metric_stds:
+    - 0.015
+    - null
   - model: A + D + R
     model_plain: A + D + R
     is_baseline: false
@@ -632,6 +641,34 @@ variants:
     - null
     metric_stds:
     - null
+    - null
+  - model: LargeScaleNet
+    model_plain: LargeScaleNet
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2411.19392'
+    title: Scale-aware Message Passing For Graph Node Classification
+    date: Nov 28, 2024
+    date_iso: '2024-11-28'
+    date_display: Nov 2024
+    codebase_url: https://github.com/Qin87/ScaleNet
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.799
+    - null
+    metric_stds:
+    - 0.016
     - null
   - model: NDDGNN
     model_plain: NDDGNN
@@ -688,6 +725,34 @@ variants:
     - null
     metric_stds:
     - 0.014
+    - null
+  - model: Dir-GNN
+    model_plain: Dir-GNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2411.19392'
+    title: Scale-aware Message Passing For Graph Node Classification
+    date: Nov 28, 2024
+    date_iso: '2024-11-28'
+    date_display: Nov 2024
+    codebase_url: https://github.com/Qin87/ScaleNet
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.797
+    - null
+    metric_stds:
+    - 0.013
     - null
   - model: GraphMAE
     model_plain: GraphMAE
@@ -997,6 +1062,34 @@ variants:
     metric_stds:
     - 0.0165
     - null
+  - model: DGMAE
+    model_plain: DGMAE
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2506.19343'
+    title: Discrepancy-Aware Graph Mask Auto-Encoder
+    date: Jun 24, 2025
+    date_iso: '2025-06-24'
+    date_display: Jun 2025
+    codebase_url: https://github.com/zhengziyu77/DGMAE
+    published_conference: KDD 2025
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.755
+    - null
+    metric_stds:
+    - 0.0117
+    - null
   - model: Learnable
     model_plain: Learnable
     is_baseline: true
@@ -1108,35 +1201,6 @@ variants:
     - null
     metric_stds:
     - 0.0129
-    - null
-  - model: AdaptKry
-    model_plain: AdaptKry
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2403.07954'
-    title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive Krylov Subspace
-      Approach'
-    date: Mar 12, 2024
-    date_iso: '2024-03-12'
-    date_display: Mar 2024
-    codebase_url: https://github.com/kkhuang81/AdaptKry
-    published_conference: WWW 2024
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7453
-    - null
-    metric_stds:
-    - 0.0121
     - null
   - model: UDGNN_GCN
     model_plain: UDGNN_GCN
@@ -1560,6 +1624,34 @@ variants:
     metric_stds:
     - 0.0221
     - null
+  - model: AUG-MAE
+    model_plain: AUG-MAE
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2506.19343'
+    title: Discrepancy-Aware Graph Mask Auto-Encoder
+    date: Jun 24, 2025
+    date_iso: '2025-06-24'
+    date_display: Jun 2025
+    codebase_url: https://github.com/zhengziyu77/DGMAE
+    published_conference: KDD 2025
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7219
+    - null
+    metric_stds:
+    - 0.0155
+    - null
   - model: D + R
     model_plain: D + R
     is_baseline: true
@@ -1644,103 +1736,18 @@ variants:
     metric_stds:
     - 0.0191
     - null
-  - model: PolyGCL
-    model_plain: PolyGCL
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2604.01878'
-    title: 'ASPECT: Node-Level Adaptive Spectral Fusion for Graph Contrastive Learning'
-    date: Apr 2, 2026
-    date_iso: '2026-04-02'
-    date_display: Apr 2026
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7162
-    - null
-    metric_stds:
-    - 0.0096
-    - null
-  - model: FROND
-    model_plain: FROND
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2604.24293'
-    title: 'Latent-Hysteresis Graph ODEs: Modeling Coupled Topology-Feature Evolution
-      via Continuous Phase Transitions'
-    date: Apr 27, 2026
-    date_iso: '2026-04-27'
-    date_display: Apr 2026
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7162
-    - null
-    metric_stds:
-    - 0.0161
-    - null
-  - model: AERO-GNN
-    model_plain: AERO-GNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.18480'
-    title: Scalable Graph Compressed Convolutions
-    date: Jul 26, 2024
-    date_iso: '2024-07-26'
-    date_display: Jul 2024
-    codebase_url: https://github.com/sunjss/CoCN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7158
-    - null
-    metric_stds:
-    - 0.024
-    - null
-  row_count: 442
+  row_count: 469
   rows_json: /data/datasets/chameleon/standard-split-rows.json
   chart_json: /data/datasets/chameleon/standard-split-chart.json
   arch_counts:
-    gnn: 330
-    hybrid: 58
-    graph_transformer: 15
+    gnn: 341
+    hybrid: 67
+    graph_transformer: 17
     llm: 0
-    walk: 2
+    walk: 5
     traditional: 24
   metric_counts:
-  - 431
+  - 458
   - 11
   milestones: &id001
   - value: 0.701

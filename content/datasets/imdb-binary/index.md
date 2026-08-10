@@ -13,7 +13,7 @@ stats:
   avg_nodes: 19.8
   avg_edges: 96.5
   num_classes: 2
-result_count: 212
+result_count: 217
 best_model:
   model: GCFL
   value: 0.8299
@@ -65,6 +65,11 @@ papers:
   title: Unifying Graph Contrastive Learning via Graph Message Augmentation
   date_iso: '2024-01-08'
   venue: ''
+- arxiv_id: '2311.01038'
+  title: 'Better with Less: A Data-Active Perspective on Pre-Training Graph Neural
+    Networks'
+  date_iso: '2023-11-02'
+  venue: NeurIPS 2023
 - arxiv_id: '2310.01668'
   title: Locality-Aware Graph Rewiring in GNNs
   date_iso: '2023-10-02'
@@ -89,6 +94,10 @@ papers:
   title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing in GNNs'
   date_iso: '2022-10-21'
   venue: ICLR 2022
+- arxiv_id: '2208.06651'
+  title: Revisiting Adversarial Attacks on Graph Neural Networks for Graph Classification
+  date_iso: '2022-08-13'
+  venue: ''
 - arxiv_id: '2206.13510'
   title: Structural Entropy Guided Graph Hierarchical Pooling
   date_iso: '2022-06-26'
@@ -126,10 +135,6 @@ papers:
   title: Graph Homomorphism Convolution
   date_iso: '2020-05-03'
   venue: ICML 2020
-- arxiv_id: '1810.00826'
-  title: How Powerful are Graph Neural Networks?
-  date_iso: '2018-10-01'
-  venue: ICLR 2018
 - arxiv_id: '1805.08090'
   title: Graph Capsule Convolutional Neural Networks
   date_iso: '2018-05-21'
@@ -149,10 +154,12 @@ variants:
     num_classes: 2
   metrics:
   - Accuracy
+  - F1
   - ROC-AUC
   - epochs
   metric_display_names:
   - Accuracy
+  - F1
   - ROC-AUC
   - epochs
   show_all_metrics_desktop: false
@@ -185,8 +192,10 @@ variants:
     - 0.8299
     - null
     - null
+    - null
     metric_stds:
     - 0.052
+    - null
     - null
     - null
   - model: ID-GNN+BEC
@@ -215,8 +224,10 @@ variants:
     - 0.815
     - null
     - null
+    - null
     metric_stds:
     - 0.024
+    - null
     - null
     - null
   - model: GIN+BEC
@@ -245,8 +256,10 @@ variants:
     - 0.808
     - null
     - null
+    - null
     metric_stds:
     - 0.033
+    - null
     - null
     - null
   - model: GCN+BEC
@@ -275,8 +288,10 @@ variants:
     - 0.799
     - null
     - null
+    - null
     metric_stds:
     - 0.034
+    - null
     - null
     - null
   - model: GCN
@@ -305,8 +320,10 @@ variants:
     - 0.798
     - null
     - null
+    - null
     metric_stds:
     - 0.023
+    - null
     - null
     - null
   - model: NC-GNN+BEC
@@ -335,8 +352,10 @@ variants:
     - 0.796
     - null
     - null
+    - null
     metric_stds:
     - 0.036
+    - null
     - null
     - null
   - model: GraphSNN+BEC
@@ -365,8 +384,10 @@ variants:
     - 0.794
     - null
     - null
+    - null
     metric_stds:
     - 0.027
+    - null
     - null
     - null
   - model: ID-GNN
@@ -395,8 +416,10 @@ variants:
     - 0.793
     - null
     - null
+    - null
     metric_stds:
     - 0.029
+    - null
     - null
     - null
   - model: GAT +DEL-F
@@ -425,8 +448,10 @@ variants:
     - 0.7863
     - null
     - null
+    - null
     metric_stds:
     - 0.0054
+    - null
     - null
     - null
   - model: GraphSNN
@@ -455,8 +480,10 @@ variants:
     - 0.785
     - null
     - null
+    - null
     metric_stds:
     - 0.023
+    - null
     - null
     - null
   - model: EdgeDroppingDegree
@@ -485,8 +512,10 @@ variants:
     - 0.785
     - null
     - null
+    - null
     metric_stds:
     - 0.0632
+    - null
     - null
     - null
   - model: NC-GNN
@@ -515,8 +544,10 @@ variants:
     - 0.784
     - null
     - null
+    - null
     metric_stds:
     - 0.04
+    - null
     - null
     - null
   - model: EdgeDropping
@@ -545,8 +576,10 @@ variants:
     - 0.783
     - null
     - null
+    - null
     metric_stds:
     - 0.1083
+    - null
     - null
     - null
   - model: Graph Transformer +DEL-F
@@ -575,8 +608,10 @@ variants:
     - 0.7828
     - null
     - null
+    - null
     metric_stds:
     - 0.0027
+    - null
     - null
     - null
   - model: Graph Transformer + DEL-K
@@ -605,8 +640,10 @@ variants:
     - 0.7765
     - null
     - null
+    - null
     metric_stds:
     - 0.0049
+    - null
     - null
     - null
   - model: GPS(DEL-F)
@@ -635,8 +672,10 @@ variants:
     - 0.775
     - null
     - null
+    - null
     metric_stds:
     - 0.0065
+    - null
     - null
     - null
   - model: FedProx
@@ -665,8 +704,10 @@ variants:
     - 0.7746
     - null
     - null
+    - null
     metric_stds:
     - 0.048
+    - null
     - null
     - null
   - model: GNTK
@@ -695,8 +736,10 @@ variants:
     - 0.769
     - null
     - null
+    - null
     metric_stds:
     - 0.036
+    - null
     - null
     - null
   - model: GAT + DEL-K
@@ -725,8 +768,10 @@ variants:
     - 0.7686
     - null
     - null
+    - null
     metric_stds:
     - 0.0058
+    - null
     - null
     - null
   - model: EdgeDroppingPR
@@ -755,8 +800,10 @@ variants:
     - 0.768
     - null
     - null
+    - null
     metric_stds:
     - 0.0748
+    - null
     - null
     - null
   - model: GSN
@@ -785,8 +832,10 @@ variants:
     - 0.768
     - null
     - null
+    - null
     metric_stds:
     - 0.02
+    - null
     - null
     - null
   - model: TOGL
@@ -815,8 +864,10 @@ variants:
     - 0.7665
     - null
     - null
+    - null
     metric_stds:
     - 0.0275
+    - null
     - null
     - null
   - model: self-train
@@ -845,8 +896,10 @@ variants:
     - 0.7654
     - null
     - null
+    - null
     metric_stds:
     - 0.057
+    - null
     - null
     - null
   - model: Graph Transformer + MPNN
@@ -875,8 +928,10 @@ variants:
     - 0.7651
     - null
     - null
+    - null
     metric_stds:
     - 0.0039
+    - null
     - null
     - null
   - model: DiffPool-TIP
@@ -905,8 +960,10 @@ variants:
     - 0.764
     - null
     - null
+    - null
     metric_stds:
     - 0.0313
+    - null
     - null
     - null
   - model: GraphAug
@@ -935,8 +992,10 @@ variants:
     - 0.762
     - null
     - null
+    - null
     metric_stds:
     - 0.004
+    - null
     - null
     - null
   - model: Full B8C1
@@ -965,8 +1024,10 @@ variants:
     - 0.762
     - null
     - null
+    - null
     metric_stds:
     - 0.0518
+    - null
     - null
     - null
   - model: EdgeAddition
@@ -995,8 +1056,10 @@ variants:
     - 0.761
     - null
     - null
+    - null
     metric_stds:
     - 0.0563
+    - null
     - null
     - null
   - model: GAT + Random distance
@@ -1025,8 +1088,10 @@ variants:
     - 0.7608
     - null
     - null
+    - null
     metric_stds:
     - 0.0048
+    - null
     - null
     - null
   - model: GPS
@@ -1055,8 +1120,10 @@ variants:
     - 0.76
     - null
     - null
+    - null
     metric_stds:
     - 0.0283
+    - null
     - null
     - null
   - model: SPECTRE
@@ -1085,8 +1152,10 @@ variants:
     - 0.76
     - null
     - null
+    - null
     metric_stds:
     - 0.0
+    - null
     - null
     - null
   - model: FedAvg
@@ -1115,8 +1184,10 @@ variants:
     - 0.7596
     - null
     - null
+    - null
     metric_stds:
     - 0.049
+    - null
     - null
     - null
   - model: GAT + MPNN
@@ -1145,8 +1216,10 @@ variants:
     - 0.7585
     - null
     - null
+    - null
     metric_stds:
     - 0.0048
+    - null
     - null
     - null
   - model: EdgeDroppingEVC
@@ -1175,8 +1248,10 @@ variants:
     - 0.758
     - null
     - null
+    - null
     metric_stds:
     - 0.0626
+    - null
     - null
     - null
   - model: SGCL-D
@@ -1205,8 +1280,10 @@ variants:
     - 0.758
     - null
     - null
+    - null
     metric_stds:
     - 0.019
+    - null
     - null
     - null
   - model: GMCL-P
@@ -1235,8 +1312,10 @@ variants:
     - 0.756
     - null
     - null
+    - null
     metric_stds:
     - 0.0317
+    - null
     - null
     - null
   - model: CGRA
@@ -1265,8 +1344,10 @@ variants:
     - 0.756
     - null
     - null
+    - null
     metric_stds:
     - 0.005
+    - null
     - null
     - null
   - model: GraphMAE
@@ -1295,8 +1376,10 @@ variants:
     - 0.7552
     - null
     - null
+    - null
     metric_stds:
     - 0.0066
+    - null
     - null
     - null
   - model: GPS+FastSpectRe
@@ -1325,8 +1408,10 @@ variants:
     - 0.755
     - null
     - null
+    - null
     metric_stds:
     - 0.0071
+    - null
     - null
     - null
   - model: MarkovDiffusion
@@ -1355,8 +1440,10 @@ variants:
     - 0.753
     - null
     - null
+    - null
     metric_stds:
     - 0.0836
+    - null
     - null
     - null
   - model: Graph Transformer + Random distance
@@ -1385,8 +1472,10 @@ variants:
     - 0.7527
     - null
     - null
+    - null
     metric_stds:
     - 0.0065
+    - null
     - null
     - null
   - model: GMCL-D
@@ -1415,8 +1504,10 @@ variants:
     - 0.752
     - null
     - null
+    - null
     metric_stds:
     - 0.0404
+    - null
     - null
     - null
   - model: SGCL-T
@@ -1445,8 +1536,10 @@ variants:
     - 0.752
     - null
     - null
+    - null
     metric_stds:
     - 0.028
+    - null
     - null
     - null
   - model: MinCutPool-TIP
@@ -1475,8 +1568,42 @@ variants:
     - 0.752
     - null
     - null
+    - null
     metric_stds:
     - 0.0267
+    - null
+    - null
+    - null
+  - model: GIN-0
+    model_plain: GIN-0
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2006.05582'
+    title: Contrastive Multi-View Representation Learning on Graphs
+    date: Jun 1, 2020
+    date_iso: '2020-06-01'
+    date_display: Jun 2020
+    codebase_url: ''
+    published_conference: ICML 2020
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2020
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.751
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.051
+    - null
     - null
     - null
   - model: GMCL-M
@@ -1505,38 +1632,10 @@ variants:
     - 0.751
     - null
     - null
+    - null
     metric_stds:
     - 0.0416
     - null
-    - null
-  - model: GIN-0
-    model_plain: GIN-0
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '1810.00826'
-    title: How Powerful are Graph Neural Networks?
-    date: Oct 1, 2018
-    date_iso: '2018-10-01'
-    date_display: Oct 2018
-    codebase_url: https://github.com/weihua916/powerful-gnns
-    published_conference: ICLR 2018
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2018
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.751
-    - null
-    - null
-    metric_stds:
-    - 0.051
     - null
     - null
   - model: PAS
@@ -1565,8 +1664,10 @@ variants:
     - 0.751
     - null
     - null
+    - null
     metric_stds:
     - 0.0532
+    - null
     - null
     - null
   - model: Cluster-GT
@@ -1595,8 +1696,10 @@ variants:
     - 0.751
     - null
     - null
+    - null
     metric_stds:
     - 0.0084
+    - null
     - null
     - null
   - model: GIN
@@ -1625,8 +1728,10 @@ variants:
     - 0.751
     - null
     - null
+    - null
     metric_stds:
     - 0.051
+    - null
     - null
     - null
   - model: RePHINE
@@ -1655,22 +1760,25 @@ variants:
     - 0.75
     - null
     - null
+    - null
     metric_stds:
     - 0.0283
     - null
     - null
-  row_count: 212
+    - null
+  row_count: 217
   rows_json: /data/datasets/imdb-binary/10-fold-cv-rows.json
   chart_json: /data/datasets/imdb-binary/10-fold-cv-chart.json
   arch_counts:
-    gnn: 125
-    hybrid: 36
+    gnn: 123
+    hybrid: 40
     graph_transformer: 1
     llm: 0
-    walk: 3
+    walk: 4
     traditional: 41
   metric_counts:
-  - 196
+  - 188
+  - 13
   - 6
   - 10
   milestones: &id001
@@ -1680,12 +1788,6 @@ variants:
     arxiv_id: '1805.08090'
     title: Graph Capsule Convolutional Neural Networks
     date: '2018-05-21'
-  - value: 0.751
-    std: 0.051
-    model: GIN-0
-    arxiv_id: '1810.00826'
-    title: How Powerful are Graph Neural Networks?
-    date: '2018-10-01'
   - value: 0.769
     std: 0.036
     model: GNTK
@@ -1700,6 +1802,14 @@ variants:
     date: '2021-06-25'
   milestones_by_metric:
     Accuracy: *id001
+    F1:
+    - value: 0.767
+      std: 0.0101
+      model: APT-P (fine-tune)
+      arxiv_id: '2311.01038'
+      title: 'Better with Less: A Data-Active Perspective on Pre-Training Graph Neural
+        Networks'
+      date: '2023-11-02'
     ROC-AUC:
     - value: 0.7983
       std: 0.0075
@@ -1708,6 +1818,12 @@ variants:
       title: Improving Expressivity of GNNs with Subgraph-specific Factor Embedded
         Normalization
       date: '2023-05-31'
-    epochs: []
+    epochs:
+    - value: 620.0
+      std: 151.0
+      model: kmis
+      arxiv_id: '2501.09821'
+      title: 'BN-Pool: Bayesian Nonparametric Pooling for Graphs'
+      date: '2025-01-16'
 ---
 

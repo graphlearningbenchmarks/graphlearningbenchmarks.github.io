@@ -650,11 +650,10 @@ results:
     published_conference: KDD 2022
     at_pub_value: 0.973
     at_pub_std: 0.002
-    at_pub_source_arxiv: '1803.07294'
-    at_pub_source_title: 'GaAN: Gated Attention Networks for Learning on Large and
-      Spatiotemporal Graphs'
-    at_pub_source_date_iso: '2018-03-20'
-    at_pub_source_date_label: '2018'
+    at_pub_source_arxiv: '1710.10903'
+    at_pub_source_title: Graph Attention Networks
+    at_pub_source_date_iso: '2017-10-30'
+    at_pub_source_date_label: ICLR 2017
     value_gap_source_date_iso: '2023-01-28'
     value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
@@ -676,8 +675,8 @@ results:
     value_note: ''
     sort_value: 0.9732
     sort_std: 0.0032
-    global_rank: 55
-    paper_rank: 55
+    global_rank: 56
+    paper_rank: 56
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -744,13 +743,46 @@ results:
     value_note: ''
     sort_value: 0.6928
     sort_std: null
-    global_rank: 130
-    paper_rank: 130
+    global_rank: 138
+    paper_rank: 138
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.462
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2407.00494'
+    title: Graph Neural Networks Gone Hogwild
+    date: Jun 29, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-29'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 183
+    sort_value: 0.462
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

@@ -12,7 +12,7 @@ stats:
   avg_nodes: 29.87
   avg_edges: 32.3
   num_classes: 2
-result_count: 826
+result_count: 803
 best_model:
   model: WL-MLP
   value: 0.9954
@@ -20,6 +20,11 @@ best_model:
   arxiv_id: '2202.10156'
   paper_title: 1-WL Expressiveness Is (Almost) All You Need
 papers:
+- arxiv_id: '2603.05004'
+  title: Poisoning the Inner Prediction Logic of Graph Neural Networks for Clean-Label
+    Backdoor Attacks
+  date_iso: '2026-03-05'
+  venue: TMLR 2026
 - arxiv_id: '2602.08431'
   title: 'USBD: Universal Structural Basis Distillation for Source-Free Graph Domain
     Adaptation'
@@ -28,11 +33,6 @@ papers:
 - arxiv_id: '2602.05567'
   title: 'MAGPrompt: Message-Adaptive Graph Prompt Tuning for Graph Neural Networks'
   date_iso: '2026-02-05'
-  venue: ''
-- arxiv_id: '2602.04244'
-  title: 'GraphVec: Cross-Domain Graph Vectorization for Graph-Level Representation
-    Learning'
-  date_iso: '2026-02-04'
   venue: ''
 - arxiv_id: '2512.13235'
   title: 'CORE: Contrastive Masked Feature Reconstruction on Graphs'
@@ -92,10 +92,10 @@ papers:
   title: 'InfoGain Wavelets: Furthering the Design of Graph Diffusion Wavelets'
   date_iso: '2025-04-08'
   venue: ''
-- arxiv_id: '2503.00750'
-  title: Edge Prompt Tuning for Graph Neural Networks
-  date_iso: '2025-03-02'
-  venue: ICLR 2025
+- arxiv_id: '2503.19666'
+  title: 'Towards Efficient Training of Graph Neural Networks: A Multiscale Approach'
+  date_iso: '2025-03-25'
+  venue: TMLR 2025
 - arxiv_id: '2502.16233'
   title: Graph Self-Supervised Learning with Learnable Structural and Positional Encodings
   date_iso: '2025-02-22'
@@ -200,11 +200,6 @@ papers:
 - arxiv_id: '2402.08023'
   title: 'UGMAE: A Unified Framework for Graph Masked Autoencoders'
   date_iso: '2024-02-12'
-  venue: ''
-- arxiv_id: '2402.07191'
-  title: Improving Subgraph Extraction for Graph Invariant Learning via Graph Sinkhorn
-    Attention
-  date_iso: '2024-02-11'
   venue: ''
 - arxiv_id: '2402.04924'
   title: 'Two Trades are not Baffled: Condensing Graph via Crafting Rational Gradient
@@ -471,14 +466,14 @@ papers:
   title: 'GraphiT: Encoding Graph Structure in Transformers'
   date_iso: '2021-06-10'
   venue: ''
-- arxiv_id: '2106.07594'
-  title: Graph Contrastive Learning Automated
-  date_iso: '2021-06-10'
-  venue: ICML 2021
 - arxiv_id: '2106.05819'
   title: Adversarial Graph Augmentation to Improve Graph Contrastive Learning
   date_iso: '2021-06-10'
   venue: NeurIPS 2021
+- arxiv_id: '2106.07594'
+  title: Graph Contrastive Learning Automated
+  date_iso: '2021-06-10'
+  venue: ICML 2021
 - arxiv_id: '2104.06643'
   title: Generative Causal Explanations for Graph Neural Networks
   date_iso: '2021-04-14'
@@ -573,10 +568,6 @@ papers:
     and Back'
   date_iso: '2018-12-14'
   venue: ''
-- arxiv_id: '1810.00826'
-  title: How Powerful are Graph Neural Networks?
-  date_iso: '2018-10-01'
-  venue: ICLR 2018
 - arxiv_id: '1805.08090'
   title: Graph Capsule Convolutional Neural Networks
   date_iso: '2018-05-21'
@@ -625,11 +616,9 @@ variants:
   metrics:
   - Accuracy
   - AUROC
-  - MCC
   metric_display_names:
   - Accuracy
   - AUROC
-  - MCC
   show_all_metrics_desktop: false
   chart_default_log_scale: false
   chart_hidden_models: []
@@ -659,9 +648,7 @@ variants:
     metric_values:
     - 0.9954
     - null
-    - null
     metric_stds:
-    - null
     - null
     - null
   - model: GIN
@@ -689,9 +676,7 @@ variants:
     metric_values:
     - 0.9934
     - null
-    - null
     metric_stds:
-    - null
     - null
     - null
   - model: GCN
@@ -719,9 +704,7 @@ variants:
     metric_values:
     - 0.9727
     - null
-    - null
     metric_stds:
-    - null
     - null
     - null
   - model: GAT
@@ -749,9 +732,7 @@ variants:
     metric_values:
     - 0.9623
     - null
-    - null
     metric_stds:
-    - null
     - null
     - null
   - model: DiffPool
@@ -779,10 +760,8 @@ variants:
     metric_values:
     - 0.921
     - null
-    - null
     metric_stds:
     - 0.026
-    - null
     - null
   - model: MSH-GNN
     model_plain: MSH-GNN
@@ -809,10 +788,8 @@ variants:
     metric_values:
     - 0.886
     - null
-    - null
     metric_stds:
     - 0.005
-    - null
     - null
   - model: WL-PM
     model_plain: WL-PM
@@ -840,10 +817,8 @@ variants:
     metric_values:
     - 0.864
     - null
-    - null
     metric_stds:
     - 0.002
-    - null
     - null
   - model: WL-OA
     model_plain: WL-OA
@@ -870,10 +845,8 @@ variants:
     metric_values:
     - 0.861
     - null
-    - null
     metric_stds:
     - 0.002
-    - null
     - null
   - model: WLK
     model_plain: WLK
@@ -900,10 +873,8 @@ variants:
     metric_values:
     - 0.86
     - null
-    - null
     metric_stds:
     - 0.018
-    - null
     - null
   - model: WL subtree
     model_plain: WL subtree
@@ -914,26 +885,24 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '1810.00826'
-    title: How Powerful are Graph Neural Networks?
-    date: Oct 1, 2018
-    date_iso: '2018-10-01'
-    date_display: Oct 2018
-    codebase_url: https://github.com/weihua916/powerful-gnns
-    published_conference: ICLR 2018
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2018
+    arxiv_id: '1905.13192'
+    title: 'Graph Neural Tangent Kernel: Fusing Graph Neural Networks with Graph Kernels'
+    date: May 30, 2019
+    date_iso: '2019-05-30'
+    date_display: May 2019
+    codebase_url: https://github.com/KangchengHou/gntk
+    published_conference: NeurIPS 2019
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2019
     uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
     - 0.86
     - null
-    - null
     metric_stds:
     - 0.018
-    - null
     - null
   - model: WL kernel
     model_plain: WL kernel
@@ -960,10 +929,8 @@ variants:
     metric_values:
     - 0.86
     - null
-    - null
     metric_stds:
     - 0.018
-    - null
     - null
   - model: WL
     model_plain: WL
@@ -990,10 +957,8 @@ variants:
     metric_values:
     - 0.859
     - null
-    - null
     metric_stds:
     - 0.001
-    - null
     - null
   - model: CoCN
     model_plain: CoCN
@@ -1020,10 +985,8 @@ variants:
     metric_values:
     - 0.8583
     - null
-    - null
     metric_stds:
     - 0.0086
-    - null
     - null
   - model: PXGL-GNN
     model_plain: PXGL-GNN
@@ -1050,10 +1013,8 @@ variants:
     metric_values:
     - 0.8578
     - null
-    - null
     metric_stds:
     - 0.0207
-    - null
     - null
   - model: Weisfeiler--Lehman-inspired embedding scheme
     model_plain: Weisfeiler--Lehman-inspired embedding scheme
@@ -1080,10 +1041,8 @@ variants:
     metric_values:
     - 0.8575
     - null
-    - null
     metric_stds:
     - 0.0025
-    - null
     - null
   - model: WWL
     model_plain: WWL
@@ -1110,10 +1069,8 @@ variants:
     metric_values:
     - 0.857
     - null
-    - null
     metric_stds:
     - 0.008
-    - null
     - null
   - model: Q-WL-RF
     model_plain: Q-WL-RF
@@ -1140,10 +1097,8 @@ variants:
     metric_values:
     - 0.857
     - null
-    - null
     metric_stds:
     - 0.015
-    - null
     - null
   - model: GSO
     model_plain: GSO
@@ -1171,10 +1126,8 @@ variants:
     metric_values:
     - 0.8547
     - null
-    - null
     metric_stds:
     - 0.0138
-    - null
     - null
   - model: P-WL
     model_plain: P-WL
@@ -1202,10 +1155,8 @@ variants:
     metric_values:
     - 0.854
     - null
-    - null
     metric_stds:
     - 0.001
-    - null
     - null
   - model: PIN
     model_plain: PIN
@@ -1233,10 +1184,8 @@ variants:
     metric_values:
     - 0.851
     - null
-    - null
     metric_stds:
     - 0.015
-    - null
     - null
   - model: GIN-AK+
     model_plain: GIN-AK+
@@ -1263,10 +1212,8 @@ variants:
     metric_values:
     - 0.85
     - null
-    - null
     metric_stds:
     - 0.02
-    - null
     - null
   - model: GNN-AK+
     model_plain: GNN-AK+
@@ -1293,10 +1240,8 @@ variants:
     metric_values:
     - 0.85
     - null
-    - null
     metric_stds:
     - 0.02
-    - null
     - null
   - model: Norm-GN
     model_plain: Norm-GN
@@ -1323,10 +1268,8 @@ variants:
     metric_values:
     - 0.8487
     - null
-    - null
     metric_stds:
     - 0.0168
-    - null
     - null
   - model: CapsNets
     model_plain: CapsNets
@@ -1353,10 +1296,8 @@ variants:
     metric_values:
     - 0.8487
     - null
-    - null
     metric_stds:
     - 0.0168
-    - null
     - null
   - model: OEPG
     model_plain: OEPG
@@ -1384,10 +1325,8 @@ variants:
     metric_values:
     - 0.848
     - null
-    - null
     metric_stds:
     - 0.004
-    - null
     - null
   - model: Spec-GN
     model_plain: Spec-GN
@@ -1414,10 +1353,8 @@ variants:
     metric_values:
     - 0.8479
     - null
-    - null
     metric_stds:
     - 0.0163
-    - null
     - null
   - model: WL
     model_plain: WL
@@ -1444,10 +1381,8 @@ variants:
     metric_values:
     - 0.8476
     - null
-    - null
     metric_stds:
     - 0.0032
-    - null
     - null
   - model: WL-Edge
     model_plain: WL-Edge
@@ -1474,10 +1409,8 @@ variants:
     metric_values:
     - 0.8465
     - null
-    - null
     metric_stds:
     - 0.0025
-    - null
     - null
   - model: WL sp
     model_plain: WL sp
@@ -1504,9 +1437,7 @@ variants:
     metric_values:
     - 0.8455
     - null
-    - null
     metric_stds:
-    - null
     - null
     - null
   - model: CAN
@@ -1534,10 +1465,8 @@ variants:
     metric_values:
     - 0.845
     - null
-    - null
     metric_stds:
     - 0.016
-    - null
     - null
   - model: GIN + HOPE-WavePE
     model_plain: GIN + HOPE-WavePE
@@ -1565,10 +1494,8 @@ variants:
     metric_values:
     - 0.845
     - null
-    - null
     metric_stds:
     - 0.02
-    - null
     - null
   - model: RetGK
     model_plain: RetGK
@@ -1595,10 +1522,8 @@ variants:
     metric_values:
     - 0.845
     - null
-    - null
     metric_stds:
     - 0.002
-    - null
     - null
   - model: propagation kernels
     model_plain: propagation kernels
@@ -1625,10 +1550,8 @@ variants:
     metric_values:
     - 0.845
     - null
-    - null
     metric_stds:
     - 0.001
-    - null
     - null
   - model: PK
     model_plain: PK
@@ -1655,10 +1578,8 @@ variants:
     metric_values:
     - 0.845
     - null
-    - null
     metric_stds:
     - 0.001
-    - null
     - null
   - model: SUGAR
     model_plain: SUGAR
@@ -1686,10 +1607,8 @@ variants:
     metric_values:
     - 0.8439
     - null
-    - null
     metric_stds:
     - 0.0163
-    - null
     - null
   - model: WL edge
     model_plain: WL edge
@@ -1716,9 +1635,7 @@ variants:
     metric_values:
     - 0.8437
     - null
-    - null
     metric_stds:
-    - null
     - null
     - null
   - model: GPS(DEL-F)
@@ -1746,10 +1663,8 @@ variants:
     metric_values:
     - 0.8436
     - null
-    - null
     metric_stds:
     - 0.0015
-    - null
     - null
   - model: GraphGPS
     model_plain: GraphGPS
@@ -1776,10 +1691,8 @@ variants:
     metric_values:
     - 0.8421
     - null
-    - null
     metric_stds:
     - 0.0225
-    - null
     - null
   - model: SUN (GIN) (NM)
     model_plain: SUN (GIN) (NM)
@@ -1806,10 +1719,8 @@ variants:
     metric_values:
     - 0.842
     - null
-    - null
     metric_stds:
     - 0.015
-    - null
     - null
   - model: GNTK
     model_plain: GNTK
@@ -1836,10 +1747,8 @@ variants:
     metric_values:
     - 0.842
     - null
-    - null
     metric_stds:
     - 0.015
-    - null
     - null
   - model: SUN (GIN) (EGO+)
     model_plain: SUN (GIN) (EGO+)
@@ -1866,10 +1775,8 @@ variants:
     metric_values:
     - 0.842
     - null
-    - null
     metric_stds:
     - 0.015
-    - null
     - null
   - model: GIN + Granola
     model_plain: GIN + Granola
@@ -1896,10 +1803,8 @@ variants:
     metric_values:
     - 0.84
     - null
-    - null
     metric_stds:
     - 0.017
-    - null
     - null
   - model: GCN
     model_plain: GCN
@@ -1926,9 +1831,7 @@ variants:
     metric_values:
     - 0.84
     - null
-    - null
     metric_stds:
-    - null
     - null
     - null
   - model: SoftEdge
@@ -1956,10 +1859,8 @@ variants:
     metric_values:
     - 0.839
     - null
-    - null
     metric_stds:
     - 0.001
-    - null
     - null
   - model: ifMixup
     model_plain: ifMixup
@@ -1986,10 +1887,8 @@ variants:
     metric_values:
     - 0.839
     - null
-    - null
     metric_stds:
     - 0.004
-    - null
     - null
   - model: VEPM
     model_plain: VEPM
@@ -2016,10 +1915,8 @@ variants:
     metric_values:
     - 0.839
     - null
-    - null
     metric_stds:
     - 0.018
-    - null
     - null
   - model: ECC
     model_plain: ECC
@@ -2046,9 +1943,7 @@ variants:
     metric_values:
     - 0.838
     - null
-    - null
     metric_stds:
-    - null
     - null
     - null
   - model: DS-GNN (GIN) (ND)
@@ -2076,10 +1971,8 @@ variants:
     metric_values:
     - 0.838
     - null
-    - null
     metric_stds:
     - 0.024
-    - null
     - null
   - model: DiffPool-TIP
     model_plain: DiffPool-TIP
@@ -2106,10 +1999,8 @@ variants:
     metric_values:
     - 0.8375
     - null
-    - null
     metric_stds:
     - 0.0131
-    - null
     - null
   - model: structure2vec
     model_plain: structure2vec
@@ -2136,25 +2027,22 @@ variants:
     metric_values:
     - 0.8372
     - null
-    - null
     metric_stds:
     - null
     - null
-    - null
-  row_count: 826
+  row_count: 803
   rows_json: /data/datasets/nci1/10-fold-cv-rows.json
   chart_json: /data/datasets/nci1/10-fold-cv-chart.json
   arch_counts:
-    gnn: 521
-    hybrid: 130
+    gnn: 502
+    hybrid: 126
     graph_transformer: 31
     llm: 0
     walk: 10
-    traditional: 100
+    traditional: 99
   metric_counts:
-  - 780
+  - 772
   - 31
-  - 15
   milestones: &id001
   - value: 0.859
     std: 0.001
@@ -2190,13 +2078,5 @@ variants:
       arxiv_id: '2505.21285'
       title: Learnable Kernel Density Estimation for Graphs
       date: '2025-05-27'
-    MCC:
-    - value: 0.32
-      std: 0.05
-      model: Oracle (IID)
-      arxiv_id: '2402.07191'
-      title: Improving Subgraph Extraction for Graph Invariant Learning via Graph
-        Sinkhorn Attention
-      date: '2024-02-11'
 ---
 

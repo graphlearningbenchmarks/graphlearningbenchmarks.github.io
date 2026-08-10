@@ -269,7 +269,7 @@ variants:
     published_conference_short: NeurIPS
     published_conference_slug: neurips
     published_venue: NeurIPS 2022
-    uses_external_data: false
+    uses_external_data: null
     is_best: false
     is_std_outlier: false
     metric_values:
@@ -477,7 +477,7 @@ variants:
     published_conference_short: NeurIPS
     published_conference_slug: neurips
     published_venue: NeurIPS 2022
-    uses_external_data: false
+    uses_external_data: null
     is_best: false
     is_std_outlier: false
     metric_values:
@@ -1043,12 +1043,18 @@ variants:
   metric_counts:
   - 37
   milestones: &id001
-  - value: 0.9345
-    std: 0.0041
-    model: DAG+GraphGPS
-    arxiv_id: '2210.13148'
-    title: Transformers over Directed Acyclic Graphs
-    date: '2022-10-24'
+  - value: 0.86
+    std: null
+    model: Feather
+    arxiv_id: '2011.07682'
+    title: A Large-Scale Database for Graph Representation Learning
+    date: '2020-11-16'
+  - value: 0.935
+    std: 0.006
+    model: Transformer
+    arxiv_id: '2205.12454'
+    title: Recipe for a General, Powerful, Scalable Graph Transformer
+    date: '2022-05-25'
   - value: 0.9415
     std: 0.002
     model: GMN

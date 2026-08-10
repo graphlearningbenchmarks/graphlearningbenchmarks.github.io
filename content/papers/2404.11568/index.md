@@ -54,14 +54,14 @@ abstract: Scaling deep learning models has been at the heart of recent revolutio
   on 26 out the 38 downstream tasks. We hope that our work paves the way for an era
   where foundational GNNs drive pharmaceutical drug discovery.
 codebase_url: ''
-extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+extraction_model: google/gemma-4-26B-A4B-it
 has_results: true
 paper_type: method
 proposed_models:
 - 1B MolGPS
 - 3B MolGPS
-mrr: 0.018
-adjusted_mrr: 0.018
+mrr: 0.0214
+adjusted_mrr: 0.0214
 mrr_dataset_count: 4
 benchmark_categories:
 - MoleculeNet
@@ -202,10 +202,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 41
+    global_rank: 43
     sort_value: 0.8646
     sort_std: 0.0081
     comparison_type: global_top
@@ -230,14 +230,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: test AUROC on MoleculeNet BACE
+    protocol_note: test AUROC on MoleculeNet BACE dataset using standard split
     date: Apr 17, 2024
     date_display: Apr 2024
     date_iso: '2024-04-17'
@@ -269,8 +269,8 @@ results:
     value_note: ''
     sort_value: 0.832
     sort_std: null
-    global_rank: 101
-    paper_rank: 101
+    global_rank: 105
+    paper_rank: 105
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -297,14 +297,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: test AUROC on MoleculeNet BACE
+    protocol_note: test AUROC on MoleculeNet BACE dataset using standard split
     date: Apr 17, 2024
     date_display: Apr 2024
     date_iso: '2024-04-17'
@@ -336,8 +336,8 @@ results:
     value_note: ''
     sort_value: 0.828
     sort_std: null
-    global_rank: 108
-    paper_rank: 108
+    global_rank: 112
+    paper_rank: 112
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -364,14 +364,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: test AUROC on MoleculeNet BACE
+    protocol_note: test AUROC on MoleculeNet BACE dataset using standard split
     date: Apr 17, 2024
     date_display: Apr 2024
     date_iso: '2024-04-17'
@@ -403,8 +403,8 @@ results:
     value_note: ''
     sort_value: 0.812
     sort_std: 0.009
-    global_rank: 144
-    paper_rank: 144
+    global_rank: 150
+    paper_rank: 150
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -551,10 +551,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 32
+    global_rank: 34
     sort_value: 0.8875
     sort_std: 0.0049
     comparison_type: global_top
@@ -578,15 +578,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: self-supervised GraphMVP model on MoleculeNet
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: test AUROC on MoleculeNet
+    protocol_note: test AUROC on BBBP MoleculeNet dataset
     date: Apr 17, 2024
     date_display: Apr 2024
     date_iso: '2024-04-17'
@@ -620,10 +620,10 @@ results:
     value_note: ''
     sort_value: 0.86
     sort_std: 0.034
-    global_rank: 47
-    paper_rank: 88
-    rank_delta: 41
-    rank_delta_abs: 41
+    global_rank: 49
+    paper_rank: 91
+    rank_delta: 42
+    rank_delta_abs: 42
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -649,14 +649,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: MolGPS variants compared to self-supervised GraphMVP
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: test AUROC on MoleculeNet
+    protocol_note: test AUROC on BBBP MoleculeNet dataset
     date: Apr 17, 2024
     date_display: Apr 2024
     date_iso: '2024-04-17'
@@ -688,8 +688,8 @@ results:
     value_note: ''
     sort_value: 0.809
     sort_std: null
-    global_rank: 57
-    paper_rank: 57
+    global_rank: 59
+    paper_rank: 59
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -716,14 +716,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: MolGPS variants compared to self-supervised GraphMVP
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: test AUROC on MoleculeNet
+    protocol_note: test AUROC on BBBP MoleculeNet dataset
     date: Apr 17, 2024
     date_display: Apr 2024
     date_iso: '2024-04-17'
@@ -755,8 +755,8 @@ results:
     value_note: ''
     sort_value: 0.8
     sort_std: null
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 60
+    paper_rank: 60
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -930,15 +930,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
+    uses_external_data: 1
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test AUROC on MoleculeNet dataset
+    protocol_note: Test AUROC on MoleculeNet Clintox dataset
     date: Apr 17, 2024
     date_display: Apr 2024
     date_iso: '2024-04-17'
@@ -973,9 +973,9 @@ results:
     sort_value: 0.865
     sort_std: 0.017
     global_rank: 49
-    paper_rank: 106
-    rank_delta: 57
-    rank_delta_abs: 57
+    paper_rank: 108
+    rank_delta: 59
+    rank_delta_abs: 59
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1000,15 +1000,16 @@ results:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: MolGPS variants pretrained with additional Phenomics
+      data
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test AUROC on MoleculeNet dataset
+    protocol_note: Test AUROC on MoleculeNet Clintox dataset
     date: Apr 17, 2024
     date_display: Apr 2024
     date_iso: '2024-04-17'
@@ -1040,8 +1041,8 @@ results:
     value_note: ''
     sort_value: 0.809
     sort_std: null
-    global_rank: 80
-    paper_rank: 80
+    global_rank: 81
+    paper_rank: 81
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1067,15 +1068,16 @@ results:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: MolGPS variants pretrained with additional Phenomics
+      data
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test AUROC on MoleculeNet dataset
+    protocol_note: Test AUROC on MoleculeNet Clintox dataset
     date: Apr 17, 2024
     date_display: Apr 2024
     date_iso: '2024-04-17'
@@ -1107,8 +1109,8 @@ results:
     value_note: ''
     sort_value: 0.807
     sort_std: null
-    global_rank: 82
-    paper_rank: 82
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1232,16 +1234,16 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: 1B MolGP
-    model_key: 1b molgp
-    model_plain: 1B MolGP
+  - model: 1B MolGPS
+    model_key: 1b molgps
+    model_plain: 1B MolGPS
     value: 0.67
     std: null
     paper_value: 0.67
     paper_std: null
     metric: ROC-AUC
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: 1000.0
@@ -1249,14 +1251,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test AUROC on MoleculeNet Sider dataset
+    protocol_note: MoleculeNet Sider task, test AUROC
     date: Apr 17, 2024
     date_display: Apr 2024
     date_iso: '2024-04-17'
@@ -1288,8 +1290,8 @@ results:
     value_note: ''
     sort_value: 0.67
     sort_std: null
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1316,14 +1318,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test AUROC on MoleculeNet Sider dataset
+    protocol_note: MoleculeNet Sider task, test AUROC
     date: Apr 17, 2024
     date_display: Apr 2024
     date_iso: '2024-04-17'
@@ -1389,7 +1391,7 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 66
@@ -1417,14 +1419,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test AUROC on MoleculeNet Sider dataset
+    protocol_note: MoleculeNet Sider task, test AUROC
     date: Apr 17, 2024
     date_display: Apr 2024
     date_iso: '2024-04-17'

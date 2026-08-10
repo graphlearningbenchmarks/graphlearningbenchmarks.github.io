@@ -46,33 +46,27 @@ has_results: true
 paper_type: method
 proposed_models:
 - PF-GNN
-mrr: 0.3653
-adjusted_mrr: 0.3653
-mrr_dataset_count: 3
+mrr: 0.0405
+adjusted_mrr: 0.027
+mrr_dataset_count: 2
 benchmark_categories:
 - OGB
-- Quantum Chemistry
 - GNNBenchmark
 benchmark_coverage:
 - benchmark: OGB
   benchmark_slug: ogb
   evaluated: 1
   total: 16
-- benchmark: Quantum Chemistry
-  benchmark_slug: quantum-chemistry
-  evaluated: 1
-  total: 3
 - benchmark: GNNBenchmark
   benchmark_slug: gnnbenchmark
   evaluated: 1
   total: 6
 task_categories:
 - graph_classification
-- graph_regression
 experiment_scopes:
 - graph-level
 results:
-- &id003
+- &id002
   dataset: CSL
   rows:
   - model: PF-GNN
@@ -105,13 +99,12 @@ results:
     date_iso: '2024-01-31'
     published_venue: ICLR 2024
     published_conference: ICLR 2024
-    at_pub_value: 1.0
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2210.02636'
-    at_pub_source_title: Geodesic Graph Neural Network for Efficient Graph Representation
-      Learning
-    at_pub_source_date_iso: '2022-10-06'
-    at_pub_source_date_label: NeurIPS 2022
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2024-01-31'
     value_gap_source_date_label: ICLR 2024
     gap_vs_at_pub: null
@@ -133,8 +126,8 @@ results:
     value_note: ''
     sort_value: 1.0
     sort_std: 0.0
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -201,9 +194,9 @@ results:
     sort_value: 1.0
     sort_std: 0.0
     global_rank: 9
-    paper_rank: 79
-    rank_delta: 70
-    rank_delta_abs: 70
+    paper_rank: 74
+    rank_delta: 65
+    rank_delta_abs: 65
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -366,10 +359,10 @@ results:
     value_note: ''
     sort_value: 0.99933
     sort_std: 0.00467
-    global_rank: 36
-    paper_rank: 79
-    rank_delta: 43
-    rank_delta_abs: 43
+    global_rank: 35
+    paper_rank: 74
+    rank_delta: 39
+    rank_delta_abs: 39
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -402,7 +395,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: Node Positional Encoding with Laplacian Eigenvectors
     is_global_top: true
-    global_rank: 37
+    global_rank: 36
     sort_value: 0.99933
     sort_std: 0.00467
     comparison_type: global_top
@@ -466,10 +459,10 @@ results:
     value_note: ''
     sort_value: 0.99333
     sort_std: 0.01333
-    global_rank: 42
-    paper_rank: 79
-    rank_delta: 37
-    rank_delta_abs: 37
+    global_rank: 41
+    paper_rank: 74
+    rank_delta: 33
+    rank_delta_abs: 33
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -534,8 +527,8 @@ results:
     value_note: ''
     sort_value: 0.978
     sort_std: 0.109
-    global_rank: 49
-    paper_rank: 49
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -603,10 +596,10 @@ results:
     value_note: ''
     sort_value: 0.8
     sort_std: 0.157
-    global_rank: 58
-    paper_rank: 79
-    rank_delta: 21
-    rank_delta_abs: 21
+    global_rank: 56
+    paper_rank: 74
+    rank_delta: 18
+    rank_delta_abs: 18
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -673,8 +666,8 @@ results:
     value_note: ''
     sort_value: 0.533
     sort_std: 0.129
-    global_rank: 63
-    paper_rank: 65
+    global_rank: 60
+    paper_rank: 62
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -691,701 +684,6 @@ results:
   paper_metrics:
   - Accuracy
   metric: Accuracy
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
-- &id002
-  dataset: QM9
-  is_multi_metric: true
-  rows:
-  - model: PF-GNN
-    model_key: pf-gnn
-    model_plain: PF-GNN
-    metric_values:
-    - 0.017
-    - 0.017
-    - 0.017
-    metric_stds:
-    - 0.001
-    - 0.001
-    - 0.001
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.017
-    sort_std: 0.001
-    true_value: 0.017
-    true_std: 0.001
-    paper_value: 0.017
-    paper_std: 0.001
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2401.17752'
-    value_gap_source_title: 'PF-GNN: Differentiable particle filtering based approximation
-      of universal graph representations'
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-01-31'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Jan 31, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-31'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-    global_rank: 1
-  - model: DimeNet++
-    model_key: dimenet++
-    model_plain: DimeNet++
-    metric_values:
-    - 0.019
-    - 0.019
-    - 0.019
-    metric_stds:
-    - 0.001
-    - 0.001
-    - 0.001
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.019
-    sort_std: 0.001
-    true_value: 0.019
-    true_std: 0.001
-    paper_value: 0.019
-    paper_std: 0.001
-    has_value_gap: true
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2401.17752'
-    value_gap_source_title: 'PF-GNN: Differentiable particle filtering based approximation
-      of universal graph representations'
-    value_note: ''
-    at_pub_value: 0.032
-    at_pub_std: null
-    at_pub_source_arxiv: '2110.01191'
-    at_pub_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous Molecular
-      Graphs'
-    at_pub_source_date_iso: '2021-10-04'
-    at_pub_source_date_label: AAAI 2021
-    value_gap_source_date_iso: '2024-01-31'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.013000000000000001
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Jan 31, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-31'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: improved
-    comparison_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    comparison_source_arxiv: '2110.01191'
-    is_best: true
-    is_std_outlier: false
-    global_rank: 2
-  - model: Molformer
-    model_key: molformer
-    model_plain: Molformer
-    metric_values:
-    - 0.025
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    arxiv_id: '2110.01191'
-    title: 'Molformer: Motif-based Transformer on 3D Heterogeneous Molecular Graphs'
-    published_venue: ''
-    date: Oct 4, 2021
-    date_display: Oct 2021
-    date_iso: '2021-10-04'
-    codebase_url: https://github.com/smiles724/Molformer
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 3
-    is_best: false
-    sort_value: 0.025
-    sort_std: null
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: FGNN
-    model_key: fgnn
-    model_plain: FGNN
-    metric_values:
-    - 0.027
-    - 0.027
-    - 0.027
-    metric_stds:
-    - 0.001
-    - 0.001
-    - 0.001
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.027
-    sort_std: 0.001
-    true_value: 0.027
-    true_std: 0.001
-    paper_value: 0.027
-    paper_std: 0.001
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2401.17752'
-    value_gap_source_title: 'PF-GNN: Differentiable particle filtering based approximation
-      of universal graph representations'
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-01-31'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Jan 31, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-31'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 4
-  - model: δ-2-LGNN
-    model_key: δ-2-lgnn
-    model_plain: δ-2-LGNN
-    metric_values:
-    - 0.029
-    - 0.029
-    - 0.029
-    metric_stds:
-    - 0.001
-    - 0.001
-    - 0.001
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.029
-    sort_std: 0.001
-    true_value: 0.029
-    true_std: 0.001
-    paper_value: 0.029
-    paper_std: 0.001
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2401.17752'
-    value_gap_source_title: 'PF-GNN: Differentiable particle filtering based approximation
-      of universal graph representations'
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-01-31'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Jan 31, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-31'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 5
-  - model: MPNN
-    model_key: mpnn
-    model_plain: MPNN
-    metric_values:
-    - 0.034
-    - 0.034
-    - 0.034
-    metric_stds:
-    - 0.001
-    - 0.001
-    - 0.001
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.034
-    sort_std: 0.001
-    true_value: 0.034
-    true_std: 0.001
-    paper_value: 0.034
-    paper_std: 0.001
-    has_value_gap: true
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2401.17752'
-    value_gap_source_title: 'PF-GNN: Differentiable particle filtering based approximation
-      of universal graph representations'
-    value_note: ''
-    at_pub_value: 0.069
-    at_pub_std: null
-    at_pub_source_arxiv: '2110.01191'
-    at_pub_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous Molecular
-      Graphs'
-    at_pub_source_date_iso: '2021-10-04'
-    at_pub_source_date_label: AAAI 2021
-    value_gap_source_date_iso: '2024-01-31'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.035
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Jan 31, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-31'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: improved
-    comparison_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    comparison_source_arxiv: '2110.01191'
-    is_best: false
-    is_std_outlier: false
-    global_rank: 7
-  - model: 3-IGN
-    model_key: 3-ign
-    model_plain: 3-IGN
-    metric_values:
-    - 0.046
-    - 0.046
-    - 0.046
-    metric_stds:
-    - 0.001
-    - 0.001
-    - 0.001
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.046
-    sort_std: 0.001
-    true_value: 0.046
-    true_std: 0.001
-    paper_value: 0.046
-    paper_std: 0.001
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2401.17752'
-    value_gap_source_title: 'PF-GNN: Differentiable particle filtering based approximation
-      of universal graph representations'
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-01-31'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Jan 31, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-31'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 11
-  - model: 1-2-3-GNN
-    model_key: 1-2-3-gnn
-    model_plain: 1-2-3-GNN
-    metric_values:
-    - 0.062
-    - 0.062
-    - 0.062
-    metric_stds:
-    - 0.001
-    - 0.001
-    - 0.001
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.062
-    sort_std: 0.001
-    true_value: 0.062
-    true_std: 0.001
-    paper_value: 0.062
-    paper_std: 0.001
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2401.17752'
-    value_gap_source_title: 'PF-GNN: Differentiable particle filtering based approximation
-      of universal graph representations'
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-01-31'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Jan 31, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-31'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 14
-  - model: 1-2-GNN
-    model_key: 1-2-gnn
-    model_plain: 1-2-GNN
-    metric_values:
-    - 0.068
-    - 0.068
-    - 0.068
-    metric_stds:
-    - 0.001
-    - 0.001
-    - 0.001
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.068
-    sort_std: 0.001
-    true_value: 0.068
-    true_std: 0.001
-    paper_value: 0.068
-    paper_std: 0.001
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2401.17752'
-    value_gap_source_title: 'PF-GNN: Differentiable particle filtering based approximation
-      of universal graph representations'
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-01-31'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Jan 31, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-31'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 17
-  - model: GINE-ε
-    model_key: gine-ε
-    model_plain: GINE-ε
-    metric_values:
-    - 0.081
-    - 0.081
-    - 0.081
-    metric_stds:
-    - 0.003
-    - 0.003
-    - 0.003
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.081
-    sort_std: 0.003
-    true_value: 0.081
-    true_std: 0.003
-    paper_value: 0.081
-    paper_std: 0.003
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2401.17752'
-    value_gap_source_title: 'PF-GNN: Differentiable particle filtering based approximation
-      of universal graph representations'
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-01-31'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Jan 31, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-31'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 18
-  - model: 1-3-GNN
-    model_key: 1-3-gnn
-    model_plain: 1-3-GNN
-    metric_values:
-    - 0.088
-    - 0.088
-    - 0.088
-    metric_stds:
-    - 0.007
-    - 0.007
-    - 0.007
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.088
-    sort_std: 0.007
-    true_value: 0.088
-    true_std: 0.007
-    paper_value: 0.088
-    paper_std: 0.007
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2401.17752'
-    value_gap_source_title: 'PF-GNN: Differentiable particle filtering based approximation
-      of universal graph representations'
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-01-31'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Jan 31, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-31'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 19
-  metrics:
-  - gap
-  - mu
-  - alpha
-  primary_metric: gap
-  rank_metric: gap
-  higher_is_better: false
-  experiment_scope: graph-level
-  dataset_primary_metric: gap
-  paper_metrics:
-  - gap
-  - mu
-  - alpha
-  metric: gap
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 - &id001
@@ -1516,7 +814,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 10
+    global_rank: 12
     sort_value: 0.809
     sort_std: 0.016
     comparison_type: global_top
@@ -1581,8 +879,8 @@ results:
     value_note: ''
     sort_value: 0.8039
     sort_std: 0.009
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1788,8 +1086,8 @@ results:
     value_note: ''
     sort_value: 0.7905
     sort_std: 0.0132
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1856,9 +1154,9 @@ results:
     sort_value: 0.778
     sort_std: 0.0182
     global_rank: 120
-    paper_rank: 237
-    rank_delta: 117
-    rank_delta_abs: 117
+    paper_rank: 238
+    rank_delta: 118
+    rank_delta_abs: 118
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1891,7 +1189,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 171
+    global_rank: 172
     sort_value: 0.769
     sort_std: 0.0136
     comparison_type: global_top
@@ -1957,8 +1255,8 @@ results:
     value_note: ''
     sort_value: 0.763
     sort_std: 0.003
-    global_rank: 203
-    paper_rank: 216
+    global_rank: 204
+    paper_rank: 217
     rank_delta: 13
     rank_delta_abs: 13
     rank_delta_direction: worse
@@ -1981,12 +1279,9 @@ results_grouped:
 - benchmark: OGB
   datasets:
   - *id001
-- benchmark: Quantum Chemistry
-  datasets:
-  - *id002
 - benchmark: GNNBenchmark
   datasets:
-  - *id003
+  - *id002
 datasets_by_scope:
 - scope: graph-level
   label: Graph-level
@@ -1996,11 +1291,6 @@ datasets_by_scope:
     datasets:
     - dataset: ogbg-molhiv
       dataset_slug: ogbg-molhiv
-  - benchmark: Quantum Chemistry
-    benchmark_slug: quantum-chemistry
-    datasets:
-    - dataset: QM9
-      dataset_slug: qm9
   - benchmark: GNNBenchmark
     benchmark_slug: gnnbenchmark
     datasets:

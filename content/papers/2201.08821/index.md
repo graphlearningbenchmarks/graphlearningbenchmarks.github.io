@@ -54,8 +54,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GraphTrans
-mrr: 0.0323
-adjusted_mrr: 0.0215
+mrr: 0.0283
+adjusted_mrr: 0.0189
 mrr_dataset_count: 2
 benchmark_categories:
 - TU Dortmund
@@ -74,659 +74,6 @@ task_categories:
 experiment_scopes:
 - graph-level
 results:
-- &id002
-  dataset: Code
-  rows:
-  - model: GMN
-    model_key: gmn
-    model_plain: GMN
-    value: 0.206
-    std: 0.002
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2509.13735'
-    title: State Space Models over Directed Graphs
-    date: Sep 17, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-17'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.206
-    sort_std: 0.002
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: DirGraphSSM
-    model_key: dirgraphssm
-    model_plain: DirGraphSSM
-    value: 0.205
-    std: 0.0023
-    metric: F1
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2509.13735'
-    title: State Space Models over Directed Graphs
-    date: Sep 17, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-17'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.205
-    sort_std: 0.0023
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Graph-Mamba
-    model_key: graph-mamba
-    model_plain: Graph-Mamba
-    value: 0.203
-    std: 0.0023
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2509.13735'
-    title: State Space Models over Directed Graphs
-    date: Sep 17, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-17'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.203
-    sort_std: 0.0023
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GraphTrans
-    model_key: graphtrans
-    model_plain: GraphTrans
-    value: 0.183
-    std: 0.0024
-    paper_value: 0.183
-    paper_std: 0.0024
-    metric: F1
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: 9.1
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to code (score=89)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test F1 score on Code2 dataset
-    date: Jan 21, 2022
-    date_display: Jan 2022
-    date_iso: '2022-01-21'
-    published_venue: NeurIPS 2022
-    published_conference: NeurIPS 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-01-21'
-    value_gap_source_date_label: NeurIPS 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.183
-    true_std: 0.0024
-    value_gap_source_arxiv: '2201.08821'
-    value_gap_source_title: Representing Long-Range Context for Graph Neural Networks
-      with Global Attention
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.183
-    sort_std: 0.0024
-    global_rank: 18
-    paper_rank: 18
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: DAGNN (SOTA)
-    model_key: dagnn (sota)
-    model_plain: DAGNN (SOTA)
-    value: 0.1751
-    std: 0.0049
-    paper_value: 0.1751
-    paper_std: 0.0049
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: thost_directed_2021
-    variant_inference_reason: 'dataset: fuzzy match to code (score=89)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test F1 score on Code2 dataset
-    date: Jan 21, 2022
-    date_display: Jan 2022
-    date_iso: '2022-01-21'
-    published_venue: NeurIPS 2022
-    published_conference: NeurIPS 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-01-21'
-    value_gap_source_date_label: NeurIPS 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.1751
-    true_std: 0.0049
-    value_gap_source_arxiv: '2201.08821'
-    value_gap_source_title: Representing Long-Range Context for Graph Neural Networks
-      with Global Attention
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.1751
-    sort_std: 0.0049
-    global_rank: 20
-    paper_rank: 20
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Transformer
-    model_key: transformer
-    model_plain: Transformer
-    value: 0.167
-    std: 0.0015
-    paper_value: 0.167
-    paper_std: 0.0015
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: vaswani_attention_2017
-    variant_inference_reason: 'dataset: fuzzy match to code (score=89)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test F1 score on Code2 dataset
-    date: Jan 21, 2022
-    date_display: Jan 2022
-    date_iso: '2022-01-21'
-    published_venue: NeurIPS 2022
-    published_conference: NeurIPS 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-01-21'
-    value_gap_source_date_label: NeurIPS 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.167
-    true_std: 0.0015
-    value_gap_source_arxiv: '2201.08821'
-    value_gap_source_title: Representing Long-Range Context for Graph Neural Networks
-      with Global Attention
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.167
-    sort_std: 0.0015
-    global_rank: 24
-    paper_rank: 24
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN-virtual
-    model_key: gcn-virtual
-    model_plain: GCN-virtual
-    value: 0.1595
-    std: 0.0018
-    paper_value: 0.1595
-    paper_std: 0.0018
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: kipf_keras-gcn_2017
-    variant_inference_reason: 'dataset: fuzzy match to code (score=89)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test F1 score on Code2 dataset
-    date: Jan 21, 2022
-    date_display: Jan 2022
-    date_iso: '2022-01-21'
-    published_venue: NeurIPS 2022
-    published_conference: NeurIPS 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-01-21'
-    value_gap_source_date_label: NeurIPS 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.1595
-    true_std: 0.0018
-    value_gap_source_arxiv: '2201.08821'
-    value_gap_source_title: Representing Long-Range Context for Graph Neural Networks
-      with Global Attention
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.1595
-    sort_std: 0.0018
-    global_rank: 27
-    paper_rank: 27
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GIN-virtual
-    model_key: gin-virtual
-    model_plain: GIN-virtual
-    value: 0.1581
-    std: 0.002
-    paper_value: 0.1581
-    paper_std: 0.002
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: xu_how_2019
-    variant_inference_reason: 'dataset: fuzzy match to code (score=89)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test F1 score on Code2 dataset
-    date: Jan 21, 2022
-    date_display: Jan 2022
-    date_iso: '2022-01-21'
-    published_venue: NeurIPS 2022
-    published_conference: NeurIPS 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-01-21'
-    value_gap_source_date_label: NeurIPS 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.1581
-    true_std: 0.002
-    value_gap_source_arxiv: '2201.08821'
-    value_gap_source_title: Representing Long-Range Context for Graph Neural Networks
-      with Global Attention
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.1581
-    sort_std: 0.002
-    global_rank: 29
-    paper_rank: 29
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: PNA
-    model_key: pna
-    model_plain: PNA
-    value: 0.157
-    std: 0.0032
-    paper_value: 0.157
-    paper_std: 0.0032
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: corso2020pna
-    variant_inference_reason: 'dataset: fuzzy match to code (score=89)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test F1 score on Code2 dataset
-    date: Jan 21, 2022
-    date_display: Jan 2022
-    date_iso: '2022-01-21'
-    published_venue: NeurIPS 2022
-    published_conference: NeurIPS 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-01-21'
-    value_gap_source_date_label: NeurIPS 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.157
-    true_std: 0.0032
-    value_gap_source_arxiv: '2201.08821'
-    value_gap_source_title: Representing Long-Range Context for Graph Neural Networks
-      with Global Attention
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.157
-    sort_std: 0.0032
-    global_rank: 31
-    paper_rank: 31
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.1507
-    std: 0.0018
-    paper_value: 0.1507
-    paper_std: 0.0018
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: kipf_keras-gcn_2017
-    variant_inference_reason: 'dataset: fuzzy match to code (score=89)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test F1 score on Code2 dataset
-    date: Jan 21, 2022
-    date_display: Jan 2022
-    date_iso: '2022-01-21'
-    published_venue: NeurIPS 2022
-    published_conference: NeurIPS 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-09-17'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.151
-    true_std: 0.002
-    value_gap_source_arxiv: '2509.13735'
-    value_gap_source_title: State Space Models over Directed Graphs
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0002999999999999947
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.151
-    sort_std: 0.002
-    global_rank: 34
-    paper_rank: 34
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.1495
-    std: 0.0023
-    paper_value: 0.1495
-    paper_std: 0.0023
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: xu_how_2019
-    variant_inference_reason: 'dataset: fuzzy match to code (score=89)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test F1 score on Code2 dataset
-    date: Jan 21, 2022
-    date_display: Jan 2022
-    date_iso: '2022-01-21'
-    published_venue: NeurIPS 2022
-    published_conference: NeurIPS 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-01-27'
-    value_gap_source_date_label: ICML 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.1495
-    true_std: 0.0023
-    value_gap_source_arxiv: '2301.11956'
-    value_gap_source_title: On the Connection Between MPNN and Graph Transformer
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.1495
-    sort_std: 0.0023
-    global_rank: 36
-    paper_rank: 36
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  rank_metric: F1
-  higher_is_better: true
-  experiment_scope: graph-level
-  dataset_primary_metric: F1
-  paper_metrics:
-  - F1
-  metric: F1
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
 - &id001
   dataset: NCI1
   rows:
@@ -856,7 +203,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 81
+    global_rank: 82
     sort_value: 0.8303
     sort_std: 0.0137
     comparison_type: global_top
@@ -1056,8 +403,8 @@ results:
     value_note: ''
     sort_value: 0.8
     sort_std: 0.014
-    global_rank: 246
-    paper_rank: 246
+    global_rank: 245
+    paper_rank: 245
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1125,8 +472,8 @@ results:
     value_note: ''
     sort_value: 0.7496
     sort_std: 0.0134
-    global_rank: 462
-    paper_rank: 490
+    global_rank: 460
+    paper_rank: 488
     rank_delta: 28
     rank_delta_abs: 28
     rank_delta_direction: worse
@@ -1193,8 +540,8 @@ results:
     value_note: ''
     sort_value: 0.742
     sort_std: 0.012
-    global_rank: 484
-    paper_rank: 484
+    global_rank: 482
+    paper_rank: 482
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1261,10 +608,10 @@ results:
     value_note: ''
     sort_value: 0.717
     sort_std: 0.0073
-    global_rank: 520
-    paper_rank: 558
-    rank_delta: 38
-    rank_delta_abs: 38
+    global_rank: 516
+    paper_rank: 555
+    rank_delta: 39
+    rank_delta_abs: 39
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1329,8 +676,8 @@ results:
     value_note: ''
     sort_value: 0.685
     sort_std: 0.026
-    global_rank: 559
-    paper_rank: 559
+    global_rank: 557
+    paper_rank: 557
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1397,8 +744,8 @@ results:
     value_note: ''
     sort_value: 0.6755
     sort_std: 0.0103
-    global_rank: 565
-    paper_rank: 565
+    global_rank: 563
+    paper_rank: 563
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1415,6 +762,657 @@ results:
   paper_metrics:
   - Accuracy
   metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id002
+  dataset: ogbg-code2
+  rows:
+  - model: GMN
+    model_key: gmn
+    model_plain: GMN
+    value: 0.206
+    std: 0.002
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.206
+    sort_std: 0.002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: DirGraphSSM
+    model_key: dirgraphssm
+    model_plain: DirGraphSSM
+    value: 0.205
+    std: 0.0023
+    metric: F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.205
+    sort_std: 0.0023
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Graph-Mamba
+    model_key: graph-mamba
+    model_plain: Graph-Mamba
+    value: 0.203
+    std: 0.0023
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.203
+    sort_std: 0.0023
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GraphTrans
+    model_key: graphtrans
+    model_plain: GraphTrans
+    value: 0.183
+    std: 0.0024
+    paper_value: 0.183
+    paper_std: 0.0024
+    metric: F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: 9.1
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to code (score=89)'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 score on Code2 dataset
+    date: Jan 21, 2022
+    date_display: Jan 2022
+    date_iso: '2022-01-21'
+    published_venue: NeurIPS 2022
+    published_conference: NeurIPS 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-02-07'
+    value_gap_source_date_label: ICML 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.183
+    true_std: 0.0024
+    value_gap_source_arxiv: '2202.03036'
+    value_gap_source_title: Structure-Aware Transformer for Graph Representation Learning
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.183
+    sort_std: 0.0024
+    global_rank: 21
+    paper_rank: 21
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DAGNN (SOTA)
+    model_key: dagnn (sota)
+    model_plain: DAGNN (SOTA)
+    value: 0.1751
+    std: 0.0049
+    paper_value: 0.1751
+    paper_std: 0.0049
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: thost_directed_2021
+    variant_inference_reason: 'dataset: fuzzy match to code (score=89)'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 score on Code2 dataset
+    date: Jan 21, 2022
+    date_display: Jan 2022
+    date_iso: '2022-01-21'
+    published_venue: NeurIPS 2022
+    published_conference: NeurIPS 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-01-21'
+    value_gap_source_date_label: NeurIPS 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1751
+    true_std: 0.0049
+    value_gap_source_arxiv: '2201.08821'
+    value_gap_source_title: Representing Long-Range Context for Graph Neural Networks
+      with Global Attention
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1751
+    sort_std: 0.0049
+    global_rank: 23
+    paper_rank: 23
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Transformer
+    model_key: transformer
+    model_plain: Transformer
+    value: 0.167
+    std: 0.0015
+    paper_value: 0.167
+    paper_std: 0.0015
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: vaswani_attention_2017
+    variant_inference_reason: 'dataset: fuzzy match to code (score=89)'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 score on Code2 dataset
+    date: Jan 21, 2022
+    date_display: Jan 2022
+    date_iso: '2022-01-21'
+    published_venue: NeurIPS 2022
+    published_conference: NeurIPS 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-02-07'
+    value_gap_source_date_label: ICML 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.167
+    true_std: 0.0015
+    value_gap_source_arxiv: '2202.03036'
+    value_gap_source_title: Structure-Aware Transformer for Graph Representation Learning
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.167
+    sort_std: 0.0015
+    global_rank: 27
+    paper_rank: 27
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN-virtual
+    model_key: gcn-virtual
+    model_plain: GCN-virtual
+    value: 0.1595
+    std: 0.0018
+    paper_value: 0.1595
+    paper_std: 0.0018
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: kipf_keras-gcn_2017
+    variant_inference_reason: 'dataset: fuzzy match to code (score=89)'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 score on Code2 dataset
+    date: Jan 21, 2022
+    date_display: Jan 2022
+    date_iso: '2022-01-21'
+    published_venue: NeurIPS 2022
+    published_conference: NeurIPS 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-01-21'
+    value_gap_source_date_label: NeurIPS 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1595
+    true_std: 0.0018
+    value_gap_source_arxiv: '2201.08821'
+    value_gap_source_title: Representing Long-Range Context for Graph Neural Networks
+      with Global Attention
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1595
+    sort_std: 0.0018
+    global_rank: 30
+    paper_rank: 30
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN-virtual
+    model_key: gin-virtual
+    model_plain: GIN-virtual
+    value: 0.1581
+    std: 0.002
+    paper_value: 0.1581
+    paper_std: 0.002
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: xu_how_2019
+    variant_inference_reason: 'dataset: fuzzy match to code (score=89)'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 score on Code2 dataset
+    date: Jan 21, 2022
+    date_display: Jan 2022
+    date_iso: '2022-01-21'
+    published_venue: NeurIPS 2022
+    published_conference: NeurIPS 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-01-21'
+    value_gap_source_date_label: NeurIPS 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1581
+    true_std: 0.002
+    value_gap_source_arxiv: '2201.08821'
+    value_gap_source_title: Representing Long-Range Context for Graph Neural Networks
+      with Global Attention
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1581
+    sort_std: 0.002
+    global_rank: 32
+    paper_rank: 32
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PNA
+    model_key: pna
+    model_plain: PNA
+    value: 0.157
+    std: 0.0032
+    paper_value: 0.157
+    paper_std: 0.0032
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: corso2020pna
+    variant_inference_reason: 'dataset: fuzzy match to code (score=89)'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 score on Code2 dataset
+    date: Jan 21, 2022
+    date_display: Jan 2022
+    date_iso: '2022-01-21'
+    published_venue: NeurIPS 2022
+    published_conference: NeurIPS 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-01-21'
+    value_gap_source_date_label: NeurIPS 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.157
+    true_std: 0.0032
+    value_gap_source_arxiv: '2201.08821'
+    value_gap_source_title: Representing Long-Range Context for Graph Neural Networks
+      with Global Attention
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.157
+    sort_std: 0.0032
+    global_rank: 36
+    paper_rank: 36
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.1507
+    std: 0.0018
+    paper_value: 0.1507
+    paper_std: 0.0018
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: kipf_keras-gcn_2017
+    variant_inference_reason: 'dataset: fuzzy match to code (score=89)'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 score on Code2 dataset
+    date: Jan 21, 2022
+    date_display: Jan 2022
+    date_iso: '2022-01-21'
+    published_venue: NeurIPS 2022
+    published_conference: NeurIPS 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-09-17'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.151
+    true_std: 0.002
+    value_gap_source_arxiv: '2509.13735'
+    value_gap_source_title: State Space Models over Directed Graphs
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0002999999999999947
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.151
+    sort_std: 0.002
+    global_rank: 39
+    paper_rank: 39
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.1495
+    std: 0.0023
+    paper_value: 0.1495
+    paper_std: 0.0023
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: xu_how_2019
+    variant_inference_reason: 'dataset: fuzzy match to code (score=89)'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 score on Code2 dataset
+    date: Jan 21, 2022
+    date_display: Jan 2022
+    date_iso: '2022-01-21'
+    published_venue: NeurIPS 2022
+    published_conference: NeurIPS 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-01-27'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1495
+    true_std: 0.0023
+    value_gap_source_arxiv: '2301.11956'
+    value_gap_source_title: On the Connection Between MPNN and Graph Transformer
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1495
+    sort_std: 0.0023
+    global_rank: 41
+    paper_rank: 41
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: F1
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: F1
+  paper_metrics:
+  - F1
+  metric: F1
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
@@ -1436,8 +1434,8 @@ datasets_by_scope:
   - benchmark: OGB
     benchmark_slug: ogb
     datasets:
-    - dataset: Code
-      dataset_slug: code
+    - dataset: ogbg-code2
+      dataset_slug: ogbg-code2
 single_proposed_model: GraphTrans
 main_figure: /figures/2201.08821/main_figure.jpegoptim.jpg
 ---

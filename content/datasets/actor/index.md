@@ -13,7 +13,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 5
-result_count: 792
+result_count: 789
 best_model:
   model: NodeFormer
   value: 0.7623
@@ -75,11 +75,6 @@ papers:
   title: 'mHC-GNN: Manifold-Constrained Hyper-Connections for Graph Neural Networks'
   date_iso: '2026-01-05'
   venue: ''
-- arxiv_id: '2512.14908'
-  title: 'ATLAS: Adaptive Topology-based Learning at Scale for Homophilic and Heterophilic
-    Graphs'
-  date_iso: '2025-12-16'
-  venue: ''
 - arxiv_id: '2512.11561'
   title: 'View Space: Learning Representation across Arbitrary Graphs'
   date_iso: '2025-12-12'
@@ -127,6 +122,10 @@ papers:
   title: 'Gumbel-MPNN: Graph Rewiring with Gumbel-Softmax'
   date_iso: '2025-08-24'
   venue: ''
+- arxiv_id: '2506.19343'
+  title: Discrepancy-Aware Graph Mask Auto-Encoder
+  date_iso: '2025-06-24'
+  venue: KDD 2025
 - arxiv_id: '2506.14291'
   title: 'Equivariance Everywhere All At Once: A Recipe for Graph Foundation Models'
   date_iso: '2025-06-17'
@@ -276,11 +275,6 @@ papers:
   title: 'Sign is Not a Remedy: Multiset-to-Multiset Message Passing for Learning
     on Heterophilic Graphs'
   date_iso: '2024-05-31'
-  venue: ICML 2024
-- arxiv_id: '2405.12474'
-  title: 'How Universal Polynomial Bases Enhance Spectral Graph Neural Networks: Heterophily,
-    Over-smoothing, and Over-squashing'
-  date_iso: '2024-05-21'
   venue: ICML 2024
 - arxiv_id: '2404.17099'
   title: Unleashing the Potential of Fractional Calculus in Graph Neural Networks
@@ -555,6 +549,10 @@ papers:
     Benchmark Study'
   date_iso: '2021-08-24'
   venue: ''
+- arxiv_id: '2106.06134'
+  title: Is Homophily a Necessity for Graph Neural Networks?
+  date_iso: '2021-06-11'
+  venue: ICLR 2021
 - arxiv_id: '2105.07634'
   title: Improving Graph Neural Networks with Simple Architecture Design
   date_iso: '2021-05-17'
@@ -1304,15 +1302,15 @@ variants:
     - null
     - null
     - null
-  - model: MP
-    model_plain: MP
-    is_baseline: true
+  - model: Hyperbolic-PDE GNN
+    model_plain: Hyperbolic-PDE GNN
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
     arxiv_id: '2505.23014'
     title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in the Perspective
       of A System of Hyperbolic Partial Differential Equations'
@@ -2337,6 +2335,44 @@ variants:
     - null
     - null
     - null
+  - model: SPCNet-D
+    model_plain: SPCNet-D
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2403.03676'
+    title: Simplified PCNet with Robustness
+    date: Mar 6, 2024
+    date_iso: '2024-03-06'
+    date_display: Mar 2024
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.4089
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0061
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
   - model: UniFilter
     model_plain: UniFilter
     is_baseline: true
@@ -2356,45 +2392,6 @@ variants:
     published_conference_short: ''
     published_conference_slug: ''
     published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.4084
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0121
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: Spectral Graph Neural Networks
-    model_plain: Spectral Graph Neural Networks
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2405.12474'
-    title: 'How Universal Polynomial Bases Enhance Spectral Graph Neural Networks:
-      Heterophily, Over-smoothing, and Over-squashing'
-    date: May 21, 2024
-    date_iso: '2024-05-21'
-    date_display: May 2024
-    codebase_url: https://github.com/kkhuang81/UniFilter
-    published_conference: ICML 2024
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2024
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -2530,18 +2527,18 @@ variants:
     - null
     - null
     - null
-  row_count: 792
+  row_count: 789
   rows_json: /data/datasets/actor/standard-split-rows.json
   chart_json: /data/datasets/actor/standard-split-chart.json
   arch_counts:
-    gnn: 527
-    hybrid: 126
+    gnn: 525
+    hybrid: 121
     graph_transformer: 48
     llm: 2
-    walk: 7
+    walk: 8
     traditional: 38
   metric_counts:
-  - 747
+  - 744
   - 3
   - 24
   - 3
@@ -2561,43 +2558,30 @@ variants:
     arxiv_id: '2005.14612'
     title: Non-Local Graph Neural Networks
     date: '2020-05-29'
+  - value: 0.397
+    std: null
+    model: FAGCN
+    arxiv_id: '2101.00797'
+    title: Beyond Low-frequency Information in Graph Convolutional Networks
+    date: '2021-01-04'
   - value: 0.4175
     std: 0.0107
     model: ChebNetII
     arxiv_id: '2202.03580'
     title: Convolutional Neural Networks on Graphs with Chebyshev Approximation, Revisited
     date: '2022-02-04'
-  - value: 0.4179
-    std: 0.0101
-    model: BernNet
-    arxiv_id: '2303.13750'
-    title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
-    date: '2023-03-24'
-  - value: 0.4247
-    std: 0.0007
-    model: GNN-HF
-    arxiv_id: '2305.06142'
-    title: Feature Expansion for Graph Neural Networks
-    date: '2023-05-10'
-  - value: 0.425
-    std: 0.0019
-    model: SpatUFG
-    arxiv_id: '2307.06631'
-    title: Frameless Graph Knowledge Distillation
-    date: '2023-07-13'
-  - value: 0.427
+  - value: 0.4216
     std: 0.0114
-    model: AdaptKry
-    arxiv_id: '2403.07954'
-    title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive Krylov Subspace
-      Approach'
-    date: '2024-03-12'
-  - value: 0.4301
-    std: 0.0127
-    model: UniAug - PolyGCL
-    arxiv_id: '2406.01899'
-    title: 'Cross-Domain Graph Data Scaling: A Showcase with Diffusion Models'
-    date: '2024-06-04'
+    model: HA-GAT(M)
+    arxiv_id: '2302.03228'
+    title: Heterophily-Aware Graph Attention Network
+    date: '2023-02-07'
+  - value: 0.4305
+    std: 0.0053
+    model: FavardGNN
+    arxiv_id: '2302.12432'
+    title: Graph Neural Networks with Learnable and Optimal Polynomial Bases
+    date: '2023-02-24'
   - value: 0.4535
     std: 0.0353
     model: DiGGR
@@ -2621,6 +2605,12 @@ variants:
       title: Memorization in Graph Neural Networks
       date: '2025-08-26'
     F1:
+    - value: 0.341
+      std: null
+      model: NE
+      arxiv_id: '2203.10866'
+      title: Unsupervised Network Embedding Beyond Homophily
+      date: '2022-03-21'
     - value: 0.3961
       std: 0.0054
       model: FPS-T
@@ -2656,6 +2646,12 @@ variants:
       arxiv_id: '2302.06299'
       title: Homophily-oriented Heterogeneous Graph Rewiring
       date: '2023-02-13'
-    ROC-AUC: []
+    ROC-AUC:
+    - value: 0.796
+      std: null
+      model: GPRGNN
+      arxiv_id: '2203.10866'
+      title: Unsupervised Network Embedding Beyond Homophily
+      date: '2022-03-21'
 ---
 

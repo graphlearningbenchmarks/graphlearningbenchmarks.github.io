@@ -36,8 +36,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - ET
-mrr: 0.0495
-adjusted_mrr: 0.033
+mrr: 0.045
+adjusted_mrr: 0.03
 mrr_dataset_count: 2
 benchmark_categories:
 - Classic
@@ -127,34 +127,34 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: UniMol
-    model_key: unimol
-    model_plain: UniMol
-    value: 0.0693
+  - model: TGT-At (+RDKit)
+    model_key: tgt-at (+rdkit)
+    model_plain: TGT-At (+RDKit)
+    value: 0.0683
     std: null
     metric: MAE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: 77.0
+    params_millions: 203.0
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    arxiv_id: '2603.00568'
-    title: Enhancing Molecular Property Predictions by Learning from Bond Modelling
-      and Interactions
-    date: Feb 28, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-28'
-    venue: Accepted to ICLR 2026
-    codebase_url: ''
-    uses_external_data: false
+    arxiv_id: '2402.04538'
+    title: 'Triplet Interaction Improves Graph Transformers: Accurate Molecular Graph
+      Learning with Triplet Graph Transformers'
+    date: Feb 7, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-07'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/shamim-hussain/tgt
+    uses_external_data: true
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.0693
+    sort_value: 0.0683
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
@@ -217,8 +217,8 @@ results:
     value_note: ''
     sort_value: 0.0809
     sort_std: null
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -284,8 +284,8 @@ results:
     value_note: ''
     sort_value: 0.0832
     sort_std: null
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -351,8 +351,8 @@ results:
     value_note: ''
     sort_value: 0.084
     sort_std: null
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -418,8 +418,8 @@ results:
     value_note: ''
     sort_value: 0.0858
     sort_std: null
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -485,8 +485,8 @@ results:
     value_note: ''
     sort_value: 0.0859
     sort_std: null
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -533,8 +533,8 @@ results:
       by Modeling Full-range Many-body Interactions'
     at_pub_source_date_iso: '2022-08-11'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-08-11'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.0007000000000000062
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -545,19 +545,19 @@ results:
     today_delta_significant: true
     true_value: 0.0862
     true_std: null
-    value_gap_source_arxiv: '2208.05863'
-    value_gap_source_title: 'GEM-2: Next Generation Molecular Property Prediction
-      Network by Modeling Full-range Many-body Interactions'
+    value_gap_source_arxiv: '2402.04538'
+    value_gap_source_title: 'Triplet Interaction Improves Graph Transformers: Accurate
+      Molecular Graph Learning with Triplet Graph Transformers'
     value_gap_source_is_current_paper: false
     value_gap: 0.0007000000000000062
     has_value_note: false
     value_note: ''
     sort_value: 0.0862
     sort_std: null
-    global_rank: 26
-    paper_rank: 29
-    rank_delta: 3
-    rank_delta_abs: 3
+    global_rank: 29
+    paper_rank: 33
+    rank_delta: 4
+    rank_delta_abs: 4
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -623,8 +623,8 @@ results:
     value_note: ''
     sort_value: 0.0864
     sort_std: null
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -690,8 +690,8 @@ results:
     value_note: ''
     sort_value: 0.091
     sort_std: null
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -757,8 +757,8 @@ results:
     value_note: ''
     sort_value: 0.0938
     sort_std: null
-    global_rank: 48
-    paper_rank: 48
+    global_rank: 52
+    paper_rank: 52
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -824,8 +824,8 @@ results:
     value_note: ''
     sort_value: 0.0962
     sort_std: null
-    global_rank: 51
-    paper_rank: 51
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -861,7 +861,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 62
+    global_rank: 66
     sort_value: 0.1195
     sort_std: null
     comparison_type: global_top
@@ -936,7 +936,7 @@ results:
     venue: arXiv.org
     codebase_url: https://github.com/ocx-lab/FloydNet
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -1171,8 +1171,8 @@ results:
     value_note: ''
     sort_value: 0.024
     sort_std: 0.003
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1238,8 +1238,8 @@ results:
     value_note: ''
     sort_value: 0.024
     sort_std: null
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1306,8 +1306,8 @@ results:
     value_note: ''
     sort_value: 0.025
     sort_std: 0.004
-    global_rank: 26
-    paper_rank: 26
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1373,8 +1373,8 @@ results:
     value_note: ''
     sort_value: 0.026
     sort_std: 0.003
-    global_rank: 31
-    paper_rank: 31
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1409,7 +1409,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 74
+    global_rank: 71
     sort_value: 0.088
     sort_std: 0.002
     comparison_type: global_top
@@ -1473,8 +1473,8 @@ results:
     value_note: ''
     sort_value: 0.18
     sort_std: 0.006
-    global_rank: 93
-    paper_rank: 93
+    global_rank: 88
+    paper_rank: 88
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

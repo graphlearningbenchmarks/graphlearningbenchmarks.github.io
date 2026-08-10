@@ -56,8 +56,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GPF
-mrr: 0.0515
-adjusted_mrr: 0.0515
+mrr: 0.0485
+adjusted_mrr: 0.0485
 mrr_dataset_count: 6
 benchmark_categories:
 - MoleculeNet
@@ -198,10 +198,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 41
+    global_rank: 43
     sort_value: 0.8646
     sort_std: 0.0081
     comparison_type: global_top
@@ -265,8 +265,8 @@ results:
     value_note: ''
     sort_value: 0.8581
     sort_std: 0.0043
-    global_rank: 53
-    paper_rank: 53
+    global_rank: 57
+    paper_rank: 57
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -332,8 +332,8 @@ results:
     value_note: ''
     sort_value: 0.8532
     sort_std: 0.0041
-    global_rank: 62
-    paper_rank: 62
+    global_rank: 66
+    paper_rank: 66
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -399,8 +399,8 @@ results:
     value_note: ''
     sort_value: 0.8466
     sort_std: 0.0084
-    global_rank: 75
-    paper_rank: 75
+    global_rank: 79
+    paper_rank: 79
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -466,8 +466,8 @@ results:
     value_note: ''
     sort_value: 0.7085
     sort_std: 0.0142
-    global_rank: 273
-    paper_rank: 273
+    global_rank: 280
+    paper_rank: 280
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -533,8 +533,8 @@ results:
     value_note: ''
     sort_value: 0.677
     sort_std: 0.0126
-    global_rank: 288
-    paper_rank: 288
+    global_rank: 295
+    paper_rank: 295
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -715,8 +715,8 @@ results:
     value_note: ''
     sort_value: 0.9319
     sort_std: 0.0206
-    global_rank: 5
-    paper_rank: 94
+    global_rank: 6
+    paper_rank: 95
     rank_delta: 89
     rank_delta_abs: 89
     rank_delta_direction: worse
@@ -783,10 +783,10 @@ results:
     value_note: ''
     sort_value: 0.9273
     sort_std: 0.0282
-    global_rank: 8
-    paper_rank: 116
-    rank_delta: 108
-    rank_delta_abs: 108
+    global_rank: 9
+    paper_rank: 118
+    rank_delta: 109
+    rank_delta_abs: 109
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -817,10 +817,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 32
+    global_rank: 34
     sort_value: 0.8875
     sort_std: 0.0049
     comparison_type: global_top
@@ -884,8 +884,8 @@ results:
     value_note: ''
     sort_value: 0.6965
     sort_std: 0.0087
-    global_rank: 159
-    paper_rank: 159
+    global_rank: 162
+    paper_rank: 162
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -951,8 +951,8 @@ results:
     value_note: ''
     sort_value: 0.6929
     sort_std: 0.0019
-    global_rank: 168
-    paper_rank: 168
+    global_rank: 171
+    paper_rank: 171
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1167,8 +1167,8 @@ results:
     value_note: ''
     sort_value: 0.7617
     sort_std: 0.0298
-    global_rank: 117
-    paper_rank: 117
+    global_rank: 120
+    paper_rank: 120
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1235,8 +1235,8 @@ results:
     value_note: ''
     sort_value: 0.7517
     sort_std: 0.0214
-    global_rank: 125
-    paper_rank: 125
+    global_rank: 128
+    paper_rank: 128
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1303,8 +1303,8 @@ results:
     value_note: ''
     sort_value: 0.7506
     sort_std: 0.0102
-    global_rank: 127
-    paper_rank: 127
+    global_rank: 131
+    paper_rank: 131
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1372,8 +1372,8 @@ results:
     value_note: ''
     sort_value: 0.5567
     sort_std: 0.0708
-    global_rank: 241
-    paper_rank: 242
+    global_rank: 245
+    paper_rank: 246
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -1721,7 +1721,7 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 66
@@ -1788,8 +1788,8 @@ results:
     value_note: ''
     sort_value: 0.5871
     sort_std: 0.0013
-    global_rank: 207
-    paper_rank: 207
+    global_rank: 209
+    paper_rank: 209
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1935,10 +1935,77 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 16
+    global_rank: 14
     sort_value: 0.84
     sort_std: 0.004
     comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GPF-plus
+    model_key: gpf-plus
+    model_plain: GPF-plus
+    value: 0.8005
+    std: 0.0046
+    paper_value: 0.8005
+    paper_std: 0.0046
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Scaffold split
+    date: Sep 30, 2022
+    date_display: Sep 2022
+    date_iso: '2022-09-30'
+    published_venue: NeurIPS 2022
+    published_conference: NeurIPS 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-09-30'
+    value_gap_source_date_label: NeurIPS 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8005
+    true_std: 0.0046
+    value_gap_source_arxiv: '2209.15240'
+    value_gap_source_title: Universal Prompt Tuning for Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8005
+    sort_std: 0.0046
+    global_rank: 54
+    paper_rank: 54
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1979,106 +2046,37 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-04-13'
-    value_gap_source_date_label: '2026'
+    value_gap_source_date_iso: '2022-09-30'
+    value_gap_source_date_label: NeurIPS 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
+    insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.807
-    true_std: 0.0418
-    value_gap_source_arxiv: '2604.11257'
-    value_gap_source_title: Unified Graph Prompt Learning via Low-Rank Graph Message
-      Prompting
-    value_gap_source_is_current_paper: false
-    value_gap: 0.007099999999999995
+    true_value: 0.7999
+    true_std: 0.0024
+    value_gap_source_arxiv: '2209.15240'
+    value_gap_source_title: Universal Prompt Tuning for Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.807
-    sort_std: 0.0418
-    global_rank: 50
-    paper_rank: 63
-    rank_delta: 13
-    rank_delta_abs: 13
-    rank_delta_direction: worse
-    has_value_gap: true
+    sort_value: 0.7999
+    sort_std: 0.0024
+    global_rank: 58
+    paper_rank: 58
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
-    is_std_outlier: true
-  - model: GPF-plus
-    model_key: gpf-plus
-    model_plain: GPF-plus
-    value: 0.8005
-    std: 0.0046
-    paper_value: 0.8005
-    paper_std: 0.0046
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Scaffold split
-    date: Sep 30, 2022
-    date_display: Sep 2022
-    date_iso: '2022-09-30'
-    published_venue: NeurIPS 2022
-    published_conference: NeurIPS 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-04-13'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.8069
-    true_std: 0.0543
-    value_gap_source_arxiv: '2604.11257'
-    value_gap_source_title: Unified Graph Prompt Learning via Low-Rank Graph Message
-      Prompting
-    value_gap_source_is_current_paper: false
-    value_gap: 0.006399999999999961
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8069
-    sort_std: 0.0543
-    global_rank: 52
-    paper_rank: 60
-    rank_delta: 8
-    rank_delta_abs: 8
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: true
+    is_std_outlier: false
   - model: FT
     model_key: ft
     model_plain: FT
@@ -2135,8 +2133,8 @@ results:
     value_note: ''
     sort_value: 0.7867
     sort_std: 0.0035
-    global_rank: 103
-    paper_rank: 103
+    global_rank: 98
+    paper_rank: 98
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2202,8 +2200,8 @@ results:
     value_note: ''
     sort_value: 0.6809
     sort_std: 0.0019
-    global_rank: 316
-    paper_rank: 316
+    global_rank: 308
+    paper_rank: 308
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2620,8 +2618,8 @@ results:
     value_note: ''
     sort_value: 0.6054
     sort_std: 0.0021
-    global_rank: 201
-    paper_rank: 201
+    global_rank: 203
+    paper_rank: 203
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

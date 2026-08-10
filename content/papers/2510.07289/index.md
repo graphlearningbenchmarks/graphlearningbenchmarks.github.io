@@ -47,8 +47,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - MolGA
-mrr: 0.0067
-adjusted_mrr: 0.0067
+mrr: 0.0068
+adjusted_mrr: 0.0068
 mrr_dataset_count: 7
 benchmark_categories:
 - MoleculeNet
@@ -190,10 +190,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 41
+    global_rank: 43
     sort_value: 0.8646
     sort_std: 0.0081
     comparison_type: global_top
@@ -257,10 +257,10 @@ results:
     value_note: ''
     sort_value: 0.86
     sort_std: 0.011
-    global_rank: 49
-    paper_rank: 321
-    rank_delta: 272
-    rank_delta_abs: 272
+    global_rank: 52
+    paper_rank: 327
+    rank_delta: 275
+    rank_delta_abs: 275
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -299,12 +299,12 @@ results:
     published_venue: ''
     published_conference: ''
     at_pub_value: 0.856
-    at_pub_std: 0.011
-    at_pub_source_arxiv: '2407.12136'
-    at_pub_source_title: Molecular Topological Profile (MOLTOP) - Simple and Strong
-      Baseline for Molecular Graph Classification
-    at_pub_source_date_iso: '2024-07-16'
-    at_pub_source_date_label: '2024'
+    at_pub_std: null
+    at_pub_source_arxiv: '2106.09553'
+    at_pub_source_title: How Much Structural Information Large Scale Molecular Language
+      Representations Can Capture?
+    at_pub_source_date_iso: '2021-06-17'
+    at_pub_source_date_label: '2021'
     value_gap_source_date_iso: '2026-05-07'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.2753
@@ -325,16 +325,16 @@ results:
     value_note: ''
     sort_value: 0.856
     sort_std: 0.011
-    global_rank: 58
-    paper_rank: 306
-    rank_delta: 248
-    rank_delta_abs: 248
+    global_rank: 62
+    paper_rank: 313
+    rank_delta: 251
+    rank_delta_abs: 251
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Molecular Topological Profile (MOLTOP) - Simple and Strong
-      Baseline for Molecular Graph Classification
-    comparison_source_arxiv: '2407.12136'
+    comparison_source_title: How Much Structural Information Large Scale Molecular
+      Language Representations Can Capture?
+    comparison_source_arxiv: '2106.09553'
     is_best: false
     is_std_outlier: false
   - model: GCN
@@ -395,10 +395,10 @@ results:
     value_note: ''
     sort_value: 0.854
     sort_std: 0.011
-    global_rank: 60
-    paper_rank: 320
-    rank_delta: 260
-    rank_delta_abs: 260
+    global_rank: 64
+    paper_rank: 326
+    rank_delta: 262
+    rank_delta_abs: 262
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -465,10 +465,10 @@ results:
     value_note: ''
     sort_value: 0.837
     sort_std: 0.0146
-    global_rank: 93
-    paper_rank: 306
-    rank_delta: 213
-    rank_delta_abs: 213
+    global_rank: 97
+    paper_rank: 313
+    rank_delta: 216
+    rank_delta_abs: 216
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -533,10 +533,10 @@ results:
     value_note: ''
     sort_value: 0.812
     sort_std: 0.009
-    global_rank: 144
-    paper_rank: 308
-    rank_delta: 164
-    rank_delta_abs: 164
+    global_rank: 150
+    paper_rank: 315
+    rank_delta: 165
+    rank_delta_abs: 165
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -602,8 +602,8 @@ results:
     value_note: ''
     sort_value: 0.782
     sort_std: 0.012
-    global_rank: 209
-    paper_rank: 317
+    global_rank: 215
+    paper_rank: 323
     rank_delta: 108
     rank_delta_abs: 108
     rank_delta_direction: worse
@@ -670,10 +670,10 @@ results:
     value_note: ''
     sort_value: 0.677
     sort_std: 0.0126
-    global_rank: 288
-    paper_rank: 317
-    rank_delta: 29
-    rank_delta_abs: 29
+    global_rank: 295
+    paper_rank: 323
+    rank_delta: 28
+    rank_delta_abs: 28
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -738,8 +738,8 @@ results:
     value_note: ''
     sort_value: 0.5494
     sort_std: 0.0537
-    global_rank: 309
-    paper_rank: 309
+    global_rank: 316
+    paper_rank: 316
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -806,8 +806,8 @@ results:
     value_note: ''
     sort_value: 0.5457
     sort_std: 0.1021
-    global_rank: 310
-    paper_rank: 310
+    global_rank: 317
+    paper_rank: 317
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -874,8 +874,8 @@ results:
     value_note: ''
     sort_value: 0.5443
     sort_std: 0.1341
-    global_rank: 311
-    paper_rank: 311
+    global_rank: 318
+    paper_rank: 318
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -942,8 +942,8 @@ results:
     value_note: ''
     sort_value: 0.5406
     sort_std: 0.13
-    global_rank: 313
-    paper_rank: 313
+    global_rank: 320
+    paper_rank: 320
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1090,10 +1090,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 32
+    global_rank: 34
     sort_value: 0.8875
     sort_std: 0.0049
     comparison_type: global_top
@@ -1159,10 +1159,10 @@ results:
     value_note: ''
     sort_value: 0.887
     sort_std: 0.019
-    global_rank: 34
-    paper_rank: 271
-    rank_delta: 237
-    rank_delta_abs: 237
+    global_rank: 36
+    paper_rank: 277
+    rank_delta: 241
+    rank_delta_abs: 241
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1229,10 +1229,10 @@ results:
     value_note: ''
     sort_value: 0.881
     sort_std: 0.036
-    global_rank: 36
-    paper_rank: 245
-    rank_delta: 209
-    rank_delta_abs: 209
+    global_rank: 38
+    paper_rank: 251
+    rank_delta: 213
+    rank_delta_abs: 213
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1299,10 +1299,10 @@ results:
     value_note: ''
     sort_value: 0.86
     sort_std: 0.034
-    global_rank: 47
-    paper_rank: 174
-    rank_delta: 127
-    rank_delta_abs: 127
+    global_rank: 49
+    paper_rank: 177
+    rank_delta: 128
+    rank_delta_abs: 128
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1369,8 +1369,8 @@ results:
     value_note: ''
     sort_value: 0.73
     sort_std: 0.0081
-    global_rank: 80
-    paper_rank: 113
+    global_rank: 82
+    paper_rank: 115
     rank_delta: 33
     rank_delta_abs: 33
     rank_delta_direction: worse
@@ -1411,12 +1411,12 @@ results:
     published_venue: ''
     published_conference: ''
     at_pub_value: 0.724
-    at_pub_std: 0.004
-    at_pub_source_arxiv: '2407.12136'
-    at_pub_source_title: Molecular Topological Profile (MOLTOP) - Simple and Strong
-      Baseline for Molecular Graph Classification
-    at_pub_source_date_iso: '2024-07-16'
-    at_pub_source_date_label: '2024'
+    at_pub_std: null
+    at_pub_source_arxiv: '2106.09553'
+    at_pub_source_title: How Much Structural Information Large Scale Molecular Language
+      Representations Can Capture?
+    at_pub_source_date_iso: '2021-06-17'
+    at_pub_source_date_label: '2021'
     value_gap_source_date_iso: '2026-05-07'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.006199999999999983
@@ -1437,10 +1437,10 @@ results:
     value_note: ''
     sort_value: 0.724
     sort_std: 0.004
-    global_rank: 89
-    paper_rank: 105
-    rank_delta: 16
-    rank_delta_abs: 16
+    global_rank: 92
+    paper_rank: 106
+    rank_delta: 14
+    rank_delta_abs: 14
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1505,8 +1505,8 @@ results:
     value_note: ''
     sort_value: 0.7197
     sort_std: 0.1234
-    global_rank: 104
-    paper_rank: 104
+    global_rank: 105
+    paper_rank: 105
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1572,8 +1572,8 @@ results:
     value_note: ''
     sort_value: 0.6929
     sort_std: 0.0019
-    global_rank: 168
-    paper_rank: 180
+    global_rank: 171
+    paper_rank: 183
     rank_delta: 12
     rank_delta_abs: 12
     rank_delta_direction: worse
@@ -1641,10 +1641,10 @@ results:
     value_note: ''
     sort_value: 0.6776
     sort_std: null
-    global_rank: 206
-    paper_rank: 303
-    rank_delta: 97
-    rank_delta_abs: 97
+    global_rank: 210
+    paper_rank: 309
+    rank_delta: 99
+    rank_delta_abs: 99
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1709,8 +1709,8 @@ results:
     value_note: ''
     sort_value: 0.6689
     sort_std: 0.0994
-    global_rank: 235
-    paper_rank: 235
+    global_rank: 240
+    paper_rank: 240
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1777,8 +1777,8 @@ results:
     value_note: ''
     sort_value: 0.6641
     sort_std: 0.1043
-    global_rank: 241
-    paper_rank: 241
+    global_rank: 247
+    paper_rank: 247
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1845,8 +1845,8 @@ results:
     value_note: ''
     sort_value: 0.6554
     sort_std: 0.1051
-    global_rank: 260
-    paper_rank: 260
+    global_rank: 266
+    paper_rank: 266
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2030,9 +2030,9 @@ results:
     sort_value: 0.913
     sort_std: 0.017
     global_rank: 19
-    paper_rank: 242
-    rank_delta: 223
-    rank_delta_abs: 223
+    paper_rank: 246
+    rank_delta: 227
+    rank_delta_abs: 227
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2100,9 +2100,9 @@ results:
     sort_value: 0.901
     sort_std: 0.013
     global_rank: 24
-    paper_rank: 218
-    rank_delta: 194
-    rank_delta_abs: 194
+    paper_rank: 222
+    rank_delta: 198
+    rank_delta_abs: 198
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2135,7 +2135,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 37
+    global_rank: 36
     sort_value: 0.881
     sort_std: 0.025
     comparison_type: global_top
@@ -2202,10 +2202,10 @@ results:
     value_note: ''
     sort_value: 0.876
     sort_std: 0.0075
-    global_rank: 43
-    paper_rank: 221
-    rank_delta: 178
-    rank_delta_abs: 178
+    global_rank: 42
+    paper_rank: 225
+    rank_delta: 183
+    rank_delta_abs: 183
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2274,9 +2274,9 @@ results:
     sort_value: 0.865
     sort_std: 0.017
     global_rank: 49
-    paper_rank: 235
-    rank_delta: 186
-    rank_delta_abs: 186
+    paper_rank: 239
+    rank_delta: 190
+    rank_delta_abs: 190
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2342,10 +2342,10 @@ results:
     value_note: ''
     sort_value: 0.826
     sort_std: 0.045
-    global_rank: 65
-    paper_rank: 243
-    rank_delta: 178
-    rank_delta_abs: 178
+    global_rank: 66
+    paper_rank: 247
+    rank_delta: 181
+    rank_delta_abs: 181
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2410,10 +2410,10 @@ results:
     value_note: ''
     sort_value: 0.789
     sort_std: 0.042
-    global_rank: 95
-    paper_rank: 242
-    rank_delta: 147
-    rank_delta_abs: 147
+    global_rank: 96
+    paper_rank: 246
+    rank_delta: 150
+    rank_delta_abs: 150
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2481,10 +2481,10 @@ results:
     value_note: ''
     sort_value: 0.76
     sort_std: null
-    global_rank: 119
-    paper_rank: 242
-    rank_delta: 123
-    rank_delta_abs: 123
+    global_rank: 122
+    paper_rank: 246
+    rank_delta: 124
+    rank_delta_abs: 124
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2551,8 +2551,8 @@ results:
     value_note: ''
     sort_value: 0.5731
     sort_std: 0.0687
-    global_rank: 236
-    paper_rank: 236
+    global_rank: 240
+    paper_rank: 240
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2620,8 +2620,8 @@ results:
     value_note: ''
     sort_value: 0.5589
     sort_std: 0.0909
-    global_rank: 239
-    paper_rank: 239
+    global_rank: 243
+    paper_rank: 243
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2689,8 +2689,8 @@ results:
     value_note: ''
     sort_value: 0.5567
     sort_std: 0.0708
-    global_rank: 241
-    paper_rank: 241
+    global_rank: 245
+    paper_rank: 245
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2758,8 +2758,8 @@ results:
     value_note: ''
     sort_value: 0.5383
     sort_std: 0.1087
-    global_rank: 243
-    paper_rank: 243
+    global_rank: 247
+    paper_rank: 247
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2781,103 +2781,100 @@ results:
 - &id005
   dataset: ESOL
   rows:
-  - model: 10% ZINC + 10% PubChem
-    model_key: 10% zinc + 10% pubchem
-    model_plain: 10% ZINC + 10% PubChem
-    value: 0.2775
-    std: null
+  - model: Graphormer-SPIS
+    model_key: graphormer-spis
+    model_plain: Graphormer-SPIS
+    value: 0.484
+    std: 0.005
     metric: RMSE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2305.13987'
+    title: On Structural Expressive Power of Graph Transformers
+    date: May 23, 2023
+    date_display: May 2023
+    date_iso: '2023-05-23'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.2775
-    sort_std: null
+    sort_value: 0.484
+    sort_std: 0.005
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAT
-    model_key: mat
-    model_plain: MAT
-    value: 0.278
-    std: 0.02
+  - model: Graphormer-SPD
+    model_key: graphormer-spd
+    model_plain: Graphormer-SPD
+    value: 0.492
+    std: 0.004
     metric: RMSE
     higher_is_better: false
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    arxiv_id: '2002.08264'
-    title: Molecule Attention Transformer
-    date: Feb 19, 2020
-    date_display: Feb 2020
-    date_iso: '2020-02-19'
-    venue: Graph Representation Learning workshop and Machine Learning and the Physical
-      Sciences workshop at NeurIPS 2019
-    codebase_url: https://github.com/gmum/MAT
-    uses_external_data: true
-    input_feature_source: null
+    arxiv_id: '2305.13987'
+    title: On Structural Expressive Power of Graph Transformers
+    date: May 23, 2023
+    date_display: May 2023
+    date_iso: '2023-05-23'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
+    uses_external_data: false
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.278
-    sort_std: 0.02
+    sort_value: 0.492
+    sort_std: 0.004
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MoLFormer-XL
-    model_key: molformer-xl
-    model_plain: MoLFormer-XL
-    value: 0.2787
-    std: null
+  - model: conan-FGW
+    model_key: conan-fgw
+    model_plain: conan-FGW
+    value: 0.514
+    std: 0.019
     metric: RMSE
     higher_is_better: false
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2402.01975'
+    title: Structure-Aware E(3)-Invariant Molecular Conformer Aggregation Networks
+    date: Feb 3, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-03'
+    venue: International Conference on Machine Learning
+    codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.2787
-    sort_std: null
+    sort_value: 0.514
+    sort_std: 0.019
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2939,8 +2936,8 @@ results:
     value_note: ''
     sort_value: 0.552
     sort_std: 0.007
-    global_rank: 11
-    paper_rank: 155
+    global_rank: 5
+    paper_rank: 149
     rank_delta: 144
     rank_delta_abs: 144
     rank_delta_direction: worse
@@ -3006,8 +3003,8 @@ results:
     value_note: ''
     sort_value: 0.564
     sort_std: 0.015
-    global_rank: 13
-    paper_rank: 155
+    global_rank: 7
+    paper_rank: 149
     rank_delta: 142
     rank_delta_abs: 142
     rank_delta_direction: worse
@@ -3042,7 +3039,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 24
+    global_rank: 18
     sort_value: 0.601
     sort_std: 0.008
     comparison_type: global_top
@@ -3082,11 +3079,11 @@ results:
     published_conference: ''
     at_pub_value: 0.633
     at_pub_std: null
-    at_pub_source_arxiv: '2106.09553'
-    at_pub_source_title: How Much Structural Information Large Scale Molecular Language
-      Representations Can Capture?
-    at_pub_source_date_iso: '2021-06-17'
-    at_pub_source_date_label: '2021'
+    at_pub_source_arxiv: '2109.11730'
+    at_pub_source_title: 'GeomGCL: Geometric Graph Contrastive Learning for Molecular
+      Property Prediction'
+    at_pub_source_date_iso: '2021-09-24'
+    at_pub_source_date_label: AAAI 2021
     value_gap_source_date_iso: '2021-09-24'
     value_gap_source_date_label: AAAI 2021
     gap_vs_at_pub: 1.7439999999999998
@@ -3108,86 +3105,16 @@ results:
     value_note: ''
     sort_value: 0.633
     sort_std: null
-    global_rank: 31
-    paper_rank: 155
-    rank_delta: 124
-    rank_delta_abs: 124
+    global_rank: 26
+    paper_rank: 149
+    rank_delta: 123
+    rank_delta_abs: 123
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: How Much Structural Information Large Scale Molecular
-      Language Representations Can Capture?
-    comparison_source_arxiv: '2106.09553'
-    is_best: false
-    is_std_outlier: false
-  - model: GEM
-    model_key: gem
-    model_plain: GEM
-    value: 1.175
-    std: 0.02
-    paper_value: 1.175
-    paper_std: 0.02
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Molecular graph pre-training (reference only)
-    date: Oct 8, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-08'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.798
-    at_pub_std: null
-    at_pub_source_arxiv: '2106.09553'
-    at_pub_source_title: How Much Structural Information Large Scale Molecular Language
-      Representations Can Capture?
-    at_pub_source_date_iso: '2021-06-17'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2021-06-17'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: 0.377
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.798
-    true_std: null
-    value_gap_source_arxiv: '2106.09553'
-    value_gap_source_title: How Much Structural Information Large Scale Molecular
-      Language Representations Can Capture?
-    value_gap_source_is_current_paper: false
-    value_gap: 0.377
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.798
-    sort_std: null
-    global_rank: 49
-    paper_rank: 117
-    rank_delta: 68
-    rank_delta_abs: 68
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: How Much Structural Information Large Scale Molecular
-      Language Representations Can Capture?
-    comparison_source_arxiv: '2106.09553'
+    comparison_source_title: 'GeomGCL: Geometric Graph Contrastive Learning for Molecular
+      Property Prediction'
+    comparison_source_arxiv: '2109.11730'
     is_best: false
     is_std_outlier: false
   - model: GraphCL
@@ -3247,10 +3174,10 @@ results:
     value_note: ''
     sort_value: 0.959
     sort_std: 0.047
-    global_rank: 85
-    paper_rank: 148
-    rank_delta: 63
-    rank_delta_abs: 63
+    global_rank: 79
+    paper_rank: 143
+    rank_delta: 64
+    rank_delta_abs: 64
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3314,16 +3241,84 @@ results:
     value_note: ''
     sort_value: 1.091
     sort_std: 0.021
-    global_rank: 105
-    paper_rank: 151
-    rank_delta: 46
-    rank_delta_abs: 46
+    global_rank: 99
+    paper_rank: 146
+    rank_delta: 47
+    rank_delta_abs: 47
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 16 Pre-training Molecular Graph Representation with 3D
       Geometry
     comparison_source_arxiv: '2110.07728'
+    is_best: false
+    is_std_outlier: false
+  - model: GEM
+    model_key: gem
+    model_plain: GEM
+    value: 1.175
+    std: 0.02
+    paper_value: 1.175
+    paper_std: 0.02
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 1
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Molecular graph pre-training (reference only)
+    date: Oct 8, 2025
+    date_display: Oct 2025
+    date_iso: '2025-10-08'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-10-08'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 1.175
+    true_std: 0.02
+    value_gap_source_arxiv: '2510.07289'
+    value_gap_source_title: 'MolGA: Molecular Graph Adaptation with Pre-trained 2D
+      Graph Encoder'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 1.175
+    sort_std: 0.02
+    global_rank: 112
+    paper_rank: 112
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: MoleBlend
@@ -3383,8 +3378,8 @@ results:
     value_note: ''
     sort_value: 1.496
     sort_std: 0.032
-    global_rank: 134
-    paper_rank: 134
+    global_rank: 129
+    paper_rank: 129
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3451,8 +3446,8 @@ results:
     value_note: ''
     sort_value: 1.973
     sort_std: 0.043
-    global_rank: 147
-    paper_rank: 147
+    global_rank: 142
+    paper_rank: 142
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3519,8 +3514,8 @@ results:
     value_note: ''
     sort_value: 2.052
     sort_std: 0.045
-    global_rank: 149
-    paper_rank: 149
+    global_rank: 144
+    paper_rank: 144
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3587,8 +3582,8 @@ results:
     value_note: ''
     sort_value: 2.135
     sort_std: 0.151
-    global_rank: 150
-    paper_rank: 150
+    global_rank: 145
+    paper_rank: 145
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3655,8 +3650,8 @@ results:
     value_note: ''
     sort_value: 2.317
     sort_std: 0.21
-    global_rank: 154
-    paper_rank: 154
+    global_rank: 148
+    paper_rank: 148
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3678,10 +3673,79 @@ results:
 - &id006
   dataset: FreeSolv
   rows:
-  - model: 10% ZINC + 10% PubChem
-    model_key: 10% zinc + 10% pubchem
-    model_plain: 10% ZINC + 10% PubChem
-    value: 0.205
+  - model: SE(3)-I MPPH
+    model_key: se(3)-i mpph
+    model_plain: SE(3)-I MPPH
+    value: 0.354
+    std: 0.053
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2312.07633'
+    title: SE(3)-Invariant Multiparameter Persistent Homology for Chiral-Sensitive
+      Molecular Property Prediction
+    date: Dec 12, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-12'
+    venue: NeurIPS 2023 AI for Science Workshop
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: integrating SE(3)-invariance into Vietoris-Rips persistent
+      homology
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.354
+    sort_std: 0.053
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: ECFP-4 + RF
+    model_key: ecfp-4 + rf
+    model_plain: ECFP-4 + RF
+    value: 0.56
+    std: 0.066
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: random_forest
+    architecture_label: RF
+    architecture_title: Random forest
+    arxiv_id: '2312.07633'
+    title: SE(3)-Invariant Multiparameter Persistent Homology for Chiral-Sensitive
+      Molecular Property Prediction
+    date: Dec 12, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-12'
+    venue: NeurIPS 2023 AI for Science Workshop
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: trained on ECFP-4 fingerprints
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.56
+    sort_std: 0.066
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GPSE + GPS
+    model_key: gpse + gps
+    model_plain: GPSE + GPS
+    value: 0.682
     std: null
     metric: RMSE
     higher_is_better: false
@@ -3689,91 +3753,22 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.205
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: MoLFormer-XL
-    model_key: molformer-xl
-    model_plain: MoLFormer-XL
-    value: 0.2308
-    std: null
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.2308
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MoLFormer-Base
-    model_key: molformer-base
-    model_plain: MoLFormer-Base
-    value: 0.2596
-    std: null
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
-    uses_external_data: false
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2307.07107'
+    title: Graph Positional and Structural Encoder
+    date: Jul 14, 2023
+    date_display: Jul 2023
+    date_iso: '2023-07-14'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/G-Taxonomy-Workgroup/GPSE
+    uses_external_data: true
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.2596
+    sort_value: 0.682
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
@@ -3812,11 +3807,11 @@ results:
     published_conference: ''
     at_pub_value: 0.978
     at_pub_std: null
-    at_pub_source_arxiv: '2106.09553'
-    at_pub_source_title: How Much Structural Information Large Scale Molecular Language
-      Representations Can Capture?
-    at_pub_source_date_iso: '2021-06-17'
-    at_pub_source_date_label: '2021'
+    at_pub_source_arxiv: '2109.11730'
+    at_pub_source_title: 'GeomGCL: Geometric Graph Contrastive Learning for Molecular
+      Property Prediction'
+    at_pub_source_date_iso: '2021-09-24'
+    at_pub_source_date_label: AAAI 2021
     value_gap_source_date_iso: '2021-09-24'
     value_gap_source_date_label: AAAI 2021
     gap_vs_at_pub: 3.0710000000000006
@@ -3838,16 +3833,16 @@ results:
     value_note: ''
     sort_value: 0.978
     sort_std: null
-    global_rank: 14
-    paper_rank: 119
+    global_rank: 10
+    paper_rank: 115
     rank_delta: 105
     rank_delta_abs: 105
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: How Much Structural Information Large Scale Molecular
-      Language Representations Can Capture?
-    comparison_source_arxiv: '2106.09553'
+    comparison_source_title: 'GeomGCL: Geometric Graph Contrastive Learning for Molecular
+      Property Prediction'
+    comparison_source_arxiv: '2109.11730'
     is_best: false
     is_std_outlier: false
   - model: MoleBlend
@@ -3907,8 +3902,8 @@ results:
     value_note: ''
     sort_value: 1.851
     sort_std: 0.068
-    global_rank: 43
-    paper_rank: 43
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3948,44 +3943,42 @@ results:
     date_iso: '2025-10-08'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 1.877
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2106.09553'
-    at_pub_source_title: How Much Structural Information Large Scale Molecular Language
-      Representations Can Capture?
-    at_pub_source_date_iso: '2021-06-17'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2021-06-17'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: 0.08000000000000007
-    worse_than_at_pub: true
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-10-08'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 1.877
-    true_std: null
-    value_gap_source_arxiv: '2106.09553'
-    value_gap_source_title: How Much Structural Information Large Scale Molecular
-      Language Representations Can Capture?
-    value_gap_source_is_current_paper: false
-    value_gap: 0.08000000000000007
+    today_delta_significant: false
+    true_value: 1.957
+    true_std: 0.073
+    value_gap_source_arxiv: '2510.07289'
+    value_gap_source_title: 'MolGA: Molecular Graph Adaptation with Pre-trained 2D
+      Graph Encoder'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 1.877
-    sort_std: null
-    global_rank: 48
-    paper_rank: 51
-    rank_delta: 3
-    rank_delta_abs: 3
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: How Much Structural Information Large Scale Molecular
-      Language Representations Can Capture?
-    comparison_source_arxiv: '2106.09553'
+    sort_value: 1.957
+    sort_std: 0.073
+    global_rank: 47
+    paper_rank: 47
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GIN
@@ -4011,10 +4004,10 @@ results:
     venue: Nature Machine Intelligence
     codebase_url: https://github.com/PaddlePaddle/PaddleHelix
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 73
+    global_rank: 69
     sort_value: 2.346
     sort_std: 0.122
     comparison_type: global_top
@@ -4080,8 +4073,8 @@ results:
     value_note: ''
     sort_value: 2.618
     sort_std: 0.298
-    global_rank: 81
-    paper_rank: 122
+    global_rank: 77
+    paper_rank: 118
     rank_delta: 41
     rank_delta_abs: 41
     rank_delta_direction: worse
@@ -4149,8 +4142,8 @@ results:
     value_note: ''
     sort_value: 2.767
     sort_std: 0.033
-    global_rank: 90
-    paper_rank: 90
+    global_rank: 86
+    paper_rank: 86
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4218,8 +4211,8 @@ results:
     value_note: ''
     sort_value: 2.942
     sort_std: 0.591
-    global_rank: 99
-    paper_rank: 122
+    global_rank: 95
+    paper_rank: 118
     rank_delta: 23
     rank_delta_abs: 23
     rank_delta_direction: worse
@@ -4288,8 +4281,8 @@ results:
     value_note: ''
     sort_value: 3.166
     sort_std: 0.027
-    global_rank: 105
-    paper_rank: 125
+    global_rank: 101
+    paper_rank: 121
     rank_delta: 20
     rank_delta_abs: 20
     rank_delta_direction: worse
@@ -4357,8 +4350,8 @@ results:
     value_note: ''
     sort_value: 3.602
     sort_std: 0.131
-    global_rank: 114
-    paper_rank: 114
+    global_rank: 110
+    paper_rank: 110
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4425,8 +4418,8 @@ results:
     value_note: ''
     sort_value: 3.9
     sort_std: 0.138
-    global_rank: 117
-    paper_rank: 117
+    global_rank: 113
+    paper_rank: 113
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4493,8 +4486,8 @@ results:
     value_note: ''
     sort_value: 4.049
     sort_std: 0.285
-    global_rank: 120
-    paper_rank: 120
+    global_rank: 116
+    paper_rank: 116
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4561,8 +4554,8 @@ results:
     value_note: ''
     sort_value: 4.517
     sort_std: 0.129
-    global_rank: 124
-    paper_rank: 124
+    global_rank: 120
+    paper_rank: 120
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4584,177 +4577,104 @@ results:
 - &id007
   dataset: Lipophilicity
   rows:
-  - model: MoLFormer-XL
-    model_key: molformer-xl
-    model_plain: MoLFormer-XL
-    value: 0.5289
-    std: null
+  - model: MemGNN
+    model_key: memgnn
+    model_plain: MemGNN
+    value: 0.556
+    std: 0.023
     metric: RMSE
     higher_is_better: false
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
-    uses_external_data: true
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2002.09518'
+    title: Memory-Based Graph Networks
+    date: Feb 21, 2020
+    date_display: Feb 2020
+    date_iso: '2020-02-21'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/amirkhas/GraphMemoryNet
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.5289
-    sort_std: null
+    sort_value: 0.556
+    sort_std: 0.023
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 10% ZINC + 10% PubChem
-    model_key: 10% zinc + 10% pubchem
-    model_plain: 10% ZINC + 10% PubChem
-    value: 0.5331
-    std: null
+  - model: ProtoS-L2
+    model_key: protos-l2
+    model_plain: ProtoS-L2
+    value: 0.58
+    std: 0.016
     metric: RMSE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
-    uses_external_data: true
+    params_millions: 0.065
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2006.04804'
+    title: Optimal Transport Graph Neural Networks
+    date: Jun 8, 2020
+    date_display: Jun 2020
+    date_iso: '2020-06-08'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.5331
-    sort_std: null
+    sort_value: 0.58
+    sort_std: 0.016
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
-  - model: GeomGCL
-    model_key: geomgcl
-    model_plain: GeomGCL
-    value: 0.541
-    std: null
+  - model: ProtoW-L2
+    model_key: protow-l2
+    model_plain: ProtoW-L2
+    value: 0.604
+    std: 0.014
     metric: RMSE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
-    uses_external_data: true
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2006.04804'
+    title: Optimal Transport Graph Neural Networks
+    date: Jun 8, 2020
+    date_display: Jun 2020
+    date_iso: '2020-06-08'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.541
-    sort_std: null
+    sort_value: 0.604
+    sort_std: 0.014
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
-    is_std_outlier: false
-  - model: DimeNet++
-    model_key: dimenet++
-    model_plain: DimeNet++
-    value: 1.379
-    std: 0.133
-    paper_value: 1.379
-    paper_std: 0.133
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Standard 2D+Mol adaptation for molecular property prediction.
-    date: Oct 8, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-08'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.614
-    at_pub_std: null
-    at_pub_source_arxiv: '2106.09553'
-    at_pub_source_title: How Much Structural Information Large Scale Molecular Language
-      Representations Can Capture?
-    at_pub_source_date_iso: '2021-06-17'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2021-06-17'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: 0.765
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.614
-    true_std: null
-    value_gap_source_arxiv: '2106.09553'
-    value_gap_source_title: How Much Structural Information Large Scale Molecular
-      Language Representations Can Capture?
-    value_gap_source_is_current_paper: false
-    value_gap: 0.765
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.614
-    sort_std: null
-    global_rank: 8
-    paper_rank: 107
-    rank_delta: 99
-    rank_delta_abs: 99
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: How Much Structural Information Large Scale Molecular
-      Language Representations Can Capture?
-    comparison_source_arxiv: '2106.09553'
-    is_best: true
     is_std_outlier: false
   - model: GCN
     model_key: gcn
@@ -4812,10 +4732,10 @@ results:
     value_note: ''
     sort_value: 0.655
     sort_std: 0.036
-    global_rank: 13
-    paper_rank: 107
-    rank_delta: 94
-    rank_delta_abs: 94
+    global_rank: 7
+    paper_rank: 103
+    rank_delta: 96
+    rank_delta_abs: 96
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4848,82 +4768,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 15
+    global_rank: 9
     sort_value: 0.658
     sort_std: 0.019
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
-    is_std_outlier: false
-  - model: GEM
-    model_key: gem
-    model_plain: GEM
-    value: 0.84
-    std: 0.22
-    paper_value: 0.84
-    paper_std: 0.22
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Molecular graph pre-training (for reference).
-    date: Oct 8, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-08'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.66
-    at_pub_std: null
-    at_pub_source_arxiv: '2106.09553'
-    at_pub_source_title: How Much Structural Information Large Scale Molecular Language
-      Representations Can Capture?
-    at_pub_source_date_iso: '2021-06-17'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2021-06-17'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: 0.17999999999999994
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.66
-    true_std: null
-    value_gap_source_arxiv: '2106.09553'
-    value_gap_source_title: How Much Structural Information Large Scale Molecular
-      Language Representations Can Capture?
-    value_gap_source_is_current_paper: false
-    value_gap: 0.17999999999999994
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.66
-    sort_std: null
-    global_rank: 16
-    paper_rank: 71
-    rank_delta: 55
-    rank_delta_abs: 55
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
     is_std_outlier: false
   - model: GraphCL
     model_key: graphcl
@@ -4983,10 +4834,10 @@ results:
     value_note: ''
     sort_value: 0.714
     sort_std: 0.011
-    global_rank: 30
-    paper_rank: 102
-    rank_delta: 72
-    rank_delta_abs: 72
+    global_rank: 24
+    paper_rank: 98
+    rank_delta: 74
+    rank_delta_abs: 74
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -5051,15 +4902,85 @@ results:
     value_note: ''
     sort_value: 0.718
     sort_std: null
-    global_rank: 33
-    paper_rank: 87
-    rank_delta: 54
-    rank_delta_abs: 54
+    global_rank: 27
+    paper_rank: 83
+    rank_delta: 56
+    rank_delta_abs: 56
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Improving Molecular Pretraining with Complementary Featurizations
     comparison_source_arxiv: '2209.15101'
+    is_best: false
+    is_std_outlier: false
+  - model: DimeNet++
+    model_key: dimenet++
+    model_plain: DimeNet++
+    value: 1.379
+    std: 0.133
+    paper_value: 1.379
+    paper_std: 0.133
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Standard 2D+Mol adaptation for molecular property prediction.
+    date: Oct 8, 2025
+    date_display: Oct 2025
+    date_iso: '2025-10-08'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.742
+    at_pub_std: null
+    at_pub_source_arxiv: '2109.11730'
+    at_pub_source_title: 'GeomGCL: Geometric Graph Contrastive Learning for Molecular
+      Property Prediction'
+    at_pub_source_date_iso: '2021-09-24'
+    at_pub_source_date_label: AAAI 2021
+    value_gap_source_date_iso: '2021-09-24'
+    value_gap_source_date_label: AAAI 2021
+    gap_vs_at_pub: 0.637
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.742
+    true_std: null
+    value_gap_source_arxiv: '2109.11730'
+    value_gap_source_title: 'GeomGCL: Geometric Graph Contrastive Learning for Molecular
+      Property Prediction'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.637
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.742
+    sort_std: null
+    global_rank: 40
+    paper_rank: 103
+    rank_delta: 63
+    rank_delta_abs: 63
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'GeomGCL: Geometric Graph Contrastive Learning for Molecular
+      Property Prediction'
+    comparison_source_arxiv: '2109.11730'
     is_best: false
     is_std_outlier: false
   - model: GAT
@@ -5120,10 +5041,10 @@ results:
     value_note: ''
     sort_value: 0.753
     sort_std: null
-    global_rank: 48
-    paper_rank: 107
-    rank_delta: 59
-    rank_delta_abs: 59
+    global_rank: 43
+    paper_rank: 103
+    rank_delta: 60
+    rank_delta_abs: 60
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -5189,8 +5110,8 @@ results:
     value_note: ''
     sort_value: 0.774
     sort_std: 0.012
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 49
+    paper_rank: 49
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5200,6 +5121,74 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: GEM
+    model_key: gem
+    model_plain: GEM
+    value: 0.84
+    std: 0.22
+    paper_value: 0.84
+    paper_std: 0.22
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 1
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Molecular graph pre-training (for reference).
+    date: Oct 8, 2025
+    date_display: Oct 2025
+    date_iso: '2025-10-08'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-10-08'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.84
+    true_std: 0.22
+    value_gap_source_arxiv: '2510.07289'
+    value_gap_source_title: 'MolGA: Molecular Graph Adaptation with Pre-trained 2D
+      Graph Encoder'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.84
+    sort_std: 0.22
+    global_rank: 67
+    paper_rank: 67
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: true
   - model: MolGA
     model_key: molga
     model_plain: MolGA
@@ -5257,8 +5246,8 @@ results:
     value_note: ''
     sort_value: 1.187
     sort_std: 0.015
-    global_rank: 101
-    paper_rank: 101
+    global_rank: 97
+    paper_rank: 97
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5325,8 +5314,8 @@ results:
     value_note: ''
     sort_value: 1.242
     sort_std: 0.017
-    global_rank: 102
-    paper_rank: 102
+    global_rank: 98
+    paper_rank: 98
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5393,8 +5382,8 @@ results:
     value_note: ''
     sort_value: 1.309
     sort_std: 0.048
-    global_rank: 104
-    paper_rank: 104
+    global_rank: 100
+    paper_rank: 100
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5461,8 +5450,8 @@ results:
     value_note: ''
     sort_value: 1.335
     sort_std: 0.127
-    global_rank: 105
-    paper_rank: 105
+    global_rank: 101
+    paper_rank: 101
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5644,9 +5633,9 @@ results:
     sort_value: 0.672
     sort_std: 0.004
     global_rank: 18
-    paper_rank: 239
-    rank_delta: 221
-    rank_delta_abs: 221
+    paper_rank: 240
+    rank_delta: 222
+    rank_delta_abs: 222
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -5713,9 +5702,9 @@ results:
     sort_value: 0.649
     sort_std: 0.0035
     global_rank: 51
-    paper_rank: 241
-    rank_delta: 190
-    rank_delta_abs: 190
+    paper_rank: 242
+    rank_delta: 191
+    rank_delta_abs: 191
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -5747,7 +5736,7 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 66
@@ -5816,9 +5805,9 @@ results:
     sort_value: 0.639
     sort_std: 0.012
     global_rank: 70
-    paper_rank: 243
-    rank_delta: 173
-    rank_delta_abs: 173
+    paper_rank: 244
+    rank_delta: 174
+    rank_delta_abs: 174
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -5884,10 +5873,10 @@ results:
     value_note: ''
     sort_value: 0.6183
     sort_std: 0.006
-    global_rank: 116
-    paper_rank: 243
-    rank_delta: 127
-    rank_delta_abs: 127
+    global_rank: 115
+    paper_rank: 244
+    rank_delta: 129
+    rank_delta_abs: 129
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -5954,10 +5943,10 @@ results:
     value_note: ''
     sort_value: 0.615
     sort_std: 0.025
-    global_rank: 127
-    paper_rank: 243
-    rank_delta: 116
-    rank_delta_abs: 116
+    global_rank: 126
+    paper_rank: 244
+    rank_delta: 118
+    rank_delta_abs: 118
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -6024,10 +6013,10 @@ results:
     value_note: ''
     sort_value: 0.615
     sort_std: null
-    global_rank: 128
-    paper_rank: 243
-    rank_delta: 115
-    rank_delta_abs: 115
+    global_rank: 127
+    paper_rank: 244
+    rank_delta: 117
+    rank_delta_abs: 117
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -6092,10 +6081,10 @@ results:
     value_note: ''
     sort_value: 0.5871
     sort_std: 0.0013
-    global_rank: 207
-    paper_rank: 243
-    rank_delta: 36
-    rank_delta_abs: 36
+    global_rank: 209
+    paper_rank: 244
+    rank_delta: 35
+    rank_delta_abs: 35
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -6161,8 +6150,8 @@ results:
     value_note: ''
     sort_value: 0.5341
     sort_std: 0.005
-    global_rank: 240
-    paper_rank: 243
+    global_rank: 241
+    paper_rank: 244
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -6229,8 +6218,8 @@ results:
     value_note: ''
     sort_value: 0.5261
     sort_std: 0.0542
-    global_rank: 242
-    paper_rank: 242
+    global_rank: 243
+    paper_rank: 243
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6297,8 +6286,8 @@ results:
     value_note: ''
     sort_value: 0.5052
     sort_std: 0.0622
-    global_rank: 244
-    paper_rank: 244
+    global_rank: 245
+    paper_rank: 245
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6365,8 +6354,8 @@ results:
     value_note: ''
     sort_value: 0.5026
     sort_std: 0.0592
-    global_rank: 245
-    paper_rank: 245
+    global_rank: 246
+    paper_rank: 246
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

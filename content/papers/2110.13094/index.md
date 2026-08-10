@@ -66,9 +66,9 @@ has_results: true
 paper_type: method
 proposed_models:
 - Gophormer
-mrr: 0.0107
-adjusted_mrr: 0.0107
-mrr_dataset_count: 3
+mrr: 0.0133
+adjusted_mrr: 0.0089
+mrr_dataset_count: 2
 benchmark_categories:
 - Classic
 - Heterogeneous Graph Benchmarks
@@ -145,7 +145,7 @@ results:
     venue: IEEE Transactions on Knowledge and Data Engineering
     codebase_url: https://github.com/YangLing0818/GraphOOD
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -179,7 +179,7 @@ results:
     venue: IEEE Transactions on Knowledge and Data Engineering
     codebase_url: https://github.com/YangLing0818/GraphOOD
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
@@ -220,15 +220,16 @@ results:
     date_iso: '2021-10-25'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.7675
-    at_pub_std: null
-    at_pub_source_arxiv: '2010.00238'
-    at_pub_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    at_pub_source_date_iso: '2020-10-01'
-    at_pub_source_date_label: '2020'
+    at_pub_value: 0.7604
+    at_pub_std: 0.013
+    at_pub_source_arxiv: '2105.07634'
+    at_pub_source_title: Improving Graph Neural Networks with Simple Architecture
+      Design
+    at_pub_source_date_iso: '2021-05-17'
+    at_pub_source_date_label: '2021'
     value_gap_source_date_iso: '2023-05-10'
     value_gap_source_date_label: ICML 2023
-    gap_vs_at_pub: 0.024800000000000044
+    gap_vs_at_pub: 0.03190000000000004
     worse_than_at_pub: false
     surpassed_since_pub: true
     better_than_at_pub: true
@@ -253,8 +254,9 @@ results:
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    comparison_source_arxiv: '2010.00238'
+    comparison_source_title: Improving Graph Neural Networks with Simple Architecture
+      Design
+    comparison_source_arxiv: '2105.07634'
     is_best: false
     is_std_outlier: false
   - model: GCN
@@ -586,9 +588,9 @@ results:
     sort_value: 0.792
     sort_std: null
     global_rank: 77
-    paper_rank: 98
-    rank_delta: 21
-    rank_delta_abs: 21
+    paper_rank: 99
+    rank_delta: 22
+    rank_delta_abs: 22
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -600,8 +602,8 @@ results:
   - model: GIN
     model_key: gin
     model_plain: GIN
-    value: 0.7639
-    std: null
+    value: 0.7618
+    std: 0.0078
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -611,20 +613,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2010.00238'
-    title: Multi-grained Semantics-aware Graph Neural Networks
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    venue: IEEE Transactions on Knowledge and Data Engineering
-    codebase_url: https://github.com/zhiqiangzhongddu/AdamGNN
+    arxiv_id: '2310.11762'
+    title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    date: Oct 18, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-18'
+    venue: The Web Conference
+    codebase_url: https://github.com/SDS-Lab/QW_Loss
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 155
-    sort_value: 0.7639
-    sort_std: null
+    global_rank: 165
+    sort_value: 0.7618
+    sort_std: 0.0078
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -659,6 +661,74 @@ results:
     sort_value: 0.7289
     sort_std: 0.001
     comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Graphormer
+    model_key: graphormer
+    model_plain: Graphormer
+    value: 0.6621
+    std: 0.0083
+    paper_value: 0.6621
+    paper_std: 0.0083
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Planetoid split
+    date: Oct 25, 2021
+    date_display: Oct 2021
+    date_iso: '2021-10-25'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-10-06'
+    value_gap_source_date_label: NeurIPS 2025
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.716
+    true_std: 0.0032
+    value_gap_source_arxiv: '2510.04522'
+    value_gap_source_title: 'Toward a Unified Geometry Understanding: Riemannian Diffusion
+      Framework for Graph Generation and Prediction'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.05389999999999995
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.716
+    sort_std: 0.0032
+    global_rank: 559
+    paper_rank: 810
+    rank_delta: 251
+    rank_delta_abs: 251
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -719,8 +789,8 @@ results:
     value_note: ''
     sort_value: 0.7064
     sort_std: 0.0097
-    global_rank: 644
-    paper_rank: 644
+    global_rank: 643
+    paper_rank: 643
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -786,75 +856,8 @@ results:
     value_note: ''
     sort_value: 0.6738
     sort_std: 0.0076
-    global_rank: 770
-    paper_rank: 770
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Graphormer
-    model_key: graphormer
-    model_plain: Graphormer
-    value: 0.6621
-    std: 0.0083
-    paper_value: 0.6621
-    paper_std: 0.0083
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Node classification on Planetoid split
-    date: Oct 25, 2021
-    date_display: Oct 2021
-    date_iso: '2021-10-25'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-10-25'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.6621
-    true_std: 0.0083
-    value_gap_source_arxiv: '2110.13094'
-    value_gap_source_title: 'Gophormer: Ego-Graph Transformer for Node Classification'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6621
-    sort_std: 0.0083
-    global_rank: 804
-    paper_rank: 804
+    global_rank: 775
+    paper_rank: 775
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -920,8 +923,8 @@ results:
     value_note: ''
     sort_value: 0.5875
     sort_std: 0.0106
-    global_rank: 902
-    paper_rank: 902
+    global_rank: 917
+    paper_rank: 917
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -943,44 +946,11 @@ results:
 - &id002
   dataset: DBLP
   rows:
-  - model: HERec
-    model_key: herec
-    model_plain: HERec
-    value: 0.9993
-    std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: walk
-    architecture_label: Walk
-    architecture_title: Random-walk graph embedding
-    arxiv_id: '1912.10832'
-    title: An Attention-based Graph Neural Network for Heterogeneous Structural Learning
-    date: Dec 19, 2019
-    date_display: Dec 2019
-    date_iso: '2019-12-19'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: https://github.com/didi/hetsann
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9993
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: HetSANN
-    model_key: hetsann
-    model_plain: HetSANN
-    value: 0.9972
-    std: null
+  - model: LMSPS
+    model_key: lmsps
+    model_plain: LMSPS
+    value: 0.9566
+    std: 0.002
     metric: Micro-F1
     higher_is_better: true
     is_baseline: false
@@ -990,57 +960,90 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '1912.10832'
-    title: An Attention-based Graph Neural Network for Heterogeneous Structural Learning
-    date: Dec 19, 2019
-    date_display: Dec 2019
-    date_iso: '2019-12-19'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: https://github.com/didi/hetsann
+    arxiv_id: '2307.08430'
+    title: Long-range Meta-path Search on Large-scale Heterogeneous Graphs
+    date: Jul 17, 2023
+    date_display: Jul 2023
+    date_iso: '2023-07-17'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9566
+    sort_std: 0.002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: PSHGCN
+    model_key: pshgcn
+    model_plain: PSHGCN
+    value: 0.9561
+    std: 0.0012
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2305.19872'
+    title: Spectral Heterogeneous Graph Convolutions via Positive Noncommutative Polynomials
+    date: May 31, 2023
+    date_display: May 2023
+    date_iso: '2023-05-31'
+    venue: The Web Conference
+    codebase_url: https://github.com/ivam-he/PSHGCN
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.9972
-    sort_std: null
+    sort_value: 0.9561
+    sort_std: 0.0012
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
-  - model: DeepWalk
-    model_key: deepwalk
-    model_plain: DeepWalk
-    value: 0.9941
-    std: null
+  - model: RpHGNN
+    model_key: rphgnn
+    model_plain: RpHGNN
+    value: 0.9555
+    std: 0.0029
     metric: Micro-F1
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: walk
-    architecture_label: Walk
-    architecture_title: Random-walk graph embedding
-    arxiv_id: '1912.10832'
-    title: An Attention-based Graph Neural Network for Heterogeneous Structural Learning
-    date: Dec 19, 2019
-    date_display: Dec 2019
-    date_iso: '2019-12-19'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: https://github.com/didi/hetsann
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2310.14481'
+    title: Efficient Heterogeneous Graph Learning via Random Projection
+    date: Oct 23, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-23'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/CrawlScript/RpHGNN
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.9941
-    sort_std: null
+    sort_value: 0.9555
+    sort_std: 0.0029
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: GCN
     model_key: gcn
@@ -1100,10 +1103,10 @@ results:
     value_note: ''
     sort_value: 0.946
     sort_std: 0.0031
-    global_rank: 29
-    paper_rank: 120
-    rank_delta: 91
-    rank_delta_abs: 91
+    global_rank: 21
+    paper_rank: 115
+    rank_delta: 94
+    rank_delta_abs: 94
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1169,10 +1172,10 @@ results:
     value_note: ''
     sort_value: 0.9448
     sort_std: 0.0022
-    global_rank: 31
-    paper_rank: 119
-    rank_delta: 88
-    rank_delta_abs: 88
+    global_rank: 23
+    paper_rank: 114
+    rank_delta: 91
+    rank_delta_abs: 91
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1236,13 +1239,47 @@ results:
     value_note: ''
     sort_value: 0.9306
     sort_std: 0.0047
-    global_rank: 56
-    paper_rank: 114
-    rank_delta: 58
-    rank_delta_abs: 58
+    global_rank: 46
+    paper_rank: 109
+    rank_delta: 63
+    rank_delta_abs: 63
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.872
+    std: null
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2112.08331'
+    title: Model Stealing Attacks Against Inductive Graph Neural Networks
+    date: Dec 15, 2021
+    date_display: Dec 2021
+    date_iso: '2021-12-15'
+    venue: IEEE Symposium on Security and Privacy
+    codebase_url: https://github.com/xinleihe/GNNStealing
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: The node features come from the same distribution of
+      the graph used to train the target model.
+    is_global_top: true
+    global_rank: 88
+    sort_value: 0.872
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1303,8 +1340,8 @@ results:
     value_note: ''
     sort_value: 0.852
     sort_std: 0.002
-    global_rank: 109
-    paper_rank: 109
+    global_rank: 104
+    paper_rank: 104
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1370,8 +1407,8 @@ results:
     value_note: ''
     sort_value: 0.8457
     sort_std: 0.0028
-    global_rank: 115
-    paper_rank: 115
+    global_rank: 110
+    paper_rank: 110
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1437,8 +1474,8 @@ results:
     value_note: ''
     sort_value: 0.844
     sort_std: 0.0017
-    global_rank: 119
-    paper_rank: 119
+    global_rank: 114
+    paper_rank: 114
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1504,8 +1541,8 @@ results:
     value_note: ''
     sort_value: 0.8311
     sort_std: 0.0032
-    global_rank: 124
-    paper_rank: 124
+    global_rank: 119
+    paper_rank: 119
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1571,8 +1608,8 @@ results:
     value_note: ''
     sort_value: 0.8104
     sort_std: 0.0027
-    global_rank: 135
-    paper_rank: 135
+    global_rank: 130
+    paper_rank: 130
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1638,8 +1675,8 @@ results:
     value_note: ''
     sort_value: 0.8093
     sort_std: 0.0039
-    global_rank: 136
-    paper_rank: 136
+    global_rank: 131
+    paper_rank: 131
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1705,47 +1742,13 @@ results:
     value_note: ''
     sort_value: 0.7815
     sort_std: 0.0041
-    global_rank: 151
-    paper_rank: 151
+    global_rank: 147
+    paper_rank: 147
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.7462
-    std: 0.03
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2310.07365'
-    title: 'GraphControl: Adding Conditional Control to Universal Graph Pre-trained
-      Models for Graph Domain Transfer Learning'
-    date: Oct 11, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-11'
-    venue: The Web Conference
-    codebase_url: https://github.com/wykk00/GraphControl
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 163
-    sort_value: 0.7462
-    sort_std: 0.03
-    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1776,7 +1779,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 185
+    global_rank: 179
     sort_value: 0.6447
     sort_std: 0.0136
     comparison_type: global_top

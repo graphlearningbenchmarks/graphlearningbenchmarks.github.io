@@ -277,10 +277,10 @@ results:
     value_note: ''
     sort_value: 0.8287
     sort_std: null
-    global_rank: 94
-    paper_rank: 392
-    rank_delta: 298
-    rank_delta_abs: 298
+    global_rank: 82
+    paper_rank: 359
+    rank_delta: 277
+    rank_delta_abs: 277
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -346,8 +346,8 @@ results:
     value_note: ''
     sort_value: 0.7961
     sort_std: null
-    global_rank: 184
-    paper_rank: 184
+    global_rank: 159
+    paper_rank: 159
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -414,8 +414,8 @@ results:
     value_note: ''
     sort_value: 0.7926
     sort_std: null
-    global_rank: 202
-    paper_rank: 202
+    global_rank: 177
+    paper_rank: 177
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -483,8 +483,8 @@ results:
     value_note: ''
     sort_value: 0.7695
     sort_std: null
-    global_rank: 265
-    paper_rank: 265
+    global_rank: 238
+    paper_rank: 238
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -551,8 +551,8 @@ results:
     value_note: ''
     sort_value: 0.75272
     sort_std: null
-    global_rank: 300
-    paper_rank: 300
+    global_rank: 273
+    paper_rank: 273
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -619,8 +619,8 @@ results:
     value_note: ''
     sort_value: 0.7491
     sort_std: null
-    global_rank: 310
-    paper_rank: 310
+    global_rank: 282
+    paper_rank: 282
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -655,7 +655,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 394
+    global_rank: 361
     sort_value: 0.6605
     sort_std: 0.002
     comparison_type: global_top
@@ -720,8 +720,8 @@ results:
     value_note: ''
     sort_value: 0.40692
     sort_std: null
-    global_rank: 435
-    paper_rank: 435
+    global_rank: 399
+    paper_rank: 399
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

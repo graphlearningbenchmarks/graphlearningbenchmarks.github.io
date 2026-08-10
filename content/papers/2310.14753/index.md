@@ -67,19 +67,13 @@ adjusted_mrr: 0.0084
 mrr_dataset_count: 5
 benchmark_categories:
 - MoleculeNet
-- Quantum Chemistry
 benchmark_coverage:
 - benchmark: MoleculeNet
   benchmark_slug: moleculenet
   evaluated: 6
   total: 9
-- benchmark: Quantum Chemistry
-  benchmark_slug: quantum-chemistry
-  evaluated: 1
-  total: 3
 task_categories:
 - graph_classification
-- graph_regression
 experiment_scopes:
 - graph-level
 results:
@@ -210,10 +204,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 41
+    global_rank: 43
     sort_value: 0.8646
     sort_std: 0.0081
     comparison_type: global_top
@@ -278,8 +272,8 @@ results:
     value_note: ''
     sort_value: 0.835
     sort_std: 0.012
-    global_rank: 95
-    paper_rank: 105
+    global_rank: 99
+    paper_rank: 109
     rank_delta: 10
     rank_delta_abs: 10
     rank_delta_direction: worse
@@ -347,10 +341,10 @@ results:
     value_note: ''
     sort_value: 0.834
     sort_std: 0.033
-    global_rank: 97
-    paper_rank: 222
-    rank_delta: 125
-    rank_delta_abs: 125
+    global_rank: 101
+    paper_rank: 228
+    rank_delta: 127
+    rank_delta_abs: 127
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -416,8 +410,8 @@ results:
     value_note: ''
     sort_value: 0.831
     sort_std: 0.009
-    global_rank: 102
-    paper_rank: 102
+    global_rank: 106
+    paper_rank: 106
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -484,8 +478,8 @@ results:
     value_note: ''
     sort_value: 0.768
     sort_std: 0.028
-    global_rank: 229
-    paper_rank: 229
+    global_rank: 235
+    paper_rank: 235
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -552,8 +546,8 @@ results:
     value_note: ''
     sort_value: 0.7603
     sort_std: 0.0077
-    global_rank: 238
-    paper_rank: 241
+    global_rank: 244
+    paper_rank: 247
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -621,8 +615,8 @@ results:
     value_note: ''
     sort_value: 0.756
     sort_std: 0.022
-    global_rank: 242
-    paper_rank: 242
+    global_rank: 248
+    paper_rank: 248
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -688,8 +682,8 @@ results:
     value_note: ''
     sort_value: 0.74
     sort_std: 0.022
-    global_rank: 251
-    paper_rank: 251
+    global_rank: 258
+    paper_rank: 258
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -836,10 +830,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 32
+    global_rank: 34
     sort_value: 0.8875
     sort_std: 0.0049
     comparison_type: global_top
@@ -905,10 +899,10 @@ results:
     value_note: ''
     sort_value: 0.879
     sort_std: 0.02
-    global_rank: 37
-    paper_rank: 105
-    rank_delta: 68
-    rank_delta_abs: 68
+    global_rank: 39
+    paper_rank: 106
+    rank_delta: 67
+    rank_delta_abs: 67
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -975,8 +969,8 @@ results:
     value_note: ''
     sort_value: 0.846
     sort_std: 0.008
-    global_rank: 52
-    paper_rank: 118
+    global_rank: 54
+    paper_rank: 120
     rank_delta: 66
     rank_delta_abs: 66
     rank_delta_direction: worse
@@ -1044,8 +1038,8 @@ results:
     value_note: ''
     sort_value: 0.72
     sort_std: 0.006
-    global_rank: 99
-    paper_rank: 99
+    global_rank: 100
+    paper_rank: 100
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1111,8 +1105,8 @@ results:
     value_note: ''
     sort_value: 0.7142
     sort_std: 0.0066
-    global_rank: 114
-    paper_rank: 115
+    global_rank: 116
+    paper_rank: 117
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -1179,8 +1173,8 @@ results:
     value_note: ''
     sort_value: 0.705
     sort_std: 0.018
-    global_rank: 125
-    paper_rank: 125
+    global_rank: 130
+    paper_rank: 130
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1247,8 +1241,8 @@ results:
     value_note: ''
     sort_value: 0.678
     sort_std: 0.016
-    global_rank: 202
-    paper_rank: 202
+    global_rank: 206
+    paper_rank: 206
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1316,8 +1310,8 @@ results:
     value_note: ''
     sort_value: 0.67
     sort_std: 0.006
-    global_rank: 230
-    paper_rank: 230
+    global_rank: 235
+    paper_rank: 235
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1511,8 +1505,8 @@ results:
     at_pub_source_title: Subgraph Networks Based Contrastive Learning
     at_pub_source_date_iso: '2023-06-06'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-10-23'
-    value_gap_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2024-04-24'
+    value_gap_source_date_label: IJCAI 2024
     gap_vs_at_pub: 0.016000000000000014
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1523,17 +1517,17 @@ results:
     today_delta_significant: false
     true_value: 0.85
     true_std: 0.008
-    value_gap_source_arxiv: '2310.14753'
-    value_gap_source_title: Rethinking Tokenizer and Decoder in Masked Graph Modeling
-      for Molecules
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2404.15806'
+    value_gap_source_title: 'Where to Mask: Structure-Guided Masking for Graph Masked
+      Autoencoders'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.85
     sort_std: 0.008
-    global_rank: 56
-    paper_rank: 56
+    global_rank: 57
+    paper_rank: 57
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1600,8 +1594,8 @@ results:
     value_note: ''
     sort_value: 0.823
     sort_std: 0.012
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1668,8 +1662,8 @@ results:
     value_note: ''
     sort_value: 0.8132
     sort_std: 0.0249
-    global_rank: 78
-    paper_rank: 92
+    global_rank: 79
+    paper_rank: 93
     rank_delta: 14
     rank_delta_abs: 14
     rank_delta_direction: worse
@@ -1735,8 +1729,8 @@ results:
     value_note: ''
     sort_value: 0.798
     sort_std: 0.035
-    global_rank: 91
-    paper_rank: 102
+    global_rank: 92
+    paper_rank: 103
     rank_delta: 11
     rank_delta_abs: 11
     rank_delta_direction: worse
@@ -1803,10 +1797,10 @@ results:
     value_note: ''
     sort_value: 0.7872
     sort_std: 0.0258
-    global_rank: 101
-    paper_rank: 113
-    rank_delta: 12
-    rank_delta_abs: 12
+    global_rank: 102
+    paper_rank: 116
+    rank_delta: 14
+    rank_delta_abs: 14
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1872,8 +1866,8 @@ results:
     value_note: ''
     sort_value: 0.655
     sort_std: 0.023
-    global_rank: 200
-    paper_rank: 200
+    global_rank: 204
+    paper_rank: 204
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1940,8 +1934,8 @@ results:
     value_note: ''
     sort_value: 0.626
     sort_std: 0.044
-    global_rank: 217
-    paper_rank: 217
+    global_rank: 221
+    paper_rank: 221
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1958,419 +1952,6 @@ results:
   paper_metrics:
   - ROC-AUC
   metric: ROC-AUC
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
-- &id007
-  dataset: QM7b
-  rows:
-  - model: DTNN
-    model_key: dtnn
-    model_plain: DTNN
-    value: 0.074
-    std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '1703.00564'
-    title: MoleculeNet
-    date: Mar 2, 2017
-    date_display: Mar 2017
-    date_iso: '2017-03-02'
-    venue: Chemical Science
-    codebase_url: https://github.com/deepchem/deepchem
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.074
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Multitask(CM)
-    model_key: multitask(cm)
-    model_plain: Multitask(CM)
-    value: 0.086
-    std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '1703.00564'
-    title: MoleculeNet
-    date: Mar 2, 2017
-    date_display: Mar 2017
-    date_iso: '2017-03-02'
-    venue: Chemical Science
-    codebase_url: https://github.com/deepchem/deepchem
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.086
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: KRR(CM)
-    model_key: krr(cm)
-    model_plain: KRR(CM)
-    value: 0.098
-    std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '1703.00564'
-    title: MoleculeNet
-    date: Mar 2, 2017
-    date_display: Mar 2017
-    date_iso: '2017-03-02'
-    venue: Chemical Science
-    codebase_url: https://github.com/deepchem/deepchem
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.098
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SimSGT
-    model_key: simsgt
-    model_plain: SimSGT
-    value: 75.4
-    std: 0.7
-    paper_value: 75.4
-    paper_std: 0.7
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: null
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 23, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-23'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-10-23'
-    value_gap_source_date_label: NeurIPS 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 75.4
-    true_std: 0.7
-    value_gap_source_arxiv: '2310.14753'
-    value_gap_source_title: Rethinking Tokenizer and Decoder in Masked Graph Modeling
-      for Molecules
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 75.4
-    sort_std: 0.7
-    global_rank: 38
-    paper_rank: 38
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphMAE
-    model_key: graphmae
-    model_plain: GraphMAE
-    value: 78.4
-    std: 2.3
-    paper_value: 78.4
-    paper_std: 2.3
-    metric: MAE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: null
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 23, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-23'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-05-17'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 78.4
-    true_std: 2.6
-    value_gap_source_arxiv: '2405.10642'
-    value_gap_source_title: 'Hi-GMAE: Hierarchical Graph Masked Autoencoders'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 78.4
-    sort_std: 2.6
-    global_rank: 41
-    paper_rank: 41
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Mole-BERT
-    model_key: mole-bert
-    model_plain: Mole-BERT
-    value: 79.8
-    std: 2.6
-    paper_value: 79.8
-    paper_std: 2.6
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 23, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-23'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-05-17'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 79.8
-    true_std: 2.6
-    value_gap_source_arxiv: '2405.10642'
-    value_gap_source_title: 'Hi-GMAE: Hierarchical Graph Masked Autoencoders'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 79.8
-    sort_std: 2.6
-    global_rank: 42
-    paper_rank: 42
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphCL
-    model_key: graphcl
-    model_plain: GraphCL
-    value: 80.4
-    std: 3.3
-    paper_value: 80.4
-    paper_std: 3.3
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: null
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 23, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-23'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-05-17'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 80.4
-    true_std: 3.3
-    value_gap_source_arxiv: '2405.10642'
-    value_gap_source_title: 'Hi-GMAE: Hierarchical Graph Masked Autoencoders'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 80.4
-    sort_std: 3.3
-    global_rank: 43
-    paper_rank: 43
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 122.9
-    std: 2.2
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2502.12638'
-    title: 'NExT-Mol: 3D Diffusion Meets 1D Language Modeling for 3D Molecule Generation'
-    date: Feb 18, 2025
-    date_display: Feb 2025
-    date_iso: '2025-02-18'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/acharkq/NExT-Mol
-    uses_external_data: false
-    input_feature_source: unknown
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 60
-    sort_value: 122.9
-    sort_std: 2.2
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  rank_metric: MAE
-  higher_is_better: false
-  experiment_scope: graph-level
-  dataset_primary_metric: MAE
-  paper_metrics:
-  - MAE
-  metric: MAE
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 - &id005
@@ -2501,7 +2082,7 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 66
@@ -2571,9 +2152,9 @@ results:
     sort_value: 0.64
     sort_std: 0.01
     global_rank: 68
-    paper_rank: 148
-    rank_delta: 80
-    rank_delta_abs: 80
+    paper_rank: 150
+    rank_delta: 82
+    rank_delta_abs: 82
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2639,9 +2220,9 @@ results:
     sort_value: 0.633
     sort_std: 0.008
     global_rank: 80
-    paper_rank: 203
-    rank_delta: 123
-    rank_delta_abs: 123
+    paper_rank: 205
+    rank_delta: 125
+    rank_delta_abs: 125
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2707,10 +2288,10 @@ results:
     value_note: ''
     sort_value: 0.615
     sort_std: 0.013
-    global_rank: 125
-    paper_rank: 193
-    rank_delta: 68
-    rank_delta_abs: 68
+    global_rank: 124
+    paper_rank: 194
+    rank_delta: 70
+    rank_delta_abs: 70
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2774,10 +2355,78 @@ results:
     value_note: ''
     sort_value: 0.614
     sort_std: 0.006
-    global_rank: 130
-    paper_rank: 135
-    rank_delta: 5
-    rank_delta_abs: 5
+    global_rank: 129
+    paper_rank: 136
+    rank_delta: 7
+    rank_delta_abs: 7
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphMAE*
+    model_key: graphmae
+    model_plain: GraphMAE*
+    value: 0.603
+    std: 0.011
+    paper_value: 0.603
+    paper_std: 0.011
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 1
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Oct 23, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-23'
+    published_venue: NeurIPS 2023
+    published_conference: NeurIPS 2023
+    at_pub_value: 0.603
+    at_pub_std: 0.011
+    at_pub_source_arxiv: '2309.04589'
+    at_pub_source_title: Motif-aware Attribute Masking for Molecular Graph Pre-training
+    at_pub_source_date_iso: '2023-09-08'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-11-02'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.605
+    true_std: 0.012
+    value_gap_source_arxiv: '2311.01038'
+    value_gap_source_title: 'Better with Less: A Data-Active Perspective on Pre-Training
+      Graph Neural Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0020000000000000018
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.605
+    sort_std: 0.012
+    global_rank: 165
+    paper_rank: 177
+    rank_delta: 12
+    rank_delta_abs: 12
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2843,80 +2492,12 @@ results:
     value_note: ''
     sort_value: 0.6041
     sort_std: 0.0143
-    global_rank: 170
-    paper_rank: 205
+    global_rank: 172
+    paper_rank: 207
     rank_delta: 35
     rank_delta_abs: 35
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphMAE*
-    model_key: graphmae
-    model_plain: GraphMAE*
-    value: 0.603
-    std: 0.011
-    paper_value: 0.603
-    paper_std: 0.011
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 23, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-23'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: 0.603
-    at_pub_std: 0.011
-    at_pub_source_arxiv: '2309.04589'
-    at_pub_source_title: Motif-aware Attribute Masking for Molecular Graph Pre-training
-    at_pub_source_date_iso: '2023-09-08'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2025-03-06'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.603
-    true_std: 0.011
-    value_gap_source_arxiv: '2503.04362'
-    value_gap_source_title: A Generalist Cross-Domain Molecular Learning Framework
-      for Structure-Based Drug Discovery
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.603
-    sort_std: 0.011
-    global_rank: 176
-    paper_rank: 176
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2979,8 +2560,8 @@ results:
     value_note: ''
     sort_value: 0.583
     sort_std: 0.015
-    global_rank: 211
-    paper_rank: 211
+    global_rank: 212
+    paper_rank: 212
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3126,7 +2707,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 16
+    global_rank: 14
     sort_value: 0.84
     sort_std: 0.004
     comparison_type: global_top
@@ -3192,10 +2773,10 @@ results:
     value_note: ''
     sort_value: 0.823
     sort_std: 0.022
-    global_rank: 33
-    paper_rank: 263
-    rank_delta: 230
-    rank_delta_abs: 230
+    global_rank: 31
+    paper_rank: 255
+    rank_delta: 224
+    rank_delta_abs: 224
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3262,10 +2843,10 @@ results:
     value_note: ''
     sort_value: 0.796
     sort_std: 0.025
-    global_rank: 76
-    paper_rank: 237
-    rank_delta: 161
-    rank_delta_abs: 161
+    global_rank: 71
+    paper_rank: 229
+    rank_delta: 158
+    rank_delta_abs: 158
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3331,8 +2912,8 @@ results:
     value_note: ''
     sort_value: 0.755
     sort_std: 0.006
-    global_rank: 205
-    paper_rank: 205
+    global_rank: 199
+    paper_rank: 199
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3399,8 +2980,8 @@ results:
     value_note: ''
     sort_value: 0.753
     sort_std: 0.005
-    global_rank: 216
-    paper_rank: 216
+    global_rank: 209
+    paper_rank: 209
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3468,10 +3049,10 @@ results:
     value_note: ''
     sort_value: 0.7483
     sort_std: 0.0074
-    global_rank: 240
-    paper_rank: 248
-    rank_delta: 8
-    rank_delta_abs: 8
+    global_rank: 234
+    paper_rank: 241
+    rank_delta: 7
+    rank_delta_abs: 7
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3536,8 +3117,8 @@ results:
     value_note: ''
     sort_value: 0.745
     sort_std: 0.007
-    global_rank: 249
-    paper_rank: 249
+    global_rank: 242
+    paper_rank: 242
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3604,8 +3185,8 @@ results:
     value_note: ''
     sort_value: 0.739
     sort_std: 0.009
-    global_rank: 269
-    paper_rank: 269
+    global_rank: 261
+    paper_rank: 261
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3820,9 +3401,9 @@ results:
     sort_value: 0.711
     sort_std: 0.014
     global_rank: 37
-    paper_rank: 137
-    rank_delta: 100
-    rank_delta_abs: 100
+    paper_rank: 138
+    rank_delta: 101
+    rank_delta_abs: 101
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3890,9 +3471,9 @@ results:
     sort_value: 0.677
     sort_std: 0.019
     global_rank: 72
-    paper_rank: 172
-    rank_delta: 100
-    rank_delta_abs: 100
+    paper_rank: 174
+    rank_delta: 102
+    rank_delta_abs: 102
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3958,8 +3539,8 @@ results:
     value_note: ''
     sort_value: 0.641
     sort_std: 0.003
-    global_rank: 134
-    paper_rank: 134
+    global_rank: 135
+    paper_rank: 135
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4026,10 +3607,10 @@ results:
     value_note: ''
     sort_value: 0.6333
     sort_std: 0.0017
-    global_rank: 153
-    paper_rank: 163
-    rank_delta: 10
-    rank_delta_abs: 10
+    global_rank: 155
+    paper_rank: 166
+    rank_delta: 11
+    rank_delta_abs: 11
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -4095,8 +3676,8 @@ results:
     value_note: ''
     sort_value: 0.632
     sort_std: 0.0076
-    global_rank: 159
-    paper_rank: 184
+    global_rank: 161
+    paper_rank: 186
     rank_delta: 25
     rank_delta_abs: 25
     rank_delta_direction: worse
@@ -4162,10 +3743,10 @@ results:
     value_note: ''
     sort_value: 0.631
     sort_std: 0.007
-    global_rank: 164
-    paper_rank: 167
-    rank_delta: 3
-    rank_delta_abs: 3
+    global_rank: 167
+    paper_rank: 169
+    rank_delta: 2
+    rank_delta_abs: 2
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -4230,8 +3811,8 @@ results:
     value_note: ''
     sort_value: 0.624
     sort_std: 0.004
-    global_rank: 183
-    paper_rank: 183
+    global_rank: 185
+    paper_rank: 185
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4259,9 +3840,6 @@ results_grouped:
   - *id004
   - *id005
   - *id006
-- benchmark: Quantum Chemistry
-  datasets:
-  - *id007
 datasets_by_scope:
 - scope: graph-level
   label: Graph-level
@@ -4281,11 +3859,6 @@ datasets_by_scope:
       dataset_slug: sider
     - dataset: ToxCast
       dataset_slug: toxcast
-  - benchmark: Quantum Chemistry
-    benchmark_slug: quantum-chemistry
-    datasets:
-    - dataset: QM7b
-      dataset_slug: qm7b
 main_figure: /figures/2310.14753/main_figure.jpegoptim.jpg
 ---
 

@@ -13,7 +13,7 @@ stats:
   avg_nodes: 21111007.0
   avg_edges: null
   num_classes: 1
-result_count: 101
+result_count: 105
 best_model:
   model: LMSPS+LP+MS
   value: 0.5784
@@ -26,6 +26,10 @@ papers:
     Learning Approach'
   date_iso: '2026-04-30'
   venue: ''
+- arxiv_id: '2503.19666'
+  title: 'Towards Efficient Training of Graph Neural Networks: A Multiscale Approach'
+  date_iso: '2025-03-25'
+  venue: TMLR 2025
 - arxiv_id: '2410.02158'
   title: 'SCNode: Spatial and Contextual Coordinates for Graph Representation Learning'
   date_iso: '2024-10-03'
@@ -1620,18 +1624,18 @@ variants:
     - 0.0038
     - null
     - null
-  row_count: 101
+  row_count: 105
   rows_json: /data/datasets/ogbn-mag/standard-split-rows.json
   chart_json: /data/datasets/ogbn-mag/standard-split-chart.json
   arch_counts:
-    gnn: 69
+    gnn: 70
     hybrid: 18
     graph_transformer: 5
     llm: 0
     walk: 1
-    traditional: 7
+    traditional: 9
   metric_counts:
-  - 92
+  - 96
   - 9
   - 9
   milestones: &id001
@@ -1648,12 +1652,24 @@ variants:
     title: 'Residual Network and Embedding Usage: New Tricks of Node Classification
       with Graph Convolutional Networks'
     date: '2021-05-18'
+  - value: 0.5204
+    std: null
+    model: R-HGNN
+    arxiv_id: '2105.11122'
+    title: Heterogeneous Graph Representation Learning with Relation Awareness
+    date: '2021-05-24'
   - value: 0.559
     std: 0.0027
     model: NARS-GAMLP+RLU
     arxiv_id: '2108.10097'
     title: Graph Attention MLP with Reliable Label Utilization
     date: '2021-08-23'
+  - value: 0.5631
+    std: 0.0021
+    model: RLU+SCR
+    arxiv_id: '2112.04319'
+    title: 'SCR: Training Graph Neural Networks with Consistency Regularization'
+    date: '2021-12-08'
   - value: 0.5719
     std: 0.0012
     model: SeHGNN+emb+ms

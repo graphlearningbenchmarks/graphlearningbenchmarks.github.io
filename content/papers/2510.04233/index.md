@@ -58,7 +58,7 @@ benchmark_coverage:
 - benchmark: Quantum Chemistry
   benchmark_slug: quantum-chemistry
   evaluated: 1
-  total: 3
+  total: 1
 task_categories:
 - graph_regression
 experiment_scopes:

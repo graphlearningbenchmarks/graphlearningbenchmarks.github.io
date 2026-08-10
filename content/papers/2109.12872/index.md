@@ -396,8 +396,8 @@ results:
     value_note: ''
     sort_value: 0.9752
     sort_std: null
-    global_rank: 52
-    paper_rank: 52
+    global_rank: 53
+    paper_rank: 53
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -464,13 +464,46 @@ results:
     value_note: ''
     sort_value: 0.9268
     sort_std: null
-    global_rank: 89
-    paper_rank: 89
+    global_rank: 90
+    paper_rank: 90
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.462
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2407.00494'
+    title: Graph Neural Networks Gone Hogwild
+    date: Jun 29, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-29'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 183
+    sort_value: 0.462
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -542,7 +575,7 @@ results:
     venue: arXiv.org
     codebase_url: https://github.com/ocx-lab/FloydNet
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -643,10 +676,10 @@ results:
     value_note: ''
     sort_value: 0.088
     sort_std: 0.002
-    global_rank: 74
-    paper_rank: 107
-    rank_delta: 33
-    rank_delta_abs: 33
+    global_rank: 71
+    paper_rank: 102
+    rank_delta: 31
+    rank_delta_abs: 31
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -711,10 +744,10 @@ results:
     value_note: ''
     sort_value: 0.111
     sort_std: 0.002
-    global_rank: 82
-    paper_rank: 109
-    rank_delta: 27
-    rank_delta_abs: 27
+    global_rank: 79
+    paper_rank: 104
+    rank_delta: 25
+    rank_delta_abs: 25
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -779,10 +812,10 @@ results:
     value_note: ''
     sort_value: 0.113
     sort_std: 0.002
-    global_rank: 83
-    paper_rank: 107
-    rank_delta: 24
-    rank_delta_abs: 24
+    global_rank: 80
+    paper_rank: 102
+    rank_delta: 22
+    rank_delta_abs: 22
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -826,8 +859,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-05-25'
-    value_gap_source_date_label: AAAI 2023
+    value_gap_source_date_iso: '2023-10-31'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
@@ -836,20 +869,21 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.1205
-    true_std: 0.0034
-    value_gap_source_arxiv: '2305.15747'
-    value_gap_source_title: Union Subgraph Neural Networks
+    true_value: 0.126
+    true_std: 0.003
+    value_gap_source_arxiv: '2310.20519'
+    value_gap_source_title: Enhancing Graph Neural Networks with Quantum Computed
+      Encodings
     value_gap_source_is_current_paper: false
-    value_gap: 0.3545
+    value_gap: 0.349
     has_value_note: false
     value_note: ''
-    sort_value: 0.1205
-    sort_std: 0.0034
-    global_rank: 85
-    paper_rank: 109
-    rank_delta: 24
-    rank_delta_abs: 24
+    sort_value: 0.126
+    sort_std: 0.003
+    global_rank: 81
+    paper_rank: 104
+    rank_delta: 23
+    rank_delta_abs: 23
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -913,8 +947,8 @@ results:
     value_note: ''
     sort_value: 0.282
     sort_std: 0.015
-    global_rank: 103
-    paper_rank: 109
+    global_rank: 98
+    paper_rank: 104
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -981,8 +1015,8 @@ results:
     value_note: ''
     sort_value: 0.325
     sort_std: 0.015
-    global_rank: 105
-    paper_rank: 105
+    global_rank: 100
+    paper_rank: 100
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1049,8 +1083,8 @@ results:
     value_note: ''
     sort_value: 0.337
     sort_std: 0.021
-    global_rank: 106
-    paper_rank: 106
+    global_rank: 101
+    paper_rank: 101
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1117,8 +1151,8 @@ results:
     value_note: ''
     sort_value: 0.386
     sort_std: 0.009
-    global_rank: 107
-    paper_rank: 107
+    global_rank: 102
+    paper_rank: 102
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1185,8 +1219,8 @@ results:
     value_note: ''
     sort_value: 0.407
     sort_std: 0.018
-    global_rank: 108
-    paper_rank: 108
+    global_rank: 103
+    paper_rank: 103
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1253,8 +1287,8 @@ results:
     value_note: ''
     sort_value: 0.669
     sort_std: 0.07
-    global_rank: 112
-    paper_rank: 112
+    global_rank: 107
+    paper_rank: 107
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

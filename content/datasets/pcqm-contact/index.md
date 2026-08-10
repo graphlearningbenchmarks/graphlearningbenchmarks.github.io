@@ -1429,27 +1429,33 @@ variants:
   - value: 0.335
     std: 0.0003
     model: SAN+LapPE
-    arxiv_id: '2206.08164'
-    title: LRGB
-    date: '2022-06-16'
+    arxiv_id: '2205.12454'
+    title: Recipe for a General, Powerful, Scalable Graph Transformer
+    date: '2022-05-25'
   - value: 0.3637
     std: 0.002
     model: Exphormer
-    arxiv_id: '2406.12059'
-    title: A Scalable and Effective Alternative to Graph Transformers
-    date: '2024-06-17'
-  - value: 0.3713
-    std: 0.0037
-    model: CoCN exp.
-    arxiv_id: '2407.18480'
-    title: Scalable Graph Compressed Convolutions
-    date: '2024-07-26'
+    arxiv_id: '2303.06147'
+    title: 'Exphormer: Sparse Transformers for Graphs'
+    date: '2023-03-10'
+  - value: 0.4707
+    std: 0.0007
+    model: NeuralWalker
+    arxiv_id: '2406.03386'
+    title: Learning Long Range Dependencies on Graphs via Random Walks
+    date: '2024-06-05'
   - value: 0.4737
     std: 0.0024
     model: Exphormer + LapPE
     arxiv_id: '2411.12732'
     title: Benchmarking Positional Encodings for GNNs and Graph Transformers
     date: '2024-11-19'
+  - value: 0.6143
+    std: null
+    model: FloydNet
+    arxiv_id: '2601.19094'
+    title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    date: '2026-01-27'
   milestones_by_metric:
     MRR: *id001
 ---

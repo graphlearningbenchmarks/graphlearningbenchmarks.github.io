@@ -66,7 +66,7 @@ task_categories:
 experiment_scopes:
 - node-level
 results:
-- &id001
+- &id002
   dataset: Cora-CA
   rows:
   - model: HAN (full batch)
@@ -460,8 +460,8 @@ results:
     value_note: ''
     sort_value: 0.8197
     sort_std: 0.015
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -527,8 +527,8 @@ results:
     value_note: ''
     sort_value: 0.7948
     sort_std: 0.0208
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -594,8 +594,8 @@ results:
     value_note: ''
     sort_value: 0.7719
     sort_std: 0.0149
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -661,8 +661,8 @@ results:
     value_note: ''
     sort_value: 0.7705
     sort_std: 0.0126
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -728,8 +728,8 @@ results:
     value_note: ''
     sort_value: 0.7616
     sort_std: 0.0119
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -764,7 +764,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 28
+    global_rank: 20
     sort_value: 0.7516
     sort_std: 0.0065
     comparison_type: global_top
@@ -828,8 +828,8 @@ results:
     value_note: ''
     sort_value: 0.7431
     sort_std: 0.0189
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -873,7 +873,7 @@ results:
     venue: Proceedings of the ACM Web Conference 2026
     codebase_url: https://github.com/Mingzhang21/HealHGNN
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -939,7 +939,7 @@ results:
     venue: Proceedings of the ACM Web Conference 2026
     codebase_url: https://github.com/Mingzhang21/HealHGNN
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
@@ -1702,7 +1702,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id001
   dataset: House
   rows:
   - model: HealHGNN
@@ -1727,7 +1727,7 @@ results:
     venue: Proceedings of the ACM Web Conference 2026
     codebase_url: https://github.com/Mingzhang21/HealHGNN
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -1760,7 +1760,7 @@ results:
     venue: Proceedings of the ACM Web Conference 2026
     codebase_url: https://github.com/Mingzhang21/HealHGNN
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -2583,7 +2583,7 @@ results:
     venue: Proceedings of the ACM Web Conference 2026
     codebase_url: https://github.com/Mingzhang21/HealHGNN
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -2616,7 +2616,7 @@ results:
     venue: Proceedings of the ACM Web Conference 2026
     codebase_url: https://github.com/Mingzhang21/HealHGNN
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -3393,10 +3393,10 @@ datasets_by_scope:
   - benchmark: Hypergraph Benchmarks
     benchmark_slug: hypergraph-benchmarks
     datasets:
-    - dataset: Cora-CA
-      dataset_slug: cora-ca
     - dataset: House
       dataset_slug: house
+    - dataset: Cora-CA
+      dataset_slug: cora-ca
     - dataset: DBLP-CA
       dataset_slug: dblp-ca
     - dataset: Walmart

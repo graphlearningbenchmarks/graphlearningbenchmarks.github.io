@@ -48,8 +48,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - CamS-LLaMA
-mrr: 0.1897
-adjusted_mrr: 0.1897
+mrr: 0.1901
+adjusted_mrr: 0.1901
 mrr_dataset_count: 3
 benchmark_categories:
 - MoleculeNet
@@ -224,8 +224,8 @@ results:
     value_note: ''
     sort_value: 0.87
     sort_std: null
-    global_rank: 29
-    paper_rank: 29
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -258,10 +258,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 41
+    global_rank: 43
     sort_value: 0.8646
     sort_std: 0.0081
     comparison_type: global_top
@@ -326,8 +326,8 @@ results:
     value_note: ''
     sort_value: 0.831
     sort_std: null
-    global_rank: 103
-    paper_rank: 103
+    global_rank: 107
+    paper_rank: 107
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -508,10 +508,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 32
+    global_rank: 34
     sort_value: 0.8875
     sort_std: 0.0049
     comparison_type: global_top
@@ -576,8 +576,8 @@ results:
     value_note: ''
     sort_value: 0.737
     sort_std: null
-    global_rank: 75
-    paper_rank: 75
+    global_rank: 77
+    paper_rank: 77
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -723,7 +723,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 16
+    global_rank: 14
     sort_value: 0.84
     sort_std: 0.004
     comparison_type: global_top
@@ -788,8 +788,8 @@ results:
     value_note: ''
     sort_value: 0.827
     sort_std: null
-    global_rank: 29
-    paper_rank: 29
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -856,8 +856,8 @@ results:
     value_note: ''
     sort_value: 0.72
     sort_std: null
-    global_rank: 295
-    paper_rank: 295
+    global_rank: 287
+    paper_rank: 287
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

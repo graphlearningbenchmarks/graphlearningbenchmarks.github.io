@@ -65,9 +65,9 @@ results:
 - &id001
   dataset: MNIST
   rows:
-  - model: Schrödinger GNN
-    model_key: schrödinger gnn
-    model_plain: Schrödinger GNN
+  - model: Schrödinger
+    model_key: schrödinger
+    model_plain: Schrödinger
     value: 0.9913
     std: 0.0004
     metric: Accuracy

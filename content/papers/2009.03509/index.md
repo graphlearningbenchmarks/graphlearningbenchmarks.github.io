@@ -54,8 +54,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - UniMP
-mrr: 0.0506
-adjusted_mrr: 0.0337
+mrr: 0.0514
+adjusted_mrr: 0.0343
 mrr_dataset_count: 2
 benchmark_categories:
 - OGB
@@ -265,10 +265,10 @@ results:
     value_note: ''
     sort_value: 0.8383
     sort_std: 0.0014
-    global_rank: 71
-    paper_rank: 160
-    rank_delta: 89
-    rank_delta_abs: 89
+    global_rank: 64
+    paper_rank: 140
+    rank_delta: 76
+    rank_delta_abs: 76
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -334,8 +334,8 @@ results:
     value_note: ''
     sort_value: 0.8256
     sort_std: 0.0031
-    global_rank: 98
-    paper_rank: 98
+    global_rank: 84
+    paper_rank: 84
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -401,8 +401,8 @@ results:
     value_note: ''
     sort_value: 0.8098
     sort_std: 0.002
-    global_rank: 144
-    paper_rank: 145
+    global_rank: 125
+    paper_rank: 126
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -469,8 +469,8 @@ results:
     value_note: ''
     sort_value: 0.7945
     sort_std: 0.0059
-    global_rank: 190
-    paper_rank: 190
+    global_rank: 165
+    paper_rank: 165
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -537,8 +537,8 @@ results:
     value_note: ''
     sort_value: 0.7923
     sort_std: 0.0078
-    global_rank: 203
-    paper_rank: 203
+    global_rank: 178
+    paper_rank: 178
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -605,8 +605,8 @@ results:
     value_note: ''
     sort_value: 0.7897
     sort_std: 0.0036
-    global_rank: 218
-    paper_rank: 218
+    global_rank: 192
+    paper_rank: 192
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -641,7 +641,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 394
+    global_rank: 361
     sort_value: 0.6605
     sort_std: 0.002
     comparison_type: global_top
@@ -1125,8 +1125,8 @@ results:
     value_note: ''
     sort_value: 0.7825
     sort_std: 0.0035
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1193,47 +1193,13 @@ results:
     value_note: ''
     sort_value: 0.7803
     sort_std: 0.0073
-    global_rank: 46
-    paper_rank: 46
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MLP
-    model_key: mlp
-    model_plain: MLP
-    value: 0.7204
-    std: 0.0048
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    venue: The Web Conference
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 69
-    sort_value: 0.7204
-    sort_std: 0.0048
-    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

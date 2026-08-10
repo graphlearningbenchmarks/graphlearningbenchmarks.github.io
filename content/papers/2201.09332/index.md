@@ -49,7 +49,7 @@ abstract: The recent works proposing transformer-based models for graphs have pr
   gain against vanilla transformer across all tasks on standard benchmarks and can
   easily be extended to GNN-based models with low-pass characteristics (e.g., GAT).
 codebase_url: ''
-extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+extraction_model: google/gemma-4-26B-A4B-it
 has_results: true
 paper_type: dataset
 proposed_models: []
@@ -122,9 +122,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Tango_GPS
-    model_key: tango_gps
-    model_plain: Tango_GPS
+  - model: TANGO-GPS
+    model_key: tango-gps
+    model_plain: TANGO-GPS
     value: 0.80113
     std: 0.00138
     metric: Accuracy
@@ -205,14 +205,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on CLUSTER dataset
+    protocol_note: node classification task on CLUSTER dataset using % ACC metric
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -273,14 +273,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on CLUSTER dataset
+    protocol_note: node classification task on CLUSTER dataset using % ACC metric
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -341,14 +341,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: san2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on CLUSTER dataset
+    protocol_note: node classification task on CLUSTER dataset using % ACC metric
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -395,32 +395,66 @@ results:
   - model: GatedGCN
     model_key: gatedgcn
     model_plain: GatedGCN
-    value: 0.76082
-    std: 0.00196
+    value: 0.7384
+    std: 0.00326
+    paper_value: 0.7384
+    paper_std: 0.00326
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: 0.505
+    params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2305.11424'
-    title: IJCAI--23 Formatting Instructions
-    date: May 19, 2023
-    date_display: May 2023
-    date_iso: '2023-05-19'
-    venue: International Joint Conference on Artificial Intelligence
-    codebase_url: https://github.com/czczup/GPTrans
-    uses_external_data: false
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 57
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification task on CLUSTER dataset using % ACC metric
+    date: Jan 23, 2022
+    date_display: Jan 2022
+    date_iso: '2022-01-23'
+    published_venue: TMLR 2022
+    published_conference: TMLR 2022
+    at_pub_value: 0.7384
+    at_pub_std: 0.0032
+    at_pub_source_arxiv: '2006.07846'
+    at_pub_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
+    at_pub_source_date_iso: '2020-06-14'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2023-05-19'
+    value_gap_source_date_label: IJCAI 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.76082
+    true_std: 0.00196
+    value_gap_source_arxiv: '2305.11424'
+    value_gap_source_title: IJCAI--23 Formatting Instructions
+    value_gap_source_is_current_paper: false
+    value_gap: 0.022420000000000107
+    has_value_note: false
+    value_note: ''
     sort_value: 0.76082
     sort_std: 0.00196
-    comparison_type: global_top
+    global_rank: 57
+    paper_rank: 66
+    rank_delta: 9
+    rank_delta_abs: 9
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -442,14 +476,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: san2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on CLUSTER dataset
+    protocol_note: node classification task on CLUSTER dataset using % ACC metric
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -510,14 +544,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on CLUSTER dataset
+    protocol_note: node classification task on CLUSTER dataset using % ACC metric
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -578,14 +612,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on CLUSTER dataset
+    protocol_note: node classification task on CLUSTER dataset using % ACC metric
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -618,8 +652,8 @@ results:
     value_note: ''
     sort_value: 0.71848
     sort_std: 0.00448
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -646,14 +680,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on CLUSTER dataset
+    protocol_note: node classification task on CLUSTER dataset using % ACC metric
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -686,8 +720,8 @@ results:
     value_note: ''
     sort_value: 0.7079
     sort_std: 0.00537
-    global_rank: 71
-    paper_rank: 71
+    global_rank: 70
+    paper_rank: 70
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -714,14 +748,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on CLUSTER dataset
+    protocol_note: node classification task on CLUSTER dataset using % ACC metric
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -754,8 +788,8 @@ results:
     value_note: ''
     sort_value: 0.70587
     sort_std: 0.00447
-    global_rank: 72
-    paper_rank: 72
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -782,14 +816,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: graphit2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on CLUSTER dataset
+    protocol_note: node classification task on CLUSTER dataset using % ACC metric
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -822,8 +856,8 @@ results:
     value_note: ''
     sort_value: 0.69658
     sort_std: 0.00895
-    global_rank: 73
-    paper_rank: 73
+    global_rank: 72
+    paper_rank: 72
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -850,14 +884,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on CLUSTER dataset
+    protocol_note: node classification task on CLUSTER dataset using % ACC metric
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -890,8 +924,8 @@ results:
     value_note: ''
     sort_value: 0.69026
     sort_std: 0.01372
-    global_rank: 74
-    paper_rank: 75
+    global_rank: 73
+    paper_rank: 74
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -918,14 +952,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on CLUSTER dataset
+    protocol_note: node classification task on CLUSTER dataset using % ACC metric
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -958,8 +992,8 @@ results:
     value_note: ''
     sort_value: 0.68572
     sort_std: 0.02164
-    global_rank: 75
-    paper_rank: 75
+    global_rank: 74
+    paper_rank: 74
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -986,14 +1020,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on CLUSTER dataset
+    protocol_note: node classification task on CLUSTER dataset using % ACC metric
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -1026,8 +1060,8 @@ results:
     value_note: ''
     sort_value: 0.67507
     sort_std: 0.02856
-    global_rank: 80
-    paper_rank: 80
+    global_rank: 79
+    paper_rank: 79
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1042,6 +1076,8 @@ results:
     model_plain: GIN
     value: 0.64716
     std: 0.01553
+    paper_value: 0.64716
+    paper_std: 0.01553
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -1051,21 +1087,86 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2605.05689'
-    title: 'GCCM: Enhancing Generative Graph Prediction via Contrastive Consistency
-      Model'
-    date: May 7, 2026
-    date_display: May 2026
-    date_iso: '2026-05-07'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
+    uses_external_data: 0
     input_feature_source: raw_features
     feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 85
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification task on CLUSTER dataset using % ACC metric
+    date: Jan 23, 2022
+    date_display: Jan 2022
+    date_iso: '2022-01-23'
+    published_venue: TMLR 2022
+    published_conference: TMLR 2022
+    at_pub_value: 0.58384
+    at_pub_std: 0.00236
+    at_pub_source_arxiv: '2110.07141'
+    at_pub_source_title: 'SoGCN: Second-Order Graph Convolutional Networks'
+    at_pub_source_date_iso: '2021-10-14'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2026-05-07'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.06331999999999993
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.64716
+    true_std: 0.01553
+    value_gap_source_arxiv: '2605.05689'
+    value_gap_source_title: 'GCCM: Enhancing Generative Graph Prediction via Contrastive
+      Consistency Model'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.64716
     sort_std: 0.01553
+    global_rank: 82
+    paper_rank: 82
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: 'SoGCN: Second-Order Graph Convolutional Networks'
+    comparison_source_arxiv: '2110.07141'
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.63884
+    std: 0.0011
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.505
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2305.11424'
+    title: IJCAI--23 Formatting Instructions
+    date: May 19, 2023
+    date_display: May 2023
+    date_iso: '2023-05-19'
+    venue: International Joint Conference on Artificial Intelligence
+    codebase_url: https://github.com/czczup/GPTrans
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 83
+    sort_value: 0.63884
+    sort_std: 0.0011
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1088,14 +1189,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on CLUSTER dataset
+    protocol_note: node classification task on CLUSTER dataset using % ACC metric
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -1127,17 +1228,17 @@ results:
     value_note: ''
     sort_value: 0.598
     sort_std: 0.049
-    global_rank: 97
-    paper_rank: 118
-    rank_delta: 21
-    rank_delta_abs: 21
+    global_rank: 92
+    paper_rank: 112
+    rank_delta: 20
+    rank_delta_abs: 20
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
-    is_std_outlier: false
+    is_std_outlier: true
   - model: FeTA-Base
     model_key: feta-base
     model_plain: FeTA-Base
@@ -1155,14 +1256,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on CLUSTER dataset
+    protocol_note: node classification task on CLUSTER dataset using % ACC metric
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -1195,8 +1296,8 @@ results:
     value_note: ''
     sort_value: 0.30351
     sort_std: 0.02669
-    global_rank: 116
-    paper_rank: 116
+    global_rank: 111
+    paper_rank: 111
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1223,14 +1324,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: graphit2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on CLUSTER dataset
+    protocol_note: node classification task on CLUSTER dataset using % ACC metric
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -1263,8 +1364,8 @@ results:
     value_note: ''
     sort_value: 0.21311
     sort_std: 0.00478
-    global_rank: 123
-    paper_rank: 123
+    global_rank: 117
+    paper_rank: 117
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1277,9 +1378,9 @@ results:
   - model: Vanilla Transformer
     model_key: vanilla transformer
     model_plain: Vanilla Transformer
-    value: 0.21001
+    value: 0.21
     std: 0.01013
-    paper_value: 0.21001
+    paper_value: 0.21
     paper_std: 0.01013
     metric: Accuracy
     higher_is_better: true
@@ -1291,14 +1392,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on CLUSTER dataset
+    protocol_note: node classification task on CLUSTER dataset using % ACC metric
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -1320,7 +1421,7 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.21001
+    true_value: 0.21
     true_std: 0.01013
     value_gap_source_arxiv: '2201.09332'
     value_gap_source_title: How Expressive are Transformers in Spectral Domain for
@@ -1329,10 +1430,10 @@ results:
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.21001
+    sort_value: 0.21
     sort_std: 0.01013
-    global_rank: 125
-    paper_rank: 125
+    global_rank: 119
+    paper_rank: 119
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1367,7 +1468,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 126
+    global_rank: 120
     sort_value: 0.20973
     sort_std: 4.0e-05
     comparison_type: global_top
@@ -1392,14 +1493,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on CLUSTER dataset
+    protocol_note: node classification task on CLUSTER dataset using % ACC metric
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -1432,8 +1533,8 @@ results:
     value_note: ''
     sort_value: 0.19366
     sort_std: 0.03818
-    global_rank: 127
-    paper_rank: 127
+    global_rank: 121
+    paper_rank: 121
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1460,14 +1561,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: graphit2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on CLUSTER dataset
+    protocol_note: node classification task on CLUSTER dataset using % ACC metric
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -1500,8 +1601,8 @@ results:
     value_note: ''
     sort_value: 0.18136
     sort_std: 0.01997
-    global_rank: 128
-    paper_rank: 128
+    global_rank: 122
+    paper_rank: 122
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1545,7 +1646,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -1625,8 +1726,10 @@ results:
   - model: GIN
     model_key: gin
     model_plain: GIN
-    value: 0.933
-    std: 0.029
+    value: 0.826
+    std: 0.062
+    paper_value: 0.826
+    paper_std: 0.062
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -1636,23 +1739,55 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2112.00911'
-    title: 'ProtGNN: Towards Self-Explaining Graph Neural Networks'
-    date: Dec 2, 2021
-    date_display: Dec 2021
-    date_iso: '2021-12-02'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 43
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on MUTAG for graph classification
+    date: Jan 23, 2022
+    date_display: Jan 2022
+    date_iso: '2022-01-23'
+    published_venue: TMLR 2022
+    published_conference: TMLR 2022
+    at_pub_value: 0.933
+    at_pub_std: 0.029
+    at_pub_source_arxiv: '2112.00911'
+    at_pub_source_title: 'ProtGNN: Towards Self-Explaining Graph Neural Networks'
+    at_pub_source_date_iso: '2021-12-02'
+    at_pub_source_date_label: AAAI 2021
+    value_gap_source_date_iso: '2021-12-02'
+    value_gap_source_date_label: AAAI 2021
+    gap_vs_at_pub: 0.1070000000000001
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.933
+    true_std: 0.029
+    value_gap_source_arxiv: '2112.00911'
+    value_gap_source_title: 'ProtGNN: Towards Self-Explaining Graph Neural Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.1070000000000001
+    has_value_note: false
+    value_note: ''
     sort_value: 0.933
     sort_std: 0.029
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    global_rank: 43
+    paper_rank: 594
+    rank_delta: 551
+    rank_delta_abs: 551
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'ProtGNN: Towards Self-Explaining Graph Neural Networks'
+    comparison_source_arxiv: '2112.00911'
     is_best: false
     is_std_outlier: false
   - model: FeTA + GCKN + 3RW
@@ -1672,14 +1807,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on MUTAG for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -1740,14 +1875,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: kipf2016gcn
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on MUTAG for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -1781,9 +1916,9 @@ results:
     sort_value: 0.922
     sort_std: 0.044
     global_rank: 71
-    paper_rank: 717
-    rank_delta: 646
-    rank_delta_abs: 646
+    paper_rank: 718
+    rank_delta: 647
+    rank_delta_abs: 647
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1808,14 +1943,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: graphit2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on MUTAG for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -1859,6 +1994,39 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.904
+    std: 0.078
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2205.12245'
+    title: Asynchronous Neural Networks for Learning in Graphs
+    date: May 24, 2022
+    date_display: May 2022
+    date_iso: '2022-05-24'
+    venue: arXiv.org
+    codebase_url: https://github.com/beabevi/ESAN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 170
+    sort_value: 0.904
+    sort_std: 0.078
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: GAT
     model_key: gat
     model_plain: GAT
@@ -1876,14 +2044,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: velivckovic2018graph
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on MUTAG for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -1916,9 +2084,76 @@ results:
     sort_value: 0.901
     sort_std: 0.058
     global_rank: 196
-    paper_rank: 678
-    rank_delta: 482
-    rank_delta_abs: 482
+    paper_rank: 677
+    rank_delta: 481
+    rank_delta_abs: 481
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: ChebNet
+    model_key: chebnet
+    model_plain: ChebNet
+    value: 0.825
+    std: 0.0158
+    paper_value: 0.825
+    paper_std: 0.0158
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on MUTAG for graph classification
+    date: Jan 23, 2022
+    date_display: Jan 2022
+    date_iso: '2022-01-23'
+    published_venue: TMLR 2022
+    published_conference: TMLR 2022
+    at_pub_value: 0.897
+    at_pub_std: 0.0641
+    at_pub_source_arxiv: '2106.04319'
+    at_pub_source_title: Breaking the Limits of Message Passing Graph Neural Networks
+    at_pub_source_date_iso: '2021-06-08'
+    at_pub_source_date_label: ICML 2021
+    value_gap_source_date_iso: '2021-06-08'
+    value_gap_source_date_label: ICML 2021
+    gap_vs_at_pub: 0.07200000000000006
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: true
+    true_value: 0.897
+    true_std: 0.0641
+    value_gap_source_arxiv: '2106.04319'
+    value_gap_source_title: Breaking the Limits of Message Passing Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.07200000000000006
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.897
+    sort_std: 0.0641
+    global_rank: 233
+    paper_rank: 601
+    rank_delta: 368
+    rank_delta_abs: 368
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1929,10 +2164,10 @@ results:
   - model: FeTA + LapE
     model_key: feta + lape
     model_plain: FeTA + LapE
-    value: 0.874
-    std: 0.026
-    paper_value: 0.874
-    paper_std: 0.026
+    value: 0.8889
+    std: 0.045
+    paper_value: 0.8889
+    paper_std: 0.045
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -1943,14 +2178,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on MUTAG for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -1972,8 +2207,8 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.874
-    true_std: 0.026
+    true_value: 0.8889
+    true_std: 0.045
     value_gap_source_arxiv: '2201.09332'
     value_gap_source_title: How Expressive are Transformers in Spectral Domain for
       Graphs?
@@ -1981,10 +2216,10 @@ results:
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.874
-    sort_std: 0.026
-    global_rank: 387
-    paper_rank: 387
+    sort_value: 0.8889
+    sort_std: 0.045
+    global_rank: 306
+    paper_rank: 306
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2011,14 +2246,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on MUTAG for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -2051,8 +2286,8 @@ results:
     value_note: ''
     sort_value: 0.872
     sort_std: 0.026
-    global_rank: 406
-    paper_rank: 406
+    global_rank: 407
+    paper_rank: 407
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2079,14 +2314,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on MUTAG for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -2119,8 +2354,8 @@ results:
     value_note: ''
     sort_value: 0.87
     sort_std: 0.026
-    global_rank: 420
-    paper_rank: 420
+    global_rank: 421
+    paper_rank: 421
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2155,7 +2390,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 429
+    global_rank: 430
     sort_value: 0.866
     sort_std: 0.0495
     comparison_type: global_top
@@ -2180,14 +2415,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: graphit2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on MUTAG for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -2220,8 +2455,8 @@ results:
     value_note: ''
     sort_value: 0.858
     sort_std: 0.059
-    global_rank: 457
-    paper_rank: 457
+    global_rank: 458
+    paper_rank: 458
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2248,14 +2483,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on MUTAG for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -2288,8 +2523,76 @@ results:
     value_note: ''
     sort_value: 0.8518
     sort_std: 0.028
-    global_rank: 482
-    paper_rank: 482
+    global_rank: 483
+    paper_rank: 483
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Vanilla Transformer
+    model_key: vanilla transformer
+    model_plain: Vanilla Transformer
+    value: 0.8333
+    std: 0.045
+    paper_value: 0.8333
+    paper_std: 0.045
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: vaswani_2017_attention
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on MUTAG for graph classification
+    date: Jan 23, 2022
+    date_display: Jan 2022
+    date_iso: '2022-01-23'
+    published_venue: TMLR 2022
+    published_conference: TMLR 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-01-23'
+    value_gap_source_date_label: TMLR 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8333
+    true_std: 0.045
+    value_gap_source_arxiv: '2201.09332'
+    value_gap_source_title: How Expressive are Transformers in Spectral Domain for
+      Graphs?
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8333
+    sort_std: 0.045
+    global_rank: 567
+    paper_rank: 567
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2316,14 +2619,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: graphit2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on MUTAG for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -2356,8 +2659,8 @@ results:
     value_note: ''
     sort_value: 0.833
     sort_std: 0.063
-    global_rank: 568
-    paper_rank: 568
+    global_rank: 569
+    paper_rank: 569
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2384,14 +2687,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: gao2021message
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on MUTAG for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -2424,76 +2727,8 @@ results:
     value_note: ''
     sort_value: 0.8289
     sort_std: 0.0161
-    global_rank: 584
-    paper_rank: 584
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Vanilla Transformer
-    model_key: vanilla transformer
-    model_plain: Vanilla Transformer
-    value: 0.822
-    std: 0.063
-    paper_value: 0.822
-    paper_std: 0.063
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: vaswani_2017_attention
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: 10-fold CV
-    date: Jan 23, 2022
-    date_display: Jan 2022
-    date_iso: '2022-01-23'
-    published_venue: TMLR 2022
-    published_conference: TMLR 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-01-23'
-    value_gap_source_date_label: TMLR 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.822
-    true_std: 0.063
-    value_gap_source_arxiv: '2201.09332'
-    value_gap_source_title: How Expressive are Transformers in Spectral Domain for
-      Graphs?
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.822
-    sort_std: 0.063
-    global_rank: 622
-    paper_rank: 622
+    global_rank: 585
+    paper_rank: 585
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2520,14 +2755,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on MUTAG for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -2560,8 +2795,8 @@ results:
     value_note: ''
     sort_value: 0.796
     sort_std: 0.026
-    global_rank: 702
-    paper_rank: 702
+    global_rank: 701
+    paper_rank: 701
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2588,14 +2823,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: san2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on MUTAG for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -2628,8 +2863,8 @@ results:
     value_note: ''
     sort_value: 0.788
     sort_std: 0.029
-    global_rank: 721
-    paper_rank: 721
+    global_rank: 722
+    paper_rank: 722
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2656,14 +2891,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on MUTAG for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -2696,8 +2931,8 @@ results:
     value_note: ''
     sort_value: 0.722
     sort_std: 0.016
-    global_rank: 816
-    paper_rank: 816
+    global_rank: 823
+    paper_rank: 823
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2724,14 +2959,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: san2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on MUTAG for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -2764,8 +2999,8 @@ results:
     value_note: ''
     sort_value: 0.719
     sort_std: 0.029
-    global_rank: 819
-    paper_rank: 819
+    global_rank: 826
+    paper_rank: 826
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2838,14 +3073,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -2905,14 +3140,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -2945,9 +3180,9 @@ results:
     sort_value: 0.9727
     sort_std: null
     global_rank: 3
-    paper_rank: 442
-    rank_delta: 439
-    rank_delta_abs: 439
+    paper_rank: 439
+    rank_delta: 436
+    rank_delta_abs: 436
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2972,14 +3207,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -3012,15 +3247,83 @@ results:
     sort_value: 0.9623
     sort_std: null
     global_rank: 4
-    paper_rank: 465
-    rank_delta: 461
-    rank_delta_abs: 461
+    paper_rank: 463
+    rank_delta: 459
+    rank_delta_abs: 459
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: FeTA + LapE
+    model_key: feta + lape
+    model_plain: FeTA + LapE
+    value: 0.8329
+    std: 0.005
+    paper_value: 0.8329
+    paper_std: 0.005
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on NCI1 for graph classification
+    date: Jan 23, 2022
+    date_display: Jan 2022
+    date_iso: '2022-01-23'
+    published_venue: TMLR 2022
+    published_conference: TMLR 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-01-23'
+    value_gap_source_date_label: TMLR 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8329
+    true_std: 0.005
+    value_gap_source_arxiv: '2201.09332'
+    value_gap_source_title: How Expressive are Transformers in Spectral Domain for
+      Graphs?
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8329
+    sort_std: 0.005
+    global_rank: 70
+    paper_rank: 70
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: GraphSAGE
     model_key: graphsage
@@ -3048,7 +3351,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 81
+    global_rank: 82
     sort_value: 0.8303
     sort_std: 0.0137
     comparison_type: global_top
@@ -3073,14 +3376,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -3113,8 +3416,76 @@ results:
     value_note: ''
     sort_value: 0.83
     sort_std: 0.005
-    global_rank: 84
-    paper_rank: 84
+    global_rank: 85
+    paper_rank: 85
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Vanilla Transformer
+    model_key: vanilla transformer
+    model_plain: Vanilla Transformer
+    value: 0.8216
+    std: 0.006
+    paper_value: 0.8216
+    paper_std: 0.006
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on NCI1 for graph classification
+    date: Jan 23, 2022
+    date_display: Jan 2022
+    date_iso: '2022-01-23'
+    published_venue: TMLR 2022
+    published_conference: TMLR 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-01-23'
+    value_gap_source_date_label: TMLR 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8216
+    true_std: 0.006
+    value_gap_source_arxiv: '2201.09332'
+    value_gap_source_title: How Expressive are Transformers in Spectral Domain for
+      Graphs?
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8216
+    sort_std: 0.006
+    global_rank: 135
+    paper_rank: 135
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3141,14 +3512,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -3181,8 +3552,8 @@ results:
     value_note: ''
     sort_value: 0.8206
     sort_std: 0.0175
-    global_rank: 138
-    paper_rank: 138
+    global_rank: 139
+    paper_rank: 139
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3209,14 +3580,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -3277,14 +3648,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: graphit2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -3345,14 +3716,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -3413,14 +3784,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: san2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -3453,8 +3824,8 @@ results:
     value_note: ''
     sort_value: 0.805
     sort_std: 0.013
-    global_rank: 217
-    paper_rank: 217
+    global_rank: 216
+    paper_rank: 216
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3481,14 +3852,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -3521,8 +3892,8 @@ results:
     value_note: ''
     sort_value: 0.7867
     sort_std: 0.012
-    global_rank: 313
-    paper_rank: 313
+    global_rank: 312
+    paper_rank: 312
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3549,14 +3920,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -3589,8 +3960,8 @@ results:
     value_note: ''
     sort_value: 0.785
     sort_std: 0.013
-    global_rank: 327
-    paper_rank: 327
+    global_rank: 326
+    paper_rank: 326
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3617,14 +3988,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: graphit2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -3657,76 +4028,8 @@ results:
     value_note: ''
     sort_value: 0.776
     sort_std: 0.036
-    global_rank: 375
-    paper_rank: 375
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: FeTA + LapE
-    model_key: feta + lape
-    model_plain: FeTA + LapE
-    value: 0.754
-    std: 0.026
-    paper_value: 0.754
-    paper_std: 0.026
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: 10-fold CV
-    date: Jan 23, 2022
-    date_display: Jan 2022
-    date_iso: '2022-01-23'
-    published_venue: TMLR 2022
-    published_conference: TMLR 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-01-23'
-    value_gap_source_date_label: TMLR 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.754
-    true_std: 0.026
-    value_gap_source_arxiv: '2201.09332'
-    value_gap_source_title: How Expressive are Transformers in Spectral Domain for
-      Graphs?
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.754
-    sort_std: 0.026
-    global_rank: 451
-    paper_rank: 451
+    global_rank: 372
+    paper_rank: 372
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3753,14 +4056,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: graphit2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -3793,8 +4096,8 @@ results:
     value_note: ''
     sort_value: 0.746
     sort_std: 0.019
-    global_rank: 468
-    paper_rank: 468
+    global_rank: 466
+    paper_rank: 466
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3821,14 +4124,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -3861,8 +4164,8 @@ results:
     value_note: ''
     sort_value: 0.737
     sort_std: 0.014
-    global_rank: 494
-    paper_rank: 494
+    global_rank: 491
+    paper_rank: 491
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3889,14 +4192,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -3929,8 +4232,8 @@ results:
     value_note: ''
     sort_value: 0.7299
     sort_std: 0.005
-    global_rank: 509
-    paper_rank: 509
+    global_rank: 505
+    paper_rank: 505
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3957,14 +4260,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: san2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -3997,76 +4300,8 @@ results:
     value_note: ''
     sort_value: 0.7193
     sort_std: 0.034
-    global_rank: 518
-    paper_rank: 518
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Vanilla Transformer
-    model_key: vanilla transformer
-    model_plain: Vanilla Transformer
-    value: 0.7
-    std: 0.045
-    paper_value: 0.7
-    paper_std: 0.045
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: 10-fold CV
-    date: Jan 23, 2022
-    date_display: Jan 2022
-    date_iso: '2022-01-23'
-    published_venue: TMLR 2022
-    published_conference: TMLR 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-01-23'
-    value_gap_source_date_label: TMLR 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7
-    true_std: 0.045
-    value_gap_source_arxiv: '2201.09332'
-    value_gap_source_title: How Expressive are Transformers in Spectral Domain for
-      Graphs?
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7
-    sort_std: 0.045
-    global_rank: 540
-    paper_rank: 540
+    global_rank: 514
+    paper_rank: 514
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4204,14 +4439,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: san2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on PATTERN dataset
+    protocol_note: Node classification on PATTERN dataset using standard split and
+      Accuracy metric.
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -4243,8 +4479,8 @@ results:
     value_note: ''
     sort_value: 0.86581
     sort_std: 0.00037
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 59
+    paper_rank: 59
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4271,14 +4507,15 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on PATTERN dataset
+    protocol_note: Node classification on PATTERN dataset using standard split and
+      Accuracy metric.
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -4311,8 +4548,8 @@ results:
     value_note: ''
     sort_value: 0.8652
     sort_std: 0.00013
-    global_rank: 67
-    paper_rank: 67
+    global_rank: 65
+    paper_rank: 65
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4339,14 +4576,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on PATTERN dataset
+    protocol_note: Node classification on PATTERN dataset using standard split and
+      Accuracy metric.
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -4378,10 +4616,10 @@ results:
     value_note: ''
     sort_value: 0.86508
     sort_std: 0.00085
-    global_rank: 68
-    paper_rank: 95
-    rank_delta: 27
-    rank_delta_abs: 27
+    global_rank: 66
+    paper_rank: 92
+    rank_delta: 26
+    rank_delta_abs: 26
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -4406,14 +4644,15 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on PATTERN dataset
+    protocol_note: Node classification on PATTERN dataset using standard split and
+      Accuracy metric.
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -4446,8 +4685,8 @@ results:
     value_note: ''
     sort_value: 0.863
     sort_std: 0.00024
-    global_rank: 74
-    paper_rank: 74
+    global_rank: 72
+    paper_rank: 72
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4474,14 +4713,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on PATTERN dataset
+    protocol_note: Node classification on PATTERN dataset using standard split and
+      Accuracy metric.
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -4514,10 +4754,10 @@ results:
     value_note: ''
     sort_value: 0.85614
     sort_std: 0.00032
-    global_rank: 91
-    paper_rank: 123
-    rank_delta: 32
-    rank_delta_abs: 32
+    global_rank: 88
+    paper_rank: 119
+    rank_delta: 31
+    rank_delta_abs: 31
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -4542,14 +4782,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on PATTERN dataset
+    protocol_note: Node classification on PATTERN dataset using standard split and
+      Accuracy metric.
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -4581,8 +4822,8 @@ results:
     value_note: ''
     sort_value: 0.8559
     sort_std: 0.0001
-    global_rank: 92
-    paper_rank: 98
+    global_rank: 89
+    paper_rank: 95
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -4609,14 +4850,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on PATTERN dataset
+    protocol_note: Node classification on PATTERN dataset using standard split and
+      Accuracy metric.
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -4649,8 +4891,8 @@ results:
     value_note: ''
     sort_value: 0.84808
     sort_std: 0.00068
-    global_rank: 101
-    paper_rank: 101
+    global_rank: 98
+    paper_rank: 98
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4677,14 +4919,15 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on PATTERN dataset
+    protocol_note: Node classification on PATTERN dataset using standard split and
+      Accuracy metric.
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -4717,8 +4960,8 @@ results:
     value_note: ''
     sort_value: 0.84756
     sort_std: 0.00128
-    global_rank: 104
-    paper_rank: 104
+    global_rank: 100
+    paper_rank: 100
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4745,14 +4988,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: san2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on PATTERN dataset
+    protocol_note: Node classification on PATTERN dataset using standard split and
+      Accuracy metric.
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -4784,8 +5028,8 @@ results:
     value_note: ''
     sort_value: 0.81329
     sort_std: 0.0215
-    global_rank: 109
-    paper_rank: 109
+    global_rank: 105
+    paper_rank: 105
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4812,14 +5056,15 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on PATTERN dataset
+    protocol_note: Node classification on PATTERN dataset using standard split and
+      Accuracy metric.
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -4852,8 +5097,8 @@ results:
     value_note: ''
     sort_value: 0.78808
     sort_std: 0.01662
-    global_rank: 110
-    paper_rank: 110
+    global_rank: 106
+    paper_rank: 106
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4880,14 +5125,15 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on PATTERN dataset
+    protocol_note: Node classification on PATTERN dataset using standard split and
+      Accuracy metric.
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -4920,8 +5166,8 @@ results:
     value_note: ''
     sort_value: 0.7865
     sort_std: 0.02509
-    global_rank: 112
-    paper_rank: 112
+    global_rank: 108
+    paper_rank: 108
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4948,14 +5194,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on PATTERN dataset
+    protocol_note: Node classification on PATTERN dataset using standard split and
+      Accuracy metric.
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -4988,8 +5235,8 @@ results:
     value_note: ''
     sort_value: 0.78271
     sort_std: 0.00186
-    global_rank: 113
-    paper_rank: 113
+    global_rank: 109
+    paper_rank: 109
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5016,14 +5263,15 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on PATTERN dataset
+    protocol_note: Node classification on PATTERN dataset using standard split and
+      Accuracy metric.
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -5056,8 +5304,8 @@ results:
     value_note: ''
     sort_value: 0.7786
     sort_std: 0.00573
-    global_rank: 114
-    paper_rank: 114
+    global_rank: 110
+    paper_rank: 110
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5084,14 +5332,15 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on PATTERN dataset
+    protocol_note: Node classification on PATTERN dataset using standard split and
+      Accuracy metric.
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -5124,8 +5373,8 @@ results:
     value_note: ''
     sort_value: 0.77285
     sort_std: 0.01146
-    global_rank: 115
-    paper_rank: 115
+    global_rank: 111
+    paper_rank: 111
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5152,14 +5401,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: graphit2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on PATTERN dataset
+    protocol_note: Node classification on PATTERN dataset using standard split and
+      Accuracy metric.
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -5192,8 +5442,8 @@ results:
     value_note: ''
     sort_value: 0.76701
     sort_std: 0.00738
-    global_rank: 116
-    paper_rank: 116
+    global_rank: 112
+    paper_rank: 112
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5220,14 +5470,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: graphit2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on PATTERN dataset
+    protocol_note: Node classification on PATTERN dataset using standard split and
+      Accuracy metric.
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -5260,8 +5511,8 @@ results:
     value_note: ''
     sort_value: 0.76694
     sort_std: 0.00921
-    global_rank: 117
-    paper_rank: 117
+    global_rank: 113
+    paper_rank: 113
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5288,14 +5539,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: graphit2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on PATTERN dataset
+    protocol_note: Node classification on PATTERN dataset using standard split and
+      Accuracy metric.
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -5328,8 +5580,8 @@ results:
     value_note: ''
     sort_value: 0.7585
     sort_std: 0.00192
-    global_rank: 118
-    paper_rank: 118
+    global_rank: 114
+    paper_rank: 114
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5356,14 +5608,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on PATTERN dataset
+    protocol_note: Node classification on PATTERN dataset using standard split and
+      Accuracy metric.
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -5396,8 +5649,8 @@ results:
     value_note: ''
     sort_value: 0.7577
     sort_std: 0.004875
-    global_rank: 120
-    paper_rank: 120
+    global_rank: 116
+    paper_rank: 116
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5424,14 +5677,15 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on PATTERN dataset
+    protocol_note: Node classification on PATTERN dataset using standard split and
+      Accuracy metric.
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -5464,8 +5718,8 @@ results:
     value_note: ''
     sort_value: 0.75489
     sort_std: 0.00216
-    global_rank: 121
-    paper_rank: 121
+    global_rank: 117
+    paper_rank: 117
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5492,14 +5746,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on PATTERN dataset
+    protocol_note: Node classification on PATTERN dataset using standard split and
+      Accuracy metric.
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -5531,8 +5786,8 @@ results:
     value_note: ''
     sort_value: 0.56482
     sort_std: 0.03549
-    global_rank: 128
-    paper_rank: 128
+    global_rank: 124
+    paper_rank: 124
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5567,7 +5822,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 130
+    global_rank: 126
     sort_value: 0.5052
     sort_std: 0.0
     comparison_type: global_top
@@ -5600,7 +5855,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 131
+    global_rank: 127
     sort_value: 0.50519
     sort_std: 0.0
     comparison_type: global_top
@@ -5675,7 +5930,7 @@ results:
     venue: arXiv.org
     codebase_url: https://github.com/ocx-lab/FloydNet
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -5731,19 +5986,19 @@ results:
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: 47.0
+    params_millions: null
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: ying2021transformers
     variant_inference_reason: 'zinc: paper text matched full'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard graph regression task on ZINC
+    protocol_note: ZINC graph regression task using standard split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -5775,10 +6030,10 @@ results:
     value_note: ''
     sort_value: 0.025
     sort_std: null
-    global_rank: 25
-    paper_rank: 85
-    rank_delta: 60
-    rank_delta_abs: 60
+    global_rank: 24
+    paper_rank: 80
+    rank_delta: 56
+    rank_delta_abs: 56
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -5803,14 +6058,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'zinc: paper text matched full'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard graph regression task on ZINC
+    protocol_note: ZINC graph regression task using standard split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -5842,10 +6097,10 @@ results:
     value_note: ''
     sort_value: 0.067
     sort_std: 0.009
-    global_rank: 68
-    paper_rank: 90
-    rank_delta: 22
-    rank_delta_abs: 22
+    global_rank: 65
+    paper_rank: 85
+    rank_delta: 20
+    rank_delta_abs: 20
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -5870,14 +6125,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'zinc: paper text matched full'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard graph regression task on ZINC
+    protocol_note: ZINC graph regression task using standard split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -5910,8 +6165,8 @@ results:
     value_note: ''
     sort_value: 0.068
     sort_std: 0.002
-    global_rank: 69
-    paper_rank: 69
+    global_rank: 66
+    paper_rank: 66
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5938,14 +6193,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'zinc: paper text matched full'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard graph regression task on ZINC
+    protocol_note: ZINC graph regression task using standard split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -5978,8 +6233,8 @@ results:
     value_note: ''
     sort_value: 0.077
     sort_std: 0.001
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 68
+    paper_rank: 68
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6006,14 +6261,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: xu2018powerful
     variant_inference_reason: 'zinc: paper text matched full'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard graph regression task on ZINC
+    protocol_note: ZINC graph regression task using standard split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -6046,10 +6301,10 @@ results:
     value_note: ''
     sort_value: 0.088
     sort_std: 0.002
-    global_rank: 74
-    paper_rank: 110
-    rank_delta: 36
-    rank_delta_abs: 36
+    global_rank: 71
+    paper_rank: 105
+    rank_delta: 34
+    rank_delta_abs: 34
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -6074,14 +6329,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'zinc: paper text matched full'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard graph regression task on ZINC
+    protocol_note: ZINC graph regression task using standard split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -6114,8 +6369,8 @@ results:
     value_note: ''
     sort_value: 0.104
     sort_std: 0.005
-    global_rank: 79
-    paper_rank: 79
+    global_rank: 76
+    paper_rank: 76
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6142,14 +6397,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'zinc: paper text matched full'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard graph regression task on ZINC
+    protocol_note: ZINC graph regression task using standard split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -6183,10 +6438,10 @@ results:
     value_note: ''
     sort_value: 0.111
     sort_std: 0.002
-    global_rank: 82
-    paper_rank: 106
-    rank_delta: 24
-    rank_delta_abs: 24
+    global_rank: 79
+    paper_rank: 101
+    rank_delta: 22
+    rank_delta_abs: 22
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -6212,14 +6467,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'zinc: paper text matched full'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard graph regression task on ZINC
+    protocol_note: ZINC graph regression task using standard split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -6253,10 +6508,10 @@ results:
     value_note: ''
     sort_value: 0.113
     sort_std: 0.002
-    global_rank: 83
-    paper_rank: 106
-    rank_delta: 23
-    rank_delta_abs: 23
+    global_rank: 80
+    paper_rank: 101
+    rank_delta: 21
+    rank_delta_abs: 21
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -6268,8 +6523,8 @@ results:
   - model: GraphSAGE
     model_key: graphsage
     model_plain: GraphSAGE
-    value: 0.1205
-    std: 0.0034
+    value: 0.126
+    std: 0.003
     metric: MAE
     higher_is_better: false
     is_baseline: true
@@ -6279,20 +6534,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2305.15747'
-    title: Union Subgraph Neural Networks
-    date: May 25, 2023
-    date_display: May 2023
-    date_iso: '2023-05-25'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: https://github.com/AngusMonroe/UnionSNN
+    arxiv_id: '2310.20519'
+    title: Enhancing Graph Neural Networks with Quantum Computed Encodings
+    date: Oct 31, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-31'
+    venue: null
+    codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 85
-    sort_value: 0.1205
-    sort_std: 0.0034
+    global_rank: 81
+    sort_value: 0.126
+    sort_std: 0.003
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -6315,14 +6570,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: san2021
     variant_inference_reason: 'zinc: paper text matched full'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard graph regression task on ZINC
+    protocol_note: ZINC graph regression task using standard split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -6355,8 +6610,8 @@ results:
     value_note: ''
     sort_value: 0.139
     sort_std: 0.006
-    global_rank: 89
-    paper_rank: 89
+    global_rank: 84
+    paper_rank: 84
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6383,14 +6638,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'zinc: paper text matched full'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard graph regression task on ZINC
+    protocol_note: ZINC graph regression task using standard split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -6423,8 +6678,8 @@ results:
     value_note: ''
     sort_value: 0.1581
     sort_std: 0.001
-    global_rank: 91
-    paper_rank: 91
+    global_rank: 86
+    paper_rank: 86
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6451,14 +6706,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'zinc: paper text matched full'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard graph regression task on ZINC
+    protocol_note: ZINC graph regression task using standard split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -6491,8 +6746,8 @@ results:
     value_note: ''
     sort_value: 0.1836
     sort_std: 0.002
-    global_rank: 94
-    paper_rank: 94
+    global_rank: 89
+    paper_rank: 89
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6519,14 +6774,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: san2021
     variant_inference_reason: 'zinc: paper text matched full'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard graph regression task on ZINC
+    protocol_note: ZINC graph regression task using standard split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -6559,8 +6814,8 @@ results:
     value_note: ''
     sort_value: 0.198
     sort_std: 0.004
-    global_rank: 95
-    paper_rank: 95
+    global_rank: 90
+    paper_rank: 90
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6587,14 +6842,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: graphit2021
     variant_inference_reason: 'zinc: paper text matched full'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard graph regression task on ZINC
+    protocol_note: ZINC graph regression task using standard split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -6627,8 +6882,8 @@ results:
     value_note: ''
     sort_value: 0.211
     sort_std: 0.01
-    global_rank: 96
-    paper_rank: 96
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6655,14 +6910,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: ''
     variant_inference_reason: 'zinc: paper text matched full'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard graph regression task on ZINC
+    protocol_note: ZINC graph regression task using standard split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -6695,8 +6950,8 @@ results:
     value_note: ''
     sort_value: 0.226
     sort_std: 0.014
-    global_rank: 97
-    paper_rank: 97
+    global_rank: 92
+    paper_rank: 92
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6723,14 +6978,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: graphit2021
     variant_inference_reason: 'zinc: paper text matched full'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard graph regression task on ZINC
+    protocol_note: ZINC graph regression task using standard split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -6763,8 +7018,8 @@ results:
     value_note: ''
     sort_value: 0.244
     sort_std: 0.011
-    global_rank: 99
-    paper_rank: 99
+    global_rank: 94
+    paper_rank: 94
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6791,14 +7046,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: zhang2020graph
     variant_inference_reason: 'zinc: paper text matched full'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard graph regression task on ZINC
+    protocol_note: ZINC graph regression task using standard split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -6831,8 +7086,8 @@ results:
     value_note: ''
     sort_value: 0.267
     sort_std: 0.012
-    global_rank: 101
-    paper_rank: 101
+    global_rank: 96
+    paper_rank: 96
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6859,14 +7114,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'zinc: paper text matched full'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard graph regression task on ZINC
+    protocol_note: ZINC graph regression task using standard split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -6899,8 +7154,8 @@ results:
     value_note: ''
     sort_value: 0.279
     sort_std: 0.008
-    global_rank: 102
-    paper_rank: 102
+    global_rank: 97
+    paper_rank: 97
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6927,14 +7182,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: bresson2017gatedGCN
     variant_inference_reason: 'zinc: paper text matched full'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard graph regression task on ZINC
+    protocol_note: ZINC graph regression task using standard split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -6967,8 +7222,8 @@ results:
     value_note: ''
     sort_value: 0.282
     sort_std: 0.015
-    global_rank: 103
-    paper_rank: 103
+    global_rank: 98
+    paper_rank: 98
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6996,14 +7251,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'zinc: paper text matched full'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard graph regression task on ZINC
+    protocol_note: ZINC graph regression task using standard split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -7036,8 +7291,8 @@ results:
     value_note: ''
     sort_value: 0.412
     sort_std: 0.004
-    global_rank: 109
-    paper_rank: 109
+    global_rank: 104
+    paper_rank: 104
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7064,14 +7319,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: graphit2021
     variant_inference_reason: 'zinc: paper text matched full'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard graph regression task on ZINC
+    protocol_note: ZINC graph regression task using standard split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -7104,8 +7359,8 @@ results:
     value_note: ''
     sort_value: 0.507
     sort_std: 0.003
-    global_rank: 110
-    paper_rank: 110
+    global_rank: 105
+    paper_rank: 105
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7132,14 +7387,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: ''
     variant_inference_reason: 'zinc: paper text matched full'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard graph regression task on ZINC
+    protocol_note: ZINC graph regression task using standard split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -7172,8 +7427,8 @@ results:
     value_note: ''
     sort_value: 0.598
     sort_std: 0.049
-    global_rank: 111
-    paper_rank: 111
+    global_rank: 106
+    paper_rank: 106
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7200,14 +7455,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'zinc: paper text matched full'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard graph regression task on ZINC
+    protocol_note: ZINC graph regression task using standard split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -7240,8 +7495,8 @@ results:
     value_note: ''
     sort_value: 0.696
     sort_std: 0.007
-    global_rank: 113
-    paper_rank: 113
+    global_rank: 108
+    paper_rank: 108
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7388,7 +7643,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 10
+    global_rank: 12
     sort_value: 0.809
     sort_std: 0.016
     comparison_type: global_top
@@ -7408,19 +7663,19 @@ results:
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: 47.0
+    params_millions: null
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on ogbg-molhiv scaffold split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -7453,8 +7708,8 @@ results:
     value_note: ''
     sort_value: 0.8051
     sort_std: 0.0053
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7481,14 +7736,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on ogbg-molhiv scaffold split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -7522,8 +7777,8 @@ results:
     value_note: ''
     sort_value: 0.7905
     sort_std: 0.0132
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7550,14 +7805,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on ogbg-molhiv scaffold split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -7590,8 +7845,8 @@ results:
     value_note: ''
     sort_value: 0.781
     sort_std: 0.00303
-    global_rank: 104
-    paper_rank: 104
+    global_rank: 105
+    paper_rank: 105
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7618,14 +7873,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on ogbg-molhiv scaffold split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -7686,14 +7941,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: san2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on ogbg-molhiv scaffold split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -7754,14 +8009,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on ogbg-molhiv scaffold split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -7795,9 +8050,9 @@ results:
     sort_value: 0.778
     sort_std: 0.0182
     global_rank: 120
-    paper_rank: 237
-    rank_delta: 117
-    rank_delta_abs: 117
+    paper_rank: 238
+    rank_delta: 118
+    rank_delta_abs: 118
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -7822,14 +8077,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on ogbg-molhiv scaffold split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -7861,8 +8116,8 @@ results:
     value_note: ''
     sort_value: 0.7717
     sort_std: 0.0137
-    global_rank: 152
-    paper_rank: 303
+    global_rank: 153
+    paper_rank: 304
     rank_delta: 151
     rank_delta_abs: 151
     rank_delta_direction: worse
@@ -7897,7 +8152,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 171
+    global_rank: 172
     sort_value: 0.769
     sort_std: 0.0136
     comparison_type: global_top
@@ -7922,14 +8177,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on ogbg-molhiv scaffold split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -7962,8 +8217,8 @@ results:
     value_note: ''
     sort_value: 0.7688
     sort_std: 0.00573
-    global_rank: 173
-    paper_rank: 173
+    global_rank: 174
+    paper_rank: 174
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7990,14 +8245,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on ogbg-molhiv scaffold split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -8030,8 +8285,8 @@ results:
     value_note: ''
     sort_value: 0.7669
     sort_std: 0.0017
-    global_rank: 183
-    paper_rank: 183
+    global_rank: 185
+    paper_rank: 185
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8058,14 +8313,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: san2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on ogbg-molhiv scaffold split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -8098,8 +8353,8 @@ results:
     value_note: ''
     sort_value: 0.7661
     sort_std: 0.0062
-    global_rank: 186
-    paper_rank: 186
+    global_rank: 188
+    paper_rank: 188
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8126,14 +8381,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on ogbg-molhiv scaffold split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -8166,8 +8421,8 @@ results:
     value_note: ''
     sort_value: 0.763
     sort_std: 0.003
-    global_rank: 203
-    paper_rank: 216
+    global_rank: 204
+    paper_rank: 217
     rank_delta: 13
     rank_delta_abs: 13
     rank_delta_direction: worse
@@ -8194,14 +8449,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on ogbg-molhiv scaffold split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -8234,8 +8489,8 @@ results:
     value_note: ''
     sort_value: 0.7469
     sort_std: 0.0208
-    global_rank: 260
-    paper_rank: 260
+    global_rank: 261
+    paper_rank: 261
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8262,14 +8517,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on ogbg-molhiv scaffold split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -8302,8 +8557,8 @@ results:
     value_note: ''
     sort_value: 0.6759
     sort_std: 0.0183
-    global_rank: 313
-    paper_rank: 313
+    global_rank: 314
+    paper_rank: 314
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8330,14 +8585,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on ogbg-molhiv scaffold split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -8370,8 +8625,8 @@ results:
     value_note: ''
     sort_value: 0.668
     sort_std: 0.0218
-    global_rank: 315
-    paper_rank: 315
+    global_rank: 316
+    paper_rank: 316
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8398,14 +8653,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on ogbg-molhiv scaffold split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -8438,8 +8693,8 @@ results:
     value_note: ''
     sort_value: 0.6522
     sort_std: 0.0552
-    global_rank: 317
-    paper_rank: 317
+    global_rank: 319
+    paper_rank: 319
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8466,14 +8721,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: graphit2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on ogbg-molhiv scaffold split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -8506,8 +8761,8 @@ results:
     value_note: ''
     sort_value: 0.651
     sort_std: 0.0176
-    global_rank: 318
-    paper_rank: 318
+    global_rank: 320
+    paper_rank: 320
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8534,14 +8789,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: graphit2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on ogbg-molhiv scaffold split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -8574,8 +8829,8 @@ results:
     value_note: ''
     sort_value: 0.6422
     sort_std: 0.0494
-    global_rank: 319
-    paper_rank: 319
+    global_rank: 321
+    paper_rank: 321
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8602,14 +8857,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on ogbg-molhiv scaffold split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -8642,8 +8897,8 @@ results:
     value_note: ''
     sort_value: 0.5995
     sort_std: 0.0391
-    global_rank: 321
-    paper_rank: 321
+    global_rank: 323
+    paper_rank: 323
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8670,14 +8925,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: graphit2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on ogbg-molhiv scaffold split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -8710,8 +8965,8 @@ results:
     value_note: ''
     sort_value: 0.5377
     sort_std: 0.0273
-    global_rank: 323
-    paper_rank: 323
+    global_rank: 327
+    paper_rank: 327
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8738,14 +8993,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on ogbg-molhiv scaffold split
     date: Jan 23, 2022
     date_display: Jan 2022
     date_iso: '2022-01-23'
@@ -8778,8 +9033,8 @@ results:
     value_note: ''
     sort_value: 0.535
     sort_std: 0.0589
-    global_rank: 324
-    paper_rank: 324
+    global_rank: 328
+    paper_rank: 328
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

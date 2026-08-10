@@ -66,7 +66,7 @@ experiment_scopes:
 - graph-level
 - node-level
 results:
-- &id001
+- &id002
   dataset: CiteSeer
   is_multi_metric: true
   rows:
@@ -1049,7 +1049,7 @@ results:
   metric: Unfaithfulness
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id002
+- &id001
   dataset: PubMed
   is_multi_metric: true
   rows:
@@ -2826,10 +2826,10 @@ datasets_by_scope:
   - benchmark: Classic
     benchmark_slug: classic
     datasets:
-    - dataset: CiteSeer
-      dataset_slug: citeseer
     - dataset: PubMed
       dataset_slug: pubmed
+    - dataset: CiteSeer
+      dataset_slug: citeseer
   - benchmark: OGB
     benchmark_slug: ogb
     datasets:

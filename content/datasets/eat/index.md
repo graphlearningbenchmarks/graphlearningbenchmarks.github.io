@@ -13,7 +13,7 @@ stats:
   avg_nodes: 399.0
   avg_edges: null
   num_classes: 4
-result_count: 55
+result_count: 51
 best_model:
   model: ProGCL
   value: 0.7702
@@ -24,10 +24,6 @@ papers:
 - arxiv_id: '2508.14097'
   title: Non-Dissipative Graph Propagation for Non-Local Community Detection
   date_iso: '2025-06-30'
-  venue: ''
-- arxiv_id: '2308.08963'
-  title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
-  date_iso: '2023-08-17'
   venue: ''
 - arxiv_id: '2307.14613'
   title: Self-Contrastive Graph Diffusion Network
@@ -550,36 +546,6 @@ variants:
     - 0.0195
     - null
     - null
-  - model: CONVERT
-    model_plain: CONVERT
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2308.08963'
-    title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
-    date: Aug 17, 2023
-    date_iso: '2023-08-17'
-    date_display: Aug 2023
-    codebase_url: https://github.com/xihongyang1999/CONVERT
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.5842
-    - null
-    - null
-    metric_stds:
-    - 0.0022
-    - null
-    - null
   - model: SCGDN
     model_plain: SCGDN
     is_baseline: false
@@ -728,36 +694,6 @@ variants:
     - null
     metric_stds:
     - 0.0001
-    - null
-    - null
-  - model: ARGA
-    model_plain: ARGA
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2308.08963'
-    title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
-    date: Aug 17, 2023
-    date_iso: '2023-08-17'
-    date_display: Aug 2023
-    codebase_url: https://github.com/xihongyang1999/CONVERT
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.5275
-    - null
-    - null
-    metric_stds:
-    - 0.0007
     - null
     - null
   - model: GDCL
@@ -1060,36 +996,6 @@ variants:
     - 0.05
     - 0.22
     - 0.02
-  - model: AGE
-    model_plain: AGE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2308.08963'
-    title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
-    date: Aug 17, 2023
-    date_iso: '2023-08-17'
-    date_display: Aug 2023
-    codebase_url: https://github.com/xihongyang1999/CONVERT
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.4554
-    - null
-    - null
-    metric_stds:
-    - 0.004
-    - null
-    - null
   - model: AFGRL
     model_plain: AFGRL
     is_baseline: true
@@ -1510,36 +1416,6 @@ variants:
     - 0.0097
     - null
     - null
-  - model: NACL
-    model_plain: NACL
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2308.08963'
-    title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
-    date: Aug 17, 2023
-    date_iso: '2023-08-17'
-    date_display: Aug 2023
-    codebase_url: https://github.com/xihongyang1999/CONVERT
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.3125
-    - null
-    - null
-    metric_stds:
-    - 0.0096
-    - null
-    - null
   - model: AFGRL
     model_plain: AFGRL
     is_baseline: true
@@ -1570,18 +1446,138 @@ variants:
     - 0.0147
     - null
     - null
-  row_count: 55
+  - model: MVGRL
+    model_plain: MVGRL
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2212.03559'
+    title: 'GraphLearner: Graph Node Clustering with Fully Learnable Augmentation'
+    date: Dec 7, 2022
+    date_iso: '2022-12-07'
+    date_display: Dec 2022
+    codebase_url: https://github.com/xihongyang1999/GraphLearner
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.2535
+    - null
+    - null
+    metric_stds:
+    - 0.0075
+    - null
+    - null
+  - model: GDCL
+    model_plain: GDCL
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2307.14613'
+    title: Self-Contrastive Graph Diffusion Network
+    date: Jul 27, 2023
+    date_iso: '2023-07-27'
+    date_display: Jul 2023
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.2502
+    - null
+    - null
+    metric_stds:
+    - 0.0021
+    - null
+    - null
+  - model: K-means
+    model_plain: K-means
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2205.07865'
+    title: Simple Contrastive Graph Clustering
+    date: May 11, 2022
+    date_iso: '2022-05-11'
+    date_display: May 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.2396
+    - null
+    - null
+    metric_stds:
+    - 0.0051
+    - null
+    - null
+  - model: AutoSSL
+    model_plain: AutoSSL
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2212.03559'
+    title: 'GraphLearner: Graph Node Clustering with Fully Learnable Augmentation'
+    date: Dec 7, 2022
+    date_iso: '2022-12-07'
+    date_display: Dec 2022
+    codebase_url: https://github.com/xihongyang1999/GraphLearner
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.2182
+    - null
+    - null
+    metric_stds:
+    - 0.0098
+    - null
+    - null
+  row_count: 51
   rows_json: /data/datasets/eat/standard-split-rows.json
   chart_json: /data/datasets/eat/standard-split-chart.json
   arch_counts:
-    gnn: 50
+    gnn: 46
     hybrid: 2
     graph_transformer: 0
     llm: 0
     walk: 1
     traditional: 2
   metric_counts:
-  - 55
+  - 51
   - 9
   - 9
   milestones: &id001
@@ -1591,6 +1587,12 @@ variants:
     arxiv_id: '2205.07865'
     title: Simple Contrastive Graph Clustering
     date: '2022-05-11'
+  - value: 0.7702
+    std: 0.0033
+    model: ProGCL
+    arxiv_id: '2212.08665'
+    title: Hard Sample Aware Network for Contrastive Deep Graph Clustering [5]
+    date: '2022-12-16'
   milestones_by_metric:
     F1: *id001
     Conductance:

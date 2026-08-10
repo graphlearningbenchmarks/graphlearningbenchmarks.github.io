@@ -505,8 +505,20 @@ variants:
     traditional: 1
   metric_counts:
   - 17
-  milestones: []
+  milestones: &id001
+  - value: 0.6546
+    std: 0.0025
+    model: AllSetTransformer
+    arxiv_id: '2106.13264'
+    title: Hypergraph Benchmarks
+    date: '2021-06-24'
+  - value: 0.6822
+    std: 0.0056
+    model: HealHGNN
+    arxiv_id: '2603.00599'
+    title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian Local Exchanger
+    date: '2026-02-28'
   milestones_by_metric:
-    Accuracy: []
+    Accuracy: *id001
 ---
 

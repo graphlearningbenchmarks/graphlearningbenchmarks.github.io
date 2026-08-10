@@ -60,7 +60,7 @@ has_results: true
 paper_type: method
 proposed_models:
 - USBD
-mrr: 0.0035
+mrr: 0.0036
 adjusted_mrr: 0.0024
 mrr_dataset_count: 2
 benchmark_categories:
@@ -78,9 +78,9 @@ results:
 - &id002
   dataset: D&D
   rows:
-  - model: GC-GNN (GraphSAGE)
-    model_key: gc-gnn (graphsage)
-    model_plain: GC-GNN (GraphSAGE)
+  - model: GC-GNN (GCN)
+    model_key: gc-gnn (gcn)
+    model_plain: GC-GNN (GCN)
     value: 0.921
     std: 0.081
     metric: Accuracy
@@ -101,8 +101,9 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: The paper describes GC-GNN as enhancing GNNs with graph
+      canonization positional encodings.
     is_global_top: true
     global_rank: 1
     sort_value: 0.921
@@ -1333,9 +1334,9 @@ results:
     sort_value: 0.9934
     sort_std: null
     global_rank: 2
-    paper_rank: 607
-    rank_delta: 605
-    rank_delta_abs: 605
+    paper_rank: 601
+    rank_delta: 599
+    rank_delta_abs: 599
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1400,9 +1401,9 @@ results:
     sort_value: 0.9727
     sort_std: null
     global_rank: 3
-    paper_rank: 612
-    rank_delta: 609
-    rank_delta_abs: 609
+    paper_rank: 609
+    rank_delta: 606
+    rank_delta_abs: 606
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1442,10 +1443,11 @@ results:
     published_conference: ''
     at_pub_value: 0.86
     at_pub_std: 0.018
-    at_pub_source_arxiv: '1810.00826'
-    at_pub_source_title: How Powerful are Graph Neural Networks?
-    at_pub_source_date_iso: '2018-10-01'
-    at_pub_source_date_label: ICLR 2018
+    at_pub_source_arxiv: '1905.13192'
+    at_pub_source_title: 'Graph Neural Tangent Kernel: Fusing Graph Neural Networks
+      with Graph Kernels'
+    at_pub_source_date_iso: '2019-05-30'
+    at_pub_source_date_label: NeurIPS 2019
     value_gap_source_date_iso: '2020-09-07'
     value_gap_source_date_label: ICML 2020
     gap_vs_at_pub: 0.438
@@ -1468,14 +1470,15 @@ results:
     sort_value: 0.86
     sort_std: 0.018
     global_rank: 9
-    paper_rank: 648
-    rank_delta: 639
-    rank_delta_abs: 639
+    paper_rank: 642
+    rank_delta: 633
+    rank_delta_abs: 633
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: How Powerful are Graph Neural Networks?
-    comparison_source_arxiv: '1810.00826'
+    comparison_source_title: 'Graph Neural Tangent Kernel: Fusing Graph Neural Networks
+      with Graph Kernels'
+    comparison_source_arxiv: '1905.13192'
     is_best: false
     is_std_outlier: false
   - model: CIN
@@ -1536,9 +1539,9 @@ results:
     sort_value: 0.853
     sort_std: 0.012
     global_rank: 20
-    paper_rank: 627
-    rank_delta: 607
-    rank_delta_abs: 607
+    paper_rank: 622
+    rank_delta: 602
+    rank_delta_abs: 602
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1572,7 +1575,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 81
+    global_rank: 82
     sort_value: 0.8303
     sort_std: 0.0137
     comparison_type: global_top
@@ -1638,9 +1641,9 @@ results:
     sort_value: 0.823
     sort_std: 0.019
     global_rank: 125
-    paper_rank: 640
-    rank_delta: 515
-    rank_delta_abs: 515
+    paper_rank: 634
+    rank_delta: 509
+    rank_delta_abs: 509
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1707,10 +1710,10 @@ results:
     value_note: ''
     sort_value: 0.799
     sort_std: 0.004
-    global_rank: 249
-    paper_rank: 644
-    rank_delta: 395
-    rank_delta_abs: 395
+    global_rank: 248
+    paper_rank: 638
+    rank_delta: 390
+    rank_delta_abs: 390
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1776,8 +1779,8 @@ results:
     value_note: ''
     sort_value: 0.667
     sort_std: 0.019
-    global_rank: 571
-    paper_rank: 571
+    global_rank: 567
+    paper_rank: 567
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1844,8 +1847,8 @@ results:
     value_note: ''
     sort_value: 0.66
     sort_std: 0.025
-    global_rank: 576
-    paper_rank: 576
+    global_rank: 572
+    paper_rank: 572
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1912,8 +1915,8 @@ results:
     value_note: ''
     sort_value: 0.654
     sort_std: 0.018
-    global_rank: 580
-    paper_rank: 580
+    global_rank: 576
+    paper_rank: 576
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1980,8 +1983,8 @@ results:
     value_note: ''
     sort_value: 0.632
     sort_std: 0.018
-    global_rank: 599
-    paper_rank: 599
+    global_rank: 595
+    paper_rank: 595
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2048,8 +2051,8 @@ results:
     value_note: ''
     sort_value: 0.617
     sort_std: 0.018
-    global_rank: 609
-    paper_rank: 609
+    global_rank: 603
+    paper_rank: 603
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2116,8 +2119,8 @@ results:
     value_note: ''
     sort_value: 0.6
     sort_std: 0.018
-    global_rank: 615
-    paper_rank: 615
+    global_rank: 612
+    paper_rank: 612
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2184,8 +2187,8 @@ results:
     value_note: ''
     sort_value: 0.599
     sort_std: 0.015
-    global_rank: 617
-    paper_rank: 617
+    global_rank: 614
+    paper_rank: 614
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2252,8 +2255,8 @@ results:
     value_note: ''
     sort_value: 0.597
     sort_std: 0.021
-    global_rank: 620
-    paper_rank: 620
+    global_rank: 617
+    paper_rank: 617
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2320,8 +2323,8 @@ results:
     value_note: ''
     sort_value: 0.596
     sort_std: 0.02
-    global_rank: 622
-    paper_rank: 622
+    global_rank: 618
+    paper_rank: 618
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

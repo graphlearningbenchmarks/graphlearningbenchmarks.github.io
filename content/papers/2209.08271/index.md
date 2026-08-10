@@ -52,8 +52,8 @@ proposed_models:
 - TripleRE
 - TripleRE + NodePiece
 - TripleREv2
-mrr: 0.0516
-adjusted_mrr: 0.0516
+mrr: 0.0527
+adjusted_mrr: 0.0527
 mrr_dataset_count: 3
 benchmark_categories:
 - OGB
@@ -214,51 +214,6 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    metric_values:
-    - 0.637
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.017
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2603.00618'
-    title: Multi-domain Riemannian Graph Gluing for Building Graph Foundation Models
-    published_venue: ''
-    date: Feb 28, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-28'
-    codebase_url: https://github.com/RiemannGraph/GraphGlue
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 28
-    is_best: false
-    sort_value: 0.637
-    sort_std: 0.017
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
   - model: OTE
     model_key: ote
     model_plain: OTE
@@ -324,7 +279,7 @@ results:
     comparison_source_arxiv: '2009.14332'
     is_best: false
     is_std_outlier: false
-    global_rank: 53
+    global_rank: 40
   - model: GC-OTE
     model_key: gc-ote
     model_plain: GC-OTE
@@ -391,7 +346,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 54
+    global_rank: 41
   - model: DistMult
     model_key: distmult
     model_plain: DistMult
@@ -458,7 +413,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 58
+    global_rank: 45
   - model: TripleRE
     model_key: triplere
     model_plain: TripleRE
@@ -525,7 +480,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 68
+    global_rank: 55
   - model: PairRE
     model_key: pairre
     model_plain: PairRE
@@ -592,7 +547,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 67
+    global_rank: 54
   - model: ComplEx
     model_key: complex
     model_plain: ComplEx
@@ -659,7 +614,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 73
+    global_rank: 60
   - model: RotatE
     model_key: rotate
     model_plain: RotatE
@@ -726,7 +681,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 82
+    global_rank: 69
   - model: TransE
     model_key: transe
     model_plain: TransE
@@ -793,7 +748,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 91
+    global_rank: 78
   - model: ConvE
     model_key: conve
     model_plain: ConvE
@@ -860,7 +815,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 95
+    global_rank: 82
   metrics:
   - MRR
   - MR

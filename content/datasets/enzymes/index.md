@@ -13,14 +13,18 @@ stats:
   avg_nodes: 32.6
   avg_edges: 62.1
   num_classes: 6
-result_count: 455
+result_count: 445
 best_model:
-  model: BGNN(m)-CS
-  value: 0.8068
+  model: GMN
+  value: 0.7866
   metric: Accuracy
-  arxiv_id: '2210.05920'
-  paper_title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
+  arxiv_id: '2002.09518'
+  paper_title: Memory-Based Graph Networks
 papers:
+- arxiv_id: '2605.13383'
+  title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+  date_iso: '2026-05-13'
+  venue: ''
 - arxiv_id: '2602.05567'
   title: 'MAGPrompt: Message-Adaptive Graph Prompt Tuning for Graph Neural Networks'
   date_iso: '2026-02-05'
@@ -65,10 +69,6 @@ papers:
   title: Learnable Kernel Density Estimation for Graphs
   date_iso: '2025-05-27'
   venue: ICML 2025
-- arxiv_id: '2503.00750'
-  title: Edge Prompt Tuning for Graph Neural Networks
-  date_iso: '2025-03-02'
-  venue: ICLR 2025
 - arxiv_id: '2501.15142'
   title: 'DAGPrompT: Pushing the Limits of Graph Prompting with a Distribution-aware
     Graph Prompt Tuning Approach'
@@ -179,10 +179,6 @@ papers:
   title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing in GNNs'
   date_iso: '2022-10-21'
   venue: ICLR 2022
-- arxiv_id: '2210.05920'
-  title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-  date_iso: '2022-10-12'
-  venue: AAAI 2022
 - arxiv_id: '2210.00084'
   title: Contrastive Graph Few-Shot Learning
   date_iso: '2022-09-30'
@@ -335,144 +331,6 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
-  - model: BGNN(m)-CS
-    model_plain: BGNN(m)-CS
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_iso: '2022-10-12'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: AAAI 2022
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2022
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.8068
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0149
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: BGNN
-    model_plain: BGNN
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_iso: '2022-10-12'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: AAAI 2022
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2022
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.7936
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0281
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: BGNN(m)-SC
-    model_plain: BGNN(m)-SC
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_iso: '2022-10-12'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: AAAI 2022
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2022
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.7889
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0079
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: GMN
     model_plain: GMN
     is_baseline: false
@@ -493,7 +351,7 @@ variants:
     published_conference_slug: iclr
     published_venue: ICLR 2020
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.7866
@@ -509,192 +367,6 @@ variants:
     - null
     metric_stds:
     - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: BGNN(m)-TC
-    model_plain: BGNN(m)-TC
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_iso: '2022-10-12'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: AAAI 2022
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7803
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0049
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: BGNN(m)-CT
-    model_plain: BGNN(m)-CT
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_iso: '2022-10-12'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: AAAI 2022
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2022
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.7778
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0157
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: IGN
-    model_plain: IGN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2305.06102'
-    title: Towards Better Graph Representation Learning with Parameterized Decomposition
-      & Filtering
-    date: May 10, 2023
-    date_iso: '2023-05-10'
-    date_display: May 2023
-    codebase_url: https://github.com/qslim/PDF
-    published_conference: ICML 2023
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2023
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.7658
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0549
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: GIN
-    model_plain: GIN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 0.51
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2305.06102'
-    title: Towards Better Graph Representation Learning with Parameterized Decomposition
-      & Filtering
-    date: May 10, 2023
-    date_iso: '2023-05-10'
-    date_display: May 2023
-    codebase_url: https://github.com/qslim/PDF
-    published_conference: ICML 2023
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.762
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.028
     - null
     - null
     - null
@@ -797,53 +469,6 @@ variants:
     - null
     - null
     - null
-  - model: PSCN
-    model_plain: PSCN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2305.06102'
-    title: Towards Better Graph Representation Learning with Parameterized Decomposition
-      & Filtering
-    date: May 10, 2023
-    date_iso: '2023-05-10'
-    date_display: May 2023
-    codebase_url: https://github.com/qslim/PDF
-    published_conference: ICML 2023
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.75
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.025
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: TFGW ADJ
     model_plain: TFGW ADJ
     is_baseline: false
@@ -890,15 +515,15 @@ variants:
     - null
     - null
     - null
-  - model: GSO
-    model_plain: GSO
+  - model: PDF
+    model_plain: PDF
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: 0.5
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
     arxiv_id: '2305.06102'
     title: Towards Better Graph Representation Learning with Parameterized Decomposition
       & Filtering
@@ -911,52 +536,6 @@ variants:
     published_conference_slug: icml
     published_venue: ICML 2023
     uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.735
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0639
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: PDF
-    model_plain: PDF
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 0.472
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2310.10434'
-    title: Equivariant Matrix Function Neural Networks
-    date: Oct 16, 2023
-    date_iso: '2023-10-16'
-    date_display: Oct 2023
-    codebase_url: ''
-    published_conference: ICLR 2023
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2023
-    uses_external_data: null
     is_best: true
     is_std_outlier: false
     metric_values:
@@ -1353,52 +932,6 @@ variants:
     - null
     - null
     - null
-  - model: BGNN(m)-ST
-    model_plain: BGNN(m)-ST
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_iso: '2022-10-12'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: AAAI 2022
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7112
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0245
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: PGCN_g+DropNode
     model_plain: PGCN_g+DropNode
     is_baseline: true
@@ -1528,52 +1061,6 @@ variants:
     - null
     metric_stds:
     - 0.0558
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: BGNN(m)-TS
-    model_plain: BGNN(m)-TS
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_iso: '2022-10-12'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: AAAI 2022
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0136
     - null
     - null
     - null
@@ -2369,53 +1856,6 @@ variants:
     - null
     - null
     - null
-  - model: GCN^2
-    model_plain: GCN^2
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2305.06102'
-    title: Towards Better Graph Representation Learning with Parameterized Decomposition
-      & Filtering
-    date: May 10, 2023
-    date_iso: '2023-05-10'
-    date_display: May 2023
-    codebase_url: https://github.com/qslim/PDF
-    published_conference: ICML 2023
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.6684
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0179
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: GCN
     model_plain: GCN
     is_baseline: true
@@ -2649,18 +2089,572 @@ variants:
     - null
     - null
     - null
-  row_count: 455
+  - model: NLSF
+    model_plain: NLSF
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2509.24886'
+    title: Adaptive Canonicalization with Application to Invariant Anisotropic Geometric
+      Networks
+    date: Sep 29, 2025
+    date_iso: '2025-09-29'
+    date_display: Sep 2025
+    codebase_url: https://github.com/ywelld/_ac
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6594
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.016
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: att-Graph-level NLSFs
+    model_plain: att-Graph-level NLSFs
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2406.01249'
+    title: Equivariant Machine Learning on Graphs with Nonlinear Spectral Filters
+    date: Jun 3, 2024
+    date_iso: '2024-06-03'
+    date_display: Jun 2024
+    codebase_url: ''
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6594
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.016
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: vanilla GCN
+    model_plain: vanilla GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2003.00982'
+    title: GNNBenchmark
+    date: Jan 1, 2023
+    date_iso: '2023-01-01'
+    date_display: Jan 2023
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
+    published_conference: JMLR 2023
+    published_conference_short: JMLR
+    published_conference_slug: jmlr
+    published_venue: JMLR 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.65833
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0461
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: GCN-4
+    model_plain: GCN-4
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2102.07835'
+    title: Topological Graph Neural Networks
+    date: Feb 15, 2021
+    date_iso: '2021-02-15'
+    date_display: Feb 2021
+    codebase_url: https://github.com/BorgwardtLab/TOGL
+    published_conference: ICLR 2021
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.658
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.046
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: DropGIN
+    model_plain: DropGIN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2205.15733'
+    title: Template based Graph Neural Network with Optimal Transport Distances
+    date: May 31, 2022
+    date_iso: '2022-05-31'
+    date_display: May 2022
+    codebase_url: ''
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.658
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.027
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: GATED-GCN-4
+    model_plain: GATED-GCN-4
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2102.07835'
+    title: Topological Graph Neural Networks
+    date: Feb 15, 2021
+    date_iso: '2021-02-15'
+    date_display: Feb 2021
+    codebase_url: https://github.com/BorgwardtLab/TOGL
+    published_conference: ICLR 2021
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.657
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.049
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: DiffPool +FA
+    model_plain: DiffPool +FA
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2006.05205'
+    title: On the Bottleneck of Graph Neural Networks and its Practical Implications
+    date: Jun 9, 2020
+    date_iso: '2020-06-09'
+    date_display: Jun 2020
+    codebase_url: https://github.com/tech-srl/bottleneck
+    published_conference: ICLR 2020
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2020
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.657
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.048
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: gh
+    model_plain: gh
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '1906.01277'
+    title: Wasserstein Weisfeiler-Lehman Graph Kernels
+    date: Jun 4, 2019
+    date_iso: '2019-06-04'
+    date_display: Jun 2019
+    codebase_url: https://github.com/BorgwardtLab/WWL
+    published_conference: NeurIPS 2019
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2019
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6565
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.008
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: SGCL-T
+    model_plain: SGCL-T
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2402.15270'
+    title: Smoothed Graph Contrastive Learning via Seamless Proximity Integration
+    date: Feb 23, 2024
+    date_iso: '2024-02-23'
+    date_display: Feb 2024
+    codebase_url: https://github.com/maysambehmanesh/SGCL
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.653
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.036
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: No Struct
+    model_plain: No Struct
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2006.05205'
+    title: On the Bottleneck of Graph Neural Networks and its Practical Implications
+    date: Jun 9, 2020
+    date_iso: '2020-06-09'
+    date_display: Jun 2020
+    codebase_url: https://github.com/tech-srl/bottleneck
+    published_conference: ICLR 2020
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2020
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.652
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.064
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: DiffPool-TIP
+    model_plain: DiffPool-TIP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2402.16346'
+    title: Boosting Graph Pooling with Persistent Homology
+    date: Feb 26, 2024
+    date_iso: '2024-02-26'
+    date_display: Feb 2024
+    codebase_url: https://github.com/LOGO-CUHKSZ/TIP
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: true
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6505
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0424
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: EigenPool
+    model_plain: EigenPool
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2007.11202'
+    title: 'MathNet: Haar-Like Wavelet Multiresolution-Analysis for Graph Representation
+      and Learning'
+    date: Jul 22, 2020
+    date_iso: '2020-07-22'
+    date_display: Jul 2020
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.65
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  row_count: 445
   rows_json: /data/datasets/enzymes/10-fold-cv-rows.json
   chart_json: /data/datasets/enzymes/10-fold-cv-chart.json
   arch_counts:
-    gnn: 268
-    hybrid: 64
+    gnn: 258
+    hybrid: 63
     graph_transformer: 3
     llm: 1
     walk: 4
-    traditional: 104
+    traditional: 103
   metric_counts:
-  - 411
+  - 401
   - 10
   - 31
   - 1
@@ -2678,18 +2672,12 @@ variants:
     arxiv_id: '1511.02136'
     title: Diffusion-Convolutional Neural Networks
     date: '2015-11-06'
-  - value: 0.599
-    std: 0.011
-    model: WL-OA
-    arxiv_id: '1606.01141'
-    title: On Valid Optimal Assignment Kernels and Applications to Graph Classification
-    date: '2016-06-03'
-  - value: 0.611
-    std: null
-    model: structure2vec
-    arxiv_id: '1704.02901'
-    title: Dynamic Edge-Conditioned Filters in Convolutional Neural Networks on Graphs
-    date: '2017-04-10'
+  - value: 0.6181
+    std: 0.0099
+    model: MLG
+    arxiv_id: '1603.06186'
+    title: The Multiscale Laplacian Graph Kernel
+    date: '2016-03-01'
   - value: 0.6183
     std: 0.0539
     model: GCAPS-CNN
@@ -2714,12 +2702,6 @@ variants:
     arxiv_id: '2002.09518'
     title: Memory-Based Graph Networks
     date: '2020-02-21'
-  - value: 0.8068
-    std: 0.0149
-    model: BGNN(m)-CS
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: '2022-10-12'
   milestones_by_metric:
     Accuracy: *id001
     AUC:

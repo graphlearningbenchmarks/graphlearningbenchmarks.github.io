@@ -119,7 +119,7 @@ results:
     venue: arXiv.org
     codebase_url: https://github.com/ocx-lab/FloydNet
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -390,9 +390,9 @@ results:
     sort_value: 0.023
     sort_std: 0.001
     global_rank: 13
-    paper_rank: 17
-    rank_delta: 4
-    rank_delta_abs: 4
+    paper_rank: 16
+    rank_delta: 3
+    rank_delta_abs: 3
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -458,8 +458,8 @@ results:
     value_note: ''
     sort_value: 0.024
     sort_std: 0.003
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -526,8 +526,8 @@ results:
     value_note: ''
     sort_value: 0.024
     sort_std: 0.003
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -594,8 +594,8 @@ results:
     value_note: ''
     sort_value: 0.025
     sort_std: 0.003
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -635,17 +635,17 @@ results:
     date_iso: '2024-05-05'
     published_venue: ICML 2024
     published_conference: ICML 2024
-    at_pub_value: 0.0309
-    at_pub_std: 0.0031
-    at_pub_source_arxiv: '2305.15747'
-    at_pub_source_title: Union Subgraph Neural Networks
-    at_pub_source_date_iso: '2023-05-25'
-    at_pub_source_date_label: AAAI 2023
+    at_pub_value: 0.052
+    at_pub_std: 0.005
+    at_pub_source_arxiv: '2310.20519'
+    at_pub_source_title: Enhancing Graph Neural Networks with Quantum Computed Encodings
+    at_pub_source_date_iso: '2023-10-31'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2026-01-27'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.021099999999999997
-    worse_than_at_pub: true
-    surpassed_since_pub: false
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
@@ -661,15 +661,15 @@ results:
     value_note: ''
     sort_value: 0.025
     sort_std: null
-    global_rank: 25
-    paper_rank: 62
-    rank_delta: 37
-    rank_delta_abs: 37
+    global_rank: 24
+    paper_rank: 59
+    rank_delta: 35
+    rank_delta_abs: 35
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Union Subgraph Neural Networks
-    comparison_source_arxiv: '2305.15747'
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: ESAN
@@ -729,8 +729,8 @@ results:
     value_note: ''
     sort_value: 0.029
     sort_std: 0.003
-    global_rank: 38
-    paper_rank: 38
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -798,8 +798,8 @@ results:
     value_note: ''
     sort_value: 0.029
     sort_std: 0.001
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -865,8 +865,8 @@ results:
     value_note: ''
     sort_value: 0.049
     sort_std: 0.002
-    global_rank: 60
-    paper_rank: 60
+    global_rank: 57
+    paper_rank: 57
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -933,8 +933,8 @@ results:
     value_note: ''
     sort_value: 0.088
     sort_std: 0.002
-    global_rank: 74
-    paper_rank: 74
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -969,7 +969,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 83
+    global_rank: 80
     sort_value: 0.113
     sort_std: 0.002
     comparison_type: global_top

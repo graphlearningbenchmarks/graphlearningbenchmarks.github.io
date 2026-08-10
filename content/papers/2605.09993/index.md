@@ -40,7 +40,7 @@ has_results: true
 paper_type: method
 proposed_models:
 - R-GFM
-mrr: 0.0015
+mrr: 0.0016
 adjusted_mrr: 0.0005
 mrr_dataset_count: 1
 benchmark_categories:
@@ -182,7 +182,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 27
+    global_rank: 25
     sort_value: 0.9136
     sort_std: 0.007
     comparison_type: global_top
@@ -246,10 +246,10 @@ results:
     value_note: ''
     sort_value: 0.8852
     sort_std: 0.0133
-    global_rank: 56
-    paper_rank: 666
-    rank_delta: 610
-    rank_delta_abs: 610
+    global_rank: 48
+    paper_rank: 644
+    rank_delta: 596
+    rank_delta_abs: 596
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -313,10 +313,10 @@ results:
     value_note: ''
     sort_value: 0.8623
     sort_std: 0.0471
-    global_rank: 94
-    paper_rank: 667
-    rank_delta: 573
-    rank_delta_abs: 573
+    global_rank: 85
+    paper_rank: 645
+    rank_delta: 560
+    rank_delta_abs: 560
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -350,7 +350,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 177
+    global_rank: 165
     sort_value: 0.8269
     sort_std: null
     comparison_type: global_top
@@ -416,10 +416,10 @@ results:
     value_note: ''
     sort_value: 0.819
     sort_std: 0.054
-    global_rank: 201
-    paper_rank: 697
-    rank_delta: 496
-    rank_delta_abs: 496
+    global_rank: 190
+    paper_rank: 656
+    rank_delta: 466
+    rank_delta_abs: 466
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -484,10 +484,10 @@ results:
     value_note: ''
     sort_value: 0.8082
     sort_std: 0.036
-    global_rank: 217
-    paper_rank: 692
-    rank_delta: 475
-    rank_delta_abs: 475
+    global_rank: 203
+    paper_rank: 652
+    rank_delta: 449
+    rank_delta_abs: 449
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -552,10 +552,10 @@ results:
     value_note: ''
     sort_value: 0.795
     sort_std: 0.063
-    global_rank: 231
-    paper_rank: 697
-    rank_delta: 466
-    rank_delta_abs: 466
+    global_rank: 218
+    paper_rank: 656
+    rank_delta: 438
+    rank_delta_abs: 438
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -622,10 +622,10 @@ results:
     value_note: ''
     sort_value: 0.7082
     sort_std: 0.0271
-    global_rank: 344
-    paper_rank: 668
-    rank_delta: 324
-    rank_delta_abs: 324
+    global_rank: 334
+    paper_rank: 646
+    rank_delta: 312
+    rank_delta_abs: 312
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -671,8 +671,8 @@ results:
       Augmentations
     at_pub_source_date_iso: '2023-10-29'
     at_pub_source_date_label: NeurIPS 2023
-    value_gap_source_date_iso: '2024-08-24'
-    value_gap_source_date_label: '2024'
+    value_gap_source_date_iso: '2025-06-24'
+    value_gap_source_date_label: KDD 2025
     gap_vs_at_pub: 0.32300000000000006
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -683,18 +683,18 @@ results:
     today_delta_significant: true
     true_value: 0.5933
     true_std: 0.0148
-    value_gap_source_arxiv: '2408.13471'
-    value_gap_source_title: Disentangled Generative Graph Representation Learning
+    value_gap_source_arxiv: '2506.19343'
+    value_gap_source_title: Discrepancy-Aware Graph Mask Auto-Encoder
     value_gap_source_is_current_paper: false
     value_gap: 0.32300000000000006
     has_value_note: false
     value_note: ''
     sort_value: 0.5933
     sort_std: 0.0148
-    global_rank: 464
-    paper_rank: 671
-    rank_delta: 207
-    rank_delta_abs: 207
+    global_rank: 453
+    paper_rank: 648
+    rank_delta: 195
+    rank_delta_abs: 195
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -760,10 +760,10 @@ results:
     value_note: ''
     sort_value: 0.4722
     sort_std: 0.045
-    global_rank: 602
-    paper_rank: 622
-    rank_delta: 20
-    rank_delta_abs: 20
+    global_rank: 588
+    paper_rank: 607
+    rank_delta: 19
+    rank_delta_abs: 19
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -827,8 +827,8 @@ results:
     value_note: ''
     sort_value: 0.3671
     sort_std: 0.0992
-    global_rank: 654
-    paper_rank: 654
+    global_rank: 634
+    paper_rank: 634
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -895,8 +895,8 @@ results:
     value_note: ''
     sort_value: 0.3622
     sort_std: 0.0946
-    global_rank: 657
-    paper_rank: 657
+    global_rank: 636
+    paper_rank: 636
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -962,8 +962,8 @@ results:
     value_note: ''
     sort_value: 0.3622
     sort_std: 0.053
-    global_rank: 658
-    paper_rank: 658
+    global_rank: 637
+    paper_rank: 637
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1030,8 +1030,8 @@ results:
     value_note: ''
     sort_value: 0.3568
     sort_std: 0.0963
-    global_rank: 660
-    paper_rank: 660
+    global_rank: 639
+    paper_rank: 639
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1097,8 +1097,8 @@ results:
     value_note: ''
     sort_value: 0.3296
     sort_std: 0.0544
-    global_rank: 663
-    paper_rank: 663
+    global_rank: 641
+    paper_rank: 641
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1138,16 +1138,16 @@ results:
     date_iso: '2026-05-11'
     published_venue: ICML 2026
     published_conference: ICML 2026
-    at_pub_value: 0.2584
-    at_pub_std: 0.0948
-    at_pub_source_arxiv: '2601.02662'
-    at_pub_source_title: 'When Prompting Meets Spiking: Graph Sparse Prompting via
-      Spiking Graph Prompt Learning'
-    at_pub_source_date_iso: '2026-01-06'
-    at_pub_source_date_label: '2026'
+    at_pub_value: 0.2382
+    at_pub_std: 0.075
+    at_pub_source_arxiv: '2509.22416'
+    at_pub_source_title: 'One Prompt Fits All: Universal Graph Adaptation for Pretrained
+      Models'
+    at_pub_source_date_iso: '2025-09-26'
+    at_pub_source_date_label: NeurIPS 2025
     value_gap_source_date_iso: '2026-05-11'
     value_gap_source_date_label: ICML 2026
-    gap_vs_at_pub: 0.06589999999999996
+    gap_vs_at_pub: 0.08609999999999998
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -1165,8 +1165,8 @@ results:
     value_note: ''
     sort_value: 0.3243
     sort_std: 0.1081
-    global_rank: 665
-    paper_rank: 665
+    global_rank: 643
+    paper_rank: 643
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1232,8 +1232,8 @@ results:
     value_note: ''
     sort_value: 0.3135
     sort_std: 0.0776
-    global_rank: 667
-    paper_rank: 667
+    global_rank: 645
+    paper_rank: 645
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1299,8 +1299,8 @@ results:
     value_note: ''
     sort_value: 0.2783
     sort_std: 0.11
-    global_rank: 671
-    paper_rank: 671
+    global_rank: 648
+    paper_rank: 648
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1366,8 +1366,8 @@ results:
     value_note: ''
     sort_value: 0.2649
     sort_std: 0.1073
-    global_rank: 673
-    paper_rank: 673
+    global_rank: 650
+    paper_rank: 650
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1433,8 +1433,8 @@ results:
     value_note: ''
     sort_value: 0.25
     sort_std: 0.0658
-    global_rank: 677
-    paper_rank: 677
+    global_rank: 652
+    paper_rank: 652
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

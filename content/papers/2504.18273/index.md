@@ -47,8 +47,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - IBG-NN
-mrr: 0.3086
-adjusted_mrr: 0.3086
+mrr: 0.3081
+adjusted_mrr: 0.3081
 mrr_dataset_count: 4
 benchmark_categories:
 - Heterophilic Graphs
@@ -201,9 +201,9 @@ results:
     sort_value: 0.856
     sort_std: null
     global_rank: 3
-    paper_rank: 96
-    rank_delta: 93
-    rank_delta_abs: 93
+    paper_rank: 102
+    rank_delta: 99
+    rank_delta_abs: 99
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -406,8 +406,8 @@ results:
     value_note: ''
     sort_value: 0.7974
     sort_std: 0.014
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -475,8 +475,8 @@ results:
     value_note: ''
     sort_value: 0.783
     sort_std: 0.006
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -543,8 +543,8 @@ results:
     value_note: ''
     sort_value: 0.7827
     sort_std: 0.0128
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -611,8 +611,8 @@ results:
     value_note: ''
     sort_value: 0.7133
     sort_std: 0.0242
-    global_rank: 56
-    paper_rank: 56
+    global_rank: 60
+    paper_rank: 60
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -678,10 +678,10 @@ results:
     value_note: ''
     sort_value: 0.7033
     sort_std: null
-    global_rank: 64
-    paper_rank: 117
-    rank_delta: 53
-    rank_delta_abs: 53
+    global_rank: 69
+    paper_rank: 123
+    rank_delta: 54
+    rank_delta_abs: 54
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -746,8 +746,8 @@ results:
     value_note: ''
     sort_value: 0.639
     sort_std: 0.0213
-    global_rank: 125
-    paper_rank: 125
+    global_rank: 131
+    paper_rank: 131
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -757,11 +757,11 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.6215
-    std: 0.0042
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.634
+    std: 0.03
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -771,20 +771,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2210.03930'
-    title: Hierarchical Graph Transformer with Adaptive Node Sampling
-    date: Oct 8, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-08'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/zaixizhang/ANS-GT
+    arxiv_id: '2411.19392'
+    title: Scale-aware Message Passing For Graph Node Classification
+    date: Nov 28, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-28'
+    venue: null
+    codebase_url: https://github.com/Qin87/ScaleNet
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 138
-    sort_value: 0.6215
-    sort_std: 0.0042
+    global_rank: 136
+    sort_value: 0.634
+    sort_std: 0.03
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -846,10 +846,10 @@ results:
     value_note: ''
     sort_value: 0.603
     sort_std: 0.0231
-    global_rank: 156
-    paper_rank: 246
-    rank_delta: 90
-    rank_delta_abs: 90
+    global_rank: 164
+    paper_rank: 264
+    rank_delta: 100
+    rank_delta_abs: 100
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -913,10 +913,10 @@ results:
     value_note: ''
     sort_value: 0.5429
     sort_std: null
-    global_rank: 195
-    paper_rank: 246
-    rank_delta: 51
-    rank_delta_abs: 51
+    global_rank: 208
+    paper_rank: 264
+    rank_delta: 56
+    rank_delta_abs: 56
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1196,8 +1196,8 @@ results:
     value_note: ''
     sort_value: 0.7513
     sort_std: 0.0195
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1266,8 +1266,8 @@ results:
     value_note: ''
     sort_value: 0.748
     sort_std: 0.005
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1336,8 +1336,8 @@ results:
     value_note: ''
     sort_value: 0.7416
     sort_std: null
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1404,10 +1404,10 @@ results:
     value_note: ''
     sort_value: 0.7121
     sort_std: 0.0184
-    global_rank: 16
-    paper_rank: 60
-    rank_delta: 44
-    rank_delta_abs: 44
+    global_rank: 19
+    paper_rank: 62
+    rank_delta: 43
+    rank_delta_abs: 43
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1472,8 +1472,8 @@ results:
     value_note: ''
     sort_value: 0.6402
     sort_std: 0.0167
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1541,8 +1541,8 @@ results:
     value_note: ''
     sort_value: 0.619
     sort_std: 0.014
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1609,10 +1609,10 @@ results:
     value_note: ''
     sort_value: 0.6067
     sort_std: null
-    global_rank: 49
-    paper_rank: 86
-    rank_delta: 37
-    rank_delta_abs: 37
+    global_rank: 51
+    paper_rank: 90
+    rank_delta: 39
+    rank_delta_abs: 39
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1678,10 +1678,10 @@ results:
     value_note: ''
     sort_value: 0.563
     sort_std: 0.022
-    global_rank: 73
-    paper_rank: 172
-    rank_delta: 99
-    rank_delta_abs: 99
+    global_rank: 77
+    paper_rank: 179
+    rank_delta: 102
+    rank_delta_abs: 102
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1690,11 +1690,11 @@ results:
     comparison_source_arxiv: '2206.02386'
     is_best: false
     is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.4378
-    std: 0.019
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.446
+    std: 0.013
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -1704,21 +1704,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2407.19420'
-    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
-      Over-Smoothing in Node Classification Tasks'
-    date: Jul 28, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-28'
-    venue: arXiv.org
-    codebase_url: ''
+    arxiv_id: '2411.19392'
+    title: Scale-aware Message Passing For Graph Node Classification
+    date: Nov 28, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-28'
+    venue: null
+    codebase_url: https://github.com/Qin87/ScaleNet
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 140
-    sort_value: 0.4378
-    sort_std: 0.019
+    global_rank: 137
+    sort_value: 0.446
+    sort_std: 0.013
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1781,10 +1780,10 @@ results:
     value_note: ''
     sort_value: 0.393
     sort_std: 0.0079
-    global_rank: 188
-    paper_rank: 274
-    rank_delta: 86
-    rank_delta_abs: 86
+    global_rank: 194
+    paper_rank: 283
+    rank_delta: 89
+    rank_delta_abs: 89
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1826,7 +1825,7 @@ results:
     venue: International Conference on Learning Representations
     codebase_url: https://github.com/cornell-zhang/Polynormer
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -1892,7 +1891,7 @@ results:
     venue: Accepted by NeurIPS 2025
     codebase_url: https://github.com/sunjss/over-aggregating
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
@@ -1961,10 +1960,10 @@ results:
     value_note: ''
     sort_value: 0.8443
     sort_std: 0.01
-    global_rank: 17
-    paper_rank: 34
-    rank_delta: 17
-    rank_delta_abs: 17
+    global_rank: 18
+    paper_rank: 36
+    rank_delta: 18
+    rank_delta_abs: 18
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2029,8 +2028,8 @@ results:
     value_note: ''
     sort_value: 0.8376
     sort_std: 0.0051
-    global_rank: 31
-    paper_rank: 31
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2097,8 +2096,8 @@ results:
     value_note: ''
     sort_value: 0.8373
     sort_std: 0.0078
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2165,8 +2164,8 @@ results:
     value_note: ''
     sort_value: 0.8364
     sort_std: 0.0067
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2197,11 +2196,11 @@ results:
     date_iso: '2026-05-13'
     venue: null
     codebase_url: ''
-    uses_external_data: false
+    uses_external_data: null
     input_feature_source: unknown
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 65
+    global_rank: 68
     sort_value: 0.8243
     sort_std: 0.0044
     comparison_type: global_top
@@ -2266,10 +2265,10 @@ results:
     value_note: ''
     sort_value: 0.7815
     sort_std: null
-    global_rank: 102
-    paper_rank: 130
-    rank_delta: 28
-    rank_delta_abs: 28
+    global_rank: 108
+    paper_rank: 137
+    rank_delta: 29
+    rank_delta_abs: 29
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2333,8 +2332,8 @@ results:
     value_note: ''
     sort_value: 0.7362
     sort_std: 0.002
-    global_rank: 128
-    paper_rank: 131
+    global_rank: 135
+    paper_rank: 138
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -2401,8 +2400,8 @@ results:
     value_note: ''
     sort_value: 0.7339
     sort_std: 0.0117
-    global_rank: 129
-    paper_rank: 129
+    global_rank: 136
+    paper_rank: 136
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2469,8 +2468,8 @@ results:
     value_note: ''
     sort_value: 0.7294
     sort_std: 0.0097
-    global_rank: 133
-    paper_rank: 133
+    global_rank: 140
+    paper_rank: 140
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2514,7 +2513,7 @@ results:
     venue: null
     codebase_url: https://github.com/Qin87/ScaleNet
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -2580,7 +2579,7 @@ results:
     venue: null
     codebase_url: https://github.com/Qin87/ScaleNet
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
@@ -2681,10 +2680,10 @@ results:
     venue: null
     codebase_url: https://github.com/Qin87/ScaleNet
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 31
+    global_rank: 33
     sort_value: 0.4602
     sort_std: 0.0026
     comparison_type: global_top
@@ -2714,10 +2713,10 @@ results:
     venue: null
     codebase_url: https://github.com/Qin87/ScaleNet
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 54
+    global_rank: 58
     sort_value: 0.367
     sort_std: 0.0021
     comparison_type: global_top

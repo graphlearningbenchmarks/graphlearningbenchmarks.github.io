@@ -60,8 +60,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GEM-2
-mrr: 0.1429
-adjusted_mrr: 0.0476
+mrr: 0.1111
+adjusted_mrr: 0.037
 mrr_dataset_count: 1
 benchmark_categories:
 - OGB
@@ -146,34 +146,34 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: UniMol
-    model_key: unimol
-    model_plain: UniMol
-    value: 0.0693
+  - model: TGT-At (+RDKit)
+    model_key: tgt-at (+rdkit)
+    model_plain: TGT-At (+RDKit)
+    value: 0.0683
     std: null
     metric: MAE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: 77.0
+    params_millions: 203.0
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    arxiv_id: '2603.00568'
-    title: Enhancing Molecular Property Predictions by Learning from Bond Modelling
-      and Interactions
-    date: Feb 28, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-28'
-    venue: Accepted to ICLR 2026
-    codebase_url: ''
-    uses_external_data: false
+    arxiv_id: '2402.04538'
+    title: 'Triplet Interaction Improves Graph Transformers: Accurate Molecular Graph
+      Learning with Triplet Graph Transformers'
+    date: Feb 7, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-07'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/shamim-hussain/tgt
+    uses_external_data: true
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.0693
+    sort_value: 0.0683
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
@@ -237,10 +237,10 @@ results:
     value_note: ''
     sort_value: 0.0793
     sort_std: null
-    global_rank: 7
-    paper_rank: 8
-    rank_delta: 1
-    rank_delta_abs: 1
+    global_rank: 9
+    paper_rank: 11
+    rank_delta: 2
+    rank_delta_abs: 2
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -284,8 +284,8 @@ results:
     at_pub_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
     at_pub_source_date_iso: '2022-05-25'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2022-08-11'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.0007000000000000062
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -296,17 +296,17 @@ results:
     today_delta_significant: false
     true_value: 0.0862
     true_std: null
-    value_gap_source_arxiv: '2208.05863'
-    value_gap_source_title: 'GEM-2: Next Generation Molecular Property Prediction
-      Network by Modeling Full-range Many-body Interactions'
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2402.04538'
+    value_gap_source_title: 'Triplet Interaction Improves Graph Transformers: Accurate
+      Molecular Graph Learning with Triplet Graph Transformers'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.0862
     sort_std: null
-    global_rank: 26
-    paper_rank: 26
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -372,8 +372,8 @@ results:
     value_note: ''
     sort_value: 0.0867
     sort_std: null
-    global_rank: 28
-    paper_rank: 30
+    global_rank: 32
+    paper_rank: 34
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -440,8 +440,8 @@ results:
     value_note: ''
     sort_value: 0.091
     sort_std: null
-    global_rank: 40
-    paper_rank: 43
+    global_rank: 44
+    paper_rank: 47
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -507,8 +507,8 @@ results:
     value_note: ''
     sort_value: 0.1083
     sort_std: null
-    global_rank: 56
-    paper_rank: 56
+    global_rank: 60
+    paper_rank: 60
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -575,8 +575,8 @@ results:
     value_note: ''
     sort_value: 0.1152
     sort_std: null
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 62
+    paper_rank: 62
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -643,8 +643,8 @@ results:
     value_note: ''
     sort_value: 0.1195
     sort_std: null
-    global_rank: 63
-    paper_rank: 75
+    global_rank: 67
+    paper_rank: 79
     rank_delta: 12
     rank_delta_abs: 12
     rank_delta_direction: worse
@@ -711,8 +711,8 @@ results:
     value_note: ''
     sort_value: 0.1195
     sort_std: null
-    global_rank: 62
-    paper_rank: 64
+    global_rank: 66
+    paper_rank: 68
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse

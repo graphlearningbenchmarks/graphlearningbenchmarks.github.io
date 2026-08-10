@@ -12,7 +12,7 @@ stats:
   avg_nodes: 23.2
   avg_edges: 24.9
   num_classes: null
-result_count: 150
+result_count: 142
 best_model:
   model: TIGT
   value: 0.014
@@ -105,10 +105,6 @@ papers:
   title: 'CIN++: Enhancing Topological Message Passing'
   date_iso: '2023-06-06'
   venue: ''
-- arxiv_id: '2305.15747'
-  title: Union Subgraph Neural Networks
-  date_iso: '2023-05-25'
-  venue: AAAI 2023
 - arxiv_id: '2304.10933'
   title: 'Self-Attention in Colors: Another Take on Encoding Graph Structure in Transformers'
   date_iso: '2023-04-21'
@@ -757,42 +753,6 @@ variants:
     - null
     - null
     - null
-  - model: UnionGPS
-    model_plain: UnionGPS
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2305.15747'
-    title: Union Subgraph Neural Networks
-    date: May 25, 2023
-    date_iso: '2023-05-25'
-    date_display: May 2023
-    codebase_url: https://github.com/AngusMonroe/UnionSNN
-    published_conference: AAAI 2023
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.0236
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0017
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: MPNNs
     model_plain: MPNNs
     is_baseline: false
@@ -1048,42 +1008,6 @@ variants:
     - null
     - null
     - null
-  - model: Graphormer
-    model_plain: Graphormer
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2601.19094'
-    title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
-    date: Jan 27, 2026
-    date_iso: '2026-01-27'
-    date_display: Jan 2026
-    codebase_url: https://github.com/ocx-lab/FloydNet
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.025
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: DRFWL
     model_plain: DRFWL
     is_baseline: true
@@ -1115,6 +1039,42 @@ variants:
     - null
     metric_stds:
     - 0.003
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: Graphormer
+    model_plain: Graphormer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2501.18739'
+    title: 'Beyond Message Passing: Neural Graph Pattern Machine'
+    date: Jan 30, 2025
+    date_iso: '2025-01-30'
+    date_display: Jan 2025
+    codebase_url: https://github.com/Zehong-Wang/GPM
+    published_conference: ICML 2025
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.025
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.004
     - null
     - null
     - null
@@ -1229,42 +1189,6 @@ variants:
     - null
     - null
     - null
-  - model: Unionormer
-    model_plain: Unionormer
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2305.15747'
-    title: Union Subgraph Neural Networks
-    date: May 25, 2023
-    date_iso: '2023-05-25'
-    date_display: May 2023
-    codebase_url: https://github.com/AngusMonroe/UnionSNN
-    published_conference: AAAI 2023
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.0252
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0026
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: ET
     model_plain: ET
     is_baseline: false
@@ -1296,42 +1220,6 @@ variants:
     - null
     metric_stds:
     - 0.003
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: GPS
-    model_plain: GPS
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2305.15747'
-    title: Union Subgraph Neural Networks
-    date: May 25, 2023
-    date_iso: '2023-05-25'
-    date_display: May 2023
-    codebase_url: https://github.com/AngusMonroe/UnionSNN
-    published_conference: AAAI 2023
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.0262
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0025
     - null
     - null
     - null
@@ -1701,42 +1589,6 @@ variants:
     - null
     - null
     - null
-  - model: Graphormer
-    model_plain: Graphormer
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2305.15747'
-    title: Union Subgraph Neural Networks
-    date: May 25, 2023
-    date_iso: '2023-05-25'
-    date_display: May 2023
-    codebase_url: https://github.com/AngusMonroe/UnionSNN
-    published_conference: AAAI 2023
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.0309
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0031
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: Poincare
     model_plain: Poincare
     is_baseline: true
@@ -1989,18 +1841,162 @@ variants:
     - null
     - null
     - null
-  row_count: 150
+  - model: HIMP
+    model_plain: HIMP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2210.13978'
+    title: Boosting the Cycle Counting Power of Graph Neural Networks with I$^2$-GNNs
+    date: Oct 22, 2022
+    date_iso: '2022-10-22'
+    date_display: Oct 2022
+    codebase_url: https://github.com/GraphPKU/I2GNN
+    published_conference: ICLR 2022
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.036
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.002
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: DTNN
+    model_plain: DTNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1910.12892'
+    title: Hyperbolic Graph Neural Networks
+    date: Oct 28, 2019
+    date_iso: '2019-10-28'
+    date_display: Oct 2019
+    codebase_url: https://github.com/facebookresearch/hgnn
+    published_conference: NeurIPS 2019
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2019
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.04
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0003
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: AgentNet
+    model_plain: AgentNet
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2501.18739'
+    title: 'Beyond Message Passing: Neural Graph Pattern Machine'
+    date: Jan 30, 2025
+    date_iso: '2025-01-30'
+    date_display: Jan 2025
+    codebase_url: https://github.com/Zehong-Wang/GPM
+    published_conference: ICML 2025
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.04
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.006
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: MPNN
+    model_plain: MPNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1910.12892'
+    title: Hyperbolic Graph Neural Networks
+    date: Oct 28, 2019
+    date_iso: '2019-10-28'
+    date_display: Oct 2019
+    codebase_url: https://github.com/facebookresearch/hgnn
+    published_conference: NeurIPS 2019
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2019
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.041
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0002
+    - null
+    - null
+    - null
+    - null
+    - null
+  row_count: 142
   rows_json: /data/datasets/zinc/full-rows.json
   chart_json: /data/datasets/zinc/full-chart.json
   arch_counts:
-    gnn: 83
-    hybrid: 25
-    graph_transformer: 27
+    gnn: 79
+    hybrid: 23
+    graph_transformer: 25
     llm: 0
     walk: 1
     traditional: 7
   metric_counts:
-  - 139
+  - 131
   - 3
   - 1
   - 8
@@ -2013,6 +2009,12 @@ variants:
     arxiv_id: '1802.08786'
     title: Syntax-Directed Variational Autoencoder for Structured Data
     date: '2018-02-15'
+  - value: 0.024
+    std: 0.0002
+    model: Lorentz
+    arxiv_id: '1910.12892'
+    title: Hyperbolic Graph Neural Networks
+    date: '2019-10-28'
   - value: 0.022
     std: 0.002
     model: CIN

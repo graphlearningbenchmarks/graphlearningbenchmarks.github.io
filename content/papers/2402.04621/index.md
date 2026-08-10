@@ -238,7 +238,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 394
+    global_rank: 365
     sort_value: 0.8463
     sort_std: null
     comparison_type: global_top
@@ -303,8 +303,8 @@ results:
     value_note: ''
     sort_value: 0.8166
     sort_std: null
-    global_rank: 491
-    paper_rank: 491
+    global_rank: 460
+    paper_rank: 460
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -371,8 +371,8 @@ results:
     value_note: ''
     sort_value: 0.811
     sort_std: null
-    global_rank: 504
-    paper_rank: 504
+    global_rank: 472
+    paper_rank: 472
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -394,73 +394,6 @@ results:
 - &id001
   dataset: Amazon-Photo
   rows:
-  - model: MSH-GNN
-    model_key: msh-gnn
-    model_plain: MSH-GNN
-    value: 0.9766
-    std: 0.005
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.15015'
-    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
-    date: May 21, 2025
-    date_display: May 2025
-    date_iso: '2025-05-21'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9766
-    sort_std: 0.005
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GeoMancer
-    model_key: geomancer
-    model_plain: GeoMancer
-    value: 0.9705
-    std: 0.0013
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2510.04522'
-    title: 'Toward a Unified Geometry Understanding: Riemannian Diffusion Framework
-      for Graph Generation and Prediction'
-    date: Oct 6, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-06'
-    venue: Accepted by NeurIPS 2025
-    codebase_url: https://github.com/RingBDStack/GeoMancer
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.9705
-    sort_std: 0.0013
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
   - model: GraphTARIF
     model_key: graphtarif
     model_plain: GraphTARIF
@@ -487,13 +420,81 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 1
     sort_value: 0.9703
     sort_std: 0.0019
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.9669
+    std: 0.0014
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.20248'
+    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
+      Classification'
+    date: May 18, 2026
+    date_display: May 2026
+    date_iso: '2026-05-18'
+    venue: null
+    codebase_url: https://github.com/transductive-sharpening/tunedGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.9669
+    sort_std: 0.0014
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DAM-GT
+    model_key: dam-gt
+    model_plain: DAM-GT
+    value: 0.9666
+    std: 0.0013
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2505.17660'
+    title: 'DAM-GT: Dual Positional Encoding-Based Attention Masking Graph Transformer
+      for Node Classification'
+    date: May 23, 2025
+    date_display: May 2025
+    date_iso: '2025-05-23'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9666
+    sort_std: 0.0013
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: SAGE
     model_key: sage
@@ -521,7 +522,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 13
+    global_rank: 8
     sort_value: 0.9643
     sort_std: 0.0027
     comparison_type: global_top
@@ -554,7 +555,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 434
+    global_rank: 426
     sort_value: 0.9128
     sort_std: 0.0063
     comparison_type: global_top
@@ -619,8 +620,8 @@ results:
     value_note: ''
     sort_value: 0.905
     sort_std: null
-    global_rank: 478
-    paper_rank: 478
+    global_rank: 470
+    paper_rank: 470
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -687,8 +688,8 @@ results:
     value_note: ''
     sort_value: 0.9044
     sort_std: null
-    global_rank: 481
-    paper_rank: 481
+    global_rank: 473
+    paper_rank: 473
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -710,106 +711,104 @@ results:
 - &id003
   dataset: Coauthor-Physics
   rows:
-  - model: GeoMancer
-    model_key: geomancer
-    model_plain: GeoMancer
-    value: 0.9878
-    std: 0.0012
+  - model: GrokFormer
+    model_key: grokformer
+    model_plain: GrokFormer
+    value: 0.9831
+    std: 0.0018
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2510.04522'
-    title: 'Toward a Unified Geometry Understanding: Riemannian Diffusion Framework
-      for Graph Generation and Prediction'
-    date: Oct 6, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-06'
-    venue: Accepted by NeurIPS 2025
-    codebase_url: https://github.com/RingBDStack/GeoMancer
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2411.17296'
+    title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    date: Nov 26, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-26'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/GGA23/GrokFormer
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.9878
-    sort_std: 0.0012
+    sort_value: 0.9831
+    sort_std: 0.0018
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LGD
-    model_key: lgd
-    model_plain: LGD
-    value: 0.9855
-    std: 0.0012
+  - model: PolyFormer
+    model_key: polyformer
+    model_plain: PolyFormer
+    value: 0.9808
+    std: 0.0027
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2510.04522'
-    title: 'Toward a Unified Geometry Understanding: Riemannian Diffusion Framework
-      for Graph Generation and Prediction'
-    date: Oct 6, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-06'
-    venue: Accepted by NeurIPS 2025
-    codebase_url: https://github.com/RingBDStack/GeoMancer
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2411.17296'
+    title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    date: Nov 26, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-26'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/GGA23/GrokFormer
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.9855
-    sort_std: 0.0012
+    sort_value: 0.9808
+    sort_std: 0.0027
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MSH-GNN
-    model_key: msh-gnn
-    model_plain: MSH-GNN
-    value: 0.9837
-    std: 0.0008
+  - model: SGFormer
+    model_key: sgformer
+    model_plain: SGFormer
+    value: 0.9796
+    std: 0.0081
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.15015'
-    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
-    date: May 21, 2025
-    date_display: May 2025
-    date_iso: '2025-05-21'
-    venue: null
-    codebase_url: ''
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2411.17296'
+    title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    date: Nov 26, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-26'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/GGA23/GrokFormer
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.9837
-    sort_std: 0.0008
+    sort_value: 0.9796
+    sort_std: 0.0081
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: GCN
     model_key: gcn
@@ -836,7 +835,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 12
+    global_rank: 9
     sort_value: 0.9774
     sort_std: 0.0035
     comparison_type: global_top
@@ -870,7 +869,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 92
+    global_rank: 83
     sort_value: 0.9597
     sort_std: 0.0007
     comparison_type: global_top
@@ -935,8 +934,8 @@ results:
     value_note: ''
     sort_value: 0.9331
     sort_std: null
-    global_rank: 260
-    paper_rank: 260
+    global_rank: 247
+    paper_rank: 247
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1003,8 +1002,8 @@ results:
     value_note: ''
     sort_value: 0.9297
     sort_std: null
-    global_rank: 287
-    paper_rank: 287
+    global_rank: 273
+    paper_rank: 273
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1026,44 +1025,11 @@ results:
 - &id004
   dataset: DBLP
   rows:
-  - model: HERec
-    model_key: herec
-    model_plain: HERec
-    value: 0.9993
-    std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: walk
-    architecture_label: Walk
-    architecture_title: Random-walk graph embedding
-    arxiv_id: '1912.10832'
-    title: An Attention-based Graph Neural Network for Heterogeneous Structural Learning
-    date: Dec 19, 2019
-    date_display: Dec 2019
-    date_iso: '2019-12-19'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: https://github.com/didi/hetsann
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9993
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: HetSANN
-    model_key: hetsann
-    model_plain: HetSANN
-    value: 0.9972
-    std: null
+  - model: LMSPS
+    model_key: lmsps
+    model_plain: LMSPS
+    value: 0.9566
+    std: 0.002
     metric: Micro-F1
     higher_is_better: true
     is_baseline: false
@@ -1073,57 +1039,90 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '1912.10832'
-    title: An Attention-based Graph Neural Network for Heterogeneous Structural Learning
-    date: Dec 19, 2019
-    date_display: Dec 2019
-    date_iso: '2019-12-19'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: https://github.com/didi/hetsann
+    arxiv_id: '2307.08430'
+    title: Long-range Meta-path Search on Large-scale Heterogeneous Graphs
+    date: Jul 17, 2023
+    date_display: Jul 2023
+    date_iso: '2023-07-17'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9566
+    sort_std: 0.002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: PSHGCN
+    model_key: pshgcn
+    model_plain: PSHGCN
+    value: 0.9561
+    std: 0.0012
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2305.19872'
+    title: Spectral Heterogeneous Graph Convolutions via Positive Noncommutative Polynomials
+    date: May 31, 2023
+    date_display: May 2023
+    date_iso: '2023-05-31'
+    venue: The Web Conference
+    codebase_url: https://github.com/ivam-he/PSHGCN
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.9972
-    sort_std: null
+    sort_value: 0.9561
+    sort_std: 0.0012
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
-  - model: DeepWalk
-    model_key: deepwalk
-    model_plain: DeepWalk
-    value: 0.9941
-    std: null
+  - model: RpHGNN
+    model_key: rphgnn
+    model_plain: RpHGNN
+    value: 0.9555
+    std: 0.0029
     metric: Micro-F1
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: walk
-    architecture_label: Walk
-    architecture_title: Random-walk graph embedding
-    arxiv_id: '1912.10832'
-    title: An Attention-based Graph Neural Network for Heterogeneous Structural Learning
-    date: Dec 19, 2019
-    date_display: Dec 2019
-    date_iso: '2019-12-19'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: https://github.com/didi/hetsann
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2310.14481'
+    title: Efficient Heterogeneous Graph Learning via Random Projection
+    date: Oct 23, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-23'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/CrawlScript/RpHGNN
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.9941
-    sort_std: null
+    sort_value: 0.9555
+    sort_std: 0.0029
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: GCN
     model_key: gcn
@@ -1150,7 +1149,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 29
+    global_rank: 21
     sort_value: 0.946
     sort_std: 0.0031
     comparison_type: global_top
@@ -1215,8 +1214,8 @@ results:
     value_note: ''
     sort_value: 0.7707
     sort_std: null
-    global_rank: 155
-    paper_rank: 155
+    global_rank: 151
+    paper_rank: 151
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1283,8 +1282,8 @@ results:
     value_note: ''
     sort_value: 0.7542
     sort_std: null
-    global_rank: 160
-    paper_rank: 160
+    global_rank: 156
+    paper_rank: 156
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1320,7 +1319,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 185
+    global_rank: 179
     sort_value: 0.6447
     sort_std: 0.0136
     comparison_type: global_top

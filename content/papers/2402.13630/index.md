@@ -770,8 +770,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-02-02'
-    value_gap_source_date_label: WWW 2025
+    value_gap_source_date_iso: '2024-02-21'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -782,10 +782,10 @@ results:
     today_delta_significant: false
     true_value: 0.6789
     true_std: 0.0021
-    value_gap_source_arxiv: '2502.00806'
-    value_gap_source_title: 'UniGraph2: Learning a Unified Embedding Space to Bind
-      Multimodal Graphs'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2402.13630'
+    value_gap_source_title: 'UniGraph: Learning a Unified Cross-Domain Foundation
+      Model for Text-Attributed Graphs'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -828,7 +828,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 38
+    global_rank: 39
     sort_value: 0.6644
     sort_std: 0.0017
     comparison_type: global_top
@@ -893,8 +893,8 @@ results:
     value_note: ''
     sort_value: 0.6624
     sort_std: 0.0054
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -941,8 +941,8 @@ results:
       Full-batch Training of Graph Neural Networks on Large Graphs'
     at_pub_source_date_iso: '2021-11-11'
     at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2025-02-02'
-    value_gap_source_date_label: WWW 2025
+    value_gap_source_date_iso: '2024-02-21'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: 0.022800000000000042
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -953,17 +953,17 @@ results:
     today_delta_significant: false
     true_value: 0.6598
     true_std: 0.0023
-    value_gap_source_arxiv: '2502.00806'
-    value_gap_source_title: 'UniGraph2: Learning a Unified Embedding Space to Bind
-      Multimodal Graphs'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2402.13630'
+    value_gap_source_title: 'UniGraph: Learning a Unified Cross-Domain Foundation
+      Model for Text-Attributed Graphs'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.6598
     sort_std: 0.0023
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 53
+    paper_rank: 53
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1000,7 +1000,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 98
+    global_rank: 102
     sort_value: 0.496
     sort_std: 0.003
     comparison_type: global_top
@@ -1213,8 +1213,8 @@ results:
     value_note: ''
     sort_value: 0.8224
     sort_std: 0.0024
-    global_rank: 106
-    paper_rank: 106
+    global_rank: 92
+    paper_rank: 92
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1281,8 +1281,8 @@ results:
     value_note: ''
     sort_value: 0.7911
     sort_std: 0.0024
-    global_rank: 208
-    paper_rank: 208
+    global_rank: 182
+    paper_rank: 182
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1349,8 +1349,8 @@ results:
     value_note: ''
     sort_value: 0.7901
     sort_std: 0.0032
-    global_rank: 216
-    paper_rank: 216
+    global_rank: 190
+    paper_rank: 190
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1417,8 +1417,8 @@ results:
     value_note: ''
     sort_value: 0.7824
     sort_std: 0.0037
-    global_rank: 249
-    paper_rank: 249
+    global_rank: 223
+    paper_rank: 223
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1485,8 +1485,8 @@ results:
     value_note: ''
     sort_value: 0.7811
     sort_std: 0.0024
-    global_rank: 250
-    paper_rank: 250
+    global_rank: 224
+    paper_rank: 224
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1521,7 +1521,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 394
+    global_rank: 361
     sort_value: 0.6605
     sort_std: 0.002
     comparison_type: global_top

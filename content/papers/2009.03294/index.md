@@ -59,8 +59,8 @@ proposed_models:
 - GIN+GraphNorm
 - GraphNorm
 - GCN+GraphNorm
-mrr: 0.0083
-adjusted_mrr: 0.0083
+mrr: 0.0085
+adjusted_mrr: 0.0085
 mrr_dataset_count: 4
 benchmark_categories:
 - TU Dortmund
@@ -138,7 +138,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -207,7 +207,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 29
+    global_rank: 23
     sort_value: 0.826
     sort_std: 0.022
     comparison_type: global_top
@@ -272,8 +272,8 @@ results:
     value_note: ''
     sort_value: 0.802
     sort_std: 0.01
-    global_rank: 140
-    paper_rank: 140
+    global_rank: 120
+    paper_rank: 120
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -340,8 +340,8 @@ results:
     value_note: ''
     sort_value: 0.802
     sort_std: 0.019
-    global_rank: 139
-    paper_rank: 139
+    global_rank: 119
+    paper_rank: 119
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -408,8 +408,8 @@ results:
     value_note: ''
     sort_value: 0.801
     sort_std: 0.008
-    global_rank: 148
-    paper_rank: 148
+    global_rank: 128
+    paper_rank: 128
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -476,8 +476,8 @@ results:
     value_note: ''
     sort_value: 0.8
     sort_std: 0.021
-    global_rank: 154
-    paper_rank: 154
+    global_rank: 133
+    paper_rank: 133
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -512,7 +512,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 180
+    global_rank: 157
     sort_value: 0.792
     sort_std: 0.024
     comparison_type: global_top
@@ -576,8 +576,8 @@ results:
     value_note: ''
     sort_value: 0.789
     sort_std: 0.019
-    global_rank: 196
-    paper_rank: 196
+    global_rank: 171
+    paper_rank: 171
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -644,10 +644,10 @@ results:
     value_note: ''
     sort_value: 0.7759
     sort_std: 0.0224
-    global_rank: 228
-    paper_rank: 322
-    rank_delta: 94
-    rank_delta_abs: 94
+    global_rank: 202
+    paper_rank: 293
+    rank_delta: 91
+    rank_delta_abs: 91
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -712,8 +712,8 @@ results:
     value_note: ''
     sort_value: 0.739
     sort_std: 0.019
-    global_rank: 319
-    paper_rank: 319
+    global_rank: 291
+    paper_rank: 291
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -779,8 +779,8 @@ results:
     value_note: ''
     sort_value: 0.5211
     sort_std: 0.007
-    global_rank: 407
-    paper_rank: 407
+    global_rank: 369
+    paper_rank: 369
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -824,7 +824,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -1259,8 +1259,8 @@ results:
     value_note: ''
     sort_value: 0.879
     sort_std: 0.098
-    global_rank: 355
-    paper_rank: 355
+    global_rank: 356
+    paper_rank: 356
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1295,7 +1295,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 429
+    global_rank: 430
     sort_value: 0.866
     sort_std: 0.0495
     comparison_type: global_top
@@ -1361,8 +1361,8 @@ results:
     value_note: ''
     sort_value: 0.8583
     sort_std: 0.0116
-    global_rank: 454
-    paper_rank: 454
+    global_rank: 455
+    paper_rank: 455
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1430,8 +1430,8 @@ results:
     value_note: ''
     sort_value: 0.824
     sort_std: 0.064
-    global_rank: 611
-    paper_rank: 611
+    global_rank: 612
+    paper_rank: 612
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1498,8 +1498,8 @@ results:
     value_note: ''
     sort_value: 0.67
     sort_std: null
-    global_rank: 839
-    paper_rank: 839
+    global_rank: 846
+    paper_rank: 846
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1653,10 +1653,11 @@ results:
     published_conference: ICML 2020
     at_pub_value: 0.86
     at_pub_std: 0.018
-    at_pub_source_arxiv: '1810.00826'
-    at_pub_source_title: How Powerful are Graph Neural Networks?
-    at_pub_source_date_iso: '2018-10-01'
-    at_pub_source_date_label: ICLR 2018
+    at_pub_source_arxiv: '1905.13192'
+    at_pub_source_title: 'Graph Neural Tangent Kernel: Fusing Graph Neural Networks
+      with Graph Kernels'
+    at_pub_source_date_iso: '2019-05-30'
+    at_pub_source_date_label: NeurIPS 2019
     value_gap_source_date_iso: '2020-09-07'
     value_gap_source_date_label: ICML 2020
     gap_vs_at_pub: null
@@ -1715,7 +1716,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 81
+    global_rank: 82
     sort_value: 0.8303
     sort_std: 0.0137
     comparison_type: global_top
@@ -1981,8 +1982,8 @@ results:
     value_note: ''
     sort_value: 0.783
     sort_std: 0.017
-    global_rank: 338
-    paper_rank: 338
+    global_rank: 337
+    paper_rank: 337
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2048,10 +2049,10 @@ results:
     value_note: ''
     sort_value: 0.765
     sort_std: 0.019
-    global_rank: 414
-    paper_rank: 473
-    rank_delta: 59
-    rank_delta_abs: 59
+    global_rank: 411
+    paper_rank: 471
+    rank_delta: 60
+    rank_delta_abs: 60
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2117,8 +2118,8 @@ results:
     value_note: ''
     sort_value: 0.6261
     sort_std: null
-    global_rank: 603
-    paper_rank: 603
+    global_rank: 598
+    paper_rank: 598
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2197,7 +2198,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -2467,7 +2468,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: unknown
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 12
@@ -2508,12 +2509,12 @@ results:
     date_iso: '2020-09-07'
     published_venue: ICML 2020
     published_conference: ICML 2020
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.879
+    at_pub_std: 0.025
+    at_pub_source_arxiv: '1810.00826'
+    at_pub_source_title: How Powerful are Graph Neural Networks?
+    at_pub_source_date_iso: '2018-10-01'
+    at_pub_source_date_label: ICLR 2018
     value_gap_source_date_iso: '2020-09-07'
     value_gap_source_date_label: ICML 2020
     gap_vs_at_pub: null
@@ -2535,8 +2536,8 @@ results:
     value_note: ''
     sort_value: 0.879
     sort_std: 0.025
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 52
+    paper_rank: 52
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2603,8 +2604,8 @@ results:
     value_note: ''
     sort_value: 0.828
     sort_std: 0.077
-    global_rank: 65
-    paper_rank: 65
+    global_rank: 68
+    paper_rank: 68
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2671,8 +2672,8 @@ results:
     value_note: ''
     sort_value: 0.81
     sort_std: 0.031
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2819,7 +2820,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 10
+    global_rank: 12
     sort_value: 0.809
     sort_std: 0.016
     comparison_type: global_top
@@ -2883,8 +2884,8 @@ results:
     value_note: ''
     sort_value: 0.788
     sort_std: 0.01
-    global_rank: 76
-    paper_rank: 96
+    global_rank: 77
+    paper_rank: 97
     rank_delta: 20
     rank_delta_abs: 20
     rank_delta_direction: worse
@@ -2951,8 +2952,8 @@ results:
     value_note: ''
     sort_value: 0.7818
     sort_std: 0.0042
-    global_rank: 100
-    paper_rank: 100
+    global_rank: 101
+    paper_rank: 101
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3018,10 +3019,10 @@ results:
     value_note: ''
     sort_value: 0.7808
     sort_std: 0.0116
-    global_rank: 106
+    global_rank: 107
     paper_rank: 121
-    rank_delta: 15
-    rank_delta_abs: 15
+    rank_delta: 14
+    rank_delta_abs: 14
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3086,9 +3087,9 @@ results:
     sort_value: 0.778
     sort_std: 0.0182
     global_rank: 120
-    paper_rank: 237
-    rank_delta: 117
-    rank_delta_abs: 117
+    paper_rank: 238
+    rank_delta: 118
+    rank_delta_abs: 118
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3153,8 +3154,8 @@ results:
     value_note: ''
     sort_value: 0.7754
     sort_std: 0.0127
-    global_rank: 129
-    paper_rank: 129
+    global_rank: 130
+    paper_rank: 130
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3189,7 +3190,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 171
+    global_rank: 172
     sort_value: 0.769
     sort_std: 0.0136
     comparison_type: global_top
@@ -3254,8 +3255,8 @@ results:
     value_note: ''
     sort_value: 0.7661
     sort_std: 0.0097
-    global_rank: 185
-    paper_rank: 185
+    global_rank: 187
+    paper_rank: 187
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3322,8 +3323,8 @@ results:
     value_note: ''
     sort_value: 0.763
     sort_std: 0.003
-    global_rank: 203
-    paper_rank: 216
+    global_rank: 204
+    paper_rank: 217
     rank_delta: 13
     rank_delta_abs: 13
     rank_delta_direction: worse
@@ -3390,8 +3391,8 @@ results:
     value_note: ''
     sort_value: 0.7622
     sort_std: 0.0095
-    global_rank: 205
-    paper_rank: 205
+    global_rank: 206
+    paper_rank: 206
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3458,8 +3459,8 @@ results:
     value_note: ''
     sort_value: 0.7504
     sort_std: 0.0048
-    global_rank: 254
-    paper_rank: 254
+    global_rank: 255
+    paper_rank: 255
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3526,8 +3527,8 @@ results:
     value_note: ''
     sort_value: 0.7479
     sort_std: 0.0092
-    global_rank: 258
-    paper_rank: 258
+    global_rank: 259
+    paper_rank: 259
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

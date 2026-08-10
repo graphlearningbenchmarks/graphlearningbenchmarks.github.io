@@ -226,8 +226,8 @@ results:
     value_note: ''
     sort_value: 0.8204
     sort_std: 0.0127
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -294,8 +294,8 @@ results:
     value_note: ''
     sort_value: 0.7872
     sort_std: 0.0042
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -335,20 +335,19 @@ results:
     date_iso: '2023-05-30'
     published_venue: ICML 2023
     published_conference: ICML 2023
-    at_pub_value: 0.7366
-    at_pub_std: 0.013
-    at_pub_source_arxiv: '2206.04739'
-    at_pub_source_title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive
-      Learning on Hypergraphs'
-    at_pub_source_date_iso: '2022-06-09'
-    at_pub_source_date_label: AAAI 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2023-05-30'
     value_gap_source_date_label: ICML 2023
-    gap_vs_at_pub: 0.015000000000000013
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
-    insignificant_improvement_at_pub: true
+    insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
@@ -363,12 +362,12 @@ results:
     value_note: ''
     sort_value: 0.7516
     sort_std: 0.0065
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -399,7 +398,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 30
+    global_rank: 21
     sort_value: 0.7431
     sort_std: 0.0189
     comparison_type: global_top
@@ -612,8 +611,8 @@ results:
     value_note: ''
     sort_value: 0.7987
     sort_std: null
-    global_rank: 172
-    paper_rank: 172
+    global_rank: 149
+    paper_rank: 149
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -648,7 +647,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 394
+    global_rank: 361
     sort_value: 0.6605
     sort_std: 0.002
     comparison_type: global_top

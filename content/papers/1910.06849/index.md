@@ -671,8 +671,8 @@ results:
     value_note: ''
     sort_value: 0.973
     sort_std: null
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 59
+    paper_rank: 59
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -712,15 +712,15 @@ results:
     date_iso: '2019-10-15'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.637
-    at_pub_std: 0.006
-    at_pub_source_arxiv: '1907.04931'
-    at_pub_source_title: 'GraphSAINT: mpling Based ductive Learning Me hod'
-    at_pub_source_date_iso: '2019-07-10'
-    at_pub_source_date_label: ICLR 2019
+    at_pub_value: 0.768
+    at_pub_std: null
+    at_pub_source_arxiv: '1710.10903'
+    at_pub_source_title: Graph Attention Networks
+    at_pub_source_date_iso: '2017-10-30'
+    at_pub_source_date_label: ICLR 2017
     value_gap_source_date_iso: '2022-01-31'
     value_gap_source_date_label: TMLR 2022
-    gap_vs_at_pub: 0.025000000000000022
+    gap_vs_at_pub: 0.15600000000000003
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -740,14 +740,47 @@ results:
     sort_value: 0.958
     sort_std: 0.001
     global_rank: 78
-    paper_rank: 155
-    rank_delta: 77
-    rank_delta_abs: 77
+    paper_rank: 163
+    rank_delta: 85
+    rank_delta_abs: 85
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'GraphSAINT: mpling Based ductive Learning Me hod'
-    comparison_source_arxiv: '1907.04931'
+    comparison_source_title: Graph Attention Networks
+    comparison_source_arxiv: '1710.10903'
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.462
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2407.00494'
+    title: Graph Neural Networks Gone Hogwild
+    date: Jun 29, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-29'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 183
+    sort_value: 0.462
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   rank_metric: F1

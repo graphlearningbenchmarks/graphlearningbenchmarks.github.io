@@ -43,8 +43,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - MPNNs
-mrr: 0.0252
-adjusted_mrr: 0.0252
+mrr: 0.0268
+adjusted_mrr: 0.0268
 mrr_dataset_count: 3
 benchmark_categories:
 - TU Dortmund
@@ -122,7 +122,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -191,7 +191,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 29
+    global_rank: 23
     sort_value: 0.826
     sort_std: 0.022
     comparison_type: global_top
@@ -256,10 +256,10 @@ results:
     value_note: ''
     sort_value: 0.822
     sort_std: 0.021
-    global_rank: 37
-    paper_rank: 135
-    rank_delta: 98
-    rank_delta_abs: 98
+    global_rank: 30
+    paper_rank: 115
+    rank_delta: 85
+    rank_delta_abs: 85
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -323,10 +323,10 @@ results:
     value_note: ''
     sort_value: 0.8138
     sort_std: 0.0142
-    global_rank: 76
-    paper_rank: 114
-    rank_delta: 38
-    rank_delta_abs: 38
+    global_rank: 65
+    paper_rank: 95
+    rank_delta: 30
+    rank_delta_abs: 30
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -390,8 +390,8 @@ results:
     value_note: ''
     sort_value: 0.809
     sort_std: 0.008
-    global_rank: 105
-    paper_rank: 105
+    global_rank: 89
+    paper_rank: 89
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -457,8 +457,8 @@ results:
     value_note: ''
     sort_value: 0.806
     sort_std: 0.02
-    global_rank: 122
-    paper_rank: 122
+    global_rank: 103
+    paper_rank: 103
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -493,7 +493,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 180
+    global_rank: 157
     sort_value: 0.792
     sort_std: 0.024
     comparison_type: global_top
@@ -559,10 +559,10 @@ results:
     value_note: ''
     sort_value: 0.791
     sort_std: 0.001
-    global_rank: 183
-    paper_rank: 194
-    rank_delta: 11
-    rank_delta_abs: 11
+    global_rank: 160
+    paper_rank: 169
+    rank_delta: 9
+    rank_delta_abs: 9
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -626,8 +626,8 @@ results:
     value_note: ''
     sort_value: 0.784
     sort_std: 0.025
-    global_rank: 206
-    paper_rank: 206
+    global_rank: 181
+    paper_rank: 181
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -694,10 +694,10 @@ results:
     value_note: ''
     sort_value: 0.7759
     sort_std: 0.0224
-    global_rank: 228
-    paper_rank: 320
-    rank_delta: 92
-    rank_delta_abs: 92
+    global_rank: 202
+    paper_rank: 292
+    rank_delta: 90
+    rank_delta_abs: 90
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -717,9 +717,9 @@ results:
 - &id004
   dataset: MNIST
   rows:
-  - model: Schrödinger GNN
-    model_key: schrödinger gnn
-    model_plain: Schrödinger GNN
+  - model: Schrödinger
+    model_key: schrödinger
+    model_plain: Schrödinger
     value: 0.9913
     std: 0.0004
     metric: Accuracy
@@ -1459,9 +1459,9 @@ results:
     sort_value: 0.9934
     sort_std: null
     global_rank: 2
-    paper_rank: 100
-    rank_delta: 98
-    rank_delta_abs: 98
+    paper_rank: 101
+    rank_delta: 99
+    rank_delta_abs: 99
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1694,8 +1694,8 @@ results:
     value_note: ''
     sort_value: 0.832
     sort_std: 0.011
-    global_rank: 73
-    paper_rank: 73
+    global_rank: 74
+    paper_rank: 74
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1731,7 +1731,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 81
+    global_rank: 82
     sort_value: 0.8303
     sort_std: 0.0137
     comparison_type: global_top
@@ -1795,8 +1795,8 @@ results:
     value_note: ''
     sort_value: 0.828
     sort_std: 0.013
-    global_rank: 95
-    paper_rank: 95
+    global_rank: 96
+    paper_rank: 96
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1863,8 +1863,8 @@ results:
     value_note: ''
     sort_value: 0.828
     sort_std: 0.022
-    global_rank: 91
-    paper_rank: 91
+    global_rank: 92
+    paper_rank: 92
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1930,8 +1930,8 @@ results:
     value_note: ''
     sort_value: 0.827
     sort_std: 0.014
-    global_rank: 104
-    paper_rank: 104
+    global_rank: 105
+    paper_rank: 105
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1997,10 +1997,10 @@ results:
     value_note: ''
     sort_value: 0.765
     sort_std: 0.019
-    global_rank: 414
-    paper_rank: 473
-    rank_delta: 59
-    rank_delta_abs: 59
+    global_rank: 411
+    paper_rank: 471
+    rank_delta: 60
+    rank_delta_abs: 60
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2066,8 +2066,8 @@ results:
     value_note: ''
     sort_value: 0.7433
     sort_std: 0.0271
-    global_rank: 477
-    paper_rank: 479
+    global_rank: 475
+    paper_rank: 477
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -2089,6 +2089,72 @@ results:
 - &id002
   dataset: PROTEINS
   rows:
+  - model: MSH-GNN
+    model_key: msh-gnn
+    model_plain: MSH-GNN
+    value: 0.941
+    std: 0.033
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.15015'
+    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
+    date: May 21, 2025
+    date_display: May 2025
+    date_iso: '2025-05-21'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.941
+    sort_std: 0.033
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GRDL
+    model_key: grdl
+    model_plain: GRDL
+    value: 0.826
+    std: 0.012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2408.11370'
+    title: 'Graph Classification via Reference Distribution Learning: Theory and Practice'
+    date: Aug 21, 2024
+    date_display: Aug 2024
+    date_iso: '2024-08-21'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.826
+    sort_std: 0.012
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: GMN
     model_key: gmn
     model_plain: GMN
@@ -2114,81 +2180,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 3
     sort_value: 0.8225
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: CI-GNN
-    model_key: ci-gnn
-    model_plain: CI-GNN
-    value: 0.82
-    std: 0.02
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2301.01642'
-    title: 'CI-GNN: A Granger Causality-Inspired Graph Neural Network for Interpretable
-      Brain Network-Based Psychiatric Diagnosis'
-    date: Jan 4, 2023
-    date_display: Jan 2023
-    date_iso: '2023-01-04'
-    venue: Neural Networks
-    codebase_url: https://github.com/ZKZ-Brain/CI-GNN
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.82
-    sort_std: 0.02
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: DiffPool+GPL
-    model_key: diffpool+gpl
-    model_plain: DiffPool+GPL
-    value: 0.8196
-    std: 0.0286
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.11361'
-    title: 'Graph Structure Prompt Learning: A Novel Methodology to Improve Performance
-      of Graph Neural Networks'
-    date: Jul 16, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-16'
-    venue: Applied intelligence (Boston)
-    codebase_url: https://github.com/PreckLi/graph_prompt_learning
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.8196
-    sort_std: 0.0286
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: CIN
     model_key: cin
@@ -2247,16 +2245,16 @@ results:
     value_note: ''
     sort_value: 0.805
     sort_std: 0.039
-    global_rank: 8
-    paper_rank: 79
-    rank_delta: 71
-    rank_delta_abs: 71
+    global_rank: 14
+    paper_rank: 97
+    rank_delta: 83
+    rank_delta_abs: 83
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: GIN
     model_key: gin
@@ -2316,16 +2314,16 @@ results:
     value_note: ''
     sort_value: 0.788
     sort_std: 0.041
-    global_rank: 27
-    paper_rank: 136
-    rank_delta: 109
-    rank_delta_abs: 109
+    global_rank: 38
+    paper_rank: 157
+    rank_delta: 119
+    rank_delta_abs: 119
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: SAGE
     model_key: sage
@@ -2352,7 +2350,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 63
+    global_rank: 80
     sort_value: 0.7726
     sort_std: 0.0228
     comparison_type: global_top
@@ -2417,8 +2415,8 @@ results:
     value_note: ''
     sort_value: 0.772
     sort_std: 0.047
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 87
+    paper_rank: 87
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2484,8 +2482,8 @@ results:
     value_note: ''
     sort_value: 0.771
     sort_std: 0.044
-    global_rank: 76
-    paper_rank: 76
+    global_rank: 93
+    paper_rank: 93
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2551,8 +2549,8 @@ results:
     value_note: ''
     sort_value: 0.768
     sort_std: 0.038
-    global_rank: 89
-    paper_rank: 89
+    global_rank: 108
+    paper_rank: 108
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2598,8 +2596,8 @@ results:
     at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
     at_pub_source_date_iso: '2021-06-23'
     at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2024-06-17'
-    value_gap_source_date_label: '2024'
+    value_gap_source_date_iso: '2025-05-21'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2610,16 +2608,17 @@ results:
     today_delta_significant: false
     true_value: 0.766
     true_std: 0.055
-    value_gap_source_arxiv: '2406.11714'
-    value_gap_source_title: Scalable Expressiveness through Preprocessed Graph Perturbations
+    value_gap_source_arxiv: '2505.15015'
+    value_gap_source_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message
+      Passing
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.766
     sort_std: 0.055
-    global_rank: 98
-    paper_rank: 98
+    global_rank: 118
+    paper_rank: 118
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2686,8 +2685,8 @@ results:
     value_note: ''
     sort_value: 0.765
     sort_std: 0.042
-    global_rank: 109
-    paper_rank: 109
+    global_rank: 128
+    paper_rank: 128
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2753,8 +2752,8 @@ results:
     value_note: ''
     sort_value: 0.765
     sort_std: 0.034
-    global_rank: 105
-    paper_rank: 105
+    global_rank: 126
+    paper_rank: 126
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2820,10 +2819,10 @@ results:
     value_note: ''
     sort_value: 0.7626
     sort_std: null
-    global_rank: 133
-    paper_rank: 198
-    rank_delta: 65
-    rank_delta_abs: 65
+    global_rank: 154
+    paper_rank: 215
+    rank_delta: 61
+    rank_delta_abs: 61
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2856,7 +2855,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 153
+    global_rank: 170
     sort_value: 0.76
     sort_std: 0.032
     comparison_type: global_top
@@ -2922,10 +2921,10 @@ results:
     value_note: ''
     sort_value: 0.756
     sort_std: 0.004
-    global_rank: 192
-    paper_rank: 255
-    rank_delta: 63
-    rank_delta_abs: 63
+    global_rank: 208
+    paper_rank: 275
+    rank_delta: 67
+    rank_delta_abs: 67
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2989,8 +2988,8 @@ results:
     value_note: ''
     sort_value: 0.717
     sort_std: 0.01
-    global_rank: 425
-    paper_rank: 425
+    global_rank: 467
+    paper_rank: 467
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

@@ -46,8 +46,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - SubGDiff
-mrr: 0.0111
-adjusted_mrr: 0.0111
+mrr: 0.0112
+adjusted_mrr: 0.0112
 mrr_dataset_count: 7
 benchmark_categories:
 - MoleculeNet
@@ -60,7 +60,7 @@ benchmark_coverage:
 - benchmark: Quantum Chemistry
   benchmark_slug: quantum-chemistry
   evaluated: 1
-  total: 3
+  total: 1
 task_categories:
 - graph_classification
 - graph_regression
@@ -202,12 +202,12 @@ results:
     published_venue: NeurIPS 2024
     published_conference: NeurIPS 2024
     at_pub_value: 0.89
-    at_pub_std: 0.003
-    at_pub_source_arxiv: '2202.09346'
-    at_pub_source_title: Improving Molecular Contrastive Learning via Faulty Negative
-      Mitigation and Decomposed Fragment Contrast
-    at_pub_source_date_iso: '2022-02-18'
-    at_pub_source_date_label: '2022'
+    at_pub_std: null
+    at_pub_source_arxiv: '2106.09553'
+    at_pub_source_title: How Much Structural Information Large Scale Molecular Language
+      Representations Can Capture?
+    at_pub_source_date_iso: '2021-06-17'
+    at_pub_source_date_label: '2021'
     value_gap_source_date_iso: '2022-02-18'
     value_gap_source_date_label: '2022'
     gap_vs_at_pub: 0.17500000000000004
@@ -230,15 +230,15 @@ results:
     sort_value: 0.89
     sort_std: 0.003
     global_rank: 9
-    paper_rank: 267
-    rank_delta: 258
-    rank_delta_abs: 258
+    paper_rank: 274
+    rank_delta: 265
+    rank_delta_abs: 265
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Improving Molecular Contrastive Learning via Faulty Negative
-      Mitigation and Decomposed Fragment Contrast
-    comparison_source_arxiv: '2202.09346'
+    comparison_source_title: How Much Structural Information Large Scale Molecular
+      Language Representations Can Capture?
+    comparison_source_arxiv: '2106.09553'
     is_best: false
     is_std_outlier: false
   - model: GIN
@@ -264,10 +264,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 41
+    global_rank: 43
     sort_value: 0.8646
     sort_std: 0.0081
     comparison_type: global_top
@@ -333,10 +333,10 @@ results:
     value_note: ''
     sort_value: 0.8381
     sort_std: 0.0101
-    global_rank: 89
-    paper_rank: 176
-    rank_delta: 87
-    rank_delta_abs: 87
+    global_rank: 93
+    paper_rank: 182
+    rank_delta: 89
+    rank_delta_abs: 89
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -402,8 +402,8 @@ results:
     value_note: ''
     sort_value: 0.821
     sort_std: 0.0096
-    global_rank: 124
-    paper_rank: 124
+    global_rank: 129
+    paper_rank: 129
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -470,8 +470,8 @@ results:
     value_note: ''
     sort_value: 0.814
     sort_std: 0.0066
-    global_rank: 137
-    paper_rank: 137
+    global_rank: 143
+    paper_rank: 143
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -537,8 +537,8 @@ results:
     value_note: ''
     sort_value: 0.812
     sort_std: 0.009
-    global_rank: 144
-    paper_rank: 174
+    global_rank: 150
+    paper_rank: 180
     rank_delta: 30
     rank_delta_abs: 30
     rank_delta_direction: worse
@@ -606,8 +606,8 @@ results:
     value_note: ''
     sort_value: 0.797
     sort_std: 0.0154
-    global_rank: 177
-    paper_rank: 177
+    global_rank: 183
+    paper_rank: 183
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -674,8 +674,8 @@ results:
     value_note: ''
     sort_value: 0.796
     sort_std: 0.012
-    global_rank: 180
-    paper_rank: 238
+    global_rank: 186
+    paper_rank: 244
     rank_delta: 58
     rank_delta_abs: 58
     rank_delta_direction: worse
@@ -744,8 +744,8 @@ results:
     value_note: ''
     sort_value: 0.789
     sort_std: 0.011
-    global_rank: 199
-    paper_rank: 219
+    global_rank: 205
+    paper_rank: 225
     rank_delta: 20
     rank_delta_abs: 20
     rank_delta_direction: worse
@@ -812,8 +812,8 @@ results:
     value_note: ''
     sort_value: 0.767
     sort_std: 0.0251
-    global_rank: 230
-    paper_rank: 230
+    global_rank: 236
+    paper_rank: 236
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -960,10 +960,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 32
+    global_rank: 34
     sort_value: 0.8875
     sort_std: 0.0049
     comparison_type: global_top
@@ -1029,10 +1029,10 @@ results:
     value_note: ''
     sort_value: 0.877
     sort_std: 0.014
-    global_rank: 39
-    paper_rank: 192
-    rank_delta: 153
-    rank_delta_abs: 153
+    global_rank: 41
+    paper_rank: 196
+    rank_delta: 155
+    rank_delta_abs: 155
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1099,10 +1099,10 @@ results:
     value_note: ''
     sort_value: 0.877
     sort_std: 0.026
-    global_rank: 38
-    paper_rank: 255
-    rank_delta: 217
-    rank_delta_abs: 217
+    global_rank: 40
+    paper_rank: 261
+    rank_delta: 221
+    rank_delta_abs: 221
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1169,10 +1169,10 @@ results:
     value_note: ''
     sort_value: 0.86
     sort_std: 0.034
-    global_rank: 47
-    paper_rank: 164
-    rank_delta: 117
-    rank_delta_abs: 117
+    global_rank: 49
+    paper_rank: 167
+    rank_delta: 118
+    rank_delta_abs: 118
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1212,12 +1212,12 @@ results:
     published_venue: NeurIPS 2024
     published_conference: NeurIPS 2024
     at_pub_value: 0.736
-    at_pub_std: 0.005
-    at_pub_source_arxiv: '2202.09346'
-    at_pub_source_title: Improving Molecular Contrastive Learning via Faulty Negative
-      Mitigation and Decomposed Fragment Contrast
-    at_pub_source_date_iso: '2022-02-18'
-    at_pub_source_date_label: '2022'
+    at_pub_std: null
+    at_pub_source_arxiv: '2106.09553'
+    at_pub_source_title: How Much Structural Information Large Scale Molecular Language
+      Representations Can Capture?
+    at_pub_source_date_iso: '2021-06-17'
+    at_pub_source_date_label: '2021'
     value_gap_source_date_iso: '2022-02-18'
     value_gap_source_date_label: '2022'
     gap_vs_at_pub: 0.06999999999999995
@@ -1239,16 +1239,16 @@ results:
     value_note: ''
     sort_value: 0.736
     sort_std: 0.005
-    global_rank: 76
-    paper_rank: 237
-    rank_delta: 161
-    rank_delta_abs: 161
+    global_rank: 78
+    paper_rank: 243
+    rank_delta: 165
+    rank_delta_abs: 165
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Improving Molecular Contrastive Learning via Faulty Negative
-      Mitigation and Decomposed Fragment Contrast
-    comparison_source_arxiv: '2202.09346'
+    comparison_source_title: How Much Structural Information Large Scale Molecular
+      Language Representations Can Capture?
+    comparison_source_arxiv: '2106.09553'
     is_best: false
     is_std_outlier: false
   - model: SubGDiff
@@ -1308,8 +1308,8 @@ results:
     value_note: ''
     sort_value: 0.702
     sort_std: 0.0223
-    global_rank: 138
-    paper_rank: 138
+    global_rank: 143
+    paper_rank: 143
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1375,10 +1375,10 @@ results:
     value_note: ''
     sort_value: 0.702
     sort_std: 0.005
-    global_rank: 137
-    paper_rank: 265
-    rank_delta: 128
-    rank_delta_abs: 128
+    global_rank: 142
+    paper_rank: 271
+    rank_delta: 129
+    rank_delta_abs: 129
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1444,8 +1444,8 @@ results:
     value_note: ''
     sort_value: 0.701
     sort_std: 0.0135
-    global_rank: 141
-    paper_rank: 141
+    global_rank: 145
+    paper_rank: 145
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1511,10 +1511,10 @@ results:
     value_note: ''
     sort_value: 0.692
     sort_std: 0.008
-    global_rank: 170
-    paper_rank: 215
-    rank_delta: 45
-    rank_delta_abs: 45
+    global_rank: 173
+    paper_rank: 220
+    rank_delta: 47
+    rank_delta_abs: 47
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1581,8 +1581,8 @@ results:
     value_note: ''
     sort_value: 0.681
     sort_std: 0.0059
-    global_rank: 196
-    paper_rank: 196
+    global_rank: 200
+    paper_rank: 200
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1867,8 +1867,8 @@ results:
     value_note: ''
     sort_value: 0.882
     sort_std: 0.0157
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1936,8 +1936,8 @@ results:
     value_note: ''
     sort_value: 0.877
     sort_std: 0.0119
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2073,8 +2073,8 @@ results:
     value_note: ''
     sort_value: 0.837
     sort_std: 0.0293
-    global_rank: 62
-    paper_rank: 62
+    global_rank: 63
+    paper_rank: 63
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2141,8 +2141,8 @@ results:
     value_note: ''
     sort_value: 0.826
     sort_std: 0.0364
-    global_rank: 64
-    paper_rank: 64
+    global_rank: 65
+    paper_rank: 65
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2210,8 +2210,8 @@ results:
     value_note: ''
     sort_value: 0.799
     sort_std: 0.0349
-    global_rank: 88
-    paper_rank: 88
+    global_rank: 89
+    paper_rank: 89
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2279,10 +2279,10 @@ results:
     value_note: ''
     sort_value: 0.781
     sort_std: null
-    global_rank: 104
-    paper_rank: 115
-    rank_delta: 11
-    rank_delta_abs: 11
+    global_rank: 105
+    paper_rank: 118
+    rank_delta: 13
+    rank_delta_abs: 13
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2349,8 +2349,8 @@ results:
     value_note: ''
     sort_value: 0.772
     sort_std: 0.0088
-    global_rank: 113
-    paper_rank: 113
+    global_rank: 115
+    paper_rank: 115
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2531,8 +2531,8 @@ results:
     value_note: ''
     sort_value: 0.252
     sort_std: null
-    global_rank: 103
-    paper_rank: 103
+    global_rank: 101
+    paper_rank: 101
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2600,8 +2600,8 @@ results:
     value_note: ''
     sort_value: 0.38
     sort_std: null
-    global_rank: 110
-    paper_rank: 110
+    global_rank: 108
+    paper_rank: 108
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2784,9 +2784,9 @@ results:
     sort_value: 0.68
     sort_std: 0.011
     global_rank: 14
-    paper_rank: 222
-    rank_delta: 208
-    rank_delta_abs: 208
+    paper_rank: 223
+    rank_delta: 209
+    rank_delta_abs: 209
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2818,7 +2818,7 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 66
@@ -2887,9 +2887,9 @@ results:
     sort_value: 0.639
     sort_std: 0.012
     global_rank: 70
-    paper_rank: 163
-    rank_delta: 93
-    rank_delta_abs: 93
+    paper_rank: 164
+    rank_delta: 94
+    rank_delta_abs: 94
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2954,8 +2954,8 @@ results:
     value_note: ''
     sort_value: 0.622
     sort_std: 0.0097
-    global_rank: 106
-    paper_rank: 106
+    global_rank: 105
+    paper_rank: 105
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3023,8 +3023,8 @@ results:
     value_note: ''
     sort_value: 0.622
     sort_std: 0.0059
-    global_rank: 105
-    paper_rank: 105
+    global_rank: 104
+    paper_rank: 104
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3092,8 +3092,8 @@ results:
     value_note: ''
     sort_value: 0.612
     sort_std: 0.0012
-    global_rank: 136
-    paper_rank: 136
+    global_rank: 137
+    paper_rank: 137
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3160,8 +3160,8 @@ results:
     value_note: ''
     sort_value: 0.608
     sort_std: 0.0104
-    global_rank: 149
-    paper_rank: 149
+    global_rank: 151
+    paper_rank: 151
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3229,8 +3229,8 @@ results:
     value_note: ''
     sort_value: 0.606
     sort_std: 0.0078
-    global_rank: 156
-    paper_rank: 156
+    global_rank: 158
+    paper_rank: 158
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3296,8 +3296,8 @@ results:
     value_note: ''
     sort_value: 0.6054
     sort_std: 0.009
-    global_rank: 163
-    paper_rank: 184
+    global_rank: 164
+    paper_rank: 185
     rank_delta: 21
     rank_delta_abs: 21
     rank_delta_direction: worse
@@ -3364,8 +3364,8 @@ results:
     value_note: ''
     sort_value: 0.57
     sort_std: 0.0133
-    global_rank: 229
-    paper_rank: 229
+    global_rank: 230
+    paper_rank: 230
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3511,7 +3511,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 16
+    global_rank: 14
     sort_value: 0.84
     sort_std: 0.004
     comparison_type: global_top
@@ -3577,10 +3577,10 @@ results:
     value_note: ''
     sort_value: 0.806
     sort_std: 0.012
-    global_rank: 53
-    paper_rank: 262
-    rank_delta: 209
-    rank_delta_abs: 209
+    global_rank: 46
+    paper_rank: 254
+    rank_delta: 208
+    rank_delta_abs: 208
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3647,10 +3647,10 @@ results:
     value_note: ''
     sort_value: 0.805
     sort_std: 0.032
-    global_rank: 55
-    paper_rank: 183
-    rank_delta: 128
-    rank_delta_abs: 128
+    global_rank: 48
+    paper_rank: 178
+    rank_delta: 130
+    rank_delta_abs: 130
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3717,10 +3717,10 @@ results:
     value_note: ''
     sort_value: 0.799
     sort_std: 0.018
-    global_rank: 66
-    paper_rank: 183
-    rank_delta: 117
-    rank_delta_abs: 117
+    global_rank: 61
+    paper_rank: 177
+    rank_delta: 116
+    rank_delta_abs: 116
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3787,10 +3787,10 @@ results:
     value_note: ''
     sort_value: 0.798
     sort_std: 0.007
-    global_rank: 72
-    paper_rank: 286
-    rank_delta: 214
-    rank_delta_abs: 214
+    global_rank: 67
+    paper_rank: 277
+    rank_delta: 210
+    rank_delta_abs: 210
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3857,10 +3857,10 @@ results:
     value_note: ''
     sort_value: 0.793
     sort_std: null
-    global_rank: 86
-    paper_rank: 283
-    rank_delta: 197
-    rank_delta_abs: 197
+    global_rank: 81
+    paper_rank: 275
+    rank_delta: 194
+    rank_delta_abs: 194
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3926,8 +3926,8 @@ results:
     value_note: ''
     sort_value: 0.772
     sort_std: 0.0039
-    global_rank: 151
-    paper_rank: 151
+    global_rank: 145
+    paper_rank: 145
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3994,8 +3994,8 @@ results:
     value_note: ''
     sort_value: 0.77
     sort_std: 0.0012
-    global_rank: 159
-    paper_rank: 159
+    global_rank: 153
+    paper_rank: 153
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4062,8 +4062,8 @@ results:
     value_note: ''
     sort_value: 0.753
     sort_std: 0.0022
-    global_rank: 218
-    paper_rank: 218
+    global_rank: 211
+    paper_rank: 211
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4109,8 +4109,8 @@ results:
     at_pub_source_title: Motif-aware Attribute Masking for Molecular Graph Pre-training
     at_pub_source_date_iso: '2023-09-08'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-09-08'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-11-02'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: 0.0030000000000000027
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -4121,18 +4121,19 @@ results:
     today_delta_significant: false
     true_value: 0.751
     true_std: 0.009
-    value_gap_source_arxiv: '2309.04589'
-    value_gap_source_title: Motif-aware Attribute Masking for Molecular Graph Pre-training
+    value_gap_source_arxiv: '2311.01038'
+    value_gap_source_title: 'Better with Less: A Data-Active Perspective on Pre-Training
+      Graph Neural Networks'
     value_gap_source_is_current_paper: false
     value_gap: 0.0030000000000000027
     has_value_note: false
     value_note: ''
     sort_value: 0.751
     sort_std: 0.009
-    global_rank: 231
-    paper_rank: 240
-    rank_delta: 9
-    rank_delta_abs: 9
+    global_rank: 224
+    paper_rank: 234
+    rank_delta: 10
+    rank_delta_abs: 10
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -4415,9 +4416,9 @@ results:
     sort_value: 0.714
     sort_std: 0.018
     global_rank: 34
-    paper_rank: 181
-    rank_delta: 147
-    rank_delta_abs: 147
+    paper_rank: 183
+    rank_delta: 149
+    rank_delta_abs: 149
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4485,9 +4486,9 @@ results:
     sort_value: 0.705
     sort_std: null
     global_rank: 41
-    paper_rank: 141
-    rank_delta: 100
-    rank_delta_abs: 100
+    paper_rank: 143
+    rank_delta: 102
+    rank_delta_abs: 102
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4738,8 +4739,8 @@ results:
     at_pub_source_title: Motif-aware Attribute Masking for Molecular Graph Pre-training
     at_pub_source_date_iso: '2023-09-08'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-09-08'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-11-02'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: 0.0040000000000000036
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -4750,16 +4751,17 @@ results:
     today_delta_significant: false
     true_value: 0.633
     true_std: 0.006
-    value_gap_source_arxiv: '2309.04589'
-    value_gap_source_title: Motif-aware Attribute Masking for Molecular Graph Pre-training
+    value_gap_source_arxiv: '2311.01038'
+    value_gap_source_title: 'Better with Less: A Data-Active Perspective on Pre-Training
+      Graph Neural Networks'
     value_gap_source_is_current_paper: false
     value_gap: 0.0040000000000000036
     has_value_note: false
     value_note: ''
     sort_value: 0.633
     sort_std: 0.006
-    global_rank: 155
-    paper_rank: 170
+    global_rank: 157
+    paper_rank: 172
     rank_delta: 15
     rank_delta_abs: 15
     rank_delta_direction: worse
@@ -4827,8 +4829,8 @@ results:
     value_note: ''
     sort_value: 0.629
     sort_std: 0.0038
-    global_rank: 171
-    paper_rank: 171
+    global_rank: 173
+    paper_rank: 173
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4895,8 +4897,8 @@ results:
     value_note: ''
     sort_value: 0.621
     sort_std: 0.0019
-    global_rank: 187
-    paper_rank: 187
+    global_rank: 189
+    paper_rank: 189
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

@@ -57,8 +57,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - RGCL
-mrr: 0.0099
-adjusted_mrr: 0.0099
+mrr: 0.0097
+adjusted_mrr: 0.0097
 mrr_dataset_count: 9
 benchmark_categories:
 - TU Dortmund
@@ -204,10 +204,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 41
+    global_rank: 43
     sort_value: 0.8646
     sort_std: 0.0081
     comparison_type: global_top
@@ -273,10 +273,10 @@ results:
     value_note: ''
     sort_value: 0.835
     sort_std: 0.012
-    global_rank: 95
-    paper_rank: 111
-    rank_delta: 16
-    rank_delta_abs: 16
+    global_rank: 99
+    paper_rank: 116
+    rank_delta: 17
+    rank_delta_abs: 17
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -342,8 +342,8 @@ results:
     value_note: ''
     sort_value: 0.796
     sort_std: 0.012
-    global_rank: 180
-    paper_rank: 180
+    global_rank: 186
+    paper_rank: 186
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -410,8 +410,8 @@ results:
     value_note: ''
     sort_value: 0.793
     sort_std: 0.016
-    global_rank: 185
-    paper_rank: 185
+    global_rank: 191
+    paper_rank: 191
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -478,10 +478,10 @@ results:
     value_note: ''
     sort_value: 0.79
     sort_std: 0.008
-    global_rank: 197
-    paper_rank: 246
-    rank_delta: 49
-    rank_delta_abs: 49
+    global_rank: 203
+    paper_rank: 253
+    rank_delta: 50
+    rank_delta_abs: 50
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -548,8 +548,8 @@ results:
     value_note: ''
     sort_value: 0.782
     sort_std: 0.012
-    global_rank: 209
-    paper_rank: 244
+    global_rank: 215
+    paper_rank: 250
     rank_delta: 35
     rank_delta_abs: 35
     rank_delta_direction: worse
@@ -617,8 +617,8 @@ results:
     value_note: ''
     sort_value: 0.7603
     sort_std: 0.0077
-    global_rank: 238
-    paper_rank: 238
+    global_rank: 244
+    paper_rank: 244
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -685,8 +685,8 @@ results:
     value_note: ''
     sort_value: 0.701
     sort_std: 0.054
-    global_rank: 278
-    paper_rank: 278
+    global_rank: 285
+    paper_rank: 285
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -764,7 +764,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -833,7 +833,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 29
+    global_rank: 23
     sort_value: 0.826
     sort_std: 0.022
     comparison_type: global_top
@@ -899,10 +899,10 @@ results:
     value_note: ''
     sort_value: 0.8108
     sort_std: 0.0017
-    global_rank: 96
-    paper_rank: 344
-    rank_delta: 248
-    rank_delta_abs: 248
+    global_rank: 81
+    paper_rank: 315
+    rank_delta: 234
+    rank_delta_abs: 234
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -968,10 +968,10 @@ results:
     value_note: ''
     sort_value: 0.794
     sort_std: null
-    global_rank: 172
-    paper_rank: 354
-    rank_delta: 182
-    rank_delta_abs: 182
+    global_rank: 151
+    paper_rank: 325
+    rank_delta: 174
+    rank_delta_abs: 174
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1004,7 +1004,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 180
+    global_rank: 157
     sort_value: 0.792
     sort_std: 0.024
     comparison_type: global_top
@@ -1070,86 +1070,15 @@ results:
     value_note: ''
     sort_value: 0.7582
     sort_std: 0.0026
-    global_rank: 280
-    paper_rank: 337
-    rank_delta: 57
-    rank_delta_abs: 57
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'Graph Self-Supervised Learning: A Survey'
-    comparison_source_arxiv: '2103.00111'
-    is_best: false
-    is_std_outlier: false
-  - model: No Pre-train
-    model_key: no pre-train
-    model_plain: No Pre-train
-    value: 0.6529
-    std: 0.0016
-    paper_value: 0.6529
-    paper_std: 0.0016
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Unsupervised representation learning evaluated via non-linear SVM
-      classifier on TU datasets.
-    date: Jun 16, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-16'
-    published_venue: ICML 2022
-    published_conference: ICML 2022
-    at_pub_value: 0.7371
-    at_pub_std: 0.0027
-    at_pub_source_arxiv: '2106.05819'
-    at_pub_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
-      Learning
-    at_pub_source_date_iso: '2021-06-10'
-    at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2021-06-10'
-    value_gap_source_date_label: NeurIPS 2021
-    gap_vs_at_pub: 0.08419999999999994
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7371
-    true_std: 0.0027
-    value_gap_source_arxiv: '2106.05819'
-    value_gap_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
-      Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.08419999999999994
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7371
-    sort_std: 0.0027
-    global_rank: 322
-    paper_rank: 377
+    global_rank: 253
+    paper_rank: 308
     rank_delta: 55
     rank_delta_abs: 55
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
-      Learning
-    comparison_source_arxiv: '2106.05819'
+    comparison_source_title: 'Graph Self-Supervised Learning: A Survey'
+    comparison_source_arxiv: '2103.00111'
     is_best: false
     is_std_outlier: false
   - model: RGCL
@@ -1209,12 +1138,81 @@ results:
     value_note: ''
     sort_value: 0.7348
     sort_std: 0.0093
-    global_rank: 324
-    paper_rank: 347
+    global_rank: 295
+    paper_rank: 318
     rank_delta: 23
     rank_delta_abs: 23
     rank_delta_direction: worse
     has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: No Pre-train
+    model_key: no pre-train
+    model_plain: No Pre-train
+    value: 0.6529
+    std: 0.0016
+    paper_value: 0.6529
+    paper_std: 0.0016
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Unsupervised representation learning evaluated via non-linear SVM
+      classifier on TU datasets.
+    date: Jun 16, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-16'
+    published_venue: ICML 2022
+    published_conference: ICML 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-06-16'
+    value_gap_source_date_label: ICML 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6529
+    true_std: 0.0016
+    value_gap_source_arxiv: '2206.07869'
+    value_gap_source_title: Let Invariant Rationale Discovery Inspire Graph Contrastive
+      Learning
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6529
+    sort_std: 0.0016
+    global_rank: 345
+    paper_rank: 345
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1405,8 +1403,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-10-23'
-    value_gap_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2024-04-24'
+    value_gap_source_date_label: IJCAI 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1417,17 +1415,17 @@ results:
     today_delta_significant: true
     true_value: 0.85
     true_std: 0.008
-    value_gap_source_arxiv: '2310.14753'
-    value_gap_source_title: Rethinking Tokenizer and Decoder in Masked Graph Modeling
-      for Molecules
+    value_gap_source_arxiv: '2404.15806'
+    value_gap_source_title: 'Where to Mask: Structure-Guided Masking for Graph Masked
+      Autoencoders'
     value_gap_source_is_current_paper: false
     value_gap: 0.016199999999999992
     has_value_note: false
     value_note: ''
     sort_value: 0.85
     sort_std: 0.008
-    global_rank: 56
-    paper_rank: 62
+    global_rank: 57
+    paper_rank: 63
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -1494,10 +1492,10 @@ results:
     value_note: ''
     sort_value: 0.8077
     sort_std: 0.0392
-    global_rank: 81
-    paper_rank: 105
-    rank_delta: 24
-    rank_delta_abs: 24
+    global_rank: 82
+    paper_rank: 107
+    rank_delta: 25
+    rank_delta_abs: 25
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1562,10 +1560,10 @@ results:
     value_note: ''
     sort_value: 0.789
     sort_std: 0.042
-    global_rank: 95
-    paper_rank: 119
-    rank_delta: 24
-    rank_delta_abs: 24
+    global_rank: 96
+    paper_rank: 122
+    rank_delta: 26
+    rank_delta_abs: 26
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1631,8 +1629,8 @@ results:
     value_note: ''
     sort_value: 0.7872
     sort_std: 0.0258
-    global_rank: 101
-    paper_rank: 101
+    global_rank: 102
+    paper_rank: 102
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1700,10 +1698,10 @@ results:
     value_note: ''
     sort_value: 0.772
     sort_std: 0.0088
-    global_rank: 113
-    paper_rank: 198
-    rank_delta: 85
-    rank_delta_abs: 85
+    global_rank: 115
+    paper_rank: 202
+    rank_delta: 87
+    rank_delta_abs: 87
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1768,8 +1766,8 @@ results:
     value_note: ''
     sort_value: 0.718
     sort_std: 0.041
-    global_rank: 161
-    paper_rank: 161
+    global_rank: 165
+    paper_rank: 165
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1836,8 +1834,8 @@ results:
     value_note: ''
     sort_value: 0.58
     sort_std: 0.044
-    global_rank: 234
-    paper_rank: 234
+    global_rank: 238
+    paper_rank: 238
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1881,7 +1879,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -2050,9 +2048,9 @@ results:
     sort_value: 0.9028
     sort_std: 0.0401
     global_rank: 191
-    paper_rank: 312
-    rank_delta: 121
-    rank_delta_abs: 121
+    paper_rank: 313
+    rank_delta: 122
+    rank_delta_abs: 122
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2186,8 +2184,8 @@ results:
     value_note: ''
     sort_value: 0.8829
     sort_std: 0.0131
-    global_rank: 341
-    paper_rank: 421
+    global_rank: 342
+    paper_rank: 422
     rank_delta: 80
     rank_delta_abs: 80
     rank_delta_direction: worse
@@ -2254,8 +2252,8 @@ results:
     value_note: ''
     sort_value: 0.8766
     sort_std: 0.0101
-    global_rank: 374
-    paper_rank: 374
+    global_rank: 375
+    paper_rank: 375
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2323,8 +2321,8 @@ results:
     value_note: ''
     sort_value: 0.8739
     sort_std: 0.0109
-    global_rank: 388
-    paper_rank: 388
+    global_rank: 389
+    paper_rank: 389
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2359,7 +2357,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 429
+    global_rank: 430
     sort_value: 0.866
     sort_std: 0.0495
     comparison_type: global_top
@@ -2505,7 +2503,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 81
+    global_rank: 82
     sort_value: 0.8303
     sort_std: 0.0137
     comparison_type: global_top
@@ -2572,9 +2570,9 @@ results:
     sort_value: 0.825
     sort_std: 0.0013
     global_rank: 115
-    paper_rank: 362
-    rank_delta: 247
-    rank_delta_abs: 247
+    paper_rank: 361
+    rank_delta: 246
+    rank_delta_abs: 246
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2640,8 +2638,8 @@ results:
     value_note: ''
     sort_value: 0.7814
     sort_std: 0.0108
-    global_rank: 346
-    paper_rank: 346
+    global_rank: 345
+    paper_rank: 345
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2708,8 +2706,8 @@ results:
     value_note: ''
     sort_value: 0.775
     sort_std: 0.0074
-    global_rank: 378
-    paper_rank: 427
+    global_rank: 375
+    paper_rank: 424
     rank_delta: 49
     rank_delta_abs: 49
     rank_delta_direction: worse
@@ -2776,8 +2774,8 @@ results:
     value_note: ''
     sort_value: 0.7518
     sort_std: 0.0031
-    global_rank: 454
-    paper_rank: 488
+    global_rank: 452
+    paper_rank: 486
     rank_delta: 34
     rank_delta_abs: 34
     rank_delta_direction: worse
@@ -2818,44 +2816,42 @@ results:
     date_iso: '2022-06-16'
     published_venue: ICML 2022
     published_conference: ICML 2022
-    at_pub_value: 0.7372
-    at_pub_std: 0.0024
-    at_pub_source_arxiv: '2106.05819'
-    at_pub_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
-      Learning
-    at_pub_source_date_iso: '2021-06-10'
-    at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2021-06-10'
-    value_gap_source_date_label: NeurIPS 2021
-    gap_vs_at_pub: 0.08319999999999994
-    worse_than_at_pub: true
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-06-16'
+    value_gap_source_date_label: ICML 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7372
-    true_std: 0.0024
-    value_gap_source_arxiv: '2106.05819'
-    value_gap_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
+    today_delta_significant: false
+    true_value: 0.654
+    true_std: 0.0017
+    value_gap_source_arxiv: '2206.07869'
+    value_gap_source_title: Let Invariant Rationale Discovery Inspire Graph Contrastive
       Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.08319999999999994
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.7372
-    sort_std: 0.0024
-    global_rank: 491
-    paper_rank: 579
-    rank_delta: 88
-    rank_delta_abs: 88
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
-      Learning
-    comparison_source_arxiv: '2106.05819'
+    sort_value: 0.654
+    sort_std: 0.0017
+    global_rank: 577
+    paper_rank: 577
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   rank_metric: Accuracy
@@ -2926,7 +2922,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -2992,7 +2988,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: unknown
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 12
@@ -3060,10 +3056,10 @@ results:
     value_note: ''
     sort_value: 0.9169
     sort_std: 0.007
-    global_rank: 22
-    paper_rank: 41
-    rank_delta: 19
-    rank_delta_abs: 19
+    global_rank: 23
+    paper_rank: 43
+    rank_delta: 20
+    rank_delta_abs: 20
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3128,8 +3124,8 @@ results:
     value_note: ''
     sort_value: 0.9138
     sort_std: 0.004
-    global_rank: 25
-    paper_rank: 32
+    global_rank: 26
+    paper_rank: 33
     rank_delta: 7
     rank_delta_abs: 7
     rank_delta_direction: worse
@@ -3196,8 +3192,8 @@ results:
     value_note: ''
     sort_value: 0.901
     sort_std: 0.0015
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3264,10 +3260,10 @@ results:
     value_note: ''
     sort_value: 0.8939
     sort_std: 0.0181
-    global_rank: 44
-    paper_rank: 65
-    rank_delta: 21
-    rank_delta_abs: 21
+    global_rank: 46
+    paper_rank: 68
+    rank_delta: 22
+    rank_delta_abs: 22
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3333,8 +3329,8 @@ results:
     value_note: ''
     sort_value: 0.7686
     sort_std: 0.0025
-    global_rank: 74
-    paper_rank: 74
+    global_rank: 77
+    paper_rank: 77
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3481,7 +3477,7 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 66
@@ -3549,10 +3545,10 @@ results:
     value_note: ''
     sort_value: 0.6319
     sort_std: 0.0095
-    global_rank: 85
-    paper_rank: 199
-    rank_delta: 114
-    rank_delta_abs: 114
+    global_rank: 84
+    paper_rank: 201
+    rank_delta: 117
+    rank_delta_abs: 117
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3619,10 +3615,10 @@ results:
     value_note: ''
     sort_value: 0.622
     sort_std: 0.0059
-    global_rank: 105
-    paper_rank: 147
-    rank_delta: 42
-    rank_delta_abs: 42
+    global_rank: 104
+    paper_rank: 149
+    rank_delta: 45
+    rank_delta_abs: 45
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3689,10 +3685,10 @@ results:
     value_note: ''
     sort_value: 0.6183
     sort_std: 0.006
-    global_rank: 116
-    paper_rank: 163
-    rank_delta: 47
-    rank_delta_abs: 47
+    global_rank: 115
+    paper_rank: 164
+    rank_delta: 49
+    rank_delta_abs: 49
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3759,10 +3755,10 @@ results:
     value_note: ''
     sort_value: 0.615
     sort_std: 0.013
-    global_rank: 125
-    paper_rank: 217
-    rank_delta: 92
-    rank_delta_abs: 92
+    global_rank: 124
+    paper_rank: 218
+    rank_delta: 94
+    rank_delta_abs: 94
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3828,10 +3824,10 @@ results:
     value_note: ''
     sort_value: 0.614
     sort_std: 0.006
-    global_rank: 130
-    paper_rank: 132
-    rank_delta: 2
-    rank_delta_abs: 2
+    global_rank: 129
+    paper_rank: 133
+    rank_delta: 4
+    rank_delta_abs: 4
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3897,8 +3893,8 @@ results:
     value_note: ''
     sort_value: 0.6121
     sort_std: 0.0065
-    global_rank: 135
-    paper_rank: 143
+    global_rank: 136
+    paper_rank: 144
     rank_delta: 8
     rank_delta_abs: 8
     rank_delta_direction: worse
@@ -3965,8 +3961,8 @@ results:
     value_note: ''
     sort_value: 0.573
     sort_std: 0.016
-    global_rank: 225
-    paper_rank: 225
+    global_rank: 226
+    paper_rank: 226
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4182,9 +4178,9 @@ results:
     sort_value: 0.714
     sort_std: 0.018
     global_rank: 34
-    paper_rank: 137
-    rank_delta: 103
-    rank_delta_abs: 103
+    paper_rank: 138
+    rank_delta: 104
+    rank_delta_abs: 104
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4253,9 +4249,9 @@ results:
     sort_value: 0.696
     sort_std: 0.023
     global_rank: 49
-    paper_rank: 182
-    rank_delta: 133
-    rank_delta_abs: 133
+    paper_rank: 184
+    rank_delta: 135
+    rank_delta_abs: 135
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4324,9 +4320,9 @@ results:
     sort_value: 0.677
     sort_std: 0.019
     global_rank: 72
-    paper_rank: 184
-    rank_delta: 112
-    rank_delta_abs: 112
+    paper_rank: 186
+    rank_delta: 114
+    rank_delta_abs: 114
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4392,8 +4388,8 @@ results:
     value_note: ''
     sort_value: 0.642
     sort_std: 0.005
-    global_rank: 131
-    paper_rank: 131
+    global_rank: 132
+    paper_rank: 132
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4460,10 +4456,10 @@ results:
     value_note: ''
     sort_value: 0.635
     sort_std: 0.007
-    global_rank: 143
-    paper_rank: 163
-    rank_delta: 20
-    rank_delta_abs: 20
+    global_rank: 145
+    paper_rank: 166
+    rank_delta: 21
+    rank_delta_abs: 21
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -4528,8 +4524,8 @@ results:
     value_note: ''
     sort_value: 0.634
     sort_std: 0.006
-    global_rank: 147
-    paper_rank: 147
+    global_rank: 149
+    paper_rank: 149
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4596,8 +4592,8 @@ results:
     value_note: ''
     sort_value: 0.6333
     sort_std: 0.0017
-    global_rank: 153
-    paper_rank: 153
+    global_rank: 155
+    paper_rank: 155
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

@@ -51,7 +51,6 @@ mrr_dataset_count: 5
 benchmark_categories:
 - TU Dortmund
 - OGB
-- Quantum Chemistry
 benchmark_coverage:
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
@@ -61,13 +60,8 @@ benchmark_coverage:
   benchmark_slug: ogb
   evaluated: 3
   total: 16
-- benchmark: Quantum Chemistry
-  benchmark_slug: quantum-chemistry
-  evaluated: 1
-  total: 3
 task_categories:
 - graph_classification
-- graph_regression
 experiment_scopes:
 - graph-level
 results:
@@ -96,7 +90,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -733,8 +727,8 @@ results:
     value_note: ''
     sort_value: 0.888
     sort_std: 0.07
-    global_rank: 311
-    paper_rank: 311
+    global_rank: 312
+    paper_rank: 312
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -769,7 +763,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 429
+    global_rank: 430
     sort_value: 0.866
     sort_std: 0.0495
     comparison_type: global_top
@@ -786,767 +780,6 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id006
-  dataset: QM9
-  is_multi_metric: true
-  rows:
-  - model: Equiformer v2
-    model_key: equiformer v2
-    model_plain: Equiformer v2
-    metric_values:
-    - 0.01
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.23086'
-    title: Equivariant Spherical Transformer for Efficient Molecular Modeling
-    published_venue: ''
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    codebase_url: ''
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 1
-    is_best: true
-    sort_value: 0.01
-    sort_std: null
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: EQGAT
-    model_key: eqgat
-    model_plain: EQGAT
-    metric_values:
-    - 0.011
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2505.23086'
-    title: Equivariant Spherical Transformer for Efficient Molecular Modeling
-    published_venue: ''
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    codebase_url: ''
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 2
-    is_best: false
-    sort_value: 0.011
-    sort_std: null
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: Equiformer
-    model_key: equiformer
-    model_plain: Equiformer
-    metric_values:
-    - 0.011
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.23086'
-    title: Equivariant Spherical Transformer for Efficient Molecular Modeling
-    published_venue: ''
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    codebase_url: ''
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 3
-    is_best: false
-    sort_value: 0.011
-    sort_std: null
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: MPNN
-    model_key: mpnn
-    model_plain: MPNN
-    metric_values:
-    - null
-    - 0.358
-    - 0.89
-    - 2.05
-    - 2.02
-    - 2.02
-    - 0.42
-    - 0.00541
-    - 0.00623
-    - 0.00216
-    - 2.0
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.03
-    sort_std: null
-    true_value: 0.03
-    true_std: null
-    paper_value: 0.358
-    paper_std: null
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 0.32799999999999996
-    value_gap_source_arxiv: '2110.01191'
-    value_gap_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    value_note: ''
-    at_pub_value: 0.03
-    at_pub_std: null
-    at_pub_source_arxiv: '2110.01191'
-    at_pub_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous Molecular
-      Graphs'
-    at_pub_source_date_iso: '2021-10-04'
-    at_pub_source_date_label: AAAI 2021
-    value_gap_source_date_iso: '2021-10-04'
-    value_gap_source_date_label: AAAI 2021
-    gap_vs_at_pub: 0.32799999999999996
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2022
-    date: Jun 22, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-22'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: behind
-    comparison_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    comparison_source_arxiv: '2110.01191'
-    is_best: false
-    is_std_outlier: false
-    global_rank: 20
-  - model: DropMPNN
-    model_key: dropmpnn
-    model_plain: DropMPNN
-    metric_values:
-    - null
-    - 0.059
-    - 0.173
-    - 0.0409
-    - 0.0481
-    - 0.0508
-    - 0.0596
-    - 0.00193
-    - 0.00177
-    - 0.000112
-    - 0.0536
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.059
-    sort_std: null
-    true_value: 0.059
-    true_std: null
-    paper_value: 0.059
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2206.11010'
-    value_gap_source_title: Agent-based Graph Neural Networks
-    value_note: ''
-    at_pub_value: 0.059
-    at_pub_std: null
-    at_pub_source_arxiv: '2111.06283'
-    at_pub_source_title: 'DropGNN: Random Dropouts Increase the Expressiveness of
-      Graph Neural Networks'
-    at_pub_source_date_iso: '2021-11-11'
-    at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2022-06-22'
-    value_gap_source_date_label: ICLR 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2022
-    date: Jun 22, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-22'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 33
-  - model: PPGN
-    model_key: ppgn
-    model_plain: PPGN
-    metric_values:
-    - null
-    - 0.0934
-    - 0.318
-    - 0.022
-    - 0.0294
-    - 0.24
-    - 0.0144
-    - 0.00174
-    - 0.0021
-    - 0.000399
-    - 0.0504
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.0934
-    sort_std: null
-    true_value: 0.0934
-    true_std: null
-    paper_value: 0.0934
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2206.11010'
-    value_gap_source_title: Agent-based Graph Neural Networks
-    value_note: ''
-    at_pub_value: 0.0934
-    at_pub_std: null
-    at_pub_source_arxiv: '2111.06283'
-    at_pub_source_title: 'DropGNN: Random Dropouts Increase the Expressiveness of
-      Graph Neural Networks'
-    at_pub_source_date_iso: '2021-11-11'
-    at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2022-06-22'
-    value_gap_source_date_label: ICLR 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2022
-    date: Jun 22, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-22'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 41
-  - model: AgentNet
-    model_key: agentnet
-    model_plain: AgentNet
-    metric_values:
-    - null
-    - 0.254
-    - 0.198
-    - 0.145
-    - 0.155
-    - 0.119
-    - 0.0708
-    - 0.00183
-    - 0.0016
-    - 0.000232
-    - 0.146
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    sort_value: 0.254
-    sort_std: null
-    true_value: 0.254
-    true_std: null
-    paper_value: 0.254
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2206.11010'
-    value_gap_source_title: Agent-based Graph Neural Networks
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-06-22'
-    value_gap_source_date_label: ICLR 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2022
-    date: Jun 22, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-22'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 45
-  - model: Drop-1-GNN
-    model_key: drop-1-gnn
-    model_plain: Drop-1-GNN
-    metric_values:
-    - null
-    - 0.453
-    - 0.767
-    - 1.8
-    - 2.0
-    - 2.12
-    - 0.259
-    - 0.00306
-    - 0.00306
-    - 0.000895
-    - 1.86
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.453
-    sort_std: null
-    true_value: 0.453
-    true_std: null
-    paper_value: 0.453
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2206.11010'
-    value_gap_source_title: Agent-based Graph Neural Networks
-    value_note: ''
-    at_pub_value: 0.453
-    at_pub_std: null
-    at_pub_source_arxiv: '2111.06283'
-    at_pub_source_title: 'DropGNN: Random Dropouts Increase the Expressiveness of
-      Graph Neural Networks'
-    at_pub_source_date_iso: '2021-11-11'
-    at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2022-06-22'
-    value_gap_source_date_label: ICLR 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2022
-    date: Jun 22, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-22'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 71
-  - model: 1-2-3 GNN
-    model_key: 1-2-3 gnn
-    model_plain: 1-2-3 GNN
-    metric_values:
-    - null
-    - 0.473
-    - 0.27
-    - 0.0427
-    - 0.0419
-    - 0.0469
-    - 0.0944
-    - 0.00337
-    - 0.00351
-    - 0.00019
-    - 0.111
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.473
-    sort_std: null
-    true_value: 0.473
-    true_std: null
-    paper_value: 0.473
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2206.11010'
-    value_gap_source_title: Agent-based Graph Neural Networks
-    value_note: ''
-    at_pub_value: 0.473
-    at_pub_std: null
-    at_pub_source_arxiv: '2111.06283'
-    at_pub_source_title: 'DropGNN: Random Dropouts Increase the Expressiveness of
-      Graph Neural Networks'
-    at_pub_source_date_iso: '2021-11-11'
-    at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2022-06-22'
-    value_gap_source_date_label: ICLR 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2022
-    date: Jun 22, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-22'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 74
-  - model: 1-GNN
-    model_key: 1-gnn
-    model_plain: 1-GNN
-    metric_values:
-    - null
-    - 0.493
-    - 0.78
-    - 2.32
-    - 2.23
-    - 1.94
-    - 0.27
-    - 0.00321
-    - 0.0035
-    - 0.00124
-    - 2.08
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.493
-    sort_std: null
-    true_value: 0.493
-    true_std: null
-    paper_value: 0.493
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2303.10576'
-    value_gap_source_title: An Efficient Subgraph GNN with Provable Substructure Counting
-      Power
-    value_note: ''
-    at_pub_value: 0.493
-    at_pub_std: null
-    at_pub_source_arxiv: '2111.06283'
-    at_pub_source_title: 'DropGNN: Random Dropouts Increase the Expressiveness of
-      Graph Neural Networks'
-    at_pub_source_date_iso: '2021-11-11'
-    at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2023-03-19'
-    value_gap_source_date_label: KDD 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2022
-    date: Jun 22, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-22'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 75
-  metrics:
-  - gap
-  - mu
-  - alpha
-  - U0
-  - H
-  - G
-  - Cv
-  - HOMO
-  - LUMO
-  - zpve
-  - U
-  primary_metric: gap
-  rank_metric: mu
-  higher_is_better: false
-  experiment_scope: graph-level
-  dataset_primary_metric: gap
-  paper_metrics:
-  - mu
-  - alpha
-  - U0
-  - H
-  - G
-  - Cv
-  - HOMO
-  - LUMO
-  - zpve
-  - U
-  metric: mu
-  uses_non_primary_metric: true
-  paper_has_primary_metric: false
 - &id002
   dataset: RDT-B
   rows:
@@ -1606,7 +839,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -1975,8 +1208,8 @@ results:
     value_note: ''
     sort_value: 0.899
     sort_std: 0.017
-    global_rank: 39
-    paper_rank: 39
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2042,8 +1275,8 @@ results:
     value_note: ''
     sort_value: 0.779
     sort_std: 0.03
-    global_rank: 71
-    paper_rank: 71
+    global_rank: 74
+    paper_rank: 74
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2078,7 +1311,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 81
+    global_rank: 84
     sort_value: 0.706
     sort_std: 0.0369
     comparison_type: global_top
@@ -2223,7 +1456,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 10
+    global_rank: 12
     sort_value: 0.809
     sort_std: 0.016
     comparison_type: global_top
@@ -2287,8 +1520,8 @@ results:
     value_note: ''
     sort_value: 0.7833
     sort_std: 0.0069
-    global_rank: 96
-    paper_rank: 96
+    global_rank: 97
+    paper_rank: 97
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2354,8 +1587,8 @@ results:
     value_note: ''
     sort_value: 0.78
     sort_std: 0.0142
-    global_rank: 111
-    paper_rank: 111
+    global_rank: 112
+    paper_rank: 112
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2422,9 +1655,9 @@ results:
     sort_value: 0.778
     sort_std: 0.0182
     global_rank: 120
-    paper_rank: 237
-    rank_delta: 117
-    rank_delta_abs: 117
+    paper_rank: 238
+    rank_delta: 118
+    rank_delta_abs: 118
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2555,8 +1788,8 @@ results:
     value_note: ''
     sort_value: 0.771
     sort_std: 0.015
-    global_rank: 158
-    paper_rank: 162
+    global_rank: 159
+    paper_rank: 163
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -2591,7 +1824,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 171
+    global_rank: 172
     sort_value: 0.769
     sort_std: 0.0136
     comparison_type: global_top
@@ -3549,9 +2782,6 @@ results_grouped:
   - *id003
   - *id004
   - *id005
-- benchmark: Quantum Chemistry
-  datasets:
-  - *id006
 datasets_by_scope:
 - scope: graph-level
   label: Graph-level
@@ -3572,11 +2802,6 @@ datasets_by_scope:
       dataset_slug: ogbg-molpcba
     - dataset: ogbg-ppa
       dataset_slug: ogbg-ppa
-  - benchmark: Quantum Chemistry
-    benchmark_slug: quantum-chemistry
-    datasets:
-    - dataset: QM9
-      dataset_slug: qm9
 main_figure: /figures/2206.11010/main_figure.jpegoptim.jpg
 ---
 

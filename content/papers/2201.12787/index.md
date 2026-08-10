@@ -47,8 +47,8 @@ proposed_models:
 - GRPE-Small
 - GRPE-Standard
 - GRPE-Large
-mrr: 0.113
-adjusted_mrr: 0.113
+mrr: 0.1038
+adjusted_mrr: 0.1038
 mrr_dataset_count: 3
 benchmark_categories:
 - OGB
@@ -140,9 +140,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Tango_GPS
-    model_key: tango_gps
-    model_plain: Tango_GPS
+  - model: TANGO-GPS
+    model_key: tango-gps
+    model_plain: TANGO-GPS
     value: 0.80113
     std: 0.00138
     metric: Accuracy
@@ -600,8 +600,8 @@ results:
     value_note: ''
     sort_value: 0.70587
     sort_std: 0.00447
-    global_rank: 72
-    paper_rank: 72
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -668,8 +668,8 @@ results:
     value_note: ''
     sort_value: 0.69026
     sort_std: 0.01372
-    global_rank: 74
-    paper_rank: 75
+    global_rank: 73
+    paper_rank: 74
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -709,18 +709,18 @@ results:
     date_iso: '2022-01-30'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.58384
-    at_pub_std: 0.00236
-    at_pub_source_arxiv: '2110.07141'
-    at_pub_source_title: 'SoGCN: Second-Order Graph Convolutional Networks'
-    at_pub_source_date_iso: '2021-10-14'
-    at_pub_source_date_label: '2021'
+    at_pub_value: 0.64716
+    at_pub_std: 0.01553
+    at_pub_source_arxiv: '2201.09332'
+    at_pub_source_title: How Expressive are Transformers in Spectral Domain for Graphs?
+    at_pub_source_date_iso: '2022-01-23'
+    at_pub_source_date_label: TMLR 2022
     value_gap_source_date_iso: '2026-05-07'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.06331999999999993
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -736,15 +736,15 @@ results:
     value_note: ''
     sort_value: 0.64716
     sort_std: 0.01553
-    global_rank: 85
-    paper_rank: 85
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'SoGCN: Second-Order Graph Convolutional Networks'
-    comparison_source_arxiv: '2110.07141'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GraphSAGE
@@ -772,7 +772,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 87
+    global_rank: 83
     sort_value: 0.63884
     sort_std: 0.0011
     comparison_type: global_top
@@ -805,7 +805,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 126
+    global_rank: 120
     sort_value: 0.20973
     sort_std: 4.0e-05
     comparison_type: global_top
@@ -893,34 +893,34 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: UniMol
-    model_key: unimol
-    model_plain: UniMol
-    value: 0.0693
+  - model: TGT-At (+RDKit)
+    model_key: tgt-at (+rdkit)
+    model_plain: TGT-At (+RDKit)
+    value: 0.0683
     std: null
     metric: MAE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: 77.0
+    params_millions: 203.0
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    arxiv_id: '2603.00568'
-    title: Enhancing Molecular Property Predictions by Learning from Bond Modelling
-      and Interactions
-    date: Feb 28, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-28'
-    venue: Accepted to ICLR 2026
-    codebase_url: ''
-    uses_external_data: false
+    arxiv_id: '2402.04538'
+    title: 'Triplet Interaction Improves Graph Transformers: Accurate Molecular Graph
+      Learning with Triplet Graph Transformers'
+    date: Feb 7, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-07'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/shamim-hussain/tgt
+    uses_external_data: true
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.0693
+    sort_value: 0.0683
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
@@ -984,8 +984,8 @@ results:
     value_note: ''
     sort_value: 0.0864
     sort_std: null
-    global_rank: 27
-    paper_rank: 68
+    global_rank: 31
+    paper_rank: 72
     rank_delta: 41
     rank_delta_abs: 41
     rank_delta_direction: worse
@@ -1051,8 +1051,8 @@ results:
     value_note: ''
     sort_value: 0.0869
     sort_std: null
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1118,10 +1118,10 @@ results:
     value_note: ''
     sort_value: 0.089
     sort_std: null
-    global_rank: 34
-    paper_rank: 36
-    rank_delta: 2
-    rank_delta_abs: 2
+    global_rank: 39
+    paper_rank: 40
+    rank_delta: 1
+    rank_delta_abs: 1
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1186,8 +1186,8 @@ results:
     value_note: ''
     sort_value: 0.1083
     sort_std: null
-    global_rank: 55
-    paper_rank: 56
+    global_rank: 59
+    paper_rank: 60
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -1233,8 +1233,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-05-19'
-    value_gap_source_date_label: IJCAI 2023
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1245,16 +1245,17 @@ results:
     today_delta_significant: false
     true_value: 0.1152
     true_std: null
-    value_gap_source_arxiv: '2305.11424'
-    value_gap_source_title: IJCAI--23 Formatting Instructions
+    value_gap_source_arxiv: '2402.04538'
+    value_gap_source_title: 'Triplet Interaction Improves Graph Transformers: Accurate
+      Molecular Graph Learning with Triplet Graph Transformers'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.1152
     sort_std: null
-    global_rank: 57
-    paper_rank: 57
+    global_rank: 61
+    paper_rank: 61
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1321,8 +1322,8 @@ results:
     value_note: ''
     sort_value: 0.1195
     sort_std: null
-    global_rank: 63
-    paper_rank: 75
+    global_rank: 67
+    paper_rank: 79
     rank_delta: 12
     rank_delta_abs: 12
     rank_delta_direction: worse
@@ -1389,8 +1390,8 @@ results:
     value_note: ''
     sort_value: 0.1195
     sort_std: null
-    global_rank: 62
-    paper_rank: 64
+    global_rank: 66
+    paper_rank: 68
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -1568,8 +1569,8 @@ results:
     value_note: ''
     sort_value: 0.8139
     sort_std: 0.0049
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1604,7 +1605,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 10
+    global_rank: 12
     sort_value: 0.809
     sort_std: 0.016
     comparison_type: global_top
@@ -1668,8 +1669,8 @@ results:
     value_note: ''
     sort_value: 0.806
     sort_std: 0.0065
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 14
+    paper_rank: 14
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1735,8 +1736,8 @@ results:
     value_note: ''
     sort_value: 0.8051
     sort_std: 0.0053
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1871,8 +1872,8 @@ results:
     value_note: ''
     sort_value: 0.7942
     sort_std: 0.012
-    global_rank: 52
-    paper_rank: 52
+    global_rank: 53
+    paper_rank: 53
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1939,8 +1940,8 @@ results:
     value_note: ''
     sort_value: 0.7934
     sort_std: 0.0116
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2008,8 +2009,8 @@ results:
     value_note: ''
     sort_value: 0.7905
     sort_std: 0.0132
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2075,8 +2076,8 @@ results:
     value_note: ''
     sort_value: 0.7883
     sort_std: 0.01
-    global_rank: 72
-    paper_rank: 72
+    global_rank: 73
+    paper_rank: 73
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2179,7 +2180,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 171
+    global_rank: 172
     sort_value: 0.769
     sort_std: 0.0136
     comparison_type: global_top

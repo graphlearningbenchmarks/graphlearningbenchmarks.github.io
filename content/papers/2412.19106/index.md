@@ -43,8 +43,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - ERGNN
-mrr: 0.0942
-adjusted_mrr: 0.0628
+mrr: 0.0976
+adjusted_mrr: 0.0651
 mrr_dataset_count: 2
 benchmark_categories:
 - OGB
@@ -66,11 +66,11 @@ results:
 - &id002
   dataset: Amazon2M
   rows:
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.953
-    std: null
+  - model: MA-GCL
+    model_key: ma-gcl
+    model_plain: MA-GCL
+    value: 0.8883
+    std: 0.003
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
@@ -80,62 +80,29 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2112.08331'
-    title: Model Stealing Attacks Against Inductive Graph Neural Networks
-    date: Dec 15, 2021
-    date_display: Dec 2021
-    date_iso: '2021-12-15'
-    venue: IEEE Symposium on Security and Privacy
-    codebase_url: https://github.com/xinleihe/GNNStealing
+    arxiv_id: '2212.07035'
+    title: 'MA-GCL: Model Augmentation Tricks for Graph Contrastive Learning'
+    date: Dec 14, 2022
+    date_display: Dec 2022
+    date_iso: '2022-12-14'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/GXM1141/MA-GCL
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.953
-    sort_std: null
+    sort_value: 0.8883
+    sort_std: 0.003
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SAGE
-    model_key: sage
-    model_plain: SAGE
-    value: 0.937
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2112.08331'
-    title: Model Stealing Attacks Against Inductive Graph Neural Networks
-    date: Dec 15, 2021
-    date_display: Dec 2021
-    date_iso: '2021-12-15'
-    venue: IEEE Symposium on Security and Privacy
-    codebase_url: https://github.com/xinleihe/GNNStealing
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.937
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: BGRL
-    model_key: bgrl
-    model_plain: BGRL
-    value: 0.932
+  - model: CCA-SSG
+    model_key: cca-ssg
+    model_plain: CCA-SSG
+    value: 0.8842
     std: 0.003
     metric: Accuracy
     higher_is_better: true
@@ -146,93 +113,56 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2412.21151'
-    title: 'PyG-SSL: A Graph Self-Supervised Learning Toolkit'
-    date: Dec 30, 2024
-    date_display: Dec 2024
-    date_iso: '2024-12-30'
-    venue: International Conference on Information and Knowledge Management
-    codebase_url: https://github.com/iDEA-iSAIL-Lab-UIUC/pyg-ssl
+    arxiv_id: '2212.07035'
+    title: 'MA-GCL: Model Augmentation Tricks for Graph Contrastive Learning'
+    date: Dec 14, 2022
+    date_display: Dec 2022
+    date_iso: '2022-12-14'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/GXM1141/MA-GCL
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.932
+    global_rank: 2
+    sort_value: 0.8842
     sort_std: 0.003
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
-  - model: NodeFormer
-    model_key: nodeformer
-    model_plain: NodeFormer
-    value: 0.4548
-    std: 0.005
-    paper_value: 0.4548
-    paper_std: 0.005
+  - model: ARIEL
+    model_key: ariel
+    model_plain: ARIEL
+    value: 0.8827
+    std: 0.002
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2212.07035'
+    title: 'MA-GCL: Model Augmentation Tricks for Graph Contrastive Learning'
+    date: Dec 14, 2022
+    date_display: Dec 2022
+    date_iso: '2022-12-14'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/GXM1141/MA-GCL
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Dec 26, 2024
-    date_display: Dec 2024
-    date_iso: '2024-12-26'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.7156
-    at_pub_std: 0.0042
-    at_pub_source_arxiv: '2406.19249'
-    at_pub_source_title: 'NTFormer: A Composite Node Tokenized Graph Transformer for
-      Node Classification'
-    at_pub_source_date_iso: '2024-06-27'
-    at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2026-02-23'
-    value_gap_source_date_label: WWW 2026
-    gap_vs_at_pub: 0.26080000000000003
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8785
-    true_std: 0.0024
-    value_gap_source_arxiv: '2602.19622'
-    value_gap_source_title: 'VecFormer: Towards Efficient and Generalizable Graph
-      Transformer with Graph Token Attention'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.42369999999999997
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8785
-    sort_std: 0.0024
-    global_rank: 14
-    paper_rank: 72
-    rank_delta: 58
-    rank_delta_abs: 58
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'NTFormer: A Composite Node Tokenized Graph Transformer
-      for Node Classification'
-    comparison_source_arxiv: '2406.19249'
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.8827
+    sort_std: 0.002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GCN
@@ -293,10 +223,10 @@ results:
     value_note: ''
     sort_value: 0.8651
     sort_std: 0.005
-    global_rank: 18
-    paper_rank: 61
-    rank_delta: 43
-    rank_delta_abs: 43
+    global_rank: 10
+    paper_rank: 51
+    rank_delta: 41
+    rank_delta_abs: 41
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -305,11 +235,11 @@ results:
     comparison_source_arxiv: '2212.07035'
     is_best: false
     is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.856
-    std: null
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.723
+    std: 0.01
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -319,57 +249,93 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2112.08331'
-    title: Model Stealing Attacks Against Inductive Graph Neural Networks
-    date: Dec 15, 2021
-    date_display: Dec 2021
-    date_iso: '2021-12-15'
-    venue: IEEE Symposium on Security and Privacy
-    codebase_url: https://github.com/xinleihe/GNNStealing
+    arxiv_id: '2203.06389'
+    title: 'GRAND+: Scalable Graph Random Neural Networks'
+    date: Mar 12, 2022
+    date_display: Mar 2022
+    date_iso: '2022-03-12'
+    venue: The Web Conference
+    codebase_url: https://github.com/THUDM/GRAND-plus
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 20
-    sort_value: 0.856
-    sort_std: null
+    global_rank: 29
+    sort_value: 0.723
+    sort_std: 0.01
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: MLP
-    model_key: mlp
-    model_plain: MLP
-    value: 0.6346
-    std: 0.001
+  - model: NodeFormer
+    model_key: nodeformer
+    model_plain: NodeFormer
+    value: 0.4548
+    std: 0.005
+    paper_value: 0.4548
+    paper_std: 0.005
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    venue: The Web Conference
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
     feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 44
-    sort_value: 0.6346
-    sort_std: 0.001
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Dec 26, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-26'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7156
+    at_pub_std: 0.0042
+    at_pub_source_arxiv: '2406.19249'
+    at_pub_source_title: 'NTFormer: A Composite Node Tokenized Graph Transformer for
+      Node Classification'
+    at_pub_source_date_iso: '2024-06-27'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2025-05-23'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.26080000000000003
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7156
+    true_std: 0.0042
+    value_gap_source_arxiv: '2505.17660'
+    value_gap_source_title: 'DAM-GT: Dual Positional Encoding-Based Attention Masking
+      Graph Transformer for Node Classification'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.26080000000000003
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7156
+    sort_std: 0.0042
+    global_rank: 30
+    paper_rank: 62
+    rank_delta: 32
+    rank_delta_abs: 32
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'NTFormer: A Composite Node Tokenized Graph Transformer
+      for Node Classification'
+    comparison_source_arxiv: '2406.19249'
     is_best: false
     is_std_outlier: false
   - model: ERGNN
@@ -429,8 +395,8 @@ results:
     value_note: ''
     sort_value: 0.5369
     sort_std: 0.0054
-    global_rank: 46
-    paper_rank: 46
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -498,8 +464,8 @@ results:
     value_note: ''
     sort_value: 0.4988
     sort_std: 0.0044
-    global_rank: 52
-    paper_rank: 52
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -568,8 +534,8 @@ results:
     value_note: ''
     sort_value: 0.4956
     sort_std: 0.0047
-    global_rank: 53
-    paper_rank: 53
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -637,8 +603,8 @@ results:
     value_note: ''
     sort_value: 0.4948
     sort_std: 0.0036
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -705,8 +671,8 @@ results:
     value_note: ''
     sort_value: 0.4943
     sort_std: 0.0041
-    global_rank: 55
-    paper_rank: 55
+    global_rank: 44
+    paper_rank: 44
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -773,8 +739,8 @@ results:
     value_note: ''
     sort_value: 0.4877
     sort_std: 0.0057
-    global_rank: 57
-    paper_rank: 57
+    global_rank: 47
+    paper_rank: 47
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -841,8 +807,8 @@ results:
     value_note: ''
     sort_value: 0.4873
     sort_std: 0.0043
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -909,8 +875,8 @@ results:
     value_note: ''
     sort_value: 0.4856
     sort_std: 0.0022
-    global_rank: 59
-    paper_rank: 59
+    global_rank: 49
+    paper_rank: 49
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -977,8 +943,8 @@ results:
     value_note: ''
     sort_value: 0.4841
     sort_std: 0.0034
-    global_rank: 60
-    paper_rank: 60
+    global_rank: 50
+    paper_rank: 50
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1046,8 +1012,8 @@ results:
     value_note: ''
     sort_value: 0.4652
     sort_std: 0.007
-    global_rank: 64
-    paper_rank: 64
+    global_rank: 54
+    paper_rank: 54
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1115,8 +1081,8 @@ results:
     value_note: ''
     sort_value: 0.4429
     sort_std: null
-    global_rank: 75
-    paper_rank: 77
+    global_rank: 65
+    paper_rank: 67
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -1183,8 +1149,8 @@ results:
     value_note: ''
     sort_value: 0.4209
     sort_std: 0.0062
-    global_rank: 89
-    paper_rank: 89
+    global_rank: 75
+    paper_rank: 75
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1251,8 +1217,8 @@ results:
     value_note: ''
     sort_value: 0.4125
     sort_std: 0.0088
-    global_rank: 94
-    paper_rank: 94
+    global_rank: 77
+    paper_rank: 77
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1298,33 +1264,33 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-05-20'
-    value_gap_source_date_label: KDD 2025
+    value_gap_source_date_iso: '2024-12-26'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
+    insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.3881
-    true_std: 0.007
-    value_gap_source_arxiv: '2505.14033'
-    value_gap_source_title: 'Partition-wise Graph Filtering: A Unified Perspective
-      Through the Lens of Graph Coarsening'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.006199999999999983
+    true_value: 0.3819
+    true_std: 0.0041
+    value_gap_source_arxiv: '2412.19106'
+    value_gap_source_title: 'ERGNN: Spectral Graph Neural Network With Explicitly-Optimized
+      Rational Graph Filters'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.3881
-    sort_std: 0.007
-    global_rank: 99
-    paper_rank: 99
+    sort_value: 0.3819
+    sort_std: 0.0041
+    global_rank: 80
+    paper_rank: 80
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1615,8 +1581,8 @@ results:
       An Error-Sum of Function Slices Approach'
     at_pub_source_date_iso: '2024-04-15'
     at_pub_source_date_label: WWW 2024
-    value_gap_source_date_iso: '2024-04-15'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2025-05-20'
+    value_gap_source_date_label: KDD 2025
     gap_vs_at_pub: 0.0020999999999999908
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1627,9 +1593,9 @@ results:
     today_delta_significant: false
     true_value: 0.6703
     true_std: 0.003
-    value_gap_source_arxiv: '2404.15354'
-    value_gap_source_title: 'Polynomial Selection in Spectral Graph Neural Networks:
-      An Error-Sum of Function Slices Approach'
+    value_gap_source_arxiv: '2505.14033'
+    value_gap_source_title: 'Partition-wise Graph Filtering: A Unified Perspective
+      Through the Lens of Graph Coarsening'
     value_gap_source_is_current_paper: false
     value_gap: 0.0020999999999999908
     has_value_note: false
@@ -1741,7 +1707,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 38
+    global_rank: 39
     sort_value: 0.6644
     sort_std: 0.0017
     comparison_type: global_top
@@ -1786,8 +1752,8 @@ results:
       An Error-Sum of Function Slices Approach'
     at_pub_source_date_iso: '2024-04-15'
     at_pub_source_date_label: WWW 2024
-    value_gap_source_date_iso: '2024-04-15'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2025-05-20'
+    value_gap_source_date_label: KDD 2025
     gap_vs_at_pub: 0.0047000000000000375
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1798,19 +1764,19 @@ results:
     today_delta_significant: true
     true_value: 0.6613
     true_std: 0.002
-    value_gap_source_arxiv: '2404.15354'
-    value_gap_source_title: 'Polynomial Selection in Spectral Graph Neural Networks:
-      An Error-Sum of Function Slices Approach'
+    value_gap_source_arxiv: '2505.14033'
+    value_gap_source_title: 'Partition-wise Graph Filtering: A Unified Perspective
+      Through the Lens of Graph Coarsening'
     value_gap_source_is_current_paper: false
     value_gap: 0.0047000000000000375
     has_value_note: false
     value_note: ''
     sort_value: 0.6613
     sort_std: 0.002
-    global_rank: 47
-    paper_rank: 54
-    rank_delta: 7
-    rank_delta_abs: 7
+    global_rank: 49
+    paper_rank: 57
+    rank_delta: 8
+    rank_delta_abs: 8
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1855,8 +1821,8 @@ results:
       An Error-Sum of Function Slices Approach'
     at_pub_source_date_iso: '2024-04-15'
     at_pub_source_date_label: WWW 2024
-    value_gap_source_date_iso: '2024-04-15'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2025-05-20'
+    value_gap_source_date_label: KDD 2025
     gap_vs_at_pub: 0.009600000000000053
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1867,19 +1833,19 @@ results:
     today_delta_significant: true
     true_value: 0.6608
     true_std: 0.002
-    value_gap_source_arxiv: '2404.15354'
-    value_gap_source_title: 'Polynomial Selection in Spectral Graph Neural Networks:
-      An Error-Sum of Function Slices Approach'
+    value_gap_source_arxiv: '2505.14033'
+    value_gap_source_title: 'Partition-wise Graph Filtering: A Unified Perspective
+      Through the Lens of Graph Coarsening'
     value_gap_source_is_current_paper: false
     value_gap: 0.009600000000000053
     has_value_note: false
     value_note: ''
     sort_value: 0.6608
     sort_std: 0.002
-    global_rank: 48
-    paper_rank: 61
-    rank_delta: 13
-    rank_delta_abs: 13
+    global_rank: 51
+    paper_rank: 65
+    rank_delta: 14
+    rank_delta_abs: 14
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1945,8 +1911,8 @@ results:
     value_note: ''
     sort_value: 0.6563
     sort_std: 0.0027
-    global_rank: 55
-    paper_rank: 55
+    global_rank: 58
+    paper_rank: 58
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1993,8 +1959,8 @@ results:
       An Error-Sum of Function Slices Approach'
     at_pub_source_date_iso: '2024-04-15'
     at_pub_source_date_label: WWW 2024
-    value_gap_source_date_iso: '2024-04-15'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2025-05-20'
+    value_gap_source_date_label: KDD 2025
     gap_vs_at_pub: 0.011699999999999933
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -2005,19 +1971,19 @@ results:
     today_delta_significant: true
     true_value: 0.6545
     true_std: 0.002
-    value_gap_source_arxiv: '2404.15354'
-    value_gap_source_title: 'Polynomial Selection in Spectral Graph Neural Networks:
-      An Error-Sum of Function Slices Approach'
+    value_gap_source_arxiv: '2505.14033'
+    value_gap_source_title: 'Partition-wise Graph Filtering: A Unified Perspective
+      Through the Lens of Graph Coarsening'
     value_gap_source_is_current_paper: false
     value_gap: 0.011699999999999933
     has_value_note: false
     value_note: ''
     sort_value: 0.6545
     sort_std: 0.002
-    global_rank: 58
-    paper_rank: 69
-    rank_delta: 11
-    rank_delta_abs: 11
+    global_rank: 61
+    paper_rank: 73
+    rank_delta: 12
+    rank_delta_abs: 12
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2052,7 +2018,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 98
+    global_rank: 102
     sort_value: 0.496
     sort_std: 0.003
     comparison_type: global_top

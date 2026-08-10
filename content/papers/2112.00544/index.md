@@ -75,8 +75,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - KCL
-mrr: 0.05
-adjusted_mrr: 0.0167
+mrr: 0.0714
+adjusted_mrr: 0.0238
 mrr_dataset_count: 1
 benchmark_categories:
 - MoleculeNet
@@ -93,103 +93,100 @@ results:
 - &id001
   dataset: ESOL
   rows:
-  - model: 10% ZINC + 10% PubChem
-    model_key: 10% zinc + 10% pubchem
-    model_plain: 10% ZINC + 10% PubChem
-    value: 0.2775
-    std: null
+  - model: Graphormer-SPIS
+    model_key: graphormer-spis
+    model_plain: Graphormer-SPIS
+    value: 0.484
+    std: 0.005
     metric: RMSE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2305.13987'
+    title: On Structural Expressive Power of Graph Transformers
+    date: May 23, 2023
+    date_display: May 2023
+    date_iso: '2023-05-23'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.2775
-    sort_std: null
+    sort_value: 0.484
+    sort_std: 0.005
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAT
-    model_key: mat
-    model_plain: MAT
-    value: 0.278
-    std: 0.02
+  - model: Graphormer-SPD
+    model_key: graphormer-spd
+    model_plain: Graphormer-SPD
+    value: 0.492
+    std: 0.004
     metric: RMSE
     higher_is_better: false
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    arxiv_id: '2002.08264'
-    title: Molecule Attention Transformer
-    date: Feb 19, 2020
-    date_display: Feb 2020
-    date_iso: '2020-02-19'
-    venue: Graph Representation Learning workshop and Machine Learning and the Physical
-      Sciences workshop at NeurIPS 2019
-    codebase_url: https://github.com/gmum/MAT
-    uses_external_data: true
-    input_feature_source: null
+    arxiv_id: '2305.13987'
+    title: On Structural Expressive Power of Graph Transformers
+    date: May 23, 2023
+    date_display: May 2023
+    date_iso: '2023-05-23'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
+    uses_external_data: false
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.278
-    sort_std: 0.02
+    sort_value: 0.492
+    sort_std: 0.004
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MoLFormer-XL
-    model_key: molformer-xl
-    model_plain: MoLFormer-XL
-    value: 0.2787
-    std: null
+  - model: conan-FGW
+    model_key: conan-fgw
+    model_plain: conan-FGW
+    value: 0.514
+    std: 0.019
     metric: RMSE
     higher_is_better: false
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2402.01975'
+    title: Structure-Aware E(3)-Invariant Molecular Conformer Aggregation Networks
+    date: Feb 3, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-03'
+    venue: International Conference on Machine Learning
+    codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.2787
-    sort_std: null
+    sort_value: 0.514
+    sort_std: 0.019
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -220,7 +217,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 13
+    global_rank: 7
     sort_value: 0.564
     sort_std: 0.015
     comparison_type: global_top
@@ -286,8 +283,8 @@ results:
     value_note: ''
     sort_value: 0.582
     sort_std: null
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 14
+    paper_rank: 14
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

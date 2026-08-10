@@ -69,8 +69,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - SimTEG
-mrr: 0.0238
-adjusted_mrr: 0.0079
+mrr: 0.0256
+adjusted_mrr: 0.0085
 mrr_dataset_count: 1
 benchmark_categories:
 - OGB
@@ -281,8 +281,8 @@ results:
     value_note: ''
     sort_value: 0.8736
     sort_std: 0.0007
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -350,8 +350,8 @@ results:
     value_note: ''
     sort_value: 0.8612
     sort_std: 0.0034
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -418,8 +418,8 @@ results:
     value_note: ''
     sort_value: 0.854
     sort_std: 0.0028
-    global_rank: 42
-    paper_rank: 42
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -486,8 +486,8 @@ results:
     value_note: ''
     sort_value: 0.8182
     sort_std: 0.0044
-    global_rank: 118
-    paper_rank: 118
+    global_rank: 103
+    paper_rank: 103
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -522,7 +522,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 394
+    global_rank: 361
     sort_value: 0.6605
     sort_std: 0.002
     comparison_type: global_top

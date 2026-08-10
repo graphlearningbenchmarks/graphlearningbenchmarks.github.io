@@ -37,8 +37,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - MPNNs
-mrr: 0.0833
-adjusted_mrr: 0.0556
+mrr: 0.0919
+adjusted_mrr: 0.0613
 mrr_dataset_count: 2
 benchmark_categories:
 - Classic
@@ -319,8 +319,8 @@ results:
     value_note: ''
     sort_value: 0.8495
     sort_std: 0.0058
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -355,7 +355,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 16
+    global_rank: 14
     sort_value: 0.84
     sort_std: 0.004
     comparison_type: global_top
@@ -420,8 +420,8 @@ results:
     value_note: ''
     sort_value: 0.794
     sort_std: 0.01
-    global_rank: 80
-    paper_rank: 80
+    global_rank: 75
+    paper_rank: 75
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -488,8 +488,8 @@ results:
     value_note: ''
     sort_value: 0.7795
     sort_std: 0.004
-    global_rank: 129
-    paper_rank: 129
+    global_rank: 123
+    paper_rank: 123
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -556,8 +556,8 @@ results:
     value_note: ''
     sort_value: 0.7639
     sort_std: 0.0118
-    global_rank: 179
-    paper_rank: 179
+    global_rank: 173
+    paper_rank: 173
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -634,7 +634,7 @@ results:
     venue: arXiv.org
     codebase_url: https://github.com/ocx-lab/FloydNet
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -802,8 +802,8 @@ results:
     value_note: ''
     sort_value: 0.024
     sort_std: 0.001
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -870,8 +870,8 @@ results:
     value_note: ''
     sort_value: 0.024
     sort_std: 0.001
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -939,8 +939,8 @@ results:
     value_note: ''
     sort_value: 0.036
     sort_std: 0.002
-    global_rank: 48
-    paper_rank: 48
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1006,10 +1006,10 @@ results:
     value_note: ''
     sort_value: 0.067
     sort_std: 0.009
-    global_rank: 68
-    paper_rank: 104
-    rank_delta: 36
-    rank_delta_abs: 36
+    global_rank: 65
+    paper_rank: 99
+    rank_delta: 34
+    rank_delta_abs: 34
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1075,8 +1075,8 @@ results:
     value_note: ''
     sort_value: 0.088
     sort_std: 0.002
-    global_rank: 74
-    paper_rank: 74
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1143,8 +1143,8 @@ results:
     value_note: ''
     sort_value: 0.088
     sort_std: 0.002
-    global_rank: 75
-    paper_rank: 75
+    global_rank: 72
+    paper_rank: 72
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1179,7 +1179,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 83
+    global_rank: 80
     sort_value: 0.113
     sort_std: 0.002
     comparison_type: global_top

@@ -63,7 +63,7 @@ benchmark_coverage:
 - benchmark: Quantum Chemistry
   benchmark_slug: quantum-chemistry
   evaluated: 1
-  total: 3
+  total: 1
 task_categories:
 - graph_regression
 experiment_scopes:
@@ -302,9 +302,9 @@ results:
     sort_value: 0.01
     sort_std: null
     global_rank: 22
-    paper_rank: 64
-    rank_delta: 42
-    rank_delta_abs: 42
+    paper_rank: 63
+    rank_delta: 41
+    rank_delta_abs: 41
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -648,9 +648,9 @@ results:
     sort_value: 0.05
     sort_std: null
     global_rank: 46
-    paper_rank: 68
-    rank_delta: 22
-    rank_delta_abs: 22
+    paper_rank: 67
+    rank_delta: 21
+    rank_delta_abs: 21
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -853,8 +853,8 @@ results:
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 65
-    paper_rank: 65
+    global_rank: 64
+    paper_rank: 64
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

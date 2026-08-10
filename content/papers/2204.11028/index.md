@@ -66,8 +66,8 @@ proposed_models:
 - PGExplainer
 - PGM-Explainer
 - RC-Explainer
-mrr: 0.0222
-adjusted_mrr: 0.0074
+mrr: 0.0263
+adjusted_mrr: 0.0088
 mrr_dataset_count: 1
 benchmark_categories:
 - TU Dortmund
@@ -152,11 +152,11 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Sum--MLP (GIN-0)
-    model_key: sum--mlp (gin-0)
-    model_plain: Sum--MLP (GIN-0)
-    value: 0.575
-    std: 0.015
+  - model: LAMP-Soft
+    model_key: lamp-soft
+    model_plain: LAMP-Soft
+    value: 0.5738
+    std: 0.0041
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -166,20 +166,21 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '1810.00826'
-    title: How Powerful are Graph Neural Networks?
-    date: Oct 1, 2018
-    date_display: Oct 2018
-    date_iso: '2018-10-01'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/weihua916/powerful-gnns
+    arxiv_id: '2410.10365'
+    title: 'SpeGCL: Self-supervised Graph Spectrum Contrastive Learning without Positive
+      Samples'
+    date: Oct 14, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-14'
+    venue: IEEE Transactions on Neural Networks and Learning Systems
+    codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.575
-    sort_std: 0.015
+    sort_value: 0.5738
+    sort_std: 0.0041
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -241,8 +242,8 @@ results:
     value_note: ''
     sort_value: 0.472
     sort_std: null
-    global_rank: 29
-    paper_rank: 29
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -278,7 +279,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 31
+    global_rank: 26
     sort_value: 0.438
     sort_std: 0.032
     comparison_type: global_top
@@ -342,8 +343,8 @@ results:
     value_note: ''
     sort_value: 0.3
     sort_std: null
-    global_rank: 38
-    paper_rank: 38
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -409,8 +410,8 @@ results:
     value_note: ''
     sort_value: 0.279
     sort_std: null
-    global_rank: 39
-    paper_rank: 39
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -476,8 +477,8 @@ results:
     value_note: ''
     sort_value: 0.175
     sort_std: null
-    global_rank: 42
-    paper_rank: 42
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -543,8 +544,8 @@ results:
     value_note: ''
     sort_value: 0.158
     sort_std: null
-    global_rank: 43
-    paper_rank: 43
+    global_rank: 36
+    paper_rank: 36
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -610,8 +611,8 @@ results:
     value_note: ''
     sort_value: 0.158
     sort_std: null
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -677,8 +678,8 @@ results:
     value_note: ''
     sort_value: 0.125
     sort_std: null
-    global_rank: 45
-    paper_rank: 45
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

@@ -70,1092 +70,6 @@ task_categories:
 experiment_scopes:
 - graph-level
 results:
-- &id001
-  dataset: Code
-  rows:
-  - model: GMN
-    model_key: gmn
-    model_plain: GMN
-    value: 0.206
-    std: 0.002
-    paper_value: 0.206
-    paper_std: 0.002
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test F1 on ogbg-code2
-    date: Sep 17, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-17'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-09-17'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.206
-    true_std: 0.002
-    value_gap_source_arxiv: '2509.13735'
-    value_gap_source_title: State Space Models over Directed Graphs
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.206
-    sort_std: 0.002
-    global_rank: 1
-    paper_rank: 1
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: DirGraphSSM
-    model_key: dirgraphssm
-    model_plain: DirGraphSSM
-    value: 0.205
-    std: 0.0023
-    paper_value: 0.205
-    paper_std: 0.0023
-    metric: F1
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test F1 on ogbg-code2
-    date: Sep 17, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-17'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-09-17'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.205
-    true_std: 0.0023
-    value_gap_source_arxiv: '2509.13735'
-    value_gap_source_title: State Space Models over Directed Graphs
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.205
-    sort_std: 0.0023
-    global_rank: 2
-    paper_rank: 2
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Graph-Mamba
-    model_key: graph-mamba
-    model_plain: Graph-Mamba
-    value: 0.203
-    std: 0.0023
-    paper_value: 0.203
-    paper_std: 0.0023
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test F1 on ogbg-code2
-    date: Sep 17, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-17'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-09-17'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.203
-    true_std: 0.0023
-    value_gap_source_arxiv: '2509.13735'
-    value_gap_source_title: State Space Models over Directed Graphs
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.203
-    sort_std: 0.0023
-    global_rank: 3
-    paper_rank: 3
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: DAG+SAT
-    model_key: dag+sat
-    model_plain: DAG+SAT
-    value: 0.202
-    std: 0.002
-    paper_value: 0.202
-    paper_std: 0.002
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test F1 on ogbg-code2
-    date: Sep 17, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-17'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-09-17'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.202
-    true_std: 0.002
-    value_gap_source_arxiv: '2509.13735'
-    value_gap_source_title: State Space Models over Directed Graphs
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.202
-    sort_std: 0.002
-    global_rank: 4
-    paper_rank: 4
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Exphormer
-    model_key: exphormer
-    model_plain: Exphormer
-    value: 0.199
-    std: 0.002
-    paper_value: 0.199
-    paper_std: 0.002
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test F1 on ogbg-code2
-    date: Sep 17, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-17'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-09-17'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.199
-    true_std: 0.002
-    value_gap_source_arxiv: '2509.13735'
-    value_gap_source_title: State Space Models over Directed Graphs
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.199
-    sort_std: 0.002
-    global_rank: 5
-    paper_rank: 5
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SAT
-    model_key: sat
-    model_plain: SAT
-    value: 0.194
-    std: 0.003
-    paper_value: 0.194
-    paper_std: 0.003
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test F1 on ogbg-code2
-    date: Sep 17, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-17'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-09-17'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.194
-    true_std: 0.003
-    value_gap_source_arxiv: '2509.13735'
-    value_gap_source_title: State Space Models over Directed Graphs
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.194
-    sort_std: 0.003
-    global_rank: 8
-    paper_rank: 8
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphGPS
-    model_key: graphgps
-    model_plain: GraphGPS
-    value: 0.189
-    std: 0.002
-    paper_value: 0.189
-    paper_std: 0.002
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test F1 on ogbg-code2
-    date: Sep 17, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-17'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-09-17'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.189
-    true_std: 0.002
-    value_gap_source_arxiv: '2509.13735'
-    value_gap_source_title: State Space Models over Directed Graphs
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.189
-    sort_std: 0.002
-    global_rank: 15
-    paper_rank: 15
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: DAG+Transformer
-    model_key: dag+transformer
-    model_plain: DAG+Transformer
-    value: 0.188
-    std: 0.002
-    paper_value: 0.188
-    paper_std: 0.002
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test F1 on ogbg-code2
-    date: Sep 17, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-17'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-09-17'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.188
-    true_std: 0.002
-    value_gap_source_arxiv: '2509.13735'
-    value_gap_source_title: State Space Models over Directed Graphs
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.188
-    sort_std: 0.002
-    global_rank: 16
-    paper_rank: 16
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: PACE
-    model_key: pace
-    model_plain: PACE
-    value: 0.178
-    std: 0.002
-    paper_value: 0.178
-    paper_std: 0.002
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test F1 on ogbg-code2
-    date: Sep 17, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-17'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-09-17'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.178
-    true_std: 0.002
-    value_gap_source_arxiv: '2509.13735'
-    value_gap_source_title: State Space Models over Directed Graphs
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.178
-    sort_std: 0.002
-    global_rank: 19
-    paper_rank: 19
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: DAGNN
-    model_key: dagnn
-    model_plain: DAGNN
-    value: 0.175
-    std: 0.005
-    paper_value: 0.175
-    paper_std: 0.005
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test F1 on ogbg-code2
-    date: Sep 17, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-17'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-09-17'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.175
-    true_std: 0.005
-    value_gap_source_arxiv: '2509.13735'
-    value_gap_source_title: State Space Models over Directed Graphs
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.175
-    sort_std: 0.005
-    global_rank: 21
-    paper_rank: 21
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MagNet
-    model_key: magnet
-    model_plain: MagNet
-    value: 0.169
-    std: 0.002
-    paper_value: 0.169
-    paper_std: 0.002
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test F1 on ogbg-code2
-    date: Sep 17, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-17'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-09-17'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.169
-    true_std: 0.002
-    value_gap_source_arxiv: '2509.13735'
-    value_gap_source_title: State Space Models over Directed Graphs
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.169
-    sort_std: 0.002
-    global_rank: 23
-    paper_rank: 23
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: DiGCN
-    model_key: digcn
-    model_plain: DiGCN
-    value: 0.167
-    std: 0.002
-    paper_value: 0.167
-    paper_std: 0.002
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test F1 on ogbg-code2
-    date: Sep 17, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-17'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-09-17'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.167
-    true_std: 0.002
-    value_gap_source_arxiv: '2509.13735'
-    value_gap_source_title: State Space Models over Directed Graphs
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.167
-    sort_std: 0.002
-    global_rank: 25
-    paper_rank: 25
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: DirGNN
-    model_key: dirgnn
-    model_plain: DirGNN
-    value: 0.166
-    std: 0.002
-    paper_value: 0.166
-    paper_std: 0.002
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test F1 on ogbg-code2
-    date: Sep 17, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-17'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-09-17'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.166
-    true_std: 0.002
-    value_gap_source_arxiv: '2509.13735'
-    value_gap_source_title: State Space Models over Directed Graphs
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.166
-    sort_std: 0.002
-    global_rank: 26
-    paper_rank: 26
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.157
-    std: 0.002
-    paper_value: 0.157
-    paper_std: 0.002
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test F1 on ogbg-code2
-    date: Sep 17, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-17'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-09-17'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.157
-    true_std: 0.002
-    value_gap_source_arxiv: '2509.13735'
-    value_gap_source_title: State Space Models over Directed Graphs
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.157
-    sort_std: 0.002
-    global_rank: 32
-    paper_rank: 32
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.151
-    std: 0.002
-    paper_value: 0.151
-    paper_std: 0.002
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test F1 on ogbg-code2
-    date: Sep 17, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-17'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.1507
-    at_pub_std: 0.0018
-    at_pub_source_arxiv: '2201.08821'
-    at_pub_source_title: Representing Long-Range Context for Graph Neural Networks
-      with Global Attention
-    at_pub_source_date_iso: '2022-01-21'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2025-09-17'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.0002999999999999947
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: true
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.151
-    true_std: 0.002
-    value_gap_source_arxiv: '2509.13735'
-    value_gap_source_title: State Space Models over Directed Graphs
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.151
-    sort_std: 0.002
-    global_rank: 34
-    paper_rank: 34
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.149
-    std: 0.002
-    paper_value: 0.149
-    paper_std: 0.002
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test F1 on ogbg-code2
-    date: Sep 17, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-17'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.1495
-    at_pub_std: 0.0023
-    at_pub_source_arxiv: '2201.08821'
-    at_pub_source_title: Representing Long-Range Context for Graph Neural Networks
-      with Global Attention
-    at_pub_source_date_iso: '2022-01-21'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2023-01-27'
-    value_gap_source_date_label: ICML 2023
-    gap_vs_at_pub: 0.0005000000000000004
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.1495
-    true_std: 0.0023
-    value_gap_source_arxiv: '2301.11956'
-    value_gap_source_title: On the Connection Between MPNN and Graph Transformer
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0005000000000000004
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.1495
-    sort_std: 0.0023
-    global_rank: 36
-    paper_rank: 37
-    rank_delta: 1
-    rank_delta_abs: 1
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  rank_metric: F1
-  higher_is_better: true
-  experiment_scope: graph-level
-  dataset_primary_metric: F1
-  paper_metrics:
-  - F1
-  metric: F1
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
 - &id002
   dataset: MalNet-Tiny
   rows:
@@ -2143,6 +1057,1092 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
+- &id001
+  dataset: ogbg-code2
+  rows:
+  - model: GMN
+    model_key: gmn
+    model_plain: GMN
+    value: 0.206
+    std: 0.002
+    paper_value: 0.206
+    paper_std: 0.002
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 on ogbg-code2
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-09-17'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.206
+    true_std: 0.002
+    value_gap_source_arxiv: '2509.13735'
+    value_gap_source_title: State Space Models over Directed Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.206
+    sort_std: 0.002
+    global_rank: 1
+    paper_rank: 1
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: DirGraphSSM
+    model_key: dirgraphssm
+    model_plain: DirGraphSSM
+    value: 0.205
+    std: 0.0023
+    paper_value: 0.205
+    paper_std: 0.0023
+    metric: F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 on ogbg-code2
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-09-17'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.205
+    true_std: 0.0023
+    value_gap_source_arxiv: '2509.13735'
+    value_gap_source_title: State Space Models over Directed Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.205
+    sort_std: 0.0023
+    global_rank: 2
+    paper_rank: 2
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Graph-Mamba
+    model_key: graph-mamba
+    model_plain: Graph-Mamba
+    value: 0.203
+    std: 0.0023
+    paper_value: 0.203
+    paper_std: 0.0023
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 on ogbg-code2
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-09-17'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.203
+    true_std: 0.0023
+    value_gap_source_arxiv: '2509.13735'
+    value_gap_source_title: State Space Models over Directed Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.203
+    sort_std: 0.0023
+    global_rank: 3
+    paper_rank: 3
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: DAG+SAT
+    model_key: dag+sat
+    model_plain: DAG+SAT
+    value: 0.202
+    std: 0.002
+    paper_value: 0.202
+    paper_std: 0.002
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 on ogbg-code2
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-09-17'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.202
+    true_std: 0.002
+    value_gap_source_arxiv: '2509.13735'
+    value_gap_source_title: State Space Models over Directed Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.202
+    sort_std: 0.002
+    global_rank: 4
+    paper_rank: 4
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Exphormer
+    model_key: exphormer
+    model_plain: Exphormer
+    value: 0.199
+    std: 0.002
+    paper_value: 0.199
+    paper_std: 0.002
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 on ogbg-code2
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-09-17'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.199
+    true_std: 0.002
+    value_gap_source_arxiv: '2509.13735'
+    value_gap_source_title: State Space Models over Directed Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.199
+    sort_std: 0.002
+    global_rank: 5
+    paper_rank: 5
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAT
+    model_key: sat
+    model_plain: SAT
+    value: 0.194
+    std: 0.003
+    paper_value: 0.194
+    paper_std: 0.003
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 on ogbg-code2
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-09-17'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.194
+    true_std: 0.003
+    value_gap_source_arxiv: '2509.13735'
+    value_gap_source_title: State Space Models over Directed Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.194
+    sort_std: 0.003
+    global_rank: 8
+    paper_rank: 8
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphGPS
+    model_key: graphgps
+    model_plain: GraphGPS
+    value: 0.189
+    std: 0.002
+    paper_value: 0.189
+    paper_std: 0.002
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 on ogbg-code2
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-09-17'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.189
+    true_std: 0.002
+    value_gap_source_arxiv: '2509.13735'
+    value_gap_source_title: State Space Models over Directed Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.189
+    sort_std: 0.002
+    global_rank: 18
+    paper_rank: 18
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DAG+Transformer
+    model_key: dag+transformer
+    model_plain: DAG+Transformer
+    value: 0.188
+    std: 0.002
+    paper_value: 0.188
+    paper_std: 0.002
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 on ogbg-code2
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-09-17'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.188
+    true_std: 0.002
+    value_gap_source_arxiv: '2509.13735'
+    value_gap_source_title: State Space Models over Directed Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.188
+    sort_std: 0.002
+    global_rank: 19
+    paper_rank: 19
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PACE
+    model_key: pace
+    model_plain: PACE
+    value: 0.178
+    std: 0.002
+    paper_value: 0.178
+    paper_std: 0.002
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 on ogbg-code2
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-09-17'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.178
+    true_std: 0.002
+    value_gap_source_arxiv: '2509.13735'
+    value_gap_source_title: State Space Models over Directed Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.178
+    sort_std: 0.002
+    global_rank: 22
+    paper_rank: 22
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DAGNN
+    model_key: dagnn
+    model_plain: DAGNN
+    value: 0.175
+    std: 0.005
+    paper_value: 0.175
+    paper_std: 0.005
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 on ogbg-code2
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-09-17'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.175
+    true_std: 0.005
+    value_gap_source_arxiv: '2509.13735'
+    value_gap_source_title: State Space Models over Directed Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.175
+    sort_std: 0.005
+    global_rank: 24
+    paper_rank: 24
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MagNet
+    model_key: magnet
+    model_plain: MagNet
+    value: 0.169
+    std: 0.002
+    paper_value: 0.169
+    paper_std: 0.002
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 on ogbg-code2
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-09-17'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.169
+    true_std: 0.002
+    value_gap_source_arxiv: '2509.13735'
+    value_gap_source_title: State Space Models over Directed Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.169
+    sort_std: 0.002
+    global_rank: 26
+    paper_rank: 26
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DiGCN
+    model_key: digcn
+    model_plain: DiGCN
+    value: 0.167
+    std: 0.002
+    paper_value: 0.167
+    paper_std: 0.002
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 on ogbg-code2
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-09-17'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.167
+    true_std: 0.002
+    value_gap_source_arxiv: '2509.13735'
+    value_gap_source_title: State Space Models over Directed Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.167
+    sort_std: 0.002
+    global_rank: 28
+    paper_rank: 28
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DirGNN
+    model_key: dirgnn
+    model_plain: DirGNN
+    value: 0.166
+    std: 0.002
+    paper_value: 0.166
+    paper_std: 0.002
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 on ogbg-code2
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-09-17'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.166
+    true_std: 0.002
+    value_gap_source_arxiv: '2509.13735'
+    value_gap_source_title: State Space Models over Directed Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.166
+    sort_std: 0.002
+    global_rank: 29
+    paper_rank: 29
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.157
+    std: 0.002
+    paper_value: 0.157
+    paper_std: 0.002
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 on ogbg-code2
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-09-17'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.157
+    true_std: 0.002
+    value_gap_source_arxiv: '2509.13735'
+    value_gap_source_title: State Space Models over Directed Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.157
+    sort_std: 0.002
+    global_rank: 37
+    paper_rank: 37
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.151
+    std: 0.002
+    paper_value: 0.151
+    paper_std: 0.002
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 on ogbg-code2
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.1507
+    at_pub_std: 0.0018
+    at_pub_source_arxiv: '2201.08821'
+    at_pub_source_title: Representing Long-Range Context for Graph Neural Networks
+      with Global Attention
+    at_pub_source_date_iso: '2022-01-21'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2025-09-17'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.0002999999999999947
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.151
+    true_std: 0.002
+    value_gap_source_arxiv: '2509.13735'
+    value_gap_source_title: State Space Models over Directed Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.151
+    sort_std: 0.002
+    global_rank: 39
+    paper_rank: 39
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.149
+    std: 0.002
+    paper_value: 0.149
+    paper_std: 0.002
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 on ogbg-code2
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.1495
+    at_pub_std: 0.0023
+    at_pub_source_arxiv: '2201.08821'
+    at_pub_source_title: Representing Long-Range Context for Graph Neural Networks
+      with Global Attention
+    at_pub_source_date_iso: '2022-01-21'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2023-01-27'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: 0.0005000000000000004
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.1495
+    true_std: 0.0023
+    value_gap_source_arxiv: '2301.11956'
+    value_gap_source_title: On the Connection Between MPNN and Graph Transformer
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0005000000000000004
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1495
+    sort_std: 0.0023
+    global_rank: 41
+    paper_rank: 42
+    rank_delta: 1
+    rank_delta_abs: 1
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: F1
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: F1
+  paper_metrics:
+  - F1
+  metric: F1
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
 results_grouped:
 - benchmark: OGB
   datasets:
@@ -2157,8 +2157,8 @@ datasets_by_scope:
   - benchmark: OGB
     benchmark_slug: ogb
     datasets:
-    - dataset: Code
-      dataset_slug: code
+    - dataset: ogbg-code2
+      dataset_slug: ogbg-code2
   - benchmark: Other Graph Benchmarks
     benchmark_slug: other-graph-benchmarks
     datasets:

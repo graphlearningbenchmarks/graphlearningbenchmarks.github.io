@@ -38,13 +38,13 @@ abstract: This study aims to build a pre-trained Graph Neural Network (GNN) mode
   experiments on molecule datasets across various domains demonstrate the superiority
   of S-CGIB.
 codebase_url: https://github.com/NSLab-CUK/S-CGIB
-extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+extraction_model: google/gemma-4-26B-A4B-it
 has_results: true
 paper_type: method
 proposed_models:
 - S-CGIB
-mrr: 0.0183
-adjusted_mrr: 0.0183
+mrr: 0.0191
+adjusted_mrr: 0.0191
 mrr_dataset_count: 12
 benchmark_categories:
 - TU Dortmund
@@ -190,14 +190,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BACE
+    protocol_note: ROC-AUC on BACE using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -230,8 +230,8 @@ results:
     value_note: ''
     sort_value: 0.865
     sort_std: 0.008
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -258,14 +258,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Performance using GIN encoder
+    protocol_note: ROC-AUC on BACE using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -298,8 +298,8 @@ results:
     value_note: ''
     sort_value: 0.8646
     sort_std: 0.0081
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -326,14 +326,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Performance using GAT encoder
+    protocol_note: ROC-AUC on BACE using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -365,10 +365,10 @@ results:
     value_note: ''
     sort_value: 0.86
     sort_std: 0.011
-    global_rank: 49
-    paper_rank: 306
-    rank_delta: 257
-    rank_delta_abs: 257
+    global_rank: 52
+    paper_rank: 313
+    rank_delta: 261
+    rank_delta_abs: 261
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -393,14 +393,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Performance using GCN encoder
+    protocol_note: ROC-AUC on BACE using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -434,10 +434,10 @@ results:
     value_note: ''
     sort_value: 0.854
     sort_std: 0.011
-    global_rank: 60
-    paper_rank: 271
-    rank_delta: 211
-    rank_delta_abs: 211
+    global_rank: 64
+    paper_rank: 278
+    rank_delta: 214
+    rank_delta_abs: 214
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -463,14 +463,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Performance using GraphSage encoder
+    protocol_note: ROC-AUC on BACE using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -504,10 +504,10 @@ results:
     value_note: ''
     sort_value: 0.8451
     sort_std: null
-    global_rank: 78
-    paper_rank: 274
-    rank_delta: 196
-    rank_delta_abs: 196
+    global_rank: 82
+    paper_rank: 281
+    rank_delta: 199
+    rank_delta_abs: 199
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -533,14 +533,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BACE
+    protocol_note: ROC-AUC on BACE using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -573,10 +573,10 @@ results:
     value_note: ''
     sort_value: 0.835
     sort_std: 0.012
-    global_rank: 95
-    paper_rank: 234
-    rank_delta: 139
-    rank_delta_abs: 139
+    global_rank: 99
+    paper_rank: 240
+    rank_delta: 141
+    rank_delta_abs: 141
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -602,14 +602,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BACE
+    protocol_note: ROC-AUC on BACE using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -643,10 +643,10 @@ results:
     value_note: ''
     sort_value: 0.834
     sort_std: 0.033
-    global_rank: 97
-    paper_rank: 247
-    rank_delta: 150
-    rank_delta_abs: 150
+    global_rank: 101
+    paper_rank: 254
+    rank_delta: 153
+    rank_delta_abs: 153
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -672,14 +672,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BACE
+    protocol_note: ROC-AUC on BACE using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -713,8 +713,8 @@ results:
     value_note: ''
     sort_value: 0.8203
     sort_std: 0.0379
-    global_rank: 125
-    paper_rank: 125
+    global_rank: 130
+    paper_rank: 130
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -741,14 +741,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BACE
+    protocol_note: ROC-AUC on BACE using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -782,10 +782,10 @@ results:
     value_note: ''
     sort_value: 0.819
     sort_std: 0.004
-    global_rank: 129
-    paper_rank: 295
-    rank_delta: 166
-    rank_delta_abs: 166
+    global_rank: 134
+    paper_rank: 302
+    rank_delta: 168
+    rank_delta_abs: 168
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -811,14 +811,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BACE
+    protocol_note: ROC-AUC on BACE using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -851,8 +851,8 @@ results:
     value_note: ''
     sort_value: 0.8132
     sort_std: 0.0106
-    global_rank: 142
-    paper_rank: 142
+    global_rank: 148
+    paper_rank: 148
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -879,14 +879,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BACE
+    protocol_note: ROC-AUC on BACE using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -919,8 +919,8 @@ results:
     value_note: ''
     sort_value: 0.8113
     sort_std: 0.0014
-    global_rank: 147
-    paper_rank: 147
+    global_rank: 153
+    paper_rank: 153
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -947,14 +947,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BACE
+    protocol_note: ROC-AUC on BACE using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -987,8 +987,8 @@ results:
     value_note: ''
     sort_value: 0.803
     sort_std: 0.031
-    global_rank: 167
-    paper_rank: 167
+    global_rank: 173
+    paper_rank: 173
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1015,14 +1015,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BACE
+    protocol_note: ROC-AUC on BACE using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -1055,10 +1055,10 @@ results:
     value_note: ''
     sort_value: 0.799
     sort_std: 0.009
-    global_rank: 171
-    paper_rank: 249
-    rank_delta: 78
-    rank_delta_abs: 78
+    global_rank: 177
+    paper_rank: 256
+    rank_delta: 79
+    rank_delta_abs: 79
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1084,14 +1084,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BACE
+    protocol_note: ROC-AUC on BACE using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -1124,8 +1124,8 @@ results:
     value_note: ''
     sort_value: 0.798
     sort_std: 0.013
-    global_rank: 175
-    paper_rank: 176
+    global_rank: 181
+    paper_rank: 182
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -1152,14 +1152,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BACE
+    protocol_note: ROC-AUC on BACE using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -1192,8 +1192,8 @@ results:
     value_note: ''
     sort_value: 0.796
     sort_std: 0.012
-    global_rank: 180
-    paper_rank: 207
+    global_rank: 186
+    paper_rank: 213
     rank_delta: 27
     rank_delta_abs: 27
     rank_delta_direction: worse
@@ -1220,14 +1220,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BACE
+    protocol_note: ROC-AUC on BACE using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -1259,8 +1259,8 @@ results:
     value_note: ''
     sort_value: 0.793
     sort_std: 0.016
-    global_rank: 185
-    paper_rank: 239
+    global_rank: 191
+    paper_rank: 245
     rank_delta: 54
     rank_delta_abs: 54
     rank_delta_direction: worse
@@ -1287,14 +1287,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BACE
+    protocol_note: ROC-AUC on BACE using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -1328,8 +1328,8 @@ results:
     value_note: ''
     sort_value: 0.782
     sort_std: 0.012
-    global_rank: 209
-    paper_rank: 219
+    global_rank: 215
+    paper_rank: 225
     rank_delta: 10
     rank_delta_abs: 10
     rank_delta_direction: worse
@@ -1356,14 +1356,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BACE
+    protocol_note: ROC-AUC on BACE using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -1397,8 +1397,8 @@ results:
     value_note: ''
     sort_value: 0.778
     sort_std: 0.0046
-    global_rank: 221
-    paper_rank: 221
+    global_rank: 227
+    paper_rank: 227
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1425,14 +1425,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BACE
+    protocol_note: ROC-AUC on BACE using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -1440,11 +1440,11 @@ results:
     published_conference: AAAI 2024
     at_pub_value: 0.7549
     at_pub_std: 0.0127
-    at_pub_source_arxiv: '2106.05819'
-    at_pub_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
+    at_pub_source_arxiv: '2202.02989'
+    at_pub_source_title: Graph Self-supervised Learning with Accurate Discrepancy
       Learning
-    at_pub_source_date_iso: '2021-06-10'
-    at_pub_source_date_label: NeurIPS 2021
+    at_pub_source_date_iso: '2022-02-07'
+    at_pub_source_date_label: NeurIPS 2022
     value_gap_source_date_iso: '2023-09-05'
     value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.011099999999999999
@@ -1465,10 +1465,10 @@ results:
     value_note: ''
     sort_value: 0.7549
     sort_std: 0.0127
-    global_rank: 244
-    paper_rank: 249
-    rank_delta: 5
-    rank_delta_abs: 5
+    global_rank: 250
+    paper_rank: 256
+    rank_delta: 6
+    rank_delta_abs: 6
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1493,14 +1493,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Performance using GT encoder
+    protocol_note: ROC-AUC on BACE using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -1533,8 +1533,8 @@ results:
     value_note: ''
     sort_value: 0.6803
     sort_std: 0.0181
-    global_rank: 286
-    paper_rank: 286
+    global_rank: 293
+    paper_rank: 293
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1675,14 +1675,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BBBP
+    protocol_note: ROC-AUC on BBBP scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -1715,8 +1715,8 @@ results:
     value_note: ''
     sort_value: 0.8875
     sort_std: 0.0049
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1743,14 +1743,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Performance of GIN encoder on BBBP
+    protocol_note: ROC-AUC on BBBP scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -1784,8 +1784,8 @@ results:
     value_note: ''
     sort_value: 0.8875
     sort_std: 0.0049
-    global_rank: 32
-    paper_rank: 32
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1812,14 +1812,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BBBP
+    protocol_note: ROC-AUC on BBBP scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -1853,10 +1853,10 @@ results:
     value_note: ''
     sort_value: 0.887
     sort_std: 0.019
-    global_rank: 34
-    paper_rank: 190
-    rank_delta: 156
-    rank_delta_abs: 156
+    global_rank: 36
+    paper_rank: 194
+    rank_delta: 158
+    rank_delta_abs: 158
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1882,14 +1882,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Performance of GCN encoder on BBBP
+    protocol_note: ROC-AUC on BBBP scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -1923,8 +1923,8 @@ results:
     value_note: ''
     sort_value: 0.881
     sort_std: 0.036
-    global_rank: 36
-    paper_rank: 62
+    global_rank: 38
+    paper_rank: 64
     rank_delta: 26
     rank_delta_abs: 26
     rank_delta_direction: worse
@@ -1952,14 +1952,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BBBP
+    protocol_note: ROC-AUC on BBBP scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -1993,8 +1993,8 @@ results:
     value_note: ''
     sort_value: 0.879
     sort_std: 0.02
-    global_rank: 37
-    paper_rank: 106
+    global_rank: 39
+    paper_rank: 108
     rank_delta: 69
     rank_delta_abs: 69
     rank_delta_direction: worse
@@ -2022,14 +2022,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BBBP
+    protocol_note: ROC-AUC on BBBP scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -2063,10 +2063,10 @@ results:
     value_note: ''
     sort_value: 0.877
     sort_std: 0.026
-    global_rank: 38
-    paper_rank: 171
-    rank_delta: 133
-    rank_delta_abs: 133
+    global_rank: 40
+    paper_rank: 174
+    rank_delta: 134
+    rank_delta_abs: 134
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2092,14 +2092,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BBBP
+    protocol_note: ROC-AUC on BBBP scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -2133,10 +2133,10 @@ results:
     value_note: ''
     sort_value: 0.873
     sort_std: 0.016
-    global_rank: 42
-    paper_rank: 271
-    rank_delta: 229
-    rank_delta_abs: 229
+    global_rank: 44
+    paper_rank: 277
+    rank_delta: 233
+    rank_delta_abs: 233
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2162,14 +2162,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BBBP
+    protocol_note: ROC-AUC on BBBP scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -2202,8 +2202,8 @@ results:
     value_note: ''
     sort_value: 0.8715
     sort_std: 0.0006
-    global_rank: 43
-    paper_rank: 43
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2230,14 +2230,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BBBP
+    protocol_note: ROC-AUC on BBBP scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -2271,10 +2271,10 @@ results:
     value_note: ''
     sort_value: 0.87
     sort_std: 0.008
-    global_rank: 44
-    paper_rank: 222
-    rank_delta: 178
-    rank_delta_abs: 178
+    global_rank: 46
+    paper_rank: 227
+    rank_delta: 181
+    rank_delta_abs: 181
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2300,14 +2300,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BBBP
+    protocol_note: ROC-AUC on BBBP scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -2340,8 +2340,8 @@ results:
     value_note: ''
     sort_value: 0.8589
     sort_std: 0.0061
-    global_rank: 49
-    paper_rank: 49
+    global_rank: 51
+    paper_rank: 51
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2368,14 +2368,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BBBP
+    protocol_note: ROC-AUC on BBBP scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -2409,10 +2409,10 @@ results:
     value_note: ''
     sort_value: 0.846
     sort_std: 0.008
-    global_rank: 52
-    paper_rank: 236
-    rank_delta: 184
-    rank_delta_abs: 184
+    global_rank: 54
+    paper_rank: 242
+    rank_delta: 188
+    rank_delta_abs: 188
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2438,14 +2438,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BBBP
+    protocol_note: ROC-AUC on BBBP scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -2479,10 +2479,10 @@ results:
     value_note: ''
     sort_value: 0.84
     sort_std: 0.026
-    global_rank: 53
-    paper_rank: 190
-    rank_delta: 137
-    rank_delta_abs: 137
+    global_rank: 55
+    paper_rank: 194
+    rank_delta: 139
+    rank_delta_abs: 139
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2508,14 +2508,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Performance of GraphSage encoder on BBBP
+    protocol_note: ROC-AUC on BBBP scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -2549,8 +2549,8 @@ results:
     value_note: ''
     sort_value: 0.8304
     sort_std: 0.0038
-    global_rank: 55
-    paper_rank: 55
+    global_rank: 57
+    paper_rank: 57
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2578,14 +2578,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Performance of GT encoder on BBBP
+    protocol_note: ROC-AUC on BBBP scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -2618,8 +2618,8 @@ results:
     value_note: ''
     sort_value: 0.8255
     sort_std: 0.0134
-    global_rank: 56
-    paper_rank: 56
+    global_rank: 58
+    paper_rank: 58
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2646,14 +2646,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BBBP
+    protocol_note: ROC-AUC on BBBP scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -2687,8 +2687,8 @@ results:
     value_note: ''
     sort_value: 0.7952
     sort_std: 0.0198
-    global_rank: 59
-    paper_rank: 59
+    global_rank: 61
+    paper_rank: 61
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2716,14 +2716,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BBBP
+    protocol_note: ROC-AUC on BBBP scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -2756,8 +2756,8 @@ results:
     value_note: ''
     sort_value: 0.7205
     sort_std: 0.0117
-    global_rank: 97
-    paper_rank: 97
+    global_rank: 98
+    paper_rank: 98
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2784,14 +2784,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BBBP
+    protocol_note: ROC-AUC on BBBP scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -2799,11 +2799,11 @@ results:
     published_conference: AAAI 2024
     at_pub_value: 0.7139
     at_pub_std: 0.0092
-    at_pub_source_arxiv: '2106.05819'
-    at_pub_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
+    at_pub_source_arxiv: '2202.02989'
+    at_pub_source_title: Graph Self-supervised Learning with Accurate Discrepancy
       Learning
-    at_pub_source_date_iso: '2021-06-10'
-    at_pub_source_date_label: NeurIPS 2021
+    at_pub_source_date_iso: '2022-02-07'
+    at_pub_source_date_label: NeurIPS 2022
     value_gap_source_date_iso: '2024-12-20'
     value_gap_source_date_label: AAAI 2024
     gap_vs_at_pub: 0.005900000000000016
@@ -2825,8 +2825,8 @@ results:
     value_note: ''
     sort_value: 0.7198
     sort_std: 0.0018
-    global_rank: 102
-    paper_rank: 102
+    global_rank: 103
+    paper_rank: 103
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2853,14 +2853,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BBBP
+    protocol_note: ROC-AUC on BBBP scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -2893,8 +2893,8 @@ results:
     value_note: ''
     sort_value: 0.7151
     sort_std: 0.0175
-    global_rank: 112
-    paper_rank: 112
+    global_rank: 114
+    paper_rank: 114
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2921,14 +2921,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Performance of GAT encoder on BBBP
+    protocol_note: ROC-AUC on BBBP scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -2962,8 +2962,8 @@ results:
     value_note: ''
     sort_value: 0.6776
     sort_std: null
-    global_rank: 206
-    paper_rank: 315
+    global_rank: 210
+    paper_rank: 319
     rank_delta: 109
     rank_delta_abs: 109
     rank_delta_direction: worse
@@ -2991,14 +2991,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on BBBP
+    protocol_note: ROC-AUC on BBBP scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -3031,8 +3031,8 @@ results:
     value_note: ''
     sort_value: 0.6712
     sort_std: 0.0045
-    global_rank: 226
-    paper_rank: 226
+    global_rank: 231
+    paper_rank: 231
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3207,14 +3207,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ClinTox
+    protocol_note: ROC-AUC on ClinTox graph classification task using standard split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -3246,10 +3246,10 @@ results:
     value_note: ''
     sort_value: 0.853
     sort_std: 0.022
-    global_rank: 55
-    paper_rank: 113
-    rank_delta: 58
-    rank_delta_abs: 58
+    global_rank: 56
+    paper_rank: 115
+    rank_delta: 59
+    rank_delta_abs: 59
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3274,14 +3274,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ClinTox
+    protocol_note: ROC-AUC on ClinTox graph classification task using standard split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -3314,10 +3314,10 @@ results:
     value_note: ''
     sort_value: 0.8132
     sort_std: 0.0249
-    global_rank: 78
-    paper_rank: 113
-    rank_delta: 35
-    rank_delta_abs: 35
+    global_rank: 79
+    paper_rank: 115
+    rank_delta: 36
+    rank_delta_abs: 36
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3343,14 +3343,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ClinTox
+    protocol_note: ROC-AUC on ClinTox graph classification task using standard split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -3383,10 +3383,10 @@ results:
     value_note: ''
     sort_value: 0.8097
     sort_std: 0.0164
-    global_rank: 79
-    paper_rank: 201
-    rank_delta: 122
-    rank_delta_abs: 122
+    global_rank: 80
+    paper_rank: 205
+    rank_delta: 125
+    rank_delta_abs: 125
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3412,14 +3412,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ClinTox
+    protocol_note: ROC-AUC on ClinTox graph classification task using standard split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -3453,10 +3453,10 @@ results:
     value_note: ''
     sort_value: 0.807
     sort_std: 0.021
-    global_rank: 84
-    paper_rank: 119
-    rank_delta: 35
-    rank_delta_abs: 35
+    global_rank: 85
+    paper_rank: 122
+    rank_delta: 37
+    rank_delta_abs: 37
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3482,14 +3482,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ClinTox
+    protocol_note: ROC-AUC on ClinTox graph classification task using standard split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -3521,10 +3521,10 @@ results:
     value_note: ''
     sort_value: 0.789
     sort_std: 0.042
-    global_rank: 95
-    paper_rank: 218
-    rank_delta: 123
-    rank_delta_abs: 123
+    global_rank: 96
+    paper_rank: 222
+    rank_delta: 126
+    rank_delta_abs: 126
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3550,14 +3550,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ClinTox
+    protocol_note: ROC-AUC on ClinTox graph classification task using standard split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -3590,10 +3590,10 @@ results:
     value_note: ''
     sort_value: 0.7872
     sort_std: 0.0258
-    global_rank: 101
-    paper_rank: 243
-    rank_delta: 142
-    rank_delta_abs: 142
+    global_rank: 102
+    paper_rank: 247
+    rank_delta: 145
+    rank_delta_abs: 145
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3619,14 +3619,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Main proposed method with Domain Adaptation
+    protocol_note: ROC-AUC on ClinTox graph classification task using standard split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -3659,8 +3659,8 @@ results:
     value_note: ''
     sort_value: 0.7858
     sort_std: 0.0201
-    global_rank: 102
-    paper_rank: 102
+    global_rank: 103
+    paper_rank: 103
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3687,14 +3687,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ClinTox
+    protocol_note: ROC-AUC on ClinTox graph classification task using standard split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -3728,8 +3728,8 @@ results:
     value_note: ''
     sort_value: 0.7756
     sort_std: 0.0156
-    global_rank: 106
-    paper_rank: 106
+    global_rank: 108
+    paper_rank: 108
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3757,14 +3757,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ClinTox
+    protocol_note: ROC-AUC on ClinTox graph classification task using standard split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -3798,10 +3798,10 @@ results:
     value_note: ''
     sort_value: 0.772
     sort_std: 0.0088
-    global_rank: 113
-    paper_rank: 242
-    rank_delta: 129
-    rank_delta_abs: 129
+    global_rank: 115
+    paper_rank: 246
+    rank_delta: 131
+    rank_delta_abs: 131
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3827,14 +3827,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ClinTox
+    protocol_note: ROC-AUC on ClinTox graph classification task using standard split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -3867,8 +3867,8 @@ results:
     value_note: ''
     sort_value: 0.768
     sort_std: 0.0183
-    global_rank: 114
-    paper_rank: 114
+    global_rank: 117
+    paper_rank: 117
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3895,14 +3895,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ClinTox
+    protocol_note: ROC-AUC on ClinTox graph classification task using standard split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -3935,8 +3935,8 @@ results:
     value_note: ''
     sort_value: 0.7411
     sort_std: 0.0105
-    global_rank: 137
-    paper_rank: 137
+    global_rank: 141
+    paper_rank: 141
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3963,14 +3963,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ClinTox
+    protocol_note: ROC-AUC on ClinTox graph classification task using standard split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -4004,8 +4004,8 @@ results:
     value_note: ''
     sort_value: 0.73
     sort_std: 0.032
-    global_rank: 149
-    paper_rank: 229
+    global_rank: 153
+    paper_rank: 233
     rank_delta: 80
     rank_delta_abs: 80
     rank_delta_direction: worse
@@ -4033,14 +4033,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ClinTox
+    protocol_note: ROC-AUC on ClinTox graph classification task using standard split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -4073,8 +4073,8 @@ results:
     value_note: ''
     sort_value: 0.7253
     sort_std: 0.0014
-    global_rank: 155
-    paper_rank: 155
+    global_rank: 159
+    paper_rank: 159
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4101,14 +4101,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ClinTox
+    protocol_note: ROC-AUC on ClinTox graph classification task using standard split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -4140,8 +4140,8 @@ results:
     value_note: ''
     sort_value: 0.718
     sort_std: 0.041
-    global_rank: 161
-    paper_rank: 224
+    global_rank: 165
+    paper_rank: 228
     rank_delta: 63
     rank_delta_abs: 63
     rank_delta_direction: worse
@@ -4168,14 +4168,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ClinTox
+    protocol_note: ROC-AUC on ClinTox graph classification task using standard split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -4209,8 +4209,8 @@ results:
     value_note: ''
     sort_value: 0.673
     sort_std: 0.02
-    global_rank: 193
-    paper_rank: 218
+    global_rank: 197
+    paper_rank: 222
     rank_delta: 25
     rank_delta_abs: 25
     rank_delta_direction: worse
@@ -4233,103 +4233,100 @@ results:
 - &id008
   dataset: ESOL
   rows:
-  - model: 10% ZINC + 10% PubChem
-    model_key: 10% zinc + 10% pubchem
-    model_plain: 10% ZINC + 10% PubChem
-    value: 0.2775
-    std: null
+  - model: Graphormer-SPIS
+    model_key: graphormer-spis
+    model_plain: Graphormer-SPIS
+    value: 0.484
+    std: 0.005
     metric: RMSE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2305.13987'
+    title: On Structural Expressive Power of Graph Transformers
+    date: May 23, 2023
+    date_display: May 2023
+    date_iso: '2023-05-23'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.2775
-    sort_std: null
+    sort_value: 0.484
+    sort_std: 0.005
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAT
-    model_key: mat
-    model_plain: MAT
-    value: 0.278
-    std: 0.02
+  - model: Graphormer-SPD
+    model_key: graphormer-spd
+    model_plain: Graphormer-SPD
+    value: 0.492
+    std: 0.004
     metric: RMSE
     higher_is_better: false
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    arxiv_id: '2002.08264'
-    title: Molecule Attention Transformer
-    date: Feb 19, 2020
-    date_display: Feb 2020
-    date_iso: '2020-02-19'
-    venue: Graph Representation Learning workshop and Machine Learning and the Physical
-      Sciences workshop at NeurIPS 2019
-    codebase_url: https://github.com/gmum/MAT
-    uses_external_data: true
-    input_feature_source: null
+    arxiv_id: '2305.13987'
+    title: On Structural Expressive Power of Graph Transformers
+    date: May 23, 2023
+    date_display: May 2023
+    date_iso: '2023-05-23'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
+    uses_external_data: false
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.278
-    sort_std: 0.02
+    sort_value: 0.492
+    sort_std: 0.004
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MoLFormer-XL
-    model_key: molformer-xl
-    model_plain: MoLFormer-XL
-    value: 0.2787
-    std: null
+  - model: conan-FGW
+    model_key: conan-fgw
+    model_plain: conan-FGW
+    value: 0.514
+    std: 0.019
     metric: RMSE
     higher_is_better: false
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2402.01975'
+    title: Structure-Aware E(3)-Invariant Molecular Conformer Aggregation Networks
+    date: Feb 3, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-03'
+    venue: International Conference on Machine Learning
+    codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.2787
-    sort_std: null
+    sort_value: 0.514
+    sort_std: 0.019
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -4360,7 +4357,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 13
+    global_rank: 7
     sort_value: 0.564
     sort_std: 0.015
     comparison_type: global_top
@@ -4385,14 +4382,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on ESOL dataset
+    protocol_note: RMSE on ESOL scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -4425,8 +4422,8 @@ results:
     value_note: ''
     sort_value: 0.816
     sort_std: 0.019
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4452,15 +4449,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on ESOL dataset
+    protocol_note: RMSE on ESOL scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -4493,8 +4490,8 @@ results:
     value_note: ''
     sort_value: 0.842
     sort_std: 0.055
-    global_rank: 66
-    paper_rank: 66
+    global_rank: 60
+    paper_rank: 60
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4520,15 +4517,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on ESOL dataset
+    protocol_note: RMSE on ESOL scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -4561,8 +4558,8 @@ results:
     value_note: ''
     sort_value: 0.932
     sort_std: 0.026
-    global_rank: 80
-    paper_rank: 80
+    global_rank: 74
+    paper_rank: 74
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4588,15 +4585,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on ESOL dataset
+    protocol_note: RMSE on ESOL scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -4629,10 +4626,10 @@ results:
     value_note: ''
     sort_value: 0.959
     sort_std: 0.047
-    global_rank: 85
-    paper_rank: 130
-    rank_delta: 45
-    rank_delta_abs: 45
+    global_rank: 79
+    paper_rank: 125
+    rank_delta: 46
+    rank_delta_abs: 46
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4656,15 +4653,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on ESOL dataset
+    protocol_note: RMSE on ESOL scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -4696,10 +4693,10 @@ results:
     value_note: ''
     sort_value: 1.12
     sort_std: null
-    global_rank: 112
-    paper_rank: 147
-    rank_delta: 35
-    rank_delta_abs: 35
+    global_rank: 106
+    paper_rank: 142
+    rank_delta: 36
+    rank_delta_abs: 36
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4724,15 +4721,15 @@ results:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on ESOL dataset
+    protocol_note: RMSE on ESOL scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -4765,8 +4762,8 @@ results:
     value_note: ''
     sort_value: 1.125
     sort_std: 0.029
-    global_rank: 114
-    paper_rank: 114
+    global_rank: 108
+    paper_rank: 108
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4792,15 +4789,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on ESOL dataset
+    protocol_note: RMSE on ESOL scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -4834,10 +4831,10 @@ results:
     value_note: ''
     sort_value: 1.179
     sort_std: 0.008
-    global_rank: 119
-    paper_rank: 155
-    rank_delta: 36
-    rank_delta_abs: 36
+    global_rank: 114
+    paper_rank: 149
+    rank_delta: 35
+    rank_delta_abs: 35
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4862,15 +4859,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on ESOL dataset
+    protocol_note: RMSE on ESOL scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -4902,8 +4899,8 @@ results:
     value_note: ''
     sort_value: 1.196
     sort_std: 0.037
-    global_rank: 120
-    paper_rank: 151
+    global_rank: 115
+    paper_rank: 146
     rank_delta: 31
     rank_delta_abs: 31
     rank_delta_direction: worse
@@ -4929,15 +4926,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on ESOL dataset
+    protocol_note: RMSE on ESOL scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -4970,8 +4967,8 @@ results:
     value_note: ''
     sort_value: 1.237
     sort_std: 0.403
-    global_rank: 125
-    paper_rank: 125
+    global_rank: 120
+    paper_rank: 120
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4997,15 +4994,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on ESOL dataset
+    protocol_note: RMSE on ESOL scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -5037,8 +5034,8 @@ results:
     value_note: ''
     sort_value: 1.507
     sort_std: 0.13
-    global_rank: 136
-    paper_rank: 140
+    global_rank: 131
+    paper_rank: 135
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -5064,15 +5061,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on ESOL dataset
+    protocol_note: RMSE on ESOL scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -5105,8 +5102,8 @@ results:
     value_note: ''
     sort_value: 1.935
     sort_std: null
-    global_rank: 146
-    paper_rank: 150
+    global_rank: 141
+    paper_rank: 145
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -5132,15 +5129,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on ESOL dataset
+    protocol_note: RMSE on ESOL scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -5173,8 +5170,8 @@ results:
     value_note: ''
     sort_value: 2.144
     sort_std: 0.009
-    global_rank: 151
-    paper_rank: 151
+    global_rank: 146
+    paper_rank: 146
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5200,15 +5197,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on ESOL dataset
+    protocol_note: RMSE on ESOL scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -5241,8 +5238,8 @@ results:
     value_note: ''
     sort_value: 2.368
     sort_std: 0.07
-    global_rank: 155
-    paper_rank: 155
+    global_rank: 149
+    paper_rank: 149
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5268,15 +5265,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on ESOL dataset
+    protocol_note: RMSE on ESOL scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -5309,8 +5306,8 @@ results:
     value_note: ''
     sort_value: 2.953
     sort_std: 0.049
-    global_rank: 156
-    paper_rank: 156
+    global_rank: 150
+    paper_rank: 150
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5336,15 +5333,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on ESOL dataset
+    protocol_note: RMSE on ESOL scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -5377,8 +5374,8 @@ results:
     value_note: ''
     sort_value: 2.954
     sort_std: 0.087
-    global_rank: 157
-    paper_rank: 157
+    global_rank: 151
+    paper_rank: 151
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5400,10 +5397,79 @@ results:
 - &id009
   dataset: FreeSolv
   rows:
-  - model: 10% ZINC + 10% PubChem
-    model_key: 10% zinc + 10% pubchem
-    model_plain: 10% ZINC + 10% PubChem
-    value: 0.205
+  - model: SE(3)-I MPPH
+    model_key: se(3)-i mpph
+    model_plain: SE(3)-I MPPH
+    value: 0.354
+    std: 0.053
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2312.07633'
+    title: SE(3)-Invariant Multiparameter Persistent Homology for Chiral-Sensitive
+      Molecular Property Prediction
+    date: Dec 12, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-12'
+    venue: NeurIPS 2023 AI for Science Workshop
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: integrating SE(3)-invariance into Vietoris-Rips persistent
+      homology
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.354
+    sort_std: 0.053
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: ECFP-4 + RF
+    model_key: ecfp-4 + rf
+    model_plain: ECFP-4 + RF
+    value: 0.56
+    std: 0.066
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: random_forest
+    architecture_label: RF
+    architecture_title: Random forest
+    arxiv_id: '2312.07633'
+    title: SE(3)-Invariant Multiparameter Persistent Homology for Chiral-Sensitive
+      Molecular Property Prediction
+    date: Dec 12, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-12'
+    venue: NeurIPS 2023 AI for Science Workshop
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: trained on ECFP-4 fingerprints
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.56
+    sort_std: 0.066
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GPSE + GPS
+    model_key: gpse + gps
+    model_plain: GPSE + GPS
+    value: 0.682
     std: null
     metric: RMSE
     higher_is_better: false
@@ -5411,91 +5477,22 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.205
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: MoLFormer-XL
-    model_key: molformer-xl
-    model_plain: MoLFormer-XL
-    value: 0.2308
-    std: null
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.2308
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MoLFormer-Base
-    model_key: molformer-base
-    model_plain: MoLFormer-Base
-    value: 0.2596
-    std: null
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
-    uses_external_data: false
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2307.07107'
+    title: Graph Positional and Structural Encoder
+    date: Jul 14, 2023
+    date_display: Jul 2023
+    date_iso: '2023-07-14'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/G-Taxonomy-Workgroup/GPSE
+    uses_external_data: true
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.2596
+    sort_value: 0.682
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
@@ -5519,14 +5516,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Main proposed method
+    protocol_note: RMSE on FreeSolv regression task using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -5559,8 +5556,8 @@ results:
     value_note: ''
     sort_value: 1.648
     sort_std: 0.074
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5587,14 +5584,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on FreeSolv
+    protocol_note: RMSE on FreeSolv regression task using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -5627,8 +5624,8 @@ results:
     value_note: ''
     sort_value: 1.865
     sort_std: 0.061
-    global_rank: 45
-    paper_rank: 45
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5655,14 +5652,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on FreeSolv
+    protocol_note: RMSE on FreeSolv regression task using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -5695,8 +5692,8 @@ results:
     value_note: ''
     sort_value: 1.953
     sort_std: 0.038
-    global_rank: 51
-    paper_rank: 51
+    global_rank: 46
+    paper_rank: 46
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5723,14 +5720,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on FreeSolv
+    protocol_note: RMSE on FreeSolv regression task using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -5763,8 +5760,8 @@ results:
     value_note: ''
     sort_value: 2.072
     sort_std: 0.053
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 54
+    paper_rank: 54
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5791,14 +5788,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on FreeSolv
+    protocol_note: RMSE on FreeSolv regression task using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -5831,8 +5828,8 @@ results:
     value_note: ''
     sort_value: 2.335
     sort_std: 0.052
-    global_rank: 71
-    paper_rank: 71
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5865,10 +5862,10 @@ results:
     venue: Nature Machine Intelligence
     codebase_url: https://github.com/PaddlePaddle/PaddleHelix
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 73
+    global_rank: 69
     sort_value: 2.346
     sort_std: 0.122
     comparison_type: global_top
@@ -5893,14 +5890,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on FreeSolv
+    protocol_note: RMSE on FreeSolv regression task using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -5933,8 +5930,8 @@ results:
     value_note: ''
     sort_value: 2.528
     sort_std: 0.016
-    global_rank: 79
-    paper_rank: 79
+    global_rank: 75
+    paper_rank: 75
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5961,14 +5958,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on FreeSolv
+    protocol_note: RMSE on FreeSolv regression task using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -6001,8 +5998,8 @@ results:
     value_note: ''
     sort_value: 2.712
     sort_std: 0.327
-    global_rank: 86
-    paper_rank: 86
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6029,14 +6026,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on FreeSolv
+    protocol_note: RMSE on FreeSolv regression task using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -6068,8 +6065,8 @@ results:
     value_note: ''
     sort_value: 2.84
     sort_std: 0.19
-    global_rank: 94
-    paper_rank: 98
+    global_rank: 90
+    paper_rank: 94
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -6096,14 +6093,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on FreeSolv
+    protocol_note: RMSE on FreeSolv regression task using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -6136,8 +6133,8 @@ results:
     value_note: ''
     sort_value: 3.033
     sort_std: 0.026
-    global_rank: 100
-    paper_rank: 100
+    global_rank: 96
+    paper_rank: 96
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6164,14 +6161,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on FreeSolv
+    protocol_note: RMSE on FreeSolv regression task using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -6203,8 +6200,8 @@ results:
     value_note: ''
     sort_value: 3.057
     sort_std: 0.17
-    global_rank: 102
-    paper_rank: 106
+    global_rank: 98
+    paper_rank: 102
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -6231,14 +6228,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on FreeSolv
+    protocol_note: RMSE on FreeSolv regression task using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -6271,8 +6268,8 @@ results:
     value_note: ''
     sort_value: 3.166
     sort_std: 0.027
-    global_rank: 105
-    paper_rank: 105
+    global_rank: 101
+    paper_rank: 101
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6299,14 +6296,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on FreeSolv
+    protocol_note: RMSE on FreeSolv regression task using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -6339,8 +6336,8 @@ results:
     value_note: ''
     sort_value: 3.192
     sort_std: 0.023
-    global_rank: 106
-    paper_rank: 106
+    global_rank: 102
+    paper_rank: 102
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6367,14 +6364,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on FreeSolv
+    protocol_note: RMSE on FreeSolv regression task using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -6407,8 +6404,8 @@ results:
     value_note: ''
     sort_value: 3.282
     sort_std: 0.002
-    global_rank: 108
-    paper_rank: 108
+    global_rank: 104
+    paper_rank: 104
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6435,14 +6432,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on FreeSolv
+    protocol_note: RMSE on FreeSolv regression task using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -6475,8 +6472,8 @@ results:
     value_note: ''
     sort_value: 3.842
     sort_std: 0.012
-    global_rank: 116
-    paper_rank: 116
+    global_rank: 112
+    paper_rank: 112
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6503,14 +6500,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on FreeSolv
+    protocol_note: RMSE on FreeSolv regression task using scaffold split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -6543,8 +6540,8 @@ results:
     value_note: ''
     sort_value: 4.023
     sort_std: 0.039
-    global_rank: 118
-    paper_rank: 118
+    global_rank: 114
+    paper_rank: 114
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6566,103 +6563,100 @@ results:
 - &id010
   dataset: Lipophilicity
   rows:
-  - model: MoLFormer-XL
-    model_key: molformer-xl
-    model_plain: MoLFormer-XL
-    value: 0.5289
-    std: null
+  - model: MemGNN
+    model_key: memgnn
+    model_plain: MemGNN
+    value: 0.556
+    std: 0.023
     metric: RMSE
     higher_is_better: false
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
-    uses_external_data: true
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2002.09518'
+    title: Memory-Based Graph Networks
+    date: Feb 21, 2020
+    date_display: Feb 2020
+    date_iso: '2020-02-21'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/amirkhas/GraphMemoryNet
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.5289
-    sort_std: null
+    sort_value: 0.556
+    sort_std: 0.023
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 10% ZINC + 10% PubChem
-    model_key: 10% zinc + 10% pubchem
-    model_plain: 10% ZINC + 10% PubChem
-    value: 0.5331
-    std: null
+  - model: ProtoS-L2
+    model_key: protos-l2
+    model_plain: ProtoS-L2
+    value: 0.58
+    std: 0.016
     metric: RMSE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
-    uses_external_data: true
+    params_millions: 0.065
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2006.04804'
+    title: Optimal Transport Graph Neural Networks
+    date: Jun 8, 2020
+    date_display: Jun 2020
+    date_iso: '2020-06-08'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.5331
-    sort_std: null
+    sort_value: 0.58
+    sort_std: 0.016
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
-  - model: GeomGCL
-    model_key: geomgcl
-    model_plain: GeomGCL
-    value: 0.541
-    std: null
+  - model: ProtoW-L2
+    model_key: protow-l2
+    model_plain: ProtoW-L2
+    value: 0.604
+    std: 0.014
     metric: RMSE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
-    uses_external_data: true
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2006.04804'
+    title: Optimal Transport Graph Neural Networks
+    date: Jun 8, 2020
+    date_display: Jun 2020
+    date_iso: '2020-06-08'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.541
-    sort_std: null
+    sort_value: 0.604
+    sort_std: 0.014
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -6693,7 +6687,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 13
+    global_rank: 7
     sort_value: 0.655
     sort_std: 0.036
     comparison_type: global_top
@@ -6717,15 +6711,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on Lipophilicity
+    protocol_note: Lipophilicity regression task using scaffold split; metric is RMSE.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -6757,10 +6751,10 @@ results:
     value_note: ''
     sort_value: 0.702
     sort_std: 0.02
-    global_rank: 23
-    paper_rank: 96
-    rank_delta: 73
-    rank_delta_abs: 73
+    global_rank: 17
+    paper_rank: 92
+    rank_delta: 75
+    rank_delta_abs: 75
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -6784,15 +6778,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on Lipophilicity
+    protocol_note: Lipophilicity regression task using scaffold split; metric is RMSE.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -6824,10 +6818,10 @@ results:
     value_note: ''
     sort_value: 0.708
     sort_std: null
-    global_rank: 27
-    paper_rank: 97
-    rank_delta: 70
-    rank_delta_abs: 70
+    global_rank: 21
+    paper_rank: 93
+    rank_delta: 72
+    rank_delta_abs: 72
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -6851,15 +6845,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on Lipophilicity
+    protocol_note: Lipophilicity regression task using scaffold split; metric is RMSE.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -6893,10 +6887,10 @@ results:
     value_note: ''
     sort_value: 0.714
     sort_std: 0.011
-    global_rank: 30
-    paper_rank: 94
-    rank_delta: 64
-    rank_delta_abs: 64
+    global_rank: 24
+    paper_rank: 90
+    rank_delta: 66
+    rank_delta_abs: 66
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -6922,14 +6916,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on Lipophilicity
+    protocol_note: Lipophilicity regression task using scaffold split; metric is RMSE.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -6962,8 +6956,8 @@ results:
     value_note: ''
     sort_value: 0.762
     sort_std: 0.042
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6989,15 +6983,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on Lipophilicity
+    protocol_note: Lipophilicity regression task using scaffold split; metric is RMSE.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -7030,8 +7024,8 @@ results:
     value_note: ''
     sort_value: 0.771
     sort_std: 0.041
-    global_rank: 52
-    paper_rank: 52
+    global_rank: 47
+    paper_rank: 47
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7057,15 +7051,15 @@ results:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on Lipophilicity
+    protocol_note: Lipophilicity regression task using scaffold split; metric is RMSE.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -7097,10 +7091,10 @@ results:
     value_note: ''
     sort_value: 0.772
     sort_std: 0.03
-    global_rank: 53
-    paper_rank: 96
-    rank_delta: 43
-    rank_delta_abs: 43
+    global_rank: 48
+    paper_rank: 92
+    rank_delta: 44
+    rank_delta_abs: 44
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -7124,15 +7118,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on Lipophilicity
+    protocol_note: Lipophilicity regression task using scaffold split; metric is RMSE.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -7165,8 +7159,8 @@ results:
     value_note: ''
     sort_value: 0.823
     sort_std: 0.027
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 63
+    paper_rank: 63
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7192,15 +7186,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on Lipophilicity
+    protocol_note: Lipophilicity regression task using scaffold split; metric is RMSE.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -7233,8 +7227,8 @@ results:
     value_note: ''
     sort_value: 0.851
     sort_std: 0.073
-    global_rank: 73
-    paper_rank: 73
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7260,15 +7254,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on Lipophilicity
+    protocol_note: Lipophilicity regression task using scaffold split; metric is RMSE.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -7300,8 +7294,8 @@ results:
     value_note: ''
     sort_value: 0.869
     sort_std: 0.06
-    global_rank: 77
-    paper_rank: 97
+    global_rank: 73
+    paper_rank: 93
     rank_delta: 20
     rank_delta_abs: 20
     rank_delta_direction: worse
@@ -7327,15 +7321,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on Lipophilicity
+    protocol_note: Lipophilicity regression task using scaffold split; metric is RMSE.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -7368,8 +7362,8 @@ results:
     value_note: ''
     sort_value: 0.932
     sort_std: 0.052
-    global_rank: 86
-    paper_rank: 86
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7395,15 +7389,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on Lipophilicity
+    protocol_note: Lipophilicity regression task using scaffold split; metric is RMSE.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -7436,8 +7430,8 @@ results:
     value_note: ''
     sort_value: 0.97
     sort_std: 0.023
-    global_rank: 91
-    paper_rank: 91
+    global_rank: 87
+    paper_rank: 87
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7463,15 +7457,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on Lipophilicity
+    protocol_note: Lipophilicity regression task using scaffold split; metric is RMSE.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -7504,8 +7498,8 @@ results:
     value_note: ''
     sort_value: 0.982
     sort_std: 0.052
-    global_rank: 92
-    paper_rank: 92
+    global_rank: 88
+    paper_rank: 88
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7531,15 +7525,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on Lipophilicity
+    protocol_note: Lipophilicity regression task using scaffold split; metric is RMSE.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -7572,8 +7566,8 @@ results:
     value_note: ''
     sort_value: 1.085
     sort_std: 0.061
-    global_rank: 97
-    paper_rank: 97
+    global_rank: 93
+    paper_rank: 93
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7599,15 +7593,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on Lipophilicity
+    protocol_note: Lipophilicity regression task using scaffold split; metric is RMSE.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -7640,8 +7634,8 @@ results:
     value_note: ''
     sort_value: 1.116
     sort_std: 0.024
-    global_rank: 99
-    paper_rank: 99
+    global_rank: 95
+    paper_rank: 95
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7667,15 +7661,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Regression task on Lipophilicity
+    protocol_note: Lipophilicity regression task using scaffold split; metric is RMSE.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -7708,8 +7702,8 @@ results:
     value_note: ''
     sort_value: 1.371
     sort_std: 0.058
-    global_rank: 106
-    paper_rank: 106
+    global_rank: 102
+    paper_rank: 102
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7857,7 +7851,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 81
+    global_rank: 82
     sort_value: 0.8303
     sort_std: 0.0137
     comparison_type: global_top
@@ -7882,14 +7876,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on NCI1 for graph classification accuracy
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -7922,10 +7916,10 @@ results:
     value_note: ''
     sort_value: 0.8285
     sort_std: 0.0016
-    global_rank: 90
-    paper_rank: 647
-    rank_delta: 557
-    rank_delta_abs: 557
+    global_rank: 91
+    paper_rank: 641
+    rank_delta: 550
+    rank_delta_abs: 550
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -7951,14 +7945,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on NCI1 for graph classification accuracy
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -7992,9 +7986,9 @@ results:
     sort_value: 0.825
     sort_std: 0.0013
     global_rank: 115
-    paper_rank: 648
-    rank_delta: 533
-    rank_delta_abs: 533
+    paper_rank: 642
+    rank_delta: 527
+    rank_delta_abs: 527
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -8020,14 +8014,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on NCI1 for graph classification accuracy
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -8061,9 +8055,9 @@ results:
     sort_value: 0.817
     sort_std: 0.0026
     global_rank: 157
-    paper_rank: 644
-    rank_delta: 487
-    rank_delta_abs: 487
+    paper_rank: 638
+    rank_delta: 481
+    rank_delta_abs: 481
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -8089,14 +8083,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on NCI1 for graph classification accuracy
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -8129,8 +8123,8 @@ results:
     value_note: ''
     sort_value: 0.7975
     sort_std: 0.0082
-    global_rank: 262
-    paper_rank: 262
+    global_rank: 261
+    paper_rank: 261
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8157,14 +8151,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on NCI1 for graph classification accuracy
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -8197,8 +8191,8 @@ results:
     value_note: ''
     sort_value: 0.7859
     sort_std: 0.0081
-    global_rank: 324
-    paper_rank: 324
+    global_rank: 323
+    paper_rank: 323
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8225,14 +8219,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on NCI1 for graph classification accuracy
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -8266,10 +8260,10 @@ results:
     value_note: ''
     sort_value: 0.784
     sort_std: 0.005
-    global_rank: 332
-    paper_rank: 648
-    rank_delta: 316
-    rank_delta_abs: 316
+    global_rank: 331
+    paper_rank: 642
+    rank_delta: 311
+    rank_delta_abs: 311
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -8295,14 +8289,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on NCI1 for graph classification accuracy
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -8336,10 +8330,10 @@ results:
     value_note: ''
     sort_value: 0.7782
     sort_std: 0.0295
-    global_rank: 363
-    paper_rank: 647
-    rank_delta: 284
-    rank_delta_abs: 284
+    global_rank: 362
+    paper_rank: 641
+    rank_delta: 279
+    rank_delta_abs: 279
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -8365,14 +8359,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on NCI1 for graph classification accuracy
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -8405,8 +8399,8 @@ results:
     value_note: ''
     sort_value: 0.7579
     sort_std: 0.0091
-    global_rank: 445
-    paper_rank: 445
+    global_rank: 443
+    paper_rank: 443
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8433,14 +8427,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on NCI1 for graph classification accuracy
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -8473,8 +8467,8 @@ results:
     value_note: ''
     sort_value: 0.7445
     sort_std: 0.0151
-    global_rank: 473
-    paper_rank: 473
+    global_rank: 471
+    paper_rank: 471
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8501,14 +8495,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on NCI1 for graph classification accuracy
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -8540,10 +8534,10 @@ results:
     value_note: ''
     sort_value: 0.73
     sort_std: 0.003
-    global_rank: 506
-    paper_rank: 648
-    rank_delta: 142
-    rank_delta_abs: 142
+    global_rank: 502
+    paper_rank: 642
+    rank_delta: 140
+    rank_delta_abs: 140
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -8568,14 +8562,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on NCI1 for graph classification accuracy
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -8608,8 +8602,8 @@ results:
     value_note: ''
     sort_value: 0.6094
     sort_std: 0.0193
-    global_rank: 611
-    paper_rank: 611
+    global_rank: 608
+    paper_rank: 608
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8636,14 +8630,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on NCI1 for graph classification accuracy
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -8676,8 +8670,8 @@ results:
     value_note: ''
     sort_value: 0.6094
     sort_std: 0.0193
-    global_rank: 612
-    paper_rank: 612
+    global_rank: 609
+    paper_rank: 609
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8704,14 +8698,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on NCI1 for graph classification accuracy
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -8744,8 +8738,8 @@ results:
     value_note: ''
     sort_value: 0.5693
     sort_std: 0.0043
-    global_rank: 630
-    paper_rank: 630
+    global_rank: 625
+    paper_rank: 625
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8772,14 +8766,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on NCI1 for graph classification accuracy
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -8812,8 +8806,8 @@ results:
     value_note: ''
     sort_value: 0.5377
     sort_std: 0.0113
-    global_rank: 641
-    paper_rank: 641
+    global_rank: 635
+    paper_rank: 635
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8840,14 +8834,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on NCI1 for graph classification accuracy
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -8880,8 +8874,8 @@ results:
     value_note: ''
     sort_value: 0.4951
     sort_std: 0.0121
-    global_rank: 648
-    paper_rank: 648
+    global_rank: 642
+    paper_rank: 642
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9053,14 +9047,15 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard split for Peptides-func graph classification task.
+    protocol_note: Peptides-func graph classification task using AP metric on standard
+      split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -9093,8 +9088,8 @@ results:
     value_note: ''
     sort_value: 0.694
     sort_std: 0.002
-    global_rank: 59
-    paper_rank: 59
+    global_rank: 51
+    paper_rank: 51
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9121,14 +9116,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard split for Peptides-func graph classification task.
+    protocol_note: Peptides-func graph classification task using AP metric on standard
+      split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -9161,8 +9157,8 @@ results:
     value_note: ''
     sort_value: 0.618
     sort_std: 0.014
-    global_rank: 146
-    paper_rank: 146
+    global_rank: 136
+    paper_rank: 136
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9189,14 +9185,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard split for Peptides-func graph classification task.
+    protocol_note: Peptides-func graph classification task using AP metric on standard
+      split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -9229,8 +9226,8 @@ results:
     value_note: ''
     sort_value: 0.612
     sort_std: 0.005
-    global_rank: 148
-    paper_rank: 148
+    global_rank: 138
+    paper_rank: 138
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9257,14 +9254,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard split for Peptides-func graph classification task.
+    protocol_note: Peptides-func graph classification task using AP metric on standard
+      split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -9297,8 +9295,8 @@ results:
     value_note: ''
     sort_value: 0.587
     sort_std: 0.023
-    global_rank: 162
-    paper_rank: 162
+    global_rank: 152
+    paper_rank: 152
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9325,14 +9323,15 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard split for Peptides-func graph classification task.
+    protocol_note: Peptides-func graph classification task using AP metric on standard
+      split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -9365,8 +9364,8 @@ results:
     value_note: ''
     sort_value: 0.584
     sort_std: 0.019
-    global_rank: 168
-    paper_rank: 168
+    global_rank: 158
+    paper_rank: 158
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9393,14 +9392,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard split for Peptides-func graph classification task.
+    protocol_note: Peptides-func graph classification task using AP metric on standard
+      split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -9433,8 +9433,8 @@ results:
     value_note: ''
     sort_value: 0.541
     sort_std: 0.006
-    global_rank: 182
-    paper_rank: 182
+    global_rank: 172
+    paper_rank: 172
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9461,14 +9461,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard split for Peptides-func graph classification task.
+    protocol_note: Peptides-func graph classification task using AP metric on standard
+      split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -9501,8 +9502,8 @@ results:
     value_note: ''
     sort_value: 0.505
     sort_std: 0.014
-    global_rank: 189
-    paper_rank: 189
+    global_rank: 179
+    paper_rank: 179
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9538,7 +9539,7 @@ results:
     feature_source_evidence: For both datasets, we did not employ any feature augmentation
       such as positional encoding.
     is_global_top: true
-    global_rank: 196
+    global_rank: 186
     sort_value: 0.406
     sort_std: 0.0021
     comparison_type: global_top
@@ -9563,14 +9564,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard split for Peptides-func graph classification task.
+    protocol_note: Peptides-func graph classification task using AP metric on standard
+      split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -9603,8 +9605,8 @@ results:
     value_note: ''
     sort_value: 0.398
     sort_std: 0.009
-    global_rank: 197
-    paper_rank: 197
+    global_rank: 187
+    paper_rank: 187
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9631,14 +9633,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard split for Peptides-func graph classification task.
+    protocol_note: Peptides-func graph classification task using AP metric on standard
+      split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -9671,8 +9674,8 @@ results:
     value_note: ''
     sort_value: 0.386
     sort_std: 0.009
-    global_rank: 198
-    paper_rank: 198
+    global_rank: 188
+    paper_rank: 188
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9699,14 +9702,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard split for Peptides-func graph classification task.
+    protocol_note: Peptides-func graph classification task using AP metric on standard
+      split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -9739,8 +9743,8 @@ results:
     value_note: ''
     sort_value: 0.38
     sort_std: 0.002
-    global_rank: 199
-    paper_rank: 199
+    global_rank: 190
+    paper_rank: 190
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9767,14 +9771,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard split for Peptides-func graph classification task.
+    protocol_note: Peptides-func graph classification task using AP metric on standard
+      split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -9807,8 +9812,8 @@ results:
     value_note: ''
     sort_value: 0.335
     sort_std: 0.013
-    global_rank: 200
-    paper_rank: 200
+    global_rank: 196
+    paper_rank: 196
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9835,14 +9840,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard split for Peptides-func graph classification task.
+    protocol_note: Peptides-func graph classification task using AP metric on standard
+      split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -9875,8 +9881,8 @@ results:
     value_note: ''
     sort_value: 0.318
     sort_std: 0.002
-    global_rank: 201
-    paper_rank: 201
+    global_rank: 197
+    paper_rank: 197
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9903,14 +9909,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard split for Peptides-func graph classification task.
+    protocol_note: Peptides-func graph classification task using AP metric on standard
+      split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -9943,8 +9950,8 @@ results:
     value_note: ''
     sort_value: 0.313
     sort_std: 0.034
-    global_rank: 202
-    paper_rank: 202
+    global_rank: 198
+    paper_rank: 198
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9971,14 +9978,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard split for Peptides-func graph classification task.
+    protocol_note: Peptides-func graph classification task using AP metric on standard
+      split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -10011,8 +10019,8 @@ results:
     value_note: ''
     sort_value: 0.311
     sort_std: 0.013
-    global_rank: 203
-    paper_rank: 203
+    global_rank: 199
+    paper_rank: 199
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10039,14 +10047,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard split for Peptides-func graph classification task.
+    protocol_note: Peptides-func graph classification task using AP metric on standard
+      split.
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -10079,8 +10088,8 @@ results:
     value_note: ''
     sort_value: 0.31
     sort_std: 0.012
-    global_rank: 204
-    paper_rank: 204
+    global_rank: 200
+    paper_rank: 200
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10102,105 +10111,6 @@ results:
 - &id011
   dataset: Peptides-struct
   rows:
-  - model: Energy GNN + attention
-    model_key: energy gnn + attention
-    model_plain: Energy GNN + attention
-    value: 0.036000000000000004
-    std: 0.038
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2407.00494'
-    title: Graph Neural Networks Gone Hogwild
-    date: Jun 29, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-29'
-    venue: International Conference on Learning Representations
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.036000000000000004
-    sort_std: 0.038
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Energy GNN edge-wise
-    model_key: energy gnn edge-wise
-    model_plain: Energy GNN edge-wise
-    value: 0.04
-    std: 0.036000000000000004
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.00494'
-    title: Graph Neural Networks Gone Hogwild
-    date: Jun 29, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-29'
-    venue: International Conference on Learning Representations
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.04
-    sort_std: 0.036000000000000004
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Energy GNN node-wise
-    model_key: energy gnn node-wise
-    model_plain: Energy GNN node-wise
-    value: 0.195
-    std: 0.017
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.00494'
-    title: Graph Neural Networks Gone Hogwild
-    date: Jun 29, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-29'
-    venue: International Conference on Learning Representations
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.195
-    sort_std: 0.017
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
   - model: GCN
     model_key: gcn
     model_plain: GCN
@@ -10226,13 +10136,112 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 4
+    global_rank: 1
     sort_value: 0.2421
     sort_std: 0.0016
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
+    is_std_outlier: false
+  - model: IPR-MPNN
+    model_key: ipr-mpnn
+    model_plain: IPR-MPNN
+    value: 0.2422
+    std: 0.0007
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.17311'
+    title: Probabilistic Graph Rewiring via Virtual Nodes
+    date: May 27, 2024
+    date_display: May 2024
+    date_iso: '2024-05-27'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/chendiqian/IPR-MPNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.2422
+    sort_std: 0.0007
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: UniGCN
+    model_key: unigcn
+    model_plain: UniGCN
+    value: 0.2425
+    std: 0.0009
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2410.05499'
+    title: Unitary convolutions for learning on graphs and groups
+    date: Oct 7, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-07'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/Weber-GeoML/Unitary_Convolutions
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.2425
+    sort_std: 0.0009
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.2429
+    std: 0.0019
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.12358'
+    title: From Message-Passing to Linearized Graph Sequence Models
+    date: May 12, 2026
+    date_display: May 2026
+    date_iso: '2026-05-12'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 4
+    sort_value: 0.2429
+    sort_std: 0.0019
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
     is_std_outlier: false
   - model: S-CGIB
     model_key: s-cgib
@@ -10251,14 +10260,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on Peptides-struct
+    protocol_note: MAE on Peptides-struct test split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -10291,8 +10300,8 @@ results:
     value_note: ''
     sort_value: 0.269
     sort_std: 0.004
-    global_rank: 180
-    paper_rank: 180
+    global_rank: 166
+    paper_rank: 166
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10318,15 +10327,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on Peptides-struct
+    protocol_note: MAE on Peptides-struct test split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -10359,8 +10368,8 @@ results:
     value_note: ''
     sort_value: 0.322
     sort_std: 0.008
-    global_rank: 199
-    paper_rank: 199
+    global_rank: 185
+    paper_rank: 185
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10386,15 +10395,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on Peptides-struct
+    protocol_note: MAE on Peptides-struct test split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -10427,8 +10436,8 @@ results:
     value_note: ''
     sort_value: 0.327
     sort_std: 0.026
-    global_rank: 201
-    paper_rank: 201
+    global_rank: 186
+    paper_rank: 186
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10437,7 +10446,7 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
-    is_std_outlier: false
+    is_std_outlier: true
   - model: MICRO-Graph
     model_key: micro-graph
     model_plain: MICRO-Graph
@@ -10454,15 +10463,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on Peptides-struct
+    protocol_note: MAE on Peptides-struct test split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -10495,8 +10504,8 @@ results:
     value_note: ''
     sort_value: 0.332
     sort_std: 0.002
-    global_rank: 202
-    paper_rank: 202
+    global_rank: 187
+    paper_rank: 187
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10522,15 +10531,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on Peptides-struct
+    protocol_note: MAE on Peptides-struct test split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -10563,8 +10572,8 @@ results:
     value_note: ''
     sort_value: 0.358
     sort_std: 0.003
-    global_rank: 210
-    paper_rank: 210
+    global_rank: 195
+    paper_rank: 195
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10590,15 +10599,15 @@ results:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on Peptides-struct
+    protocol_note: MAE on Peptides-struct test split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -10631,8 +10640,8 @@ results:
     value_note: ''
     sort_value: 0.365
     sort_std: 0.005
-    global_rank: 212
-    paper_rank: 212
+    global_rank: 197
+    paper_rank: 197
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10658,15 +10667,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on Peptides-struct
+    protocol_note: MAE on Peptides-struct test split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -10699,8 +10708,8 @@ results:
     value_note: ''
     sort_value: 0.376
     sort_std: 0.005
-    global_rank: 214
-    paper_rank: 214
+    global_rank: 204
+    paper_rank: 204
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10726,15 +10735,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on Peptides-struct
+    protocol_note: MAE on Peptides-struct test split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -10767,8 +10776,8 @@ results:
     value_note: ''
     sort_value: 0.419
     sort_std: 0.006
-    global_rank: 217
-    paper_rank: 217
+    global_rank: 206
+    paper_rank: 206
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10804,7 +10813,7 @@ results:
     feature_source_evidence: For both datasets, we did not employ any feature augmentation
       such as positional encoding.
     is_global_top: true
-    global_rank: 219
+    global_rank: 210
     sort_value: 0.4351
     sort_std: 0.0008
     comparison_type: global_top
@@ -10828,15 +10837,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on Peptides-struct
+    protocol_note: MAE on Peptides-struct test split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -10869,8 +10878,8 @@ results:
     value_note: ''
     sort_value: 0.463
     sort_std: 0.008
-    global_rank: 220
-    paper_rank: 220
+    global_rank: 211
+    paper_rank: 211
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10896,15 +10905,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on Peptides-struct
+    protocol_note: MAE on Peptides-struct test split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -10937,8 +10946,8 @@ results:
     value_note: ''
     sort_value: 0.541
     sort_std: 0.008
-    global_rank: 222
-    paper_rank: 222
+    global_rank: 213
+    paper_rank: 213
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10964,15 +10973,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on Peptides-struct
+    protocol_note: MAE on Peptides-struct test split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -11005,8 +11014,8 @@ results:
     value_note: ''
     sort_value: 0.546
     sort_std: 0.001
-    global_rank: 223
-    paper_rank: 223
+    global_rank: 214
+    paper_rank: 214
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -11032,15 +11041,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on Peptides-struct
+    protocol_note: MAE on Peptides-struct test split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -11073,8 +11082,8 @@ results:
     value_note: ''
     sort_value: 0.574
     sort_std: 0.001
-    global_rank: 224
-    paper_rank: 224
+    global_rank: 215
+    paper_rank: 215
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -11100,15 +11109,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on Peptides-struct
+    protocol_note: MAE on Peptides-struct test split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -11141,8 +11150,8 @@ results:
     value_note: ''
     sort_value: 0.58
     sort_std: 0.002
-    global_rank: 225
-    paper_rank: 225
+    global_rank: 216
+    paper_rank: 216
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -11168,15 +11177,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on Peptides-struct
+    protocol_note: MAE on Peptides-struct test split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -11209,8 +11218,8 @@ results:
     value_note: ''
     sort_value: 0.587
     sort_std: 0.001
-    global_rank: 226
-    paper_rank: 226
+    global_rank: 217
+    paper_rank: 217
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -11236,15 +11245,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Standard regression task on Peptides-struct
+    protocol_note: MAE on Peptides-struct test split
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -11277,8 +11286,8 @@ results:
     value_note: ''
     sort_value: 0.973
     sort_std: 0.014
-    global_rank: 227
-    paper_rank: 227
+    global_rank: 218
+    paper_rank: 218
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -11419,14 +11428,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: Luong et al. 2023
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on SIDER
+    protocol_note: ROC-AUC on SIDER graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -11487,14 +11496,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: Inae et al. 2024
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on SIDER
+    protocol_note: ROC-AUC on SIDER graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -11527,9 +11536,9 @@ results:
     sort_value: 0.646
     sort_std: 0.005
     global_rank: 58
-    paper_rank: 95
-    rank_delta: 37
-    rank_delta_abs: 37
+    paper_rank: 94
+    rank_delta: 36
+    rank_delta_abs: 36
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -11554,14 +11563,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on SIDER
+    protocol_note: ROC-AUC on SIDER graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -11622,14 +11631,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Performance using GIN encoder
+    protocol_note: ROC-AUC on SIDER graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -11691,14 +11700,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: You et al. 2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on SIDER
+    protocol_note: ROC-AUC on SIDER graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -11760,14 +11769,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: Hu et al. 2020
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on SIDER
+    protocol_note: ROC-AUC on SIDER graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -11801,8 +11810,8 @@ results:
     value_note: ''
     sort_value: 0.622
     sort_std: 0.0059
-    global_rank: 105
-    paper_rank: 115
+    global_rank: 104
+    paper_rank: 114
     rank_delta: 10
     rank_delta_abs: 10
     rank_delta_direction: worse
@@ -11829,14 +11838,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: You et al. 2020
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on SIDER
+    protocol_note: ROC-AUC on SIDER graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -11869,8 +11878,8 @@ results:
     value_note: ''
     sort_value: 0.6183
     sort_std: 0.006
-    global_rank: 116
-    paper_rank: 116
+    global_rank: 115
+    paper_rank: 115
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -11897,14 +11906,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: Zhang et al. 2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on SIDER
+    protocol_note: ROC-AUC on SIDER graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -11938,10 +11947,10 @@ results:
     value_note: ''
     sort_value: 0.618
     sort_std: 0.008
-    global_rank: 118
-    paper_rank: 222
-    rank_delta: 104
-    rank_delta_abs: 104
+    global_rank: 117
+    paper_rank: 223
+    rank_delta: 106
+    rank_delta_abs: 106
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -11967,14 +11976,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: Subramonian et al. 2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on SIDER
+    protocol_note: ROC-AUC on SIDER graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -12008,10 +12017,10 @@ results:
     value_note: ''
     sort_value: 0.617
     sort_std: 0.018
-    global_rank: 119
-    paper_rank: 175
-    rank_delta: 56
-    rank_delta_abs: 56
+    global_rank: 118
+    paper_rank: 177
+    rank_delta: 59
+    rank_delta_abs: 59
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -12036,14 +12045,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: Veličković et al. 2019
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on SIDER
+    protocol_note: ROC-AUC on SIDER graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -12077,10 +12086,10 @@ results:
     value_note: ''
     sort_value: 0.616
     sort_std: 0.024
-    global_rank: 122
-    paper_rank: 204
-    rank_delta: 82
-    rank_delta_abs: 82
+    global_rank: 121
+    paper_rank: 206
+    rank_delta: 85
+    rank_delta_abs: 85
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -12105,14 +12114,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: Xu et al. 2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on SIDER
+    protocol_note: ROC-AUC on SIDER graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -12146,10 +12155,10 @@ results:
     value_note: ''
     sort_value: 0.615
     sort_std: 0.013
-    global_rank: 125
-    paper_rank: 203
-    rank_delta: 78
-    rank_delta_abs: 78
+    global_rank: 124
+    paper_rank: 205
+    rank_delta: 81
+    rank_delta_abs: 81
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -12175,14 +12184,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Performance using GCN encoder
+    protocol_note: ROC-AUC on SIDER graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -12216,10 +12225,10 @@ results:
     value_note: ''
     sort_value: 0.615
     sort_std: 0.025
-    global_rank: 127
-    paper_rank: 234
-    rank_delta: 107
-    rank_delta_abs: 107
+    global_rank: 126
+    paper_rank: 235
+    rank_delta: 109
+    rank_delta_abs: 109
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -12245,14 +12254,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: Hu et al. 2020
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on SIDER
+    protocol_note: ROC-AUC on SIDER graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -12285,8 +12294,8 @@ results:
     value_note: ''
     sort_value: 0.6121
     sort_std: 0.0065
-    global_rank: 135
-    paper_rank: 135
+    global_rank: 136
+    paper_rank: 136
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -12313,14 +12322,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: You et al. 2021
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on SIDER
+    protocol_note: ROC-AUC on SIDER graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -12328,11 +12337,11 @@ results:
     published_conference: AAAI 2024
     at_pub_value: 0.6049
     at_pub_std: 0.0074
-    at_pub_source_arxiv: '2106.05819'
-    at_pub_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
+    at_pub_source_arxiv: '2202.02989'
+    at_pub_source_title: Graph Self-supervised Learning with Accurate Discrepancy
       Learning
-    at_pub_source_date_iso: '2021-06-10'
-    at_pub_source_date_label: NeurIPS 2021
+    at_pub_source_date_iso: '2022-02-07'
+    at_pub_source_date_label: NeurIPS 2022
     value_gap_source_date_iso: '2023-09-05'
     value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.006099999999999994
@@ -12353,10 +12362,10 @@ results:
     value_note: ''
     sort_value: 0.6049
     sort_std: 0.0074
-    global_rank: 168
-    paper_rank: 187
-    rank_delta: 19
-    rank_delta_abs: 19
+    global_rank: 170
+    paper_rank: 188
+    rank_delta: 18
+    rank_delta_abs: 18
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -12381,14 +12390,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: Hamilton et al. 2017
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on SIDER
+    protocol_note: ROC-AUC on SIDER graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -12421,10 +12430,10 @@ results:
     value_note: ''
     sort_value: 0.604
     sort_std: 0.007
-    global_rank: 171
-    paper_rank: 178
-    rank_delta: 7
-    rank_delta_abs: 7
+    global_rank: 173
+    paper_rank: 179
+    rank_delta: 6
+    rank_delta_abs: 6
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -12449,14 +12458,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: Liu et al. 2023
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on SIDER
+    protocol_note: ROC-AUC on SIDER graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -12489,8 +12498,8 @@ results:
     value_note: ''
     sort_value: 0.5974
     sort_std: 0.0132
-    global_rank: 192
-    paper_rank: 192
+    global_rank: 193
+    paper_rank: 193
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -12517,14 +12526,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: Rong et al. 2020
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on SIDER
+    protocol_note: ROC-AUC on SIDER graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -12557,8 +12566,8 @@ results:
     value_note: ''
     sort_value: 0.5753
     sort_std: 0.0023
-    global_rank: 221
-    paper_rank: 221
+    global_rank: 222
+    paper_rank: 222
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -12585,14 +12594,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Performance using GraphSage encoder
+    protocol_note: ROC-AUC on SIDER graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -12625,8 +12634,8 @@ results:
     value_note: ''
     sort_value: 0.5752
     sort_std: 0.0006
-    global_rank: 222
-    paper_rank: 222
+    global_rank: 223
+    paper_rank: 223
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -12653,14 +12662,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Performance using GT encoder
+    protocol_note: ROC-AUC on SIDER graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -12693,8 +12702,8 @@ results:
     value_note: ''
     sort_value: 0.5715
     sort_std: 0.0026
-    global_rank: 227
-    paper_rank: 227
+    global_rank: 228
+    paper_rank: 228
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -12721,14 +12730,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Performance using GAT encoder
+    protocol_note: ROC-AUC on SIDER graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -12761,8 +12770,8 @@ results:
     value_note: ''
     sort_value: 0.5341
     sort_std: 0.005
-    global_rank: 240
-    paper_rank: 240
+    global_rank: 241
+    paper_rank: 241
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -12900,14 +12909,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on Tox21
+    protocol_note: ROC-AUC on Tox21 graph classification task using GCN encoder
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -12939,10 +12948,10 @@ results:
     value_note: ''
     sort_value: 0.84
     sort_std: 0.004
-    global_rank: 16
-    paper_rank: 313
-    rank_delta: 297
-    rank_delta_abs: 297
+    global_rank: 14
+    paper_rank: 305
+    rank_delta: 291
+    rank_delta_abs: 291
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -12967,14 +12976,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on Tox21
+    protocol_note: ROC-AUC on Tox21 graph classification task using GIN encoder
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -13008,10 +13017,10 @@ results:
     value_note: ''
     sort_value: 0.829
     sort_std: 0.0069
-    global_rank: 26
-    paper_rank: 44
-    rank_delta: 18
-    rank_delta_abs: 18
+    global_rank: 24
+    paper_rank: 41
+    rank_delta: 17
+    rank_delta_abs: 17
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -13037,14 +13046,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on Tox21
+    protocol_note: ROC-AUC on Tox21 graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -13078,10 +13087,10 @@ results:
     value_note: ''
     sort_value: 0.823
     sort_std: 0.022
-    global_rank: 33
-    paper_rank: 272
-    rank_delta: 239
-    rank_delta_abs: 239
+    global_rank: 31
+    paper_rank: 264
+    rank_delta: 233
+    rank_delta_abs: 233
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -13107,14 +13116,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on Tox21
+    protocol_note: ROC-AUC on Tox21 graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -13148,10 +13157,10 @@ results:
     value_note: ''
     sort_value: 0.818
     sort_std: 0.025
-    global_rank: 37
-    paper_rank: 304
-    rank_delta: 267
-    rank_delta_abs: 267
+    global_rank: 35
+    paper_rank: 296
+    rank_delta: 261
+    rank_delta_abs: 261
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -13177,14 +13186,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on Tox21
+    protocol_note: ROC-AUC on Tox21 graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -13218,10 +13227,10 @@ results:
     value_note: ''
     sort_value: 0.816
     sort_std: 0.021
-    global_rank: 39
-    paper_rank: 290
-    rank_delta: 251
-    rank_delta_abs: 251
+    global_rank: 37
+    paper_rank: 282
+    rank_delta: 245
+    rank_delta_abs: 245
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -13247,14 +13256,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on Tox21
+    protocol_note: ROC-AUC on Tox21 graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -13287,8 +13296,8 @@ results:
     value_note: ''
     sort_value: 0.8094
     sort_std: 0.0017
-    global_rank: 45
-    paper_rank: 45
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -13315,14 +13324,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on Tox21
+    protocol_note: ROC-AUC on Tox21 graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -13356,10 +13365,10 @@ results:
     value_note: ''
     sort_value: 0.806
     sort_std: 0.012
-    global_rank: 53
-    paper_rank: 283
-    rank_delta: 230
-    rank_delta_abs: 230
+    global_rank: 46
+    paper_rank: 275
+    rank_delta: 229
+    rank_delta_abs: 229
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -13385,14 +13394,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on Tox21
+    protocol_note: ROC-AUC on Tox21 graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -13426,10 +13435,10 @@ results:
     value_note: ''
     sort_value: 0.805
     sort_std: 0.017
-    global_rank: 54
-    paper_rank: 283
-    rank_delta: 229
-    rank_delta_abs: 229
+    global_rank: 47
+    paper_rank: 275
+    rank_delta: 228
+    rank_delta_abs: 228
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -13455,14 +13464,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on Tox21
+    protocol_note: ROC-AUC on Tox21 graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -13496,10 +13505,10 @@ results:
     value_note: ''
     sort_value: 0.796
     sort_std: 0.025
-    global_rank: 76
-    paper_rank: 296
-    rank_delta: 220
-    rank_delta_abs: 220
+    global_rank: 71
+    paper_rank: 288
+    rank_delta: 217
+    rank_delta_abs: 217
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -13525,14 +13534,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on Tox21
+    protocol_note: ROC-AUC on Tox21 graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -13565,8 +13574,8 @@ results:
     value_note: ''
     sort_value: 0.7829
     sort_std: 0.0055
-    global_rank: 117
-    paper_rank: 117
+    global_rank: 112
+    paper_rank: 112
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -13593,14 +13602,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on Tox21
+    protocol_note: ROC-AUC on Tox21 graph classification task using GT encoder
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -13633,8 +13642,8 @@ results:
     value_note: ''
     sort_value: 0.7775
     sort_std: 0.0024
-    global_rank: 132
-    paper_rank: 132
+    global_rank: 126
+    paper_rank: 126
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -13661,14 +13670,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on Tox21
+    protocol_note: ROC-AUC on Tox21 graph classification task using GraphSage encoder
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -13701,8 +13710,8 @@ results:
     value_note: ''
     sort_value: 0.7744
     sort_std: 0.0038
-    global_rank: 141
-    paper_rank: 141
+    global_rank: 135
+    paper_rank: 135
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -13729,14 +13738,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on Tox21
+    protocol_note: ROC-AUC on Tox21 graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -13770,10 +13779,10 @@ results:
     value_note: ''
     sort_value: 0.774
     sort_std: 0.006
-    global_rank: 144
-    paper_rank: 296
-    rank_delta: 152
-    rank_delta_abs: 152
+    global_rank: 138
+    paper_rank: 288
+    rank_delta: 150
+    rank_delta_abs: 150
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -13799,14 +13808,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on Tox21
+    protocol_note: ROC-AUC on Tox21 graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -13839,8 +13848,8 @@ results:
     value_note: ''
     sort_value: 0.7735
     sort_std: 0.014
-    global_rank: 149
-    paper_rank: 149
+    global_rank: 143
+    paper_rank: 143
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -13867,14 +13876,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on Tox21
+    protocol_note: ROC-AUC on Tox21 graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -13906,10 +13915,10 @@ results:
     value_note: ''
     sort_value: 0.767
     sort_std: 0.004
-    global_rank: 166
-    paper_rank: 281
-    rank_delta: 115
-    rank_delta_abs: 115
+    global_rank: 160
+    paper_rank: 273
+    rank_delta: 113
+    rank_delta_abs: 113
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -13934,14 +13943,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on Tox21
+    protocol_note: ROC-AUC on Tox21 graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -13975,10 +13984,10 @@ results:
     value_note: ''
     sort_value: 0.765
     sort_std: 0.003
-    global_rank: 177
-    paper_rank: 240
-    rank_delta: 63
-    rank_delta_abs: 63
+    global_rank: 170
+    paper_rank: 234
+    rank_delta: 64
+    rank_delta_abs: 64
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -14003,14 +14012,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on Tox21
+    protocol_note: ROC-AUC on Tox21 graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -14043,8 +14052,8 @@ results:
     value_note: ''
     sort_value: 0.7623
     sort_std: 0.0127
-    global_rank: 183
-    paper_rank: 183
+    global_rank: 177
+    paper_rank: 177
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -14071,14 +14080,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on Tox21
+    protocol_note: ROC-AUC on Tox21 graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -14086,11 +14095,11 @@ results:
     published_conference: AAAI 2024
     at_pub_value: 0.7427
     at_pub_std: 0.0062
-    at_pub_source_arxiv: '2106.05819'
-    at_pub_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
+    at_pub_source_arxiv: '2202.02989'
+    at_pub_source_title: Graph Self-supervised Learning with Accurate Discrepancy
       Learning
-    at_pub_source_date_iso: '2021-06-10'
-    at_pub_source_date_label: NeurIPS 2021
+    at_pub_source_date_iso: '2022-02-07'
+    at_pub_source_date_label: NeurIPS 2022
     value_gap_source_date_iso: '2023-09-05'
     value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.0031999999999999806
@@ -14111,8 +14120,8 @@ results:
     value_note: ''
     sort_value: 0.7427
     sort_std: 0.0062
-    global_rank: 262
-    paper_rank: 268
+    global_rank: 254
+    paper_rank: 260
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -14139,14 +14148,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on Tox21
+    protocol_note: ROC-AUC on Tox21 graph classification task using GAT encoder
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -14178,10 +14187,10 @@ results:
     value_note: ''
     sort_value: 0.74
     sort_std: 0.009
-    global_rank: 268
-    paper_rank: 350
-    rank_delta: 82
-    rank_delta_abs: 82
+    global_rank: 260
+    paper_rank: 341
+    rank_delta: 81
+    rank_delta_abs: 81
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -14206,14 +14215,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on Tox21
+    protocol_note: ROC-AUC on Tox21 graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -14246,8 +14255,8 @@ results:
     value_note: ''
     sort_value: 0.6859
     sort_std: 0.0024
-    global_rank: 314
-    paper_rank: 314
+    global_rank: 306
+    paper_rank: 306
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -14387,14 +14396,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Performance using GCN encoder
+    protocol_note: ROC-AUC on ToxCast using GCN encoder
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -14454,14 +14463,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ToxCast
+    protocol_note: ROC-AUC on ToxCast graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -14496,9 +14505,9 @@ results:
     sort_value: 0.714
     sort_std: 0.018
     global_rank: 34
-    paper_rank: 158
-    rank_delta: 124
-    rank_delta_abs: 124
+    paper_rank: 160
+    rank_delta: 126
+    rank_delta_abs: 126
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -14524,14 +14533,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ToxCast
+    protocol_note: ROC-AUC on ToxCast graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -14566,9 +14575,9 @@ results:
     sort_value: 0.712
     sort_std: 0.011
     global_rank: 36
-    paper_rank: 203
-    rank_delta: 167
-    rank_delta_abs: 167
+    paper_rank: 205
+    rank_delta: 169
+    rank_delta_abs: 169
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -14594,14 +14603,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ToxCast
+    protocol_note: ROC-AUC on ToxCast graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -14636,9 +14645,9 @@ results:
     sort_value: 0.711
     sort_std: 0.014
     global_rank: 37
-    paper_rank: 154
-    rank_delta: 117
-    rank_delta_abs: 117
+    paper_rank: 156
+    rank_delta: 119
+    rank_delta_abs: 119
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -14664,14 +14673,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ToxCast
+    protocol_note: ROC-AUC on ToxCast graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -14732,14 +14741,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Performance using GIN encoder
+    protocol_note: ROC-AUC on ToxCast using GIN encoder
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -14802,14 +14811,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Performance using GT encoder
+    protocol_note: ROC-AUC on ToxCast using GT encoder
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -14870,14 +14879,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ToxCast
+    protocol_note: ROC-AUC on ToxCast graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -14912,9 +14921,9 @@ results:
     sort_value: 0.696
     sort_std: 0.023
     global_rank: 49
-    paper_rank: 172
-    rank_delta: 123
-    rank_delta_abs: 123
+    paper_rank: 175
+    rank_delta: 126
+    rank_delta_abs: 126
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -14940,14 +14949,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ToxCast
+    protocol_note: ROC-AUC on ToxCast graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -15008,14 +15017,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ToxCast
+    protocol_note: ROC-AUC on ToxCast graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -15050,9 +15059,9 @@ results:
     sort_value: 0.69
     sort_std: 0.012
     global_rank: 57
-    paper_rank: 172
-    rank_delta: 115
-    rank_delta_abs: 115
+    paper_rank: 175
+    rank_delta: 118
+    rank_delta_abs: 118
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -15078,14 +15087,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ToxCast
+    protocol_note: ROC-AUC on ToxCast graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -15146,14 +15155,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Performance using GraphSage encoder
+    protocol_note: ROC-AUC on ToxCast using GraphSage encoder
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -15216,14 +15225,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ToxCast
+    protocol_note: ROC-AUC on ToxCast graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -15258,9 +15267,9 @@ results:
     sort_value: 0.677
     sort_std: 0.019
     global_rank: 72
-    paper_rank: 190
-    rank_delta: 118
-    rank_delta_abs: 118
+    paper_rank: 192
+    rank_delta: 120
+    rank_delta_abs: 120
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -15286,14 +15295,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ToxCast
+    protocol_note: ROC-AUC on ToxCast graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -15354,14 +15363,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ToxCast
+    protocol_note: ROC-AUC on ToxCast graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -15422,14 +15431,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ToxCast
+    protocol_note: ROC-AUC on ToxCast graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -15461,10 +15470,10 @@ results:
     value_note: ''
     sort_value: 0.642
     sort_std: 0.005
-    global_rank: 131
-    paper_rank: 189
-    rank_delta: 58
-    rank_delta_abs: 58
+    global_rank: 132
+    paper_rank: 191
+    rank_delta: 59
+    rank_delta_abs: 59
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -15489,14 +15498,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ToxCast
+    protocol_note: ROC-AUC on ToxCast graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -15530,10 +15539,10 @@ results:
     value_note: ''
     sort_value: 0.641
     sort_std: 0.007
-    global_rank: 135
-    paper_rank: 139
-    rank_delta: 4
-    rank_delta_abs: 4
+    global_rank: 136
+    paper_rank: 141
+    rank_delta: 5
+    rank_delta_abs: 5
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -15558,14 +15567,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Performance using GAT encoder
+    protocol_note: ROC-AUC on ToxCast using GAT encoder
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -15597,8 +15606,8 @@ results:
     value_note: ''
     sort_value: 0.632
     sort_std: 0.008
-    global_rank: 161
-    paper_rank: 210
+    global_rank: 163
+    paper_rank: 212
     rank_delta: 49
     rank_delta_abs: 49
     rank_delta_direction: worse
@@ -15625,14 +15634,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ToxCast
+    protocol_note: ROC-AUC on ToxCast graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -15640,11 +15649,11 @@ results:
     published_conference: AAAI 2024
     at_pub_value: 0.6316
     at_pub_std: 0.0045
-    at_pub_source_arxiv: '2106.05819'
-    at_pub_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
+    at_pub_source_arxiv: '2202.02989'
+    at_pub_source_title: Graph Self-supervised Learning with Accurate Discrepancy
       Learning
-    at_pub_source_date_iso: '2021-06-10'
-    at_pub_source_date_label: NeurIPS 2021
+    at_pub_source_date_iso: '2022-02-07'
+    at_pub_source_date_label: NeurIPS 2022
     value_gap_source_date_iso: '2023-09-05'
     value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.00040000000000006697
@@ -15665,8 +15674,8 @@ results:
     value_note: ''
     sort_value: 0.6316
     sort_std: 0.0045
-    global_rank: 162
-    paper_rank: 162
+    global_rank: 165
+    paper_rank: 165
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -15693,14 +15702,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on ToxCast
+    protocol_note: ROC-AUC on ToxCast graph classification task
     date: Dec 20, 2024
     date_display: Dec 2024
     date_iso: '2024-12-20'
@@ -15733,8 +15742,8 @@ results:
     value_note: ''
     sort_value: 0.608
     sort_std: 0.0115
-    global_rank: 199
-    paper_rank: 199
+    global_rank: 201
+    paper_rank: 201
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

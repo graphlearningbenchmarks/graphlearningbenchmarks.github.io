@@ -57,8 +57,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - FedGT (default)
-mrr: 0.0099
-adjusted_mrr: 0.0033
+mrr: 0.0101
+adjusted_mrr: 0.0034
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -269,8 +269,8 @@ results:
     value_note: ''
     sort_value: 0.9059
     sort_std: 0.0009
-    global_rank: 101
-    paper_rank: 101
+    global_rank: 99
+    paper_rank: 99
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -338,8 +338,8 @@ results:
     value_note: ''
     sort_value: 0.8973
     sort_std: 0.0016
-    global_rank: 159
-    paper_rank: 159
+    global_rank: 155
+    paper_rank: 155
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -375,7 +375,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 394
+    global_rank: 365
     sort_value: 0.8463
     sort_std: null
     comparison_type: global_top

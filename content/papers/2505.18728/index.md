@@ -71,7 +71,7 @@ task_categories:
 experiment_scopes:
 - graph-level
 results:
-- &id002
+- &id001
   dataset: Eccentricity
   rows:
   - model: GCN-SSM + k-hop
@@ -240,19 +240,18 @@ results:
     date_iso: '2025-05-24'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.7177
-    at_pub_std: 0.0345
-    at_pub_source_arxiv: '2210.09789'
-    at_pub_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    at_pub_source_date_iso: '2022-10-18'
-    at_pub_source_date_label: ICLR 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2025-05-24'
     value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.2881
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -273,11 +272,10 @@ results:
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    comparison_source_arxiv: '2210.09789'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GPS
@@ -910,7 +908,7 @@ results:
   metric: MSE
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id002
   dataset: SSSP
   rows:
   - model: MP-SSM
@@ -1493,7 +1491,7 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-08-07'
+    value_gap_source_date_iso: '2025-05-24'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
@@ -1505,10 +1503,10 @@ results:
     today_delta_significant: false
     true_value: 0.2863
     true_std: 0.1843
-    value_gap_source_arxiv: '2508.05070'
-    value_gap_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
-      Flows'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -1561,7 +1559,7 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-08-07'
+    value_gap_source_date_iso: '2025-05-24'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
@@ -1573,10 +1571,10 @@ results:
     today_delta_significant: false
     true_value: 0.6951
     true_std: 0.1499
-    value_gap_source_arxiv: '2508.05070'
-    value_gap_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
-      Flows'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -1629,7 +1627,7 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-08-07'
+    value_gap_source_date_iso: '2025-05-24'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
@@ -1641,10 +1639,10 @@ results:
     today_delta_significant: false
     true_value: 0.9499
     true_std: 0.0001
-    value_gap_source_arxiv: '2508.05070'
-    value_gap_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
-      Flows'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -1682,10 +1680,10 @@ datasets_by_scope:
   - benchmark: Algorithmic Graph Tasks
     benchmark_slug: algorithmic-graph-tasks
     datasets:
-    - dataset: SSSP
-      dataset_slug: sssp
     - dataset: Eccentricity
       dataset_slug: eccentricity
+    - dataset: SSSP
+      dataset_slug: sssp
 single_proposed_model: MP-SSM
 main_figure: /figures/2505.18728/main_figure.jpegoptim.jpg
 ---

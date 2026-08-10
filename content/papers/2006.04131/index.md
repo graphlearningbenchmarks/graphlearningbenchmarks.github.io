@@ -54,8 +54,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GRACE
-mrr: 0.0085
-adjusted_mrr: 0.0085
+mrr: 0.0068
+adjusted_mrr: 0.0068
 mrr_dataset_count: 5
 benchmark_categories:
 - Classic
@@ -168,7 +168,7 @@ results:
     venue: arXiv.org
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
@@ -237,9 +237,9 @@ results:
     sort_value: 0.941
     sort_std: 0.003
     global_rank: 11
-    paper_rank: 80
-    rank_delta: 69
-    rank_delta_abs: 69
+    paper_rank: 78
+    rank_delta: 67
+    rank_delta_abs: 67
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -305,9 +305,9 @@ results:
     sort_value: 0.88
     sort_std: 0.002
     global_rank: 34
-    paper_rank: 69
-    rank_delta: 35
-    rank_delta_abs: 35
+    paper_rank: 67
+    rank_delta: 33
+    rank_delta_abs: 33
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -373,47 +373,14 @@ results:
     sort_value: 0.8758
     sort_std: 0.002
     global_rank: 36
-    paper_rank: 69
-    rank_delta: 33
-    rank_delta_abs: 33
+    paper_rank: 67
+    rank_delta: 31
+    rank_delta_abs: 31
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
     comparison_source_title: Directed Graph Convolutional Network
     comparison_source_arxiv: '2004.13970'
-    is_best: false
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.872
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2112.08331'
-    title: Model Stealing Attacks Against Inductive Graph Neural Networks
-    date: Dec 15, 2021
-    date_display: Dec 2021
-    date_iso: '2021-12-15'
-    venue: IEEE Symposium on Security and Privacy
-    codebase_url: https://github.com/xinleihe/GNNStealing
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 38
-    sort_value: 0.872
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GRACE
@@ -472,8 +439,8 @@ results:
     value_note: ''
     sort_value: 0.842
     sort_std: 0.001
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 59
+    paper_rank: 59
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -539,8 +506,8 @@ results:
     value_note: ''
     sort_value: 0.817
     sort_std: null
-    global_rank: 77
-    paper_rank: 77
+    global_rank: 75
+    paper_rank: 75
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -606,8 +573,8 @@ results:
     value_note: ''
     sort_value: 0.817
     sort_std: null
-    global_rank: 76
-    paper_rank: 76
+    global_rank: 74
+    paper_rank: 74
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -640,10 +607,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/wooner49/TriCL
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 82
+    global_rank: 80
     sort_value: 0.8118
     sort_std: 0.002
     comparison_type: global_top
@@ -707,8 +674,8 @@ results:
     value_note: ''
     sort_value: 0.788
     sort_std: null
-    global_rank: 96
-    paper_rank: 96
+    global_rank: 94
+    paper_rank: 94
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -774,8 +741,8 @@ results:
     value_note: ''
     sort_value: 0.781
     sort_std: null
-    global_rank: 98
-    paper_rank: 98
+    global_rank: 96
+    paper_rank: 96
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -841,13 +808,46 @@ results:
     value_note: ''
     sort_value: 0.759
     sort_std: null
-    global_rank: 110
-    paper_rank: 110
+    global_rank: 108
+    paper_rank: 108
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.7455
+    std: 0.0061
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2602.12613'
+    title: 'Coden: Efficient Temporal Graph Neural Networks for Continuous Prediction'
+    date: Feb 13, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-13'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 120
+    sort_value: 0.7455
+    sort_std: 0.0061
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -909,8 +909,8 @@ results:
     value_note: ''
     sort_value: 0.716
     sort_std: 0.001
-    global_rank: 130
-    paper_rank: 130
+    global_rank: 128
+    paper_rank: 128
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1187,8 +1187,8 @@ results:
     value_note: ''
     sort_value: 0.6971
     sort_std: 0.0017
-    global_rank: 124
-    paper_rank: 137
+    global_rank: 132
+    paper_rank: 145
     rank_delta: 13
     rank_delta_abs: 13
     rank_delta_direction: worse
@@ -1254,8 +1254,8 @@ results:
     value_note: ''
     sort_value: 0.638
     sort_std: 0.002
-    global_rank: 148
-    paper_rank: 148
+    global_rank: 156
+    paper_rank: 156
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1322,8 +1322,8 @@ results:
     value_note: ''
     sort_value: 0.612
     sort_std: null
-    global_rank: 156
-    paper_rank: 170
+    global_rank: 164
+    paper_rank: 178
     rank_delta: 14
     rank_delta_abs: 14
     rank_delta_direction: worse
@@ -1391,8 +1391,8 @@ results:
     value_note: ''
     sort_value: 0.602
     sort_std: null
-    global_rank: 159
-    paper_rank: 169
+    global_rank: 167
+    paper_rank: 177
     rank_delta: 10
     rank_delta_abs: 10
     rank_delta_direction: worse
@@ -1461,8 +1461,8 @@ results:
     value_note: ''
     sort_value: 0.601
     sort_std: null
-    global_rank: 160
-    paper_rank: 173
+    global_rank: 168
+    paper_rank: 181
     rank_delta: 13
     rank_delta_abs: 13
     rank_delta_direction: worse
@@ -1530,8 +1530,8 @@ results:
     value_note: ''
     sort_value: 0.598
     sort_std: null
-    global_rank: 161
-    paper_rank: 169
+    global_rank: 169
+    paper_rank: 177
     rank_delta: 8
     rank_delta_abs: 8
     rank_delta_direction: worse
@@ -1539,6 +1539,39 @@ results:
     comparison_type: behind
     comparison_source_title: Inductive Representation Learning on Large Graphs
     comparison_source_arxiv: '1706.02216'
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.462
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2407.00494'
+    title: Graph Neural Networks Gone Hogwild
+    date: Jun 29, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-29'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 183
+    sort_value: 0.462
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: Raw features
@@ -1598,8 +1631,8 @@ results:
     value_note: ''
     sort_value: 0.425
     sort_std: 0.003
-    global_rank: 177
-    paper_rank: 178
+    global_rank: 186
+    paper_rank: 187
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -1748,7 +1781,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 19
+    global_rank: 18
     sort_value: 0.966
     sort_std: null
     comparison_type: global_top
@@ -1812,8 +1845,8 @@ results:
     value_note: ''
     sort_value: 0.958
     sort_std: 0.001
-    global_rank: 53
-    paper_rank: 53
+    global_rank: 51
+    paper_rank: 51
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1879,10 +1912,10 @@ results:
     value_note: ''
     sort_value: 0.954
     sort_std: null
-    global_rank: 65
-    paper_rank: 153
-    rank_delta: 88
-    rank_delta_abs: 88
+    global_rank: 62
+    paper_rank: 147
+    rank_delta: 85
+    rank_delta_abs: 85
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1947,10 +1980,10 @@ results:
     value_note: ''
     sort_value: 0.9501
     sort_std: 0.0036
-    global_rank: 84
-    paper_rank: 102
-    rank_delta: 18
-    rank_delta_abs: 18
+    global_rank: 81
+    paper_rank: 97
+    rank_delta: 16
+    rank_delta_abs: 16
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2014,10 +2047,10 @@ results:
     value_note: ''
     sort_value: 0.95
     sort_std: null
-    global_rank: 85
-    paper_rank: 156
-    rank_delta: 71
-    rank_delta_abs: 71
+    global_rank: 82
+    paper_rank: 150
+    rank_delta: 68
+    rank_delta_abs: 68
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2081,10 +2114,10 @@ results:
     value_note: ''
     sort_value: 0.948
     sort_std: null
-    global_rank: 94
-    paper_rank: 158
-    rank_delta: 64
-    rank_delta_abs: 64
+    global_rank: 91
+    paper_rank: 152
+    rank_delta: 61
+    rank_delta_abs: 61
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2148,10 +2181,10 @@ results:
     value_note: ''
     sort_value: 0.9414
     sort_std: 0.0003
-    global_rank: 105
-    paper_rank: 108
-    rank_delta: 3
-    rank_delta_abs: 3
+    global_rank: 100
+    paper_rank: 102
+    rank_delta: 2
+    rank_delta_abs: 2
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2217,8 +2250,8 @@ results:
     value_note: ''
     sort_value: 0.937
     sort_std: null
-    global_rank: 118
-    paper_rank: 118
+    global_rank: 112
+    paper_rank: 112
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2284,8 +2317,8 @@ results:
     value_note: ''
     sort_value: 0.93
     sort_std: null
-    global_rank: 135
-    paper_rank: 152
+    global_rank: 129
+    paper_rank: 146
     rank_delta: 17
     rank_delta_abs: 17
     rank_delta_direction: worse
@@ -2298,8 +2331,8 @@ results:
   - model: MLP
     model_key: mlp
     model_plain: MLP
-    value: 0.7435
-    std: 0.0016
+    value: 0.7216
+    std: 0.0015
     metric: F1
     higher_is_better: true
     is_baseline: true
@@ -2309,21 +2342,20 @@ results:
     architecture_type: other_traditional
     architecture_label: Trad
     architecture_title: Traditional / classical method
-    arxiv_id: '2512.14908'
-    title: 'ATLAS: Adaptive Topology-based Learning at Scale for Homophilic and Heterophilic
-      Graphs'
-    date: Dec 16, 2025
-    date_display: Dec 2025
-    date_iso: '2025-12-16'
-    venue: arXiv.org
-    codebase_url: https://github.com/atlaspaper16/ATLAS
+    arxiv_id: '2405.20445'
+    title: Fully-inductive Node Classification on Arbitrary Graphs
+    date: May 30, 2024
+    date_display: May 2024
+    date_iso: '2024-05-30'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/DeepGraphLearning/GraphAny
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 165
-    sort_value: 0.7435
-    sort_std: 0.0016
+    global_rank: 162
+    sort_value: 0.7216
+    sort_std: 0.0015
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2385,8 +2417,8 @@ results:
     value_note: ''
     sort_value: 0.691
     sort_std: null
-    global_rank: 171
-    paper_rank: 171
+    global_rank: 165
+    paper_rank: 165
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2453,8 +2485,8 @@ results:
     value_note: ''
     sort_value: 0.585
     sort_std: 0.001
-    global_rank: 187
-    paper_rank: 187
+    global_rank: 171
+    paper_rank: 171
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2521,8 +2553,8 @@ results:
     value_note: ''
     sort_value: 0.324
     sort_std: null
-    global_rank: 203
-    paper_rank: 203
+    global_rank: 183
+    paper_rank: 183
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

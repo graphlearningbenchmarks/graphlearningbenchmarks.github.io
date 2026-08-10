@@ -603,6 +603,12 @@ variants:
   - 12
   - 7
   milestones: &id001
+  - value: 0.85
+    std: null
+    model: Diffusion Wavelets
+    arxiv_id: '1710.10321'
+    title: Learning Structural Node Embeddings via Diffusion Wavelets
+    date: '2017-10-27'
   - value: 0.9793
     std: 0.0068
     model: F_4-MPNN

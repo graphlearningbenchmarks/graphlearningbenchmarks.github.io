@@ -221,7 +221,7 @@ results:
     codebase_url: ''
     uses_external_data: false
     is_global_top: true
-    global_rank: 56
+    global_rank: 55
     is_best: false
     sort_value: 0.4026
     sort_std: 0.0108
@@ -362,7 +362,7 @@ results:
     comparison_source_arxiv: '2101.00797'
     is_best: false
     is_std_outlier: false
-    global_rank: 72
+    global_rank: 71
   - model: GraphSAGE
     model_key: graphsage
     model_plain: GraphSAGE
@@ -390,7 +390,7 @@ results:
     codebase_url: https://github.com/SDS-Lab/QW_Loss
     uses_external_data: false
     is_global_top: true
-    global_rank: 88
+    global_rank: 87
     is_best: false
     sort_value: 0.3899
     sort_std: 0.0085
@@ -466,70 +466,7 @@ results:
     comparison_source_arxiv: '2103.06064'
     is_best: false
     is_std_outlier: false
-    global_rank: 91
-  - model: SAGE
-    model_key: sage
-    model_plain: SAGE
-    metric_values:
-    - 0.2308
-    - 0.277
-    - 0.634
-    metric_stds:
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.3408
-    sort_std: 0.0107
-    true_value: 0.3408
-    true_std: 0.0107
-    paper_value: 0.2308
-    paper_std: null
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 0.10999999999999999
-    value_gap_source_arxiv: '2512.14908'
-    value_gap_source_title: 'ATLAS: Adaptive Topology-based Learning at Scale for
-      Homophilic and Heterophilic Graphs'
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-12-16'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: TMLR 2022
-    date: Mar 21, 2022
-    date_display: Mar 2022
-    date_iso: '2022-03-21'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 321
+    global_rank: 90
   - model: DGI
     model_key: dgi
     model_plain: DGI
@@ -592,7 +529,70 @@ results:
     comparison_source_arxiv: '2201.12843'
     is_best: false
     is_std_outlier: false
-    global_rank: 359
+    global_rank: 353
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    metric_values:
+    - 0.2308
+    - 0.277
+    - 0.634
+    metric_stds:
+    - null
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    sort_value: 0.3085
+    sort_std: 0.018
+    true_value: 0.3085
+    true_std: 0.018
+    paper_value: 0.2308
+    paper_std: null
+    has_value_gap: true
+    has_value_note: false
+    value_gap: 0.07769999999999999
+    value_gap_source_arxiv: '2406.01249'
+    value_gap_source_title: Equivariant Machine Learning on Graphs with Nonlinear
+      Spectral Filters
+    value_note: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-06-03'
+    value_gap_source_date_label: NeurIPS 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    arxiv_id: ''
+    title: ''
+    published_venue: TMLR 2022
+    date: Mar 21, 2022
+    date_display: Mar 2022
+    date_iso: '2022-03-21'
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+    global_rank: 384
   - model: GMI
     model_key: gmi
     model_plain: GMI
@@ -655,7 +655,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 410
+    global_rank: 405
   - model: NE
     model_key: ne
     model_plain: NE
@@ -717,7 +717,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 436
+    global_rank: 431
   - model: GAE
     model_key: gae
     model_plain: GAE
@@ -780,7 +780,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 447
+    global_rank: 443
   - model: N2V
     model_key: n2v
     model_plain: N2V
@@ -842,7 +842,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 496
+    global_rank: 494
   - model: GBT
     model_key: gbt
     model_plain: GBT
@@ -904,7 +904,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 500
+    global_rank: 498
   - model: AE
     model_key: ae
     model_plain: AE
@@ -966,7 +966,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 503
+    global_rank: 501
   - model: SDCN
     model_key: sdcn
     model_plain: SDCN
@@ -1028,7 +1028,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 513
+    global_rank: 511
   - model: S2V
     model_key: s2v
     model_plain: S2V
@@ -1090,7 +1090,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 527
+    global_rank: 525
   metrics:
   - Accuracy
   - F1

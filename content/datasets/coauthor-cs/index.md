@@ -9,7 +9,7 @@ primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Coauthor.html
 stats: null
-result_count: 346
+result_count: 300
 best_model:
   model: DoG
   value: 0.969
@@ -25,11 +25,6 @@ papers:
   title: Adaptive Negative Scheduling for Graph Contrastive Learning
   date_iso: '2026-05-04'
   venue: ''
-- arxiv_id: '2604.08980'
-  title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware Graph
-    Learning'
-  date_iso: '2026-04-10'
-  venue: ''
 - arxiv_id: '2603.26178'
   title: 'Geometric Evolution Graph Convolutional Networks: Enhancing Graph Representation
     Learning via Ricci Flow'
@@ -39,19 +34,10 @@ papers:
   title: 'Beyond ReLU: Bifurcation, Oversmoothing, and Topological Priors'
   date_iso: '2026-02-17'
   venue: ''
-- arxiv_id: '2603.01941'
-  title: 'BAED: a New Paradigm for Few-shot Graph Learning with Explanation in the
-    Loop'
-  date_iso: '2026-02-01'
-  venue: ''
 - arxiv_id: '2512.13235'
   title: 'CORE: Contrastive Masked Feature Reconstruction on Graphs'
   date_iso: '2025-12-15'
   venue: ''
-- arxiv_id: '2510.21267'
-  title: Relieving the Over-Aggregating Effect in Graph Transformers
-  date_iso: '2025-10-24'
-  venue: NeurIPS 2025
 - arxiv_id: '2506.20362'
   title: Self-Supervised Graph Learning via Spectral Bootstrapping and Laplacian-Based
     Augmentations
@@ -98,15 +84,6 @@ papers:
   title: How Interpretable Are Interpretable Graph Neural Networks?
   date_iso: '2024-06-12'
   venue: ICML 2024
-- arxiv_id: '2404.19288'
-  title: Training-free Graph Neural Networks and the Power of Labels as Features
-  date_iso: '2024-04-30'
-  venue: TMLR 2024
-- arxiv_id: '2404.17099'
-  title: Unleashing the Potential of Fractional Calculus in Graph Neural Networks
-    with FROND
-  date_iso: '2024-04-26'
-  venue: ICLR 2024
 - arxiv_id: '2403.20221'
   title: Graph Neural Aggregation-diffusion with Metastability
   date_iso: '2024-03-29'
@@ -152,10 +129,6 @@ papers:
     Discriminating'
   date_iso: '2022-11-25'
   venue: AAAI 2022
-- arxiv_id: '2210.09789'
-  title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph Networks'
-  date_iso: '2022-10-18'
-  venue: ICLR 2022
 - arxiv_id: '2210.00643'
   title: Spectral Augmentation for Self-Supervised Learning on Graphs
   date_iso: '2022-10-02'
@@ -434,39 +407,6 @@ variants:
     - null
     - null
     - null
-  - model: NT
-    model_plain: NT
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2604.08980'
-    title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware Graph
-      Learning'
-    date: Apr 10, 2026
-    date_iso: '2026-04-10'
-    date_display: Apr 2026
-    codebase_url: https://github.com/cf020031308/MoNT
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9607
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0032
-    - null
-    - null
-    - null
   - model: GraphSAGE
     model_plain: GraphSAGE
     is_baseline: true
@@ -659,102 +599,6 @@ variants:
     - null
     - null
     - null
-  - model: NAGphormer
-    model_plain: NAGphormer
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2510.21267'
-    title: Relieving the Over-Aggregating Effect in Graph Transformers
-    date: Oct 24, 2025
-    date_iso: '2025-10-24'
-    date_display: Oct 2025
-    codebase_url: https://github.com/sunjss/over-aggregating
-    published_conference: NeurIPS 2025
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2025
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9575
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0009
-    - null
-    - null
-    - null
-  - model: NodeFormer
-    model_plain: NodeFormer
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2510.21267'
-    title: Relieving the Over-Aggregating Effect in Graph Transformers
-    date: Oct 24, 2025
-    date_iso: '2025-10-24'
-    date_display: Oct 2025
-    codebase_url: https://github.com/sunjss/over-aggregating
-    published_conference: NeurIPS 2025
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2025
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9564
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0022
-    - null
-    - null
-    - null
-  - model: GraphGPS + Wideformer
-    model_plain: GraphGPS + Wideformer
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2510.21267'
-    title: Relieving the Over-Aggregating Effect in Graph Transformers
-    date: Oct 24, 2025
-    date_iso: '2025-10-24'
-    date_display: Oct 2025
-    codebase_url: https://github.com/sunjss/over-aggregating
-    published_conference: NeurIPS 2025
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2025
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9544
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0003
-    - null
-    - null
-    - null
   - model: Sine-Poly(A)-pl
     model_plain: Sine-Poly(A)-pl
     is_baseline: false
@@ -820,71 +664,6 @@ variants:
     - null
     - null
     - null
-  - model: GGCN
-    model_plain: GGCN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2604.08980'
-    title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware Graph
-      Learning'
-    date: Apr 10, 2026
-    date_iso: '2026-04-10'
-    date_display: Apr 2026
-    codebase_url: https://github.com/cf020031308/MoNT
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9525
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0005
-    - null
-    - null
-    - null
-  - model: GPRGNN
-    model_plain: GPRGNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2510.21267'
-    title: Relieving the Over-Aggregating Effect in Graph Transformers
-    date: Oct 24, 2025
-    date_iso: '2025-10-24'
-    date_display: Oct 2025
-    codebase_url: https://github.com/sunjss/over-aggregating
-    published_conference: NeurIPS 2025
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2025
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9513
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0009
-    - null
-    - null
-    - null
   - model: FOSSIL v2
     model_plain: FOSSIL v2
     is_baseline: false
@@ -914,71 +693,6 @@ variants:
     - null
     metric_stds:
     - 0.0003
-    - null
-    - null
-    - null
-  - model: OrderedGNN
-    model_plain: OrderedGNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2604.08980'
-    title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware Graph
-      Learning'
-    date: Apr 10, 2026
-    date_iso: '2026-04-10'
-    date_display: Apr 2026
-    codebase_url: https://github.com/cf020031308/MoNT
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.95
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.001
-    - null
-    - null
-    - null
-  - model: Exphormer
-    model_plain: Exphormer
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2510.21267'
-    title: Relieving the Over-Aggregating Effect in Graph Transformers
-    date: Oct 24, 2025
-    date_iso: '2025-10-24'
-    date_display: Oct 2025
-    codebase_url: https://github.com/sunjss/over-aggregating
-    published_conference: NeurIPS 2025
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2025
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9493
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0001
     - null
     - null
     - null
@@ -1143,38 +857,6 @@ variants:
     - null
     - null
     - null
-  - model: DIFFormer
-    model_plain: DIFFormer
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2510.21267'
-    title: Relieving the Over-Aggregating Effect in Graph Transformers
-    date: Oct 24, 2025
-    date_iso: '2025-10-24'
-    date_display: Oct 2025
-    codebase_url: https://github.com/sunjss/over-aggregating
-    published_conference: NeurIPS 2025
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2025
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9478
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.002
-    - null
-    - null
-    - null
   - model: GREET
     model_plain: GREET
     is_baseline: false
@@ -1205,38 +887,6 @@ variants:
     - null
     metric_stds:
     - 0.0018
-    - null
-    - null
-    - null
-  - model: Polynormer + Wideformer
-    model_plain: Polynormer + Wideformer
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2510.21267'
-    title: Relieving the Over-Aggregating Effect in Graph Transformers
-    date: Oct 24, 2025
-    date_iso: '2025-10-24'
-    date_display: Oct 2025
-    codebase_url: https://github.com/sunjss/over-aggregating
-    published_conference: NeurIPS 2025
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2025
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.946
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0027
     - null
     - null
     - null
@@ -1272,39 +922,6 @@ variants:
     - null
     - null
     - null
-  - model: APPNP
-    model_plain: APPNP
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2604.08980'
-    title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware Graph
-      Learning'
-    date: Apr 10, 2026
-    date_iso: '2026-04-10'
-    date_display: Apr 2026
-    codebase_url: https://github.com/cf020031308/MoNT
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9449
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0007
-    - null
-    - null
-    - null
   - model: AdNGCL
     model_plain: AdNGCL
     is_baseline: false
@@ -1334,38 +951,6 @@ variants:
     - null
     metric_stds:
     - 0.0023
-    - null
-    - null
-    - null
-  - model: GOAT
-    model_plain: GOAT
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2510.21267'
-    title: Relieving the Over-Aggregating Effect in Graph Transformers
-    date: Oct 24, 2025
-    date_iso: '2025-10-24'
-    date_display: Oct 2025
-    codebase_url: https://github.com/sunjss/over-aggregating
-    published_conference: NeurIPS 2025
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2025
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9421
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0038
     - null
     - null
     - null
@@ -1559,38 +1144,6 @@ variants:
     - null
     metric_stds:
     - 0.0024
-    - null
-    - null
-    - null
-  - model: SGFormer + Wideformer
-    model_plain: SGFormer + Wideformer
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2510.21267'
-    title: Relieving the Over-Aggregating Effect in Graph Transformers
-    date: Oct 24, 2025
-    date_iso: '2025-10-24'
-    date_display: Oct 2025
-    codebase_url: https://github.com/sunjss/over-aggregating
-    published_conference: NeurIPS 2025
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2025
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9386
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0041
     - null
     - null
     - null
@@ -1883,18 +1436,434 @@ variants:
     - null
     - null
     - null
-  row_count: 346
+  - model: ProGCL
+    model_plain: ProGCL
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.03076'
+    title: Adaptive Negative Scheduling for Graph Contrastive Learning
+    date: May 4, 2026
+    date_iso: '2026-05-04'
+    date_display: May 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9367
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0012
+    - null
+    - null
+    - null
+  - model: ProGCL-mix
+    model_plain: ProGCL-mix
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2402.15270'
+    title: Smoothed Graph Contrastive Learning via Seamless Proximity Integration
+    date: Feb 23, 2024
+    date_iso: '2024-02-23'
+    date_display: Feb 2024
+    codebase_url: https://github.com/maysambehmanesh/SGCL
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9367
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0012
+    - null
+    - null
+    - null
+  - model: LG2AR
+    model_plain: LG2AR
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2605.03076'
+    title: Adaptive Negative Scheduling for Graph Contrastive Learning
+    date: May 4, 2026
+    date_iso: '2026-05-04'
+    date_display: May 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.936
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.003
+    - null
+    - null
+    - null
+  - model: LG2AR + GRU
+    model_plain: LG2AR + GRU
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2201.09830'
+    title: Learning Graph Augmentations to Learn Graph Representations
+    date: Jan 24, 2022
+    date_iso: '2022-01-24'
+    date_display: Jan 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.936
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.003
+    - null
+    - null
+    - null
+  - model: BNLL
+    model_plain: BNLL
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2502.20885'
+    title: A Fused Gromov-Wasserstein Approach to Subgraph Contrastive Learning
+    date: Feb 28, 2025
+    date_iso: '2025-02-28'
+    date_display: Feb 2025
+    codebase_url: https://github.com/sangaram/FOSSIL
+    published_conference: TMLR 2025
+    published_conference_short: TMLR
+    published_conference_slug: tmlr
+    published_venue: TMLR 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.936
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0003
+    - null
+    - null
+    - null
+  - model: ABGML
+    model_plain: ABGML
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2512.13235'
+    title: 'CORE: Contrastive Masked Feature Reconstruction on Graphs'
+    date: Dec 15, 2025
+    date_iso: '2025-12-15'
+    date_display: Dec 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.936
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.002
+    - null
+    - null
+    - null
+  - model: GCN
+    model_plain: GCN
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2002.06755'
+    title: Unifying Graph Convolutional Neural Networks and Label Propagation
+    date: Feb 17, 2020
+    date_iso: '2020-02-17'
+    date_display: Feb 2020
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.936
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.015
+    - null
+    - null
+    - null
+  - model: RelGCL_Pair
+    model_plain: RelGCL_Pair
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2505.05533'
+    title: Rethinking Graph Contrastive Learning through Relative Similarity Preservation
+    date: May 8, 2025
+    date_iso: '2025-05-08'
+    date_display: May 2025
+    codebase_url: ''
+    published_conference: IJCAI 2025
+    published_conference_short: IJCAI
+    published_conference_slug: ijcai
+    published_venue: IJCAI 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9353
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0012
+    - null
+    - null
+    - null
+  - model: ProGCL-weight
+    model_plain: ProGCL-weight
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2402.15270'
+    title: Smoothed Graph Contrastive Learning via Seamless Proximity Integration
+    date: Feb 23, 2024
+    date_iso: '2024-02-23'
+    date_display: Feb 2024
+    codebase_url: https://github.com/maysambehmanesh/SGCL
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9351
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0006
+    - null
+    - null
+    - null
+  - model: RelGCL_List
+    model_plain: RelGCL_List
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2505.05533'
+    title: Rethinking Graph Contrastive Learning through Relative Similarity Preservation
+    date: May 8, 2025
+    date_iso: '2025-05-08'
+    date_display: May 2025
+    codebase_url: ''
+    published_conference: IJCAI 2025
+    published_conference_short: IJCAI
+    published_conference_slug: ijcai
+    published_venue: IJCAI 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.935
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0012
+    - null
+    - null
+    - null
+  - model: ReLU-Poly(A)-pl
+    model_plain: ReLU-Poly(A)-pl
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2602.15634'
+    title: 'Beyond ReLU: Bifurcation, Oversmoothing, and Topological Priors'
+    date: Feb 17, 2026
+    date_iso: '2026-02-17'
+    date_display: Feb 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9347
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0009
+    - null
+    - null
+    - null
+  - model: SSGE
+    model_plain: SSGE
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2411.01157'
+    title: Negative-Free Self-Supervised Gaussian Embedding of Graphs
+    date: Oct 1, 2024
+    date_iso: '2024-10-01'
+    date_display: Oct 2024
+    codebase_url: https://github.com/Cloudy1225/SSGE
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9346
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0045
+    - null
+    - null
+    - null
+  - model: SimGRACE
+    model_plain: SimGRACE
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2212.07035'
+    title: 'MA-GCL: Model Augmentation Tricks for Graph Contrastive Learning'
+    date: Dec 14, 2022
+    date_iso: '2022-12-14'
+    date_display: Dec 2022
+    codebase_url: https://github.com/GXM1141/MA-GCL
+    published_conference: AAAI 2022
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9345
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.004
+    - null
+    - null
+    - null
+  row_count: 300
   rows_json: /data/datasets/coauthor-cs/standard-split-rows.json
   chart_json: /data/datasets/coauthor-cs/standard-split-chart.json
   arch_counts:
-    gnn: 236
-    hybrid: 53
-    graph_transformer: 11
+    gnn: 201
+    hybrid: 51
+    graph_transformer: 2
     llm: 1
     walk: 10
     traditional: 21
   metric_counts:
-  - 328
+  - 282
   - 6
   - 12
   - 12

@@ -61,8 +61,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GraMI
-mrr: 0.0625
-adjusted_mrr: 0.0208
+mrr: 0.1
+adjusted_mrr: 0.0333
 mrr_dataset_count: 1
 benchmark_categories:
 - Heterogeneous Graph Benchmarks
@@ -79,44 +79,11 @@ results:
 - &id001
   dataset: DBLP
   rows:
-  - model: HERec
-    model_key: herec
-    model_plain: HERec
-    value: 0.9993
-    std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: walk
-    architecture_label: Walk
-    architecture_title: Random-walk graph embedding
-    arxiv_id: '1912.10832'
-    title: An Attention-based Graph Neural Network for Heterogeneous Structural Learning
-    date: Dec 19, 2019
-    date_display: Dec 2019
-    date_iso: '2019-12-19'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: https://github.com/didi/hetsann
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9993
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: HetSANN
-    model_key: hetsann
-    model_plain: HetSANN
-    value: 0.9972
-    std: null
+  - model: LMSPS
+    model_key: lmsps
+    model_plain: LMSPS
+    value: 0.9566
+    std: 0.002
     metric: Micro-F1
     higher_is_better: true
     is_baseline: false
@@ -126,57 +93,90 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '1912.10832'
-    title: An Attention-based Graph Neural Network for Heterogeneous Structural Learning
-    date: Dec 19, 2019
-    date_display: Dec 2019
-    date_iso: '2019-12-19'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: https://github.com/didi/hetsann
+    arxiv_id: '2307.08430'
+    title: Long-range Meta-path Search on Large-scale Heterogeneous Graphs
+    date: Jul 17, 2023
+    date_display: Jul 2023
+    date_iso: '2023-07-17'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9566
+    sort_std: 0.002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: PSHGCN
+    model_key: pshgcn
+    model_plain: PSHGCN
+    value: 0.9561
+    std: 0.0012
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2305.19872'
+    title: Spectral Heterogeneous Graph Convolutions via Positive Noncommutative Polynomials
+    date: May 31, 2023
+    date_display: May 2023
+    date_iso: '2023-05-31'
+    venue: The Web Conference
+    codebase_url: https://github.com/ivam-he/PSHGCN
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.9972
-    sort_std: null
+    sort_value: 0.9561
+    sort_std: 0.0012
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
-  - model: DeepWalk
-    model_key: deepwalk
-    model_plain: DeepWalk
-    value: 0.9941
-    std: null
+  - model: RpHGNN
+    model_key: rphgnn
+    model_plain: RpHGNN
+    value: 0.9555
+    std: 0.0029
     metric: Micro-F1
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: walk
-    architecture_label: Walk
-    architecture_title: Random-walk graph embedding
-    arxiv_id: '1912.10832'
-    title: An Attention-based Graph Neural Network for Heterogeneous Structural Learning
-    date: Dec 19, 2019
-    date_display: Dec 2019
-    date_iso: '2019-12-19'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: https://github.com/didi/hetsann
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2310.14481'
+    title: Efficient Heterogeneous Graph Learning via Random Projection
+    date: Oct 23, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-23'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/CrawlScript/RpHGNN
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.9941
-    sort_std: null
+    sort_value: 0.9555
+    sort_std: 0.0029
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: GraMI
     model_key: grami
@@ -235,8 +235,8 @@ results:
     value_note: ''
     sort_value: 0.9503
     sort_std: null
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -271,7 +271,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 29
+    global_rank: 21
     sort_value: 0.946
     sort_std: 0.0031
     comparison_type: global_top
@@ -337,10 +337,10 @@ results:
     value_note: ''
     sort_value: 0.9456
     sort_std: null
-    global_rank: 30
-    paper_rank: 49
-    rank_delta: 19
-    rank_delta_abs: 19
+    global_rank: 22
+    paper_rank: 39
+    rank_delta: 17
+    rank_delta_abs: 17
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -407,10 +407,10 @@ results:
     value_note: ''
     sort_value: 0.9448
     sort_std: 0.0022
-    global_rank: 31
-    paper_rank: 121
-    rank_delta: 90
-    rank_delta_abs: 90
+    global_rank: 23
+    paper_rank: 116
+    rank_delta: 93
+    rank_delta_abs: 93
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -476,8 +476,8 @@ results:
     value_note: ''
     sort_value: 0.9434
     sort_std: null
-    global_rank: 38
-    paper_rank: 38
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -544,8 +544,8 @@ results:
     value_note: ''
     sort_value: 0.9369
     sort_std: null
-    global_rank: 47
-    paper_rank: 47
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -613,8 +613,8 @@ results:
     value_note: ''
     sort_value: 0.934
     sort_std: 0.006
-    global_rank: 51
-    paper_rank: 83
+    global_rank: 41
+    paper_rank: 73
     rank_delta: 32
     rank_delta_abs: 32
     rank_delta_direction: worse
@@ -682,8 +682,8 @@ results:
     value_note: ''
     sort_value: 0.9331
     sort_std: null
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 44
+    paper_rank: 44
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -751,8 +751,8 @@ results:
     value_note: ''
     sort_value: 0.9304
     sort_std: null
-    global_rank: 57
-    paper_rank: 60
+    global_rank: 47
+    paper_rank: 50
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -819,10 +819,10 @@ results:
     value_note: ''
     sort_value: 0.9016
     sort_std: 0.006
-    global_rank: 87
-    paper_rank: 114
-    rank_delta: 27
-    rank_delta_abs: 27
+    global_rank: 79
+    paper_rank: 109
+    rank_delta: 30
+    rank_delta_abs: 30
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -887,8 +887,8 @@ results:
     value_note: ''
     sort_value: 0.8664
     sort_std: null
-    global_rank: 99
-    paper_rank: 99
+    global_rank: 93
+    paper_rank: 93
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -924,7 +924,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 185
+    global_rank: 179
     sort_value: 0.6447
     sort_std: 0.0136
     comparison_type: global_top

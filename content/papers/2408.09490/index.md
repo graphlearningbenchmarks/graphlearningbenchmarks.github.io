@@ -133,7 +133,7 @@ results:
     venue: IEEE Transactions on Neural Networks and Learning Systems
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -610,7 +610,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 56
+    global_rank: 55
     sort_value: 0.4026
     sort_std: 0.0108
     comparison_type: global_top
@@ -676,8 +676,8 @@ results:
     value_note: ''
     sort_value: 0.3934
     sort_std: 0.0321
-    global_rank: 80
-    paper_rank: 80
+    global_rank: 79
+    paper_rank: 79
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -713,7 +713,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 88
+    global_rank: 87
     sort_value: 0.3899
     sort_std: 0.0085
     comparison_type: global_top
@@ -778,8 +778,8 @@ results:
     value_note: ''
     sort_value: 0.3562
     sort_std: 0.0275
-    global_rank: 251
-    paper_rank: 251
+    global_rank: 248
+    paper_rank: 248
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -846,8 +846,8 @@ results:
     value_note: ''
     sort_value: 0.3545
     sort_std: 0.0279
-    global_rank: 260
-    paper_rank: 260
+    global_rank: 257
+    paper_rank: 257
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -914,8 +914,8 @@ results:
     value_note: ''
     sort_value: 0.3542
     sort_std: 0.0275
-    global_rank: 261
-    paper_rank: 261
+    global_rank: 258
+    paper_rank: 258
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

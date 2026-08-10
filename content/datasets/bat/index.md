@@ -13,21 +13,17 @@ stats:
   avg_nodes: 131.0
   avg_edges: null
   num_classes: 4
-result_count: 59
+result_count: 55
 best_model:
-  model: CONVERT
-  value: 0.7777
+  model: GraphLearner
+  value: 0.754
   metric: F1
-  arxiv_id: '2308.08963'
-  paper_title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
+  arxiv_id: '2212.03559'
+  paper_title: 'GraphLearner: Graph Node Clustering with Fully Learnable Augmentation'
 papers:
 - arxiv_id: '2508.14097'
   title: Non-Dissipative Graph Propagation for Non-Local Community Detection
   date_iso: '2025-06-30'
-  venue: ''
-- arxiv_id: '2308.08963'
-  title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
-  date_iso: '2023-08-17'
   venue: ''
 - arxiv_id: '2308.06827'
   title: Reinforcement Graph Clustering with Unknown Cluster Number
@@ -72,38 +68,6 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
-  - model: CONVERT
-    model_plain: CONVERT
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2308.08963'
-    title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
-    date: Aug 17, 2023
-    date_iso: '2023-08-17'
-    date_display: Aug 2023
-    codebase_url: https://github.com/xihongyang1999/CONVERT
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.7777
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0148
-    - null
-    - null
-    - null
   - model: GraphLearner
     model_plain: GraphLearner
     is_baseline: false
@@ -124,7 +88,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.754
@@ -156,7 +120,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.7449
@@ -424,38 +388,6 @@ variants:
     - null
     - null
     - null
-  - model: ARGA
-    model_plain: ARGA
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2308.08963'
-    title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
-    date: Aug 17, 2023
-    date_iso: '2023-08-17'
-    date_display: Aug 2023
-    codebase_url: https://github.com/xihongyang1999/CONVERT
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.6702
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0115
-    - null
-    - null
-    - null
   - model: ProGCL
     model_plain: ProGCL
     is_baseline: true
@@ -485,38 +417,6 @@ variants:
     - null
     metric_stds:
     - 0.0089
-    - null
-    - null
-    - null
-  - model: AGE
-    model_plain: AGE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2308.08963'
-    title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
-    date: Aug 17, 2023
-    date_iso: '2023-08-17'
-    date_display: Aug 2023
-    codebase_url: https://github.com/xihongyang1999/CONVERT
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.5507
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.008
     - null
     - null
     - null
@@ -957,7 +857,7 @@ variants:
     published_venue: ''
     uses_external_data: false
     is_best: false
-    is_std_outlier: false
+    is_std_outlier: true
     metric_values:
     - 0.44
     - null
@@ -1032,38 +932,6 @@ variants:
     - null
     - null
     - null
-  - model: NACL
-    model_plain: NACL
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2308.08963'
-    title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
-    date: Aug 17, 2023
-    date_iso: '2023-08-17'
-    date_display: Aug 2023
-    codebase_url: https://github.com/xihongyang1999/CONVERT
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.4225
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0034
-    - null
-    - null
-    - null
   - model: GDCL
     model_plain: GDCL
     is_baseline: true
@@ -1117,7 +985,7 @@ variants:
     published_venue: ''
     uses_external_data: false
     is_best: false
-    is_std_outlier: false
+    is_std_outlier: true
     metric_values:
     - 0.38
     - null
@@ -1149,7 +1017,7 @@ variants:
     published_venue: ''
     uses_external_data: false
     is_best: false
-    is_std_outlier: false
+    is_std_outlier: true
     metric_values:
     - 0.36
     - null
@@ -1181,7 +1049,7 @@ variants:
     published_venue: ''
     uses_external_data: false
     is_best: false
-    is_std_outlier: false
+    is_std_outlier: true
     metric_values:
     - 0.36
     - null
@@ -1672,18 +1540,146 @@ variants:
     - 0.0057
     - null
     - 0.0042
-  row_count: 59
+  - model: GCA
+    model_plain: GCA
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2308.06827'
+    title: Reinforcement Graph Clustering with Unknown Cluster Number
+    date: Aug 13, 2023
+    date_iso: '2023-08-13'
+    date_display: Aug 2023
+    codebase_url: https://github.com/yueliu1999/RGC
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - null
+    - 0.2669
+    - null
+    - 0.3888
+    metric_stds:
+    - null
+    - 0.0285
+    - null
+    - 0.0023
+  - model: MCGC
+    model_plain: MCGC
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2308.06827'
+    title: Reinforcement Graph Clustering with Unknown Cluster Number
+    date: Aug 13, 2023
+    date_iso: '2023-08-13'
+    date_display: Aug 2023
+    codebase_url: https://github.com/yueliu1999/RGC
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - null
+    - 0.0841
+    - null
+    - 0.2311
+    metric_stds:
+    - null
+    - 0.0032
+    - null
+    - 0.0056
+  - model: AutoSSL
+    model_plain: AutoSSL
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2308.06827'
+    title: Reinforcement Graph Clustering with Unknown Cluster Number
+    date: Aug 13, 2023
+    date_iso: '2023-08-13'
+    date_display: Aug 2023
+    codebase_url: https://github.com/yueliu1999/RGC
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - null
+    - 0.1311
+    - null
+    - 0.1784
+    metric_stds:
+    - null
+    - 0.0081
+    - null
+    - 0.0098
+  - model: AGC-DRR
+    model_plain: AGC-DRR
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2308.06827'
+    title: Reinforcement Graph Clustering with Unknown Cluster Number
+    date: Aug 13, 2023
+    date_iso: '2023-08-13'
+    date_display: Aug 2023
+    codebase_url: https://github.com/yueliu1999/RGC
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - null
+    - 0.1459
+    - null
+    - 0.1991
+    metric_stds:
+    - null
+    - 0.0013
+    - null
+    - 0.0024
+  row_count: 55
   rows_json: /data/datasets/bat/standard-split-rows.json
   chart_json: /data/datasets/bat/standard-split-chart.json
   arch_counts:
-    gnn: 52
+    gnn: 48
     hybrid: 3
     graph_transformer: 0
     llm: 0
     walk: 1
     traditional: 3
   metric_counts:
-  - 38
+  - 34
   - 21
   - 8
   - 29
@@ -1700,12 +1696,6 @@ variants:
     arxiv_id: '2212.03559'
     title: 'GraphLearner: Graph Node Clustering with Fully Learnable Augmentation'
     date: '2022-12-07'
-  - value: 0.7777
-    std: 0.0148
-    model: CONVERT
-    arxiv_id: '2308.08963'
-    title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
-    date: '2023-08-17'
   milestones_by_metric:
     F1: *id001
     ARI:

@@ -47,8 +47,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - StarGraph + TripleRE'
-mrr: 0.2567
-adjusted_mrr: 0.1711
+mrr: 0.2581
+adjusted_mrr: 0.172
 mrr_dataset_count: 2
 benchmark_categories:
 - OGB
@@ -172,39 +172,6 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.637
-    std: 0.017
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2603.00618'
-    title: Multi-domain Riemannian Graph Gluing for Building Graph Foundation Models
-    date: Feb 28, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-28'
-    venue: Accepted by ICLR'26, 41 pages
-    codebase_url: https://github.com/RiemannGraph/GraphGlue
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 28
-    sort_value: 0.637
-    sort_std: 0.017
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
   - model: CoKE
     model_key: coke
     model_plain: CoKE
@@ -264,8 +231,8 @@ results:
     value_note: ''
     sort_value: 0.364
     sort_std: null
-    global_rank: 51
-    paper_rank: 51
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -334,8 +301,8 @@ results:
     value_note: ''
     sort_value: 0.361
     sort_std: null
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -404,8 +371,8 @@ results:
     value_note: ''
     sort_value: 0.3514
     sort_std: null
-    global_rank: 65
-    paper_rank: 65
+    global_rank: 52
+    paper_rank: 52
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -474,8 +441,8 @@ results:
     value_note: ''
     sort_value: 0.351
     sort_std: null
-    global_rank: 67
-    paper_rank: 67
+    global_rank: 54
+    paper_rank: 54
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -544,8 +511,8 @@ results:
     value_note: ''
     sort_value: 0.3459
     sort_std: null
-    global_rank: 75
-    paper_rank: 75
+    global_rank: 62
+    paper_rank: 62
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -614,8 +581,8 @@ results:
     value_note: ''
     sort_value: 0.338
     sort_std: null
-    global_rank: 82
-    paper_rank: 82
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -684,8 +651,8 @@ results:
     value_note: ''
     sort_value: 0.33
     sort_std: null
-    global_rank: 91
-    paper_rank: 103
+    global_rank: 78
+    paper_rank: 90
     rank_delta: 12
     rank_delta_abs: 12
     rank_delta_direction: worse
@@ -754,8 +721,8 @@ results:
     value_note: ''
     sort_value: 0.258
     sort_std: null
-    global_rank: 112
-    paper_rank: 112
+    global_rank: 99
+    paper_rank: 99
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

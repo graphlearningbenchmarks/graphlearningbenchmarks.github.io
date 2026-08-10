@@ -54,7 +54,7 @@ task_categories:
 experiment_scopes:
 - graph-level
 results:
-- &id002
+- &id001
   dataset: BA graph
   rows:
   - model: F4-MPNN
@@ -334,13 +334,79 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id002
   dataset: ER graph
   rows:
-  - model: FloydNet
-    model_key: floydnet
-    model_plain: FloydNet
-    value: 1.0
+  - model: F_4-MPNN
+    model_key: f_4-mpnn
+    model_plain: F_4-MPNN
+    value: 0.9793
+    std: 0.0068
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.11298'
+    title: 'Graph Representational Learning: When Does More Expressivity Hurt Generalization?'
+    date: May 16, 2025
+    date_display: May 2025
+    date_iso: '2025-05-16'
+    venue: arXiv.org
+    codebase_url: https://github.com/RPaolino/GenVsExp
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9793
+    sort_std: 0.0068
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: F_7-MPNN
+    model_key: f_7-mpnn
+    model_plain: F_7-MPNN
+    value: 0.966
+    std: 0.0065
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.11298'
+    title: 'Graph Representational Learning: When Does More Expressivity Hurt Generalization?'
+    date: May 16, 2025
+    date_display: May 2025
+    date_iso: '2025-05-16'
+    venue: arXiv.org
+    codebase_url: https://github.com/RPaolino/GenVsExp
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.966
+    sort_std: 0.0065
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GraphWiz (LLaMA 2-13B)
+    model_key: graphwiz (llama 2-13b)
+    model_plain: GraphWiz (LLaMA 2-13B)
+    value: 0.9475
     std: null
     metric: Accuracy
     higher_is_better: true
@@ -348,88 +414,23 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2601.19094'
-    title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
-    date: Jan 27, 2026
-    date_display: Jan 2026
-    date_iso: '2026-01-27'
-    venue: arXiv.org
-    codebase_url: https://github.com/ocx-lab/FloydNet
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 1.0
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: PGN
-    model_key: pgn
-    model_plain: PGN
-    value: 0.995
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2601.19094'
-    title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
-    date: Jan 27, 2026
-    date_display: Jan 2026
-    date_iso: '2026-01-27'
-    venue: arXiv.org
-    codebase_url: https://github.com/ocx-lab/FloydNet
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.995
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: RecGNN
-    model_key: recgnn
-    model_plain: RecGNN
-    value: 0.995
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2601.19094'
-    title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
-    date: Jan 27, 2026
-    date_display: Jan 2026
-    date_iso: '2026-01-27'
-    venue: arXiv.org
-    codebase_url: https://github.com/ocx-lab/FloydNet
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    arxiv_id: '2402.16029'
+    title: 'GraphWiz: An Instruction-Following Language Model for Graph Computational
+      Problems'
+    date: Feb 25, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-25'
+    venue: null
+    codebase_url: https://github.com/nuochenpku/Graph-Reasoning-LLM
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.995
+    sort_value: 0.9475
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
@@ -461,7 +462,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 10
+    global_rank: 6
     sort_value: 0.88
     sort_std: null
     comparison_type: global_top
@@ -526,8 +527,8 @@ results:
     value_note: ''
     sort_value: 0.451
     sort_std: null
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -594,8 +595,8 @@ results:
     value_note: ''
     sort_value: 0.412
     sort_std: null
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -626,10 +627,10 @@ datasets_by_scope:
   - benchmark: GraphBench
     benchmark_slug: graphbench
     datasets:
-    - dataset: ER graph
-      dataset_slug: er-graph
     - dataset: BA graph
       dataset_slug: ba-graph
+    - dataset: ER graph
+      dataset_slug: er-graph
 main_figure: /figures/2310.04560/main_figure.jpegoptim.jpg
 ---
 

@@ -12,7 +12,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 5
-result_count: 892
+result_count: 844
 best_model:
   model: P^2GNN
   value: 0.9541
@@ -66,11 +66,6 @@ papers:
 - arxiv_id: '2601.18917'
   title: 'GraIP: A Benchmarking Framework For Neural Graph Inverse Problems'
   date_iso: '2026-01-26'
-  venue: ''
-- arxiv_id: '2601.02662'
-  title: 'When Prompting Meets Spiking: Graph Sparse Prompting via Spiking Graph Prompt
-    Learning'
-  date_iso: '2026-01-06'
   venue: ''
 - arxiv_id: '2512.08798'
   title: Can TabPFN Compete with GNNs for Node Classification via Graph Tabularization?
@@ -136,6 +131,10 @@ papers:
   title: Non-Dissipative Graph Propagation for Non-Local Community Detection
   date_iso: '2025-06-30'
   venue: ''
+- arxiv_id: '2506.19343'
+  title: Discrepancy-Aware Graph Mask Auto-Encoder
+  date_iso: '2025-06-24'
+  venue: KDD 2025
 - arxiv_id: '2506.16110'
   title: Mitigating Over-Squashing in Graph Neural Networks by Spectrum-Preserving
     Sparsification
@@ -154,11 +153,6 @@ papers:
   title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
   date_iso: '2025-06-05'
   venue: ''
-- arxiv_id: '2505.23014'
-  title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in the Perspective of
-    A System of Hyperbolic Partial Differential Equations'
-  date_iso: '2025-05-29'
-  venue: ICML 2025
 - arxiv_id: '2505.19762'
   title: 'Language Models as Messengers: Enhancing Message Passing in Heterophilic
     Graph Learning'
@@ -168,11 +162,6 @@ papers:
   title: Learn Beneficial Noise as Graph Augmentation
   date_iso: '2025-05-25'
   venue: ICML 2025
-- arxiv_id: '2505.17599'
-  title: Dynamic Bundling with Large Language Models for Zero-Shot Inference on Text-Attributed
-    Graphs
-  date_iso: '2025-05-23'
-  venue: NeurIPS 2025
 - arxiv_id: '2505.15845'
   title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
     Learning Models'
@@ -198,11 +187,6 @@ papers:
   title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
   date_iso: '2025-03-03'
   venue: KDD 2025
-- arxiv_id: '2502.11836'
-  title: 'Model Generalization on Text Attribute Graphs: Principles with Large Language
-    Models'
-  date_iso: '2025-02-17'
-  venue: ''
 - arxiv_id: '2502.11394'
   title: A Signed Graph Approach to Understanding and Mitigating Oversmoothing in
     GNNs
@@ -478,10 +462,6 @@ papers:
     Perturbation
   date_iso: '2022-11-28'
   venue: ''
-- arxiv_id: '2211.15779'
-  title: Revisiting Over-smoothing and Over-squashing using Ollivier's Ricci Curvature
-  date_iso: '2022-11-28'
-  venue: ICML 2022
 - arxiv_id: '2211.14208'
   title: 'GREAD: Graph Neural Reaction-Diffusion Networks'
   date_iso: '2022-11-25'
@@ -503,10 +483,6 @@ papers:
 - arxiv_id: '2210.08122'
   title: 'Old can be Gold: Better Gradient Flow can Make Vanilla-GCNs Great Again'
   date_iso: '2022-10-14'
-  venue: NeurIPS 2022
-- arxiv_id: '2210.03930'
-  title: Hierarchical Graph Transformer with Adaptive Node Sampling
-  date_iso: '2022-10-08'
   venue: NeurIPS 2022
 - arxiv_id: '2210.00513'
   title: Gradient Gating for Deep Multi-Rate Learning on Graphs
@@ -605,6 +581,10 @@ papers:
     Benchmark Study'
   date_iso: '2021-08-24'
   venue: ''
+- arxiv_id: '2106.06134'
+  title: Is Homophily a Necessity for Graph Neural Networks?
+  date_iso: '2021-06-11'
+  venue: ICLR 2021
 - arxiv_id: '2105.07634'
   title: Improving Graph Neural Networks with Simple Architecture Design
   date_iso: '2021-05-17'
@@ -1047,45 +1027,6 @@ variants:
     - null
     - null
     - null
-  - model: Hyperbolic-GPR
-    model_plain: Hyperbolic-GPR
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.23014'
-    title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in the Perspective
-      of A System of Hyperbolic Partial Differential Equations'
-    date: May 29, 2025
-    date_iso: '2025-05-29'
-    date_display: May 2025
-    codebase_url: https://github.com/YueAWu/Hyperbolic-GNN
-    published_conference: ICML 2025
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2025
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.9277
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0336
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: RDGNN-I
     model_plain: RDGNN-I
     is_baseline: false
@@ -1310,44 +1251,6 @@ variants:
     - null
     metric_stds:
     - 0.0172
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: ANS-GT
-    model_plain: ANS-GT
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2210.03930'
-    title: Hierarchical Graph Transformer with Adaptive Node Sampling
-    date: Oct 8, 2022
-    date_iso: '2022-10-08'
-    date_display: Oct 2022
-    codebase_url: https://github.com/zaixizhang/ANS-GT
-    published_conference: NeurIPS 2022
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2022
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.921
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0178
     - null
     - null
     - null
@@ -1621,6 +1524,44 @@ variants:
     - null
     - null
     - null
+  - model: GPRGNN
+    model_plain: GPRGNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2212.03654'
+    title: Node-oriented Spectral Filtering for Graph Neural Networks
+    date: Dec 7, 2022
+    date_iso: '2022-12-07'
+    date_display: Dec 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9136
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.007
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
   - model: MLP
     model_plain: MLP
     is_baseline: true
@@ -1653,200 +1594,6 @@ variants:
     - null
     metric_stds:
     - 0.007
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: Hyperbolic-SGC
-    model_plain: Hyperbolic-SGC
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.23014'
-    title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in the Perspective
-      of A System of Hyperbolic Partial Differential Equations'
-    date: May 29, 2025
-    date_iso: '2025-05-29'
-    date_display: May 2025
-    codebase_url: https://github.com/YueAWu/Hyperbolic-GNN
-    published_conference: ICML 2025
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2025
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.9128
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0255
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: Hyperbolic-Cheb
-    model_plain: Hyperbolic-Cheb
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.23014'
-    title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in the Perspective
-      of A System of Hyperbolic Partial Differential Equations'
-    date: May 29, 2025
-    date_iso: '2025-05-29'
-    date_display: May 2025
-    codebase_url: https://github.com/YueAWu/Hyperbolic-GNN
-    published_conference: ICML 2025
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2025
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.9106
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0446
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: Hyperbolic-ChebII
-    model_plain: Hyperbolic-ChebII
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.23014'
-    title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in the Perspective
-      of A System of Hyperbolic Partial Differential Equations'
-    date: May 29, 2025
-    date_iso: '2025-05-29'
-    date_display: May 2025
-    codebase_url: https://github.com/YueAWu/Hyperbolic-GNN
-    published_conference: ICML 2025
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2025
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.9106
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0386
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: Hyperbolic-Jacobi
-    model_plain: Hyperbolic-Jacobi
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.23014'
-    title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in the Perspective
-      of A System of Hyperbolic Partial Differential Equations'
-    date: May 29, 2025
-    date_iso: '2025-05-29'
-    date_display: May 2025
-    codebase_url: https://github.com/YueAWu/Hyperbolic-GNN
-    published_conference: ICML 2025
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2025
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.9064
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0513
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: GPRGNN
-    model_plain: GPRGNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.03930'
-    title: Hierarchical Graph Transformer with Adaptive Node Sampling
-    date: Oct 8, 2022
-    date_iso: '2022-10-08'
-    date_display: Oct 2022
-    codebase_url: https://github.com/zaixizhang/ANS-GT
-    published_conference: NeurIPS 2022
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9025
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0193
     - null
     - null
     - null
@@ -1924,45 +1671,6 @@ variants:
     - null
     metric_stds:
     - 0.0467
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: Hyperbolic-Bern
-    model_plain: Hyperbolic-Bern
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.23014'
-    title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in the Perspective
-      of A System of Hyperbolic Partial Differential Equations'
-    date: May 29, 2025
-    date_iso: '2025-05-29'
-    date_display: May 2025
-    codebase_url: https://github.com/YueAWu/Hyperbolic-GNN
-    published_conference: ICML 2025
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2025
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.8979
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0345
     - null
     - null
     - null
@@ -2078,44 +1786,6 @@ variants:
     - null
     metric_stds:
     - 0.0426
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: Gophormer
-    model_plain: Gophormer
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2210.03930'
-    title: Hierarchical Graph Transformer with Adaptive Node Sampling
-    date: Oct 8, 2022
-    date_iso: '2022-10-08'
-    date_display: Oct 2022
-    codebase_url: https://github.com/zaixizhang/ANS-GT
-    published_conference: NeurIPS 2022
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8946
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0151
     - null
     - null
     - null
@@ -2582,18 +2252,323 @@ variants:
     - null
     - null
     - null
-  row_count: 892
+  - model: GCN + DIGL
+    model_plain: GCN + DIGL
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2408.07191'
+    title: Joint Graph Rewiring and Feature Denoising via Spectral Resonance
+    date: Aug 13, 2024
+    date_iso: '2024-08-13'
+    date_display: Aug 2024
+    codebase_url: https://github.com/jlinki/JDR
+    published_conference: ICLR 2024
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8849
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0074
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: RevGAT+T
+    model_plain: RevGAT+T
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.19762'
+    title: 'Language Models as Messengers: Enhancing Message Passing in Heterophilic
+      Graph Learning'
+    date: May 26, 2025
+    date_iso: '2025-05-26'
+    date_display: May 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: true
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8846
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: CATv3-semi
+    model_plain: CATv3-semi
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2312.08672'
+    title: 'CAT: A Causal Graph Attention Network for Trimming Heterophilic Graphs'
+    date: Dec 14, 2023
+    date_iso: '2023-12-14'
+    date_display: Dec 2023
+    codebase_url: https://github.com/GeoX-Lab/CAT
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.884
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.021
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: DiGGR
+    model_plain: DiGGR
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2408.13471'
+    title: Disentangled Generative Graph Representation Learning
+    date: Aug 24, 2024
+    date_iso: '2024-08-24'
+    date_display: Aug 2024
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.8838
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0684
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: DMD-ACMP
+    model_plain: DMD-ACMP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2410.05593'
+    title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+    date: Oct 8, 2024
+    date_iso: '2024-10-08'
+    date_display: Oct 2024
+    codebase_url: ''
+    published_conference: ICLR 2024
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.881
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.024
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: SCNode
+    model_plain: SCNode
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2410.02158'
+    title: 'SCNode: Spatial and Contextual Coordinates for Graph Representation Learning'
+    date: Oct 3, 2024
+    date_iso: '2024-10-03'
+    date_display: Oct 2024
+    codebase_url: https://github.com/joshem163/SCNode
+    published_conference: TMLR 2024
+    published_conference_short: TMLR
+    published_conference_slug: tmlr
+    published_venue: TMLR 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8809
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0191
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: GPRGNN+DIGL
+    model_plain: GPRGNN+DIGL
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2408.07191'
+    title: Joint Graph Rewiring and Feature Denoising via Spectral Resonance
+    date: Aug 13, 2024
+    date_iso: '2024-08-13'
+    date_display: Aug 2024
+    codebase_url: https://github.com/jlinki/JDR
+    published_conference: ICLR 2024
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8806
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0081
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: FSGNN
+    model_plain: FSGNN
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2105.07634'
+    title: Improving Graph Neural Networks with Simple Architecture Design
+    date: May 17, 2021
+    date_iso: '2021-05-17'
+    date_display: May 2021
+    codebase_url: https://github.com/sunilkmaurya/FSGNN
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.8784
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0619
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  row_count: 844
   rows_json: /data/datasets/cornell/standard-split-rows.json
   chart_json: /data/datasets/cornell/standard-split-chart.json
   arch_counts:
-    gnn: 604
-    hybrid: 151
-    graph_transformer: 26
-    llm: 9
+    gnn: 591
+    hybrid: 144
+    graph_transformer: 22
+    llm: 1
     walk: 4
-    traditional: 58
+    traditional: 46
   metric_counts:
-  - 856
+  - 808
   - 3
   - 9
   - 20
@@ -2625,6 +2600,12 @@ variants:
     arxiv_id: '2202.03580'
     title: Convolutional Neural Networks on Graphs with Chebyshev Approximation, Revisited
     date: '2022-02-04'
+  - value: 0.9344
+    std: 0.0284
+    model: HA-GAT
+    arxiv_id: '2302.03228'
+    title: Heterophily-Aware Graph Attention Network
+    date: '2023-02-07'
   - value: 0.938
     std: 0.015
     model: FMP ode

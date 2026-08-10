@@ -127,7 +127,7 @@ results:
     venue: IEEE Transactions on Knowledge and Data Engineering
     codebase_url: https://github.com/YangLing0818/GraphOOD
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -161,7 +161,7 @@ results:
     venue: IEEE Transactions on Knowledge and Data Engineering
     codebase_url: https://github.com/YangLing0818/GraphOOD
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
@@ -262,10 +262,10 @@ results:
     value_note: ''
     sort_value: 0.738
     sort_std: 0.025
-    global_rank: 285
-    paper_rank: 795
-    rank_delta: 510
-    rank_delta_abs: 510
+    global_rank: 290
+    paper_rank: 802
+    rank_delta: 512
+    rank_delta_abs: 512
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -330,8 +330,8 @@ results:
     value_note: ''
     sort_value: 0.7325
     sort_std: 0.0015
-    global_rank: 345
-    paper_rank: 345
+    global_rank: 349
+    paper_rank: 349
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -501,10 +501,10 @@ results:
     value_note: ''
     sort_value: 0.7049
     sort_std: 0.0008
-    global_rank: 654
-    paper_rank: 865
-    rank_delta: 211
-    rank_delta_abs: 211
+    global_rank: 653
+    paper_rank: 879
+    rank_delta: 226
+    rank_delta_abs: 226
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -570,10 +570,10 @@ results:
     value_note: ''
     sort_value: 0.698
     sort_std: 0.002
-    global_rank: 693
-    paper_rank: 704
-    rank_delta: 11
-    rank_delta_abs: 11
+    global_rank: 696
+    paper_rank: 706
+    rank_delta: 10
+    rank_delta_abs: 10
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -638,10 +638,10 @@ results:
     value_note: ''
     sort_value: 0.69
     sort_std: 0.001
-    global_rank: 714
-    paper_rank: 792
-    rank_delta: 78
-    rank_delta_abs: 78
+    global_rank: 716
+    paper_rank: 797
+    rank_delta: 81
+    rank_delta_abs: 81
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -706,8 +706,8 @@ results:
     value_note: ''
     sort_value: 0.6838
     sort_std: 0.0045
-    global_rank: 740
-    paper_rank: 740
+    global_rank: 741
+    paper_rank: 741
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -774,8 +774,8 @@ results:
     value_note: ''
     sort_value: 0.5904
     sort_std: 0.009
-    global_rank: 899
-    paper_rank: 899
+    global_rank: 913
+    paper_rank: 913
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

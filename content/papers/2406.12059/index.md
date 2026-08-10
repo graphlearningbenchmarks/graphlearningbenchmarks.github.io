@@ -62,8 +62,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GECO
-mrr: 0.0498
-adjusted_mrr: 0.0498
+mrr: 0.0492
+adjusted_mrr: 0.0492
 mrr_dataset_count: 9
 benchmark_categories:
 - Classic
@@ -95,6 +95,40 @@ results:
 - &id010
   dataset: COCO-SP
   rows:
+  - model: FloydNet
+    model_key: floydnet
+    model_plain: FloydNet
+    value: 0.4901
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2601.19094'
+    title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    date: Jan 27, 2026
+    date_display: Jan 2026
+    date_iso: '2026-01-27'
+    venue: arXiv.org
+    codebase_url: https://github.com/ocx-lab/FloydNet
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: 'initializes the representation for each pair (i, j)
+      as: MLP_init ([G, X_i, X_j, E_ij])'
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.4901
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
   - model: CRaWl
     model_key: crawl
     model_plain: CRaWl
@@ -117,16 +151,16 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: unknown
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.4588
     sort_std: 0.0079
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: GPS
     model_key: gps
@@ -150,45 +184,12 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.444
-    sort_std: 0.0065
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: NeuralWalker
-    model_key: neuralwalker
-    model_plain: NeuralWalker
-    value: 0.4398
-    std: 0.0033
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: walk
-    architecture_label: Walk
-    architecture_title: Random-walk graph embedding
-    arxiv_id: '2510.12111'
-    title: 'Chimera: State Space Models Beyond Sequences'
-    date: Oct 14, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-14'
-    venue: Trans. Mach. Learn. Res.
-    codebase_url: https://github.com/goombalab/chimera
-    uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: unknown
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.4398
-    sort_std: 0.0033
+    sort_value: 0.444
+    sort_std: 0.0065
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -251,10 +252,10 @@ results:
     value_note: ''
     sort_value: 0.396
     sort_std: 0.0027
-    global_rank: 9
-    paper_rank: 25
-    rank_delta: 16
-    rank_delta_abs: 16
+    global_rank: 10
+    paper_rank: 27
+    rank_delta: 17
+    rank_delta_abs: 17
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -320,8 +321,8 @@ results:
     value_note: ''
     sort_value: 0.388
     sort_std: 0.004
-    global_rank: 14
-    paper_rank: 37
+    global_rank: 16
+    paper_rank: 39
     rank_delta: 23
     rank_delta_abs: 23
     rank_delta_direction: worse
@@ -388,8 +389,8 @@ results:
     value_note: ''
     sort_value: 0.3412
     sort_std: 0.0044
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -455,8 +456,8 @@ results:
     value_note: ''
     sort_value: 0.332
     sort_std: 0.0032
-    global_rank: 29
-    paper_rank: 29
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -522,8 +523,8 @@ results:
     value_note: ''
     sort_value: 0.323
     sort_std: 0.0039
-    global_rank: 32
-    paper_rank: 38
+    global_rank: 34
+    paper_rank: 40
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -589,8 +590,8 @@ results:
     value_note: ''
     sort_value: 0.3216
     sort_std: 0.0027
-    global_rank: 33
-    paper_rank: 40
+    global_rank: 35
+    paper_rank: 42
     rank_delta: 7
     rank_delta_abs: 7
     rank_delta_direction: worse
@@ -625,7 +626,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 34
+    global_rank: 36
     sort_value: 0.2922
     sort_std: 0.0018
     comparison_type: global_top
@@ -690,8 +691,8 @@ results:
     value_note: ''
     sort_value: 0.2718
     sort_std: 0.0054
-    global_rank: 36
-    paper_rank: 53
+    global_rank: 38
+    paper_rank: 55
     rank_delta: 17
     rank_delta_abs: 17
     rank_delta_direction: worse
@@ -758,8 +759,8 @@ results:
     value_note: ''
     sort_value: 0.2694
     sort_std: 0.0098
-    global_rank: 37
-    paper_rank: 38
+    global_rank: 39
+    paper_rank: 40
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -825,8 +826,8 @@ results:
     value_note: ''
     sort_value: 0.2574
     sort_std: 0.0034
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -893,8 +894,8 @@ results:
     value_note: ''
     sort_value: 0.2078
     sort_std: 0.0031
-    global_rank: 46
-    paper_rank: 63
+    global_rank: 48
+    paper_rank: 65
     rank_delta: 17
     rank_delta_abs: 17
     rank_delta_direction: worse
@@ -930,7 +931,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 54
+    global_rank: 56
     sort_value: 0.1339
     sort_std: 0.0044
     comparison_type: global_top
@@ -963,7 +964,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 77
+    global_rank: 79
     sort_value: 0.031
     sort_std: 0.016
     comparison_type: global_top
@@ -974,418 +975,6 @@ results:
   rank_metric: F1
   higher_is_better: true
   experiment_scope: node-level
-  dataset_primary_metric: F1
-  paper_metrics:
-  - F1
-  metric: F1
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
-- &id005
-  dataset: Code
-  rows:
-  - model: GMN
-    model_key: gmn
-    model_plain: GMN
-    value: 0.206
-    std: 0.002
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2509.13735'
-    title: State Space Models over Directed Graphs
-    date: Sep 17, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-17'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.206
-    sort_std: 0.002
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: DirGraphSSM
-    model_key: dirgraphssm
-    model_plain: DirGraphSSM
-    value: 0.205
-    std: 0.0023
-    metric: F1
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2509.13735'
-    title: State Space Models over Directed Graphs
-    date: Sep 17, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-17'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.205
-    sort_std: 0.0023
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Graph-Mamba
-    model_key: graph-mamba
-    model_plain: Graph-Mamba
-    value: 0.203
-    std: 0.0023
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2509.13735'
-    title: State Space Models over Directed Graphs
-    date: Sep 17, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-17'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.203
-    sort_std: 0.0023
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: K-Subtree SAT
-    model_key: k-subtree sat
-    model_plain: K-Subtree SAT
-    value: 0.1937
-    std: 0.0028
-    paper_value: 0.1937
-    paper_std: 0.0028
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: chen2022structure
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard OGB evaluation task
-    date: Jun 17, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-17'
-    published_venue: AAAI 2024
-    published_conference: AAAI 2024
-    at_pub_value: 0.1937
-    at_pub_std: 0.0028
-    at_pub_source_arxiv: '2301.11956'
-    at_pub_source_title: On the Connection Between MPNN and Graph Transformer
-    at_pub_source_date_iso: '2023-01-27'
-    at_pub_source_date_label: ICML 2023
-    value_gap_source_date_iso: '2024-06-17'
-    value_gap_source_date_label: AAAI 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.1937
-    true_std: 0.0028
-    value_gap_source_arxiv: '2406.12059'
-    value_gap_source_title: A Scalable and Effective Alternative to Graph Transformers
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.1937
-    sort_std: 0.0028
-    global_rank: 10
-    paper_rank: 10
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GECO
-    model_key: geco
-    model_plain: GECO
-    value: 0.1915
-    std: 0.002
-    paper_value: 0.1915
-    paper_std: 0.002
-    metric: F1
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard OGB evaluation task
-    date: Jun 17, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-17'
-    published_venue: AAAI 2024
-    published_conference: AAAI 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-06-17'
-    value_gap_source_date_label: AAAI 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.1915
-    true_std: 0.002
-    value_gap_source_arxiv: '2406.12059'
-    value_gap_source_title: A Scalable and Effective Alternative to Graph Transformers
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.1915
-    sort_std: 0.002
-    global_rank: 13
-    paper_rank: 13
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GPS
-    model_key: gps
-    model_plain: GPS
-    value: 0.1894
-    std: 0.0024
-    paper_value: 0.1894
-    paper_std: 0.0024
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: rampasek2022recipe
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard OGB evaluation task
-    date: Jun 17, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-17'
-    published_venue: AAAI 2024
-    published_conference: AAAI 2024
-    at_pub_value: 0.1894
-    at_pub_std: 0.0024
-    at_pub_source_arxiv: '2301.11956'
-    at_pub_source_title: On the Connection Between MPNN and Graph Transformer
-    at_pub_source_date_iso: '2023-01-27'
-    at_pub_source_date_label: ICML 2023
-    value_gap_source_date_iso: '2024-06-17'
-    value_gap_source_date_label: AAAI 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.1894
-    true_std: 0.0024
-    value_gap_source_arxiv: '2406.12059'
-    value_gap_source_title: A Scalable and Effective Alternative to Graph Transformers
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.1894
-    sort_std: 0.0024
-    global_rank: 14
-    paper_rank: 14
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphTrans (GCN-Virtual)
-    model_key: graphtrans (gcn-virtual)
-    model_plain: GraphTrans (GCN-Virtual)
-    value: 0.183
-    std: 0.0024
-    paper_value: 0.183
-    paper_std: 0.0024
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: rampasek2022recipe
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard OGB evaluation task
-    date: Jun 17, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-17'
-    published_venue: AAAI 2024
-    published_conference: AAAI 2024
-    at_pub_value: 0.183
-    at_pub_std: 0.0024
-    at_pub_source_arxiv: '2301.11956'
-    at_pub_source_title: On the Connection Between MPNN and Graph Transformer
-    at_pub_source_date_iso: '2023-01-27'
-    at_pub_source_date_label: ICML 2023
-    value_gap_source_date_iso: '2024-06-17'
-    value_gap_source_date_label: AAAI 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.183
-    true_std: 0.0024
-    value_gap_source_arxiv: '2406.12059'
-    value_gap_source_title: A Scalable and Effective Alternative to Graph Transformers
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.183
-    sort_std: 0.0024
-    global_rank: 17
-    paper_rank: 17
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.151
-    std: 0.002
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2509.13735'
-    title: State Space Models over Directed Graphs
-    date: Sep 17, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-17'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 34
-    sort_value: 0.151
-    sort_std: 0.002
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  rank_metric: F1
-  higher_is_better: true
-  experiment_scope: graph-level
   dataset_primary_metric: F1
   paper_metrics:
   - F1
@@ -1417,8 +1006,9 @@ results:
     venue: arXiv.org
     codebase_url: https://github.com/ocx-lab/FloydNet
     uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: initialization of the relationship tensor... constructed
+      by integrating node, edge, and graph-level features
     is_global_top: true
     global_rank: 1
     sort_value: 0.6143
@@ -2182,74 +1772,6 @@ results:
 - &id008
   dataset: PascalVOC-SP
   rows:
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.1268
-    std: 0.006
-    paper_value: 0.1268
-    paper_std: 0.006
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard node classification task on PascalVOC-SP
-    date: Jun 17, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-17'
-    published_venue: AAAI 2024
-    published_conference: AAAI 2024
-    at_pub_value: 0.2078
-    at_pub_std: 0.0031
-    at_pub_source_arxiv: '2309.00367'
-    at_pub_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph Benchmark
-    at_pub_source_date_iso: '2023-09-01'
-    at_pub_source_date_label: TMLR 2023
-    value_gap_source_date_iso: '2024-11-19'
-    value_gap_source_date_label: KDD 2024
-    gap_vs_at_pub: 0.08100000000000002
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.78
-    true_std: 0.31
-    value_gap_source_arxiv: '2411.12732'
-    value_gap_source_title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    value_gap_source_is_current_paper: false
-    value_gap: 0.6532
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.78
-    sort_std: 0.31
-    global_rank: 1
-    paper_rank: 113
-    rank_delta: 112
-    rank_delta_abs: 112
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph
-      Benchmark
-    comparison_source_arxiv: '2309.00367'
-    is_best: true
-    is_std_outlier: true
   - model: NeuralWalker
     model_key: neuralwalker
     model_plain: NeuralWalker
@@ -2275,7 +1797,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 1
     sort_value: 0.4912
     sort_std: 0.0042
     comparison_type: global_top
@@ -2309,9 +1831,43 @@ results:
     feature_source_evidence: utilize relative random walk probabilities (RRWP) as
       our demonstrating example of graph PE
     is_global_top: true
-    global_rank: 3
+    global_rank: 2
     sort_value: 0.4641
     sort_std: 0.0033
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: CRaWl
+    model_key: crawl
+    model_plain: CRaWl
+    value: 0.4588
+    std: 0.0079
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: true
+    override_reason: Table 1 reports 45.88 +/- 0.79 percent; normalize both values
+      to fractions.
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2411.12732'
+    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
+    date: Nov 19, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-19'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.4588
+    sort_std: 0.0079
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2358,14 +1914,14 @@ results:
     value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
-    surpassed_since_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
+    insignificant_value_gap: false
+    today_delta_significant: true
     true_value: 0.4242
-    true_std: 0.44
+    true_std: 0.0044
     value_gap_source_arxiv: '2411.12732'
     value_gap_source_title: Benchmarking Positional Encodings for GNNs and Graph Transformers
     value_gap_source_is_current_paper: false
@@ -2373,18 +1929,18 @@ results:
     has_value_note: false
     value_note: ''
     sort_value: 0.4242
-    sort_std: 0.44
-    global_rank: 21
+    sort_std: 0.0044
+    global_rank: 20
     paper_rank: 35
-    rank_delta: 14
-    rank_delta_abs: 14
+    rank_delta: 15
+    rank_delta_abs: 15
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: true
+    is_best: false
+    is_std_outlier: false
   - model: GECO
     model_key: geco
     model_plain: GECO
@@ -2441,8 +1997,8 @@ results:
     value_note: ''
     sort_value: 0.421
     sort_std: 0.008
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2509,10 +2065,10 @@ results:
     value_note: ''
     sort_value: 0.3882
     sort_std: 0.0041
-    global_rank: 45
-    paper_rank: 80
-    rank_delta: 35
-    rank_delta_abs: 35
+    global_rank: 43
+    paper_rank: 73
+    rank_delta: 30
+    rank_delta_abs: 30
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2576,16 +2132,49 @@ results:
     value_note: ''
     sort_value: 0.388
     sort_std: 0.004
-    global_rank: 46
-    paper_rank: 80
-    rank_delta: 34
-    rank_delta_abs: 34
+    global_rank: 44
+    paper_rank: 73
+    rank_delta: 29
+    rank_delta_abs: 29
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph
       Benchmark
     comparison_source_arxiv: '2309.00367'
+    is_best: false
+    is_std_outlier: false
+  - model: Gated-GCN
+    model_key: gated-gcn
+    model_plain: Gated-GCN
+    value: 0.388
+    std: 0.004
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2510.12111'
+    title: 'Chimera: State Space Models Beyond Sequences'
+    date: Oct 14, 2025
+    date_display: Oct 2025
+    date_iso: '2025-10-14'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/goombalab/chimera
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 45
+    sort_value: 0.388
+    sort_std: 0.004
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GPS w/ Transformer
@@ -2644,8 +2233,8 @@ results:
     value_note: ''
     sort_value: 0.3748
     sort_std: 0.0109
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2711,8 +2300,8 @@ results:
     value_note: ''
     sort_value: 0.323
     sort_std: 0.0039
-    global_rank: 72
-    paper_rank: 72
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2778,11 +2367,11 @@ results:
     value_note: ''
     sort_value: 0.3227
     sort_std: 0.0084
-    global_rank: 74
-    paper_rank: 75
-    rank_delta: 1
-    rank_delta_abs: 1
-    rank_delta_direction: worse
+    global_rank: 71
+    paper_rank: 71
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -2845,10 +2434,10 @@ results:
     value_note: ''
     sort_value: 0.2718
     sort_std: 0.0054
-    global_rank: 86
-    paper_rank: 113
-    rank_delta: 27
-    rank_delta_abs: 27
+    global_rank: 78
+    paper_rank: 99
+    rank_delta: 21
+    rank_delta_abs: 21
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2913,8 +2502,8 @@ results:
     value_note: ''
     sort_value: 0.2694
     sort_std: 0.0098
-    global_rank: 87
-    paper_rank: 87
+    global_rank: 79
+    paper_rank: 79
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2922,6 +2511,74 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.1268
+    std: 0.006
+    paper_value: 0.1268
+    paper_std: 0.006
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on PascalVOC-SP
+    date: Jun 17, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-17'
+    published_venue: AAAI 2024
+    published_conference: AAAI 2024
+    at_pub_value: 0.2078
+    at_pub_std: 0.0031
+    at_pub_source_arxiv: '2309.00367'
+    at_pub_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph Benchmark
+    at_pub_source_date_iso: '2023-09-01'
+    at_pub_source_date_label: TMLR 2023
+    value_gap_source_date_iso: '2024-10-08'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: 0.08100000000000002
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.238
+    true_std: 0.016
+    value_gap_source_arxiv: '2410.05593'
+    value_gap_source_title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+    value_gap_source_is_current_paper: false
+    value_gap: 0.1112
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.238
+    sort_std: 0.016
+    global_rank: 86
+    paper_rank: 99
+    rank_delta: 13
+    rank_delta_abs: 13
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph
+      Benchmark
+    comparison_source_arxiv: '2309.00367'
     is_best: false
     is_std_outlier: false
   - model: GIN
@@ -2949,7 +2606,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 114
+    global_rank: 100
     sort_value: 0.1265
     sort_std: 0.0076
     comparison_type: global_top
@@ -2982,7 +2639,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 115
+    global_rank: 101
     sort_value: 0.114
     sort_std: 0.023
     comparison_type: global_top
@@ -3159,9 +2816,9 @@ results:
     sort_value: 0.7261
     sort_std: 0.0011
     global_rank: 5
-    paper_rank: 156
-    rank_delta: 151
-    rank_delta_abs: 151
+    paper_rank: 146
+    rank_delta: 141
+    rank_delta_abs: 141
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3195,7 +2852,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 31
+    global_rank: 29
     sort_value: 0.7059
     sort_std: 0.0089
     comparison_type: global_top
@@ -3259,10 +2916,10 @@ results:
     value_note: ''
     sort_value: 0.7006
     sort_std: 0.0033
-    global_rank: 41
-    paper_rank: 163
-    rank_delta: 122
-    rank_delta_abs: 122
+    global_rank: 37
+    paper_rank: 153
+    rank_delta: 116
+    rank_delta_abs: 116
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3327,8 +2984,8 @@ results:
     value_note: ''
     sort_value: 0.6975
     sort_std: 0.0025
-    global_rank: 47
-    paper_rank: 47
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3394,10 +3051,10 @@ results:
     value_note: ''
     sort_value: 0.6685
     sort_std: 0.0062
-    global_rank: 87
-    paper_rank: 148
-    rank_delta: 61
-    rank_delta_abs: 61
+    global_rank: 78
+    paper_rank: 138
+    rank_delta: 60
+    rank_delta_abs: 60
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3441,7 +3098,7 @@ results:
     at_pub_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph Benchmark
     at_pub_source_date_iso: '2023-09-01'
     at_pub_source_date_label: TMLR 2023
-    value_gap_source_date_iso: '2026-05-13'
+    value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.11230000000000007
     worse_than_at_pub: true
@@ -3453,19 +3110,18 @@ results:
     today_delta_significant: true
     true_value: 0.6621
     true_std: 0.0067
-    value_gap_source_arxiv: '2605.13383'
-    value_gap_source_title: 'Beyond Oversquashing: Understanding Signal Propagation
-      in GNNs Via Observables'
+    value_gap_source_arxiv: '2605.12358'
+    value_gap_source_title: From Message-Passing to Linearized Graph Sequence Models
     value_gap_source_is_current_paper: false
     value_gap: 0.11230000000000007
     has_value_note: false
     value_note: ''
     sort_value: 0.6621
     sort_std: 0.0067
-    global_rank: 92
-    paper_rank: 177
-    rank_delta: 85
-    rank_delta_abs: 85
+    global_rank: 83
+    paper_rank: 167
+    rank_delta: 84
+    rank_delta_abs: 84
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3532,10 +3188,10 @@ results:
     value_note: ''
     sort_value: 0.6562
     sort_std: 0.0075
-    global_rank: 102
-    paper_rank: 125
-    rank_delta: 23
-    rank_delta_abs: 23
+    global_rank: 93
+    paper_rank: 115
+    rank_delta: 22
+    rank_delta_abs: 22
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3599,8 +3255,8 @@ results:
     value_note: ''
     sort_value: 0.6535
     sort_std: 0.0041
-    global_rank: 107
-    paper_rank: 107
+    global_rank: 98
+    paper_rank: 98
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3642,12 +3298,13 @@ results:
     published_conference: AAAI 2024
     at_pub_value: 0.6527
     at_pub_std: 0.0043
-    at_pub_source_arxiv: '2310.07430'
-    at_pub_source_title: Non-backtracking Graph Neural Networks
-    at_pub_source_date_iso: '2023-10-11'
-    at_pub_source_date_label: TMLR 2023
-    value_gap_source_date_iso: '2026-05-13'
-    value_gap_source_date_label: '2026'
+    at_pub_source_arxiv: '2402.08678'
+    at_pub_source_title: 'Graph Mamba: Towards Learning on Graphs with State Space
+      Models'
+    at_pub_source_date_iso: '2024-02-13'
+    at_pub_source_date_label: KDD 2024
+    value_gap_source_date_iso: '2025-10-14'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3658,17 +3315,16 @@ results:
     today_delta_significant: false
     true_value: 0.6527
     true_std: 0.0043
-    value_gap_source_arxiv: '2605.13383'
-    value_gap_source_title: 'Beyond Oversquashing: Understanding Signal Propagation
-      in GNNs Via Observables'
+    value_gap_source_arxiv: '2510.12111'
+    value_gap_source_title: 'Chimera: State Space Models Beyond Sequences'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.6527
     sort_std: 0.0043
-    global_rank: 109
-    paper_rank: 109
+    global_rank: 99
+    paper_rank: 99
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3734,8 +3390,8 @@ results:
     value_note: ''
     sort_value: 0.6384
     sort_std: 0.0121
-    global_rank: 131
-    paper_rank: 131
+    global_rank: 120
+    paper_rank: 120
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3801,8 +3457,8 @@ results:
     value_note: ''
     sort_value: 0.6326
     sort_std: 0.0126
-    global_rank: 133
-    paper_rank: 133
+    global_rank: 122
+    paper_rank: 122
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3838,7 +3494,7 @@ results:
     feature_source_evidence: For both datasets, we did not employ any feature augmentation
       such as positional encoding.
     is_global_top: true
-    global_rank: 196
+    global_rank: 186
     sort_value: 0.406
     sort_std: 0.0021
     comparison_type: global_top
@@ -3858,105 +3514,6 @@ results:
 - &id006
   dataset: Peptides-struct
   rows:
-  - model: Energy GNN + attention
-    model_key: energy gnn + attention
-    model_plain: Energy GNN + attention
-    value: 0.036000000000000004
-    std: 0.038
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2407.00494'
-    title: Graph Neural Networks Gone Hogwild
-    date: Jun 29, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-29'
-    venue: International Conference on Learning Representations
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.036000000000000004
-    sort_std: 0.038
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: true
-  - model: Energy GNN edge-wise
-    model_key: energy gnn edge-wise
-    model_plain: Energy GNN edge-wise
-    value: 0.04
-    std: 0.036000000000000004
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.00494'
-    title: Graph Neural Networks Gone Hogwild
-    date: Jun 29, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-29'
-    venue: International Conference on Learning Representations
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.04
-    sort_std: 0.036000000000000004
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: true
-  - model: Energy GNN node-wise
-    model_key: energy gnn node-wise
-    model_plain: Energy GNN node-wise
-    value: 0.195
-    std: 0.017
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.00494'
-    title: Graph Neural Networks Gone Hogwild
-    date: Jun 29, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-29'
-    venue: International Conference on Learning Representations
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.195
-    sort_std: 0.017
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: true
   - model: GCN
     model_key: gcn
     model_plain: GCN
@@ -4013,17 +3570,83 @@ results:
     value_note: ''
     sort_value: 0.2421
     sort_std: 0.0016
-    global_rank: 4
-    paper_rank: 207
-    rank_delta: 203
-    rank_delta_abs: 203
+    global_rank: 1
+    paper_rank: 192
+    rank_delta: 191
+    rank_delta_abs: 191
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph
       Benchmark
     comparison_source_arxiv: '2309.00367'
-    is_best: false
+    is_best: true
+    is_std_outlier: false
+  - model: IPR-MPNN
+    model_key: ipr-mpnn
+    model_plain: IPR-MPNN
+    value: 0.2422
+    std: 0.0007
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.17311'
+    title: Probabilistic Graph Rewiring via Virtual Nodes
+    date: May 27, 2024
+    date_display: May 2024
+    date_iso: '2024-05-27'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/chendiqian/IPR-MPNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.2422
+    sort_std: 0.0007
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: UniGCN
+    model_key: unigcn
+    model_plain: UniGCN
+    value: 0.2425
+    std: 0.0009
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2410.05499'
+    title: Unitary convolutions for learning on graphs and groups
+    date: Oct 7, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-07'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/Weber-GeoML/Unitary_Convolutions
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.2425
+    sort_std: 0.0009
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
     is_std_outlier: false
   - model: GIN
     model_key: gin
@@ -4050,13 +3673,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 9
+    global_rank: 4
     sort_value: 0.2429
     sort_std: 0.0019
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: GatedGCN
     model_key: gatedgcn
@@ -4114,17 +3737,17 @@ results:
     value_note: ''
     sort_value: 0.2431
     sort_std: 0.002
-    global_rank: 11
-    paper_rank: 206
-    rank_delta: 195
-    rank_delta_abs: 195
+    global_rank: 6
+    paper_rank: 191
+    rank_delta: 185
+    rank_delta_abs: 185
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph
       Benchmark
     comparison_source_arxiv: '2309.00367'
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: GECO
     model_key: geco
@@ -4183,8 +3806,8 @@ results:
     value_note: ''
     sort_value: 0.2464
     sort_std: 0.0009
-    global_rank: 52
-    paper_rank: 52
+    global_rank: 44
+    paper_rank: 44
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4230,7 +3853,7 @@ results:
     at_pub_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph Benchmark
     at_pub_source_date_iso: '2023-09-01'
     at_pub_source_date_label: TMLR 2023
-    value_gap_source_date_iso: '2026-05-13'
+    value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.10740000000000002
     worse_than_at_pub: true
@@ -4242,19 +3865,18 @@ results:
     today_delta_significant: true
     true_value: 0.2473
     true_std: 0.0017
-    value_gap_source_arxiv: '2605.13383'
-    value_gap_source_title: 'Beyond Oversquashing: Understanding Signal Propagation
-      in GNNs Via Observables'
+    value_gap_source_arxiv: '2605.12358'
+    value_gap_source_title: From Message-Passing to Linearized Graph Sequence Models
     value_gap_source_is_current_paper: false
     value_gap: 0.10740000000000002
     has_value_note: false
     value_note: ''
     sort_value: 0.2473
     sort_std: 0.0017
-    global_rank: 65
-    paper_rank: 208
-    rank_delta: 143
-    rank_delta_abs: 143
+    global_rank: 54
+    paper_rank: 193
+    rank_delta: 139
+    rank_delta_abs: 139
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4295,12 +3917,13 @@ results:
     published_conference: AAAI 2024
     at_pub_value: 0.2481
     at_pub_std: 0.0007
-    at_pub_source_arxiv: '2310.07430'
-    at_pub_source_title: Non-backtracking Graph Neural Networks
-    at_pub_source_date_iso: '2023-10-11'
-    at_pub_source_date_label: TMLR 2023
-    value_gap_source_date_iso: '2026-05-13'
-    value_gap_source_date_label: '2026'
+    at_pub_source_arxiv: '2402.08678'
+    at_pub_source_title: 'Graph Mamba: Towards Learning on Graphs with State Space
+      Models'
+    at_pub_source_date_iso: '2024-02-13'
+    at_pub_source_date_label: KDD 2024
+    value_gap_source_date_iso: '2025-10-14'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -4311,17 +3934,16 @@ results:
     today_delta_significant: false
     true_value: 0.2481
     true_std: 0.0007
-    value_gap_source_arxiv: '2605.13383'
-    value_gap_source_title: 'Beyond Oversquashing: Understanding Signal Propagation
-      in GNNs Via Observables'
+    value_gap_source_arxiv: '2510.12111'
+    value_gap_source_title: 'Chimera: State Space Models Beyond Sequences'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.2481
     sort_std: 0.0007
-    global_rank: 85
-    paper_rank: 85
+    global_rank: 74
+    paper_rank: 74
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4387,10 +4009,10 @@ results:
     value_note: ''
     sort_value: 0.2485
     sort_std: 0.0022
-    global_rank: 87
-    paper_rank: 202
-    rank_delta: 115
-    rank_delta_abs: 115
+    global_rank: 76
+    paper_rank: 188
+    rank_delta: 112
+    rank_delta_abs: 112
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4454,8 +4076,8 @@ results:
     value_note: ''
     sort_value: 0.25
     sort_std: 0.0005
-    global_rank: 107
-    paper_rank: 107
+    global_rank: 96
+    paper_rank: 96
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4521,8 +4143,8 @@ results:
     value_note: ''
     sort_value: 0.2529
     sort_std: 0.0016
-    global_rank: 133
-    paper_rank: 133
+    global_rank: 121
+    paper_rank: 121
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4589,8 +4211,8 @@ results:
     value_note: ''
     sort_value: 0.2545
     sort_std: 0.0012
-    global_rank: 145
-    paper_rank: 145
+    global_rank: 131
+    paper_rank: 131
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4657,8 +4279,8 @@ results:
     value_note: ''
     sort_value: 0.268
     sort_std: 0.004
-    global_rank: 178
-    paper_rank: 178
+    global_rank: 164
+    paper_rank: 164
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4694,7 +4316,7 @@ results:
     feature_source_evidence: For both datasets, we did not employ any feature augmentation
       such as positional encoding.
     is_global_top: true
-    global_rank: 219
+    global_rank: 210
     sort_value: 0.4351
     sort_std: 0.0008
     comparison_type: global_top
@@ -5175,9 +4797,9 @@ results:
     sort_value: 0.9648
     sort_std: null
     global_rank: 25
-    paper_rank: 97
-    rank_delta: 72
-    rank_delta_abs: 72
+    paper_rank: 95
+    rank_delta: 70
+    rank_delta_abs: 70
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -5446,8 +5068,8 @@ results:
     value_note: ''
     sort_value: 0.9337
     sort_std: 0.0032
-    global_rank: 91
-    paper_rank: 91
+    global_rank: 89
+    paper_rank: 89
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5513,8 +5135,8 @@ results:
     value_note: ''
     sort_value: 0.9305
     sort_std: 0.0022
-    global_rank: 95
-    paper_rank: 95
+    global_rank: 93
+    paper_rank: 93
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5549,7 +5171,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 145
+    global_rank: 143
     sort_value: 0.824
     sort_std: 0.001
     comparison_type: global_top
@@ -5566,6 +5188,418 @@ results:
   metric: Accuracy
   uses_non_primary_metric: true
   paper_has_primary_metric: false
+- &id005
+  dataset: ogbg-code2
+  rows:
+  - model: GMN
+    model_key: gmn
+    model_plain: GMN
+    value: 0.206
+    std: 0.002
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.206
+    sort_std: 0.002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: DirGraphSSM
+    model_key: dirgraphssm
+    model_plain: DirGraphSSM
+    value: 0.205
+    std: 0.0023
+    metric: F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.205
+    sort_std: 0.0023
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Graph-Mamba
+    model_key: graph-mamba
+    model_plain: Graph-Mamba
+    value: 0.203
+    std: 0.0023
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.203
+    sort_std: 0.0023
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: K-Subtree SAT
+    model_key: k-subtree sat
+    model_plain: K-Subtree SAT
+    value: 0.1937
+    std: 0.0028
+    paper_value: 0.1937
+    paper_std: 0.0028
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: chen2022structure
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Standard OGB evaluation task
+    date: Jun 17, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-17'
+    published_venue: AAAI 2024
+    published_conference: AAAI 2024
+    at_pub_value: 0.1937
+    at_pub_std: 0.0028
+    at_pub_source_arxiv: '2301.11956'
+    at_pub_source_title: On the Connection Between MPNN and Graph Transformer
+    at_pub_source_date_iso: '2023-01-27'
+    at_pub_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2024-06-17'
+    value_gap_source_date_label: AAAI 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1937
+    true_std: 0.0028
+    value_gap_source_arxiv: '2406.12059'
+    value_gap_source_title: A Scalable and Effective Alternative to Graph Transformers
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1937
+    sort_std: 0.0028
+    global_rank: 10
+    paper_rank: 10
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GECO
+    model_key: geco
+    model_plain: GECO
+    value: 0.1915
+    std: 0.002
+    paper_value: 0.1915
+    paper_std: 0.002
+    metric: F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Standard OGB evaluation task
+    date: Jun 17, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-17'
+    published_venue: AAAI 2024
+    published_conference: AAAI 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-06-17'
+    value_gap_source_date_label: AAAI 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1915
+    true_std: 0.002
+    value_gap_source_arxiv: '2406.12059'
+    value_gap_source_title: A Scalable and Effective Alternative to Graph Transformers
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1915
+    sort_std: 0.002
+    global_rank: 15
+    paper_rank: 15
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GPS
+    model_key: gps
+    model_plain: GPS
+    value: 0.1894
+    std: 0.0024
+    paper_value: 0.1894
+    paper_std: 0.0024
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: rampasek2022recipe
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Standard OGB evaluation task
+    date: Jun 17, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-17'
+    published_venue: AAAI 2024
+    published_conference: AAAI 2024
+    at_pub_value: 0.1894
+    at_pub_std: 0.0024
+    at_pub_source_arxiv: '2301.11956'
+    at_pub_source_title: On the Connection Between MPNN and Graph Transformer
+    at_pub_source_date_iso: '2023-01-27'
+    at_pub_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2024-06-17'
+    value_gap_source_date_label: AAAI 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1894
+    true_std: 0.0024
+    value_gap_source_arxiv: '2406.12059'
+    value_gap_source_title: A Scalable and Effective Alternative to Graph Transformers
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1894
+    sort_std: 0.0024
+    global_rank: 17
+    paper_rank: 17
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphTrans (GCN-Virtual)
+    model_key: graphtrans (gcn-virtual)
+    model_plain: GraphTrans (GCN-Virtual)
+    value: 0.183
+    std: 0.0024
+    paper_value: 0.183
+    paper_std: 0.0024
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: rampasek2022recipe
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Standard OGB evaluation task
+    date: Jun 17, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-17'
+    published_venue: AAAI 2024
+    published_conference: AAAI 2024
+    at_pub_value: 0.183
+    at_pub_std: 0.0024
+    at_pub_source_arxiv: '2301.11956'
+    at_pub_source_title: On the Connection Between MPNN and Graph Transformer
+    at_pub_source_date_iso: '2023-01-27'
+    at_pub_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2024-06-17'
+    value_gap_source_date_label: AAAI 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.183
+    true_std: 0.0024
+    value_gap_source_arxiv: '2406.12059'
+    value_gap_source_title: A Scalable and Effective Alternative to Graph Transformers
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.183
+    sort_std: 0.0024
+    global_rank: 20
+    paper_rank: 20
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.151
+    std: 0.002
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 39
+    sort_value: 0.151
+    sort_std: 0.002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: F1
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: F1
+  paper_metrics:
+  - F1
+  metric: F1
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
 - &id002
   dataset: ogbg-molhiv
   rows:
@@ -5694,7 +5728,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 10
+    global_rank: 12
     sort_value: 0.809
     sort_std: 0.016
     comparison_type: global_top
@@ -5826,8 +5860,8 @@ results:
     value_note: ''
     sort_value: 0.788
     sort_std: 0.0101
-    global_rank: 73
-    paper_rank: 73
+    global_rank: 74
+    paper_rank: 74
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6665,10 +6699,10 @@ results:
     published_conference: AAAI 2024
     at_pub_value: 0.7522
     at_pub_std: 0.0056
-    at_pub_source_arxiv: '2202.03036'
-    at_pub_source_title: Structure-Aware Transformer for Graph Representation Learning
-    at_pub_source_date_iso: '2022-02-07'
-    at_pub_source_date_label: ICML 2022
+    at_pub_source_arxiv: '2301.11956'
+    at_pub_source_title: On the Connection Between MPNN and Graph Transformer
+    at_pub_source_date_iso: '2023-01-27'
+    at_pub_source_date_label: ICML 2023
     value_gap_source_date_iso: '2024-07-03'
     value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
@@ -6789,8 +6823,8 @@ datasets_by_scope:
       dataset_slug: ogbg-molpcba
     - dataset: ogbg-ppa
       dataset_slug: ogbg-ppa
-    - dataset: Code
-      dataset_slug: code
+    - dataset: ogbg-code2
+      dataset_slug: ogbg-code2
   - benchmark: LRGB
     benchmark_slug: lrgb
     datasets:

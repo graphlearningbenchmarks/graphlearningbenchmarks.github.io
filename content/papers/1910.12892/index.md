@@ -107,7 +107,7 @@ results:
     venue: arXiv.org
     codebase_url: https://github.com/ocx-lab/FloydNet
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -207,8 +207,8 @@ results:
     value_note: ''
     sort_value: 0.024
     sort_std: 0.0002
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -274,8 +274,8 @@ results:
     value_note: ''
     sort_value: 0.03
     sort_std: null
-    global_rank: 41
-    paper_rank: 52
+    global_rank: 38
+    paper_rank: 49
     rank_delta: 11
     rank_delta_abs: 11
     rank_delta_direction: worse
@@ -341,8 +341,8 @@ results:
     value_note: ''
     sort_value: 0.031
     sort_std: 0.0001
-    global_rank: 43
-    paper_rank: 43
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -408,8 +408,8 @@ results:
     value_note: ''
     sort_value: 0.032
     sort_std: 0.002
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -475,8 +475,8 @@ results:
     value_note: ''
     sort_value: 0.033
     sort_std: 0.0
-    global_rank: 45
-    paper_rank: 45
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -542,8 +542,8 @@ results:
     value_note: ''
     sort_value: 0.04
     sort_std: 0.0003
-    global_rank: 51
-    paper_rank: 51
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -578,7 +578,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 74
+    global_rank: 71
     sort_value: 0.088
     sort_std: 0.002
     comparison_type: global_top

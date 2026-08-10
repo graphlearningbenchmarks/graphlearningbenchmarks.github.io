@@ -40,14 +40,9 @@ mrr: null
 adjusted_mrr: null
 mrr_dataset_count: 0
 benchmark_categories:
-- Quantum Chemistry
 - Heterophily Benchmark
 - LINKX Benchmarks
 benchmark_coverage:
-- benchmark: Quantum Chemistry
-  benchmark_slug: quantum-chemistry
-  evaluated: 1
-  total: 3
 - benchmark: Heterophily Benchmark
   benchmark_slug: heterophily-benchmark
   evaluated: 1
@@ -57,465 +52,13 @@ benchmark_coverage:
   evaluated: 2
   total: 6
 task_categories:
-- graph_regression
 - node_classification
 experiment_scopes:
-- graph-level
 - node-level
 results:
 - &id001
-  dataset: QM7b
-  rows:
-  - model: DTNN
-    model_key: dtnn
-    model_plain: DTNN
-    value: 0.074
-    std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '1703.00564'
-    title: MoleculeNet
-    date: Mar 2, 2017
-    date_display: Mar 2017
-    date_iso: '2017-03-02'
-    venue: Chemical Science
-    codebase_url: https://github.com/deepchem/deepchem
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.074
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Multitask(CM)
-    model_key: multitask(cm)
-    model_plain: Multitask(CM)
-    value: 0.086
-    std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '1703.00564'
-    title: MoleculeNet
-    date: Mar 2, 2017
-    date_display: Mar 2017
-    date_iso: '2017-03-02'
-    venue: Chemical Science
-    codebase_url: https://github.com/deepchem/deepchem
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.086
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: KRR(CM)
-    model_key: krr(cm)
-    model_plain: KRR(CM)
-    value: 0.098
-    std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '1703.00564'
-    title: MoleculeNet
-    date: Mar 2, 2017
-    date_display: Mar 2017
-    date_iso: '2017-03-02'
-    venue: Chemical Science
-    codebase_url: https://github.com/deepchem/deepchem
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.098
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Dir-ResolvNet
-    model_key: dir-resolvnet
-    model_plain: Dir-ResolvNet
-    value: 17.12
-    std: 0.63
-    paper_value: 17.12
-    paper_std: 0.63
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Standard QM7 regression task reported in Table 1.
-    date: Oct 3, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-03'
-    published_venue: ICLR 2023
-    published_conference: ICLR 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-10-03'
-    value_gap_source_date_label: ICLR 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 17.12
-    true_std: 0.63
-    value_gap_source_arxiv: '2310.02232'
-    value_gap_source_title: 'HoloNets: Spectral Convolutions do extend to Directed
-      Graphs'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 17.12
-    sort_std: 0.63
-    global_rank: 16
-    paper_rank: 16
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: DiGCN
-    model_key: digcn
-    model_plain: DiGCN
-    value: 39.95
-    std: 6.23
-    paper_value: 39.95
-    paper_std: 6.23
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Standard QM7 regression task reported in Table 1.
-    date: Oct 3, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-03'
-    published_venue: ICLR 2023
-    published_conference: ICLR 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-10-03'
-    value_gap_source_date_label: ICLR 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 39.95
-    true_std: 6.23
-    value_gap_source_arxiv: '2310.02232'
-    value_gap_source_title: 'HoloNets: Spectral Convolutions do extend to Directed
-      Graphs'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 39.95
-    sort_std: 6.23
-    global_rank: 21
-    paper_rank: 21
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MagNet
-    model_key: magnet
-    model_plain: MagNet
-    value: 45.31
-    std: 4.24
-    paper_value: 45.31
-    paper_std: 4.24
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Standard QM7 regression task reported in Table 1.
-    date: Oct 3, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-03'
-    published_venue: ICLR 2023
-    published_conference: ICLR 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-10-03'
-    value_gap_source_date_label: ICLR 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 45.31
-    true_std: 4.24
-    value_gap_source_arxiv: '2310.02232'
-    value_gap_source_title: 'HoloNets: Spectral Convolutions do extend to Directed
-      Graphs'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 45.31
-    sort_std: 4.24
-    global_rank: 24
-    paper_rank: 24
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: DirGNN
-    model_key: dirgnn
-    model_plain: DirGNN
-    value: 59.01
-    std: 2.54
-    paper_value: 59.01
-    paper_std: 2.54
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Standard QM7 regression task reported in Table 1.
-    date: Oct 3, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-03'
-    published_venue: ICLR 2023
-    published_conference: ICLR 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-10-03'
-    value_gap_source_date_label: ICLR 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 59.01
-    true_std: 2.54
-    value_gap_source_arxiv: '2310.02232'
-    value_gap_source_title: 'HoloNets: Spectral Convolutions do extend to Directed
-      Graphs'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 59.01
-    sort_std: 2.54
-    global_rank: 29
-    paper_rank: 29
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 122.9
-    std: 2.2
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2502.12638'
-    title: 'NExT-Mol: 3D Diffusion Meets 1D Language Modeling for 3D Molecule Generation'
-    date: Feb 18, 2025
-    date_display: Feb 2025
-    date_iso: '2025-02-18'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/acharkq/NExT-Mol
-    uses_external_data: false
-    input_feature_source: unknown
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 60
-    sort_value: 122.9
-    sort_std: 2.2
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  rank_metric: MAE
-  higher_is_better: false
-  experiment_scope: graph-level
-  dataset_primary_metric: MAE
-  paper_metrics:
-  - MAE
-  metric: MAE
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
-- &id002
   dataset: Roman-empire
   rows:
-  - model: Dir-NT
-    model_key: dir-nt
-    model_plain: Dir-NT
-    value: 0.9477
-    std: 0.0031
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2604.08980'
-    title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware Graph
-      Learning'
-    date: Apr 10, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-10'
-    venue: arXiv.org
-    codebase_url: https://github.com/cf020031308/MoNT
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9477
-    sort_std: 0.0031
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
   - model: Dir-Poly
     model_key: dir-poly
     model_plain: Dir-Poly
@@ -542,7 +85,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 1
     sort_value: 0.9451
     sort_std: 0.0022
     comparison_type: global_top
@@ -575,9 +118,42 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 2
     sort_value: 0.9387
     sort_std: 0.0041
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: LargeScaleNet
+    model_key: largescalenet
+    model_plain: LargeScaleNet
+    value: 0.9358
+    std: 0.0024
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2411.19392'
+    title: Scale-aware Message Passing For Graph Node Classification
+    date: Nov 28, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-28'
+    venue: null
+    codebase_url: https://github.com/Qin87/ScaleNet
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9358
+    sort_std: 0.0024
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -627,24 +203,24 @@ results:
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
+    insignificant_value_gap: true
     today_delta_significant: false
-    true_value: 0.9224
-    true_std: 0.0043
+    true_value: 0.9232
+    true_std: 0.003
     value_gap_source_arxiv: '2411.19392'
     value_gap_source_title: Scale-aware Message Passing For Graph Node Classification
     value_gap_source_is_current_paper: false
-    value_gap: null
+    value_gap: 0.0008000000000000229
     has_value_note: false
     value_note: ''
-    sort_value: 0.9224
-    sort_std: 0.0043
-    global_rank: 11
-    paper_rank: 11
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
+    sort_value: 0.9232
+    sort_std: 0.003
+    global_rank: 9
+    paper_rank: 10
+    rank_delta: 1
+    rank_delta_abs: 1
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -706,8 +282,8 @@ results:
     value_note: ''
     sort_value: 0.913
     sort_std: 0.0046
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -742,7 +318,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 29
+    global_rank: 24
     sort_value: 0.9106
     sort_std: 0.0027
     comparison_type: global_top
@@ -806,8 +382,8 @@ results:
     value_note: ''
     sort_value: 0.8807
     sort_std: 0.0027
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -873,8 +449,8 @@ results:
     value_note: ''
     sort_value: 0.8272
     sort_std: 0.0082
-    global_rank: 85
-    paper_rank: 126
+    global_rank: 75
+    paper_rank: 116
     rank_delta: 41
     rank_delta_abs: 41
     rank_delta_direction: worse
@@ -941,8 +517,8 @@ results:
     value_note: ''
     sort_value: 0.8216
     sort_std: 0.0078
-    global_rank: 90
-    paper_rank: 90
+    global_rank: 79
+    paper_rank: 79
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1009,8 +585,8 @@ results:
     value_note: ''
     sort_value: 0.7992
     sort_std: 0.0056
-    global_rank: 100
-    paper_rank: 100
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1076,8 +652,8 @@ results:
     value_note: ''
     sort_value: 0.7337
     sort_std: 0.0068
-    global_rank: 128
-    paper_rank: 160
+    global_rank: 118
+    paper_rank: 150
     rank_delta: 32
     rank_delta_abs: 32
     rank_delta_direction: worse
@@ -1144,8 +720,8 @@ results:
     value_note: ''
     sort_value: 0.7189
     sort_std: 0.0061
-    global_rank: 130
-    paper_rank: 141
+    global_rank: 120
+    paper_rank: 131
     rank_delta: 11
     rank_delta_abs: 11
     rank_delta_direction: worse
@@ -1212,8 +788,8 @@ results:
     value_note: ''
     sort_value: 0.6739
     sort_std: 0.003
-    global_rank: 148
-    paper_rank: 184
+    global_rank: 138
+    paper_rank: 174
     rank_delta: 36
     rank_delta_abs: 36
     rank_delta_direction: worse
@@ -1279,8 +855,8 @@ results:
     value_note: ''
     sort_value: 0.6665
     sort_std: 0.0047
-    global_rank: 151
-    paper_rank: 160
+    global_rank: 141
+    paper_rank: 150
     rank_delta: 9
     rank_delta_abs: 9
     rank_delta_direction: worse
@@ -1346,8 +922,8 @@ results:
     value_note: ''
     sort_value: 0.6481
     sort_std: 0.008
-    global_rank: 161
-    paper_rank: 217
+    global_rank: 151
+    paper_rank: 207
     rank_delta: 56
     rank_delta_abs: 56
     rank_delta_direction: worse
@@ -1414,8 +990,8 @@ results:
     value_note: ''
     sort_value: 0.6011
     sort_std: 0.0052
-    global_rank: 181
-    paper_rank: 181
+    global_rank: 171
+    paper_rank: 171
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1481,8 +1057,8 @@ results:
     value_note: ''
     sort_value: 0.5271
     sort_std: 0.0032
-    global_rank: 200
-    paper_rank: 200
+    global_rank: 190
+    paper_rank: 190
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1501,7 +1077,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id002
   dataset: arxiv-year
   rows:
   - model: LargeScaleNet
@@ -1526,7 +1102,7 @@ results:
     venue: null
     codebase_url: https://github.com/Qin87/ScaleNet
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -1896,8 +1472,8 @@ results:
     value_note: ''
     sort_value: 0.56
     sort_std: 0.0134
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 14
+    paper_rank: 14
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1964,8 +1540,8 @@ results:
     value_note: ''
     sort_value: 0.548
     sort_std: 0.003
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2031,8 +1607,8 @@ results:
     value_note: ''
     sort_value: 0.5047
     sort_std: 0.0021
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2099,8 +1675,8 @@ results:
     value_note: ''
     sort_value: 0.4909
     sort_std: 0.001
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2140,42 +1716,44 @@ results:
     date_iso: '2023-10-03'
     published_venue: ICLR 2023
     published_conference: ICLR 2023
-    at_pub_value: 0.4737
-    at_pub_std: 0.0059
-    at_pub_source_arxiv: '2210.00513'
-    at_pub_source_title: Gradient Gating for Deep Multi-Rate Learning on Graphs
-    at_pub_source_date_iso: '2022-10-02'
-    at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2023-10-03'
-    value_gap_source_date_label: ICLR 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
+    at_pub_value: 0.4841
+    at_pub_std: 0.003
+    at_pub_source_arxiv: '2210.05382'
+    at_pub_source_title: Uplifting Message Passing Neural Network with Graph Original
+      Information
+    at_pub_source_date_iso: '2022-10-08'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-10-08'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.010399999999999965
+    worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.4737
-    true_std: 0.0059
-    value_gap_source_arxiv: '2310.02232'
-    value_gap_source_title: 'HoloNets: Spectral Convolutions do extend to Directed
-      Graphs'
-    value_gap_source_is_current_paper: true
-    value_gap: null
+    today_delta_significant: true
+    true_value: 0.4841
+    true_std: 0.003
+    value_gap_source_arxiv: '2210.05382'
+    value_gap_source_title: Uplifting Message Passing Neural Network with Graph Original
+      Information
+    value_gap_source_is_current_paper: false
+    value_gap: 0.010399999999999965
     has_value_note: false
     value_note: ''
-    sort_value: 0.4737
-    sort_std: 0.0059
-    global_rank: 24
-    paper_rank: 24
+    sort_value: 0.4841
+    sort_std: 0.003
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Uplifting Message Passing Neural Network with Graph Original
+      Information
+    comparison_source_arxiv: '2210.05382'
     is_best: false
     is_std_outlier: false
   - model: GCN
@@ -2235,8 +1813,8 @@ results:
     value_note: ''
     sort_value: 0.4602
     sort_std: 0.0026
-    global_rank: 31
-    paper_rank: 31
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2304,8 +1882,8 @@ results:
     value_note: ''
     sort_value: 0.4597
     sort_std: 0.0026
-    global_rank: 32
-    paper_rank: 34
+    global_rank: 34
+    paper_rank: 36
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -2372,8 +1950,8 @@ results:
     value_note: ''
     sort_value: 0.367
     sort_std: 0.0021
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 58
+    paper_rank: 58
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2392,79 +1970,9 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id003
   dataset: snap-patents
   rows:
-  - model: GloGNN
-    model_key: glognn
-    model_plain: GloGNN
-    value: 0.6209
-    std: 0.0027
-    paper_value: 0.6209
-    paper_std: 0.0027
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: li2022finding
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard split as provided in lim2021large
-    date: Oct 3, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-03'
-    published_venue: ICLR 2023
-    published_conference: ICLR 2023
-    at_pub_value: 0.8432
-    at_pub_std: null
-    at_pub_source_arxiv: '2205.07308'
-    at_pub_source_title: Finding Global Homophily in Graph Neural Networks When Meeting
-      Heterophily
-    at_pub_source_date_iso: '2022-05-15'
-    at_pub_source_date_label: ICML 2022
-    value_gap_source_date_iso: '2022-05-15'
-    value_gap_source_date_label: ICML 2022
-    gap_vs_at_pub: 0.22229999999999994
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8432
-    true_std: null
-    value_gap_source_arxiv: '2205.07308'
-    value_gap_source_title: Finding Global Homophily in Graph Neural Networks When
-      Meeting Heterophily
-    value_gap_source_is_current_paper: false
-    value_gap: 0.22229999999999994
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8432
-    sort_std: null
-    global_rank: 1
-    paper_rank: 11
-    rank_delta: 10
-    rank_delta_abs: 10
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Finding Global Homophily in Graph Neural Networks When
-      Meeting Heterophily
-    comparison_source_arxiv: '2205.07308'
-    is_best: true
-    is_std_outlier: false
   - model: FaberNet
     model_key: fabernet
     model_plain: FaberNet
@@ -2522,8 +2030,8 @@ results:
     value_note: ''
     sort_value: 0.751
     sort_std: 0.0003
-    global_rank: 2
-    paper_rank: 2
+    global_rank: 1
+    paper_rank: 1
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2531,7 +2039,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: LargeScaleNet
     model_key: largescalenet
@@ -2555,16 +2063,16 @@ results:
     venue: null
     codebase_url: https://github.com/Qin87/ScaleNet
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 2
     sort_value: 0.7505
     sort_std: 0.0005
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: DirGNN
     model_key: dirgnn
@@ -2622,8 +2130,8 @@ results:
     value_note: ''
     sort_value: 0.7395
     sort_std: 0.0005
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 3
+    paper_rank: 3
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2690,8 +2198,8 @@ results:
     value_note: ''
     sort_value: 0.695
     sort_std: 0.0039
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2757,6 +2265,74 @@ results:
     value_note: ''
     sort_value: 0.6507
     sort_std: 0.0003
+    global_rank: 10
+    paper_rank: 10
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GloGNN
+    model_key: glognn
+    model_plain: GloGNN
+    value: 0.6209
+    std: 0.0027
+    paper_value: 0.6209
+    paper_std: 0.0027
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: li2022finding
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split as provided in lim2021large
+    date: Oct 3, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-03'
+    published_venue: ICLR 2023
+    published_conference: ICLR 2023
+    at_pub_value: 0.6209
+    at_pub_std: 0.0027
+    at_pub_source_arxiv: '2210.00513'
+    at_pub_source_title: Gradient Gating for Deep Multi-Rate Learning on Graphs
+    at_pub_source_date_iso: '2022-10-02'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2023-10-03'
+    value_gap_source_date_label: ICLR 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6209
+    true_std: 0.0027
+    value_gap_source_arxiv: '2310.02232'
+    value_gap_source_title: 'HoloNets: Spectral Convolutions do extend to Directed
+      Graphs'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6209
+    sort_std: 0.0027
     global_rank: 11
     paper_rank: 11
     rank_delta: 0
@@ -2893,8 +2469,8 @@ results:
     value_note: ''
     sort_value: 0.5514
     sort_std: 0.0016
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2960,8 +2536,8 @@ results:
     value_note: ''
     sort_value: 0.5102
     sort_std: 0.0006
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3028,8 +2604,8 @@ results:
     value_note: ''
     sort_value: 0.4019
     sort_std: 0.0003
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3095,8 +2671,8 @@ results:
     value_note: ''
     sort_value: 0.315
     sort_std: null
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3116,16 +2692,13 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: Quantum Chemistry
-  datasets:
-  - *id001
 - benchmark: Heterophily Benchmark
   datasets:
-  - *id002
+  - *id001
 - benchmark: LINKX Benchmarks
   datasets:
+  - *id002
   - *id003
-  - *id004
 datasets_by_scope:
 - scope: node-level
   label: Node-level
@@ -3142,14 +2715,6 @@ datasets_by_scope:
       dataset_slug: arxiv-year
     - dataset: snap-patents
       dataset_slug: snap-patents
-- scope: graph-level
-  label: Graph-level
-  benchmarks:
-  - benchmark: Quantum Chemistry
-    benchmark_slug: quantum-chemistry
-    datasets:
-    - dataset: QM7b
-      dataset_slug: qm7b
 main_figure: /figures/2310.02232/main_figure.jpegoptim.jpg
 ---
 

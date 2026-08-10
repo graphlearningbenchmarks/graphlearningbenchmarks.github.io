@@ -49,21 +49,16 @@ has_results: true
 paper_type: method
 proposed_models:
 - iMolCLR
-mrr: 0.0546
-adjusted_mrr: 0.0546
-mrr_dataset_count: 8
+mrr: 0.0586
+adjusted_mrr: 0.0586
+mrr_dataset_count: 7
 benchmark_categories:
 - MoleculeNet
-- Quantum Chemistry
 benchmark_coverage:
 - benchmark: MoleculeNet
   benchmark_slug: moleculenet
   evaluated: 7
   total: 9
-- benchmark: Quantum Chemistry
-  benchmark_slug: quantum-chemistry
-  evaluated: 1
-  total: 3
 task_categories:
 - graph_classification
 - graph_regression
@@ -204,12 +199,13 @@ results:
     date_iso: '2022-02-18'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
+    at_pub_value: 0.89
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_source_arxiv: '2106.09553'
+    at_pub_source_title: How Much Structural Information Large Scale Molecular Language
+      Representations Can Capture?
+    at_pub_source_date_iso: '2021-06-17'
+    at_pub_source_date_label: '2021'
     value_gap_source_date_iso: '2022-02-18'
     value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
@@ -367,10 +363,10 @@ results:
     value_note: ''
     sort_value: 0.878
     sort_std: 0.032
-    global_rank: 19
-    paper_rank: 62
-    rank_delta: 43
-    rank_delta_abs: 43
+    global_rank: 20
+    paper_rank: 66
+    rank_delta: 46
+    rank_delta_abs: 46
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -408,12 +404,13 @@ results:
     date_iso: '2022-02-18'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
+    at_pub_value: 0.876
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_source_arxiv: '2106.09553'
+    at_pub_source_title: How Much Structural Information Large Scale Molecular Language
+      Representations Can Capture?
+    at_pub_source_date_iso: '2021-06-17'
+    at_pub_source_date_label: '2021'
     value_gap_source_date_iso: '2022-02-18'
     value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
@@ -435,8 +432,8 @@ results:
     value_note: ''
     sort_value: 0.876
     sort_std: 0.035
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -503,10 +500,10 @@ results:
     value_note: ''
     sort_value: 0.8646
     sort_std: 0.0081
-    global_rank: 41
-    paper_rank: 277
-    rank_delta: 236
-    rank_delta_abs: 236
+    global_rank: 43
+    paper_rank: 284
+    rank_delta: 241
+    rank_delta_abs: 241
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -572,8 +569,8 @@ results:
     value_note: ''
     sort_value: 0.863
     sort_std: 0.015
-    global_rank: 43
-    paper_rank: 43
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -640,8 +637,8 @@ results:
     value_note: ''
     sort_value: 0.859
     sort_std: 0.008
-    global_rank: 52
-    paper_rank: 52
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -708,10 +705,10 @@ results:
     value_note: ''
     sort_value: 0.854
     sort_std: 0.011
-    global_rank: 60
-    paper_rank: 264
-    rank_delta: 204
-    rank_delta_abs: 204
+    global_rank: 64
+    paper_rank: 271
+    rank_delta: 207
+    rank_delta_abs: 207
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -745,7 +742,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 78
+    global_rank: 82
     sort_value: 0.8451
     sort_std: null
     comparison_type: global_top
@@ -811,8 +808,8 @@ results:
     value_note: ''
     sort_value: 0.766
     sort_std: 0.011
-    global_rank: 235
-    paper_rank: 235
+    global_rank: 241
+    paper_rank: 241
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -855,11 +852,11 @@ results:
     published_conference: ''
     at_pub_value: 0.734
     at_pub_std: null
-    at_pub_source_arxiv: '2110.01191'
-    at_pub_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous Molecular
-      Graphs'
-    at_pub_source_date_iso: '2021-10-04'
-    at_pub_source_date_label: AAAI 2021
+    at_pub_source_arxiv: '2106.09553'
+    at_pub_source_title: How Much Structural Information Large Scale Molecular Language
+      Representations Can Capture?
+    at_pub_source_date_iso: '2021-06-17'
+    at_pub_source_date_label: '2021'
     value_gap_source_date_iso: '2023-12-12'
     value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
@@ -881,8 +878,8 @@ results:
     value_note: ''
     sort_value: 0.734
     sort_std: 0.03
-    global_rank: 254
-    paper_rank: 254
+    global_rank: 261
+    paper_rank: 261
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1036,16 +1033,16 @@ results:
     date_iso: '2022-02-18'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.71
-    at_pub_std: 0.003
-    at_pub_source_arxiv: '2106.06130'
-    at_pub_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation Learning
-      for Property Prediction'
-    at_pub_source_date_iso: '2021-06-11'
+    at_pub_value: 0.712
+    at_pub_std: null
+    at_pub_source_arxiv: '2106.09553'
+    at_pub_source_title: How Much Structural Information Large Scale Molecular Language
+      Representations Can Capture?
+    at_pub_source_date_iso: '2021-06-17'
     at_pub_source_date_label: '2021'
     value_gap_source_date_iso: '2023-12-12'
     value_gap_source_date_label: NeurIPS 2023
-    gap_vs_at_pub: 0.10200000000000009
+    gap_vs_at_pub: 0.10000000000000009
     worse_than_at_pub: false
     surpassed_since_pub: true
     better_than_at_pub: true
@@ -1064,16 +1061,16 @@ results:
     value_note: ''
     sort_value: 0.913
     sort_std: 0.026
-    global_rank: 25
-    paper_rank: 56
-    rank_delta: 31
-    rank_delta_abs: 31
+    global_rank: 26
+    paper_rank: 58
+    rank_delta: 32
+    rank_delta_abs: 32
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    comparison_source_arxiv: '2106.06130'
+    comparison_source_title: How Much Structural Information Large Scale Molecular
+      Language Representations Can Capture?
+    comparison_source_arxiv: '2106.09553'
     is_best: true
     is_std_outlier: false
   - model: N-GRAM
@@ -1106,12 +1103,13 @@ results:
     date_iso: '2022-02-18'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
+    at_pub_value: 0.912
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_source_arxiv: '2106.09553'
+    at_pub_source_title: How Much Structural Information Large Scale Molecular Language
+      Representations Can Capture?
+    at_pub_source_date_iso: '2021-06-17'
+    at_pub_source_date_label: '2021'
     value_gap_source_date_iso: '2022-02-18'
     value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
@@ -1133,8 +1131,8 @@ results:
     value_note: ''
     sort_value: 0.912
     sort_std: 0.03
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 28
+    paper_rank: 28
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1202,8 +1200,8 @@ results:
     value_note: ''
     sort_value: 0.908
     sort_std: 0.05
-    global_rank: 29
-    paper_rank: 29
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1270,10 +1268,10 @@ results:
     value_note: ''
     sort_value: 0.8875
     sort_std: 0.0049
-    global_rank: 32
-    paper_rank: 252
-    rank_delta: 220
-    rank_delta_abs: 220
+    global_rank: 34
+    paper_rank: 258
+    rank_delta: 224
+    rank_delta_abs: 224
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1338,10 +1336,10 @@ results:
     value_note: ''
     sort_value: 0.881
     sort_std: 0.036
-    global_rank: 36
-    paper_rank: 105
-    rank_delta: 69
-    rank_delta_abs: 69
+    global_rank: 38
+    paper_rank: 106
+    rank_delta: 68
+    rank_delta_abs: 68
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1381,11 +1379,11 @@ results:
     published_conference: ''
     at_pub_value: 0.85
     at_pub_std: null
-    at_pub_source_arxiv: '2110.01191'
-    at_pub_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous Molecular
-      Graphs'
-    at_pub_source_date_iso: '2021-10-04'
-    at_pub_source_date_label: AAAI 2021
+    at_pub_source_arxiv: '2106.09553'
+    at_pub_source_title: How Much Structural Information Large Scale Molecular Language
+      Representations Can Capture?
+    at_pub_source_date_iso: '2021-06-17'
+    at_pub_source_date_label: '2021'
     value_gap_source_date_iso: '2023-12-12'
     value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
@@ -1407,8 +1405,8 @@ results:
     value_note: ''
     sort_value: 0.85
     sort_std: 0.064
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 52
+    paper_rank: 52
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1476,8 +1474,8 @@ results:
     value_note: ''
     sort_value: 0.848
     sort_std: 0.022
-    global_rank: 51
-    paper_rank: 51
+    global_rank: 53
+    paper_rank: 53
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1510,10 +1508,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 55
+    global_rank: 57
     sort_value: 0.8304
     sort_std: 0.0038
     comparison_type: global_top
@@ -1578,8 +1576,8 @@ results:
     value_note: ''
     sort_value: 0.764
     sort_std: 0.007
-    global_rank: 63
-    paper_rank: 63
+    global_rank: 65
+    paper_rank: 65
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1619,12 +1617,13 @@ results:
     date_iso: '2022-02-18'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
+    at_pub_value: 0.736
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_source_arxiv: '2106.09553'
+    at_pub_source_title: How Much Structural Information Large Scale Molecular Language
+      Representations Can Capture?
+    at_pub_source_date_iso: '2021-06-17'
+    at_pub_source_date_label: '2021'
     value_gap_source_date_iso: '2022-02-18'
     value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
@@ -1646,8 +1645,8 @@ results:
     value_note: ''
     sort_value: 0.736
     sort_std: 0.005
-    global_rank: 76
-    paper_rank: 76
+    global_rank: 78
+    paper_rank: 78
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1714,8 +1713,8 @@ results:
     value_note: ''
     sort_value: 0.708
     sort_std: 0.015
-    global_rank: 122
-    paper_rank: 122
+    global_rank: 124
+    paper_rank: 124
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2103,9 +2102,9 @@ results:
     sort_value: 0.913
     sort_std: 0.017
     global_rank: 19
-    paper_rank: 218
-    rank_delta: 199
-    rank_delta_abs: 199
+    paper_rank: 222
+    rank_delta: 203
+    rank_delta_abs: 203
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2240,10 +2239,10 @@ results:
     value_note: ''
     sort_value: 0.881
     sort_std: 0.025
-    global_rank: 37
-    paper_rank: 184
-    rank_delta: 147
-    rank_delta_abs: 147
+    global_rank: 36
+    paper_rank: 188
+    rank_delta: 152
+    rank_delta_abs: 152
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2309,8 +2308,8 @@ results:
     value_note: ''
     sort_value: 0.855
     sort_std: 0.037
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2377,8 +2376,8 @@ results:
     value_note: ''
     sort_value: 0.789
     sort_std: 0.024
-    global_rank: 96
-    paper_rank: 96
+    global_rank: 97
+    paper_rank: 97
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2446,8 +2445,8 @@ results:
     value_note: ''
     sort_value: 0.717
     sort_std: 0.042
-    global_rank: 164
-    paper_rank: 164
+    global_rank: 168
+    paper_rank: 168
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2515,8 +2514,8 @@ results:
     value_note: ''
     sort_value: 0.634
     sort_std: 0.042
-    global_rank: 212
-    paper_rank: 212
+    global_rank: 216
+    paper_rank: 216
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2551,7 +2550,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 240
+    global_rank: 244
     sort_value: 0.558
     sort_std: 0.062
     comparison_type: global_top
@@ -2571,103 +2570,100 @@ results:
 - &id006
   dataset: ESOL
   rows:
-  - model: 10% ZINC + 10% PubChem
-    model_key: 10% zinc + 10% pubchem
-    model_plain: 10% ZINC + 10% PubChem
-    value: 0.2775
-    std: null
+  - model: Graphormer-SPIS
+    model_key: graphormer-spis
+    model_plain: Graphormer-SPIS
+    value: 0.484
+    std: 0.005
     metric: RMSE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2305.13987'
+    title: On Structural Expressive Power of Graph Transformers
+    date: May 23, 2023
+    date_display: May 2023
+    date_iso: '2023-05-23'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.2775
-    sort_std: null
+    sort_value: 0.484
+    sort_std: 0.005
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAT
-    model_key: mat
-    model_plain: MAT
-    value: 0.278
-    std: 0.02
+  - model: Graphormer-SPD
+    model_key: graphormer-spd
+    model_plain: Graphormer-SPD
+    value: 0.492
+    std: 0.004
     metric: RMSE
     higher_is_better: false
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    arxiv_id: '2002.08264'
-    title: Molecule Attention Transformer
-    date: Feb 19, 2020
-    date_display: Feb 2020
-    date_iso: '2020-02-19'
-    venue: Graph Representation Learning workshop and Machine Learning and the Physical
-      Sciences workshop at NeurIPS 2019
-    codebase_url: https://github.com/gmum/MAT
-    uses_external_data: true
-    input_feature_source: null
+    arxiv_id: '2305.13987'
+    title: On Structural Expressive Power of Graph Transformers
+    date: May 23, 2023
+    date_display: May 2023
+    date_iso: '2023-05-23'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
+    uses_external_data: false
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.278
-    sort_std: 0.02
+    sort_value: 0.492
+    sort_std: 0.004
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MoLFormer-XL
-    model_key: molformer-xl
-    model_plain: MoLFormer-XL
-    value: 0.2787
-    std: null
+  - model: conan-FGW
+    model_key: conan-fgw
+    model_plain: conan-FGW
+    value: 0.514
+    std: 0.019
     metric: RMSE
     higher_is_better: false
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2402.01975'
+    title: Structure-Aware E(3)-Invariant Molecular Conformer Aggregation Networks
+    date: Feb 3, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-03'
+    venue: International Conference on Machine Learning
+    codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.2787
-    sort_std: null
+    sort_value: 0.514
+    sort_std: 0.019
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2729,10 +2725,10 @@ results:
     value_note: ''
     sort_value: 0.564
     sort_std: 0.015
-    global_rank: 13
-    paper_rank: 132
-    rank_delta: 119
-    rank_delta_abs: 119
+    global_rank: 7
+    paper_rank: 127
+    rank_delta: 120
+    rank_delta_abs: 120
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2798,8 +2794,8 @@ results:
     value_note: ''
     sort_value: 0.578
     sort_std: null
-    global_rank: 16
-    paper_rank: 67
+    global_rank: 10
+    paper_rank: 61
     rank_delta: 51
     rank_delta_abs: 51
     rank_delta_direction: worse
@@ -2835,7 +2831,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 24
+    global_rank: 18
     sort_value: 0.601
     sort_std: 0.008
     comparison_type: global_top
@@ -2899,8 +2895,8 @@ results:
     value_note: ''
     sort_value: 0.626
     sort_std: 0.017
-    global_rank: 30
-    paper_rank: 132
+    global_rank: 25
+    paper_rank: 127
     rank_delta: 102
     rank_delta_abs: 102
     rank_delta_direction: worse
@@ -2966,10 +2962,10 @@ results:
     value_note: ''
     sort_value: 0.635
     sort_std: 0.027
-    global_rank: 32
-    paper_rank: 87
-    rank_delta: 55
-    rank_delta_abs: 55
+    global_rank: 27
+    paper_rank: 81
+    rank_delta: 54
+    rank_delta_abs: 54
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3034,8 +3030,8 @@ results:
     value_note: ''
     sort_value: 1.045
     sort_std: 0.064
-    global_rank: 96
-    paper_rank: 97
+    global_rank: 90
+    paper_rank: 91
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -3102,8 +3098,8 @@ results:
     value_note: ''
     sort_value: 1.1
     sort_std: 0.03
-    global_rank: 106
-    paper_rank: 106
+    global_rank: 100
+    paper_rank: 100
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3170,8 +3166,8 @@ results:
     value_note: ''
     sort_value: 1.11
     sort_std: 0.01
-    global_rank: 109
-    paper_rank: 109
+    global_rank: 103
+    paper_rank: 103
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3238,8 +3234,8 @@ results:
     value_note: ''
     sort_value: 1.13
     sort_std: 0.02
-    global_rank: 115
-    paper_rank: 115
+    global_rank: 109
+    paper_rank: 109
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3306,8 +3302,8 @@ results:
     value_note: ''
     sort_value: 1.22
     sort_std: 0.02
-    global_rank: 122
-    paper_rank: 122
+    global_rank: 117
+    paper_rank: 117
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3374,8 +3370,8 @@ results:
     value_note: ''
     sort_value: 1.266
     sort_std: 0.147
-    global_rank: 126
-    paper_rank: 126
+    global_rank: 121
+    paper_rank: 121
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3397,10 +3393,79 @@ results:
 - &id007
   dataset: FreeSolv
   rows:
-  - model: 10% ZINC + 10% PubChem
-    model_key: 10% zinc + 10% pubchem
-    model_plain: 10% ZINC + 10% PubChem
-    value: 0.205
+  - model: SE(3)-I MPPH
+    model_key: se(3)-i mpph
+    model_plain: SE(3)-I MPPH
+    value: 0.354
+    std: 0.053
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2312.07633'
+    title: SE(3)-Invariant Multiparameter Persistent Homology for Chiral-Sensitive
+      Molecular Property Prediction
+    date: Dec 12, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-12'
+    venue: NeurIPS 2023 AI for Science Workshop
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: integrating SE(3)-invariance into Vietoris-Rips persistent
+      homology
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.354
+    sort_std: 0.053
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: ECFP-4 + RF
+    model_key: ecfp-4 + rf
+    model_plain: ECFP-4 + RF
+    value: 0.56
+    std: 0.066
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: random_forest
+    architecture_label: RF
+    architecture_title: Random forest
+    arxiv_id: '2312.07633'
+    title: SE(3)-Invariant Multiparameter Persistent Homology for Chiral-Sensitive
+      Molecular Property Prediction
+    date: Dec 12, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-12'
+    venue: NeurIPS 2023 AI for Science Workshop
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: trained on ECFP-4 fingerprints
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.56
+    sort_std: 0.066
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GPSE + GPS
+    model_key: gpse + gps
+    model_plain: GPSE + GPS
+    value: 0.682
     std: null
     metric: RMSE
     higher_is_better: false
@@ -3408,91 +3473,22 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.205
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: MoLFormer-XL
-    model_key: molformer-xl
-    model_plain: MoLFormer-XL
-    value: 0.2308
-    std: null
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.2308
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MoLFormer-Base
-    model_key: molformer-base
-    model_plain: MoLFormer-Base
-    value: 0.2596
-    std: null
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
-    uses_external_data: false
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2307.07107'
+    title: Graph Positional and Structural Encoder
+    date: Jul 14, 2023
+    date_display: Jul 2023
+    date_iso: '2023-07-14'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/G-Taxonomy-Workgroup/GPSE
+    uses_external_data: true
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.2596
+    sort_value: 0.682
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
@@ -3557,8 +3553,8 @@ results:
     value_note: ''
     sort_value: 1.01
     sort_std: 0.064
-    global_rank: 16
-    paper_rank: 62
+    global_rank: 12
+    paper_rank: 58
     rank_delta: 46
     rank_delta_abs: 46
     rank_delta_direction: worse
@@ -3626,8 +3622,8 @@ results:
     value_note: ''
     sort_value: 1.034
     sort_std: null
-    global_rank: 17
-    paper_rank: 53
+    global_rank: 13
+    paper_rank: 49
     rank_delta: 36
     rank_delta_abs: 36
     rank_delta_direction: worse
@@ -3695,8 +3691,8 @@ results:
     value_note: ''
     sort_value: 2.09
     sort_std: 0.03
-    global_rank: 59
-    paper_rank: 59
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3763,8 +3759,8 @@ results:
     value_note: ''
     sort_value: 2.2
     sort_std: 0.2
-    global_rank: 66
-    paper_rank: 66
+    global_rank: 62
+    paper_rank: 62
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3832,8 +3828,8 @@ results:
     value_note: ''
     sort_value: 2.346
     sort_std: 0.122
-    global_rank: 73
-    paper_rank: 88
+    global_rank: 69
+    paper_rank: 84
     rank_delta: 15
     rank_delta_abs: 15
     rank_delta_direction: worse
@@ -3901,8 +3897,8 @@ results:
     value_note: ''
     sort_value: 2.51
     sort_std: 0.19
-    global_rank: 78
-    paper_rank: 78
+    global_rank: 74
+    paper_rank: 74
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3969,8 +3965,8 @@ results:
     value_note: ''
     sort_value: 2.618
     sort_std: 0.298
-    global_rank: 81
-    paper_rank: 94
+    global_rank: 77
+    paper_rank: 90
     rank_delta: 13
     rank_delta_abs: 13
     rank_delta_direction: worse
@@ -4037,8 +4033,8 @@ results:
     value_note: ''
     sort_value: 2.83
     sort_std: 0.12
-    global_rank: 92
-    paper_rank: 92
+    global_rank: 88
+    paper_rank: 88
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4105,8 +4101,8 @@ results:
     value_note: ''
     sort_value: 3.215
     sort_std: 0.755
-    global_rank: 107
-    paper_rank: 107
+    global_rank: 103
+    paper_rank: 103
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4173,8 +4169,8 @@ results:
     value_note: ''
     sort_value: 3.349
     sort_std: 0.097
-    global_rank: 110
-    paper_rank: 110
+    global_rank: 106
+    paper_rank: 106
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4191,800 +4187,6 @@ results:
   paper_metrics:
   - RMSE
   metric: RMSE
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
-- &id008
-  dataset: QM7b
-  rows:
-  - model: DTNN
-    model_key: dtnn
-    model_plain: DTNN
-    value: 0.074
-    std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '1703.00564'
-    title: MoleculeNet
-    date: Mar 2, 2017
-    date_display: Mar 2017
-    date_iso: '2017-03-02'
-    venue: Chemical Science
-    codebase_url: https://github.com/deepchem/deepchem
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.074
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Multitask(CM)
-    model_key: multitask(cm)
-    model_plain: Multitask(CM)
-    value: 0.086
-    std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '1703.00564'
-    title: MoleculeNet
-    date: Mar 2, 2017
-    date_display: Mar 2017
-    date_iso: '2017-03-02'
-    venue: Chemical Science
-    codebase_url: https://github.com/deepchem/deepchem
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.086
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: KRR(CM)
-    model_key: krr(cm)
-    model_plain: KRR(CM)
-    value: 0.098
-    std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '1703.00564'
-    title: MoleculeNet
-    date: Mar 2, 2017
-    date_display: Mar 2017
-    date_iso: '2017-03-02'
-    venue: Chemical Science
-    codebase_url: https://github.com/deepchem/deepchem
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.098
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: iMolCLR
-    model_key: imolclr
-    model_plain: iMolCLR
-    value: 66.3
-    std: 2.0
-    paper_value: 66.3
-    paper_std: 2.0
-    metric: MAE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Test MAE for QM7 regression task
-    date: Feb 18, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-18'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-18'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 66.3
-    true_std: 2.0
-    value_gap_source_arxiv: '2202.09346'
-    value_gap_source_title: Improving Molecular Contrastive Learning via Faulty Negative
-      Mitigation and Decomposed Fragment Contrast
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 66.3
-    sort_std: 2.0
-    global_rank: 34
-    paper_rank: 34
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SchNet
-    model_key: schnet
-    model_plain: SchNet
-    value: 74.2
-    std: 6.0
-    paper_value: 74.2
-    paper_std: 6.0
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: schutt2018schnet
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Test MAE for QM7 regression task
-    date: Feb 18, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-18'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 74.2
-    at_pub_std: null
-    at_pub_source_arxiv: '2110.01191'
-    at_pub_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous Molecular
-      Graphs'
-    at_pub_source_date_iso: '2021-10-04'
-    at_pub_source_date_label: AAAI 2021
-    value_gap_source_date_iso: '2025-02-18'
-    value_gap_source_date_label: ICLR 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 74.2
-    true_std: 6.0
-    value_gap_source_arxiv: '2502.12638'
-    value_gap_source_title: 'NExT-Mol: 3D Diffusion Meets 1D Language Modeling for
-      3D Molecule Generation'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 74.2
-    sort_std: 6.0
-    global_rank: 36
-    paper_rank: 36
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MGCN
-    model_key: mgcn
-    model_plain: MGCN
-    value: 77.6
-    std: 4.7
-    paper_value: 77.6
-    paper_std: 4.7
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: lu2019molecular
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Test MAE for QM7 regression task
-    date: Feb 18, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-18'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 77.6
-    at_pub_std: null
-    at_pub_source_arxiv: '2110.01191'
-    at_pub_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous Molecular
-      Graphs'
-    at_pub_source_date_iso: '2021-10-04'
-    at_pub_source_date_label: AAAI 2021
-    value_gap_source_date_iso: '2025-02-18'
-    value_gap_source_date_label: ICLR 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 77.6
-    true_std: 4.7
-    value_gap_source_arxiv: '2502.12638'
-    value_gap_source_title: 'NExT-Mol: 3D Diffusion Meets 1D Language Modeling for
-      3D Molecule Generation'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 77.6
-    sort_std: 4.7
-    global_rank: 39
-    paper_rank: 39
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MolCLR
-    model_key: molclr
-    model_plain: MolCLR
-    value: 87.2
-    std: 2.0
-    paper_value: 87.2
-    paper_std: 2.0
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: wang2021molclr
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Test MAE for QM7 regression task
-    date: Feb 18, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-18'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-02-18'
-    value_gap_source_date_label: ICLR 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 87.2
-    true_std: 2.0
-    value_gap_source_arxiv: '2502.12638'
-    value_gap_source_title: 'NExT-Mol: 3D Diffusion Meets 1D Language Modeling for
-      3D Molecule Generation'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 87.2
-    sort_std: 2.0
-    global_rank: 45
-    paper_rank: 45
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: D-MPNN
-    model_key: d-mpnn
-    model_plain: D-MPNN
-    value: 105.8
-    std: 13.2
-    paper_value: 105.8
-    paper_std: 13.2
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: yang2019analyzing
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Test MAE for QM7 regression task
-    date: Feb 18, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-18'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-02-18'
-    value_gap_source_date_label: ICLR 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 105.8
-    true_std: 13.2
-    value_gap_source_arxiv: '2502.12638'
-    value_gap_source_title: 'NExT-Mol: 3D Diffusion Meets 1D Language Modeling for
-      3D Molecule Generation'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 105.8
-    sort_std: 13.2
-    global_rank: 50
-    paper_rank: 50
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Hu et al.
-    model_key: hu et al.
-    model_plain: Hu et al.
-    value: 110.2
-    std: 6.4
-    paper_value: 110.2
-    paper_std: 6.4
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: Hu2020Strategies
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Test MAE for QM7 regression task
-    date: Feb 18, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-18'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-18'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 110.2
-    true_std: 6.4
-    value_gap_source_arxiv: '2202.09346'
-    value_gap_source_title: Improving Molecular Contrastive Learning via Faulty Negative
-      Mitigation and Decomposed Fragment Contrast
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 110.2
-    sort_std: 6.4
-    global_rank: 53
-    paper_rank: 53
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 122.9
-    std: 2.2
-    paper_value: 122.9
-    paper_std: 2.2
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: kipf2016semi
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Test MAE for QM7 regression task
-    date: Feb 18, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-18'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-02-18'
-    value_gap_source_date_label: ICLR 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 122.9
-    true_std: 2.2
-    value_gap_source_arxiv: '2502.12638'
-    value_gap_source_title: 'NExT-Mol: 3D Diffusion Meets 1D Language Modeling for
-      3D Molecule Generation'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 122.9
-    sort_std: 2.2
-    global_rank: 60
-    paper_rank: 60
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 124.8
-    std: 0.7
-    paper_value: 124.8
-    paper_std: 0.7
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: xu2018how
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Test MAE for QM7 regression task
-    date: Feb 18, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-18'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-02-18'
-    value_gap_source_date_label: ICLR 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 124.8
-    true_std: 0.7
-    value_gap_source_arxiv: '2502.12638'
-    value_gap_source_title: 'NExT-Mol: 3D Diffusion Meets 1D Language Modeling for
-      3D Molecule Generation'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 124.8
-    sort_std: 0.7
-    global_rank: 62
-    paper_rank: 62
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: N-GRAM
-    model_key: n-gram
-    model_plain: N-GRAM
-    value: 125.6
-    std: 1.5
-    paper_value: 125.6
-    paper_std: 1.5
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: walk
-    architecture_label: Walk
-    architecture_title: Random-walk graph embedding
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: Liu2019NGramGS
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Test MAE for QM7 regression task
-    date: Feb 18, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-18'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-18'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 125.6
-    true_std: 1.5
-    value_gap_source_arxiv: '2202.09346'
-    value_gap_source_title: Improving Molecular Contrastive Learning via Faulty Negative
-      Mitigation and Decomposed Fragment Contrast
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 125.6
-    sort_std: 1.5
-    global_rank: 63
-    paper_rank: 63
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AttentiveFP
-    model_key: attentivefp
-    model_plain: AttentiveFP
-    value: 126.7
-    std: 4.0
-    paper_value: 126.7
-    paper_std: 4.0
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: xiong2019pushing
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Test MAE for QM7 regression task
-    date: Feb 18, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-18'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 126.7
-    at_pub_std: null
-    at_pub_source_arxiv: '2110.01191'
-    at_pub_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous Molecular
-      Graphs'
-    at_pub_source_date_iso: '2021-10-04'
-    at_pub_source_date_label: AAAI 2021
-    value_gap_source_date_iso: '2022-02-18'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 126.7
-    true_std: 4.0
-    value_gap_source_arxiv: '2202.09346'
-    value_gap_source_title: Improving Molecular Contrastive Learning via Faulty Negative
-      Mitigation and Decomposed Fragment Contrast
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 126.7
-    sort_std: 4.0
-    global_rank: 64
-    paper_rank: 64
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  rank_metric: MAE
-  higher_is_better: false
-  experiment_scope: graph-level
-  dataset_primary_metric: MAE
-  paper_metrics:
-  - MAE
-  metric: MAE
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 - &id005
@@ -5354,9 +4556,9 @@ results:
     sort_value: 0.6403
     sort_std: 0.0104
     global_rank: 66
-    paper_rank: 223
-    rank_delta: 157
-    rank_delta_abs: 157
+    paper_rank: 224
+    rank_delta: 158
+    rank_delta_abs: 158
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -5421,8 +4623,8 @@ results:
     value_note: ''
     sort_value: 0.632
     sort_std: 0.023
-    global_rank: 83
-    paper_rank: 83
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5489,8 +4691,8 @@ results:
     value_note: ''
     sort_value: 0.632
     sort_std: 0.005
-    global_rank: 84
-    paper_rank: 84
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5557,10 +4759,10 @@ results:
     value_note: ''
     sort_value: 0.615
     sort_std: 0.025
-    global_rank: 127
-    paper_rank: 239
-    rank_delta: 112
-    rank_delta_abs: 112
+    global_rank: 126
+    paper_rank: 240
+    rank_delta: 114
+    rank_delta_abs: 114
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -5627,10 +4829,10 @@ results:
     value_note: ''
     sort_value: 0.606
     sort_std: 0.032
-    global_rank: 158
-    paper_rank: 163
-    rank_delta: 5
-    rank_delta_abs: 5
+    global_rank: 160
+    paper_rank: 164
+    rank_delta: 4
+    rank_delta_abs: 4
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -5661,10 +4863,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 222
+    global_rank: 223
     sort_value: 0.5752
     sort_std: 0.0006
     comparison_type: global_top
@@ -5729,8 +4931,8 @@ results:
     value_note: ''
     sort_value: 0.552
     sort_std: 0.018
-    global_rank: 236
-    paper_rank: 236
+    global_rank: 237
+    paper_rank: 237
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5797,8 +4999,8 @@ results:
     value_note: ''
     sort_value: 0.545
     sort_std: 0.038
-    global_rank: 238
-    paper_rank: 239
+    global_rank: 239
+    paper_rank: 240
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -5975,10 +5177,10 @@ results:
     value_note: ''
     sort_value: 0.84
     sort_std: 0.004
-    global_rank: 16
-    paper_rank: 299
-    rank_delta: 283
-    rank_delta_abs: 283
+    global_rank: 14
+    paper_rank: 291
+    rank_delta: 277
+    rank_delta_abs: 277
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -6044,10 +5246,10 @@ results:
     value_note: ''
     sort_value: 0.835
     sort_std: null
-    global_rank: 20
-    paper_rank: 49
-    rank_delta: 29
-    rank_delta_abs: 29
+    global_rank: 18
+    paper_rank: 44
+    rank_delta: 26
+    rank_delta_abs: 26
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -6114,10 +5316,10 @@ results:
     value_note: ''
     sort_value: 0.829
     sort_std: 0.0069
-    global_rank: 26
-    paper_rank: 266
-    rank_delta: 240
-    rank_delta_abs: 240
+    global_rank: 24
+    paper_rank: 258
+    rank_delta: 234
+    rank_delta_abs: 234
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -6183,8 +5385,8 @@ results:
     value_note: ''
     sort_value: 0.799
     sort_std: 0.006
-    global_rank: 67
-    paper_rank: 67
+    global_rank: 62
+    paper_rank: 62
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6251,8 +5453,8 @@ results:
     value_note: ''
     sort_value: 0.798
     sort_std: 0.007
-    global_rank: 72
-    paper_rank: 72
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6292,19 +5494,18 @@ results:
     date_iso: '2022-02-18'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.759
-    at_pub_std: 0.007
-    at_pub_source_arxiv: '2106.06130'
-    at_pub_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation Learning
-      for Property Prediction'
-    at_pub_source_date_iso: '2021-06-11'
-    at_pub_source_date_label: '2021'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2022-02-18'
     value_gap_source_date_label: '2022'
-    gap_vs_at_pub: 0.030000000000000027
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -6320,16 +5521,15 @@ results:
     value_note: ''
     sort_value: 0.789
     sort_std: 0.013
-    global_rank: 98
-    paper_rank: 98
+    global_rank: 93
+    paper_rank: 93
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    comparison_source_arxiv: '2106.06130'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: Hu et al.
@@ -6389,8 +5589,8 @@ results:
     value_note: ''
     sort_value: 0.787
     sort_std: 0.004
-    global_rank: 101
-    paper_rank: 101
+    global_rank: 96
+    paper_rank: 96
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6423,10 +5623,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 141
+    global_rank: 135
     sort_value: 0.7744
     sort_std: 0.0038
     comparison_type: global_top
@@ -6491,8 +5691,8 @@ results:
     value_note: ''
     sort_value: 0.772
     sort_std: 0.023
-    global_rank: 152
-    paper_rank: 152
+    global_rank: 146
+    paper_rank: 146
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6559,8 +5759,8 @@ results:
     value_note: ''
     sort_value: 0.769
     sort_std: 0.027
-    global_rank: 160
-    paper_rank: 160
+    global_rank: 154
+    paper_rank: 154
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6627,8 +5827,8 @@ results:
     value_note: ''
     sort_value: 0.707
     sort_std: 0.016
-    global_rank: 301
-    paper_rank: 301
+    global_rank: 293
+    paper_rank: 293
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6657,9 +5857,6 @@ results_grouped:
   - *id005
   - *id006
   - *id007
-- benchmark: Quantum Chemistry
-  datasets:
-  - *id008
 datasets_by_scope:
 - scope: graph-level
   label: Graph-level
@@ -6681,11 +5878,6 @@ datasets_by_scope:
       dataset_slug: esol
     - dataset: FreeSolv
       dataset_slug: freesolv
-  - benchmark: Quantum Chemistry
-    benchmark_slug: quantum-chemistry
-    datasets:
-    - dataset: QM7b
-      dataset_slug: qm7b
 single_proposed_model: iMolCLR
 main_figure: /figures/2202.09346/main_figure.jpegoptim.jpg
 ---

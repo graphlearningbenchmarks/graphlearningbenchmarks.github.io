@@ -60,7 +60,7 @@ has_results: true
 paper_type: method
 proposed_models:
 - AdaFGL
-mrr: 0.0023
+mrr: 0.0024
 adjusted_mrr: 0.0008
 mrr_dataset_count: 1
 benchmark_categories:
@@ -170,9 +170,9 @@ results:
     sort_value: 0.9412
     sort_std: 0.0008
     global_rank: 2
-    paper_rank: 511
-    rank_delta: 509
-    rank_delta_abs: 509
+    paper_rank: 479
+    rank_delta: 477
+    rank_delta_abs: 477
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -305,10 +305,10 @@ results:
     value_note: ''
     sort_value: 0.9181
     sort_std: 0.002
-    global_rank: 37
-    paper_rank: 505
-    rank_delta: 468
-    rank_delta_abs: 468
+    global_rank: 35
+    paper_rank: 473
+    rank_delta: 438
+    rank_delta_abs: 438
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -374,10 +374,10 @@ results:
     value_note: ''
     sort_value: 0.9104
     sort_std: 0.0041
-    global_rank: 77
-    paper_rank: 505
-    rank_delta: 428
-    rank_delta_abs: 428
+    global_rank: 75
+    paper_rank: 473
+    rank_delta: 398
+    rank_delta_abs: 398
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -418,11 +418,10 @@ results:
     published_conference: ''
     at_pub_value: 0.8932
     at_pub_std: 0.0029
-    at_pub_source_arxiv: '2305.12677'
-    at_pub_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    at_pub_source_date_iso: '2023-05-22'
-    at_pub_source_date_label: '2023'
+    at_pub_source_arxiv: '2310.05296'
+    at_pub_source_title: Tailoring Self-Attention for Graph via Rooted Subtrees
+    at_pub_source_date_iso: '2023-10-08'
+    at_pub_source_date_label: NeurIPS 2023
     value_gap_source_date_iso: '2024-06-27'
     value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.08619999999999994
@@ -444,16 +443,15 @@ results:
     value_note: ''
     sort_value: 0.905
     sort_std: 0.0091
-    global_rank: 103
-    paper_rank: 508
-    rank_delta: 405
-    rank_delta_abs: 405
+    global_rank: 101
+    paper_rank: 476
+    rank_delta: 375
+    rank_delta_abs: 375
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    comparison_source_arxiv: '2305.12677'
+    comparison_source_title: Tailoring Self-Attention for Graph via Rooted Subtrees
+    comparison_source_arxiv: '2310.05296'
     is_best: false
     is_std_outlier: false
   - model: GloGNN
@@ -514,10 +512,10 @@ results:
     value_note: ''
     sort_value: 0.8912
     sort_std: 0.0033
-    global_rank: 200
-    paper_rank: 505
-    rank_delta: 305
-    rank_delta_abs: 305
+    global_rank: 190
+    paper_rank: 473
+    rank_delta: 283
+    rank_delta_abs: 283
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -552,7 +550,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 394
+    global_rank: 365
     sort_value: 0.8463
     sort_std: null
     comparison_type: global_top
@@ -617,10 +615,10 @@ results:
     value_note: ''
     sort_value: 0.842
     sort_std: 0.005
-    global_rank: 416
-    paper_rank: 505
-    rank_delta: 89
-    rank_delta_abs: 89
+    global_rank: 387
+    paper_rank: 473
+    rank_delta: 86
+    rank_delta_abs: 86
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -685,8 +683,8 @@ results:
     value_note: ''
     sort_value: 0.836
     sort_std: 0.004
-    global_rank: 440
-    paper_rank: 440
+    global_rank: 411
+    paper_rank: 411
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -753,8 +751,8 @@ results:
     value_note: ''
     sort_value: 0.821
     sort_std: 0.012
-    global_rank: 482
-    paper_rank: 482
+    global_rank: 452
+    paper_rank: 452
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -821,8 +819,8 @@ results:
     value_note: ''
     sort_value: 0.815
     sort_std: 0.003
-    global_rank: 495
-    paper_rank: 495
+    global_rank: 464
+    paper_rank: 464
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -889,8 +887,8 @@ results:
     value_note: ''
     sort_value: 0.813
     sort_std: 0.009
-    global_rank: 498
-    paper_rank: 498
+    global_rank: 466
+    paper_rank: 466
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -957,8 +955,8 @@ results:
     value_note: ''
     sort_value: 0.798
     sort_std: 0.002
-    global_rank: 518
-    paper_rank: 518
+    global_rank: 486
+    paper_rank: 486
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

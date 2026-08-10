@@ -97,7 +97,7 @@ benchmark_coverage:
 - benchmark: Quantum Chemistry
   benchmark_slug: quantum-chemistry
   evaluated: 1
-  total: 3
+  total: 1
 task_categories:
 - graph_regression
 experiment_scopes:
@@ -328,16 +328,16 @@ results:
     value_gap_source_title: 'FreeCG: Free the Design Space of Clebsch–Gordan Transform
       for Machine Learning Force Fields'
     value_note: ''
-    at_pub_value: 0.053
+    at_pub_value: 0.2
     at_pub_std: null
-    at_pub_source_arxiv: '2210.16518'
-    at_pub_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural network
-      with vector-scalar interactive message passing for molecules'
-    at_pub_source_date_iso: '2022-10-29'
-    at_pub_source_date_label: '2022'
+    at_pub_source_arxiv: '2306.06482'
+    at_pub_source_title: 'TensorNet: Cartesian Tensor Representations for Efficient
+      Learning of Molecular Potentials'
+    at_pub_source_date_iso: '2023-06-10'
+    at_pub_source_date_label: NeurIPS 2023
     value_gap_source_date_iso: '2024-07-02'
     value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.023999999999999997
+    gap_vs_at_pub: 0.171
     worse_than_at_pub: false
     surpassed_since_pub: true
     better_than_at_pub: true
@@ -802,7 +802,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 65
+    global_rank: 64
   - model: SEGNN
     model_key: segnn
     model_plain: SEGNN
@@ -865,7 +865,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 90
+    global_rank: 89
   metrics:
   - MAE
   - Energy

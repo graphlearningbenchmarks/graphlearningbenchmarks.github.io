@@ -40,32 +40,28 @@ abstract: Graph neural networks (GNNs) have shown great prowess in learning repr
   and empirical observations. Finally, we examine existing heterophilous graphs benchmarks
   and reconcile how the GCN (under)performs on them based on this understanding.
 codebase_url: https://github.com/jianhao2016/GPRGNN
-extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+extraction_model: google/gemma-4-26B-A4B-it
 has_results: true
 paper_type: method
 proposed_models:
 - GCN
-mrr: 0.0168
-adjusted_mrr: 0.0168
-mrr_dataset_count: 8
+- MLP + GCN
+mrr: 0.0067
+adjusted_mrr: 0.0067
+mrr_dataset_count: 4
 benchmark_categories:
-- Classic
 - Heterophilic Graphs
 benchmark_coverage:
-- benchmark: Classic
-  benchmark_slug: classic
-  evaluated: 1
-  total: 12
 - benchmark: Heterophilic Graphs
   benchmark_slug: heterophilic-graphs
-  evaluated: 5
+  evaluated: 4
   total: 6
 task_categories:
 - node_classification
 experiment_scopes:
 - node-level
 results:
-- &id004
+- &id003
   dataset: Actor
   rows:
   - model: NodeFormer
@@ -124,7 +120,7 @@ results:
     venue: IEEE Transactions on Neural Networks and Learning Systems
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -185,15 +181,15 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 10 random splits with 48/32/20% proportions; average performance
-      over 100 runs (10 seeds per split).
+    protocol_note: Accuracy on Actor dataset using 10 random splits with 48/32/20%
+      proportions and 10 random seeds.
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -226,10 +222,79 @@ results:
     value_note: ''
     sort_value: 0.4026
     sort_std: 0.0108
-    global_rank: 56
-    paper_rank: 220
-    rank_delta: 164
-    rank_delta_abs: 164
+    global_rank: 55
+    paper_rank: 214
+    rank_delta: 159
+    rank_delta_abs: 159
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GPR-GNN
+    model_key: gpr-gnn
+    model_plain: GPR-GNN
+    value: 0.3394
+    std: 0.0095
+    paper_value: 0.3394
+    paper_std: 0.0095
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Actor dataset using 10 random splits with 48/32/20%
+      proportions and 10 random seeds.
+    date: Jun 11, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-11'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-05-29'
+    value_gap_source_date_label: ICML 2025
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.3992
+    true_std: 0.0067
+    value_gap_source_arxiv: '2505.23014'
+    value_gap_source_title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in
+      the Perspective of A System of Hyperbolic Partial Differential Equations'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.05980000000000002
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.3992
+    sort_std: 0.0067
+    global_rank: 68
+    paper_rank: 321
+    rank_delta: 253
+    rank_delta_abs: 253
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -262,7 +327,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 88
+    global_rank: 87
     sort_value: 0.3899
     sort_std: 0.0085
     comparison_type: global_top
@@ -287,15 +352,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 10 random splits with 48/32/20% proportions; average performance
-      over 100 runs (10 seeds per split).
+    protocol_note: Accuracy on Actor dataset using 10 random splits with 48/32/20%
+      proportions and 10 random seeds.
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -328,10 +393,10 @@ results:
     value_note: ''
     sort_value: 0.369
     sort_std: null
-    global_rank: 173
-    paper_rank: 403
-    rank_delta: 230
-    rank_delta_abs: 230
+    global_rank: 166
+    paper_rank: 398
+    rank_delta: 232
+    rank_delta_abs: 232
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -340,23 +405,13 @@ results:
     comparison_source_arxiv: '2101.00797'
     is_best: false
     is_std_outlier: false
-  rank_metric: Accuracy
-  higher_is_better: true
-  experiment_scope: node-level
-  dataset_primary_metric: Accuracy
-  paper_metrics:
-  - Accuracy
-  metric: Accuracy
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
-- &id005
-  dataset: Chameleon
-  rows:
-  - model: Hetero-S (GAT 8-layer)
-    model_key: hetero-s (gat 8-layer)
-    model_plain: Hetero-S (GAT 8-layer)
-    value: 0.8693
-    std: null
+  - model: MLP + GCN
+    model_key: mlp + gcn
+    model_plain: MLP + GCN
+    value: 0.3624
+    std: 0.0109
+    paper_value: 0.3624
+    paper_std: 0.0109
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
@@ -366,255 +421,16 @@ results:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2406.12539'
-    title: 'The Heterophilic Snowflake Hypothesis: Training and Empowering GNNs for
-      Heterophilic Graphs'
-    date: Jun 18, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-18'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/bingreeky/HeteroSnoH
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.8693
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Trans.Conv+CNA
-    model_key: trans.conv+cna
-    model_plain: Trans.Conv+CNA
-    value: 0.8586
-    std: 0.018
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2412.04064'
-    title: Graph Neural Networks Need Cluster-Normalize-Activate Modules
-    date: Dec 5, 2024
-    date_display: Dec 2024
-    date_iso: '2024-12-05'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/ml-research/cna_modules
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.8586
-    sort_std: 0.018
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.856
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2406.12539'
-    title: 'The Heterophilic Snowflake Hypothesis: Training and Empowering GNNs for
-      Heterophilic Graphs'
-    date: Jun 18, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-18'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/bingreeky/HeteroSnoH
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.856
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.6796
-    std: 0.0182
-    paper_value: 0.6796
-    paper_std: 0.0182
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 1
+    table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 10 random splits with 48/32/20% proportions; 10 random seeds; average
-      over 100 runs.
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ICLR 2021
-    published_conference: ICLR 2021
-    at_pub_value: 0.676
-    at_pub_std: 0.024
-    at_pub_source_arxiv: '2005.14612'
-    at_pub_source_title: Non-Local Graph Neural Networks
-    at_pub_source_date_iso: '2020-05-29'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2024-01-17'
-    value_gap_source_date_label: ICML 2024
-    gap_vs_at_pub: 0.0035999999999999366
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: true
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7033
-    true_std: null
-    value_gap_source_arxiv: '2401.09125'
-    value_gap_source_title: Understanding Heterophily for Graph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.023700000000000054
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7033
-    sort_std: null
-    global_rank: 64
-    paper_rank: 86
-    rank_delta: 22
-    rank_delta_abs: 22
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GPRGNN
-    model_key: gprgnn
-    model_plain: GPRGNN
-    value: 0.6631
-    std: 0.0205
-    paper_value: 0.6631
-    paper_std: 0.0205
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 10 random splits with 48/32/20% proportions; 10 random seeds; average
-      over 100 runs.
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ICLR 2021
-    published_conference: ICLR 2021
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-03-10'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.6748
-    true_std: 0.004
-    value_gap_source_arxiv: '2603.09195'
-    value_gap_source_title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.011699999999999933
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6748
-    sort_std: 0.004
-    global_rank: 91
-    paper_rank: 101
-    rank_delta: 10
-    rank_delta_abs: 10
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: CPGNN-Cheby
-    model_key: cpgnn-cheby
-    model_plain: CPGNN-Cheby
-    value: 0.6517
-    std: 0.0317
-    paper_value: 0.6517
-    paper_std: 0.0317
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 10 random splits with 48/32/20% proportions; 10 random seeds; average
-      over 100 runs.
+    protocol_note: Accuracy on Actor dataset using 10 random splits with 48/32/20%
+      proportions and 10 random seeds.
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -636,120 +452,18 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.6517
-    true_std: 0.0317
+    true_value: 0.3624
+    true_std: 0.0109
     value_gap_source_arxiv: '2106.06134'
     value_gap_source_title: Is Homophily a Necessity for Graph Neural Networks?
     value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.6517
-    sort_std: 0.0317
-    global_rank: 113
-    paper_rank: 113
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.6215
-    std: 0.0042
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.03930'
-    title: Hierarchical Graph Transformer with Adaptive Node Sampling
-    date: Oct 8, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-08'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/zaixizhang/ANS-GT
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 138
-    sort_value: 0.6215
-    sort_std: 0.0042
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: H2GCN-2
-    model_key: h2gcn-2
-    model_plain: H2GCN-2
-    value: 0.5939
-    std: 0.0198
-    paper_value: 0.5939
-    paper_std: 0.0198
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 10 random splits with 48/32/20% proportions; 10 random seeds; average
-      over 100 runs.
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ICLR 2021
-    published_conference: ICLR 2021
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-11-21'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.5939
-    true_std: 0.0198
-    value_gap_source_arxiv: '2211.11761'
-    value_gap_source_title: 'From Node Interaction to Hop Interaction: New Effective
-      and Scalable Graph Learning Paradigm'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.5939
-    sort_std: 0.0198
-    global_rank: 163
-    paper_rank: 163
+    sort_value: 0.3624
+    sort_std: 0.0109
+    global_rank: 210
+    paper_rank: 210
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -762,10 +476,10 @@ results:
   - model: H2GCN-1
     model_key: h2gcn-1
     model_plain: H2GCN-1
-    value: 0.5711
-    std: 0.0158
-    paper_value: 0.5711
-    paper_std: 0.0158
+    value: 0.3586
+    std: 0.0103
+    paper_value: 0.3586
+    paper_std: 0.0103
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -776,54 +490,53 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 1
+    table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 10 random splits with 48/32/20% proportions; 10 random seeds; average
-      over 100 runs.
+    protocol_note: Accuracy on Actor dataset using 10 random splits with 48/32/20%
+      proportions and 10 random seeds.
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
     published_venue: ICLR 2021
     published_conference: ICLR 2021
-    at_pub_value: 0.5711
-    at_pub_std: 0.0158
-    at_pub_source_arxiv: '2105.07634'
-    at_pub_source_title: Improving Graph Neural Networks with Simple Architecture
-      Design
-    at_pub_source_date_iso: '2021-05-17'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2022-11-21'
-    value_gap_source_date_label: '2022'
+    at_pub_value: 0.3586
+    at_pub_std: null
+    at_pub_source_arxiv: '2012.03476'
+    at_pub_source_title: 'NCGNN: Node-Level Capsule Graph Neural Network for Semisupervised
+      Classification'
+    at_pub_source_date_iso: '2020-12-07'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2023-03-02'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
+    insignificant_value_gap: true
     today_delta_significant: false
-    true_value: 0.5711
-    true_std: 0.0158
-    value_gap_source_arxiv: '2211.11761'
-    value_gap_source_title: 'From Node Interaction to Hop Interaction: New Effective
-      and Scalable Graph Learning Paradigm'
+    true_value: 0.3594
+    true_std: 0.013
+    value_gap_source_arxiv: '2303.01265'
+    value_gap_source_title: Steering Graph Neural Networks with Pinning Control
     value_gap_source_is_current_paper: false
-    value_gap: null
+    value_gap: 0.0008000000000000229
     has_value_note: false
     value_note: ''
-    sort_value: 0.5711
-    sort_std: 0.0158
-    global_rank: 182
-    paper_rank: 182
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
+    sort_value: 0.3594
+    sort_std: 0.013
+    global_rank: 227
+    paper_rank: 231
+    rank_delta: 4
+    rank_delta_abs: 4
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -832,10 +545,10 @@ results:
   - model: CPGNN-MLP
     model_key: cpgnn-mlp
     model_plain: CPGNN-MLP
-    value: 0.5453
-    std: 0.0237
-    paper_value: 0.5453
-    paper_std: 0.0237
+    value: 0.3576
+    std: 0.0092
+    paper_value: 0.3576
+    paper_std: 0.0092
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -846,15 +559,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 1
+    table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 10 random splits with 48/32/20% proportions; 10 random seeds; average
-      over 100 runs.
+    protocol_note: Accuracy on Actor dataset using 10 random splits with 48/32/20%
+      proportions and 10 random seeds.
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -876,18 +589,18 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.5453
-    true_std: 0.0237
+    true_value: 0.3576
+    true_std: 0.0092
     value_gap_source_arxiv: '2106.06134'
     value_gap_source_title: Is Homophily a Necessity for Graph Neural Networks?
     value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.5453
-    sort_std: 0.0237
-    global_rank: 193
-    paper_rank: 193
+    sort_value: 0.3576
+    sort_std: 0.0092
+    global_rank: 236
+    paper_rank: 236
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -897,32 +610,102 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: MLP
-    model_key: mlp
-    model_plain: MLP
-    value: 0.4811
-    std: 0.0223
-    paper_value: 0.4811
-    paper_std: 0.0223
+  - model: H2GCN-2
+    model_key: h2gcn-2
+    model_plain: H2GCN-2
+    value: 0.3562
+    std: 0.013
+    paper_value: 0.3562
+    paper_std: 0.013
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 1
+    table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 10 random splits with 48/32/20% proportions; 10 random seeds; average
-      over 100 runs.
+    protocol_note: Accuracy on Actor dataset using 10 random splits with 48/32/20%
+      proportions and 10 random seeds.
+    date: Jun 11, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-11'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: 0.3562
+    at_pub_std: null
+    at_pub_source_arxiv: '2012.03476'
+    at_pub_source_title: 'NCGNN: Node-Level Capsule Graph Neural Network for Semisupervised
+      Classification'
+    at_pub_source_date_iso: '2020-12-07'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2023-02-23'
+    value_gap_source_date_label: WWW 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.3562
+    true_std: 0.013
+    value_gap_source_arxiv: '2302.12357'
+    value_gap_source_title: 'Auto-HeG: Automated Graph Neural Network on Heterophilic
+      Graphs'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.3562
+    sort_std: 0.013
+    global_rank: 246
+    paper_rank: 246
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: CPGNN-Cheby
+    model_key: cpgnn-cheby
+    model_plain: CPGNN-Cheby
+    value: 0.3428
+    std: 0.0077
+    paper_value: 0.3428
+    paper_std: 0.0077
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Actor dataset using 10 random splits with 48/32/20%
+      proportions and 10 random seeds.
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -934,32 +717,32 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-01-17'
-    value_gap_source_date_label: ICML 2024
+    value_gap_source_date_iso: '2021-06-11'
+    value_gap_source_date_label: ICLR 2021
     gap_vs_at_pub: null
     worse_than_at_pub: false
-    surpassed_since_pub: true
+    surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.5429
-    true_std: null
-    value_gap_source_arxiv: '2401.09125'
-    value_gap_source_title: Understanding Heterophily for Graph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.06180000000000002
+    today_delta_significant: false
+    true_value: 0.3428
+    true_std: 0.0077
+    value_gap_source_arxiv: '2106.06134'
+    value_gap_source_title: Is Homophily a Necessity for Graph Neural Networks?
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.5429
-    sort_std: null
-    global_rank: 195
-    paper_rank: 234
-    rank_delta: 39
-    rank_delta_abs: 39
-    rank_delta_direction: worse
-    has_value_gap: true
+    sort_value: 0.3428
+    sort_std: 0.0077
+    global_rank: 306
+    paper_rank: 306
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -974,294 +757,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
-  dataset: Cora
-  rows:
-  - model: Exphormer
-    model_key: exphormer
-    model_plain: Exphormer
-    value: 0.9635
-    std: 0.0019
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    venue: The Web Conference
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9635
-    sort_std: 0.0019
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SGFormer
-    model_key: sgformer
-    model_plain: SGFormer
-    value: 0.9629
-    std: 0.0015
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    venue: The Web Conference
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.9629
-    sort_std: 0.0015
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Coral
-    model_key: coral
-    model_plain: Coral
-    value: 0.9574
-    std: 0.0039
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    venue: The Web Conference
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9574
-    sort_std: 0.0039
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.8712
-    std: 0.0138
-    paper_value: 0.8712
-    paper_std: 0.0138
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 'Planetoid split: 10 random splits with 48/32/20% train/val/test
-      proportions, averaged over 100 runs.'
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ICLR 2021
-    published_conference: ICLR 2021
-    at_pub_value: 0.8728
-    at_pub_std: 0.0126
-    at_pub_source_arxiv: '2105.07634'
-    at_pub_source_title: Improving Graph Neural Networks with Simple Architecture
-      Design
-    at_pub_source_date_iso: '2021-05-17'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2024-01-17'
-    value_gap_source_date_label: ICML 2024
-    gap_vs_at_pub: 0.0016000000000000458
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9004
-    true_std: null
-    value_gap_source_arxiv: '2401.09125'
-    value_gap_source_title: Understanding Heterophily for Graph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.029200000000000004
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9004
-    sort_std: null
-    global_rank: 42
-    paper_rank: 201
-    rank_delta: 159
-    rank_delta_abs: 159
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SAGE
-    model_key: sage
-    model_plain: SAGE
-    value: 0.8911
-    std: 0.0012
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2506.07168'
-    title: Efficient Text-Attributed Graph Learning through Selective Annotation and
-      Graph Alignment
-    date: Jun 8, 2025
-    date_display: Jun 2025
-    date_iso: '2025-06-08'
-    venue: Trans. Mach. Learn. Res.
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 75
-    sort_value: 0.8911
-    sort_std: 0.0012
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MLP
-    model_key: mlp
-    model_plain: MLP
-    value: 0.7504
-    std: 0.0197
-    paper_value: 0.7504
-    paper_std: 0.0197
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 'Planetoid split: 10 random splits with 48/32/20% train/val/test
-      proportions, averaged over 100 runs.'
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ICLR 2021
-    published_conference: ICLR 2021
-    at_pub_value: 0.616
-    at_pub_std: 0.006
-    at_pub_source_arxiv: '2103.07295'
-    at_pub_source_title: Adversarial Graph Disentanglement with Component-specific
-      Aggregation
-    at_pub_source_date_iso: '2021-03-12'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2024-01-17'
-    value_gap_source_date_label: ICML 2024
-    gap_vs_at_pub: 0.13439999999999996
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: true
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7768
-    true_std: null
-    value_gap_source_arxiv: '2401.09125'
-    value_gap_source_title: Understanding Heterophily for Graph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.02640000000000009
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7768
-    sort_std: null
-    global_rank: 853
-    paper_rank: 898
-    rank_delta: 45
-    rank_delta_abs: 45
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Adversarial Graph Disentanglement with Component-specific
-      Aggregation
-    comparison_source_arxiv: '2103.07295'
-    is_best: false
-    is_std_outlier: false
-  rank_metric: Accuracy
-  higher_is_better: true
-  experiment_scope: node-level
-  dataset_primary_metric: Accuracy
-  paper_metrics:
-  - Accuracy
-  metric: Accuracy
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
-- &id003
+- &id002
   dataset: Cornell
   rows:
   - model: P^2GNN
@@ -1363,6 +859,74 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
+  - model: GPR-GNN
+    model_key: gpr-gnn
+    model_plain: GPR-GNN
+    value: 0.7927
+    std: 0.0603
+    paper_value: 0.7927
+    paper_std: 0.0603
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Cornell using the 10 fixed splits (48/32/20) as per
+      Pei et al.
+    date: Jun 11, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-11'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-07'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9279
+    true_std: 0.0312
+    value_gap_source_arxiv: '2302.03228'
+    value_gap_source_title: Heterophily-Aware Graph Attention Network
+    value_gap_source_is_current_paper: false
+    value_gap: 0.1352
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9279
+    sort_std: 0.0312
+    global_rank: 11
+    paper_rank: 221
+    rank_delta: 210
+    rank_delta_abs: 210
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
   - model: MLP
     model_key: mlp
     model_plain: MLP
@@ -1380,15 +944,15 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 10 random splits with 48/32/20% proportions; 10 random seeds; average
-      performance reported.
+    protocol_note: Accuracy on Cornell using the 10 fixed splits (48/32/20) as per
+      Pei et al.
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -1420,12 +984,80 @@ results:
     value_note: ''
     sort_value: 0.9136
     sort_std: 0.007
-    global_rank: 27
-    paper_rank: 124
-    rank_delta: 97
-    rank_delta_abs: 97
+    global_rank: 25
+    paper_rank: 113
+    rank_delta: 88
+    rank_delta_abs: 88
     rank_delta_direction: worse
     has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP + GCN
+    model_key: mlp + gcn
+    model_plain: MLP + GCN
+    value: 0.8482
+    std: 0.0487
+    paper_value: 0.8482
+    paper_std: 0.0487
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Cornell using the 10 fixed splits (48/32/20) as per
+      Pei et al.
+    date: Jun 11, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-11'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2021-06-11'
+    value_gap_source_date_label: ICLR 2021
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8482
+    true_std: 0.0487
+    value_gap_source_arxiv: '2106.06134'
+    value_gap_source_title: Is Homophily a Necessity for Graph Neural Networks?
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8482
+    sort_std: 0.0487
+    global_rank: 118
+    paper_rank: 118
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1457,10 +1089,148 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 177
+    global_rank: 165
     sort_value: 0.8269
     sort_std: null
     comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: H2GCN-1
+    model_key: h2gcn-1
+    model_plain: H2GCN-1
+    value: 0.8216
+    std: 0.06
+    paper_value: 0.8216
+    paper_std: 0.06
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Cornell using the 10 fixed splits (48/32/20) as per
+      Pei et al.
+    date: Jun 11, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-11'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: 0.8216
+    at_pub_std: null
+    at_pub_source_arxiv: '2012.03476'
+    at_pub_source_title: 'NCGNN: Node-Level Capsule Graph Neural Network for Semisupervised
+      Classification'
+    at_pub_source_date_iso: '2020-12-07'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2023-03-02'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8216
+    true_std: 0.048
+    value_gap_source_arxiv: '2303.01265'
+    value_gap_source_title: Steering Graph Neural Networks with Pinning Control
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8216
+    sort_std: 0.048
+    global_rank: 182
+    paper_rank: 182
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: H2GCN-2
+    model_key: h2gcn-2
+    model_plain: H2GCN-2
+    value: 0.8216
+    std: 0.06
+    paper_value: 0.8216
+    paper_std: 0.06
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Cornell using the 10 fixed splits (48/32/20) as per
+      Pei et al.
+    date: Jun 11, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-11'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: 0.8216
+    at_pub_std: null
+    at_pub_source_arxiv: '2012.03476'
+    at_pub_source_title: 'NCGNN: Node-Level Capsule Graph Neural Network for Semisupervised
+      Classification'
+    at_pub_source_date_iso: '2020-12-07'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2023-03-02'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8216
+    true_std: 0.06
+    value_gap_source_arxiv: '2303.01265'
+    value_gap_source_title: Steering Graph Neural Networks with Pinning Control
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8216
+    sort_std: 0.06
+    global_rank: 183
+    paper_rank: 183
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1482,15 +1252,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 10 random splits with 48/32/20% proportions; 10 random seeds; average
-      performance reported.
+    protocol_note: Accuracy on Cornell using the 10 fixed splits (48/32/20) as per
+      Pei et al.
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -1522,567 +1292,10 @@ results:
     value_note: ''
     sort_value: 0.8082
     sort_std: 0.036
-    global_rank: 217
-    paper_rank: 463
-    rank_delta: 246
-    rank_delta_abs: 246
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  rank_metric: Accuracy
-  higher_is_better: true
-  experiment_scope: node-level
-  dataset_primary_metric: Accuracy
-  paper_metrics:
-  - Accuracy
-  metric: Accuracy
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
-- &id006
-  dataset: Squirrel
-  rows:
-  - model: IBG-NN
-    model_key: ibg-nn
-    model_plain: IBG-NN
-    value: 0.7763
-    std: 0.0179
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2504.18273'
-    title: Efficient Learning on Large Graphs using a Densifying Regularity Lemma
-    date: Apr 25, 2025
-    date_display: Apr 2025
-    date_iso: '2025-04-25'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.7763
-    sort_std: 0.0179
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Trans.Conv+CNA
-    model_key: trans.conv+cna
-    model_plain: Trans.Conv+CNA
-    value: 0.7747
-    std: 0.0128
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2412.04064'
-    title: Graph Neural Networks Need Cluster-Normalize-Activate Modules
-    date: Dec 5, 2024
-    date_display: Dec 2024
-    date_iso: '2024-12-05'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/ml-research/cna_modules
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.7747
-    sort_std: 0.0128
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: DHGNN
-    model_key: dhgnn
-    model_plain: DHGNN
-    value: 0.7684
-    std: 0.0161
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.22362'
-    title: Directed Homophily-Aware Graph Neural Network
-    date: May 28, 2025
-    date_display: May 2025
-    date_iso: '2025-05-28'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.7684
-    sort_std: 0.0161
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.5447
-    std: 0.0117
-    paper_value: 0.5447
-    paper_std: 0.0117
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 10 random splits with 48/32/20% proportions, 10 random seeds, average
-      over 100 runs.
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ICLR 2021
-    published_conference: ICLR 2021
-    at_pub_value: 0.549
-    at_pub_std: 0.019
-    at_pub_source_arxiv: '2005.14612'
-    at_pub_source_title: Non-Local Graph Neural Networks
-    at_pub_source_date_iso: '2020-05-29'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2024-01-17'
-    value_gap_source_date_label: ICML 2024
-    gap_vs_at_pub: 0.0043000000000000815
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.6067
-    true_std: null
-    value_gap_source_arxiv: '2401.09125'
-    value_gap_source_title: Understanding Heterophily for Graph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.062000000000000055
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6067
-    sort_std: null
-    global_rank: 49
-    paper_rank: 81
-    rank_delta: 32
-    rank_delta_abs: 32
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GPRGNN
-    model_key: gprgnn
-    model_plain: GPRGNN
-    value: 0.5056
-    std: 0.0151
-    paper_value: 0.5056
-    paper_std: 0.0151
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 10 random splits with 48/32/20% proportions, 10 random seeds, average
-      over 100 runs.
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ICLR 2021
-    published_conference: ICLR 2021
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-05-28'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.5435
-    true_std: 0.0087
-    value_gap_source_arxiv: '2505.22362'
-    value_gap_source_title: Directed Homophily-Aware Graph Neural Network
-    value_gap_source_is_current_paper: false
-    value_gap: 0.037899999999999934
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.5435
-    sort_std: 0.0087
-    global_rank: 82
-    paper_rank: 96
-    rank_delta: 14
-    rank_delta_abs: 14
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.4378
-    std: 0.019
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.19420'
-    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
-      Over-Smoothing in Node Classification Tasks'
-    date: Jul 28, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-28'
-    venue: arXiv.org
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 140
-    sort_value: 0.4378
-    sort_std: 0.019
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MLP
-    model_key: mlp
-    model_plain: MLP
-    value: 0.3168
-    std: 0.019
-    paper_value: 0.3168
-    paper_std: 0.019
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 10 random splits with 48/32/20% proportions, 10 random seeds, average
-      over 100 runs.
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ICLR 2021
-    published_conference: ICLR 2021
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-05-18'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.393
-    true_std: 0.0079
-    value_gap_source_arxiv: '2605.20248'
-    value_gap_source_title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions
-      in Node Classification'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.07619999999999999
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.393
-    sort_std: 0.0079
-    global_rank: 188
-    paper_rank: 261
-    rank_delta: 73
-    rank_delta_abs: 73
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: H2GCN-2
-    model_key: h2gcn-2
-    model_plain: H2GCN-2
-    value: 0.379
-    std: 0.0202
-    paper_value: 0.379
-    paper_std: 0.0202
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 10 random splits with 48/32/20% proportions, 10 random seeds, average
-      over 100 runs.
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ICLR 2021
-    published_conference: ICLR 2021
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-11-21'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.379
-    true_std: 0.0202
-    value_gap_source_arxiv: '2211.11761'
-    value_gap_source_title: 'From Node Interaction to Hop Interaction: New Effective
-      and Scalable Graph Learning Paradigm'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.379
-    sort_std: 0.0202
-    global_rank: 201
-    paper_rank: 201
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: H2GCN-1
-    model_key: h2gcn-1
-    model_plain: H2GCN-1
-    value: 0.3642
-    std: 0.0189
-    paper_value: 0.3642
-    paper_std: 0.0189
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 10 random splits with 48/32/20% proportions, 10 random seeds, average
-      over 100 runs.
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ICLR 2021
-    published_conference: ICLR 2021
-    at_pub_value: 0.3642
-    at_pub_std: 0.0189
-    at_pub_source_arxiv: '2105.07634'
-    at_pub_source_title: Improving Graph Neural Networks with Simple Architecture
-      Design
-    at_pub_source_date_iso: '2021-05-17'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2022-11-21'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.3642
-    true_std: 0.0189
-    value_gap_source_arxiv: '2211.11761'
-    value_gap_source_title: 'From Node Interaction to Hop Interaction: New Effective
-      and Scalable Graph Learning Paradigm'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.3642
-    sort_std: 0.0189
-    global_rank: 222
-    paper_rank: 222
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: CPGNN-Cheby
-    model_key: cpgnn-cheby
-    model_plain: CPGNN-Cheby
-    value: 0.2925
-    std: 0.0417
-    paper_value: 0.2925
-    paper_std: 0.0417
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 10 random splits with 48/32/20% proportions, 10 random seeds, average
-      over 100 runs.
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ICLR 2021
-    published_conference: ICLR 2021
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-12-27'
-    value_gap_source_date_label: AAAI 2021
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.3095
-    true_std: 0.0124
-    value_gap_source_arxiv: '2112.13507'
-    value_gap_source_title: Block Modeling-Guided Graph Convolutional Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.017000000000000015
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.3095
-    sort_std: 0.0124
-    global_rank: 266
-    paper_rank: 272
-    rank_delta: 6
-    rank_delta_abs: 6
+    global_rank: 203
+    paper_rank: 452
+    rank_delta: 249
+    rank_delta_abs: 249
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2093,10 +1306,10 @@ results:
   - model: CPGNN-MLP
     model_key: cpgnn-mlp
     model_plain: CPGNN-MLP
-    value: 0.2913
-    std: 0.0157
-    paper_value: 0.2913
-    paper_std: 0.0157
+    value: 0.7993
+    std: 0.0612
+    paper_value: 0.7993
+    paper_std: 0.0612
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -2107,15 +1320,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 1
+    table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 10 random splits with 48/32/20% proportions, 10 random seeds, average
-      over 100 runs.
+    protocol_note: Accuracy on Cornell using the 10 fixed splits (48/32/20) as per
+      Pei et al.
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -2137,18 +1350,86 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.2913
-    true_std: 0.0157
+    true_value: 0.7993
+    true_std: 0.0612
     value_gap_source_arxiv: '2106.06134'
     value_gap_source_title: Is Homophily a Necessity for Graph Neural Networks?
     value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.2913
-    sort_std: 0.0157
-    global_rank: 273
-    paper_rank: 273
+    sort_value: 0.7993
+    sort_std: 0.0612
+    global_rank: 217
+    paper_rank: 217
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: CPGNN-Cheby
+    model_key: cpgnn-cheby
+    model_plain: CPGNN-Cheby
+    value: 0.7508
+    std: 0.0751
+    paper_value: 0.7508
+    paper_std: 0.0751
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Cornell using the 10 fixed splits (48/32/20) as per
+      Pei et al.
+    date: Jun 11, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-11'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2021-06-11'
+    value_gap_source_date_label: ICLR 2021
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7508
+    true_std: 0.0751
+    value_gap_source_arxiv: '2106.06134'
+    value_gap_source_title: Is Homophily a Necessity for Graph Neural Networks?
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7508
+    sort_std: 0.0751
+    global_rank: 290
+    paper_rank: 290
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2167,7 +1448,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id001
   dataset: Texas
   rows:
   - model: P^2GNN
@@ -2270,6 +1551,75 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
+  - model: GPR-GNN
+    model_key: gpr-gnn
+    model_plain: GPR-GNN
+    value: 0.8443
+    std: 0.041
+    paper_value: 0.8443
+    paper_std: 0.041
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Texas dataset using 10 random splits (48/32/20) with
+      10 seeds, averaged over 100 runs as per Pei et al.
+    date: Jun 11, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-11'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-05-29'
+    value_gap_source_date_label: ICML 2025
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9295
+    true_std: 0.0131
+    value_gap_source_arxiv: '2505.23014'
+    value_gap_source_title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in
+      the Perspective of A System of Hyperbolic Partial Differential Equations'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.08519999999999994
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9295
+    sort_std: 0.0131
+    global_rank: 39
+    paper_rank: 206
+    rank_delta: 167
+    rank_delta_abs: 167
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: MLP
     model_key: mlp
     model_plain: MLP
@@ -2287,15 +1637,15 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 10 random splits with 48/32/20% proportions; results averaged over
-      100 runs (10 seeds per split).
+    protocol_note: Accuracy on Texas dataset using 10 random splits (48/32/20) with
+      10 seeds, averaged over 100 runs as per Pei et al.
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -2328,10 +1678,10 @@ results:
     value_note: ''
     sort_value: 0.923
     sort_std: 0.007
-    global_rank: 47
-    paper_rank: 248
-    rank_delta: 201
-    rank_delta_abs: 201
+    global_rank: 45
+    paper_rank: 229
+    rank_delta: 184
+    rank_delta_abs: 184
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2364,10 +1714,284 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 76
+    global_rank: 73
     sort_value: 0.9001
     sort_std: 0.023
     comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: H2GCN-1
+    model_key: h2gcn-1
+    model_plain: H2GCN-1
+    value: 0.8486
+    std: 0.0677
+    paper_value: 0.8486
+    paper_std: 0.0677
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Texas dataset using 10 random splits (48/32/20) with
+      10 seeds, averaged over 100 runs as per Pei et al.
+    date: Jun 11, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-11'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: 0.8486
+    at_pub_std: null
+    at_pub_source_arxiv: '2012.03476'
+    at_pub_source_title: 'NCGNN: Node-Level Capsule Graph Neural Network for Semisupervised
+      Classification'
+    at_pub_source_date_iso: '2020-12-07'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2023-03-02'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8486
+    true_std: 0.067
+    value_gap_source_arxiv: '2303.01265'
+    value_gap_source_title: Steering Graph Neural Networks with Pinning Control
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8486
+    sort_std: 0.067
+    global_rank: 191
+    paper_rank: 191
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP + GCN
+    model_key: mlp + gcn
+    model_plain: MLP + GCN
+    value: 0.836
+    std: 0.0604
+    paper_value: 0.836
+    paper_std: 0.0604
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Texas dataset using 10 random splits (48/32/20) with
+      10 seeds, averaged over 100 runs as per Pei et al.
+    date: Jun 11, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-11'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2021-06-11'
+    value_gap_source_date_label: ICLR 2021
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.836
+    true_std: 0.0604
+    value_gap_source_arxiv: '2106.06134'
+    value_gap_source_title: Is Homophily a Necessity for Graph Neural Networks?
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.836
+    sort_std: 0.0604
+    global_rank: 225
+    paper_rank: 225
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: CPGNN-MLP
+    model_key: cpgnn-mlp
+    model_plain: CPGNN-MLP
+    value: 0.8262
+    std: 0.0688
+    paper_value: 0.8262
+    paper_std: 0.0688
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Texas dataset using 10 random splits (48/32/20) with
+      10 seeds, averaged over 100 runs as per Pei et al.
+    date: Jun 11, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-11'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2021-06-11'
+    value_gap_source_date_label: ICLR 2021
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8262
+    true_std: 0.0688
+    value_gap_source_arxiv: '2106.06134'
+    value_gap_source_title: Is Homophily a Necessity for Graph Neural Networks?
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8262
+    sort_std: 0.0688
+    global_rank: 242
+    paper_rank: 242
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: H2GCN-2
+    model_key: h2gcn-2
+    model_plain: H2GCN-2
+    value: 0.8216
+    std: 0.0528
+    paper_value: 0.8216
+    paper_std: 0.0528
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Texas dataset using 10 random splits (48/32/20) with
+      10 seeds, averaged over 100 runs as per Pei et al.
+    date: Jun 11, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-11'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: 0.8216
+    at_pub_std: null
+    at_pub_source_arxiv: '2012.03476'
+    at_pub_source_title: 'NCGNN: Node-Level Capsule Graph Neural Network for Semisupervised
+      Classification'
+    at_pub_source_date_iso: '2020-12-07'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2023-03-02'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8216
+    true_std: 0.052
+    value_gap_source_arxiv: '2303.01265'
+    value_gap_source_title: Steering Graph Neural Networks with Pinning Control
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8216
+    sort_std: 0.052
+    global_rank: 254
+    paper_rank: 254
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2389,15 +2013,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 10 random splits with 48/32/20% proportions; results averaged over
-      100 runs (10 seeds per split).
+    protocol_note: Accuracy on Texas dataset using 10 random splits (48/32/20) with
+      10 seeds, averaged over 100 runs as per Pei et al.
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -2429,10 +2053,78 @@ results:
     value_note: ''
     sort_value: 0.7933
     sort_std: 0.0447
-    global_rank: 348
-    paper_rank: 577
-    rank_delta: 229
-    rank_delta_abs: 229
+    global_rank: 323
+    paper_rank: 540
+    rank_delta: 217
+    rank_delta_abs: 217
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: CPGNN-Cheby
+    model_key: cpgnn-cheby
+    model_plain: CPGNN-Cheby
+    value: 0.7596
+    std: 0.0566
+    paper_value: 0.7596
+    paper_std: 0.0566
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Texas dataset using 10 random splits (48/32/20) with
+      10 seeds, averaged over 100 runs as per Pei et al.
+    date: Jun 11, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-11'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2021-12-27'
+    value_gap_source_date_label: AAAI 2021
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.7703
+    true_std: 0.0583
+    value_gap_source_arxiv: '2112.13507'
+    value_gap_source_title: Block Modeling-Guided Graph Convolutional Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.010699999999999932
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7703
+    sort_std: 0.0583
+    global_rank: 356
+    paper_rank: 374
+    rank_delta: 18
+    rank_delta_abs: 18
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2449,26 +2141,711 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
+- &id004
+  dataset: Wisconsin
+  rows:
+  - model: ACM-GCN
+    model_key: acm-gcn
+    model_plain: ACM-GCN
+    value: 0.958
+    std: 0.02
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2504.19785'
+    title: Heterophily-informed Message Passing
+    date: Apr 28, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-28'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/AaltoML/heterophily-imp
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.958
+    sort_std: 0.02
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GPRGNN
+    model_key: gprgnn
+    model_plain: GPRGNN
+    value: 0.938
+    std: 0.024
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2504.19785'
+    title: Heterophily-informed Message Passing
+    date: Apr 28, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-28'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/AaltoML/heterophily-imp
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.938
+    sort_std: 0.024
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: DMD++
+    model_key: dmd++
+    model_plain: DMD++
+    value: 0.919
+    std: 0.026
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2410.05593'
+    title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+    date: Oct 8, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-08'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.919
+    sort_std: 0.026
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.8629
+    std: 0.045
+    paper_value: 0.8629
+    paper_std: 0.045
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Wisconsin dataset using 10 random splits (48/32/20%)
+      with 10 seeds as per Pei et al.
+    date: Jun 11, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-11'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: 0.849
+    at_pub_std: 0.053
+    at_pub_source_arxiv: '2005.14612'
+    at_pub_source_title: Non-Local Graph Neural Networks
+    at_pub_source_date_iso: '2020-05-29'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2024-10-08'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: 0.013900000000000023
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.918
+    true_std: 0.031
+    value_gap_source_arxiv: '2410.05593'
+    value_gap_source_title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+    value_gap_source_is_current_paper: false
+    value_gap: 0.05510000000000004
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.918
+    sort_std: 0.031
+    global_rank: 4
+    paper_rank: 45
+    rank_delta: 41
+    rank_delta_abs: 41
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: H2GCN-1
+    model_key: h2gcn-1
+    model_plain: H2GCN-1
+    value: 0.8667
+    std: 0.0469
+    paper_value: 0.8667
+    paper_std: 0.0469
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Wisconsin dataset using 10 random splits (48/32/20%)
+      with 10 seeds as per Pei et al.
+    date: Jun 11, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-11'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: 0.8667
+    at_pub_std: 0.0469
+    at_pub_source_arxiv: '2105.07634'
+    at_pub_source_title: Improving Graph Neural Networks with Simple Architecture
+      Design
+    at_pub_source_date_iso: '2021-05-17'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2023-02-23'
+    value_gap_source_date_label: WWW 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8667
+    true_std: 0.0469
+    value_gap_source_arxiv: '2302.12357'
+    value_gap_source_title: 'Auto-HeG: Automated Graph Neural Network on Heterophilic
+      Graphs'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8667
+    sort_std: 0.0469
+    global_rank: 42
+    paper_rank: 42
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP + GCN
+    model_key: mlp + gcn
+    model_plain: MLP + GCN
+    value: 0.8643
+    std: 0.04
+    paper_value: 0.8643
+    paper_std: 0.04
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Wisconsin dataset using 10 random splits (48/32/20%)
+      with 10 seeds as per Pei et al.
+    date: Jun 11, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-11'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2021-06-11'
+    value_gap_source_date_label: ICLR 2021
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8643
+    true_std: 0.04
+    value_gap_source_arxiv: '2106.06134'
+    value_gap_source_title: Is Homophily a Necessity for Graph Neural Networks?
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8643
+    sort_std: 0.04
+    global_rank: 45
+    paper_rank: 45
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: H2GCN-2
+    model_key: h2gcn-2
+    model_plain: H2GCN-2
+    value: 0.8588
+    std: 0.0422
+    paper_value: 0.8588
+    paper_std: 0.0422
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Wisconsin dataset using 10 random splits (48/32/20%)
+      with 10 seeds as per Pei et al.
+    date: Jun 11, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-11'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-23'
+    value_gap_source_date_label: WWW 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8588
+    true_std: 0.0422
+    value_gap_source_arxiv: '2302.12357'
+    value_gap_source_title: 'Auto-HeG: Automated Graph Neural Network on Heterophilic
+      Graphs'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8588
+    sort_std: 0.0422
+    global_rank: 47
+    paper_rank: 47
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: CPGNN-MLP
+    model_key: cpgnn-mlp
+    model_plain: CPGNN-MLP
+    value: 0.8458
+    std: 0.0272
+    paper_value: 0.8458
+    paper_std: 0.0272
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Wisconsin dataset using 10 random splits (48/32/20%)
+      with 10 seeds as per Pei et al.
+    date: Jun 11, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-11'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2021-06-11'
+    value_gap_source_date_label: ICLR 2021
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8458
+    true_std: 0.0272
+    value_gap_source_arxiv: '2106.06134'
+    value_gap_source_title: Is Homophily a Necessity for Graph Neural Networks?
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8458
+    sort_std: 0.0272
+    global_rank: 60
+    paper_rank: 60
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GPR-GNN
+    model_key: gpr-gnn
+    model_plain: GPR-GNN
+    value: 0.8373
+    std: 0.0402
+    paper_value: 0.8373
+    paper_std: 0.0402
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Wisconsin dataset using 10 random splits (48/32/20%)
+      with 10 seeds as per Pei et al.
+    date: Jun 11, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-11'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-23'
+    value_gap_source_date_label: WWW 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.8412
+    true_std: 0.0345
+    value_gap_source_arxiv: '2302.12357'
+    value_gap_source_title: 'Auto-HeG: Automated Graph Neural Network on Heterophilic
+      Graphs'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0038999999999999035
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8412
+    sort_std: 0.0345
+    global_rank: 71
+    paper_rank: 73
+    rank_delta: 2
+    rank_delta_abs: 2
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.6176
+    std: 0.0615
+    paper_value: 0.6176
+    paper_std: 0.0615
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Wisconsin dataset using 10 random splits (48/32/20%)
+      with 10 seeds as per Pei et al.
+    date: Jun 11, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-11'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: 0.598
+    at_pub_std: 0.0699
+    at_pub_source_arxiv: '2105.07634'
+    at_pub_source_title: Improving Graph Neural Networks with Simple Architecture
+      Design
+    at_pub_source_date_iso: '2021-05-17'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2022-06-06'
+    value_gap_source_date_label: AAAI 2022
+    gap_vs_at_pub: 0.019600000000000062
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.831
+    true_std: 0.032
+    value_gap_source_arxiv: '2206.02386'
+    value_gap_source_title: Restructuring Graphs for Higher Homophily via Adaptive
+      Spectral Clustering
+    value_gap_source_is_current_paper: false
+    value_gap: 0.21339999999999992
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.831
+    sort_std: 0.032
+    global_rank: 79
+    paper_rank: 185
+    rank_delta: 106
+    rank_delta_abs: 106
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.8118
+    std: 0.0556
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.21247'
+    title: Graph Navier–Stokes Networks
+    date: May 20, 2026
+    date_display: May 2026
+    date_iso: '2026-05-20'
+    venue: null
+    codebase_url: https://github.com/Duckbluee/Graph-Navier-Stokes-Networks
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 90
+    sort_value: 0.8118
+    sort_std: 0.0556
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: CPGNN-Cheby
+    model_key: cpgnn-cheby
+    model_plain: CPGNN-Cheby
+    value: 0.7919
+    std: 0.028
+    paper_value: 0.7919
+    paper_std: 0.028
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Wisconsin dataset using 10 random splits (48/32/20%)
+      with 10 seeds as per Pei et al.
+    date: Jun 11, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-11'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2021-06-11'
+    value_gap_source_date_label: ICLR 2021
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7919
+    true_std: 0.028
+    value_gap_source_arxiv: '2106.06134'
+    value_gap_source_title: Is Homophily a Necessity for Graph Neural Networks?
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7919
+    sort_std: 0.028
+    global_rank: 105
+    paper_rank: 105
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
 results_grouped:
-- benchmark: Classic
-  datasets:
-  - *id001
 - benchmark: Heterophilic Graphs
   datasets:
+  - *id001
   - *id002
   - *id003
   - *id004
-  - *id005
-  - *id006
 datasets_by_scope:
 - scope: node-level
   label: Node-level
   benchmarks:
-  - benchmark: Classic
-    benchmark_slug: classic
-    datasets:
-    - dataset: Cora
-      dataset_slug: cora
   - benchmark: Heterophilic Graphs
     benchmark_slug: heterophilic-graphs
     datasets:
@@ -2478,11 +2855,8 @@ datasets_by_scope:
       dataset_slug: cornell
     - dataset: Actor
       dataset_slug: actor
-    - dataset: Chameleon
-      dataset_slug: chameleon
-    - dataset: Squirrel
-      dataset_slug: squirrel
-single_proposed_model: GCN
+    - dataset: Wisconsin
+      dataset_slug: wisconsin
 main_figure: /figures/2106.06134/main_figure.jpegoptim.jpg
 ---
 

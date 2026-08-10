@@ -57,7 +57,7 @@ abstract: 'Masked graph modeling (MGM) is a promising approach for molecular rep
   on 7 out of 8 targets in the widely used MD17 molecular property prediction benchmark.
   The code is released at.'
 codebase_url: https://github.com/WuChang0124/3D-GSRD
-extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+extraction_model: google/gemma-4-26B-A4B-it
 has_results: true
 paper_type: method
 proposed_models:
@@ -71,7 +71,7 @@ benchmark_coverage:
 - benchmark: Quantum Chemistry
   benchmark_slug: quantum-chemistry
   evaluated: 1
-  total: 3
+  total: 1
 task_categories:
 - graph_regression
 experiment_scopes:

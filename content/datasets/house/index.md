@@ -1503,6 +1503,12 @@ variants:
   - 12
   - 12
   milestones: &id001
+  - value: 0.7105
+    std: 0.0226
+    model: HAN (full batch)
+    arxiv_id: '2106.13264'
+    title: Hypergraph Benchmarks
+    date: '2021-06-24'
   - value: 0.747
     std: 0.0756
     model: mechanism (shared)
@@ -1510,6 +1516,12 @@ variants:
     title: Contrastive Learning for Non-Local Graphs with Multi-Resolution Structural
       Views
     date: '2023-08-19'
+  - value: 0.7718
+    std: 0.0235
+    model: HealHGNN
+    arxiv_id: '2603.00599'
+    title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian Local Exchanger
+    date: '2026-02-28'
   milestones_by_metric:
     Accuracy: *id001
     Completeness:

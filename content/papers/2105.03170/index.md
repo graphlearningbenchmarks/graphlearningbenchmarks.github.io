@@ -48,7 +48,7 @@ has_results: true
 paper_type: method
 proposed_models:
 - FedGL
-mrr: 0.0031
+mrr: 0.003
 adjusted_mrr: 0.001
 mrr_dataset_count: 1
 benchmark_categories:
@@ -122,7 +122,7 @@ results:
     venue: IEEE Transactions on Knowledge and Data Engineering
     codebase_url: https://github.com/YangLing0818/GraphOOD
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -156,7 +156,7 @@ results:
     venue: IEEE Transactions on Knowledge and Data Engineering
     codebase_url: https://github.com/YangLing0818/GraphOOD
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
@@ -257,8 +257,8 @@ results:
     value_note: ''
     sort_value: 0.734
     sort_std: null
-    global_rank: 326
-    paper_rank: 326
+    global_rank: 330
+    paper_rank: 330
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -358,8 +358,8 @@ results:
     value_note: ''
     sort_value: 0.705
     sort_std: null
-    global_rank: 652
-    paper_rank: 652
+    global_rank: 651
+    paper_rank: 651
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -426,8 +426,8 @@ results:
     value_note: ''
     sort_value: 0.676
     sort_std: null
-    global_rank: 761
-    paper_rank: 761
+    global_rank: 766
+    paper_rank: 766
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

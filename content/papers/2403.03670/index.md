@@ -43,8 +43,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - CDC
-mrr: 0.0171
-adjusted_mrr: 0.0171
+mrr: 0.0188
+adjusted_mrr: 0.0188
 mrr_dataset_count: 3
 benchmark_categories:
 - OGB
@@ -979,8 +979,8 @@ results:
     value_note: ''
     sort_value: 0.73
     sort_std: null
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1046,8 +1046,8 @@ results:
     value_note: ''
     sort_value: 0.686
     sort_std: null
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 28
+    paper_rank: 28
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1113,8 +1113,8 @@ results:
     value_note: ''
     sort_value: 0.64
     sort_std: null
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1182,8 +1182,8 @@ results:
     value_note: ''
     sort_value: 0.6283
     sort_std: 0.0159
-    global_rank: 42
-    paper_rank: 54
+    global_rank: 40
+    paper_rank: 52
     rank_delta: 12
     rank_delta_abs: 12
     rank_delta_direction: worse
@@ -1250,8 +1250,8 @@ results:
     value_note: ''
     sort_value: 0.474
     sort_std: null
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 52
+    paper_rank: 52
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1317,8 +1317,8 @@ results:
     value_note: ''
     sort_value: 0.307
     sort_std: null
-    global_rank: 57
-    paper_rank: 57
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1464,7 +1464,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 27
+    global_rank: 25
     sort_value: 0.9136
     sort_std: 0.007
     comparison_type: global_top
@@ -1498,7 +1498,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 177
+    global_rank: 165
     sort_value: 0.8269
     sort_std: null
     comparison_type: global_top
@@ -1562,8 +1562,8 @@ results:
     value_note: ''
     sort_value: 0.514
     sort_std: null
-    global_rank: 560
-    paper_rank: 560
+    global_rank: 548
+    paper_rank: 548
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1630,8 +1630,8 @@ results:
     value_note: ''
     sort_value: 0.4462
     sort_std: null
-    global_rank: 621
-    paper_rank: 622
+    global_rank: 606
+    paper_rank: 607
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -2528,7 +2528,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 47
+    global_rank: 45
     sort_value: 0.923
     sort_std: 0.007
     comparison_type: global_top
@@ -2561,7 +2561,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 76
+    global_rank: 73
     sort_value: 0.9001
     sort_std: 0.023
     comparison_type: global_top
@@ -2625,8 +2625,8 @@ results:
     value_note: ''
     sort_value: 0.672
     sort_std: null
-    global_rank: 535
-    paper_rank: 535
+    global_rank: 498
+    paper_rank: 498
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2692,8 +2692,8 @@ results:
     value_note: ''
     sort_value: 0.615
     sort_std: null
-    global_rank: 609
-    paper_rank: 609
+    global_rank: 572
+    paper_rank: 572
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2759,8 +2759,8 @@ results:
     value_note: ''
     sort_value: 0.599
     sort_std: null
-    global_rank: 630
-    paper_rank: 630
+    global_rank: 593
+    paper_rank: 593
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2782,108 +2782,6 @@ results:
 - &id001
   dataset: ogbn-products
   rows:
-  - model: H^2GFM
-    model_key: h^2gfm
-    model_plain: H^2GFM
-    value: 0.8677
-    std: 0.0101
-    metric: ACC
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2506.08298'
-    title: 'H$ $GFM: Towards unifying Homogeneity and Heterogeneity on Text-Attributed
-      Graphs'
-    date: Jun 10, 2025
-    date_display: Jun 2025
-    date_iso: '2025-06-10'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.8677
-    sort_std: 0.0101
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: OFA
-    model_key: ofa
-    model_plain: OFA
-    value: 0.8542
-    std: 0.0014
-    metric: ACC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    arxiv_id: '2506.08298'
-    title: 'H$ $GFM: Towards unifying Homogeneity and Heterogeneity on Text-Attributed
-      Graphs'
-    date: Jun 10, 2025
-    date_display: Jun 2025
-    date_iso: '2025-06-10'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.8542
-    sort_std: 0.0014
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphMAE
-    model_key: graphmae
-    model_plain: GraphMAE
-    value: 0.8007
-    std: 0.0028
-    metric: ACC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2506.08298'
-    title: 'H$ $GFM: Towards unifying Homogeneity and Heterogeneity on Text-Attributed
-      Graphs'
-    date: Jun 10, 2025
-    date_display: Jun 2025
-    date_iso: '2025-06-10'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.8007
-    sort_std: 0.0028
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
   - model: S^3GC
     model_key: s^3gc
     model_plain: S^3GC
@@ -2940,8 +2838,8 @@ results:
     value_note: ''
     sort_value: 0.402
     sort_std: null
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 1
+    paper_rank: 1
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2949,7 +2847,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: CDC
     model_key: cdc
@@ -3007,8 +2905,8 @@ results:
     value_note: ''
     sort_value: 0.366
     sort_std: null
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 2
+    paper_rank: 2
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3074,8 +2972,8 @@ results:
     value_note: ''
     sort_value: 0.357
     sort_std: null
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 3
+    paper_rank: 3
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3141,8 +3039,8 @@ results:
     value_note: ''
     sort_value: 0.32
     sort_std: null
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 4
+    paper_rank: 4
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3208,8 +3106,8 @@ results:
     value_note: ''
     sort_value: 0.304
     sort_std: null
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3275,8 +3173,8 @@ results:
     value_note: ''
     sort_value: 0.294
     sort_std: null
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 6
+    paper_rank: 6
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

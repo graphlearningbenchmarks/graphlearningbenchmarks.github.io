@@ -82,7 +82,7 @@ results:
     venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -115,7 +115,7 @@ results:
     venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -148,7 +148,7 @@ results:
     venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
@@ -181,7 +181,7 @@ results:
     venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 4

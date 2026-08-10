@@ -58,8 +58,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GTs
-mrr: 0.0332
-adjusted_mrr: 0.0222
+mrr: 0.0304
+adjusted_mrr: 0.0203
 mrr_dataset_count: 2
 benchmark_categories:
 - OGB
@@ -254,10 +254,10 @@ results:
     value_note: ''
     sort_value: 0.7311
     sort_std: 0.0011
-    global_rank: 38
-    paper_rank: 68
-    rank_delta: 30
-    rank_delta_abs: 30
+    global_rank: 37
+    paper_rank: 66
+    rank_delta: 29
+    rank_delta_abs: 29
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -323,8 +323,8 @@ results:
     value_note: ''
     sort_value: 0.7239
     sort_std: 0.0038
-    global_rank: 44
-    paper_rank: 50
+    global_rank: 43
+    paper_rank: 49
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -391,8 +391,8 @@ results:
     value_note: ''
     sort_value: 0.72356
     sort_std: 0.00323
-    global_rank: 46
-    paper_rank: 49
+    global_rank: 45
+    paper_rank: 48
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -458,10 +458,10 @@ results:
     value_note: ''
     sort_value: 0.7133
     sort_std: 0.0039
-    global_rank: 62
-    paper_rank: 92
-    rank_delta: 30
-    rank_delta_abs: 30
+    global_rank: 61
+    paper_rank: 90
+    rank_delta: 29
+    rank_delta_abs: 29
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -526,8 +526,8 @@ results:
     value_note: ''
     sort_value: 0.69013
     sort_std: 0.00259
-    global_rank: 81
-    paper_rank: 81
+    global_rank: 79
+    paper_rank: 79
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -594,8 +594,8 @@ results:
     value_note: ''
     sort_value: 0.68702
     sort_std: 0.00409
-    global_rank: 83
-    paper_rank: 83
+    global_rank: 81
+    paper_rank: 81
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -630,7 +630,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 95
+    global_rank: 93
     sort_value: 0.6731
     sort_std: 0.0031
     comparison_type: global_top
@@ -664,7 +664,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 97
+    global_rank: 95
     sort_value: 0.669
     sort_std: 0.002
     comparison_type: global_top
@@ -728,8 +728,8 @@ results:
     value_note: ''
     sort_value: 0.6611
     sort_std: 0.0098
-    global_rank: 106
-    paper_rank: 118
+    global_rank: 104
+    paper_rank: 116
     rank_delta: 12
     rank_delta_abs: 12
     rank_delta_direction: worse
@@ -797,8 +797,8 @@ results:
     value_note: ''
     sort_value: 0.651
     sort_std: 0.005
-    global_rank: 115
-    paper_rank: 135
+    global_rank: 113
+    paper_rank: 133
     rank_delta: 20
     rank_delta_abs: 20
     rank_delta_direction: worse
@@ -867,8 +867,8 @@ results:
     value_note: ''
     sort_value: 0.5839
     sort_std: 0.0073
-    global_rank: 130
-    paper_rank: 134
+    global_rank: 128
+    paper_rank: 132
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -904,7 +904,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 132
+    global_rank: 130
     sort_value: 0.5634
     sort_std: 0.00181
     comparison_type: global_top
@@ -957,9 +957,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Tango_GPS
-    model_key: tango_gps
-    model_plain: Tango_GPS
+  - model: TANGO-GPS
+    model_key: tango-gps
+    model_plain: TANGO-GPS
     value: 0.80113
     std: 0.00138
     metric: Accuracy
@@ -1418,8 +1418,8 @@ results:
     value_note: ''
     sort_value: 0.70587
     sort_std: 0.00447
-    global_rank: 72
-    paper_rank: 72
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1486,8 +1486,8 @@ results:
     value_note: ''
     sort_value: 0.69026
     sort_std: 0.01372
-    global_rank: 74
-    paper_rank: 75
+    global_rank: 73
+    paper_rank: 74
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -1529,10 +1529,10 @@ results:
     published_conference: NeurIPS 2022
     at_pub_value: 0.64716
     at_pub_std: 0.01553
-    at_pub_source_arxiv: '2201.12787'
-    at_pub_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
-    at_pub_source_date_iso: '2022-01-30'
-    at_pub_source_date_label: '2022'
+    at_pub_source_arxiv: '2201.09332'
+    at_pub_source_title: How Expressive are Transformers in Spectral Domain for Graphs?
+    at_pub_source_date_iso: '2022-01-23'
+    at_pub_source_date_label: TMLR 2022
     value_gap_source_date_iso: '2026-05-07'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -1554,8 +1554,8 @@ results:
     value_note: ''
     sort_value: 0.64716
     sort_std: 0.01553
-    global_rank: 85
-    paper_rank: 85
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1590,7 +1590,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 87
+    global_rank: 83
     sort_value: 0.63884
     sort_std: 0.0011
     comparison_type: global_top
@@ -1623,7 +1623,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 126
+    global_rank: 120
     sort_value: 0.20973
     sort_std: 4.0e-05
     comparison_type: global_top
@@ -1643,9 +1643,9 @@ results:
 - &id003
   dataset: MNIST
   rows:
-  - model: Schrödinger GNN
-    model_key: schrödinger gnn
-    model_plain: Schrödinger GNN
+  - model: Schrödinger
+    model_key: schrödinger
+    model_plain: Schrödinger
     value: 0.9913
     std: 0.0004
     metric: Accuracy
@@ -3502,8 +3502,8 @@ results:
     value_note: ''
     sort_value: 0.8685
     sort_std: 0.00057
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3570,8 +3570,8 @@ results:
     value_note: ''
     sort_value: 0.86848
     sort_std: 0.037
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3638,8 +3638,8 @@ results:
     value_note: ''
     sort_value: 0.86821
     sort_std: 0.0002
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3705,8 +3705,8 @@ results:
     value_note: ''
     sort_value: 0.86685
     sort_std: 0.00059
-    global_rank: 53
-    paper_rank: 53
+    global_rank: 52
+    paper_rank: 52
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3773,8 +3773,8 @@ results:
     value_note: ''
     sort_value: 0.8668
     sort_std: 0.00034
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 53
+    paper_rank: 53
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3814,12 +3814,12 @@ results:
     date_iso: '2022-05-25'
     published_venue: NeurIPS 2022
     published_conference: NeurIPS 2022
-    at_pub_value: 0.86581
-    at_pub_std: 0.00037
-    at_pub_source_arxiv: '2202.03036'
-    at_pub_source_title: Structure-Aware Transformer for Graph Representation Learning
-    at_pub_source_date_iso: '2022-02-07'
-    at_pub_source_date_label: ICML 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-05-07'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -3841,8 +3841,8 @@ results:
     value_note: ''
     sort_value: 0.86581
     sort_std: 0.00037
-    global_rank: 60
-    paper_rank: 60
+    global_rank: 58
+    paper_rank: 58
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3908,10 +3908,10 @@ results:
     value_note: ''
     sort_value: 0.86508
     sort_std: 0.00085
-    global_rank: 68
-    paper_rank: 95
-    rank_delta: 27
-    rank_delta_abs: 27
+    global_rank: 66
+    paper_rank: 92
+    rank_delta: 26
+    rank_delta_abs: 26
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3976,10 +3976,10 @@ results:
     value_note: ''
     sort_value: 0.85614
     sort_std: 0.00032
-    global_rank: 91
-    paper_rank: 123
-    rank_delta: 32
-    rank_delta_abs: 32
+    global_rank: 88
+    paper_rank: 119
+    rank_delta: 31
+    rank_delta_abs: 31
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -4043,8 +4043,8 @@ results:
     value_note: ''
     sort_value: 0.8559
     sort_std: 0.0001
-    global_rank: 92
-    paper_rank: 98
+    global_rank: 89
+    paper_rank: 95
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -4111,8 +4111,8 @@ results:
     value_note: ''
     sort_value: 0.78271
     sort_std: 0.00186
-    global_rank: 113
-    paper_rank: 113
+    global_rank: 109
+    paper_rank: 109
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4147,7 +4147,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 130
+    global_rank: 126
     sort_value: 0.5052
     sort_std: 0.0
     comparison_type: global_top
@@ -4180,7 +4180,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 131
+    global_rank: 127
     sort_value: 0.50519
     sort_std: 0.0
     comparison_type: global_top
@@ -4222,8 +4222,9 @@ results:
     venue: arXiv.org
     codebase_url: https://github.com/ocx-lab/FloydNet
     uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: initialization of the relationship tensor... constructed
+      by integrating node, edge, and graph-level features
     is_global_top: true
     global_rank: 1
     sort_value: 0.6143
@@ -4953,34 +4954,34 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: UniMol
-    model_key: unimol
-    model_plain: UniMol
-    value: 0.0693
+  - model: TGT-At (+RDKit)
+    model_key: tgt-at (+rdkit)
+    model_plain: TGT-At (+RDKit)
+    value: 0.0683
     std: null
     metric: MAE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: 77.0
+    params_millions: 203.0
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    arxiv_id: '2603.00568'
-    title: Enhancing Molecular Property Predictions by Learning from Bond Modelling
-      and Interactions
-    date: Feb 28, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-28'
-    venue: Accepted to ICLR 2026
-    codebase_url: ''
-    uses_external_data: false
+    arxiv_id: '2402.04538'
+    title: 'Triplet Interaction Improves Graph Transformers: Accurate Molecular Graph
+      Learning with Triplet Graph Transformers'
+    date: Feb 7, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-07'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/shamim-hussain/tgt
+    uses_external_data: true
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.0693
+    sort_value: 0.0683
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
@@ -5043,8 +5044,8 @@ results:
     value_note: ''
     sort_value: 0.0858
     sort_std: null
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5090,8 +5091,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-08-11'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
@@ -5102,19 +5103,19 @@ results:
     today_delta_significant: true
     true_value: 0.0862
     true_std: null
-    value_gap_source_arxiv: '2208.05863'
-    value_gap_source_title: 'GEM-2: Next Generation Molecular Property Prediction
-      Network by Modeling Full-range Many-body Interactions'
+    value_gap_source_arxiv: '2402.04538'
+    value_gap_source_title: 'Triplet Interaction Improves Graph Transformers: Accurate
+      Molecular Graph Learning with Triplet Graph Transformers'
     value_gap_source_is_current_paper: false
     value_gap: 0.0007000000000000062
     has_value_note: false
     value_note: ''
     sort_value: 0.0862
     sort_std: null
-    global_rank: 26
-    paper_rank: 29
-    rank_delta: 3
-    rank_delta_abs: 3
+    global_rank: 29
+    paper_rank: 33
+    rank_delta: 4
+    rank_delta_abs: 4
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -5179,8 +5180,8 @@ results:
     value_note: ''
     sort_value: 0.0864
     sort_std: null
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5226,32 +5227,33 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-03-02'
-    value_gap_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
-    surpassed_since_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.089
+    today_delta_significant: true
+    true_value: 0.0876
     true_std: null
-    value_gap_source_arxiv: '2303.01028'
-    value_gap_source_title: 'Specformer: Spectral Graph Neural Networks Meet Transformers'
+    value_gap_source_arxiv: '2402.04538'
+    value_gap_source_title: 'Triplet Interaction Improves Graph Transformers: Accurate
+      Molecular Graph Learning with Triplet Graph Transformers'
     value_gap_source_is_current_paper: false
-    value_gap: null
+    value_gap: 0.0013999999999999985
     has_value_note: false
     value_note: ''
-    sort_value: 0.089
+    sort_value: 0.0876
     sort_std: null
     global_rank: 35
-    paper_rank: 35
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
+    paper_rank: 38
+    rank_delta: 3
+    rank_delta_abs: 3
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -5313,8 +5315,8 @@ results:
     value_note: ''
     sort_value: 0.0938
     sort_std: null
-    global_rank: 47
-    paper_rank: 47
+    global_rank: 51
+    paper_rank: 51
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5380,8 +5382,8 @@ results:
     value_note: ''
     sort_value: 0.1083
     sort_std: null
-    global_rank: 56
-    paper_rank: 56
+    global_rank: 60
+    paper_rank: 60
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5448,8 +5450,8 @@ results:
     value_note: ''
     sort_value: 0.1152
     sort_std: null
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 62
+    paper_rank: 62
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5516,8 +5518,8 @@ results:
     value_note: ''
     sort_value: 0.1195
     sort_std: null
-    global_rank: 63
-    paper_rank: 73
+    global_rank: 67
+    paper_rank: 77
     rank_delta: 10
     rank_delta_abs: 10
     rank_delta_direction: worse
@@ -5584,8 +5586,8 @@ results:
     value_note: ''
     sort_value: 0.1195
     sort_std: null
-    global_rank: 62
-    paper_rank: 62
+    global_rank: 66
+    paper_rank: 66
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

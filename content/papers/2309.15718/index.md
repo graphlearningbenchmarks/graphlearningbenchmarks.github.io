@@ -82,7 +82,7 @@ benchmark_coverage:
 - benchmark: Quantum Chemistry
   benchmark_slug: quantum-chemistry
   evaluated: 1
-  total: 3
+  total: 1
 task_categories:
 - graph_regression
 experiment_scopes:
@@ -252,9 +252,9 @@ results:
     sort_value: 0.007
     sort_std: null
     global_rank: 21
-    paper_rank: 76
-    rank_delta: 55
-    rank_delta_abs: 55
+    paper_rank: 75
+    rank_delta: 54
+    rank_delta_abs: 54
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -322,9 +322,9 @@ results:
     sort_value: 0.05
     sort_std: null
     global_rank: 46
-    paper_rank: 107
-    rank_delta: 61
-    rank_delta_abs: 61
+    paper_rank: 105
+    rank_delta: 59
+    rank_delta_abs: 59
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -392,9 +392,9 @@ results:
     sort_value: 0.052
     sort_std: null
     global_rank: 52
-    paper_rank: 97
-    rank_delta: 45
-    rank_delta_abs: 45
+    paper_rank: 95
+    rank_delta: 43
+    rank_delta_abs: 43
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -459,10 +459,10 @@ results:
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 65
-    paper_rank: 100
-    rank_delta: 35
-    rank_delta_abs: 35
+    global_rank: 64
+    paper_rank: 98
+    rank_delta: 34
+    rank_delta_abs: 34
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -526,8 +526,8 @@ results:
     value_note: ''
     sort_value: 0.074
     sort_std: 0.012
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -593,8 +593,8 @@ results:
     value_note: ''
     sort_value: 0.09
     sort_std: 0.023
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -660,8 +660,8 @@ results:
     value_note: ''
     sort_value: 0.09
     sort_std: 0.009
-    global_rank: 71
-    paper_rank: 71
+    global_rank: 70
+    paper_rank: 70
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -727,8 +727,8 @@ results:
     value_note: ''
     sort_value: 0.271
     sort_std: 0.023
-    global_rank: 105
-    paper_rank: 105
+    global_rank: 103
+    paper_rank: 103
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

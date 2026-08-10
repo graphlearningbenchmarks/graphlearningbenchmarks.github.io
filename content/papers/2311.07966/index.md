@@ -36,8 +36,8 @@ paper_type: method
 proposed_models:
 - higher-order expander graph propagation
 - GIN + 3-Regular Bipartite Expander + Summation
-mrr: 0.0303
-adjusted_mrr: 0.0101
+mrr: 0.0263
+adjusted_mrr: 0.0088
 mrr_dataset_count: 1
 benchmark_categories:
 - OGB
@@ -52,7 +52,7 @@ experiment_scopes:
 - graph-level
 results:
 - &id001
-  dataset: Code
+  dataset: ogbg-code2
   rows:
   - model: GMN
     model_key: gmn
@@ -210,8 +210,8 @@ results:
     value_note: ''
     sort_value: 0.1519
     sort_std: 0.002
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -246,7 +246,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 34
+    global_rank: 39
     sort_value: 0.151
     sort_std: 0.002
     comparison_type: global_top
@@ -310,8 +310,8 @@ results:
     value_note: ''
     sort_value: 0.1497
     sort_std: 0.0015
-    global_rank: 35
-    paper_rank: 35
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -377,8 +377,8 @@ results:
     value_note: ''
     sort_value: 0.1495
     sort_std: 0.0023
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -444,8 +444,8 @@ results:
     value_note: ''
     sort_value: 0.1254
     sort_std: 0.0029
-    global_rank: 38
-    paper_rank: 38
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -475,8 +475,8 @@ datasets_by_scope:
   - benchmark: OGB
     benchmark_slug: ogb
     datasets:
-    - dataset: Code
-      dataset_slug: code
+    - dataset: ogbg-code2
+      dataset_slug: ogbg-code2
 main_figure: /figures/2311.07966/main_figure.jpegoptim.jpg
 ---
 

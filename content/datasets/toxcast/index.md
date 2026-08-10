@@ -13,7 +13,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 617
-result_count: 285
+result_count: 287
 best_model:
   model: GeomGCL
   value: 0.763
@@ -101,6 +101,11 @@ papers:
   title: Fine-tuning Graph Neural Networks by Preserving Graph Generative Patterns
   date_iso: '2023-12-21'
   venue: AAAI 2023
+- arxiv_id: '2311.01038'
+  title: 'Better with Less: A Data-Active Perspective on Pre-Training Graph Neural
+    Networks'
+  date_iso: '2023-11-02'
+  venue: NeurIPS 2023
 - arxiv_id: '2310.14753'
   title: Rethinking Tokenizer and Decoder in Masked Graph Modeling for Molecules
   date_iso: '2023-10-23'
@@ -207,10 +212,6 @@ papers:
     Prediction'
   date_iso: '2021-06-11'
   venue: ''
-- arxiv_id: '2106.05819'
-  title: Adversarial Graph Augmentation to Improve Graph Contrastive Learning
-  date_iso: '2021-06-10'
-  venue: NeurIPS 2021
 - arxiv_id: '2011.15069'
   title: Graph convolutions that can finally model local structure
   date_iso: '2020-11-30'
@@ -1666,18 +1667,18 @@ variants:
     metric_stds:
     - 0.011
     - null
-  row_count: 285
+  row_count: 287
   rows_json: /data/datasets/toxcast/scaffold-split-rows.json
   chart_json: /data/datasets/toxcast/scaffold-split-chart.json
   arch_counts:
     gnn: 179
-    hybrid: 60
+    hybrid: 61
     graph_transformer: 11
     llm: 10
     walk: 0
     traditional: 17
   metric_counts:
-  - 272
+  - 274
   - 21
   milestones: &id001
   - value: 0.7033

@@ -44,8 +44,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GCN
-mrr: 0.1787
-adjusted_mrr: 0.1787
+mrr: 0.178
+adjusted_mrr: 0.178
 mrr_dataset_count: 3
 benchmark_categories:
 - Classic
@@ -154,9 +154,9 @@ results:
     sort_value: 0.9412
     sort_std: 0.0008
     global_rank: 2
-    paper_rank: 580
-    rank_delta: 578
-    rank_delta_abs: 578
+    paper_rank: 543
+    rank_delta: 541
+    rank_delta_abs: 541
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -223,9 +223,9 @@ results:
     sort_value: 0.9398
     sort_std: 0.0022
     global_rank: 3
-    paper_rank: 561
-    rank_delta: 558
-    rank_delta_abs: 558
+    paper_rank: 526
+    rank_delta: 523
+    rank_delta_abs: 523
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -298,18 +298,17 @@ results:
     date_iso: '2022-11-29'
     published_venue: NeurIPS 2022
     published_conference: NeurIPS 2022
-    at_pub_value: 0.7964
-    at_pub_std: 0.0072
-    at_pub_source_arxiv: '2210.09789'
-    at_pub_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    at_pub_source_date_iso: '2022-10-18'
-    at_pub_source_date_label: ICLR 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2023-05-25'
     value_gap_source_date_label: AAAI 2023
-    gap_vs_at_pub: 0.14839999999999998
-    worse_than_at_pub: true
-    surpassed_since_pub: false
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
@@ -325,16 +324,15 @@ results:
     value_note: ''
     sort_value: 0.8626
     sort_std: 0.0056
-    global_rank: 355
-    paper_rank: 581
-    rank_delta: 226
-    rank_delta_abs: 226
+    global_rank: 326
+    paper_rank: 544
+    rank_delta: 218
+    rank_delta_abs: 218
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    comparison_source_arxiv: '2210.09789'
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: MLP
@@ -363,7 +361,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 394
+    global_rank: 365
     sort_value: 0.8463
     sort_std: null
     comparison_type: global_top

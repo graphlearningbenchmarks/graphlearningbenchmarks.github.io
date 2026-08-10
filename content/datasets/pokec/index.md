@@ -13,24 +13,19 @@ stats:
   avg_nodes: 662143.0
   avg_edges: 13806079.0
   num_classes: 2
-result_count: 80
+result_count: 67
 best_model:
-  model: Polynormer-r
-  value: 0.861
+  model: MoE-H2GCN
+  value: 0.8302
   metric: Accuracy
-  arxiv_id: '2403.01232'
-  paper_title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
+  arxiv_id: '2311.05185'
+  paper_title: Mixture of Weak & Strong Experts on Graphs
 papers:
 - arxiv_id: '2604.27387'
   title: 'Robust Learning on Heterogeneous Graphs with Heterophily: A Graph Structure
     Learning Approach'
   date_iso: '2026-04-30'
   venue: ''
-- arxiv_id: '2602.19622'
-  title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with Graph
-    Token Attention'
-  date_iso: '2026-02-23'
-  venue: WWW 2026
 - arxiv_id: '2504.13266'
   title: 'Graph Learning at Scale: Characterizing and Optimizing Pre-Propagation GNNs'
   date_iso: '2025-04-17'
@@ -39,10 +34,6 @@ papers:
   title: Equivariant Machine Learning on Graphs with Nonlinear Spectral Filters
   date_iso: '2024-06-03'
   venue: NeurIPS 2024
-- arxiv_id: '2403.01232'
-  title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
-  date_iso: '2024-03-02'
-  venue: ICLR 2024
 - arxiv_id: '2311.05185'
   title: Mixture of Weak & Strong Experts on Graphs
   date_iso: '2023-11-09'
@@ -88,58 +79,6 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
-  - model: Polynormer-r
-    model_plain: Polynormer-r
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2403.01232'
-    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
-    date: Mar 2, 2024
-    date_iso: '2024-03-02'
-    date_display: Mar 2024
-    codebase_url: https://github.com/cornell-zhang/Polynormer
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.861
-    metric_stds:
-    - 0.0005
-  - model: Polynormer
-    model_plain: Polynormer
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2403.01232'
-    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
-    date: Mar 2, 2024
-    date_iso: '2024-03-02'
-    date_display: Mar 2024
-    codebase_url: https://github.com/cornell-zhang/Polynormer
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8595
-    metric_stds:
-    - 0.0007
   - model: MoE-H2GCN
     model_plain: MoE-H2GCN
     is_baseline: true
@@ -160,7 +99,7 @@ variants:
     published_conference_slug: iclr
     published_venue: ICLR 2023
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.8302
@@ -186,7 +125,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2024
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.8296
@@ -212,7 +151,7 @@ variants:
     published_conference_slug: icml
     published_venue: ICML 2023
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.8283
@@ -532,32 +471,6 @@ variants:
     - 0.7894
     metric_stds:
     - 0.0011
-  - model: GPRGNN
-    model_plain: GPRGNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2403.01232'
-    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
-    date: Mar 2, 2024
-    date_iso: '2024-03-02'
-    date_display: Mar 2024
-    codebase_url: https://github.com/cornell-zhang/Polynormer
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7883
-    metric_stds:
-    - 0.0005
   - model: GPR-GNN
     model_plain: GPR-GNN
     is_baseline: true
@@ -584,33 +497,6 @@ variants:
     - 0.7883
     metric_stds:
     - 0.0005
-  - model: VecFormer
-    model_plain: VecFormer
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_iso: '2026-02-23'
-    date_display: Feb 2026
-    codebase_url: ''
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7806
-    metric_stds:
-    - 0.0021
   - model: MoE-SAGE
     model_plain: MoE-SAGE
     is_baseline: true
@@ -715,32 +601,6 @@ variants:
     - 0.7667
     metric_stds:
     - 0.0008
-  - model: NAGphormer
-    model_plain: NAGphormer
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2403.01232'
-    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
-    date: Mar 2, 2024
-    date_iso: '2024-03-02'
-    date_display: Mar 2024
-    codebase_url: https://github.com/cornell-zhang/Polynormer
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7659
-    metric_stds:
-    - 0.0025
   - model: GIN-skip
     model_plain: GIN-skip
     is_baseline: true
@@ -845,59 +705,6 @@ variants:
     - 0.7545
     metric_stds:
     - 0.0017
-  - model: DIFFormer
-    model_plain: DIFFormer
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2403.01232'
-    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
-    date: Mar 2, 2024
-    date_iso: '2024-03-02'
-    date_display: Mar 2024
-    codebase_url: https://github.com/cornell-zhang/Polynormer
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7389
-    metric_stds:
-    - 0.0035
-  - model: SGFormer
-    model_plain: SGFormer
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_iso: '2026-02-23'
-    date_display: Feb 2026
-    codebase_url: ''
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7376
-    metric_stds:
-    - 0.0024
   - model: GCN-skip
     model_plain: GCN-skip
     is_baseline: true
@@ -950,32 +757,6 @@ variants:
     - 0.7271
     metric_stds:
     - 0.0066
-  - model: GAT
-    model_plain: GAT
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2403.01232'
-    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
-    date: Mar 2, 2024
-    date_iso: '2024-03-02'
-    date_display: Mar 2024
-    codebase_url: https://github.com/cornell-zhang/Polynormer
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7223
-    metric_stds:
-    - 0.0018
   - model: GCN
     model_plain: GCN
     is_baseline: true
@@ -1028,32 +809,6 @@ variants:
     - 0.7124
     metric_stds:
     - 0.0046
-  - model: NodeFormer
-    model_plain: NodeFormer
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2403.01232'
-    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
-    date: Mar 2, 2024
-    date_iso: '2024-03-02'
-    date_display: Mar 2024
-    codebase_url: https://github.com/cornell-zhang/Polynormer
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.71
-    metric_stds:
-    - 0.013
   - model: FMP
     model_plain: FMP
     is_baseline: false
@@ -1184,33 +939,6 @@ variants:
     - 0.6832
     metric_stds:
     - 0.0045
-  - model: SIGN
-    model_plain: SIGN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_iso: '2026-02-23'
-    date_display: Feb 2026
-    codebase_url: ''
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.6801
-    metric_stds:
-    - 0.0025
   - model: APPNP
     model_plain: APPNP
     is_baseline: true
@@ -1237,32 +965,6 @@ variants:
     - 0.6691
     metric_stds:
     - 0.0146
-  - model: GOAT
-    model_plain: GOAT
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2403.01232'
-    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
-    date: Mar 2, 2024
-    date_iso: '2024-03-02'
-    date_display: Mar 2024
-    codebase_url: https://github.com/cornell-zhang/Polynormer
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.6637
-    metric_stds:
-    - 0.0094
   - model: GAT
     model_plain: GAT
     is_baseline: true
@@ -1341,33 +1043,6 @@ variants:
     - 0.64
     metric_stds:
     - 0.007
-  - model: GCN-NSampler
-    model_plain: GCN-NSampler
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_iso: '2026-02-23'
-    date_display: Feb 2026
-    codebase_url: ''
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.6375
-    metric_stds:
-    - 0.0077
   - model: BIND 1%
     model_plain: BIND 1%
     is_baseline: false
@@ -1394,18 +1069,332 @@ variants:
     - 0.635
     metric_stds:
     - 0.004
-  row_count: 80
+  - model: Van. GCN
+    model_plain: Van. GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2211.14383'
+    title: Interpreting Unfairness in Graph Neural Networks via Training Node Attribution
+    date: Nov 25, 2022
+    date_iso: '2022-11-25'
+    date_display: Nov 2022
+    codebase_url: https://github.com/yushundong/BIND
+    published_conference: AAAI 2022
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.632
+    metric_stds:
+    - 0.007
+  - model: BIND 10%
+    model_plain: BIND 10%
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2211.14383'
+    title: Interpreting Unfairness in Graph Neural Networks via Training Node Attribution
+    date: Nov 25, 2022
+    date_iso: '2022-11-25'
+    date_display: Nov 2022
+    codebase_url: https://github.com/yushundong/BIND
+    published_conference: AAAI 2022
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.629
+    metric_stds:
+    - 0.004
+  - model: MLP
+    model_plain: MLP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2202.03580'
+    title: Convolutional Neural Networks on Graphs with Chebyshev Approximation, Revisited
+    date: Feb 4, 2022
+    date_iso: '2022-02-04'
+    date_display: Feb 2022
+    codebase_url: https://github.com/ivam-he/ChebNetII
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6237
+    metric_stds:
+    - 0.0002
+  - model: GCN
+    model_plain: GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2301.09474'
+    title: 'Discovering Data Geometry: Energy-Driven Neural Diffusion'
+    date: Jan 23, 2023
+    date_iso: '2023-01-23'
+    date_display: Jan 2023
+    codebase_url: https://github.com/qitianwu/DIFFormer
+    published_conference: ICLR 2023
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6231
+    metric_stds:
+    - 0.0113
+  - model: EDITS
+    model_plain: EDITS
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2211.14383'
+    title: Interpreting Unfairness in Graph Neural Networks via Training Node Attribution
+    date: Nov 25, 2022
+    date_iso: '2022-11-25'
+    date_display: Nov 2022
+    codebase_url: https://github.com/yushundong/BIND
+    published_conference: AAAI 2022
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.616
+    metric_stds:
+    - 0.009
+  - model: MLP
+    model_plain: MLP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2301.09474'
+    title: 'Discovering Data Geometry: Energy-Driven Neural Diffusion'
+    date: Jan 23, 2023
+    date_iso: '2023-01-23'
+    date_display: Jan 2023
+    codebase_url: https://github.com/qitianwu/DIFFormer
+    published_conference: ICLR 2023
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6015
+    metric_stds:
+    - 0.0003
+  - model: AdaGCN
+    model_plain: AdaGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2311.05185'
+    title: Mixture of Weak & Strong Experts on Graphs
+    date: Nov 9, 2023
+    date_iso: '2023-11-09'
+    date_display: Nov 2023
+    codebase_url: https://github.com/VITA-Group/Graph-Mixture-of-Experts
+    published_conference: ICLR 2023
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.5592
+    metric_stds:
+    - 0.0035
+  - model: GIN
+    model_plain: GIN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2311.05185'
+    title: Mixture of Weak & Strong Experts on Graphs
+    date: Nov 9, 2023
+    date_iso: '2023-11-09'
+    date_display: Nov 2023
+    codebase_url: https://github.com/VITA-Group/Graph-Mixture-of-Experts
+    published_conference: ICLR 2023
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.5337
+    metric_stds:
+    - 0.0215
+  - model: LP
+    model_plain: LP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2301.09474'
+    title: 'Discovering Data Geometry: Energy-Driven Neural Diffusion'
+    date: Jan 23, 2023
+    date_iso: '2023-01-23'
+    date_display: Jan 2023
+    codebase_url: https://github.com/qitianwu/DIFFormer
+    published_conference: ICLR 2023
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.5273
+    metric_stds:
+    - null
+  - model: SGC
+    model_plain: SGC
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2301.09474'
+    title: 'Discovering Data Geometry: Energy-Driven Neural Diffusion'
+    date: Jan 23, 2023
+    date_iso: '2023-01-23'
+    date_display: Jan 2023
+    codebase_url: https://github.com/qitianwu/DIFFormer
+    published_conference: ICLR 2023
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.5203
+    metric_stds:
+    - 0.0084
+  - model: HGUL
+    model_plain: HGUL
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2604.27387'
+    title: 'Robust Learning on Heterogeneous Graphs with Heterophily: A Graph Structure
+      Learning Approach'
+    date: Apr 30, 2026
+    date_iso: '2026-04-30'
+    date_display: Apr 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.3305
+    metric_stds:
+    - 0.0057
+  - model: Simple-HGN
+    model_plain: Simple-HGN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2604.27387'
+    title: 'Robust Learning on Heterogeneous Graphs with Heterophily: A Graph Structure
+      Learning Approach'
+    date: Apr 30, 2026
+    date_iso: '2026-04-30'
+    date_display: Apr 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.3166
+    metric_stds:
+    - 0.0086
+  row_count: 67
   rows_json: /data/datasets/pokec/standard-split-rows.json
   chart_json: /data/datasets/pokec/standard-split-chart.json
   arch_counts:
-    gnn: 51
-    hybrid: 14
-    graph_transformer: 11
+    gnn: 46
+    hybrid: 13
+    graph_transformer: 4
     llm: 0
     walk: 0
     traditional: 4
   metric_counts:
-  - 80
+  - 67
   milestones: &id001
   - value: 0.8233
     std: 0.0028
@@ -1413,18 +1402,18 @@ variants:
     arxiv_id: '2202.03580'
     title: Convolutional Neural Networks on Graphs with Chebyshev Approximation, Revisited
     date: '2022-02-04'
+  - value: 0.8283
+    std: 0.0004
+    model: OptBasisGNN
+    arxiv_id: '2302.12432'
+    title: Graph Neural Networks with Learnable and Optimal Polynomial Bases
+    date: '2023-02-24'
   - value: 0.8302
     std: 0.003
     model: MoE-H2GCN
     arxiv_id: '2311.05185'
     title: Mixture of Weak & Strong Experts on Graphs
     date: '2023-11-09'
-  - value: 0.861
-    std: 0.0005
-    model: Polynormer-r
-    arxiv_id: '2403.01232'
-    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
-    date: '2024-03-02'
   milestones_by_metric:
     Accuracy: *id001
 ---

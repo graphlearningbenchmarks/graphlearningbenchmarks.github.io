@@ -12,18 +12,27 @@ stats:
   avg_nodes: 39.06
   avg_edges: 72.82
   num_classes: 2
-result_count: 589
+result_count: 641
 best_model:
-  model: GMN
-  value: 0.8225
+  model: MSH-GNN
+  value: 0.941
   metric: Accuracy
-  arxiv_id: '2002.09518'
-  paper_title: Memory-Based Graph Networks
+  arxiv_id: '2505.15015'
+  paper_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
 papers:
 - arxiv_id: '2606.00757'
   title: 'RADE: Random Add-Drop Edge as a Regularizer'
   date_iso: '2026-05-30'
   venue: ICML 2026
+- arxiv_id: '2605.13383'
+  title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+  date_iso: '2026-05-13'
+  venue: ''
+- arxiv_id: '2603.05004'
+  title: Poisoning the Inner Prediction Logic of Graph Neural Networks for Clean-Label
+    Backdoor Attacks
+  date_iso: '2026-03-05'
+  venue: TMLR 2026
 - arxiv_id: '2511.06216'
   title: Adaptive Multi-view Graph Contrastive Learning via Fractional-order Neural
     Diffusion Networks
@@ -42,6 +51,10 @@ papers:
     Study on Oversquashing in Simplicial Message-Passing'
   date_iso: '2025-06-06'
   venue: ICLR 2025
+- arxiv_id: '2505.15015'
+  title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
+  date_iso: '2025-05-21'
+  venue: ''
 - arxiv_id: '2505.11356'
   title: Fractal Graph Contrastive Learning
   date_iso: '2025-05-16'
@@ -97,6 +110,14 @@ papers:
   title: 'TopER: Topological Embeddings in Graph Representation Learning'
   date_iso: '2024-10-02'
   venue: NeurIPS 2024
+- arxiv_id: '2408.13471'
+  title: Disentangled Generative Graph Representation Learning
+  date_iso: '2024-08-24'
+  venue: ''
+- arxiv_id: '2408.11370'
+  title: 'Graph Classification via Reference Distribution Learning: Theory and Practice'
+  date_iso: '2024-08-21'
+  venue: NeurIPS 2024
 - arxiv_id: '2407.18480'
   title: Scalable Graph Compressed Convolutions
   date_iso: '2024-07-26'
@@ -124,6 +145,10 @@ papers:
   title: 'DiGRAF: Diffeomorphic Graph-Adaptive Activation Function'
   date_iso: '2024-07-02'
   venue: NeurIPS 2024
+- arxiv_id: '2407.00494'
+  title: Graph Neural Networks Gone Hogwild
+  date_iso: '2024-06-29'
+  venue: ICLR 2024
 - arxiv_id: '2406.15523'
   title: 'Unifying Unsupervised Graph-Level Anomaly Detection and Out-of-Distribution
     Detection: A Benchmark'
@@ -200,6 +225,11 @@ papers:
   title: Graph-level Representation Learning with Joint-Embedding Predictive Architectures
   date_iso: '2023-09-27'
   venue: TMLR 2023
+- arxiv_id: '2309.00738'
+  title: Rethinking the Power of Graph Canonization in Graph Representation Learning
+    with Stability
+  date_iso: '2023-09-01'
+  venue: ''
 - arxiv_id: '2308.08235'
   title: 'The Expressive Power of Graph Neural Networks: A Survey'
   date_iso: '2023-08-16'
@@ -208,6 +238,10 @@ papers:
   title: 'Weisfeiler and Lehman Go Paths: Learning Topological Features via Path Complexes'
   date_iso: '2023-08-13'
   venue: AAAI 2023
+- arxiv_id: '2307.01053'
+  title: 'ENGAGE: Explanation Guided Data Augmentation for Graph Representation Learning'
+  date_iso: '2023-07-03'
+  venue: ''
 - arxiv_id: '2306.15963'
   title: Fused Gromov-Wasserstein Graph Mixup for Graph-level Classifications
   date_iso: '2023-06-28'
@@ -250,6 +284,10 @@ papers:
   title: GNNBenchmark
   date_iso: '2023-01-01'
   venue: JMLR 2023
+- arxiv_id: '2211.15779'
+  title: Revisiting Over-smoothing and Over-squashing using Ollivier's Ricci Curvature
+  date_iso: '2022-11-28'
+  venue: ICML 2022
 - arxiv_id: '2211.06218'
   title: Total Variation Graph Neural Networks
   date_iso: '2022-11-11'
@@ -258,6 +296,10 @@ papers:
   title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing in GNNs'
   date_iso: '2022-10-21'
   venue: ICLR 2022
+- arxiv_id: '2210.02636'
+  title: Geodesic Graph Neural Network for Efficient Graph Representation Learning
+  date_iso: '2022-10-06'
+  venue: NeurIPS 2022
 - arxiv_id: '2206.14418'
   title: Optimization-Induced Graph Implicit Nonlinear Diffusion
   date_iso: '2022-06-29'
@@ -365,6 +407,10 @@ papers:
   title: Graph Information Bottleneck for Subgraph Recognition
   date_iso: '2020-10-12'
   venue: ICLR 2020
+- arxiv_id: '2010.00238'
+  title: Multi-grained Semantics-aware Graph Neural Networks
+  date_iso: '2020-10-01'
+  venue: ''
 - arxiv_id: '2009.10564'
   title: 'GraphCrop: Subgraph Cropping for Graph Classification'
   date_iso: '2020-09-22'
@@ -428,10 +474,6 @@ papers:
   title: Graph Neural Networks With Convolutional ARMA Filters
   date_iso: '2019-01-05'
   venue: ''
-- arxiv_id: '1810.00826'
-  title: How Powerful are Graph Neural Networks?
-  date_iso: '2018-10-01'
-  venue: ICLR 2018
 - arxiv_id: '1805.08090'
   title: Graph Capsule Convolutional Neural Networks
   date_iso: '2018-05-21'
@@ -469,6 +511,66 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
+  - model: MSH-GNN
+    model_plain: MSH-GNN
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.15015'
+    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
+    date: May 21, 2025
+    date_iso: '2025-05-21'
+    date_display: May 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.941
+    - null
+    - null
+    metric_stds:
+    - 0.033
+    - null
+    - null
+  - model: GRDL
+    model_plain: GRDL
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2408.11370'
+    title: 'Graph Classification via Reference Distribution Learning: Theory and Practice'
+    date: Aug 21, 2024
+    date_iso: '2024-08-21'
+    date_display: Aug 2024
+    codebase_url: ''
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.826
+    - null
+    - null
+    metric_stds:
+    - 0.012
+    - null
+    - null
   - model: GMN
     model_plain: GMN
     is_baseline: false
@@ -489,7 +591,7 @@ variants:
     published_conference_slug: iclr
     published_venue: ICLR 2020
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.8225
@@ -497,6 +599,36 @@ variants:
     - null
     metric_stds:
     - null
+    - null
+    - null
+  - model: GRDL-W
+    model_plain: GRDL-W
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2408.11370'
+    title: 'Graph Classification via Reference Distribution Learning: Theory and Practice'
+    date: Aug 21, 2024
+    date_iso: '2024-08-21'
+    date_display: Aug 2024
+    codebase_url: ''
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.821
+    - null
+    - null
+    metric_stds:
+    - 0.009
     - null
     - null
   - model: CI-GNN
@@ -520,7 +652,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.82
@@ -551,7 +683,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.8196
@@ -582,7 +714,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.8161
@@ -590,6 +722,36 @@ variants:
     - null
     metric_stds:
     - 0.0232
+    - null
+    - null
+  - model: GRDL-2
+    model_plain: GRDL-2
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2408.11370'
+    title: 'Graph Classification via Reference Distribution Learning: Theory and Practice'
+    date: Aug 21, 2024
+    date_iso: '2024-08-21'
+    date_display: Aug 2024
+    codebase_url: ''
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.814
+    - null
+    - null
+    metric_stds:
+    - 0.021
     - null
     - null
   - model: MemGNN
@@ -643,7 +805,7 @@ variants:
     published_conference_slug: www
     published_venue: WWW 2021
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.8134
@@ -651,6 +813,66 @@ variants:
     - null
     metric_stds:
     - 0.0093
+    - null
+    - null
+  - model: GRDL-3
+    model_plain: GRDL-3
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2408.11370'
+    title: 'Graph Classification via Reference Distribution Learning: Theory and Practice'
+    date: Aug 21, 2024
+    date_iso: '2024-08-21'
+    date_display: Aug 2024
+    codebase_url: ''
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.813
+    - null
+    - null
+    metric_stds:
+    - 0.029
+    - null
+    - null
+  - model: GRDL-S
+    model_plain: GRDL-S
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2408.11370'
+    title: 'Graph Classification via Reference Distribution Learning: Theory and Practice'
+    date: Aug 21, 2024
+    date_iso: '2024-08-21'
+    date_display: Aug 2024
+    codebase_url: ''
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.811
+    - null
+    - null
+    metric_stds:
+    - 0.014
     - null
     - null
   - model: GIN+GPL
@@ -674,7 +896,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.8098
@@ -682,6 +904,36 @@ variants:
     - null
     metric_stds:
     - 0.0208
+    - null
+    - null
+  - model: VEPM
+    model_plain: VEPM
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2408.13471'
+    title: Disentangled Generative Graph Representation Learning
+    date: Aug 24, 2024
+    date_iso: '2024-08-24'
+    date_display: Aug 2024
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.805
+    - null
+    - null
+    metric_stds:
+    - 0.028
     - null
     - null
   - model: pathGCN
@@ -705,7 +957,7 @@ variants:
     published_conference_slug: aaai
     published_venue: AAAI 2023
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.804
@@ -735,7 +987,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.801
@@ -807,6 +1059,66 @@ variants:
     - 0.02
     - null
     - null
+  - model: WITTOPOPOOL
+    model_plain: WITTOPOPOOL
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2408.11370'
+    title: 'Graph Classification via Reference Distribution Learning: Theory and Practice'
+    date: Aug 21, 2024
+    date_iso: '2024-08-21'
+    date_display: Aug 2024
+    codebase_url: ''
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8
+    - null
+    - null
+    metric_stds:
+    - 0.032
+    - null
+    - null
+  - model: Wit-TopoPool
+    model_plain: Wit-TopoPool
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.15015'
+    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
+    date: May 21, 2025
+    date_iso: '2025-05-21'
+    date_display: May 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8
+    - null
+    - null
+    metric_stds:
+    - 0.032
+    - null
+    - null
   - model: novel method to learn motif-level feature embedding
     model_plain: novel method to learn motif-level feature embedding
     is_baseline: false
@@ -828,7 +1140,7 @@ variants:
     published_conference_slug: icml
     published_venue: ICML 2022
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.799
@@ -858,7 +1170,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2024
     uses_external_data: true
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.7986
@@ -918,7 +1230,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.798
@@ -948,7 +1260,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2024
     uses_external_data: true
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.7973
@@ -978,7 +1290,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2024
     uses_external_data: true
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.7973
@@ -1009,7 +1321,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.795
@@ -1191,7 +1503,7 @@ variants:
     published_conference_slug: tmlr
     published_venue: TMLR 2024
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.79
@@ -1201,8 +1513,8 @@ variants:
     - 0.053
     - null
     - null
-  - model: GIN-AK+
-    model_plain: GIN-AK+
+  - model: ASAP
+    model_plain: ASAP
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -1210,26 +1522,55 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2312.08671'
-    title: 'Permutation-Invariant graph partitioning: How graph neural networks capture
-      structural interactions?'
-    date: Dec 14, 2023
-    date_iso: '2023-12-14'
-    date_display: Dec 2023
-    codebase_url: ''
+    arxiv_id: '2010.00238'
+    title: Multi-grained Semantics-aware Graph Neural Networks
+    date: Oct 1, 2020
+    date_iso: '2020-10-01'
+    date_display: Oct 2020
+    codebase_url: https://github.com/zhiqiangzhongddu/AdamGNN
     published_conference: ''
     published_conference_short: ''
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
-    - 0.789
+    - 0.7892
     - null
     - null
     metric_stds:
-    - 0.054
+    - 0.0145
+    - null
+    - null
+  - model: StructPool
+    model_plain: StructPool
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2010.00238'
+    title: Multi-grained Semantics-aware Graph Neural Networks
+    date: Oct 1, 2020
+    date_iso: '2020-10-01'
+    date_display: Oct 2020
+    codebase_url: https://github.com/zhiqiangzhongddu/AdamGNN
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7884
+    - null
+    - null
+    metric_stds:
+    - 0.017
     - null
     - null
   - model: PIN
@@ -1253,7 +1594,7 @@ variants:
     published_conference_slug: aaai
     published_venue: AAAI 2023
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.788
@@ -1343,7 +1684,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2024
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.7863
@@ -1433,7 +1774,7 @@ variants:
     published_conference_slug: kdd
     published_venue: KDD 2023
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.7859
@@ -1471,6 +1812,36 @@ variants:
     - null
     metric_stds:
     - 0.0059
+    - null
+    - null
+  - model: DisenSemi
+    model_plain: DisenSemi
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2408.13471'
+    title: Disentangled Generative Graph Representation Learning
+    date: Aug 24, 2024
+    date_iso: '2024-08-24'
+    date_display: Aug 2024
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.784
+    - null
+    - null
+    metric_stds:
+    - 0.005
     - null
     - null
   - model: IGNN-Solver
@@ -1654,352 +2025,18 @@ variants:
     - 0.028
     - null
     - null
-  - model: HC-GAE
-    model_plain: HC-GAE
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2405.14742'
-    title: 'HC-GAE: The Hierarchical Cluster-based Graph Auto-Encoder for Graph Representation
-      Learning'
-    date: May 23, 2024
-    date_iso: '2024-05-23'
-    date_display: May 2024
-    codebase_url: ''
-    published_conference: NeurIPS 2024
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7813
-    - null
-    - null
-    metric_stds:
-    - 0.0137
-    - null
-    - null
-  - model: Graphormer-Neighbor
-    model_plain: Graphormer-Neighbor
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2305.13987'
-    title: On Structural Expressive Power of Graph Transformers
-    date: May 23, 2023
-    date_iso: '2023-05-23'
-    date_display: May 2023
-    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
-    published_conference: KDD 2023
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7812
-    - null
-    - null
-    metric_stds:
-    - 0.0362
-    - null
-    - null
-  - model: SpeGCL
-    model_plain: SpeGCL
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2410.10365'
-    title: 'SpeGCL: Self-supervised Graph Spectrum Contrastive Learning without Positive
-      Samples'
-    date: Oct 14, 2024
-    date_iso: '2024-10-14'
-    date_display: Oct 2024
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7805
-    - null
-    - null
-    metric_stds:
-    - 0.0123
-    - null
-    - null
-  - model: DiGRAF
-    model_plain: DiGRAF
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2407.02013'
-    title: 'DiGRAF: Diffeomorphic Graph-Adaptive Activation Function'
-    date: Jul 2, 2024
-    date_iso: '2024-07-02'
-    date_display: Jul 2024
-    codebase_url: https://github.com/ipsitmantri/DiGRAF
-    published_conference: NeurIPS 2024
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.779
-    - null
-    - null
-    metric_stds:
-    - 0.034
-    - null
-    - null
-  - model: MIGNN
-    model_plain: MIGNN
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2410.08524'
-    title: 'IGNN-Solver: A Graph Neural Solver for Implicit Graph Neural Networks'
-    date: Oct 11, 2024
-    date_iso: '2024-10-11'
-    date_display: Oct 2024
-    codebase_url: https://github.com/landrarwolf/IGNN-Solver
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.779
-    - null
-    - null
-    metric_stds:
-    - 0.026
-    - null
-    - null
-  - model: UFGPool-Sum
-    model_plain: UFGPool-Sum
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2102.06986'
-    title: How Framelets Enhance Graph Neural Networks
-    date: Feb 13, 2021
-    date_iso: '2021-02-13'
-    date_display: Feb 2021
-    codebase_url: ''
-    published_conference: ICML 2021
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2021
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7777
-    - null
-    - null
-    metric_stds:
-    - 0.026
-    - null
-    - null
-  - model: Graph U-Net
-    model_plain: Graph U-Net
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2008.12578'
-    title: Graph Convolutional Neural Networks with Node Transition Probability-based
-      Message Passing and DropNode Regularization
-    date: Aug 28, 2020
-    date_iso: '2020-08-28'
-    date_display: Aug 2020
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7768
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-  - model: TopKPool
-    model_plain: TopKPool
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2002.09518'
-    title: Memory-Based Graph Networks
-    date: Feb 21, 2020
-    date_iso: '2020-02-21'
-    date_display: Feb 2020
-    codebase_url: https://github.com/amirkhas/GraphMemoryNet
-    published_conference: ICLR 2020
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2020
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7768
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-  - model: gPool
-    model_plain: gPool
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2101.08170'
-    title: 'SUGAR: Subgraph Neural Network with Reinforcement Pooling and Self-Supervised
-      Mutual Information Mechanism'
-    date: Jan 20, 2021
-    date_iso: '2021-01-20'
-    date_display: Jan 2021
-    codebase_url: https://github.com/RingBDStack/SUGAR
-    published_conference: WWW 2021
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2021
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7768
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-  - model: g-U-Nets
-    model_plain: g-U-Nets
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2109.11338'
-    title: Orthogonal Graph Neural Networks
-    date: Sep 23, 2021
-    date_iso: '2021-09-23'
-    date_display: Sep 2021
-    codebase_url: ''
-    published_conference: AAAI 2021
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2021
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7768
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-  - model: SE2P-C2
-    model_plain: SE2P-C2
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2406.11714'
-    title: Scalable Expressiveness through Preprocessed Graph Perturbations
-    date: Jun 17, 2024
-    date_iso: '2024-06-17'
-    date_display: Jun 2024
-    codebase_url: https://github.com/Danial-sb/SE2P
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.776
-    - null
-    - null
-    metric_stds:
-    - 0.063
-    - null
-    - null
-  row_count: 589
+  row_count: 641
   rows_json: /data/datasets/proteins/10-fold-cv-rows.json
   chart_json: /data/datasets/proteins/10-fold-cv-chart.json
   arch_counts:
-    gnn: 346
-    hybrid: 104
-    graph_transformer: 24
+    gnn: 373
+    hybrid: 120
+    graph_transformer: 25
     llm: 1
     walk: 7
-    traditional: 85
+    traditional: 91
   metric_counts:
-  - 566
+  - 618
   - 5
   - 18
   milestones: &id001
@@ -2021,6 +2058,18 @@ variants:
     arxiv_id: '2002.09518'
     title: Memory-Based Graph Networks
     date: '2020-02-21'
+  - value: 0.826
+    std: 0.012
+    model: GRDL
+    arxiv_id: '2408.11370'
+    title: 'Graph Classification via Reference Distribution Learning: Theory and Practice'
+    date: '2024-08-21'
+  - value: 0.941
+    std: 0.033
+    model: MSH-GNN
+    arxiv_id: '2505.15015'
+    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
+    date: '2025-05-21'
   milestones_by_metric:
     Accuracy: *id001
     AP:

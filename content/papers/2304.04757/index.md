@@ -61,16 +61,16 @@ has_results: true
 paper_type: method
 proposed_models:
 - LEFTNet
-mrr: 0.0598
-adjusted_mrr: 0.0398
-mrr_dataset_count: 2
+mrr: 0.0085
+adjusted_mrr: 0.0028
+mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
 benchmark_coverage:
 - benchmark: Quantum Chemistry
   benchmark_slug: quantum-chemistry
-  evaluated: 2
-  total: 3
+  evaluated: 1
+  total: 1
 task_categories:
 - graph_regression
 experiment_scopes:
@@ -240,9 +240,9 @@ results:
     sort_value: 0.0007
     sort_std: null
     global_rank: 5
-    paper_rank: 120
-    rank_delta: 115
-    rank_delta_abs: 115
+    paper_rank: 118
+    rank_delta: 113
+    rank_delta_abs: 113
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -310,9 +310,9 @@ results:
     sort_value: 0.0009
     sort_std: null
     global_rank: 7
-    paper_rank: 120
-    rank_delta: 113
-    rank_delta_abs: 113
+    paper_rank: 118
+    rank_delta: 111
+    rank_delta_abs: 111
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -351,18 +351,17 @@ results:
     date_iso: '2023-04-07'
     published_venue: NeurIPS 2023
     published_conference: NeurIPS 2023
-    at_pub_value: 0.053
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2210.16518'
-    at_pub_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural network
-      with vector-scalar interactive message passing for molecules'
-    at_pub_source_date_iso: '2022-10-29'
-    at_pub_source_date_label: '2022'
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2024-07-02'
     value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 2.247
-    worse_than_at_pub: true
-    surpassed_since_pub: false
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
@@ -380,15 +379,14 @@ results:
     sort_value: 0.0046
     sort_std: null
     global_rank: 14
-    paper_rank: 120
-    rank_delta: 106
-    rank_delta_abs: 106
+    paper_rank: 118
+    rank_delta: 104
+    rank_delta_abs: 104
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
-    comparison_source_arxiv: '2210.16518'
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: PaiNN
@@ -450,9 +448,9 @@ results:
     sort_value: 0.01
     sort_std: null
     global_rank: 22
-    paper_rank: 122
-    rank_delta: 100
-    rank_delta_abs: 100
+    paper_rank: 121
+    rank_delta: 99
+    rank_delta_abs: 99
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -520,9 +518,9 @@ results:
     sort_value: 0.05
     sort_std: null
     global_rank: 46
-    paper_rank: 107
-    rank_delta: 61
-    rank_delta_abs: 61
+    paper_rank: 105
+    rank_delta: 59
+    rank_delta_abs: 59
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -561,20 +559,21 @@ results:
     date_iso: '2023-04-07'
     published_venue: NeurIPS 2023
     published_conference: NeurIPS 2023
-    at_pub_value: 0.1453
+    at_pub_value: 0.085
     at_pub_std: null
-    at_pub_source_arxiv: '2302.05743'
-    at_pub_source_title: Is Distance Matrix Enough for Geometric Deep Learning?
-    at_pub_source_date_iso: '2023-02-11'
-    at_pub_source_date_label: NeurIPS 2023
+    at_pub_source_arxiv: '2210.16518'
+    at_pub_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural network
+      with vector-scalar interactive message passing for molecules'
+    at_pub_source_date_iso: '2022-10-29'
+    at_pub_source_date_label: '2022'
     value_gap_source_date_iso: '2024-02-07'
     value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.00030000000000002247
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: true
+    gap_vs_at_pub: 0.059999999999999984
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: true
+    improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.0502
@@ -589,14 +588,15 @@ results:
     sort_value: 0.0502
     sort_std: null
     global_rank: 47
-    paper_rank: 93
-    rank_delta: 46
-    rank_delta_abs: 46
+    paper_rank: 91
+    rank_delta: 44
+    rank_delta_abs: 44
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Is Distance Matrix Enough for Geometric Deep Learning?
-    comparison_source_arxiv: '2302.05743'
+    comparison_type: behind
+    comparison_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
+      network with vector-scalar interactive message passing for molecules'
+    comparison_source_arxiv: '2210.16518'
     is_best: false
     is_std_outlier: false
   - model: MACE
@@ -629,18 +629,17 @@ results:
     date_iso: '2023-04-07'
     published_venue: NeurIPS 2023
     published_conference: NeurIPS 2023
-    at_pub_value: 0.0507
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2210.16518'
-    at_pub_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural network
-      with vector-scalar interactive message passing for molecules'
-    at_pub_source_date_iso: '2022-10-29'
-    at_pub_source_date_label: '2022'
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2024-02-07'
     value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 2.1493
-    worse_than_at_pub: true
-    surpassed_since_pub: false
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
@@ -658,15 +657,14 @@ results:
     sort_value: 0.0507
     sort_std: null
     global_rank: 48
-    paper_rank: 120
-    rank_delta: 72
-    rank_delta_abs: 72
+    paper_rank: 118
+    rank_delta: 70
+    rank_delta_abs: 70
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
-    comparison_source_arxiv: '2210.16518'
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: SphereNet
@@ -727,9 +725,9 @@ results:
     sort_value: 0.052
     sort_std: null
     global_rank: 52
-    paper_rank: 96
-    rank_delta: 44
-    rank_delta_abs: 44
+    paper_rank: 94
+    rank_delta: 42
+    rank_delta_abs: 42
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -796,9 +794,9 @@ results:
     sort_value: 0.052
     sort_std: null
     global_rank: 51
-    paper_rank: 104
-    rank_delta: 53
-    rank_delta_abs: 53
+    paper_rank: 102
+    rank_delta: 51
+    rank_delta_abs: 51
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -863,10 +861,10 @@ results:
     value_note: ''
     sort_value: 0.06
     sort_std: null
-    global_rank: 62
-    paper_rank: 100
-    rank_delta: 38
-    rank_delta_abs: 38
+    global_rank: 61
+    paper_rank: 98
+    rank_delta: 37
+    rank_delta_abs: 37
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -932,10 +930,10 @@ results:
     value_note: ''
     sort_value: 0.061
     sort_std: null
-    global_rank: 64
-    paper_rank: 108
-    rank_delta: 44
-    rank_delta_abs: 44
+    global_rank: 63
+    paper_rank: 106
+    rank_delta: 43
+    rank_delta_abs: 43
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1000,85 +998,15 @@ results:
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 65
-    paper_rank: 100
-    rank_delta: 35
-    rank_delta_abs: 35
+    global_rank: 64
+    paper_rank: 98
+    rank_delta: 34
+    rank_delta_abs: 34
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Directional Message Passing for Molecular Graphs
     comparison_source_arxiv: '2003.03123'
-    is_best: false
-    is_std_outlier: false
-  - model: ACE
-    model_key: ace
-    model_plain: ACE
-    value: 6.1
-    std: null
-    paper_value: 6.1
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 5
-    source_ref: batatiamace
-    variant_inference_reason: 'dataset: fuzzy match to md17 (score=89)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Energy prediction (E) for Aspirin
-    date: Apr 7, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-07'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: 0.141
-    at_pub_std: null
-    at_pub_source_arxiv: '2210.16518'
-    at_pub_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural network
-      with vector-scalar interactive message passing for molecules'
-    at_pub_source_date_iso: '2022-10-29'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-10-29'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: 5.959
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.141
-    true_std: null
-    value_gap_source_arxiv: '2210.16518'
-    value_gap_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
-    value_gap_source_is_current_paper: false
-    value_gap: 5.959
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.141
-    sort_std: null
-    global_rank: 93
-    paper_rank: 122
-    rank_delta: 29
-    rank_delta_abs: 29
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
-    comparison_source_arxiv: '2210.16518'
     is_best: false
     is_std_outlier: false
   - model: FCHL
@@ -1137,10 +1065,10 @@ results:
     value_note: ''
     sort_value: 0.182
     sort_std: null
-    global_rank: 99
-    paper_rank: 122
-    rank_delta: 23
-    rank_delta_abs: 23
+    global_rank: 97
+    paper_rank: 121
+    rank_delta: 24
+    rank_delta_abs: 24
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1205,8 +1133,76 @@ results:
     value_note: ''
     sort_value: 2.1
     sort_std: null
-    global_rank: 119
-    paper_rank: 119
+    global_rank: 117
+    paper_rank: 117
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: ACE
+    model_key: ace
+    model_plain: ACE
+    value: 6.1
+    std: null
+    paper_value: 6.1
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 5
+    source_ref: batatiamace
+    variant_inference_reason: 'dataset: fuzzy match to md17 (score=89)'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Energy prediction (E) for Aspirin
+    date: Apr 7, 2023
+    date_display: Apr 2023
+    date_iso: '2023-04-07'
+    published_venue: NeurIPS 2023
+    published_conference: NeurIPS 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-04-07'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 6.1
+    true_std: null
+    value_gap_source_arxiv: '2304.04757'
+    value_gap_source_title: A new perspective on building efficient and expressive
+      3D equivariant graph neural networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 6.1
+    sort_std: null
+    global_rank: 121
+    paper_rank: 121
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1273,8 +1269,8 @@ results:
     value_note: ''
     sort_value: 16.6
     sort_std: null
-    global_rank: 126
-    paper_rank: 126
+    global_rank: 125
+    paper_rank: 125
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1341,8 +1337,8 @@ results:
     value_note: ''
     sort_value: 17.7
     sort_std: null
-    global_rank: 127
-    paper_rank: 127
+    global_rank: 126
+    paper_rank: 126
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1361,1389 +1357,10 @@ results:
   metric: MAE
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
-  dataset: QM9
-  is_multi_metric: true
-  rows:
-  - model: PF-GNN
-    model_key: pf-gnn
-    model_plain: PF-GNN
-    metric_values:
-    - 0.017
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.001
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2401.17752'
-    title: 'PF-GNN: Differentiable particle filtering based approximation of universal
-      graph representations'
-    published_venue: ''
-    date: Jan 31, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-31'
-    codebase_url: https://github.com/pfgnn/PF-GNN
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 1
-    is_best: true
-    sort_value: 0.017
-    sort_std: 0.001
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: DimeNet++
-    model_key: dimenet++
-    model_plain: DimeNet++
-    metric_values:
-    - 33.0
-    - 0.044
-    - 0.03
-    - 6.0
-    - 7.0
-    - 8.0
-    - 6.0
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.019
-    sort_std: 0.001
-    true_value: 0.019
-    true_std: 0.001
-    paper_value: 33.0
-    paper_std: null
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 32.981
-    value_gap_source_arxiv: '2401.17752'
-    value_gap_source_title: 'PF-GNN: Differentiable particle filtering based approximation
-      of universal graph representations'
-    value_note: ''
-    at_pub_value: 0.032
-    at_pub_std: null
-    at_pub_source_arxiv: '2110.01191'
-    at_pub_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous Molecular
-      Graphs'
-    at_pub_source_date_iso: '2021-10-04'
-    at_pub_source_date_label: AAAI 2021
-    value_gap_source_date_iso: '2024-01-31'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 32.968
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: NeurIPS 2023
-    date: Apr 7, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-07'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: behind
-    comparison_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    comparison_source_arxiv: '2110.01191'
-    is_best: true
-    is_std_outlier: false
-    global_rank: 2
-  - model: Molformer
-    model_key: molformer
-    model_plain: Molformer
-    metric_values:
-    - 0.025
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    arxiv_id: '2110.01191'
-    title: 'Molformer: Motif-based Transformer on 3D Heterogeneous Molecular Graphs'
-    published_venue: ''
-    date: Oct 4, 2021
-    date_display: Oct 2021
-    date_iso: '2021-10-04'
-    codebase_url: https://github.com/smiles724/Molformer
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 3
-    is_best: false
-    sort_value: 0.025
-    sort_std: null
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: SphereNet
-    model_key: spherenet
-    model_plain: SphereNet
-    metric_values:
-    - 32.0
-    - 0.046
-    - 0.026
-    - 0.006
-    - 6.0
-    - 8.0
-    - 7.0
-    - null
-    - 0.023
-    - 0.018
-    - 1.12
-    - 0.007
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.032
-    sort_std: null
-    true_value: 0.032
-    true_std: null
-    paper_value: 32.0
-    paper_std: null
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 31.968
-    value_gap_source_arxiv: '2110.01191'
-    value_gap_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    value_note: ''
-    at_pub_value: 0.032
-    at_pub_std: null
-    at_pub_source_arxiv: '2110.01191'
-    at_pub_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous Molecular
-      Graphs'
-    at_pub_source_date_iso: '2021-10-04'
-    at_pub_source_date_label: AAAI 2021
-    value_gap_source_date_iso: '2021-10-04'
-    value_gap_source_date_label: AAAI 2021
-    gap_vs_at_pub: 31.968
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: NeurIPS 2023
-    date: Apr 7, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-07'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: improved
-    comparison_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    comparison_source_arxiv: '2110.01191'
-    is_best: false
-    is_std_outlier: false
-    global_rank: 6
-  - model: LEFTNet
-    model_key: leftnet
-    model_plain: LEFTNet
-    metric_values:
-    - 0.039
-    - 0.039
-    - 0.011
-    - 0.005
-    - 5.0
-    - 6.0
-    - 5.0
-    - 5.0
-    - 0.024
-    - 0.018
-    - 1.19
-    - 0.005
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.039
-    sort_std: null
-    true_value: 0.039
-    true_std: null
-    paper_value: 0.039
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2304.04757'
-    value_gap_source_title: A new perspective on building efficient and expressive
-      3D equivariant graph neural networks
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-04-07'
-    value_gap_source_date_label: NeurIPS 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: NeurIPS 2023
-    date: Apr 7, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-07'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 9
-  - model: PaiNN
-    model_key: painn
-    model_plain: PaiNN
-    metric_values:
-    - 46.0
-    - 0.045
-    - 0.012
-    - 0.006
-    - 6.0
-    - 7.0
-    - 6.0
-    - null
-    - 0.028
-    - 0.02
-    - 1.28
-    - 0.006
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.046
-    sort_std: null
-    true_value: 0.046
-    true_std: null
-    paper_value: 46.0
-    paper_std: null
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 45.954
-    value_gap_source_arxiv: '2110.01191'
-    value_gap_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    value_note: ''
-    at_pub_value: 0.046
-    at_pub_std: null
-    at_pub_source_arxiv: '2110.01191'
-    at_pub_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous Molecular
-      Graphs'
-    at_pub_source_date_iso: '2021-10-04'
-    at_pub_source_date_label: AAAI 2021
-    value_gap_source_date_iso: '2021-10-04'
-    value_gap_source_date_label: AAAI 2021
-    gap_vs_at_pub: 45.954
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: NeurIPS 2023
-    date: Apr 7, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-07'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 10
-  - model: SchNet
-    model_key: schnet
-    model_plain: SchNet
-    metric_values:
-    - 63.0
-    - 0.235
-    - 0.033
-    - 19.0
-    - 14.0
-    - 14.0
-    - 19.0
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.063
-    sort_std: null
-    true_value: 0.063
-    true_std: null
-    paper_value: 63.0
-    paper_std: null
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 62.937
-    value_gap_source_arxiv: '2110.01191'
-    value_gap_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    value_note: ''
-    at_pub_value: 0.063
-    at_pub_std: null
-    at_pub_source_arxiv: '2110.01191'
-    at_pub_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous Molecular
-      Graphs'
-    at_pub_source_date_iso: '2021-10-04'
-    at_pub_source_date_label: AAAI 2021
-    value_gap_source_date_iso: '2021-10-04'
-    value_gap_source_date_label: AAAI 2021
-    gap_vs_at_pub: 62.937
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: NeurIPS 2023
-    date: Apr 7, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-07'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 15
-  - model: Equiformer
-    model_key: equiformer
-    model_plain: Equiformer
-    metric_values:
-    - 33.0
-    - 0.056
-    - 0.014
-    - 0.01
-    - 10.0
-    - 10.0
-    - 11.0
-    - null
-    - 0.017
-    - 0.016
-    - 1.32
-    - 0.011
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 30.0
-    sort_std: null
-    true_value: 30.0
-    true_std: null
-    paper_value: 33.0
-    paper_std: null
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 3.0
-    value_gap_source_arxiv: '2505.23086'
-    value_gap_source_title: Equivariant Spherical Transformer for Efficient Molecular
-      Modeling
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-05-29'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: NeurIPS 2023
-    date: Apr 7, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-07'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 22
-  - model: EQGAT
-    model_key: eqgat
-    model_plain: EQGAT
-    metric_values:
-    - 44.0
-    - 0.063
-    - 0.014
-    - 13.0
-    - 13.0
-    - 12.0
-    - 13.0
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    sort_value: 32.0
-    sort_std: null
-    true_value: 32.0
-    true_std: null
-    paper_value: 44.0
-    paper_std: null
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 12.0
-    value_gap_source_arxiv: '2505.23086'
-    value_gap_source_title: Equivariant Spherical Transformer for Efficient Molecular
-      Modeling
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-05-29'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: NeurIPS 2023
-    date: Apr 7, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-07'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 26
-  - model: SEGNN
-    model_key: segnn
-    model_plain: SEGNN
-    metric_values:
-    - 42.0
-    - 0.06
-    - 0.023
-    - 13.0
-    - 15.0
-    - 15.0
-    - 13.0
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 42.0
-    sort_std: null
-    true_value: 42.0
-    true_std: null
-    paper_value: 42.0
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2505.23086'
-    value_gap_source_title: Equivariant Spherical Transformer for Efficient Molecular
-      Modeling
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-05-29'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: NeurIPS 2023
-    date: Apr 7, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-07'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 31
-  - model: EGNN
-    model_key: egnn
-    model_plain: EGNN
-    metric_values:
-    - 48.0
-    - 0.071
-    - 0.029
-    - 11.0
-    - 12.0
-    - 12.0
-    - 12.0
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 48.0
-    sort_std: null
-    true_value: 48.0
-    true_std: null
-    paper_value: 48.0
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2406.13265'
-    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
-    value_note: ''
-    at_pub_value: 48.0
-    at_pub_std: null
-    at_pub_source_arxiv: '2210.16518'
-    at_pub_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural network
-      with vector-scalar interactive message passing for molecules'
-    at_pub_source_date_iso: '2022-10-29'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2024-06-19'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: NeurIPS 2023
-    date: Apr 7, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-07'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: improved
-    comparison_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
-    comparison_source_arxiv: '2210.16518'
-    is_best: false
-    is_std_outlier: false
-    global_rank: 32
-  - model: LieConv
-    model_key: lieconv
-    model_plain: LieConv
-    metric_values:
-    - 49.0
-    - 0.084
-    - 0.032
-    - 19.0
-    - 24.0
-    - 22.0
-    - 19.0
-    - 0.0
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 49.0
-    sort_std: null
-    true_value: 49.0
-    true_std: null
-    paper_value: 49.0
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2304.04757'
-    value_gap_source_title: A new perspective on building efficient and expressive
-      3D equivariant graph neural networks
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-04-07'
-    value_gap_source_date_label: NeurIPS 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: NeurIPS 2023
-    date: Apr 7, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-07'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 33
-  - model: SE(3)-Tr.
-    model_key: se(3)-tr.
-    model_plain: SE(3)-Tr.
-    metric_values:
-    - 53.0
-    - 0.142
-    - 0.051
-    - 0.0
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    sort_value: 53.0
-    sort_std: null
-    true_value: 53.0
-    true_std: null
-    paper_value: 53.0
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2304.04757'
-    value_gap_source_title: A new perspective on building efficient and expressive
-      3D equivariant graph neural networks
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-04-07'
-    value_gap_source_date_label: NeurIPS 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: NeurIPS 2023
-    date: Apr 7, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-07'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 34
-  - model: ClofNet
-    model_key: clofnet
-    model_plain: ClofNet
-    metric_values:
-    - 53.0
-    - 0.063
-    - 0.04
-    - 8.0
-    - 9.0
-    - 9.0
-    - 9.0
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 53.0
-    sort_std: null
-    true_value: 53.0
-    true_std: null
-    paper_value: 53.0
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2304.04757'
-    value_gap_source_title: A new perspective on building efficient and expressive
-      3D equivariant graph neural networks
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-04-07'
-    value_gap_source_date_label: NeurIPS 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: NeurIPS 2023
-    date: Apr 7, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-07'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 35
-  - model: TFN
-    model_key: tfn
-    model_plain: TFN
-    metric_values:
-    - 58.0
-    - 0.223
-    - 0.064
-    - 0.0
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 58.0
-    sort_std: null
-    true_value: 58.0
-    true_std: null
-    paper_value: 58.0
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2505.23086'
-    value_gap_source_title: Equivariant Spherical Transformer for Efficient Molecular
-      Modeling
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-05-29'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: NeurIPS 2023
-    date: Apr 7, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-07'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 36
-  - model: Cormorant
-    model_key: cormorant
-    model_plain: Cormorant
-    metric_values:
-    - 61.0
-    - 0.085
-    - 0.038
-    - 22.0
-    - 21.0
-    - 20.0
-    - 21.0
-    - 0.0
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 61.0
-    sort_std: null
-    true_value: 61.0
-    true_std: null
-    paper_value: 61.0
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2406.13265'
-    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-06-19'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: NeurIPS 2023
-    date: Apr 7, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-07'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 37
-  - model: NMP
-    model_key: nmp
-    model_plain: NMP
-    metric_values:
-    - 69.0
-    - 0.092
-    - 0.03
-    - 20.0
-    - 17.0
-    - 19.0
-    - 20.0
-    - 0.0
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 69.0
-    sort_std: null
-    true_value: 69.0
-    true_std: null
-    paper_value: 69.0
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2304.04757'
-    value_gap_source_title: A new perspective on building efficient and expressive
-      3D equivariant graph neural networks
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-04-07'
-    value_gap_source_date_label: NeurIPS 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: NeurIPS 2023
-    date: Apr 7, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-07'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 38
-  metrics:
-  - gap
-  - alpha
-  - mu
-  - U0
-  - H
-  - G
-  - Cv
-  - S
-  - HOMO
-  - LUMO
-  - zpve
-  - U
-  primary_metric: gap
-  rank_metric: gap
-  higher_is_better: false
-  experiment_scope: graph-level
-  dataset_primary_metric: gap
-  paper_metrics:
-  - alpha
-  - mu
-  - U0
-  - H
-  - G
-  - Cv
-  - S
-  - HOMO
-  - LUMO
-  - zpve
-  - U
-  - gap
-  metric: gap
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
 results_grouped:
 - benchmark: Quantum Chemistry
   datasets:
   - *id001
-  - *id002
 datasets_by_scope:
 - scope: graph-level
   label: Graph-level
@@ -2753,8 +1370,6 @@ datasets_by_scope:
     datasets:
     - dataset: MD17
       dataset_slug: md17
-    - dataset: QM9
-      dataset_slug: qm9
 single_proposed_model: LEFTNet
 main_figure: /figures/2304.04757/main_figure.jpegoptim.jpg
 ---

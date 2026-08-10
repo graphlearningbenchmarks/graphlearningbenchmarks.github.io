@@ -70,8 +70,8 @@ proposed_models:
 - Dir-GNN+EDEN
 - HoloNet+EDEN
 - EDEN
-mrr: 0.013
-adjusted_mrr: 0.0043
+mrr: 0.0141
+adjusted_mrr: 0.0047
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -93,47 +93,48 @@ results:
 - &id002
   dataset: Tolokers
   rows:
-  - model: Polynormer-r
-    model_key: polynormer-r
-    model_plain: Polynormer-r
+  - model: NT*
+    model_key: nt
+    model_plain: NT*
     value: 0.8591
-    std: 0.0074
+    std: 0.0083
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2403.01232'
-    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/cornell-zhang/Polynormer
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2604.08980'
+    title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware Graph
+      Learning'
+    date: Apr 10, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-10'
+    venue: arXiv.org
+    codebase_url: https://github.com/cf020031308/MoNT
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
     sort_value: 0.8591
-    sort_std: 0.0074
+    sort_std: 0.0083
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: NT
-    model_key: nt
-    model_plain: NT
-    value: 0.8569
-    std: 0.0054
+  - model: Polynormer
+    model_key: polynormer
+    model_plain: Polynormer
+    value: 0.8591
+    std: 0.0074
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
@@ -149,12 +150,12 @@ results:
     venue: arXiv.org
     codebase_url: https://github.com/cf020031308/MoNT
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.8569
-    sort_std: 0.0054
+    sort_value: 0.8591
+    sort_std: 0.0074
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -183,7 +184,7 @@ results:
     venue: arXiv.org
     codebase_url: https://github.com/cf020031308/MoNT
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
@@ -217,10 +218,10 @@ results:
     venue: arXiv.org
     codebase_url: https://github.com/cf020031308/MoNT
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 7
+    global_rank: 8
     sort_value: 0.8364
     sort_std: 0.0067
     comparison_type: global_top
@@ -285,8 +286,8 @@ results:
     value_note: ''
     sort_value: 0.813
     sort_std: 0.002
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -353,8 +354,8 @@ results:
     value_note: ''
     sort_value: 0.794
     sort_std: 0.002
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -421,8 +422,8 @@ results:
     value_note: ''
     sort_value: 0.792
     sort_std: 0.002
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 16
+    paper_rank: 16
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -489,8 +490,8 @@ results:
     value_note: ''
     sort_value: 0.791
     sort_std: 0.003
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -557,8 +558,8 @@ results:
     value_note: ''
     sort_value: 0.79
     sort_std: 0.002
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -625,8 +626,8 @@ results:
     value_note: ''
     sort_value: 0.789
     sort_std: 0.002
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -693,8 +694,8 @@ results:
     value_note: ''
     sort_value: 0.788
     sort_std: 0.002
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -761,8 +762,8 @@ results:
     value_note: ''
     sort_value: 0.787
     sort_std: 0.003
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -829,8 +830,8 @@ results:
     value_note: ''
     sort_value: 0.785
     sort_std: 0.001
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -897,8 +898,8 @@ results:
     value_note: ''
     sort_value: 0.785
     sort_std: 0.002
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -931,10 +932,10 @@ results:
     venue: 'Accepted to ICLR 2026. OpenReview: https://openreview.net/forum?id=FmxRzlu0rT'
     codebase_url: https://github.com/jeongwhanchoi/NodePFN
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 25
+    global_rank: 29
     sort_value: 0.7816
     sort_std: 0.0002
     comparison_type: global_top
@@ -976,7 +977,7 @@ results:
     venue: arXiv.org
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -1147,8 +1148,8 @@ results:
     value_note: ''
     sort_value: 0.814
     sort_std: 0.003
-    global_rank: 77
-    paper_rank: 77
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1183,7 +1184,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 246
+    global_rank: 237
     sort_value: 0.7469
     sort_std: 0.0085
     comparison_type: global_top

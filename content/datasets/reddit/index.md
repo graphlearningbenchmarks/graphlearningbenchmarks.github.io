@@ -13,7 +13,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 41
-result_count: 657
+result_count: 621
 best_model:
   model: Node Sampled Soup
   value: 0.9728
@@ -32,19 +32,9 @@ papers:
     Heterophilous Learning'
   date_iso: '2026-03-20'
   venue: ''
-- arxiv_id: '2603.01385'
-  title: Toward Graph-Tokenizing Large Language Models with Reconstructive Graph Instruction
-    Tuning
-  date_iso: '2026-03-02'
-  venue: WWW 2026
 - arxiv_id: '2602.12613'
   title: 'Coden: Efficient Temporal Graph Neural Networks for Continuous Prediction'
   date_iso: '2026-02-13'
-  venue: ''
-- arxiv_id: '2512.14908'
-  title: 'ATLAS: Adaptive Topology-based Learning at Scale for Homophilic and Heterophilic
-    Graphs'
-  date_iso: '2025-12-16'
   venue: ''
 - arxiv_id: '2506.15448'
   title: Semi-supervised Graph Anomaly Detection via Robust Homophily Learning
@@ -89,10 +79,6 @@ papers:
     Self-Training'
   date_iso: '2024-07-19'
   venue: ''
-- arxiv_id: '2407.07457'
-  title: 'GLBench: A Comprehensive Benchmark for Graph with Large Language Models'
-  date_iso: '2024-07-10'
-  venue: NeurIPS 2024
 - arxiv_id: '2407.08064'
   title: 'TinyGraph: Joint Feature and Node Condensation for Graph Neural Networks'
   date_iso: '2024-07-10'
@@ -1233,57 +1219,6 @@ variants:
     - null
     - null
     - null
-  - model: ATLAS-LPF
-    model_plain: ATLAS-LPF
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2512.14908'
-    title: 'ATLAS: Adaptive Topology-based Learning at Scale for Homophilic and Heterophilic
-      Graphs'
-    date: Dec 16, 2025
-    date_iso: '2025-12-16'
-    date_display: Dec 2025
-    codebase_url: https://github.com/atlaspaper16/ATLAS
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9665
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0004
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: rf
     model_plain: rf
     is_baseline: false
@@ -1322,57 +1257,6 @@ variants:
     - null
     metric_stds:
     - 0.01
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: GAMLP
-    model_plain: GAMLP
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2512.14908'
-    title: 'ATLAS: Adaptive Topology-based Learning at Scale for Homophilic and Heterophilic
-      Graphs'
-    date: Dec 16, 2025
-    date_iso: '2025-12-16'
-    date_display: Dec 2025
-    codebase_url: https://github.com/atlaspaper16/ATLAS
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9662
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0003
     - null
     - null
     - null
@@ -2743,57 +2627,6 @@ variants:
     - null
     - null
     - null
-  - model: LABOR
-    model_plain: LABOR
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2512.14908'
-    title: 'ATLAS: Adaptive Topology-based Learning at Scale for Homophilic and Heterophilic
-      Graphs'
-    date: Dec 16, 2025
-    date_iso: '2025-12-16'
-    date_display: Dec 2025
-    codebase_url: https://github.com/atlaspaper16/ATLAS
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9623
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0005
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: GraphSAINT-Node
     model_plain: GraphSAINT-Node
     is_baseline: false
@@ -2996,23 +2829,174 @@ variants:
     - null
     - null
     - null
-  row_count: 657
+  - model: AdaGCN
+    model_plain: AdaGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.07494'
+    title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking and
+      Rethinking'
+    date: Oct 14, 2022
+    date_iso: '2022-10-14'
+    date_display: Oct 2022
+    codebase_url: https://github.com/VITA-Group/Large_Scale_GCN_Benchmarking
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9605
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: GraphMAE
+    model_plain: GraphMAE
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2205.10803'
+    title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
+    date: May 22, 2022
+    date_iso: '2022-05-22'
+    date_display: May 2022
+    codebase_url: https://github.com/THUDM/GraphMAE
+    published_conference: KDD 2022
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9601
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0008
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: GAT
+    model_plain: GAT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2205.10803'
+    title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
+    date: May 22, 2022
+    date_iso: '2022-05-22'
+    date_display: May 2022
+    codebase_url: https://github.com/THUDM/GraphMAE
+    published_conference: KDD 2022
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.96
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.001
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  row_count: 621
   rows_json: /data/datasets/reddit/standard-split-rows.json
   chart_json: /data/datasets/reddit/standard-split-chart.json
   arch_counts:
-    gnn: 443
-    hybrid: 58
-    graph_transformer: 27
-    llm: 22
+    gnn: 432
+    hybrid: 50
+    graph_transformer: 23
+    llm: 10
     walk: 8
-    traditional: 78
+    traditional: 77
   metric_counts:
-  - 272
+  - 238
   - 26
   - 14
   - 37
   - 12
-  - 267
+  - 265
   - 3
   - 6
   - 9
@@ -3142,7 +3126,19 @@ variants:
       title: Neighbor Enhanced Graph Convolutional Networks for Node Classification
         and Recommendation
       date: '2022-03-01'
-    Accuracy degradation: []
+    - value: 0.987
+      std: 0.0003
+      model: GAP-EDP
+      arxiv_id: '2203.00949'
+      title: 'GAP: Differentially Private Graph Neural Networks with Aggregation Perturbation'
+      date: '2022-03-02'
+    Accuracy degradation:
+    - value: 0.0009
+      std: null
+      model: Message passing-based graph neural networks
+      arxiv_id: '2502.19693'
+      title: Accurate and Scalable Graph Neural Networks via Message Invariance
+      date: '2025-02-27'
     F1-Micro:
     - value: 0.7091
       std: null
@@ -3165,7 +3161,13 @@ variants:
       arxiv_id: '2307.11981'
       title: Collaborative Graph Neural Networks for Attributed Network Embedding
       date: '2023-07-22'
-    MRR: []
+    MRR:
+    - value: 0.696
+      std: 0.02
+      model: TNCN
+      arxiv_id: '2506.05393'
+      title: Are Large Language Models Good Temporal Graph Learners?
+      date: '2025-06-03'
     Macro-F1:
     - value: 0.457
       std: 0.006

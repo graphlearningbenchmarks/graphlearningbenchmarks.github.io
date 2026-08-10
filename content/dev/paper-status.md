@@ -7,18 +7,17 @@ dev_table_json: /data/development/paper-status.json
 
 ## Paper Extraction Status
 
-**Total:** 2740 papers
+**Total:** 2741 papers
 
 This page tracks the extraction pipeline status for all papers in the benchmarking dataset. Each paper goes through several stages: first it must be downloaded from arXiv, then the full text is extracted and parsed (either from HTML, LaTeX source, or PDF), and finally results are extracted using an LLM. The extraction model shown indicates which LLM (if any) was used to extract results.
 
-### Downloaded (33)
+### Downloaded (32)
 
 Papers that have been downloaded but not yet processed for extraction.
 
 | ArXiv | Title | Model |
 |-------|-------|-------|
 | 1409.4842 | arXiv:1409.4842 | — |
-| 1704.07912 | arXiv:1704.07912 | — |
 | 1710.10361 | arXiv:1710.10361 | — |
 | 1805.10437 | arXiv:1805.10437 | — |
 | 1904.07090 | arXiv:1904.07090 | — |
@@ -51,26 +50,29 @@ Papers that have been downloaded but not yet processed for extraction.
 | 2512.08274 | arXiv:2512.08274 | — |
 | 2604.00199 | arXiv:2604.00199 | — |
 
-### Extracted (1635)
+### Extracted (1637)
 
 Papers with successfully extracted results. These papers contribute to the leaderboards.
 
 
-Detailed table: 1635 rows (loaded below).
+Detailed table: 1637 rows (loaded below).
 
 
-### Pending (6)
+### Failed (1)
+
+Papers where extraction failed. These may have parsing errors, missing datasets, or LLM errors.
+
+| ArXiv | Title | Model |
+|-------|-------|-------|
+| 2305.19903 | Improving Expressivity of GNNs with Subgraph-specific Factor Embedded... | google/gemma-4-26B-A4B-it |
+
+### Pending (1)
 
 Papers that have been identified but not yet downloaded from arXiv.
 
 | ArXiv | Title | Model |
 |-------|-------|-------|
-| 2012.01380 | arXiv:2012.01380 | — |
 | 2104.07477 | Lorentzian Graph Convolutional Networks | cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit |
-| 2408.14520 | arXiv:2408.14520 | — |
-| 2410.04061 | arXiv:2410.04061 | — |
-| 2505.10392 | arXiv:2505.10392 | — |
-| 2510.12085 | arXiv:2510.12085 | — |
 
 ### Quarantined_extraction_quality (771)
 
@@ -78,10 +80,10 @@ Papers that have been identified but not yet downloaded from arXiv.
 Detailed table: 771 rows (loaded below).
 
 
-### Quarantined_method_name (284)
+### Quarantined_method_name (283)
 
 
-Detailed table: 284 rows (loaded below).
+Detailed table: 283 rows (loaded below).
 
 
 ### Quarantined_yaml_parse (11)
@@ -99,3 +101,13 @@ Detailed table: 284 rows (loaded below).
 | 2410.00626 | arXiv:2410.00626 | cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit |
 | 2502.12412 | arXiv:2502.12412 | cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit |
 | 2505.02247 | arXiv:2505.02247 | cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit |
+
+### Rejected (5)
+
+| ArXiv | Title | Model |
+|-------|-------|-------|
+| 2012.01380 | arXiv:2012.01380 | — |
+| 2408.14520 | arXiv:2408.14520 | — |
+| 2410.04061 | arXiv:2410.04061 | — |
+| 2505.10392 | arXiv:2505.10392 | — |
+| 2510.12085 | arXiv:2510.12085 | — |

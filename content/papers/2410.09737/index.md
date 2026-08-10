@@ -99,8 +99,9 @@ results:
     venue: arXiv.org
     codebase_url: https://github.com/ocx-lab/FloydNet
     uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: initialization of the relationship tensor... constructed
+      by integrating node, edge, and graph-level features
     is_global_top: true
     global_rank: 1
     sort_value: 0.6143

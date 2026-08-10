@@ -44,8 +44,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - DimeNet++
-mrr: 0.0154
-adjusted_mrr: 0.0051
+mrr: 0.0156
+adjusted_mrr: 0.0052
 mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
@@ -53,7 +53,7 @@ benchmark_coverage:
 - benchmark: Quantum Chemistry
   benchmark_slug: quantum-chemistry
   evaluated: 1
-  total: 3
+  total: 1
 task_categories:
 - graph_regression
 experiment_scopes:
@@ -223,9 +223,9 @@ results:
     sort_value: 0.05
     sort_std: null
     global_rank: 46
-    paper_rank: 68
-    rank_delta: 22
-    rank_delta_abs: 22
+    paper_rank: 67
+    rank_delta: 21
+    rank_delta_abs: 21
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -290,8 +290,8 @@ results:
     value_note: ''
     sort_value: 0.06
     sort_std: null
-    global_rank: 62
-    paper_rank: 62
+    global_rank: 61
+    paper_rank: 61
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -357,8 +357,8 @@ results:
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 65
-    paper_rank: 65
+    global_rank: 64
+    paper_rank: 64
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

@@ -46,14 +46,14 @@ abstract: 'One of the most challenging problems in graph machine learning is gen
   evaluation on 23 benchmarks demonstrates that a single pre-trained NodePFN achieves
   71.27\'
 codebase_url: https://github.com/jeongwhanchoi/NodePFN
-extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+extraction_model: google/gemma-4-26B-A4B-it
 has_results: true
 paper_type: method
 proposed_models:
 - NodePFN
-mrr: 0.0033
-adjusted_mrr: 0.0033
-mrr_dataset_count: 13
+mrr: 0.0038
+adjusted_mrr: 0.0038
+mrr_dataset_count: 11
 benchmark_categories:
 - Classic
 - Heterophilic Graphs
@@ -63,11 +63,11 @@ benchmark_categories:
 benchmark_coverage:
 - benchmark: Classic
   benchmark_slug: classic
-  evaluated: 7
+  evaluated: 5
   total: 12
 - benchmark: Heterophilic Graphs
   benchmark_slug: heterophilic-graphs
-  evaluated: 5
+  evaluated: 6
   total: 6
 - benchmark: Heterogeneous Graph Benchmarks
   benchmark_slug: heterogeneous-graph-benchmarks
@@ -75,7 +75,7 @@ benchmark_coverage:
   total: 4
 - benchmark: Heterophily Benchmark
   benchmark_slug: heterophily-benchmark
-  evaluated: 4
+  evaluated: 3
   total: 5
 - benchmark: LINKX Benchmarks
   benchmark_slug: linkx-benchmarks
@@ -86,7 +86,7 @@ task_categories:
 experiment_scopes:
 - node-level
 results:
-- &id010
+- &id008
   dataset: Actor
   rows:
   - model: NodeFormer
@@ -145,7 +145,7 @@ results:
     venue: IEEE Transactions on Neural Networks and Learning Systems
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -214,7 +214,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 56
+    global_rank: 55
     sort_value: 0.4026
     sort_std: 0.0108
     comparison_type: global_top
@@ -239,14 +239,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: chien2021GPRGNN
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Geom-GCN 10 fixed splits
+    protocol_note: Accuracy on Actor dataset using standard split (Geom-GCN 10 fixed
+      splits).
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -279,9 +280,9 @@ results:
     sort_value: 0.3992
     sort_std: 0.0067
     global_rank: 67
-    paper_rank: 327
-    rank_delta: 260
-    rank_delta_abs: 260
+    paper_rank: 321
+    rank_delta: 254
+    rank_delta_abs: 254
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -306,14 +307,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: Bo2021fagcn
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Geom-GCN 10 fixed splits
+    protocol_note: Accuracy on Actor dataset using standard split (Geom-GCN 10 fixed
+      splits).
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -346,10 +348,10 @@ results:
     value_note: ''
     sort_value: 0.397
     sort_std: null
-    global_rank: 72
-    paper_rank: 289
-    rank_delta: 217
-    rank_delta_abs: 217
+    global_rank: 71
+    paper_rank: 285
+    rank_delta: 214
+    rank_delta_abs: 214
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -383,7 +385,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 88
+    global_rank: 87
     sort_value: 0.3899
     sort_std: 0.0085
     comparison_type: global_top
@@ -408,14 +410,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: zhu2020h2gcn
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Geom-GCN 10 fixed splits
+    protocol_note: Accuracy on Actor dataset using standard split (Geom-GCN 10 fixed
+      splits).
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -423,11 +426,10 @@ results:
     published_conference: ICLR 2026
     at_pub_value: 0.3885
     at_pub_std: 0.0117
-    at_pub_source_arxiv: '2512.14908'
-    at_pub_source_title: 'ATLAS: Adaptive Topology-based Learning at Scale for Homophilic
-      and Heterophilic Graphs'
-    at_pub_source_date_iso: '2025-12-16'
-    at_pub_source_date_label: '2025'
+    at_pub_source_arxiv: '2603.09195'
+    at_pub_source_title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
+    at_pub_source_date_iso: '2026-03-10'
+    at_pub_source_date_label: '2026'
     value_gap_source_date_iso: '2026-03-10'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.029900000000000038
@@ -448,16 +450,15 @@ results:
     value_note: ''
     sort_value: 0.3885
     sort_std: 0.0117
-    global_rank: 91
-    paper_rank: 237
-    rank_delta: 146
-    rank_delta_abs: 146
+    global_rank: 90
+    paper_rank: 231
+    rank_delta: 141
+    rank_delta_abs: 141
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'ATLAS: Adaptive Topology-based Learning at Scale for
-      Homophilic and Heterophilic Graphs'
-    comparison_source_arxiv: '2512.14908'
+    comparison_source_title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
+    comparison_source_arxiv: '2603.09195'
     is_best: false
     is_std_outlier: false
   - model: NodePFN
@@ -477,14 +478,16 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: learning PPDs for node classification from synthetic
+      graph priors
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Geom-GCN 10 fixed splits
+    protocol_note: Accuracy on Actor dataset using standard split (Geom-GCN 10 fixed
+      splits).
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -517,439 +520,8 @@ results:
     value_note: ''
     sort_value: 0.3299
     sort_std: 0.0109
-    global_rank: 347
-    paper_rank: 347
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  rank_metric: Accuracy
-  higher_is_better: true
-  experiment_scope: node-level
-  dataset_primary_metric: Accuracy
-  paper_metrics:
-  - Accuracy
-  metric: Accuracy
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
-- &id005
-  dataset: Amazon-Computers
-  rows:
-  - model: GraphTARIF
-    model_key: graphtarif
-    model_plain: GraphTARIF
-    value: 0.9461
-    std: 0.0017
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2605.20248'
-    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
-      Classification'
-    date: May 18, 2026
-    date_display: May 2026
-    date_iso: '2026-05-18'
-    venue: null
-    codebase_url: https://github.com/transductive-sharpening/tunedGNN
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9461
-    sort_std: 0.0017
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.8583
-    std: 0.0086
-    paper_value: 0.8583
-    paper_std: 0.0086
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to amazon-computers (score=81)'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard split for Amazon-Comp node classification (1.5/49.3/49.3
-      split as per Table 4)
-    date: Apr 21, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-21'
-    published_venue: ICLR 2026
-    published_conference: ICLR 2026
-    at_pub_value: 0.916
-    at_pub_std: 0.016
-    at_pub_source_arxiv: '2410.02622'
-    at_pub_source_title: 'Diss-l-ECT: Dissecting Graph Data with local Euler Characteristic
-      Transforms'
-    at_pub_source_date_iso: '2024-10-03'
-    at_pub_source_date_label: ICML 2024
-    value_gap_source_date_iso: '2026-05-18'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.057700000000000085
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9412
-    true_std: 0.0008
-    value_gap_source_arxiv: '2605.20248'
-    value_gap_source_title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions
-      in Node Classification'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.08290000000000008
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9412
-    sort_std: 0.0008
-    global_rank: 2
-    paper_rank: 366
-    rank_delta: 364
-    rank_delta_abs: 364
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'Diss-l-ECT: Dissecting Graph Data with local Euler Characteristic
-      Transforms'
-    comparison_source_arxiv: '2410.02622'
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.8701
-    std: 0.005
-    paper_value: 0.8701
-    paper_std: 0.005
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to amazon-computers (score=81)'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard split for Amazon-Comp node classification (1.5/49.3/49.3
-      split as per Table 4)
-    date: Apr 21, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-21'
-    published_venue: ICLR 2026
-    published_conference: ICLR 2026
-    at_pub_value: 0.924
-    at_pub_std: 0.013
-    at_pub_source_arxiv: '2410.02622'
-    at_pub_source_title: 'Diss-l-ECT: Dissecting Graph Data with local Euler Characteristic
-      Transforms'
-    at_pub_source_date_iso: '2024-10-03'
-    at_pub_source_date_label: ICML 2024
-    value_gap_source_date_iso: '2026-05-18'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.05390000000000006
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9398
-    true_std: 0.0022
-    value_gap_source_arxiv: '2605.20248'
-    value_gap_source_title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions
-      in Node Classification'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.06969999999999998
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9398
-    sort_std: 0.0022
-    global_rank: 3
-    paper_rank: 325
-    rank_delta: 322
-    rank_delta_abs: 322
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'Diss-l-ECT: Dissecting Graph Data with local Euler Characteristic
-      Transforms'
-    comparison_source_arxiv: '2410.02622'
-    is_best: false
-    is_std_outlier: false
-  - model: SAGE
-    model_key: sage
-    model_plain: SAGE
-    value: 0.9351
-    std: 0.0006
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2605.20248'
-    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
-      Classification'
-    date: May 18, 2026
-    date_display: May 2026
-    date_iso: '2026-05-18'
-    venue: null
-    codebase_url: https://github.com/transductive-sharpening/tunedGNN
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 8
-    sort_value: 0.9351
-    sort_std: 0.0006
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MLP
-    model_key: mlp
-    model_plain: MLP
-    value: 0.5828
-    std: 0.0298
-    paper_value: 0.5828
-    paper_std: 0.0298
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to amazon-computers (score=81)'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard split for Amazon-Comp node classification (1.5/49.3/49.3
-      split as per Table 4)
-    date: Apr 21, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-21'
-    published_venue: ICLR 2026
-    published_conference: ICLR 2026
-    at_pub_value: 0.8463
-    at_pub_std: null
-    at_pub_source_arxiv: '2407.11907'
-    at_pub_source_title: 'GraphFM: A generalist graph transformer that learns transferable
-      representations across diverse domains'
-    at_pub_source_date_iso: '2024-07-16'
-    at_pub_source_date_label: TMLR 2024
-    value_gap_source_date_iso: '2024-07-16'
-    value_gap_source_date_label: TMLR 2024
-    gap_vs_at_pub: 0.26350000000000007
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8463
-    true_std: null
-    value_gap_source_arxiv: '2407.11907'
-    value_gap_source_title: 'GraphFM: A generalist graph transformer that learns transferable
-      representations across diverse domains'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.26350000000000007
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8463
-    sort_std: null
-    global_rank: 394
-    paper_rank: 587
-    rank_delta: 193
-    rank_delta_abs: 193
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'GraphFM: A generalist graph transformer that learns
-      transferable representations across diverse domains'
-    comparison_source_arxiv: '2407.11907'
-    is_best: false
-    is_std_outlier: true
-  - model: GraphAny (Arxiv)
-    model_key: graphany (arxiv)
-    model_plain: GraphAny (Arxiv)
-    value: 0.8304
-    std: 0.0124
-    paper_value: 0.8304
-    paper_std: 0.0124
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to amazon-computers (score=81)'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard split for Amazon-Comp node classification (1.5/49.3/49.3
-      split as per Table 4)
-    date: Apr 21, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-21'
-    published_venue: ICLR 2026
-    published_conference: ICLR 2026
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-04-21'
-    value_gap_source_date_label: ICLR 2026
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8304
-    true_std: 0.0124
-    value_gap_source_arxiv: '2604.19028'
-    value_gap_source_title: Learning Posterior Predictive Distributions for Node Classification
-      from Synthetic Graph Priors
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8304
-    sort_std: 0.0124
-    global_rank: 460
-    paper_rank: 460
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: NodePFN
-    model_key: nodepfn
-    model_plain: NodePFN
-    value: 0.8142
-    std: 0.0048
-    paper_value: 0.8142
-    paper_std: 0.0048
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to amazon-computers (score=81)'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard split for Amazon-Comp node classification (1.5/49.3/49.3
-      split as per Table 4)
-    date: Apr 21, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-21'
-    published_venue: ICLR 2026
-    published_conference: ICLR 2026
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-04-21'
-    value_gap_source_date_label: ICLR 2026
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8142
-    true_std: 0.0048
-    value_gap_source_arxiv: '2604.19028'
-    value_gap_source_title: Learning Posterior Predictive Distributions for Node Classification
-      from Synthetic Graph Priors
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8142
-    sort_std: 0.0048
-    global_rank: 496
-    paper_rank: 496
+    global_rank: 341
+    paper_rank: 341
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -971,73 +543,6 @@ results:
 - &id004
   dataset: Amazon-Photo
   rows:
-  - model: MSH-GNN
-    model_key: msh-gnn
-    model_plain: MSH-GNN
-    value: 0.9766
-    std: 0.005
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.15015'
-    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
-    date: May 21, 2025
-    date_display: May 2025
-    date_iso: '2025-05-21'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9766
-    sort_std: 0.005
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GeoMancer
-    model_key: geomancer
-    model_plain: GeoMancer
-    value: 0.9705
-    std: 0.0013
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2510.04522'
-    title: 'Toward a Unified Geometry Understanding: Riemannian Diffusion Framework
-      for Graph Generation and Prediction'
-    date: Oct 6, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-06'
-    venue: Accepted by NeurIPS 2025
-    codebase_url: https://github.com/RingBDStack/GeoMancer
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.9705
-    sort_std: 0.0013
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
   - model: GraphTARIF
     model_key: graphtarif
     model_plain: GraphTARIF
@@ -1064,7 +569,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 1
     sort_value: 0.9703
     sort_std: 0.0019
     comparison_type: global_top
@@ -1089,14 +594,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard split (2.1/49.0/49.0) as per Table 4
+    protocol_note: Accuracy on Amazon-Photo test split (2.1/49.0/49.0 split from Table
+      2)
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -1130,16 +636,50 @@ results:
     value_note: ''
     sort_value: 0.9669
     sort_std: 0.0014
-    global_rank: 5
-    paper_rank: 392
-    rank_delta: 387
-    rank_delta_abs: 387
+    global_rank: 2
+    paper_rank: 384
+    rank_delta: 382
+    rank_delta_abs: 382
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'SignGT: Signed Attention-based Graph Transformer for
       Graph Representation Learning'
     comparison_source_arxiv: '2310.11025'
+    is_best: false
+    is_std_outlier: false
+  - model: DAM-GT
+    model_key: dam-gt
+    model_plain: DAM-GT
+    value: 0.9666
+    std: 0.0013
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2505.17660'
+    title: 'DAM-GT: Dual Positional Encoding-Based Attention Masking Graph Transformer
+      for Node Classification'
+    date: May 23, 2025
+    date_display: May 2025
+    date_iso: '2025-05-23'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9666
+    sort_std: 0.0013
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: SAGE
@@ -1168,7 +708,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 13
+    global_rank: 8
     sort_value: 0.9643
     sort_std: 0.0027
     comparison_type: global_top
@@ -1193,14 +733,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard split (2.1/49.0/49.0) as per Table 4
+    protocol_note: Accuracy on Amazon-Photo test split (2.1/49.0/49.0 split from Table
+      2)
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -1234,10 +775,10 @@ results:
     value_note: ''
     sort_value: 0.9632
     sort_std: 0.0008
-    global_rank: 16
-    paper_rank: 392
-    rank_delta: 376
-    rank_delta_abs: 376
+    global_rank: 9
+    paper_rank: 384
+    rank_delta: 375
+    rank_delta_abs: 375
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1263,14 +804,15 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard split (2.1/49.0/49.0) as per Table 4
+    protocol_note: Accuracy on Amazon-Photo test split (2.1/49.0/49.0 split from Table
+      2)
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -1302,10 +844,10 @@ results:
     value_note: ''
     sort_value: 0.9128
     sort_std: 0.0063
-    global_rank: 434
-    paper_rank: 624
-    rank_delta: 190
-    rank_delta_abs: 190
+    global_rank: 426
+    paper_rank: 613
+    rank_delta: 187
+    rank_delta_abs: 187
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1330,14 +872,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard split (2.1/49.0/49.0) as per Table 4
+    protocol_note: Accuracy on Amazon-Photo test split (2.1/49.0/49.0 split from Table
+      2)
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -1370,8 +913,8 @@ results:
     value_note: ''
     sort_value: 0.9064
     sort_std: 0.0082
-    global_rank: 466
-    paper_rank: 466
+    global_rank: 458
+    paper_rank: 458
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1398,14 +941,16 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: NodePFN learns from synthetic graph priors, not external
+      real-world data.
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard split (2.1/49.0/49.0) as per Table 4
+    protocol_note: Accuracy on Amazon-Photo test split (2.1/49.0/49.0 split from Table
+      2)
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -1438,8 +983,8 @@ results:
     value_note: ''
     sort_value: 0.9053
     sort_std: 0.0013
-    global_rank: 475
-    paper_rank: 475
+    global_rank: 467
+    paper_rank: 467
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1458,461 +1003,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id014
-  dataset: Amazon-ratings
-  rows:
-  - model: H2GCN + UniGAP
-    model_key: h2gcn + unigap
-    model_plain: H2GCN + UniGAP
-    value: 0.6375
-    std: 0.011
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.19420'
-    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
-      Over-Smoothing in Node Classification Tasks'
-    date: Jul 28, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-28'
-    venue: arXiv.org
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.6375
-    sort_std: 0.011
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GraphSAGE + UniGAP
-    model_key: graphsage + unigap
-    model_plain: GraphSAGE + UniGAP
-    value: 0.6283
-    std: 0.009
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2407.19420'
-    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
-      Over-Smoothing in Node Classification Tasks'
-    date: Jul 28, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-28'
-    venue: arXiv.org
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.6283
-    sort_std: 0.009
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GCN + UniGAP
-    model_key: gcn + unigap
-    model_plain: GCN + UniGAP
-    value: 0.5976
-    std: 0.008
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.19420'
-    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
-      Over-Smoothing in Node Classification Tasks'
-    date: Jul 28, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-28'
-    venue: arXiv.org
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.5976
-    sort_std: 0.008
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: H2GCN
-    model_key: h2gcn
-    model_plain: H2GCN
-    value: 0.4087
-    std: 0.0011
-    paper_value: 0.4087
-    paper_std: 0.0011
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: zhu2020h2gcn
-    variant_inference_reason: 'dataset: fuzzy match to amazon-ratings (score=78)'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard node classification task on Amazon-ratings
-    date: Apr 21, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-21'
-    published_venue: ICLR 2026
-    published_conference: ICLR 2026
-    at_pub_value: 0.5681
-    at_pub_std: 0.009
-    at_pub_source_arxiv: '2407.19420'
-    at_pub_source_title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach
-      to Mitigate Over-Smoothing in Node Classification Tasks'
-    at_pub_source_date_iso: '2024-07-28'
-    at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2024-07-28'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.15940000000000004
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.5681
-    true_std: 0.009
-    value_gap_source_arxiv: '2407.19420'
-    value_gap_source_title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach
-      to Mitigate Over-Smoothing in Node Classification Tasks'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.15940000000000004
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.5681
-    sort_std: 0.009
-    global_rank: 9
-    paper_rank: 202
-    rank_delta: 193
-    rank_delta_abs: 193
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach
-      to Mitigate Over-Smoothing in Node Classification Tasks'
-    comparison_source_arxiv: '2407.19420'
-    is_best: false
-    is_std_outlier: false
-  - model: SAGE
-    model_key: sage
-    model_plain: SAGE
-    value: 0.5569
-    std: 0.0023
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2605.20248'
-    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
-      Classification'
-    date: May 18, 2026
-    date_display: May 2026
-    date_iso: '2026-05-18'
-    venue: null
-    codebase_url: https://github.com/transductive-sharpening/tunedGNN
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 14
-    sort_value: 0.5569
-    sort_std: 0.0023
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MLP
-    model_key: mlp
-    model_plain: MLP
-    value: 0.5058
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2401.09125'
-    title: Understanding Heterophily for Graph Neural Networks
-    date: Jan 17, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-17'
-    venue: International Conference on Machine Learning
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 95
-    sort_value: 0.5058
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GPRGNN
-    model_key: gprgnn
-    model_plain: GPRGNN
-    value: 0.4223
-    std: 0.0025
-    paper_value: 0.4223
-    paper_std: 0.0025
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: chien2021GPRGNN
-    variant_inference_reason: 'dataset: fuzzy match to amazon-ratings (score=78)'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard node classification task on Amazon-ratings
-    date: Apr 21, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-21'
-    published_venue: ICLR 2026
-    published_conference: ICLR 2026
-    at_pub_value: 0.4956
-    at_pub_std: 0.004
-    at_pub_source_arxiv: '2404.04559'
-    at_pub_source_title: Spectral GNN via Two-dimensional (2-D) Graph Convolution
-    at_pub_source_date_iso: '2024-04-06'
-    at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2024-04-06'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.07329999999999998
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.4956
-    true_std: 0.004
-    value_gap_source_arxiv: '2404.04559'
-    value_gap_source_title: Spectral GNN via Two-dimensional (2-D) Graph Convolution
-    value_gap_source_is_current_paper: false
-    value_gap: 0.07329999999999998
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.4956
-    sort_std: 0.004
-    global_rank: 113
-    paper_rank: 200
-    rank_delta: 87
-    rank_delta_abs: 87
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Spectral GNN via Two-dimensional (2-D) Graph Convolution
-    comparison_source_arxiv: '2404.04559'
-    is_best: false
-    is_std_outlier: false
-  - model: FAGCN
-    model_key: fagcn
-    model_plain: FAGCN
-    value: 0.4412
-    std: 0.0031
-    paper_value: 0.4412
-    paper_std: 0.0031
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: Bo2021fagcn
-    variant_inference_reason: 'dataset: fuzzy match to amazon-ratings (score=78)'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard node classification task on Amazon-ratings
-    date: Apr 21, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-21'
-    published_venue: ICLR 2026
-    published_conference: ICLR 2026
-    at_pub_value: 0.4632
-    at_pub_std: 0.025
-    at_pub_source_arxiv: '2305.16780'
-    at_pub_source_title: Graph Neural Convection-Diffusion with Heterophily
-    at_pub_source_date_iso: '2023-05-26'
-    at_pub_source_date_label: IJCAI 2023
-    value_gap_source_date_iso: '2024-11-08'
-    value_gap_source_date_label: NeurIPS 2024
-    gap_vs_at_pub: 0.02200000000000002
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.4632
-    true_std: 0.025
-    value_gap_source_arxiv: '2411.05274'
-    value_gap_source_title: Distributed-Order Fractional Graph Operating Network
-    value_gap_source_is_current_paper: false
-    value_gap: 0.02200000000000002
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.4632
-    sort_std: 0.025
-    global_rank: 152
-    paper_rank: 173
-    rank_delta: 21
-    rank_delta_abs: 21
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: NodePFN
-    model_key: nodepfn
-    model_plain: NodePFN
-    value: 0.4468
-    std: 0.0048
-    paper_value: 0.4468
-    paper_std: 0.0048
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to amazon-ratings (score=78)'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard node classification task on Amazon-ratings; uses synthetic
-      pre-training
-    date: Apr 21, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-21'
-    published_venue: ICLR 2026
-    published_conference: ICLR 2026
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-04-21'
-    value_gap_source_date_label: ICLR 2026
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.4468
-    true_std: 0.0048
-    value_gap_source_arxiv: '2604.19028'
-    value_gap_source_title: Learning Posterior Predictive Distributions for Node Classification
-      from Synthetic Graph Priors
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.4468
-    sort_std: 0.0048
-    global_rank: 170
-    paper_rank: 170
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  rank_metric: Accuracy
-  higher_is_better: true
-  experiment_scope: node-level
-  dataset_primary_metric: Accuracy
-  paper_metrics:
-  - Accuracy
-  metric: Accuracy
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
-- &id011
+- &id009
   dataset: Chameleon
   rows:
   - model: Hetero-S (GAT 8-layer)
@@ -2041,7 +1132,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 64
+    global_rank: 69
     sort_value: 0.7033
     sort_std: null
     comparison_type: global_top
@@ -2066,14 +1157,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: chien2021GPRGNN
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Uses filtered datasets from platonov2023a as per heterophily protocol.
+    protocol_note: Accuracy on Chameleon using the predefined split masks from Platonov
+      et al. 2023.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -2105,10 +1197,10 @@ results:
     value_note: ''
     sort_value: 0.6748
     sort_std: 0.004
-    global_rank: 91
-    paper_rank: 291
-    rank_delta: 200
-    rank_delta_abs: 200
+    global_rank: 97
+    paper_rank: 305
+    rank_delta: 208
+    rank_delta_abs: 208
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2133,14 +1225,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: Bo2021fagcn
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Uses filtered datasets from platonov2023a as per heterophily protocol.
+    protocol_note: Accuracy on Chameleon using the predefined split masks from Platonov
+      et al. 2023.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -2174,10 +1267,10 @@ results:
     value_note: ''
     sort_value: 0.6344
     sort_std: 0.0205
-    global_rank: 129
-    paper_rank: 296
-    rank_delta: 167
-    rank_delta_abs: 167
+    global_rank: 135
+    paper_rank: 312
+    rank_delta: 177
+    rank_delta_abs: 177
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2203,14 +1296,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: zhu2020h2gcn
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Uses filtered datasets from platonov2023a as per heterophily protocol.
+    protocol_note: Accuracy on Chameleon using the predefined split masks from Platonov
+      et al. 2023.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -2242,10 +1336,10 @@ results:
     value_note: ''
     sort_value: 0.603
     sort_std: 0.0231
-    global_rank: 156
-    paper_rank: 283
-    rank_delta: 127
-    rank_delta_abs: 127
+    global_rank: 164
+    paper_rank: 297
+    rank_delta: 133
+    rank_delta_abs: 133
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2278,7 +1372,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 195
+    global_rank: 208
     sort_value: 0.5429
     sort_std: null
     comparison_type: global_top
@@ -2303,15 +1397,16 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: learning PPDs for node classification from synthetic
+      graph priors
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Uses filtered datasets from platonov2023a as per heterophily protocol.
-      Model uses in-context learning from synthetic priors.
+    protocol_note: Accuracy on Chameleon using the predefined split masks from Platonov
+      et al. 2023.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -2344,8 +1439,8 @@ results:
     value_note: ''
     sort_value: 0.5013
     sort_std: 0.033
-    global_rank: 219
-    paper_rank: 219
+    global_rank: 239
+    paper_rank: 239
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2364,7 +1459,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id003
   dataset: CiteSeer
   rows:
   - model: CNA
@@ -2423,7 +1518,7 @@ results:
     venue: IEEE Transactions on Knowledge and Data Engineering
     codebase_url: https://github.com/YangLing0818/GraphOOD
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -2457,7 +1552,7 @@ results:
     venue: IEEE Transactions on Knowledge and Data Engineering
     codebase_url: https://github.com/YangLing0818/GraphOOD
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
@@ -2501,77 +1596,6 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: OFA
-    model_key: ofa
-    model_plain: OFA
-    value: 0.7304
-    std: null
-    paper_value: 0.7304
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: liu2024ofa
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 'Planetoid split: 20 nodes per class for training, 500 validation,
-      1000 test.'
-    date: Apr 21, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-21'
-    published_venue: ICLR 2026
-    published_conference: ICLR 2026
-    at_pub_value: 0.7158
-    at_pub_std: null
-    at_pub_source_arxiv: '2503.03313'
-    at_pub_source_title: 'LLM as GNN: Graph Vocabulary Learning for Text-Attributed
-      Graph Foundation Models'
-    at_pub_source_date_iso: '2025-03-05'
-    at_pub_source_date_label: '2025'
-    value_gap_source_date_iso: '2026-04-21'
-    value_gap_source_date_label: ICLR 2026
-    gap_vs_at_pub: 0.014600000000000057
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7304
-    true_std: null
-    value_gap_source_arxiv: '2604.19028'
-    value_gap_source_title: Learning Posterior Predictive Distributions for Node Classification
-      from Synthetic Graph Priors
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7304
-    sort_std: null
-    global_rank: 375
-    paper_rank: 375
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'LLM as GNN: Graph Vocabulary Learning for Text-Attributed
-      Graph Foundation Models'
-    comparison_source_arxiv: '2503.03313'
-    is_best: false
-    is_std_outlier: false
   - model: MLP
     model_key: mlp
     model_plain: MLP
@@ -2605,83 +1629,12 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: LLaGA
-    model_key: llaga
-    model_plain: LLaGA
-    value: 0.5573
-    std: null
-    paper_value: 0.5573
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: chen2024llaga
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 'Planetoid split: 20 nodes per class for training, 500 validation,
-      1000 test.'
-    date: Apr 21, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-21'
-    published_venue: ICLR 2026
-    published_conference: ICLR 2026
-    at_pub_value: 0.688
-    at_pub_std: null
-    at_pub_source_arxiv: '2406.10727'
-    at_pub_source_title: 'Text-space Graph Foundation Models: Comprehensive Benchmarks
-      and New Insights'
-    at_pub_source_date_iso: '2024-06-15'
-    at_pub_source_date_label: NeurIPS 2024
-    value_gap_source_date_iso: '2025-03-05'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.13069999999999993
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.688
-    true_std: null
-    value_gap_source_arxiv: '2503.03313'
-    value_gap_source_title: 'LLM as GNN: Graph Vocabulary Learning for Text-Attributed
-      Graph Foundation Models'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.13069999999999993
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.688
-    sort_std: null
-    global_rank: 722
-    paper_rank: 919
-    rank_delta: 197
-    rank_delta_abs: 197
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'Text-space Graph Foundation Models: Comprehensive Benchmarks
-      and New Insights'
-    comparison_source_arxiv: '2406.10727'
-    is_best: false
-    is_std_outlier: false
   - model: NodePFN
     model_key: nodepfn
     model_plain: NodePFN
-    value: 0.6308
+    value: 0.673
     std: null
-    paper_value: 0.6308
+    paper_value: 0.673
     paper_std: null
     metric: Accuracy
     higher_is_better: true
@@ -2693,15 +1646,15 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 'Planetoid split: 20 nodes per class for training, 500 validation,
-      1000 test.'
+    protocol_note: Accuracy on CiteSeer using the Planetoid split (20 nodes per class
+      for training, 500 validation, 1000 test) as per Kipf & Welling 2017 protocol.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -2723,7 +1676,7 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.6308
+    true_value: 0.673
     true_std: null
     value_gap_source_arxiv: '2604.19028'
     value_gap_source_title: Learning Posterior Predictive Distributions for Node Classification
@@ -2732,10 +1685,10 @@ results:
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.6308
+    sort_value: 0.673
     sort_std: null
-    global_rank: 860
-    paper_rank: 860
+    global_rank: 779
+    paper_rank: 779
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2745,496 +1698,13 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GraphText
-    model_key: graphtext
-    model_plain: GraphText
-    value: 0.5943
+  - model: TabPFN
+    model_key: tabpfn
+    model_plain: TabPFN
+    value: 0.3294
     std: null
-    paper_value: 0.5943
+    paper_value: 0.3294
     paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: zhao2023graphtext
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 'Planetoid split: 20 nodes per class for training, 500 validation,
-      1000 test.'
-    date: Apr 21, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-21'
-    published_venue: ICLR 2026
-    published_conference: ICLR 2026
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-04-21'
-    value_gap_source_date_label: ICLR 2026
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.5943
-    true_std: null
-    value_gap_source_arxiv: '2604.19028'
-    value_gap_source_title: Learning Posterior Predictive Distributions for Node Classification
-      from Synthetic Graph Priors
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.5943
-    sort_std: null
-    global_rank: 896
-    paper_rank: 896
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: InstructGLM
-    model_key: instructglm
-    model_plain: InstructGLM
-    value: 0.5187
-    std: null
-    paper_value: 0.5187
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: ye2023instructglm
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 'Planetoid split: 20 nodes per class for training, 500 validation,
-      1000 test.'
-    date: Apr 21, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-21'
-    published_venue: ICLR 2026
-    published_conference: ICLR 2026
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-04-21'
-    value_gap_source_date_label: ICLR 2026
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.5187
-    true_std: null
-    value_gap_source_arxiv: '2604.19028'
-    value_gap_source_title: Learning Posterior Predictive Distributions for Node Classification
-      from Synthetic Graph Priors
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.5187
-    sort_std: null
-    global_rank: 931
-    paper_rank: 931
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  rank_metric: Accuracy
-  higher_is_better: true
-  experiment_scope: node-level
-  dataset_primary_metric: Accuracy
-  paper_metrics:
-  - Accuracy
-  metric: Accuracy
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
-- &id006
-  dataset: Coauthor-Physics
-  rows:
-  - model: GeoMancer
-    model_key: geomancer
-    model_plain: GeoMancer
-    value: 0.9878
-    std: 0.0012
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2510.04522'
-    title: 'Toward a Unified Geometry Understanding: Riemannian Diffusion Framework
-      for Graph Generation and Prediction'
-    date: Oct 6, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-06'
-    venue: Accepted by NeurIPS 2025
-    codebase_url: https://github.com/RingBDStack/GeoMancer
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9878
-    sort_std: 0.0012
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: LGD
-    model_key: lgd
-    model_plain: LGD
-    value: 0.9855
-    std: 0.0012
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2510.04522'
-    title: 'Toward a Unified Geometry Understanding: Riemannian Diffusion Framework
-      for Graph Generation and Prediction'
-    date: Oct 6, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-06'
-    venue: Accepted by NeurIPS 2025
-    codebase_url: https://github.com/RingBDStack/GeoMancer
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.9855
-    sort_std: 0.0012
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: MSH-GNN
-    model_key: msh-gnn
-    model_plain: MSH-GNN
-    value: 0.9837
-    std: 0.0008
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.15015'
-    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
-    date: May 21, 2025
-    date_display: May 2025
-    date_iso: '2025-05-21'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9837
-    sort_std: 0.0008
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GPRGNN
-    model_key: gprgnn
-    model_plain: GPRGNN
-    value: 0.9276
-    std: 0.002
-    paper_value: 0.9276
-    paper_std: 0.002
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: chien2021GPRGNN
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard node classification task on Coauthor-Physics
-    date: Apr 21, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-21'
-    published_venue: ICLR 2026
-    published_conference: ICLR 2026
-    at_pub_value: 0.9777
-    at_pub_std: 0.0015
-    at_pub_source_arxiv: '2306.02285'
-    at_pub_source_title: Clarify Confused Nodes via Separated Learning
-    at_pub_source_date_iso: '2023-06-04'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-06-04'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.05010000000000003
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9777
-    true_std: 0.0015
-    value_gap_source_arxiv: '2306.02285'
-    value_gap_source_title: Clarify Confused Nodes via Separated Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.05010000000000003
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9777
-    sort_std: 0.0015
-    global_rank: 10
-    paper_rank: 289
-    rank_delta: 279
-    rank_delta_abs: 279
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Clarify Confused Nodes via Separated Learning
-    comparison_source_arxiv: '2306.02285'
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.9774
-    std: 0.0035
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.17296'
-    title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
-    date: Nov 26, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-26'
-    venue: International Conference on Machine Learning
-    codebase_url: https://github.com/GGA23/GrokFormer
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 12
-    sort_value: 0.9774
-    sort_std: 0.0035
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: H2GCN
-    model_key: h2gcn
-    model_plain: H2GCN
-    value: 0.9286
-    std: 0.0036
-    paper_value: 0.9286
-    paper_std: 0.0036
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: zhu2020h2gcn
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard node classification task on Coauthor-Physics
-    date: Apr 21, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-21'
-    published_venue: ICLR 2026
-    published_conference: ICLR 2026
-    at_pub_value: 0.9764
-    at_pub_std: 0.005
-    at_pub_source_arxiv: '2306.02285'
-    at_pub_source_title: Clarify Confused Nodes via Separated Learning
-    at_pub_source_date_iso: '2023-06-04'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-06-04'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.047800000000000065
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9764
-    true_std: 0.005
-    value_gap_source_arxiv: '2306.02285'
-    value_gap_source_title: Clarify Confused Nodes via Separated Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.047800000000000065
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9764
-    sort_std: 0.005
-    global_rank: 14
-    paper_rank: 287
-    rank_delta: 273
-    rank_delta_abs: 273
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Clarify Confused Nodes via Separated Learning
-    comparison_source_arxiv: '2306.02285'
-    is_best: false
-    is_std_outlier: false
-  - model: FAGCN
-    model_key: fagcn
-    model_plain: FAGCN
-    value: 0.9234
-    std: 0.004
-    paper_value: 0.9234
-    paper_std: 0.004
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: Bo2021fagcn
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard node classification task on Coauthor-Physics
-    date: Apr 21, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-21'
-    published_venue: ICLR 2026
-    published_conference: ICLR 2026
-    at_pub_value: 0.9737
-    at_pub_std: 0.0033
-    at_pub_source_arxiv: '2306.02285'
-    at_pub_source_title: Clarify Confused Nodes via Separated Learning
-    at_pub_source_date_iso: '2023-06-04'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-06-04'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.05030000000000001
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9737
-    true_std: 0.0033
-    value_gap_source_arxiv: '2306.02285'
-    value_gap_source_title: Clarify Confused Nodes via Separated Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.05030000000000001
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9737
-    sort_std: 0.0033
-    global_rank: 25
-    paper_rank: 304
-    rank_delta: 279
-    rank_delta_abs: 279
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Clarify Confused Nodes via Separated Learning
-    comparison_source_arxiv: '2306.02285'
-    is_best: false
-    is_std_outlier: false
-  - model: MLP
-    model_key: mlp
-    model_plain: MLP
-    value: 0.9597
-    std: 0.0007
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -3244,52 +1714,16 @@ results:
     architecture_type: other_traditional
     architecture_label: Trad
     architecture_title: Traditional / classical method
-    arxiv_id: '2605.20248'
-    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
-      Classification'
-    date: May 18, 2026
-    date_display: May 2026
-    date_iso: '2026-05-18'
-    venue: null
-    codebase_url: https://github.com/transductive-sharpening/tunedGNN
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 92
-    sort_value: 0.9597
-    sort_std: 0.0007
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: NodePFN
-    model_key: nodepfn
-    model_plain: NodePFN
-    value: 0.9343
-    std: 0.0013
-    paper_value: 0.9343
-    paper_std: 0.0013
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 1
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on Coauthor-Physics; uses synthetic
-      pre-training
+    protocol_note: Accuracy on CiteSeer using the Planetoid split (20 nodes per class
+      for training, 500 validation, 1000 test) as per Kipf & Welling 2017 protocol.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -3311,8 +1745,8 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.9343
-    true_std: 0.0013
+    true_value: 0.3294
+    true_std: null
     value_gap_source_arxiv: '2604.19028'
     value_gap_source_title: Learning Posterior Predictive Distributions for Node Classification
       from Synthetic Graph Priors
@@ -3320,10 +1754,10 @@ results:
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.9343
-    sort_std: 0.0013
-    global_rank: 257
-    paper_rank: 257
+    sort_value: 0.3294
+    sort_std: null
+    global_rank: 975
+    paper_rank: 975
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3345,79 +1779,11 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: Exphormer
-    model_key: exphormer
-    model_plain: Exphormer
-    value: 0.9635
-    std: 0.0019
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    venue: The Web Conference
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9635
-    sort_std: 0.0019
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SGFormer
-    model_key: sgformer
-    model_plain: SGFormer
-    value: 0.9629
-    std: 0.0015
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    venue: The Web Conference
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.9629
-    sort_std: 0.0015
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Coral
-    model_key: coral
-    model_plain: Coral
-    value: 0.9574
-    std: 0.0039
+  - model: MATE
+    model_key: mate
+    model_plain: MATE
+    value: 0.946
+    std: 0.007
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -3427,31 +1793,269 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    venue: The Web Conference
+    arxiv_id: '2407.20067'
+    title: 'xAI-Drop: Don''t Use What You Cannot Explain'
+    date: Jul 29, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-29'
+    venue: Learning on Graphs Conference
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.946
+    sort_std: 0.007
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GraphSAGE+CNA
+    model_key: graphsage+cna
+    model_plain: GraphSAGE+CNA
+    value: 0.9418
+    std: 0.0033
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.04064'
+    title: Graph Neural Networks Need Cluster-Normalize-Activate Modules
+    date: Dec 5, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-05'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/ml-research/cna_modules
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.9418
+    sort_std: 0.0033
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: DropAggr
+    model_key: dropaggr
+    model_plain: DropAggr
+    value: 0.938
+    std: 0.011
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2407.20067'
+    title: 'xAI-Drop: Don''t Use What You Cannot Explain'
+    date: Jul 29, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-29'
+    venue: Learning on Graphs Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.9574
-    sort_std: 0.0039
+    sort_value: 0.938
+    sort_std: 0.011
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.814
+    std: 0.007
+    paper_value: 0.814
+    paper_std: 0.007
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Cora, Planetoid split (20 nodes per class training, 1000 test).
+    date: Apr 21, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-21'
+    published_venue: ICLR 2026
+    published_conference: ICLR 2026
+    at_pub_value: 0.9004
+    at_pub_std: null
+    at_pub_source_arxiv: '2401.09125'
+    at_pub_source_title: Understanding Heterophily for Graph Neural Networks
+    at_pub_source_date_iso: '2024-01-17'
+    at_pub_source_date_label: ICML 2024
+    value_gap_source_date_iso: '2024-01-17'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: 0.08640000000000003
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9004
+    true_std: null
+    value_gap_source_arxiv: '2401.09125'
+    value_gap_source_title: Understanding Heterophily for Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.08640000000000003
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9004
+    sort_std: null
+    global_rank: 31
+    paper_rank: 662
+    rank_delta: 631
+    rank_delta_abs: 631
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Understanding Heterophily for Graph Neural Networks
+    comparison_source_arxiv: '2401.09125'
+    is_best: false
+    is_std_outlier: false
+  - model: TFGNN
+    model_key: tfgnn
+    model_plain: TFGNN
+    value: 0.6003
+    std: 0.0
+    paper_value: 0.6003
+    paper_std: 0.0
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Cora, Planetoid split (20 nodes per class training, 1000 test).
+    date: Apr 21, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-21'
+    published_venue: ICLR 2026
+    published_conference: ICLR 2026
+    at_pub_value: 0.8921
+    at_pub_std: 0.004
+    at_pub_source_arxiv: '2404.15354'
+    at_pub_source_title: 'Polynomial Selection in Spectral Graph Neural Networks:
+      An Error-Sum of Function Slices Approach'
+    at_pub_source_date_iso: '2024-04-15'
+    at_pub_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-04-15'
+    value_gap_source_date_label: WWW 2024
+    gap_vs_at_pub: 0.29180000000000006
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8921
+    true_std: 0.004
+    value_gap_source_arxiv: '2404.15354'
+    value_gap_source_title: 'Polynomial Selection in Spectral Graph Neural Networks:
+      An Error-Sum of Function Slices Approach'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.29180000000000006
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8921
+    sort_std: 0.004
+    global_rank: 59
+    paper_rank: 960
+    rank_delta: 901
+    rank_delta_abs: 901
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'Polynomial Selection in Spectral Graph Neural Networks:
+      An Error-Sum of Function Slices Approach'
+    comparison_source_arxiv: '2404.15354'
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.8911
+    std: 0.0012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2506.07168'
+    title: Efficient Text-Attributed Graph Learning through Selective Annotation and
+      Graph Alignment
+    date: Jun 8, 2025
+    date_display: Jun 2025
+    date_iso: '2025-06-08'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 61
+    sort_value: 0.8911
+    sort_std: 0.0012
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.9004
-    std: null
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.817
+    std: 0.0143
+    paper_value: 0.817
+    paper_std: 0.0143
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -3461,23 +2065,58 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2401.09125'
-    title: Understanding Heterophily for Graph Neural Networks
-    date: Jan 17, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-17'
-    venue: International Conference on Machine Learning
-    codebase_url: ''
-    uses_external_data: false
+    uses_external_data: 0
     input_feature_source: raw_features
     feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 42
-    sort_value: 0.9004
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Cora, Planetoid split (20 nodes per class training, 1000 test).
+    date: Apr 21, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-21'
+    published_venue: ICLR 2026
+    published_conference: ICLR 2026
+    at_pub_value: 0.8897
+    at_pub_std: 0.0014
+    at_pub_source_arxiv: '2505.15845'
+    at_pub_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in
+      Tokenized Graph Learning Models'
+    at_pub_source_date_iso: '2025-05-19'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2025-05-19'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.0727000000000001
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8897
+    true_std: 0.0014
+    value_gap_source_arxiv: '2505.15845'
+    value_gap_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem
+      in Tokenized Graph Learning Models'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0727000000000001
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8897
+    sort_std: 0.0014
+    global_rank: 67
+    paper_rank: 642
+    rank_delta: 575
+    rank_delta_abs: 575
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem
+      in Tokenized Graph Learning Models'
+    comparison_source_arxiv: '2505.15845'
     is_best: false
     is_std_outlier: false
   - model: SGC
@@ -3497,14 +2136,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (20 nodes per class training split)
+    protocol_note: Cora, Planetoid split (20 nodes per class training, 1000 test).
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -3517,8 +2156,8 @@ results:
       Neural Networks
     at_pub_source_date_iso: '2023-11-30'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2026-05-24'
-    value_gap_source_date_label: ICML 2026
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.08629999999999993
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -3527,21 +2166,21 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.8797
-    true_std: null
-    value_gap_source_arxiv: '2605.24867'
-    value_gap_source_title: 'Clustering as Reasoning: A $k$-Means Interpretation of
-      Chain-of-Thought Graph Learning'
+    true_value: 0.8683
+    true_std: 0.0128
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
     value_gap_source_is_current_paper: false
-    value_gap: 0.09770000000000001
+    value_gap: 0.08629999999999993
     has_value_note: false
     value_note: ''
-    sort_value: 0.8797
-    sort_std: null
-    global_rank: 148
-    paper_rank: 838
-    rank_delta: 690
-    rank_delta_abs: 690
+    sort_value: 0.8683
+    sort_std: 0.0128
+    global_rank: 202
+    paper_rank: 791
+    rank_delta: 589
+    rank_delta_abs: 589
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3566,16 +2205,16 @@ results:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: single pre-trained model... without needing to be trained
+      specifically for that dataset
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (20 nodes per class training split). Uses pre-trained
-      weights.
+    protocol_note: Cora, Planetoid split (20 nodes per class training, 1000 test).
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -3608,8 +2247,76 @@ results:
     value_note: ''
     sort_value: 0.8206
     sort_std: 0.0029
-    global_rank: 655
-    paper_rank: 655
+    global_rank: 605
+    paper_rank: 605
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphAny(Cora)
+    model_key: graphany(cora)
+    model_plain: GraphAny(Cora)
+    value: 0.8018
+    std: 0.0013
+    paper_value: 0.8018
+    paper_std: 0.0013
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 1
+    input_feature_source: unknown
+    feature_source_evidence: GraphAny models require training on each specific dataset
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Cora, Planetoid split (20 nodes per class training, 1000 test).
+    date: Apr 21, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-21'
+    published_venue: ICLR 2026
+    published_conference: ICLR 2026
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-21'
+    value_gap_source_date_label: ICLR 2026
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8018
+    true_std: 0.0013
+    value_gap_source_arxiv: '2604.19028'
+    value_gap_source_title: Learning Posterior Predictive Distributions for Node Classification
+      from Synthetic Graph Priors
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8018
+    sort_std: 0.0013
+    global_rank: 734
+    paper_rank: 734
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3622,8 +2329,10 @@ results:
   - model: MLP
     model_key: mlp
     model_plain: MLP
-    value: 0.7768
-    std: null
+    value: 0.4842
+    std: 0.0063
+    paper_value: 0.4842
+    paper_std: 0.0063
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -3633,23 +2342,55 @@ results:
     architecture_type: other_traditional
     architecture_label: Trad
     architecture_title: Traditional / classical method
-    arxiv_id: '2401.09125'
-    title: Understanding Heterophily for Graph Neural Networks
-    date: Jan 17, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-17'
-    venue: International Conference on Machine Learning
-    codebase_url: ''
-    uses_external_data: false
+    uses_external_data: 0
     input_feature_source: raw_features
     feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 853
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Cora, Planetoid split (20 nodes per class training, 1000 test).
+    date: Apr 21, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-21'
+    published_venue: ICLR 2026
+    published_conference: ICLR 2026
+    at_pub_value: 0.7768
+    at_pub_std: null
+    at_pub_source_arxiv: '2401.09125'
+    at_pub_source_title: Understanding Heterophily for Graph Neural Networks
+    at_pub_source_date_iso: '2024-01-17'
+    at_pub_source_date_label: ICML 2024
+    value_gap_source_date_iso: '2024-01-17'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: 0.2926
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7768
+    true_std: null
+    value_gap_source_arxiv: '2401.09125'
+    value_gap_source_title: Understanding Heterophily for Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.2926
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7768
     sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    global_rank: 806
+    paper_rank: 996
+    rank_delta: 190
+    rank_delta_abs: 190
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Understanding Heterophily for Graph Neural Networks
+    comparison_source_arxiv: '2401.09125'
     is_best: false
     is_std_outlier: false
   - model: Linear
@@ -3669,14 +2410,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (20 nodes per class training split)
+    protocol_note: Cora, Planetoid split (20 nodes per class training, 1000 test).
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -3710,10 +2451,10 @@ results:
     value_note: ''
     sort_value: 0.7237
     sort_std: 0.0033
-    global_rank: 930
-    paper_rank: 1034
-    rank_delta: 104
-    rank_delta_abs: 104
+    global_rank: 887
+    paper_rank: 985
+    rank_delta: 98
+    rank_delta_abs: 98
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3739,14 +2480,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (20 nodes per class training split)
+    protocol_note: Cora, Planetoid split (20 nodes per class training, 1000 test).
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -3779,8 +2520,8 @@ results:
     value_note: ''
     sort_value: 0.603
     sort_std: 0.0
-    global_rank: 1008
-    paper_rank: 1008
+    global_rank: 960
+    paper_rank: 960
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3790,31 +2531,31 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: TFGNN
-    model_key: tfgnn
-    model_plain: TFGNN
-    value: 0.6003
-    std: 0.0
-    paper_value: 0.6003
-    paper_std: 0.0
+  - model: TabPFN
+    model_key: tabpfn
+    model_plain: TabPFN
+    value: 0.531
+    std: null
+    paper_value: 0.531
+    paper_std: null
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 2
+    table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (20 nodes per class training split)
+    protocol_note: Cora, Planetoid split (20 nodes per class training, 1000 test).
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -3836,8 +2577,8 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.6003
-    true_std: 0.0
+    true_value: 0.531
+    true_std: null
     value_gap_source_arxiv: '2604.19028'
     value_gap_source_title: Learning Posterior Predictive Distributions for Node Classification
       from Synthetic Graph Priors
@@ -3845,10 +2586,10 @@ results:
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.6003
-    sort_std: 0.0
-    global_rank: 1009
-    paper_rank: 1009
+    sort_value: 0.531
+    sort_std: null
+    global_rank: 985
+    paper_rank: 985
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3875,14 +2616,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (20 nodes per class training split)
+    protocol_note: Cora, Planetoid split (20 nodes per class training, 1000 test).
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -3915,8 +2656,8 @@ results:
     value_note: ''
     sort_value: 0.225
     sort_std: 0.0
-    global_rank: 1084
-    paper_rank: 1084
+    global_rank: 1012
+    paper_rank: 1012
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3935,7 +2676,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id009
+- &id007
   dataset: Cornell
   rows:
   - model: P^2GNN
@@ -4054,14 +2795,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: chien2021GPRGNN
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Geom-GCN 10 fixed splits.
+    protocol_note: Accuracy on Cornell using Geom-GCN 10 fixed splits.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -4093,10 +2834,10 @@ results:
     value_note: ''
     sort_value: 0.9157
     sort_std: 0.0196
-    global_rank: 25
-    paper_rank: 646
-    rank_delta: 621
-    rank_delta_abs: 621
+    global_rank: 23
+    paper_rank: 629
+    rank_delta: 606
+    rank_delta_abs: 606
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4129,7 +2870,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 27
+    global_rank: 25
     sort_value: 0.9136
     sort_std: 0.007
     comparison_type: global_top
@@ -4154,14 +2895,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: Bo2021fagcn
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Geom-GCN 10 fixed splits.
+    protocol_note: Accuracy on Cornell using Geom-GCN 10 fixed splits.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -4193,10 +2934,10 @@ results:
     value_note: ''
     sort_value: 0.8852
     sort_std: 0.0133
-    global_rank: 56
-    paper_rank: 454
-    rank_delta: 398
-    rank_delta_abs: 398
+    global_rank: 48
+    paper_rank: 443
+    rank_delta: 395
+    rank_delta_abs: 395
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4221,14 +2962,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: zhu2020h2gcn
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Geom-GCN 10 fixed splits.
+    protocol_note: Accuracy on Cornell using Geom-GCN 10 fixed splits.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -4260,10 +3001,10 @@ results:
     value_note: ''
     sort_value: 0.8623
     sort_std: 0.0471
-    global_rank: 94
-    paper_rank: 398
-    rank_delta: 304
-    rank_delta_abs: 304
+    global_rank: 85
+    paper_rank: 387
+    rank_delta: 302
+    rank_delta_abs: 302
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4297,7 +3038,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 177
+    global_rank: 165
     sort_value: 0.8269
     sort_std: null
     comparison_type: global_top
@@ -4321,15 +3062,17 @@ results:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: The model learns to extract patterns from context samples
+      and apply them to test nodes... without needing to be trained specifically for
+      that dataset.
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Geom-GCN 10 fixed splits.
+    protocol_note: Accuracy on Cornell using Geom-GCN 10 fixed splits.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -4362,8 +3105,8 @@ results:
     value_note: ''
     sort_value: 0.7189
     sort_std: 0.0276
-    global_rank: 335
-    paper_rank: 335
+    global_rank: 325
+    paper_rank: 325
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4382,7 +3125,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id013
+- &id012
   dataset: DBLP
   rows:
   - model: HG-SCM
@@ -4476,7 +3219,7 @@ results:
     venue: arXiv.org
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
@@ -4504,14 +3247,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard split as per Table 4 (0.5/49.8/49.8 train/val/test)
+    protocol_note: Accuracy on DBLP using the standard split (49.8% test) as described
+      in Table 2.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -4546,9 +3290,9 @@ results:
     sort_value: 0.8859
     sort_std: 0.001
     global_rank: 31
-    paper_rank: 123
-    rank_delta: 92
-    rank_delta_abs: 92
+    paper_rank: 121
+    rank_delta: 90
+    rank_delta_abs: 90
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4574,14 +3318,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard split as per Table 4 (0.5/49.8/49.8 train/val/test)
+    protocol_note: Accuracy on DBLP using the standard split (49.8% test) as described
+      in Table 2.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -4616,48 +3361,15 @@ results:
     sort_value: 0.8758
     sort_std: 0.002
     global_rank: 36
-    paper_rank: 125
-    rank_delta: 89
-    rank_delta_abs: 89
+    paper_rank: 123
+    rank_delta: 87
+    rank_delta_abs: 87
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive
       Learning on Hypergraphs'
     comparison_source_arxiv: '2206.04739'
-    is_best: false
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.872
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2112.08331'
-    title: Model Stealing Attacks Against Inductive Graph Neural Networks
-    date: Dec 15, 2021
-    date_display: Dec 2021
-    date_iso: '2021-12-15'
-    venue: IEEE Symposium on Security and Privacy
-    codebase_url: https://github.com/xinleihe/GNNStealing
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 38
-    sort_value: 0.872
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: MLP
@@ -4677,14 +3389,15 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard split as per Table 4 (0.5/49.8/49.8 train/val/test)
+    protocol_note: Accuracy on DBLP using the standard split (49.8% test) as described
+      in Table 2.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -4718,10 +3431,10 @@ results:
     value_note: ''
     sort_value: 0.8118
     sort_std: 0.002
-    global_rank: 82
-    paper_rank: 146
-    rank_delta: 64
-    rank_delta_abs: 64
+    global_rank: 80
+    paper_rank: 142
+    rank_delta: 62
+    rank_delta_abs: 62
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4747,14 +3460,16 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: learning PPDs for node classification from synthetic
+      graph priors
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard split as per Table 4 (0.5/49.8/49.8 train/val/test)
+    protocol_note: Accuracy on DBLP using the standard split (49.8% test) as described
+      in Table 2.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -4787,13 +3502,46 @@ results:
     value_note: ''
     sort_value: 0.7471
     sort_std: 0.0039
-    global_rank: 121
-    paper_rank: 121
+    global_rank: 119
+    paper_rank: 119
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.7455
+    std: 0.0061
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2602.12613'
+    title: 'Coden: Efficient Temporal Graph Neural Networks for Continuous Prediction'
+    date: Feb 13, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-13'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 120
+    sort_value: 0.7455
+    sort_std: 0.0061
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -4815,14 +3563,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard split as per Table 4 (0.5/49.8/49.8 train/val/test)
+    protocol_note: Accuracy on DBLP using the standard split (49.8% test) as described
+      in Table 2.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -4855,8 +3604,8 @@ results:
     value_note: ''
     sort_value: 0.7173
     sort_std: 0.0094
-    global_rank: 129
-    paper_rank: 129
+    global_rank: 127
+    paper_rank: 127
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4875,7 +3624,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id018
+- &id016
   dataset: Deezer
   rows:
   - model: CLP
@@ -4997,14 +3746,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard split (Train/Val/Test 0.1/49.9/49.9) as per Table 4
+    protocol_note: Accuracy on Deezer homophily dataset using standard split (0.1/49.9/49.9)
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -5067,14 +3816,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard split (Train/Val/Test 0.1/49.9/49.9) as per Table 4
+    protocol_note: Accuracy on Deezer homophily dataset using standard split (0.1/49.9/49.9)
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -5137,14 +3886,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard split (Train/Val/Test 0.1/49.9/49.9) as per Table 4
+    protocol_note: Accuracy on Deezer homophily dataset using standard split (0.1/49.9/49.9)
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -5207,14 +3956,15 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: NodePFN learns from synthetic graph priors, not external
+      real-world data.
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard split (Train/Val/Test 0.1/49.9/49.9) as per Table 4
+    protocol_note: Accuracy on Deezer homophily dataset using standard split (0.1/49.9/49.9)
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -5275,14 +4025,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard split (Train/Val/Test 0.1/49.9/49.9) as per Table 4
+    protocol_note: Accuracy on Deezer homophily dataset using standard split (0.1/49.9/49.9)
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -5335,7 +4085,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id017
+- &id014
   dataset: Minesweeper
   rows:
   - model: GraphTARIF
@@ -5457,14 +4207,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Heterophily dataset, standard split as per Table 4 description
+    protocol_note: Accuracy on Minesweeper heterophily dataset using 50/25/25 split
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -5498,10 +4248,10 @@ results:
     value_note: ''
     sort_value: 0.9786
     sort_std: 0.0037
-    global_rank: 4
-    paper_rank: 45
-    rank_delta: 41
-    rank_delta_abs: 41
+    global_rank: 5
+    paper_rank: 47
+    rank_delta: 42
+    rank_delta_abs: 42
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -5527,14 +4277,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Heterophily dataset, standard split as per Table 4 description
+    protocol_note: Accuracy on Minesweeper heterophily dataset using 50/25/25 split
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -5568,8 +4318,8 @@ results:
     value_note: ''
     sort_value: 0.9744
     sort_std: 0.0017
-    global_rank: 8
-    paper_rank: 41
+    global_rank: 9
+    paper_rank: 42
     rank_delta: 33
     rank_delta_abs: 33
     rank_delta_direction: worse
@@ -5606,7 +4356,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 10
+    global_rank: 11
     sort_value: 0.9709
     sort_std: 0.01
     comparison_type: global_top
@@ -5631,14 +4381,15 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: NodePFN learns from synthetic graph priors, not the benchmark
+      training split.
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Heterophily dataset, standard split as per Table 4 description
+    protocol_note: Accuracy on Minesweeper heterophily dataset using 50/25/25 split
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -5671,8 +4422,8 @@ results:
     value_note: ''
     sort_value: 0.8066
     sort_std: 0.0025
-    global_rank: 43
-    paper_rank: 43
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5699,14 +4450,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Heterophily dataset, standard split as per Table 4 description
+    protocol_note: Accuracy on Minesweeper heterophily dataset using 50/25/25 split
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -5739,8 +4490,8 @@ results:
     value_note: ''
     sort_value: 0.8046
     sort_std: 0.0015
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 46
+    paper_rank: 46
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5767,14 +4518,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Heterophily dataset, standard split as per Table 4 description
+    protocol_note: Accuracy on Minesweeper heterophily dataset using 50/25/25 split
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -5807,8 +4558,8 @@ results:
     value_note: ''
     sort_value: 0.8
     sort_std: 0.0
-    global_rank: 47
-    paper_rank: 47
+    global_rank: 49
+    paper_rank: 49
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5827,7 +4578,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id003
+- &id002
   dataset: PubMed
   rows:
   - model: LGTL
@@ -5864,40 +4615,6 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SAGN
-    model_key: sagn
-    model_plain: SAGN
-    value: 0.9517
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2605.24867'
-    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
-      Graph Learning'
-    date: May 24, 2026
-    date_display: May 2026
-    date_iso: '2026-05-24'
-    venue: Accepted by ICML 2026
-    codebase_url: https://github.com/Uncnbb/KCoT
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.9517
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
   - model: MixHop (LO)
     model_key: mixhop (lo)
     model_plain: MixHop (LO)
@@ -5924,7 +4641,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 2
     sort_value: 0.9513
     sort_std: 0.0038
     comparison_type: global_top
@@ -5932,11 +4649,11 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.9487
-    std: null
+  - model: GraphSAGE (LO)
+    model_key: graphsage (lo)
+    model_plain: GraphSAGE (LO)
+    value: 0.9511
+    std: 0.0036
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -5946,24 +4663,129 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2605.24867'
-    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
-      Graph Learning'
-    date: May 24, 2026
-    date_display: May 2026
-    date_iso: '2026-05-24'
-    venue: Accepted by ICML 2026
-    codebase_url: https://github.com/Uncnbb/KCoT
+    arxiv_id: '2405.13902'
+    title: 'LOGIN: A Large Language Model Consulted Graph Neural Network Training
+      Framework'
+    date: May 22, 2024
+    date_display: May 2024
+    date_iso: '2024-05-22'
+    venue: Web Search and Data Mining
+    codebase_url: https://github.com/QiaoYRan/LOGIN
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 9
-    sort_value: 0.9487
-    sort_std: null
+    global_rank: 3
+    sort_value: 0.9511
+    sort_std: 0.0036
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.9296
+    std: 0.0015
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_display: May 2025
+    date_iso: '2025-05-19'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 19
+    sort_value: 0.9296
+    sort_std: 0.0015
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: TFGNN
+    model_key: tfgnn
+    model_plain: TFGNN
+    value: 0.4004
+    std: 0.01
+    paper_value: 0.4004
+    paper_std: 0.01
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: 'Planetoid split: 20 nodes per class for training, 500 validation,
+      1000 test.'
+    date: Apr 21, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-21'
+    published_venue: ICLR 2026
+    published_conference: ICLR 2026
+    at_pub_value: 0.9
+    at_pub_std: 0.002
+    at_pub_source_arxiv: '2404.15354'
+    at_pub_source_title: 'Polynomial Selection in Spectral Graph Neural Networks:
+      An Error-Sum of Function Slices Approach'
+    at_pub_source_date_iso: '2024-04-15'
+    at_pub_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-04-15'
+    value_gap_source_date_label: WWW 2024
+    gap_vs_at_pub: 0.49960000000000004
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9
+    true_std: 0.002
+    value_gap_source_arxiv: '2404.15354'
+    value_gap_source_title: 'Polynomial Selection in Spectral Graph Neural Networks:
+      An Error-Sum of Function Slices Approach'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.49960000000000004
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9
+    sort_std: 0.002
+    global_rank: 87
+    paper_rank: 971
+    rank_delta: 884
+    rank_delta_abs: 884
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'Polynomial Selection in Spectral Graph Neural Networks:
+      An Error-Sum of Function Slices Approach'
+    comparison_source_arxiv: '2404.15354'
     is_best: false
     is_std_outlier: false
   - model: SGC
@@ -5983,7 +4805,7 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
@@ -6025,10 +4847,10 @@ results:
     value_note: ''
     sort_value: 0.8832
     sort_std: 0.0055
-    global_rank: 159
-    paper_rank: 850
-    rank_delta: 691
-    rank_delta_abs: 691
+    global_rank: 164
+    paper_rank: 901
+    rank_delta: 737
+    rank_delta_abs: 737
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -6062,7 +4884,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 233
+    global_rank: 243
     sort_value: 0.869
     sort_std: 0.0074
     comparison_type: global_top
@@ -6074,9 +4896,9 @@ results:
     model_key: nodepfn
     model_plain: NodePFN
     value: 0.78
-    std: 0.0024
+    std: 0.24
     paper_value: 0.78
-    paper_std: 0.0024
+    paper_std: 0.24
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
@@ -6087,8 +4909,9 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: training on synthetic graphs that systematically cover
+      the diversity of real-world graphs
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
@@ -6118,7 +4941,7 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.78
-    true_std: 0.0024
+    true_std: 0.24
     value_gap_source_arxiv: '2604.19028'
     value_gap_source_title: Learning Posterior Predictive Distributions for Node Classification
       from Synthetic Graph Priors
@@ -6127,9 +4950,9 @@ results:
     has_value_note: false
     value_note: ''
     sort_value: 0.78
-    sort_std: 0.0024
-    global_rank: 715
-    paper_rank: 715
+    sort_std: 0.24
+    global_rank: 747
+    paper_rank: 747
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6137,8 +4960,8 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
+    is_best: true
+    is_std_outlier: true
   - model: Linear
     model_key: linear
     model_plain: Linear
@@ -6156,7 +4979,7 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
@@ -6196,10 +5019,10 @@ results:
     value_note: ''
     sort_value: 0.6866
     sort_std: 0.0224
-    global_rank: 883
-    paper_rank: 903
-    rank_delta: 20
-    rank_delta_abs: 20
+    global_rank: 934
+    paper_rank: 955
+    rank_delta: 21
+    rank_delta_abs: 21
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -6224,7 +5047,7 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
@@ -6265,8 +5088,8 @@ results:
     value_note: ''
     sort_value: 0.6344
     sort_std: 0.04
-    global_rank: 896
-    paper_rank: 896
+    global_rank: 949
+    paper_rank: 949
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6293,7 +5116,7 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
@@ -6334,77 +5157,8 @@ results:
     value_note: ''
     sort_value: 0.4632
     sort_std: 0.0
-    global_rank: 916
-    paper_rank: 916
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: TFGNN
-    model_key: tfgnn
-    model_plain: TFGNN
-    value: 0.4004
-    std: 0.01
-    paper_value: 0.4004
-    paper_std: 0.01
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 'Planetoid split: 20 nodes per class for training, 500 validation,
-      1000 test.'
-    date: Apr 21, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-21'
-    published_venue: ICLR 2026
-    published_conference: ICLR 2026
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-04-21'
-    value_gap_source_date_label: ICLR 2026
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.4004
-    true_std: 0.01
-    value_gap_source_arxiv: '2604.19028'
-    value_gap_source_title: Learning Posterior Predictive Distributions for Node Classification
-      from Synthetic Graph Priors
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.4004
-    sort_std: 0.01
-    global_rank: 928
-    paper_rank: 928
+    global_rank: 962
+    paper_rank: 962
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6443,14 +5197,15 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Test split as defined in Table 4 (Heterophily dataset statistics)
+    protocol_note: Accuracy on Questions dataset using 50/25/25 split as per Table
+      2
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -6577,14 +5332,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Test split as defined in Table 4 (Heterophily dataset statistics)
+    protocol_note: Accuracy on Questions dataset using 50/25/25 split as per Table
+      2
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -6645,14 +5401,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Test split as defined in Table 4 (Heterophily dataset statistics)
+    protocol_note: Accuracy on Questions dataset using 50/25/25 split as per Table
+      2
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -6714,14 +5471,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Test split as defined in Table 4 (Heterophily dataset statistics)
+    protocol_note: Accuracy on Questions dataset using 50/25/25 split as per Table
+      2
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -6782,14 +5540,16 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: The model is trained on synthetic graph priors to perform
+      in-context learning on real graphs.
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Test split as defined in Table 4 (Heterophily dataset statistics)
+    protocol_note: Accuracy on Questions dataset using 50/25/25 split as per Table
+      2
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -6858,7 +5618,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 34
+    global_rank: 33
     sort_value: 0.7644
     sort_std: null
     comparison_type: global_top
@@ -6875,7 +5635,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id012
+- &id010
   dataset: Squirrel
   rows:
   - model: IBG-NN
@@ -6994,14 +5754,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: zhu2020h2gcn
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Uses filtered datasets from platonov2023a as per heterophily protocol.
+    protocol_note: Node classification on Squirrel using filtered datasets from Platonov
+      et al. 2023 and predefined split masks from Pei et al. 2020.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -7035,10 +5796,10 @@ results:
     value_note: ''
     sort_value: 0.619
     sort_std: 0.014
-    global_rank: 41
-    paper_rank: 238
-    rank_delta: 197
-    rank_delta_abs: 197
+    global_rank: 42
+    paper_rank: 248
+    rank_delta: 206
+    rank_delta_abs: 206
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -7072,7 +5833,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 49
+    global_rank: 51
     sort_value: 0.6067
     sort_std: null
     comparison_type: global_top
@@ -7097,14 +5858,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: chien2021GPRGNN
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Uses filtered datasets from platonov2023a as per heterophily protocol.
+    protocol_note: Node classification on Squirrel using filtered datasets from Platonov
+      et al. 2023 and predefined split masks from Pei et al. 2020.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -7136,10 +5898,10 @@ results:
     value_note: ''
     sort_value: 0.5435
     sort_std: 0.0087
-    global_rank: 82
-    paper_rank: 188
-    rank_delta: 106
-    rank_delta_abs: 106
+    global_rank: 86
+    paper_rank: 195
+    rank_delta: 109
+    rank_delta_abs: 109
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -7164,15 +5926,16 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: learning PPDs for node classification from synthetic
+      graph priors
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Uses filtered datasets from platonov2023a as per heterophily protocol.
-      Model uses synthetic pre-training.
+    protocol_note: Node classification on Squirrel using filtered datasets from Platonov
+      et al. 2023 and predefined split masks from Pei et al. 2020.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -7205,8 +5968,8 @@ results:
     value_note: ''
     sort_value: 0.434
     sort_std: 0.0103
-    global_rank: 141
-    paper_rank: 141
+    global_rank: 146
+    paper_rank: 146
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7233,14 +5996,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: Bo2021fagcn
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Uses filtered datasets from platonov2023a as per heterophily protocol.
+    protocol_note: Node classification on Squirrel using filtered datasets from Platonov
+      et al. 2023 and predefined split masks from Pei et al. 2020.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -7273,10 +6037,10 @@ results:
     value_note: ''
     sort_value: 0.4259
     sort_std: 0.0069
-    global_rank: 153
-    paper_rank: 217
-    rank_delta: 64
-    rank_delta_abs: 64
+    global_rank: 159
+    paper_rank: 225
+    rank_delta: 66
+    rank_delta_abs: 66
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -7310,7 +6074,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 188
+    global_rank: 194
     sort_value: 0.393
     sort_std: 0.0079
     comparison_type: global_top
@@ -7327,7 +6091,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id008
+- &id006
   dataset: Texas
   rows:
   - model: P^2GNN
@@ -7447,14 +6211,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: chien2021GPRGNN
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on Texas dataset.
+    protocol_note: Accuracy on Texas dataset using standard split/task.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -7487,9 +6251,9 @@ results:
     sort_value: 0.9295
     sort_std: 0.0131
     global_rank: 38
-    paper_rank: 553
-    rank_delta: 515
-    rank_delta_abs: 515
+    paper_rank: 517
+    rank_delta: 479
+    rank_delta_abs: 479
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -7522,7 +6286,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 47
+    global_rank: 45
     sort_value: 0.923
     sort_std: 0.007
     comparison_type: global_top
@@ -7547,14 +6311,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: zhu2020h2gcn
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on Texas dataset.
+    protocol_note: Accuracy on Texas dataset using standard split/task.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -7586,10 +6350,10 @@ results:
     value_note: ''
     sort_value: 0.9189
     sort_std: 0.0393
-    global_rank: 54
-    paper_rank: 395
-    rank_delta: 341
-    rank_delta_abs: 341
+    global_rank: 52
+    paper_rank: 363
+    rank_delta: 311
+    rank_delta_abs: 311
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -7622,7 +6386,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 76
+    global_rank: 73
     sort_value: 0.9001
     sort_std: 0.023
     comparison_type: global_top
@@ -7647,14 +6411,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: Bo2021fagcn
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on Texas dataset.
+    protocol_note: Accuracy on Texas dataset using standard split/task.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -7686,10 +6450,10 @@ results:
     value_note: ''
     sort_value: 0.8961
     sort_std: 0.0152
-    global_rank: 85
-    paper_rank: 522
-    rank_delta: 437
-    rank_delta_abs: 437
+    global_rank: 82
+    paper_rank: 486
+    rank_delta: 404
+    rank_delta_abs: 404
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -7714,14 +6478,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on Texas dataset.
+    protocol_note: Accuracy on Texas dataset using standard split/task.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -7755,10 +6519,10 @@ results:
     value_note: ''
     sort_value: 0.8131
     sort_std: 0.033
-    global_rank: 302
-    paper_rank: 732
-    rank_delta: 430
-    rank_delta_abs: 430
+    global_rank: 279
+    paper_rank: 692
+    rank_delta: 413
+    rank_delta_abs: 413
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -7784,14 +6548,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on Texas dataset.
+    protocol_note: Accuracy on Texas dataset using standard split/task.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -7824,10 +6588,10 @@ results:
     value_note: ''
     sort_value: 0.7838
     sort_std: 0.0
-    global_rank: 360
-    paper_rank: 754
-    rank_delta: 394
-    rank_delta_abs: 394
+    global_rank: 334
+    paper_rank: 712
+    rank_delta: 378
+    rank_delta_abs: 378
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -7852,15 +6616,16 @@ results:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: learning PPDs for node classification from synthetic
+      graph priors
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on Texas dataset.
+    protocol_note: Accuracy on Texas dataset using standard split/task.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -7893,8 +6658,8 @@ results:
     value_note: ''
     sort_value: 0.7622
     sort_std: 0.0753
-    global_rank: 401
-    paper_rank: 401
+    global_rank: 369
+    paper_rank: 369
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7921,14 +6686,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on Texas dataset.
+    protocol_note: Accuracy on Texas dataset using standard split/task.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -7961,8 +6726,8 @@ results:
     value_note: ''
     sort_value: 0.5754
     sort_std: 0.063
-    global_rank: 678
-    paper_rank: 678
+    global_rank: 641
+    paper_rank: 641
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7989,14 +6754,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on Texas dataset.
+    protocol_note: Accuracy on Texas dataset using standard split/task.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -8029,8 +6794,8 @@ results:
     value_note: ''
     sort_value: 0.2353
     sort_std: 0.0551
-    global_rank: 776
-    paper_rank: 776
+    global_rank: 716
+    paper_rank: 716
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8057,14 +6822,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on Texas dataset.
+    protocol_note: Accuracy on Texas dataset using standard split/task.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -8097,8 +6862,8 @@ results:
     value_note: ''
     sort_value: 0.1991
     sort_std: 0.061
-    global_rank: 779
-    paper_rank: 779
+    global_rank: 717
+    paper_rank: 717
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8117,50 +6882,51 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id016
+- &id013
   dataset: Tolokers
   rows:
-  - model: Polynormer-r
-    model_key: polynormer-r
-    model_plain: Polynormer-r
+  - model: NT*
+    model_key: nt
+    model_plain: NT*
     value: 0.8591
-    std: 0.0074
+    std: 0.0083
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2403.01232'
-    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/cornell-zhang/Polynormer
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2604.08980'
+    title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware Graph
+      Learning'
+    date: Apr 10, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-10'
+    venue: arXiv.org
+    codebase_url: https://github.com/cf020031308/MoNT
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
     sort_value: 0.8591
-    sort_std: 0.0074
+    sort_std: 0.0083
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: NT
-    model_key: nt
-    model_plain: NT
-    value: 0.8569
-    std: 0.0054
+  - model: Polynormer
+    model_key: polynormer
+    model_plain: Polynormer
+    value: 0.8591
+    std: 0.0074
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
@@ -8176,12 +6942,12 @@ results:
     venue: arXiv.org
     codebase_url: https://github.com/cf020031308/MoNT
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.8569
-    sort_std: 0.0054
+    sort_value: 0.8591
+    sort_std: 0.0074
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -8210,7 +6976,7 @@ results:
     venue: arXiv.org
     codebase_url: https://github.com/cf020031308/MoNT
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
@@ -8238,14 +7004,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on Tolokers dataset
+    protocol_note: Accuracy on Tolokers using the 50/25/25 split as defined in Table
+      2.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -8277,10 +7044,10 @@ results:
     value_note: ''
     sort_value: 0.837
     sort_std: 0.0047
-    global_rank: 6
-    paper_rank: 20
-    rank_delta: 14
-    rank_delta_abs: 14
+    global_rank: 7
+    paper_rank: 23
+    rank_delta: 16
+    rank_delta_abs: 16
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -8305,14 +7072,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on Tolokers dataset
+    protocol_note: Accuracy on Tolokers using the 50/25/25 split as defined in Table
+      2.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -8345,10 +7113,10 @@ results:
     value_note: ''
     sort_value: 0.8364
     sort_std: 0.0067
-    global_rank: 7
-    paper_rank: 11
-    rank_delta: 4
-    rank_delta_abs: 4
+    global_rank: 8
+    paper_rank: 14
+    rank_delta: 6
+    rank_delta_abs: 6
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -8373,14 +7141,16 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: The model is trained on synthetic graph priors and performs
+      in-context learning on the target dataset.
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on Tolokers dataset
+    protocol_note: Accuracy on Tolokers using the 50/25/25 split as defined in Table
+      2.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -8413,8 +7183,8 @@ results:
     value_note: ''
     sort_value: 0.7861
     sort_std: 0.0006
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8441,14 +7211,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on Tolokers dataset
+    protocol_note: Accuracy on Tolokers using the 50/25/25 split as defined in Table
+      2.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -8481,8 +7252,8 @@ results:
     value_note: ''
     sort_value: 0.7824
     sort_std: 0.0003
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8509,14 +7280,15 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on Tolokers dataset
+    protocol_note: Accuracy on Tolokers using the 50/25/25 split as defined in Table
+      2.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -8549,8 +7321,8 @@ results:
     value_note: ''
     sort_value: 0.7816
     sort_std: 0.0002
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8569,7 +7341,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id007
+- &id005
   dataset: WikiCS
   rows:
   - model: GCN
@@ -8594,7 +7366,7 @@ results:
     venue: arXiv.org
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -8725,14 +7497,15 @@ results:
     architecture_label: LLM
     architecture_title: LLM applied to graphs
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: llm_features
+    feature_source_evidence: LLaGA is an LLM-based model.
     table_ref: Table 1
     source_ref: chen2024llaga
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Follows the split in Rozemberczki et al. 2021
+    protocol_note: WikiCS node classification under the supervised setting of GLBench;
+      metric is Accuracy %.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -8766,10 +7539,10 @@ results:
     value_note: ''
     sort_value: 0.8074
     sort_std: null
-    global_rank: 85
-    paper_rank: 252
-    rank_delta: 167
-    rank_delta_abs: 167
+    global_rank: 79
+    paper_rank: 243
+    rank_delta: 164
+    rank_delta_abs: 164
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -8795,14 +7568,15 @@ results:
     architecture_label: LLM
     architecture_title: LLM applied to graphs
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: llm_features
+    feature_source_evidence: OFA is an LLM-based model.
     table_ref: Table 1
     source_ref: liu2024ofa
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Follows the split in Rozemberczki et al. 2021
+    protocol_note: WikiCS node classification under the supervised setting of GLBench;
+      metric is Accuracy %.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -8836,10 +7610,10 @@ results:
     value_note: ''
     sort_value: 0.7855
     sort_std: 0.0037
-    global_rank: 163
-    paper_rank: 203
-    rank_delta: 40
-    rank_delta_abs: 40
+    global_rank: 158
+    paper_rank: 196
+    rank_delta: 38
+    rank_delta_abs: 38
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -8865,14 +7639,15 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Follows the split in Rozemberczki et al. 2021
+    protocol_note: WikiCS node classification under the supervised setting of GLBench;
+      metric is Accuracy %.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -8905,8 +7680,8 @@ results:
     value_note: ''
     sort_value: 0.7629
     sort_std: null
-    global_rank: 228
-    paper_rank: 228
+    global_rank: 218
+    paper_rank: 218
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8941,7 +7716,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 246
+    global_rank: 237
     sort_value: 0.7469
     sort_std: 0.0085
     comparison_type: global_top
@@ -8966,14 +7741,15 @@ results:
     architecture_label: LLM
     architecture_title: LLM applied to graphs
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: llm_features
+    feature_source_evidence: InstructGLM is an LLM-based model.
     table_ref: Table 1
     source_ref: ye2023instructglm
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Follows the split in Rozemberczki et al. 2021
+    protocol_note: WikiCS node classification under the supervised setting of GLBench;
+      metric is Accuracy %.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
@@ -9007,16 +7783,87 @@ results:
     value_note: ''
     sort_value: 0.744
     sort_std: null
-    global_rank: 248
-    paper_rank: 346
-    rank_delta: 98
-    rank_delta_abs: 98
+    global_rank: 239
+    paper_rank: 317
+    rank_delta: 78
+    rank_delta_abs: 78
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'CO-EVOLVE: Bidirectional Co-Evolution of Graph Structure
       and Semantics for Heterophilous Learning'
     comparison_source_arxiv: '2603.19596'
+    is_best: false
+    is_std_outlier: false
+  - model: TabPFN
+    model_key: tabpfn
+    model_plain: TabPFN
+    value: 0.6225
+    std: null
+    paper_value: 0.6225
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: WikiCS node classification using the split from Rozemberczki et
+      al. 2021; metric is Accuracy %.
+    date: Apr 21, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-21'
+    published_venue: ICLR 2026
+    published_conference: ICLR 2026
+    at_pub_value: 0.7208
+    at_pub_std: 0.0059
+    at_pub_source_arxiv: '2512.08798'
+    at_pub_source_title: Can TabPFN Compete with GNNs for Node Classification via
+      Graph Tabularization?
+    at_pub_source_date_iso: '2025-12-09'
+    at_pub_source_date_label: LoG 2025
+    value_gap_source_date_iso: '2025-12-09'
+    value_gap_source_date_label: LoG 2025
+    gap_vs_at_pub: 0.09829999999999994
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7208
+    true_std: 0.0059
+    value_gap_source_arxiv: '2512.08798'
+    value_gap_source_title: Can TabPFN Compete with GNNs for Node Classification via
+      Graph Tabularization?
+    value_gap_source_is_current_paper: false
+    value_gap: 0.09829999999999994
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7208
+    sort_std: 0.0059
+    global_rank: 252
+    paper_rank: 307
+    rank_delta: 55
+    rank_delta_abs: 55
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Can TabPFN Compete with GNNs for Node Classification
+      via Graph Tabularization?
+    comparison_source_arxiv: '2512.08798'
     is_best: false
     is_std_outlier: false
   - model: GraphText
@@ -9036,26 +7883,26 @@ results:
     architecture_label: LLM
     architecture_title: LLM applied to graphs
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: llm_features
+    feature_source_evidence: GraphText is an LLM-based model.
     table_ref: Table 1
     source_ref: zhao2023graphtext
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Follows the split in Rozemberczki et al. 2021
+    protocol_note: WikiCS node classification under the supervised setting of GLBench;
+      metric is Accuracy %.
     date: Apr 21, 2026
     date_display: Apr 2026
     date_iso: '2026-04-21'
     published_venue: ICLR 2026
     published_conference: ICLR 2026
-    at_pub_value: 0.6735
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2407.07457'
-    at_pub_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
-      Language Models'
-    at_pub_source_date_iso: '2024-07-10'
-    at_pub_source_date_label: NeurIPS 2024
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-04-21'
     value_gap_source_date_label: ICLR 2026
     gap_vs_at_pub: null
@@ -9077,8 +7924,596 @@ results:
     value_note: ''
     sort_value: 0.6735
     sort_std: null
-    global_rank: 302
-    paper_rank: 302
+    global_rank: 283
+    paper_rank: 283
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id011
+  dataset: Wisconsin
+  rows:
+  - model: ACM-GCN
+    model_key: acm-gcn
+    model_plain: ACM-GCN
+    value: 0.958
+    std: 0.02
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2504.19785'
+    title: Heterophily-informed Message Passing
+    date: Apr 28, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-28'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/AaltoML/heterophily-imp
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.958
+    sort_std: 0.02
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GPRGNN
+    model_key: gprgnn
+    model_plain: GPRGNN
+    value: 0.938
+    std: 0.024
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2504.19785'
+    title: Heterophily-informed Message Passing
+    date: Apr 28, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-28'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/AaltoML/heterophily-imp
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.938
+    sort_std: 0.024
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: DMD++
+    model_key: dmd++
+    model_plain: DMD++
+    value: 0.919
+    std: 0.026
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2410.05593'
+    title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+    date: Oct 8, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-08'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.919
+    sort_std: 0.026
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.918
+    std: 0.031
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2410.05593'
+    title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+    date: Oct 8, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-08'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 4
+    sort_value: 0.918
+    sort_std: 0.031
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.831
+    std: 0.032
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2206.02386'
+    title: Restructuring Graphs for Higher Homophily via Adaptive Spectral Clustering
+    date: Jun 6, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-06'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/seanli3/graph_restructure
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 79
+    sort_value: 0.831
+    sort_std: 0.032
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: NodePFN
+    model_key: nodepfn
+    model_plain: NodePFN
+    value: 0.8118
+    std: 0.057
+    paper_value: 0.8118
+    paper_std: 0.057
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: training on synthetic graphs that systematically cover
+      the diversity of real-world graphs
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Wisconsin using the standard Geom-GCN 10 fixed splits.
+    date: Apr 21, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-21'
+    published_venue: ICLR 2026
+    published_conference: ICLR 2026
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-21'
+    value_gap_source_date_label: ICLR 2026
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8118
+    true_std: 0.057
+    value_gap_source_arxiv: '2604.19028'
+    value_gap_source_title: Learning Posterior Predictive Distributions for Node Classification
+      from Synthetic Graph Priors
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8118
+    sort_std: 0.057
+    global_rank: 91
+    paper_rank: 91
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Linear
+    model_key: linear
+    model_plain: Linear
+    value: 0.8
+    std: 0.0215
+    paper_value: 0.8
+    paper_std: 0.0215
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Wisconsin using the standard Geom-GCN 10 fixed splits.
+    date: Apr 21, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-21'
+    published_venue: ICLR 2026
+    published_conference: ICLR 2026
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-21'
+    value_gap_source_date_label: ICLR 2026
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8
+    true_std: 0.0215
+    value_gap_source_arxiv: '2604.19028'
+    value_gap_source_title: Learning Posterior Predictive Distributions for Node Classification
+      from Synthetic Graph Priors
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8
+    sort_std: 0.0215
+    global_rank: 100
+    paper_rank: 100
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SGC
+    model_key: sgc
+    model_plain: SGC
+    value: 0.5764
+    std: 0.0107
+    paper_value: 0.5764
+    paper_std: 0.0107
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Wisconsin using the standard Geom-GCN 10 fixed splits.
+    date: Apr 21, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-21'
+    published_venue: ICLR 2026
+    published_conference: ICLR 2026
+    at_pub_value: 0.778
+    at_pub_std: 0.047
+    at_pub_source_arxiv: '2206.02386'
+    at_pub_source_title: Restructuring Graphs for Higher Homophily via Adaptive Spectral
+      Clustering
+    at_pub_source_date_iso: '2022-06-06'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2022-06-06'
+    value_gap_source_date_label: AAAI 2022
+    gap_vs_at_pub: 0.2016
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.778
+    true_std: 0.047
+    value_gap_source_arxiv: '2206.02386'
+    value_gap_source_title: Restructuring Graphs for Higher Homophily via Adaptive
+      Spectral Clustering
+    value_gap_source_is_current_paper: false
+    value_gap: 0.2016
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.778
+    sort_std: 0.047
+    global_rank: 113
+    paper_rank: 202
+    rank_delta: 89
+    rank_delta_abs: 89
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Restructuring Graphs for Higher Homophily via Adaptive
+      Spectral Clustering
+    comparison_source_arxiv: '2206.02386'
+    is_best: false
+    is_std_outlier: false
+  - model: HGC
+    model_key: hgc
+    model_plain: HGC
+    value: 0.6432
+    std: 0.0251
+    paper_value: 0.6432
+    paper_std: 0.0251
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Wisconsin using the standard Geom-GCN 10 fixed splits.
+    date: Apr 21, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-21'
+    published_venue: ICLR 2026
+    published_conference: ICLR 2026
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-21'
+    value_gap_source_date_label: ICLR 2026
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6432
+    true_std: 0.0251
+    value_gap_source_arxiv: '2604.19028'
+    value_gap_source_title: Learning Posterior Predictive Distributions for Node Classification
+      from Synthetic Graph Priors
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6432
+    sort_std: 0.0251
+    global_rank: 173
+    paper_rank: 173
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: LabelProp
+    model_key: labelprop
+    model_plain: LabelProp
+    value: 0.1608
+    std: 0.0215
+    paper_value: 0.1608
+    paper_std: 0.0215
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Wisconsin using the standard Geom-GCN 10 fixed splits.
+    date: Apr 21, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-21'
+    published_venue: ICLR 2026
+    published_conference: ICLR 2026
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-21'
+    value_gap_source_date_label: ICLR 2026
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1608
+    true_std: 0.0215
+    value_gap_source_arxiv: '2604.19028'
+    value_gap_source_title: Learning Posterior Predictive Distributions for Node Classification
+      from Synthetic Graph Priors
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1608
+    sort_std: 0.0215
+    global_rank: 255
+    paper_rank: 255
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: TFGNN
+    model_key: tfgnn
+    model_plain: TFGNN
+    value: 0.1451
+    std: 0.0301
+    paper_value: 0.1451
+    paper_std: 0.0301
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Wisconsin using the standard Geom-GCN 10 fixed splits.
+    date: Apr 21, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-21'
+    published_venue: ICLR 2026
+    published_conference: ICLR 2026
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-21'
+    value_gap_source_date_label: ICLR 2026
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1451
+    true_std: 0.0301
+    value_gap_source_arxiv: '2604.19028'
+    value_gap_source_title: Learning Posterior Predictive Distributions for Node Classification
+      from Synthetic Graph Priors
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1451
+    sort_std: 0.0301
+    global_rank: 256
+    paper_rank: 256
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9105,27 +8540,25 @@ results_grouped:
   - *id003
   - *id004
   - *id005
-  - *id006
-  - *id007
 - benchmark: Heterophilic Graphs
   datasets:
+  - *id006
+  - *id007
   - *id008
   - *id009
   - *id010
   - *id011
-  - *id012
 - benchmark: Heterogeneous Graph Benchmarks
   datasets:
-  - *id013
+  - *id012
 - benchmark: Heterophily Benchmark
   datasets:
+  - *id013
   - *id014
   - *id015
-  - *id016
-  - *id017
 - benchmark: LINKX Benchmarks
   datasets:
-  - *id018
+  - *id016
 datasets_by_scope:
 - scope: node-level
   label: Node-level
@@ -9135,16 +8568,12 @@ datasets_by_scope:
     datasets:
     - dataset: Cora
       dataset_slug: cora
-    - dataset: CiteSeer
-      dataset_slug: citeseer
     - dataset: PubMed
       dataset_slug: pubmed
+    - dataset: CiteSeer
+      dataset_slug: citeseer
     - dataset: Amazon-Photo
       dataset_slug: amazon-photo
-    - dataset: Amazon-Computers
-      dataset_slug: amazon-computers
-    - dataset: Coauthor-Physics
-      dataset_slug: coauthor-physics
     - dataset: WikiCS
       dataset_slug: wikics
   - benchmark: Heterophilic Graphs
@@ -9160,6 +8589,8 @@ datasets_by_scope:
       dataset_slug: chameleon
     - dataset: Squirrel
       dataset_slug: squirrel
+    - dataset: Wisconsin
+      dataset_slug: wisconsin
   - benchmark: Heterogeneous Graph Benchmarks
     benchmark_slug: heterogeneous-graph-benchmarks
     datasets:
@@ -9168,14 +8599,12 @@ datasets_by_scope:
   - benchmark: Heterophily Benchmark
     benchmark_slug: heterophily-benchmark
     datasets:
-    - dataset: Amazon-ratings
-      dataset_slug: amazon-ratings
-    - dataset: Questions
-      dataset_slug: questions
     - dataset: Tolokers
       dataset_slug: tolokers
     - dataset: Minesweeper
       dataset_slug: minesweeper
+    - dataset: Questions
+      dataset_slug: questions
   - benchmark: LINKX Benchmarks
     benchmark_slug: linkx-benchmarks
     datasets:

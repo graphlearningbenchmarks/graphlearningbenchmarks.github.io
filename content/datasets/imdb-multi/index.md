@@ -12,7 +12,7 @@ stats:
   avg_nodes: 13.0
   avg_edges: 65.9
   num_classes: 3
-result_count: 121
+result_count: 123
 best_model:
   model: GraphSNN
   value: 0.779
@@ -623,15 +623,15 @@ variants:
     metric_stds:
     - 0.0701
     - null
-  - model: DiGGR
-    model_plain: DiGGR
-    is_baseline: false
+  - model: H_d
+    model_plain: H_d
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
     arxiv_id: '2408.13471'
     title: Disentangled Generative Graph Representation Learning
     date: Aug 24, 2024
@@ -650,6 +650,34 @@ variants:
     - null
     metric_stds:
     - 0.0263
+    - null
+  - model: H_d + H_g
+    model_plain: H_d + H_g
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2408.13471'
+    title: Disentangled Generative Graph Representation Learning
+    date: Aug 24, 2024
+    date_iso: '2024-08-24'
+    date_display: Aug 2024
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.5469
+    - null
+    metric_stds:
+    - 0.0206
     - null
   - model: Graph Transformer + DEL-K
     model_plain: Graph Transformer + DEL-K
@@ -1239,6 +1267,34 @@ variants:
     metric_stds:
     - 0.0052
     - null
+  - model: H_g
+    model_plain: H_g
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2408.13471'
+    title: Disentangled Generative Graph Representation Learning
+    date: Aug 24, 2024
+    date_iso: '2024-08-24'
+    date_display: Aug 2024
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.5162
+    - null
+    metric_stds:
+    - 0.0061
+    - null
   - model: SEP-G
     model_plain: SEP-G
     is_baseline: false
@@ -1463,74 +1519,18 @@ variants:
     metric_stds:
     - 0.007
     - null
-  - model: AutoGCL
-    model_plain: AutoGCL
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2406.17251'
-    title: 'TopoGCL: Topological Graph Contrastive Learning'
-    date: Mar 24, 2024
-    date_iso: '2024-03-24'
-    date_display: Mar 2024
-    codebase_url: https://github.com/topogclaaai24/TopoGCL
-    published_conference: AAAI 2024
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.506
-    - null
-    metric_stds:
-    - 0.008
-    - null
-  - model: graph2vec
-    model_plain: graph2vec
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: walk
-    architecture_label: Walk
-    architecture_title: Random-walk graph embedding
-    arxiv_id: '2006.05582'
-    title: Contrastive Multi-View Representation Learning on Graphs
-    date: Jun 1, 2020
-    date_iso: '2020-06-01'
-    date_display: Jun 2020
-    codebase_url: ''
-    published_conference: ICML 2020
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2020
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.504
-    - null
-    metric_stds:
-    - 0.009
-    - null
-  row_count: 121
+  row_count: 123
   rows_json: /data/datasets/imdb-multi/10-fold-cv-rows.json
   chart_json: /data/datasets/imdb-multi/10-fold-cv-chart.json
   arch_counts:
     gnn: 74
-    hybrid: 15
+    hybrid: 14
     graph_transformer: 2
     llm: 0
     walk: 4
     traditional: 22
   metric_counts:
-  - 119
+  - 121
   - 2
   milestones: &id001
   - value: 0.485
@@ -1545,6 +1545,12 @@ variants:
     arxiv_id: '2005.01214'
     title: Graph Homomorphism Convolution
     date: '2020-05-03'
+  - value: 0.568
+    std: null
+    model: AutoGEL
+    arxiv_id: '2112.01064'
+    title: 'AutoGEL: An Automated Graph Neural Network with Explicit Link Information'
+    date: '2021-12-02'
   - value: 0.779
     std: 0.036
     model: GraphSNN
@@ -1553,6 +1559,12 @@ variants:
     date: '2022-06-04'
   milestones_by_metric:
     Accuracy: *id001
-    equivalence classes: []
+    equivalence classes:
+    - value: 387.0
+      std: null
+      model: GNN
+      arxiv_id: '2010.15116'
+      title: On Graph Neural Networks versus Graph-Augmented MLPs
+      date: '2020-10-28'
 ---
 

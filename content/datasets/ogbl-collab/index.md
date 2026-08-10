@@ -20,6 +20,10 @@ best_model:
   arxiv_id: '2410.01802'
   paper_title: 'PROXI: Challenging the GNNs for Link Prediction'
 papers:
+- arxiv_id: '2510.04567'
+  title: 'GILT: An LLM-Free, Tuning-Free Graph Foundational Model for In-Context Learning'
+  date_iso: '2025-10-06'
+  venue: ICML 2025
 - arxiv_id: '2508.17630'
   title: 'Quantum Graph Attention Network: A Novel Quantum Multi-Head Attention Mechanism
     for Graph Learning'
@@ -37,10 +41,6 @@ papers:
   title: 'Beyond Message Passing: Neural Graph Pattern Machine'
   date_iso: '2025-01-30'
   venue: ICML 2025
-- arxiv_id: '2411.03845'
-  title: Reconsidering the Performance of GAE in Link Prediction
-  date_iso: '2024-11-06'
-  venue: ''
 - arxiv_id: '2410.01802'
   title: 'PROXI: Challenging the GNNs for Link Prediction'
   date_iso: '2024-10-02'
@@ -66,6 +66,15 @@ papers:
   title: Improving Expressivity of GNNs with Subgraph-specific Factor Embedded Normalization
   date_iso: '2023-05-31'
   venue: KDD 2023
+- arxiv_id: '2304.10074'
+  title: Improving Graph Neural Networks on Multi-node Tasks with the Labeling Trick
+  date_iso: '2023-04-20'
+  venue: JMLR 2023
+- arxiv_id: '2303.03379'
+  title: 'SUREL+: Moving from Walks to Sets for Scalable Subgraph-based Graph Representation
+    Learning'
+  date_iso: '2023-03-06'
+  venue: ''
 - arxiv_id: '2303.00170'
   title: Asymmetric Learning for Graph Neural Network based Link Prediction
   date_iso: '2023-03-01'
@@ -97,11 +106,6 @@ papers:
     Networks
   date_iso: '2022-03-01'
   venue: ICLR 2022
-- arxiv_id: '2202.13538'
-  title: Algorithm and System Co-design for Efficient Subgraph-based Graph Representation
-    Learning
-  date_iso: '2022-02-28'
-  venue: ''
 - arxiv_id: '2201.07858'
   title: Decoupling the Depth and Scope of Graph Neural Networks
   date_iso: '2022-01-19'
@@ -324,33 +328,34 @@ variants:
     metric_stds:
     - 0.0051
     - null
-  - model: MPLP
-    model_plain: MPLP
-    is_baseline: true
+  - model: GILT (5-shot)
+    model_plain: GILT (5-shot)
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.03845'
-    title: Reconsidering the Performance of GAE in Link Prediction
-    date: Nov 6, 2024
-    date_iso: '2024-11-06'
-    date_display: Nov 2024
-    codebase_url: https://github.com/GraphPKU/Refined-GAE
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2510.04567'
+    title: 'GILT: An LLM-Free, Tuning-Free Graph Foundational Model for In-Context
+      Learning'
+    date: Oct 6, 2025
+    date_iso: '2025-10-06'
+    date_display: Oct 2025
+    codebase_url: https://github.com/yiming421/inductnode
+    published_conference: ICML 2025
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2025
     uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
-    - 0.6699
+    - 0.6783
     - null
     metric_stds:
-    - 0.004
+    - 0.0034
     - null
   - model: SIGN
     model_plain: SIGN
@@ -465,34 +470,6 @@ variants:
     - null
     metric_stds:
     - 0.0061
-    - null
-  - model: Optimized GAE
-    model_plain: Optimized GAE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.03845'
-    title: Reconsidering the Performance of GAE in Link Prediction
-    date: Nov 6, 2024
-    date_iso: '2024-11-06'
-    date_display: Nov 2024
-    codebase_url: https://github.com/GraphPKU/Refined-GAE
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.6611
-    - null
-    metric_stds:
-    - 0.0035
     - null
   - model: YinYanGNN
     model_plain: YinYanGNN
@@ -892,6 +869,35 @@ variants:
     metric_stds:
     - 0.0
     - null
+  - model: SUREL
+    model_plain: SUREL
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2303.03379'
+    title: 'SUREL+: Moving from Walks to Sets for Scalable Subgraph-based Graph Representation
+      Learning'
+    date: Mar 6, 2023
+    date_iso: '2023-03-06'
+    date_display: Mar 2023
+    codebase_url: 'https://github.com/Graph-COM/SUREL_Plus{https:'
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.641
+    - null
+    metric_stds:
+    - 0.0106
+    - null
   - model: RA
     model_plain: RA
     is_baseline: true
@@ -976,35 +982,6 @@ variants:
     - null
     metric_stds:
     - 0.0069
-    - null
-  - model: SUREL
-    model_plain: SUREL
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2202.13538'
-    title: Algorithm and System Co-design for Efficient Subgraph-based Graph Representation
-      Learning
-    date: Feb 28, 2022
-    date_iso: '2022-02-28'
-    date_display: Feb 2022
-    codebase_url: https://github.com/Graph-COM/SUREL
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.6334
-    - null
-    metric_stds:
-    - 0.0052
     - null
   - model: CN
     model_plain: CN
@@ -1091,6 +1068,35 @@ variants:
     - null
     metric_stds:
     - 0.0164
+    - null
+  - model: UniLP (5-shot)
+    model_plain: UniLP (5-shot)
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2510.04567'
+    title: 'GILT: An LLM-Free, Tuning-Free Graph Foundational Model for In-Context
+      Learning'
+    date: Oct 6, 2025
+    date_iso: '2025-10-06'
+    date_display: Oct 2025
+    codebase_url: https://github.com/yiming421/inductnode
+    published_conference: ICML 2025
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.58
+    - null
+    metric_stds:
+    - 0.031
     - null
   - model: DE-GNN
     model_plain: DE-GNN
@@ -1373,34 +1379,6 @@ variants:
     metric_stds:
     - 0.0022
     - null
-  - model: GDGNN
-    model_plain: GDGNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2310.09516'
-    title: Efficient Link Prediction via GNN Layers Induced by Negative Sampling
-    date: Oct 14, 2023
-    date_iso: '2023-10-14'
-    date_display: Oct 2023
-    codebase_url: https://github.com/yxzwang/SubmissionverOfYinYanGNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.5474
-    - null
-    metric_stds:
-    - 0.0048
-    - null
   - model: GDGNN-Vert
     model_plain: GDGNN-Vert
     is_baseline: false
@@ -1457,6 +1435,35 @@ variants:
     metric_stds:
     - 0.0106
     - null
+  - model: GDGNN
+    model_plain: GDGNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2303.03379'
+    title: 'SUREL+: Moving from Walks to Sets for Scalable Subgraph-based Graph Representation
+      Learning'
+    date: Mar 6, 2023
+    date_iso: '2023-03-06'
+    date_display: Mar 2023
+    codebase_url: 'https://github.com/Graph-COM/SUREL_Plus{https:'
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.5474
+    - null
+    metric_stds:
+    - 0.0048
+    - null
   - model: SEAL
     model_plain: SEAL
     is_baseline: true
@@ -1486,8 +1493,8 @@ variants:
     metric_stds:
     - 0.0001
     - null
-  - model: GAE(SAGE)
-    model_plain: GAE(SAGE)
+  - model: ZO-S
+    model_plain: ZO-S
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -1495,24 +1502,24 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2411.03845'
-    title: Reconsidering the Performance of GAE in Link Prediction
-    date: Nov 6, 2024
-    date_iso: '2024-11-06'
-    date_display: Nov 2024
-    codebase_url: https://github.com/GraphPKU/Refined-GAE
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
+    arxiv_id: '2304.10074'
+    title: Improving Graph Neural Networks on Multi-node Tasks with the Labeling Trick
+    date: Apr 20, 2023
+    date_iso: '2023-04-20'
+    date_display: Apr 2023
+    codebase_url: https://github.com/GraphPKU/LabelingTrick
+    published_conference: JMLR 2023
+    published_conference_short: JMLR
+    published_conference_slug: jmlr
+    published_venue: JMLR 2023
     uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
-    - 0.5463
+    - 0.5469
     - null
     metric_stds:
-    - 0.0112
+    - 0.0051
     - null
   - model: SAGE
     model_plain: SAGE
@@ -1578,18 +1585,18 @@ variants:
     hybrid: 18
     graph_transformer: 4
     llm: 0
-    walk: 8
-    traditional: 45
+    walk: 6
+    traditional: 46
   metric_counts:
   - 155
   - 8
   milestones: &id001
-  - value: 0.522
-    std: 0.007
-    model: LRGA+GCN
-    arxiv_id: '2006.07846'
-    title: Formatting Instructions for ICLR 2021 Conference Submissions
-    date: '2020-06-14'
+  - value: 0.5463
+    std: 0.0112
+    model: GraphSAGE
+    arxiv_id: '2005.00687'
+    title: OGB
+    date: '2020-05-02'
   - value: 0.6474
     std: 0.0043
     model: SEAL

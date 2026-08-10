@@ -72,12 +72,17 @@ has_results: true
 paper_type: method
 proposed_models:
 - HealHGNN
-mrr: 0.0
-adjusted_mrr: 0.0
-mrr_dataset_count: 0
+mrr: 0.006
+adjusted_mrr: 0.004
+mrr_dataset_count: 2
 benchmark_categories:
+- Classic
 - Hypergraph Benchmarks
 benchmark_coverage:
+- benchmark: Classic
+  benchmark_slug: classic
+  evaluated: 2
+  total: 12
 - benchmark: Hypergraph Benchmarks
   benchmark_slug: hypergraph-benchmarks
   evaluated: 5
@@ -87,7 +92,1144 @@ task_categories:
 experiment_scopes:
 - node-level
 results:
-- &id004
+- &id002
+  dataset: CiteSeer
+  rows:
+  - model: CNA
+    model_key: cna
+    model_plain: CNA
+    value: 0.9575
+    std: 0.0058
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.04064'
+    title: Graph Neural Networks Need Cluster-Normalize-Activate Modules
+    date: Dec 5, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-05'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/ml-research/cna_modules
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9575
+    sort_std: 0.0058
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: IS-GIB
+    model_key: is-gib
+    model_plain: IS-GIB
+    value: 0.939
+    std: 0.0187
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2306.15902'
+    title: Individual and Structural Graph Information Bottlenecks for Out-of-Distribution
+      Generalization
+    date: Jun 28, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-28'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/YangLing0818/GraphOOD
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.939
+    sort_std: 0.0187
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: EERM
+    model_key: eerm
+    model_plain: EERM
+    value: 0.9112
+    std: 0.0145
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2306.15902'
+    title: Individual and Structural Graph Information Bottlenecks for Out-of-Distribution
+      Generalization
+    date: Jun 28, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-28'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/YangLing0818/GraphOOD
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9112
+    sort_std: 0.0145
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.8774
+    std: 0.0041
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2305.06142'
+    title: Feature Expansion for Graph Neural Networks
+    date: May 10, 2023
+    date_display: May 2023
+    date_iso: '2023-05-10'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/sajqavril/Feature-Extension-Graph-Neural-Networks
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 20
+    sort_value: 0.8774
+    sort_std: 0.0041
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: HealHGNN
+    model_key: healhgnn
+    model_plain: HealHGNN
+    value: 0.7506
+    std: 0.0116
+    paper_value: 0.7506
+    paper_std: 0.0116
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7506
+    true_std: 0.0116
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7506
+    sort_std: 0.0116
+    global_rank: 218
+    paper_rank: 218
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: KHGNN
+    model_key: khgnn
+    model_plain: KHGNN
+    value: 0.748
+    std: 0.011
+    paper_value: 0.748
+    paper_std: 0.011
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: AAAI25-KHGNN
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.748
+    true_std: 0.011
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.748
+    sort_std: 0.011
+    global_rank: 229
+    paper_rank: 229
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: FrameHGNN
+    model_key: framehgnn
+    model_plain: FrameHGNN
+    value: 0.7472
+    std: 0.021
+    paper_value: 0.7472
+    paper_std: 0.021
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: AAAI25-FrameHGNN
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7472
+    true_std: 0.021
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7472
+    sort_std: 0.021
+    global_rank: 231
+    paper_rank: 231
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SheafHyperGNN
+    model_key: sheafhypergnn
+    model_plain: SheafHyperGNN
+    value: 0.7471
+    std: 0.0123
+    paper_value: 0.7471
+    paper_std: 0.0123
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: NIPS23-sheafhypergnn
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7471
+    true_std: 0.0123
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7471
+    sort_std: 0.0123
+    global_rank: 233
+    paper_rank: 233
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PhenomNN
+    model_key: phenomnn
+    model_plain: PhenomNN
+    value: 0.7445
+    std: 0.0096
+    paper_value: 0.7445
+    paper_std: 0.0096
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: ICML24-PhenomNN
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7445
+    true_std: 0.0096
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7445
+    sort_std: 0.0096
+    global_rank: 252
+    paper_rank: 252
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Deep-HGNN
+    model_key: deep-hgnn
+    model_plain: Deep-HGNN
+    value: 0.7407
+    std: 0.0164
+    paper_value: 0.7407
+    paper_std: 0.0164
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: arxiv22-deephgnn
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7407
+    true_std: 0.0164
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7407
+    sort_std: 0.0164
+    global_rank: 274
+    paper_rank: 274
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: ED-HNN
+    model_key: ed-hnn
+    model_plain: ED-HNN
+    value: 0.737
+    std: 0.0138
+    paper_value: 0.737
+    paper_std: 0.0138
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: ICLR22-edhnn
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.737
+    true_std: 0.0138
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.737
+    sort_std: 0.0138
+    global_rank: 299
+    paper_rank: 299
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: AllSetTransformer
+    model_key: allsettransformer
+    model_plain: AllSetTransformer
+    value: 0.7308
+    std: 0.012
+    paper_value: 0.7308
+    paper_std: 0.012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: iclr22-alldeepsets-allsettrans
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7308
+    true_std: 0.012
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7308
+    sort_std: 0.012
+    global_rank: 375
+    paper_rank: 375
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: UniGCNII
+    model_key: unigcnii
+    model_plain: UniGCNII
+    value: 0.7305
+    std: 0.0221
+    paper_value: 0.7305
+    paper_std: 0.0221
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: arxiv21-hgnn-uniGCNII
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7305
+    true_std: 0.0221
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7305
+    sort_std: 0.0221
+    global_rank: 376
+    paper_rank: 376
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.7289
+    std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2508.17531'
+    title: 'Gumbel-MPNN: Graph Rewiring with Gumbel-Softmax'
+    date: Aug 24, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-24'
+    venue: European Conference on Artificial Intelligence
+    codebase_url: https://github.com/Bobowner/Gumbel-Softmax-MPNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 401
+    sort_value: 0.7289
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: HyperGCN
+    model_key: hypergcn
+    model_plain: HyperGCN
+    value: 0.7276
+    std: 0.0112
+    paper_value: 0.7276
+    paper_std: 0.0112
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: nips19-hypergcn
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.5992
+    at_pub_std: 0.096
+    at_pub_source_arxiv: '2206.04739'
+    at_pub_source_title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive
+      Learning on Hypergraphs'
+    at_pub_source_date_iso: '2022-06-09'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.12840000000000007
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7276
+    true_std: 0.0112
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7276
+    sort_std: 0.0112
+    global_rank: 411
+    paper_rank: 411
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive
+      Learning on Hypergraphs'
+    comparison_source_arxiv: '2206.04739'
+    is_best: false
+    is_std_outlier: false
+  - model: HNHN
+    model_key: hnhn
+    model_plain: HNHN
+    value: 0.7264
+    std: 0.0157
+    paper_value: 0.7264
+    paper_std: 0.0157
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: arxiv20-hnhn
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.6728
+    at_pub_std: 0.022
+    at_pub_source_arxiv: '2206.04739'
+    at_pub_source_title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive
+      Learning on Hypergraphs'
+    at_pub_source_date_iso: '2022-06-09'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.05360000000000009
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7264
+    true_std: 0.0157
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7264
+    sort_std: 0.0157
+    global_rank: 425
+    paper_rank: 425
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive
+      Learning on Hypergraphs'
+    comparison_source_arxiv: '2206.04739'
+    is_best: false
+    is_std_outlier: false
+  - model: HCHA
+    model_key: hcha
+    model_plain: HCHA
+    value: 0.7242
+    std: 0.0142
+    paper_value: 0.7242
+    paper_std: 0.0142
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: PR21-hcha
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7242
+    true_std: 0.0142
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7242
+    sort_std: 0.0142
+    global_rank: 459
+    paper_rank: 459
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: AllDeepSets
+    model_key: alldeepsets
+    model_plain: AllDeepSets
+    value: 0.7083
+    std: 0.0163
+    paper_value: 0.7083
+    paper_std: 0.0163
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: iclr22-alldeepsets-allsettrans
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7083
+    true_std: 0.0163
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7083
+    sort_std: 0.0163
+    global_rank: 632
+    paper_rank: 632
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: HGNN
+    model_key: hgnn
+    model_plain: HGNN
+    value: 0.6245
+    std: 0.0116
+    paper_value: 0.6245
+    paper_std: 0.0116
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: AAAI19-hgnn
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.6616
+    at_pub_std: 0.023
+    at_pub_source_arxiv: '2206.04739'
+    at_pub_source_title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive
+      Learning on Hypergraphs'
+    at_pub_source_date_iso: '2022-06-09'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2022-06-09'
+    value_gap_source_date_label: AAAI 2022
+    gap_vs_at_pub: 0.03709999999999991
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.6616
+    true_std: 0.023
+    value_gap_source_arxiv: '2206.04739'
+    value_gap_source_title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive
+      Learning on Hypergraphs'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.03709999999999991
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6616
+    sort_std: 0.023
+    global_rank: 816
+    paper_rank: 882
+    rank_delta: 66
+    rank_delta_abs: 66
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive
+      Learning on Hypergraphs'
+    comparison_source_arxiv: '2206.04739'
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id006
   dataset: Congress
   rows:
   - model: HealHGNN
@@ -107,14 +1249,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Congress dataset
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -175,14 +1317,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: ICLR22-edhnn
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Congress dataset
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -243,14 +1385,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: AAAI25-KHGNN
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Congress dataset
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -311,14 +1453,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: arxiv22-deephgnn
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Congress dataset
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -379,14 +1521,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: arxiv21-hgnn-uniGCNII
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Congress dataset
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -447,14 +1589,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: iclr22-alldeepsets-allsettrans
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Congress dataset
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -515,14 +1657,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: NIPS23-sheafhypergnn
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Congress dataset
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -583,14 +1725,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: iclr22-alldeepsets-allsettrans
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Congress dataset
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -651,14 +1793,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: AAAI19-hgnn
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Congress dataset
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -719,14 +1861,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: arxiv20-hnhn
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Congress dataset
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -787,14 +1929,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: PR21-hcha
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Congress dataset
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -855,14 +1997,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: ICML24-PhenomNN
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Congress dataset
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -923,14 +2065,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: nips19-hypergcn
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Congress dataset
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -983,7 +2125,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id004
   dataset: DBLP-CA
   rows:
   - model: HealHGNN
@@ -1003,14 +2145,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for DBLP-CA node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -1071,14 +2213,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: iclr22-alldeepsets-allsettrans
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for DBLP-CA node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -1141,14 +2283,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: ICLR22-edhnn
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for DBLP-CA node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -1209,14 +2351,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: ICML24-PhenomNN
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for DBLP-CA node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -1277,14 +2419,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: arxiv22-deephgnn
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for DBLP-CA node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -1345,14 +2487,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: arxiv21-hgnn-uniGCNII
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for DBLP-CA node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -1413,14 +2555,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: NIPS23-sheafhypergnn
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for DBLP-CA node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -1481,14 +2623,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: iclr22-alldeepsets-allsettrans
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for DBLP-CA node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -1549,14 +2691,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: AAAI25-KHGNN
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for DBLP-CA node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -1617,14 +2759,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: AAAI19-hgnn
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for DBLP-CA node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -1685,14 +2827,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: PR21-hcha
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for DBLP-CA node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -1753,14 +2895,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: nips19-hypergcn
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for DBLP-CA node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -1821,14 +2963,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: arxiv20-hnhn
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for DBLP-CA node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -1914,7 +3056,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id003
   dataset: House
   rows:
   - model: HealHGNN
@@ -1934,14 +3076,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for House node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -2002,14 +3144,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: arxiv22
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for House node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -2104,14 +3246,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: AAAI25
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for House node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -2172,14 +3314,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: NIPS23
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for House node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -2240,14 +3382,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: AAAI25
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for House node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -2308,14 +3450,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: ICLR22
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for House node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -2376,14 +3518,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: ICML24
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for House node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -2444,14 +3586,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: iclr22
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for House node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -2545,14 +3687,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: iclr22
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for House node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -2613,14 +3755,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: arxiv20
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for House node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -2681,14 +3823,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: arxiv21
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for House node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -2749,14 +3891,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: AAAI19
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for House node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -2817,14 +3959,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: PR21
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for House node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -2885,14 +4027,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: nips19
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for House node classification
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -2945,7 +4087,1145 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id001
+  dataset: PubMed
+  rows:
+  - model: LGTL
+    model_key: lgtl
+    model_plain: LGTL
+    value: 0.9518
+    std: 0.0011
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_display: May 2025
+    date_iso: '2025-05-19'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9518
+    sort_std: 0.0011
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: MixHop (LO)
+    model_key: mixhop (lo)
+    model_plain: MixHop (LO)
+    value: 0.9513
+    std: 0.0038
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.13902'
+    title: 'LOGIN: A Large Language Model Consulted Graph Neural Network Training
+      Framework'
+    date: May 22, 2024
+    date_display: May 2024
+    date_iso: '2024-05-22'
+    venue: Web Search and Data Mining
+    codebase_url: https://github.com/QiaoYRan/LOGIN
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.9513
+    sort_std: 0.0038
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GraphSAGE (LO)
+    model_key: graphsage (lo)
+    model_plain: GraphSAGE (LO)
+    value: 0.9511
+    std: 0.0036
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.13902'
+    title: 'LOGIN: A Large Language Model Consulted Graph Neural Network Training
+      Framework'
+    date: May 22, 2024
+    date_display: May 2024
+    date_iso: '2024-05-22'
+    venue: Web Search and Data Mining
+    codebase_url: https://github.com/QiaoYRan/LOGIN
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9511
+    sort_std: 0.0036
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.9296
+    std: 0.0015
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_display: May 2025
+    date_iso: '2025-05-19'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 19
+    sort_value: 0.9296
+    sort_std: 0.0015
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: HealHGNN
+    model_key: healhgnn
+    model_plain: HealHGNN
+    value: 0.888
+    std: 0.0031
+    paper_value: 0.888
+    paper_std: 0.0031
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.888
+    true_std: 0.0031
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.888
+    sort_std: 0.0031
+    global_rank: 135
+    paper_rank: 135
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: FrameHGNN
+    model_key: framehgnn
+    model_plain: FrameHGNN
+    value: 0.8873
+    std: 0.0042
+    paper_value: 0.8873
+    paper_std: 0.0042
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: AAAI25-FrameHGNN
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8873
+    true_std: 0.0042
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8873
+    sort_std: 0.0042
+    global_rank: 137
+    paper_rank: 137
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: KHGNN
+    model_key: khgnn
+    model_plain: KHGNN
+    value: 0.8847
+    std: 0.0047
+    paper_value: 0.8847
+    paper_std: 0.0047
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: AAAI25-KHGNN
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8847
+    true_std: 0.0047
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8847
+    sort_std: 0.0047
+    global_rank: 154
+    paper_rank: 154
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SheafHyperGNN
+    model_key: sheafhypergnn
+    model_plain: SheafHyperGNN
+    value: 0.8768
+    std: 0.006
+    paper_value: 0.8768
+    paper_std: 0.006
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: NIPS23-sheafhypergnn
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8768
+    true_std: 0.006
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8768
+    sort_std: 0.006
+    global_rank: 205
+    paper_rank: 205
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: AllSetTransformer
+    model_key: allsettransformer
+    model_plain: AllSetTransformer
+    value: 0.8766
+    std: 0.0043
+    paper_value: 0.8766
+    paper_std: 0.0043
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: iclr22-alldeepsets-allsettrans
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8766
+    true_std: 0.0043
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8766
+    sort_std: 0.0043
+    global_rank: 207
+    paper_rank: 207
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: ED-HNN
+    model_key: ed-hnn
+    model_plain: ED-HNN
+    value: 0.8758
+    std: 0.0065
+    paper_value: 0.8758
+    paper_std: 0.0065
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: ICLR22-edhnn
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8758
+    true_std: 0.0065
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8758
+    sort_std: 0.0065
+    global_rank: 212
+    paper_rank: 212
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Deep-HGNN
+    model_key: deep-hgnn
+    model_plain: Deep-HGNN
+    value: 0.8742
+    std: 0.0022
+    paper_value: 0.8742
+    paper_std: 0.0022
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: arxiv22-deephgnn
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8742
+    true_std: 0.0022
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8742
+    sort_std: 0.0022
+    global_rank: 218
+    paper_rank: 218
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: UniGCNII
+    model_key: unigcnii
+    model_plain: UniGCNII
+    value: 0.8731
+    std: 0.0045
+    paper_value: 0.8731
+    paper_std: 0.0045
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: arxiv21-hgnn-uniGCNII
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8731
+    true_std: 0.0045
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8731
+    sort_std: 0.0045
+    global_rank: 223
+    paper_rank: 223
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: AllDeepSets
+    model_key: alldeepsets
+    model_plain: AllDeepSets
+    value: 0.8704
+    std: 0.0052
+    paper_value: 0.8704
+    paper_std: 0.0052
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: iclr22-alldeepsets-allsettrans
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8704
+    true_std: 0.0052
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8704
+    sort_std: 0.0052
+    global_rank: 237
+    paper_rank: 237
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.869
+    std: 0.0074
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2310.00183'
+    title: On the Equivalence of Graph Convolution and Mixup
+    date: Sep 29, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-29'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/ahxt/GraphConv_is_Mixup
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 243
+    sort_value: 0.869
+    sort_std: 0.0074
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: HGNN
+    model_key: hgnn
+    model_plain: HGNN
+    value: 0.8644
+    std: 0.0044
+    paper_value: 0.8644
+    paper_std: 0.0044
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: AAAI19-hgnn
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.8352
+    at_pub_std: 0.007
+    at_pub_source_arxiv: '2206.04739'
+    at_pub_source_title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive
+      Learning on Hypergraphs'
+    at_pub_source_date_iso: '2022-06-09'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.029199999999999893
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8644
+    true_std: 0.0044
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8644
+    sort_std: 0.0044
+    global_rank: 257
+    paper_rank: 257
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive
+      Learning on Hypergraphs'
+    comparison_source_arxiv: '2206.04739'
+    is_best: false
+    is_std_outlier: false
+  - model: HCHA
+    model_key: hcha
+    model_plain: HCHA
+    value: 0.8456
+    std: 0.0031
+    paper_value: 0.8456
+    paper_std: 0.0031
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: PR21-hcha
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8456
+    true_std: 0.0031
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8456
+    sort_std: 0.0031
+    global_rank: 300
+    paper_rank: 300
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: HNHN
+    model_key: hnhn
+    model_plain: HNHN
+    value: 0.8421
+    std: 0.0064
+    paper_value: 0.8421
+    paper_std: 0.0064
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: arxiv20-hnhn
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.8097
+    at_pub_std: 0.009
+    at_pub_source_arxiv: '2206.04739'
+    at_pub_source_title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive
+      Learning on Hypergraphs'
+    at_pub_source_date_iso: '2022-06-09'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.032399999999999984
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8421
+    true_std: 0.0064
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8421
+    sort_std: 0.0064
+    global_rank: 311
+    paper_rank: 311
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive
+      Learning on Hypergraphs'
+    comparison_source_arxiv: '2206.04739'
+    is_best: false
+    is_std_outlier: false
+  - model: HyperGCN
+    model_key: hypergcn
+    model_plain: HyperGCN
+    value: 0.8284
+    std: 0.0067
+    paper_value: 0.8284
+    paper_std: 0.0067
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: nips19-hypergcn
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.784
+    at_pub_std: 0.092
+    at_pub_source_arxiv: '2206.04739'
+    at_pub_source_title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive
+      Learning on Hypergraphs'
+    at_pub_source_date_iso: '2022-06-09'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.044399999999999995
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8284
+    true_std: 0.0067
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8284
+    sort_std: 0.0067
+    global_rank: 352
+    paper_rank: 352
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PhenomNN
+    model_key: phenomnn
+    model_plain: PhenomNN
+    value: 0.7812
+    std: 0.0024
+    paper_value: 0.7812
+    paper_std: 0.0024
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: ICML24-PhenomNN
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7812
+    true_std: 0.0024
+    value_gap_source_arxiv: '2603.00599'
+    value_gap_source_title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian
+      Local Exchanger
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7812
+    sort_std: 0.0024
+    global_rank: 732
+    paper_rank: 732
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id007
   dataset: Senate
   rows:
   - model: HealHGNN
@@ -2965,14 +5245,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Senate heterophilic hypergraph
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -3033,14 +5313,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: AAAI25-KHGNN
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Senate heterophilic hypergraph
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -3101,14 +5381,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: iclr22-alldeepsets-allsettrans
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Senate heterophilic hypergraph
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -3169,14 +5449,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: NIPS23-sheafhypergnn
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Senate heterophilic hypergraph
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -3237,14 +5517,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: arxiv22-deephgnn
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Senate heterophilic hypergraph
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -3305,14 +5585,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: ICML24-PhenomNN
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Senate heterophilic hypergraph
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -3373,14 +5653,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: AAAI25-FrameHGNN
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Senate heterophilic hypergraph
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -3441,14 +5721,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: ICLR22-edhnn
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Senate heterophilic hypergraph
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -3509,14 +5789,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: arxiv20-hnhn
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Senate heterophilic hypergraph
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -3577,14 +5857,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: nips19-hypergcn
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Senate heterophilic hypergraph
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -3645,14 +5925,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: arxiv21-hgnn-uniGCNII
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Senate heterophilic hypergraph
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -3713,14 +5993,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: PR21-hcha
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Senate heterophilic hypergraph
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -3781,14 +6061,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: AAAI19-hgnn
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Senate heterophilic hypergraph
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -3849,14 +6129,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: iclr22-alldeepsets-allsettrans
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Senate heterophilic hypergraph
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -3909,7 +6189,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id005
   dataset: Walmart
   rows:
   - model: HealHGNN
@@ -3929,14 +6209,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Heterophilic hypergraph node classification task
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -3997,14 +6277,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: ICLR22-edhnn
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Heterophilic hypergraph node classification task
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -4065,14 +6345,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: iclr22-alldeepsets-allsettrans
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Heterophilic hypergraph node classification task
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -4133,14 +6413,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: AAAI25-KHGNN
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Heterophilic hypergraph node classification task
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -4201,14 +6481,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: iclr22-alldeepsets-allsettrans
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Heterophilic hypergraph node classification task
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -4269,14 +6549,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: ICML24-PhenomNN
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Heterophilic hypergraph node classification task
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -4337,14 +6617,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: PR21-hcha
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Heterophilic hypergraph node classification task
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -4404,14 +6684,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: AAAI19-hgnn
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Heterophilic hypergraph node classification task
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -4472,14 +6752,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: arxiv22-deephgnn
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Heterophilic hypergraph node classification task
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -4540,14 +6820,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: arxiv21-hgnn-uniGCNII
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Heterophilic hypergraph node classification task
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -4608,14 +6888,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: arxiv20-hnhn
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Heterophilic hypergraph node classification task
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -4676,14 +6956,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: nips19-hypergcn
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Heterophilic hypergraph node classification task
     date: Feb 28, 2026
     date_display: Feb 2026
     date_iso: '2026-02-28'
@@ -4770,17 +7050,28 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: Hypergraph Benchmarks
+- benchmark: Classic
   datasets:
   - *id001
   - *id002
+- benchmark: Hypergraph Benchmarks
+  datasets:
   - *id003
   - *id004
   - *id005
+  - *id006
+  - *id007
 datasets_by_scope:
 - scope: node-level
   label: Node-level
   benchmarks:
+  - benchmark: Classic
+    benchmark_slug: classic
+    datasets:
+    - dataset: PubMed
+      dataset_slug: pubmed
+    - dataset: CiteSeer
+      dataset_slug: citeseer
   - benchmark: Hypergraph Benchmarks
     benchmark_slug: hypergraph-benchmarks
     datasets:

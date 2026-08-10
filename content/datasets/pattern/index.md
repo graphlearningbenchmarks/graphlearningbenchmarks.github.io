@@ -13,7 +13,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 2
-result_count: 165
+result_count: 161
 best_model:
   model: DeepGraph (48)
   value: 0.90657
@@ -34,10 +34,6 @@ papers:
   title: 'DARTS-GT: Differentiable Architecture Search for Graph Transformers with
     Quantifiable Instance-Specific Interpretability Analysis'
   date_iso: '2025-10-16'
-  venue: ''
-- arxiv_id: '2508.05070'
-  title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-  date_iso: '2025-08-07'
   venue: ''
 - arxiv_id: '2504.12588'
   title: Plain Transformers Can be Powerful Graph Learners
@@ -361,36 +357,6 @@ variants:
     - null
     metric_stds:
     - 0.00076
-    - null
-    - null
-  - model: Tango_GPS
-    model_plain: Tango_GPS
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_iso: '2025-08-07'
-    date_display: Aug 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.87182
-    - null
-    - null
-    metric_stds:
-    - 0.00063
     - null
     - null
   - model: SparseGRIT
@@ -1659,18 +1625,48 @@ variants:
     - 0.00073
     - null
     - null
-  row_count: 165
+  - model: GINE+RWSE
+    model_plain: GINE+RWSE
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2411.12732'
+    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
+    date: Nov 19, 2024
+    date_iso: '2024-11-19'
+    date_display: Nov 2024
+    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
+    published_conference: KDD 2024
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.86688
+    - null
+    - null
+    metric_stds:
+    - 0.00084
+    - null
+    - null
+  row_count: 161
   rows_json: /data/datasets/pattern/standard-split-rows.json
   chart_json: /data/datasets/pattern/standard-split-chart.json
   arch_counts:
-    gnn: 67
-    hybrid: 40
-    graph_transformer: 42
+    gnn: 66
+    hybrid: 38
+    graph_transformer: 40
     llm: 0
     walk: 0
     traditional: 11
   metric_counts:
-  - 144
+  - 140
   - 10
   - 11
   milestones: &id001
@@ -1712,7 +1708,14 @@ variants:
     date: '2023-03-01'
   milestones_by_metric:
     Accuracy: *id001
-    ACC: []
+    ACC:
+    - value: 1.0
+      std: 0.0
+      model: APGCN
+      arxiv_id: '2107.04755'
+      title: 'Beyond Low-pass Filtering: Graph Convolutional Networks with Automatic
+        Filtering'
+      date: '2021-07-10'
     AULC:
     - value: 81.62
       std: 0.49

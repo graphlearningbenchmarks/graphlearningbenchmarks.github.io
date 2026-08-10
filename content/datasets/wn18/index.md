@@ -533,12 +533,12 @@ variants:
     arxiv_id: '1703.06103'
     title: Modeling Relational Data with Graph Convolutional Networks
     date: '2017-03-17'
-  - value: 0.949
-    std: 0.0
-    model: RotatE
-    arxiv_id: '1902.10197'
-    title: 'RotatE: Knowledge Graph Embedding by Relational Rotation in Complex Space'
-    date: '2018-09-27'
+  - value: 0.963
+    std: null
+    model: Inverse Model
+    arxiv_id: '1707.01476'
+    title: Knowledge Graphs
+    date: '2017-07-05'
   milestones_by_metric:
     MRR: *id001
     Hit@10:

@@ -39,20 +39,21 @@ abstract: The Transformer architecture has gained growing attention in graph rep
   relative to the base GNN model, successfully combining the advantages of GNNs and
   Transformers. Our code is available at https://github.com/BorgwardtLab/SAT.
 codebase_url: https://github.com/BorgwardtLab/SAT
-extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+extraction_model: google/gemma-4-31B-it
 has_results: true
-paper_type: dataset
-proposed_models: []
-mrr: null
-adjusted_mrr: null
-mrr_dataset_count: 0
+paper_type: method
+proposed_models:
+- Transformer
+mrr: 0.037
+adjusted_mrr: 0.0123
+mrr_dataset_count: 1
 benchmark_categories:
 - OGB
 - GNNBenchmark
 benchmark_coverage:
 - benchmark: OGB
   benchmark_slug: ogb
-  evaluated: 1
+  evaluated: 2
   total: 16
 - benchmark: GNNBenchmark
   benchmark_slug: gnnbenchmark
@@ -65,7 +66,7 @@ experiment_scopes:
 - graph-level
 - node-level
 results:
-- &id002
+- &id003
   dataset: CLUSTER
   rows:
   - model: GRPE-Small
@@ -101,9 +102,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Tango_GPS
-    model_key: tango_gps
-    model_plain: Tango_GPS
+  - model: TANGO-GPS
+    model_key: tango-gps
+    model_plain: TANGO-GPS
     value: 0.80113
     std: 0.00138
     metric: Accuracy
@@ -191,7 +192,8 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Accuracy on CLUSTER dataset
+    protocol_note: Node classification on CLUSTER dataset, Accuracy metric, standard
+      split
     date: Feb 7, 2022
     date_display: Feb 2022
     date_iso: '2022-02-07'
@@ -258,7 +260,8 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Accuracy on CLUSTER dataset
+    protocol_note: Node classification on CLUSTER dataset, Accuracy metric, standard
+      split
     date: Feb 7, 2022
     date_display: Feb 2022
     date_iso: '2022-02-07'
@@ -302,74 +305,6 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SAN
-    model_key: san
-    model_plain: SAN
-    value: 0.76691
-    std: 0.0065
-    paper_value: 0.76691
-    paper_std: 0.0065
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: Kreuzer et al. 2021
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Accuracy on CLUSTER dataset
-    date: Feb 7, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-07'
-    published_venue: ICML 2022
-    published_conference: ICML 2022
-    at_pub_value: 0.76691
-    at_pub_std: 0.0065
-    at_pub_source_arxiv: '2201.12787'
-    at_pub_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
-    at_pub_source_date_iso: '2022-01-30'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2026-05-07'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.76691
-    true_std: 0.0065
-    value_gap_source_arxiv: '2605.05689'
-    value_gap_source_title: 'GCCM: Enhancing Generative Graph Prediction via Contrastive
-      Consistency Model'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.76691
-    sort_std: 0.0065
-    global_rank: 52
-    paper_rank: 52
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
   - model: GatedGCN
     model_key: gatedgcn
     model_plain: GatedGCN
@@ -403,141 +338,6 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Graphtransformer
-    model_key: graphtransformer
-    model_plain: Graphtransformer
-    value: 0.73169
-    std: 0.00622
-    paper_value: 0.73169
-    paper_std: 0.00622
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: Dwivedi et al. 2021
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Accuracy on CLUSTER dataset
-    date: Feb 7, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-07'
-    published_venue: ICML 2022
-    published_conference: ICML 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-07'
-    value_gap_source_date_label: ICML 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.73169
-    true_std: 0.00622
-    value_gap_source_arxiv: '2202.03036'
-    value_gap_source_title: Structure-Aware Transformer for Graph Representation Learning
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.73169
-    sort_std: 0.00622
-    global_rank: 69
-    paper_rank: 69
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.70587
-    std: 0.00447
-    paper_value: 0.70587
-    paper_std: 0.00447
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: Veličković et al. 2018
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Accuracy on CLUSTER dataset
-    date: Feb 7, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-07'
-    published_venue: ICML 2022
-    published_conference: ICML 2022
-    at_pub_value: 0.70587
-    at_pub_std: 0.00447
-    at_pub_source_arxiv: '2201.09332'
-    at_pub_source_title: How Expressive are Transformers in Spectral Domain for Graphs?
-    at_pub_source_date_iso: '2022-01-23'
-    at_pub_source_date_label: TMLR 2022
-    value_gap_source_date_iso: '2026-05-07'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.70587
-    true_std: 0.00447
-    value_gap_source_arxiv: '2605.05689'
-    value_gap_source_title: 'GCCM: Enhancing Generative Graph Prediction via Contrastive
-      Consistency Model'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.70587
-    sort_std: 0.00447
-    global_rank: 72
-    paper_rank: 72
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
   - model: GCN
     model_key: gcn
     model_plain: GCN
@@ -563,7 +363,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 74
+    global_rank: 73
     sort_value: 0.69026
     sort_std: 0.01372
     comparison_type: global_top
@@ -571,9 +371,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GCN Base GNN
-    model_key: gcn base gnn
-    model_plain: GCN Base GNN
+  - model: Base GNN
+    model_key: base gnn
+    model_plain: Base GNN
     value: 0.68498
     std: 0.00976
     paper_value: 0.68498
@@ -584,18 +384,19 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
     uses_external_data: 0
     input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 2
+    table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Accuracy on CLUSTER dataset (All nodes)
+    protocol_note: Node classification on CLUSTER dataset, Accuracy metric, standard
+      split
     date: Feb 7, 2022
     date_display: Feb 2022
     date_iso: '2022-02-07'
@@ -627,411 +428,8 @@ results:
     value_note: ''
     sort_value: 0.68498
     sort_std: 0.00976
-    global_rank: 77
-    paper_rank: 77
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: PNA
-    model_key: pna
-    model_plain: PNA
-    value: 0.67077
-    std: 0.00977
-    paper_value: 0.67077
-    paper_std: 0.00977
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: Corso et al. 2020
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Accuracy on CLUSTER dataset
-    date: Feb 7, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-07'
-    published_venue: ICML 2022
-    published_conference: ICML 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-07'
-    value_gap_source_date_label: ICML 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.67077
-    true_std: 0.00977
-    value_gap_source_arxiv: '2202.03036'
-    value_gap_source_title: Structure-Aware Transformer for Graph Representation Learning
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.67077
-    sort_std: 0.00977
-    global_rank: 81
-    paper_rank: 81
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: PNA Base GNN
-    model_key: pna base gnn
-    model_plain: PNA Base GNN
-    value: 0.67077
-    std: 0.00977
-    paper_value: 0.67077
-    paper_std: 0.00977
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: Corso et al. 2020
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Accuracy on CLUSTER dataset (All nodes)
-    date: Feb 7, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-07'
-    published_venue: ICML 2022
-    published_conference: ICML 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-07'
-    value_gap_source_date_label: ICML 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.67077
-    true_std: 0.00977
-    value_gap_source_arxiv: '2202.03036'
-    value_gap_source_title: Structure-Aware Transformer for Graph Representation Learning
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.67077
-    sort_std: 0.00977
-    global_rank: 82
-    paper_rank: 82
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.64716
-    std: 0.01553
-    paper_value: 0.64716
-    paper_std: 0.01553
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: Xu et al. 2018
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Accuracy on CLUSTER dataset
-    date: Feb 7, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-07'
-    published_venue: ICML 2022
-    published_conference: ICML 2022
-    at_pub_value: 0.64716
-    at_pub_std: 0.01553
-    at_pub_source_arxiv: '2201.12787'
-    at_pub_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
-    at_pub_source_date_iso: '2022-01-30'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2026-05-07'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.64716
-    true_std: 0.01553
-    value_gap_source_arxiv: '2605.05689'
-    value_gap_source_title: 'GCCM: Enhancing Generative Graph Prediction via Contrastive
-      Consistency Model'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.64716
-    sort_std: 0.01553
-    global_rank: 85
-    paper_rank: 85
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GIN Base GNN
-    model_key: gin base gnn
-    model_plain: GIN Base GNN
-    value: 0.64716
-    std: 0.01553
-    paper_value: 0.64716
-    paper_std: 0.01553
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: Xu et al. 2018
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Accuracy on CLUSTER dataset (All nodes)
-    date: Feb 7, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-07'
-    published_venue: ICML 2022
-    published_conference: ICML 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-07'
-    value_gap_source_date_label: ICML 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.64716
-    true_std: 0.01553
-    value_gap_source_arxiv: '2202.03036'
-    value_gap_source_title: Structure-Aware Transformer for Graph Representation Learning
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.64716
-    sort_std: 0.01553
-    global_rank: 86
-    paper_rank: 86
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphSAGE Base GNN
-    model_key: graphsage base gnn
-    model_plain: GraphSAGE Base GNN
-    value: 0.63844
-    std: 0.0011
-    paper_value: 0.63844
-    paper_std: 0.0011
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: Hamilton et al. 2017
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Accuracy on CLUSTER dataset (All nodes)
-    date: Feb 7, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-07'
-    published_venue: ICML 2022
-    published_conference: ICML 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-07'
-    value_gap_source_date_label: ICML 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.63844
-    true_std: 0.0011
-    value_gap_source_arxiv: '2202.03036'
-    value_gap_source_title: Structure-Aware Transformer for Graph Representation Learning
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.63844
-    sort_std: 0.0011
-    global_rank: 88
-    paper_rank: 88
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Transformer+RWPE
-    model_key: transformer+rwpe
-    model_plain: Transformer+RWPE
-    value: 0.29622
-    std: 0.00176
-    paper_value: 0.29622
-    paper_std: 0.00176
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: uses RWPE (positional encoding)
-    table_ref: Table 1
-    source_ref: Dwivedi et al. 2022
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Accuracy on CLUSTER dataset
-    date: Feb 7, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-07'
-    published_venue: ICML 2022
-    published_conference: ICML 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-07'
-    value_gap_source_date_label: ICML 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.29622
-    true_std: 0.00176
-    value_gap_source_arxiv: '2202.03036'
-    value_gap_source_title: Structure-Aware Transformer for Graph Representation Learning
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.29622
-    sort_std: 0.00176
-    global_rank: 117
-    paper_rank: 117
+    global_rank: 76
+    paper_rank: 76
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1066,7 +464,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 126
+    global_rank: 120
     sort_value: 0.20973
     sort_std: 4.0e-05
     comparison_type: global_top
@@ -1083,7 +481,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id004
   dataset: PATTERN
   rows:
   - model: DeepGraph (48)
@@ -1209,7 +607,8 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Accuracy on PATTERN dataset
+    protocol_note: Node classification on PATTERN dataset using standard split; Accuracy
+      metric.
     date: Feb 7, 2022
     date_display: Feb 2022
     date_iso: '2022-02-07'
@@ -1241,8 +640,8 @@ results:
     value_note: ''
     sort_value: 0.86865
     sort_std: 0.00043
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 16
+    paper_rank: 16
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1276,7 +675,8 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Accuracy on PATTERN dataset
+    protocol_note: Node classification on PATTERN dataset using standard split; Accuracy
+      metric.
     date: Feb 7, 2022
     date_display: Feb 2022
     date_iso: '2022-02-07'
@@ -1309,8 +709,8 @@ results:
     value_note: ''
     sort_value: 0.86848
     sort_std: 0.037
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1320,77 +720,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: true
-  - model: SAN
-    model_key: san
-    model_plain: SAN
-    value: 0.86581
-    std: 0.00037
-    paper_value: 0.86581
-    paper_std: 0.00037
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: Kreuzer et al. 2021
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Accuracy on PATTERN dataset
-    date: Feb 7, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-07'
-    published_venue: ICML 2022
-    published_conference: ICML 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-05-07'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.86581
-    true_std: 0.00037
-    value_gap_source_arxiv: '2605.05689'
-    value_gap_source_title: 'GCCM: Enhancing Generative Graph Prediction via Contrastive
-      Consistency Model'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.86581
-    sort_std: 0.00037
-    global_rank: 60
-    paper_rank: 60
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: PNA
-    model_key: pna
-    model_plain: PNA
+  - model: Base GNN
+    model_key: base gnn
+    model_plain: Base GNN
     value: 0.86567
     std: 0.00075
     paper_value: 0.86567
@@ -1401,18 +733,19 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
     uses_external_data: 0
     input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
-    source_ref: Corso et al. 2020
+    source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Accuracy on PATTERN dataset
+    protocol_note: Node classification on PATTERN dataset using standard split; Accuracy
+      metric.
     date: Feb 7, 2022
     date_display: Feb 2022
     date_iso: '2022-02-07'
@@ -1444,8 +777,8 @@ results:
     value_note: ''
     sort_value: 0.86567
     sort_std: 0.00075
-    global_rank: 63
-    paper_rank: 63
+    global_rank: 61
+    paper_rank: 61
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1480,77 +813,10 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 68
+    global_rank: 66
     sort_value: 0.86508
     sort_std: 0.00085
     comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Transformer+RWPE
-    model_key: transformer+rwpe
-    model_plain: Transformer+RWPE
-    value: 0.86183
-    std: 0.00019
-    paper_value: 0.86183
-    paper_std: 0.00019
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: Dwivedi et al. 2022
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Accuracy on PATTERN dataset
-    date: Feb 7, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-07'
-    published_venue: ICML 2022
-    published_conference: ICML 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-07'
-    value_gap_source_date_label: ICML 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.86183
-    true_std: 0.00019
-    value_gap_source_arxiv: '2202.03036'
-    value_gap_source_title: Structure-Aware Transformer for Graph Representation Learning
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.86183
-    sort_std: 0.00019
-    global_rank: 76
-    paper_rank: 76
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1580,212 +846,10 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 91
+    global_rank: 88
     sort_value: 0.85614
     sort_std: 0.00032
     comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.8559
-    std: 0.00011
-    paper_value: 0.8559
-    paper_std: 0.00011
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: Xu et al. 2018
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Accuracy on PATTERN dataset
-    date: Feb 7, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-07'
-    published_venue: ICML 2022
-    published_conference: ICML 2022
-    at_pub_value: 0.8559
-    at_pub_std: 0.0001
-    at_pub_source_arxiv: '2010.05421'
-    at_pub_source_title: Factorizable Graph Convolutional Networks
-    at_pub_source_date_iso: '2020-10-12'
-    at_pub_source_date_label: NeurIPS 2020
-    value_gap_source_date_iso: '2024-03-19'
-    value_gap_source_date_label: TMLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8559
-    true_std: 0.0001
-    value_gap_source_arxiv: '2403.12529'
-    value_gap_source_title: Contextualized Messages Boost Graph Representations
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8559
-    sort_std: 0.0001
-    global_rank: 92
-    paper_rank: 92
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Graphtransformer
-    model_key: graphtransformer
-    model_plain: Graphtransformer
-    value: 0.84808
-    std: 0.00068
-    paper_value: 0.84808
-    paper_std: 0.00068
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: Dwivedi et al. 2021
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Accuracy on PATTERN dataset
-    date: Feb 7, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-07'
-    published_venue: ICML 2022
-    published_conference: ICML 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-07'
-    value_gap_source_date_label: ICML 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.84808
-    true_std: 0.00068
-    value_gap_source_arxiv: '2202.03036'
-    value_gap_source_title: Structure-Aware Transformer for Graph Representation Learning
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.84808
-    sort_std: 0.00068
-    global_rank: 102
-    paper_rank: 102
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.78271
-    std: 0.00186
-    paper_value: 0.78271
-    paper_std: 0.00186
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: Veličković et al. 2018
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Accuracy on PATTERN dataset
-    date: Feb 7, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-07'
-    published_venue: ICML 2022
-    published_conference: ICML 2022
-    at_pub_value: 0.78271
-    at_pub_std: 0.00186
-    at_pub_source_arxiv: '2201.09332'
-    at_pub_source_title: How Expressive are Transformers in Spectral Domain for Graphs?
-    at_pub_source_date_iso: '2022-01-23'
-    at_pub_source_date_label: TMLR 2022
-    value_gap_source_date_iso: '2026-05-07'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.78271
-    true_std: 0.00186
-    value_gap_source_arxiv: '2605.05689'
-    value_gap_source_title: 'GCCM: Enhancing Generative Graph Prediction via Contrastive
-      Consistency Model'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.78271
-    sort_std: 0.00186
-    global_rank: 113
-    paper_rank: 113
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1815,7 +879,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 131
+    global_rank: 127
     sort_value: 0.50519
     sort_std: 0.0
     comparison_type: global_top
@@ -1830,6 +894,724 @@ results:
   paper_metrics:
   - Accuracy
   metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id002
+  dataset: ogbg-code2
+  rows:
+  - model: GMN
+    model_key: gmn
+    model_plain: GMN
+    value: 0.206
+    std: 0.002
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.206
+    sort_std: 0.002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: DirGraphSSM
+    model_key: dirgraphssm
+    model_plain: DirGraphSSM
+    value: 0.205
+    std: 0.0023
+    metric: F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.205
+    sort_std: 0.0023
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Graph-Mamba
+    model_key: graph-mamba
+    model_plain: Graph-Mamba
+    value: 0.203
+    std: 0.0023
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.203
+    sort_std: 0.0023
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: k-subtree SAT-PNA
+    model_key: k-subtree sat-pna
+    model_plain: k-subtree SAT-PNA
+    value: 0.1937
+    std: 0.0028
+    paper_value: 0.1937
+    paper_std: 0.0028
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 8
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 score on OGBG-CODE2 using official OGB split.
+    date: Feb 7, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-07'
+    published_venue: ICML 2022
+    published_conference: ICML 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-02-07'
+    value_gap_source_date_label: ICML 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1937
+    true_std: 0.0028
+    value_gap_source_arxiv: '2202.03036'
+    value_gap_source_title: Structure-Aware Transformer for Graph Representation Learning
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1937
+    sort_std: 0.0028
+    global_rank: 11
+    paper_rank: 11
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: k-subtree SAT-GCN
+    model_key: k-subtree sat-gcn
+    model_plain: k-subtree SAT-GCN
+    value: 0.1934
+    std: 0.002
+    paper_value: 0.1934
+    paper_std: 0.002
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 8
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 score on OGBG-CODE2 using official OGB split.
+    date: Feb 7, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-07'
+    published_venue: ICML 2022
+    published_conference: ICML 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-02-07'
+    value_gap_source_date_label: ICML 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1934
+    true_std: 0.002
+    value_gap_source_arxiv: '2202.03036'
+    value_gap_source_title: Structure-Aware Transformer for Graph Representation Learning
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1934
+    sort_std: 0.002
+    global_rank: 13
+    paper_rank: 13
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: k-subtree SAT-GIN
+    model_key: k-subtree sat-gin
+    model_plain: k-subtree SAT-GIN
+    value: 0.191
+    std: 0.0023
+    paper_value: 0.191
+    paper_std: 0.0023
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 8
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 score on OGBG-CODE2 using official OGB split.
+    date: Feb 7, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-07'
+    published_venue: ICML 2022
+    published_conference: ICML 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-02-07'
+    value_gap_source_date_label: ICML 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.191
+    true_std: 0.0023
+    value_gap_source_arxiv: '2202.03036'
+    value_gap_source_title: Structure-Aware Transformer for Graph Representation Learning
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.191
+    sort_std: 0.0023
+    global_rank: 16
+    paper_rank: 16
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphTrans
+    model_key: graphtrans
+    model_plain: GraphTrans
+    value: 0.183
+    std: 0.0024
+    paper_value: 0.183
+    paper_std: 0.0024
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 8
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 score on OGBG-CODE2 using official OGB split.
+    date: Feb 7, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-07'
+    published_venue: ICML 2022
+    published_conference: ICML 2022
+    at_pub_value: 0.183
+    at_pub_std: 0.0024
+    at_pub_source_arxiv: '2201.08821'
+    at_pub_source_title: Representing Long-Range Context for Graph Neural Networks
+      with Global Attention
+    at_pub_source_date_iso: '2022-01-21'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2022-02-07'
+    value_gap_source_date_label: ICML 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.183
+    true_std: 0.0024
+    value_gap_source_arxiv: '2202.03036'
+    value_gap_source_title: Structure-Aware Transformer for Graph Representation Learning
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.183
+    sort_std: 0.0024
+    global_rank: 21
+    paper_rank: 21
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Transformer
+    model_key: transformer
+    model_plain: Transformer
+    value: 0.167
+    std: 0.0015
+    paper_value: 0.167
+    paper_std: 0.0015
+    metric: F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 8
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 score on OGBG-CODE2 using official OGB split.
+    date: Feb 7, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-07'
+    published_venue: ICML 2022
+    published_conference: ICML 2022
+    at_pub_value: 0.167
+    at_pub_std: 0.0015
+    at_pub_source_arxiv: '2201.08821'
+    at_pub_source_title: Representing Long-Range Context for Graph Neural Networks
+      with Global Attention
+    at_pub_source_date_iso: '2022-01-21'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2022-02-07'
+    value_gap_source_date_label: ICML 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.167
+    true_std: 0.0015
+    value_gap_source_arxiv: '2202.03036'
+    value_gap_source_title: Structure-Aware Transformer for Graph Representation Learning
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.167
+    sort_std: 0.0015
+    global_rank: 27
+    paper_rank: 27
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN-Virtual Node
+    model_key: gcn-virtual node
+    model_plain: GCN-Virtual Node
+    value: 0.1581
+    std: 0.0026
+    paper_value: 0.1581
+    paper_std: 0.0026
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 8
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 score on OGBG-CODE2 using official OGB split.
+    date: Feb 7, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-07'
+    published_venue: ICML 2022
+    published_conference: ICML 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-02-07'
+    value_gap_source_date_label: ICML 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1581
+    true_std: 0.0026
+    value_gap_source_arxiv: '2202.03036'
+    value_gap_source_title: Structure-Aware Transformer for Graph Representation Learning
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1581
+    sort_std: 0.0026
+    global_rank: 34
+    paper_rank: 34
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN-Virtual Node
+    model_key: gin-virtual node
+    model_plain: GIN-Virtual Node
+    value: 0.1581
+    std: 0.0026
+    paper_value: 0.1581
+    paper_std: 0.0026
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 8
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 score on OGBG-CODE2 using official OGB split.
+    date: Feb 7, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-07'
+    published_venue: ICML 2022
+    published_conference: ICML 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-02-07'
+    value_gap_source_date_label: ICML 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1581
+    true_std: 0.0026
+    value_gap_source_arxiv: '2202.03036'
+    value_gap_source_title: Structure-Aware Transformer for Graph Representation Learning
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1581
+    sort_std: 0.0026
+    global_rank: 35
+    paper_rank: 35
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.1507
+    std: 0.0018
+    paper_value: 0.1507
+    paper_std: 0.0018
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 8
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 score on OGBG-CODE2 using official OGB split.
+    date: Feb 7, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-07'
+    published_venue: ICML 2022
+    published_conference: ICML 2022
+    at_pub_value: 0.1507
+    at_pub_std: 0.0018
+    at_pub_source_arxiv: '2201.08821'
+    at_pub_source_title: Representing Long-Range Context for Graph Neural Networks
+      with Global Attention
+    at_pub_source_date_iso: '2022-01-21'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2025-09-17'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.151
+    true_std: 0.002
+    value_gap_source_arxiv: '2509.13735'
+    value_gap_source_title: State Space Models over Directed Graphs
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0002999999999999947
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.151
+    sort_std: 0.002
+    global_rank: 39
+    paper_rank: 39
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.1495
+    std: 0.0023
+    paper_value: 0.1495
+    paper_std: 0.0023
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 8
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 score on OGBG-CODE2 using official OGB split.
+    date: Feb 7, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-07'
+    published_venue: ICML 2022
+    published_conference: ICML 2022
+    at_pub_value: 0.1495
+    at_pub_std: 0.0023
+    at_pub_source_arxiv: '2201.08821'
+    at_pub_source_title: Representing Long-Range Context for Graph Neural Networks
+      with Global Attention
+    at_pub_source_date_iso: '2022-01-21'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2023-01-27'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1495
+    true_std: 0.0023
+    value_gap_source_arxiv: '2301.11956'
+    value_gap_source_title: On the Connection Between MPNN and Graph Transformer
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1495
+    sort_std: 0.0023
+    global_rank: 41
+    paper_rank: 41
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: F1
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: F1
+  paper_metrics:
+  - F1
+  metric: F1
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 - &id001
@@ -1935,143 +1717,6 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ExpC
-    model_key: expc
-    model_plain: ExpC
-    value: 0.7976
-    std: 0.0072
-    paper_value: 0.7976
-    paper_std: 0.0072
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test accuracy on OGBG-PPA species split.
-    date: Feb 7, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-07'
-    published_venue: ICML 2022
-    published_conference: ICML 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-07-03'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7976
-    true_std: 0.0072
-    value_gap_source_arxiv: '2407.02758'
-    value_gap_source_title: Differential Encoding for Improved Representation Learning
-      Over Graphs
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7976
-    sort_std: 0.0072
-    global_rank: 8
-    paper_rank: 8
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: DeeperGCN
-    model_key: deepergcn
-    model_plain: DeeperGCN
-    value: 0.7712
-    std: 0.0071
-    paper_value: 0.7712
-    paper_std: 0.0071
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test accuracy on OGBG-PPA species split.
-    date: Feb 7, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-07'
-    published_venue: ICML 2022
-    published_conference: ICML 2022
-    at_pub_value: 0.7712
-    at_pub_std: 0.0071
-    at_pub_source_arxiv: '2103.16584'
-    at_pub_source_title: Parameterized Hypercomplex Graph Neural Networks for Graph
-      Classification
-    at_pub_source_date_iso: '2021-03-30'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2024-07-03'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7712
-    true_std: 0.0071
-    value_gap_source_arxiv: '2407.02758'
-    value_gap_source_title: Differential Encoding for Improved Representation Learning
-      Over Graphs
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7712
-    sort_std: 0.0071
-    global_rank: 13
-    paper_rank: 13
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
   - model: GatedGCN
     model_key: gatedgcn
     model_plain: GatedGCN
@@ -2106,74 +1751,6 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: K-Subtree SAT
-    model_key: k-subtree sat
-    model_plain: K-Subtree SAT
-    value: 0.7522
-    std: 0.0056
-    paper_value: 0.7522
-    paper_std: 0.0056
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test accuracy on OGBG-PPA species split.
-    date: Feb 7, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-07'
-    published_venue: ICML 2022
-    published_conference: ICML 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-07-03'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7522
-    true_std: 0.0056
-    value_gap_source_arxiv: '2407.02758'
-    value_gap_source_title: Differential Encoding for Improved Representation Learning
-      Over Graphs
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7522
-    sort_std: 0.0056
-    global_rank: 18
-    paper_rank: 18
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
   - model: k-subtree SAT-PNA
     model_key: k-subtree sat-pna
     model_plain: k-subtree SAT-PNA
@@ -2198,7 +1775,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on OGBG-PPA species split.
+    protocol_note: Test accuracy on OGBG-PPA using official species split.
     date: Feb 7, 2022
     date_display: Feb 2022
     date_iso: '2022-02-07'
@@ -2265,7 +1842,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on OGBG-PPA species split.
+    protocol_note: Test accuracy on OGBG-PPA using official species split.
     date: Feb 7, 2022
     date_display: Feb 2022
     date_iso: '2022-02-07'
@@ -2332,7 +1909,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on OGBG-PPA species split.
+    protocol_note: Test accuracy on OGBG-PPA using official species split.
     date: Feb 7, 2022
     date_display: Feb 2022
     date_iso: '2022-02-07'
@@ -2399,7 +1976,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on OGBG-PPA species split.
+    protocol_note: Test accuracy on OGBG-PPA using official species split.
     date: Feb 7, 2022
     date_display: Feb 2022
     date_iso: '2022-02-07'
@@ -2468,7 +2045,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on OGBG-PPA species split.
+    protocol_note: Test accuracy on OGBG-PPA using official species split.
     date: Feb 7, 2022
     date_display: Feb 2022
     date_iso: '2022-02-07'
@@ -2535,7 +2112,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on OGBG-PPA species split.
+    protocol_note: Test accuracy on OGBG-PPA using official species split.
     date: Feb 7, 2022
     date_display: Feb 2022
     date_iso: '2022-02-07'
@@ -2604,7 +2181,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on OGBG-PPA species split.
+    protocol_note: Test accuracy on OGBG-PPA using official species split.
     date: Feb 7, 2022
     date_display: Feb 2022
     date_iso: '2022-02-07'
@@ -2671,7 +2248,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on OGBG-PPA species split.
+    protocol_note: Test accuracy on OGBG-PPA using official species split.
     date: Feb 7, 2022
     date_display: Feb 2022
     date_iso: '2022-02-07'
@@ -2727,10 +2304,11 @@ results_grouped:
 - benchmark: OGB
   datasets:
   - *id001
+  - *id002
 - benchmark: GNNBenchmark
   datasets:
-  - *id002
   - *id003
+  - *id004
 datasets_by_scope:
 - scope: node-level
   label: Node-level
@@ -2750,6 +2328,9 @@ datasets_by_scope:
     datasets:
     - dataset: ogbg-ppa
       dataset_slug: ogbg-ppa
+    - dataset: ogbg-code2
+      dataset_slug: ogbg-code2
+single_proposed_model: Transformer
 main_figure: /figures/2202.03036/main_figure.jpegoptim.jpg
 ---
 

@@ -57,7 +57,7 @@ benchmark_coverage:
 - benchmark: Quantum Chemistry
   benchmark_slug: quantum-chemistry
   evaluated: 1
-  total: 3
+  total: 1
 task_categories:
 - graph_regression
 experiment_scopes:
@@ -365,9 +365,9 @@ results:
     sort_value: 0.01
     sort_std: null
     global_rank: 22
-    paper_rank: 98
-    rank_delta: 76
-    rank_delta_abs: 76
+    paper_rank: 96
+    rank_delta: 74
+    rank_delta_abs: 74
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -474,16 +474,16 @@ results:
     date_iso: '2024-02-07'
     published_venue: ICLR 2024
     published_conference: ICLR 2024
-    at_pub_value: 0.145
+    at_pub_value: 0.085
     at_pub_std: null
-    at_pub_source_arxiv: '2304.04757'
-    at_pub_source_title: A new perspective on building efficient and expressive 3D
-      equivariant graph neural networks
-    at_pub_source_date_iso: '2023-04-07'
-    at_pub_source_date_label: NeurIPS 2023
+    at_pub_source_arxiv: '2210.16518'
+    at_pub_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural network
+      with vector-scalar interactive message passing for molecules'
+    at_pub_source_date_iso: '2022-10-29'
+    at_pub_source_date_label: '2022'
     value_gap_source_date_iso: '2024-02-07'
     value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.0948
+    gap_vs_at_pub: 0.034800000000000005
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: true
@@ -509,9 +509,9 @@ results:
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: A new perspective on building efficient and expressive
-      3D equivariant graph neural networks
-    comparison_source_arxiv: '2304.04757'
+    comparison_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
+      network with vector-scalar interactive message passing for molecules'
+    comparison_source_arxiv: '2210.16518'
     is_best: false
     is_std_outlier: false
   - model: MACE
@@ -544,19 +544,19 @@ results:
     date_iso: '2024-02-07'
     published_venue: ICLR 2024
     published_conference: ICLR 2024
-    at_pub_value: 0.0507
+    at_pub_value: 0.3
     at_pub_std: null
-    at_pub_source_arxiv: '2210.16518'
-    at_pub_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural network
-      with vector-scalar interactive message passing for molecules'
-    at_pub_source_date_iso: '2022-10-29'
-    at_pub_source_date_label: '2022'
+    at_pub_source_arxiv: '2310.16802'
+    at_pub_source_title: 'From Molecules to Materials: Pre-training Large Generalizable
+      Models for Atomic Property Prediction'
+    at_pub_source_date_iso: '2023-10-25'
+    at_pub_source_date_label: ICLR 2023
     value_gap_source_date_iso: '2024-02-07'
     value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: null
+    gap_vs_at_pub: 0.2493
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: false
+    better_than_at_pub: true
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -577,10 +577,11 @@ results:
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: 'From Molecules to Materials: Pre-training Large Generalizable
+      Models for Atomic Property Prediction'
+    comparison_source_arxiv: '2310.16802'
     is_best: false
     is_std_outlier: false
   - model: DimeNet++
@@ -639,8 +640,8 @@ results:
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 65
-    paper_rank: 91
+    global_rank: 64
+    paper_rank: 90
     rank_delta: 26
     rank_delta_abs: 26
     rank_delta_direction: worse
@@ -707,8 +708,8 @@ results:
     value_note: ''
     sort_value: 0.1565
     sort_std: null
-    global_rank: 98
-    paper_rank: 98
+    global_rank: 96
+    paper_rank: 96
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

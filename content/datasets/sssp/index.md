@@ -13,7 +13,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: null
-result_count: 33
+result_count: 28
 best_model:
   model: PH-DGN
   value: -4.2993
@@ -22,10 +22,6 @@ best_model:
   paper_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing in GNNs:
     Bridging Recurrent and Graph Learning'
 papers:
-- arxiv_id: '2508.05070'
-  title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-  date_iso: '2025-08-07'
-  venue: ''
 - arxiv_id: '2505.18728'
   title: 'Message-Passing State-Space Models: Improving Graph Learning with Modern
     Sequence Modeling'
@@ -208,34 +204,6 @@ variants:
     metric_stds:
     - 0.083
     - null
-  - model: ODEs
-    model_plain: ODEs
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2210.09789'
-    title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph Networks'
-    date: Oct 18, 2022
-    date_iso: '2022-10-18'
-    date_display: Oct 2022
-    codebase_url: https://github.com/gravins/Anti-SymmetricDGN
-    published_conference: ICLR 2022
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - -3.402
-    - null
-    metric_stds:
-    - 0.1372
-    - null
   - model: ADGN
     model_plain: ADGN
     is_baseline: true
@@ -293,34 +261,6 @@ variants:
     - null
     metric_stds:
     - 0.5654
-    - null
-  - model: A-DGN
-    model_plain: A-DGN
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.09789'
-    title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph Networks'
-    date: Oct 18, 2022
-    date_iso: '2022-10-18'
-    date_display: Oct 2022
-    codebase_url: https://github.com/gravins/Anti-SymmetricDGN
-    published_conference: ICLR 2022
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - -1.8288
-    - null
-    metric_stds:
-    - 0.0607
     - null
   - model: DRew-GCN + delay
     model_plain: DRew-GCN + delay
@@ -418,16 +358,17 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2210.09789'
-    title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph Networks'
-    date: Oct 18, 2022
-    date_iso: '2022-10-18'
-    date_display: Oct 2022
-    codebase_url: https://github.com/gravins/Anti-SymmetricDGN
-    published_conference: ICLR 2022
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2022
+    arxiv_id: '2502.10818'
+    title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing in GNNs: Bridging
+      Recurrent and Graph Learning'
+    date: Feb 15, 2025
+    date_iso: '2025-02-15'
+    date_display: Feb 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -446,16 +387,17 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2210.09789'
-    title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph Networks'
-    date: Oct 18, 2022
-    date_iso: '2022-10-18'
-    date_display: Oct 2022
-    codebase_url: https://github.com/gravins/Anti-SymmetricDGN
-    published_conference: ICLR 2022
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2022
+    arxiv_id: '2502.10818'
+    title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing in GNNs: Bridging
+      Recurrent and Graph Learning'
+    date: Feb 15, 2025
+    date_iso: '2025-02-15'
+    date_display: Feb 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -474,16 +416,17 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2210.09789'
-    title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph Networks'
-    date: Oct 18, 2022
-    date_iso: '2022-10-18'
-    date_display: Oct 2022
-    codebase_url: https://github.com/gravins/Anti-SymmetricDGN
-    published_conference: ICLR 2022
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2022
+    arxiv_id: '2502.10818'
+    title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing in GNNs: Bridging
+      Recurrent and Graph Learning'
+    date: Feb 15, 2025
+    date_iso: '2025-02-15'
+    date_display: Feb 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -502,16 +445,17 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2210.09789'
-    title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph Networks'
-    date: Oct 18, 2022
-    date_iso: '2022-10-18'
-    date_display: Oct 2022
-    codebase_url: https://github.com/gravins/Anti-SymmetricDGN
-    published_conference: ICLR 2022
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2022
+    arxiv_id: '2502.10818'
+    title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing in GNNs: Bridging
+      Recurrent and Graph Learning'
+    date: Feb 15, 2025
+    date_iso: '2025-02-15'
+    date_display: Feb 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -605,90 +549,6 @@ variants:
     metric_stds:
     - 9.18e-05
     - null
-  - model: GCN
-    model_plain: GCN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_iso: '2025-08-07'
-    date_display: Aug 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 0.9499
-    metric_stds:
-    - null
-    - 0.0001
-  - model: GAT
-    model_plain: GAT
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_iso: '2025-08-07'
-    date_display: Aug 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 0.6951
-    metric_stds:
-    - null
-    - 0.1499
-  - model: GraphSAGE
-    model_plain: GraphSAGE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_iso: '2025-08-07'
-    date_display: Aug 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 0.2863
-    metric_stds:
-    - null
-    - 0.1843
   - model: A-DGN
     model_plain: A-DGN
     is_baseline: true
@@ -1008,34 +868,42 @@ variants:
     metric_stds:
     - null
     - 0.0779
-  row_count: 33
+  row_count: 28
   rows_json: ''
   chart_json: /data/datasets/sssp/standard-split-chart.json
   arch_counts:
-    gnn: 28
-    hybrid: 4
+    gnn: 24
+    hybrid: 3
     graph_transformer: 0
     llm: 0
     walk: 0
     traditional: 0
   metric_counts:
-  - 19
-  - 14
+  - 17
+  - 11
   milestones: &id001
-  - value: -3.402
-    std: 0.1372
-    model: ODEs
+  - value: 0.2863
+    std: 0.1843
+    model: GraphSAGE
     arxiv_id: '2210.09789'
     title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph Networks'
     date: '2022-10-18'
+  - value: -4.2993
+    std: 0.0721
+    model: PH-DGN
+    arxiv_id: '2502.10818'
+    title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing in GNNs: Bridging
+      Recurrent and Graph Learning'
+    date: '2025-02-15'
   milestones_by_metric:
     MSE: *id001
     log10(MSE):
-    - value: 0.2863
-      std: 0.1843
-      model: GraphSAGE
-      arxiv_id: '2508.05070'
-      title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-      date: '2025-08-07'
+    - value: -4.6321
+      std: 0.0779
+      model: MP-SSM
+      arxiv_id: '2505.18728'
+      title: 'Message-Passing State-Space Models: Improving Graph Learning with Modern
+        Sequence Modeling'
+      date: '2025-05-24'
 ---
 

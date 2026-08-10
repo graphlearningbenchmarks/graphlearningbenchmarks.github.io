@@ -12,7 +12,7 @@ stats:
   avg_nodes: 26.0
   avg_edges: 28.1
   num_classes: 128
-result_count: 184
+result_count: 177
 best_model:
   model: HIG with Graphormer
   value: 0.3167
@@ -78,10 +78,6 @@ papers:
   title: Fused Gromov-Wasserstein Graph Mixup for Graph-level Classifications
   date_iso: '2023-06-28'
   venue: NeurIPS 2023
-- arxiv_id: '2305.15747'
-  title: Union Subgraph Neural Networks
-  date_iso: '2023-05-25'
-  venue: AAAI 2023
 - arxiv_id: '2305.06102'
   title: Towards Better Graph Representation Learning with Parameterized Decomposition
     & Filtering
@@ -1692,11 +1688,11 @@ variants:
     - 0.003
     - null
     - null
-  row_count: 184
+  row_count: 177
   rows_json: /data/datasets/ogbg-molpcba/standard-split-rows.json
   chart_json: /data/datasets/ogbg-molpcba/standard-split-chart.json
   arch_counts:
-    gnn: 95
+    gnn: 88
     hybrid: 32
     graph_transformer: 24
     llm: 0
@@ -1705,7 +1701,7 @@ variants:
   metric_counts:
   - 122
   - 10
-  - 52
+  - 45
   milestones: &id001
   - value: 0.2947
     std: 0.0026

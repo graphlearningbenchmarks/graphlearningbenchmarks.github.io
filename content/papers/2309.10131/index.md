@@ -46,8 +46,8 @@ proposed_models:
 - Graphormer DeepGPT
 - GraphGPS DeepGPT
 - LiGhT DeepGPT
-mrr: 0.0338
-adjusted_mrr: 0.0338
+mrr: 0.0343
+adjusted_mrr: 0.0343
 mrr_dataset_count: 9
 benchmark_categories:
 - OGB
@@ -428,8 +428,8 @@ results:
     value_note: ''
     sort_value: 0.88
     sort_std: 0.012
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -495,8 +495,8 @@ results:
     value_note: ''
     sort_value: 0.873
     sort_std: 0.02
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -529,10 +529,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 41
+    global_rank: 43
     sort_value: 0.8646
     sort_std: 0.0081
     comparison_type: global_top
@@ -596,8 +596,8 @@ results:
     value_note: ''
     sort_value: 0.845
     sort_std: 0.021
-    global_rank: 81
-    paper_rank: 81
+    global_rank: 85
+    paper_rank: 85
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -663,8 +663,8 @@ results:
     value_note: ''
     sort_value: 0.833
     sort_std: 0.013
-    global_rank: 98
-    paper_rank: 98
+    global_rank: 102
+    paper_rank: 102
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -730,8 +730,8 @@ results:
     value_note: ''
     sort_value: 0.704
     sort_std: 0.018
-    global_rank: 275
-    paper_rank: 275
+    global_rank: 282
+    paper_rank: 282
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -797,8 +797,8 @@ results:
     value_note: ''
     sort_value: 0.599
     sort_std: 0.045
-    global_rank: 305
-    paper_rank: 305
+    global_rank: 312
+    paper_rank: 312
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1146,8 +1146,8 @@ results:
     value_note: ''
     sort_value: 0.893
     sort_std: 0.041
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1213,8 +1213,8 @@ results:
     value_note: ''
     sort_value: 0.884
     sort_std: 0.03
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1260,33 +1260,32 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-02-11'
-    value_gap_source_date_label: '2024'
+    value_gap_source_date_iso: '2023-09-18'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
+    insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.8672
-    true_std: 0.0233
-    value_gap_source_arxiv: '2402.07191'
-    value_gap_source_title: Improving Subgraph Extraction for Graph Invariant Learning
-      via Graph Sinkhorn Attention
-    value_gap_source_is_current_paper: false
-    value_gap: 0.00019999999999997797
+    true_value: 0.867
+    true_std: 0.011
+    value_gap_source_arxiv: '2309.10131'
+    value_gap_source_title: Deep Prompt Tuning for Graph Transformers
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.8672
-    sort_std: 0.0233
+    sort_value: 0.867
+    sort_std: 0.011
     global_rank: 48
     paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1415,8 +1414,8 @@ results:
     value_note: ''
     sort_value: 0.857
     sort_std: 0.035
-    global_rank: 53
-    paper_rank: 53
+    global_rank: 54
+    paper_rank: 54
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1482,8 +1481,8 @@ results:
     value_note: ''
     sort_value: 0.839
     sort_std: 0.114
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 62
+    paper_rank: 62
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1549,8 +1548,8 @@ results:
     value_note: ''
     sort_value: 0.559
     sort_std: 0.044
-    global_rank: 238
-    paper_rank: 238
+    global_rank: 242
+    paper_rank: 242
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1572,103 +1571,100 @@ results:
 - &id008
   dataset: ESOL
   rows:
-  - model: 10% ZINC + 10% PubChem
-    model_key: 10% zinc + 10% pubchem
-    model_plain: 10% ZINC + 10% PubChem
-    value: 0.2775
-    std: null
+  - model: Graphormer-SPIS
+    model_key: graphormer-spis
+    model_plain: Graphormer-SPIS
+    value: 0.484
+    std: 0.005
     metric: RMSE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2305.13987'
+    title: On Structural Expressive Power of Graph Transformers
+    date: May 23, 2023
+    date_display: May 2023
+    date_iso: '2023-05-23'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.2775
-    sort_std: null
+    sort_value: 0.484
+    sort_std: 0.005
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAT
-    model_key: mat
-    model_plain: MAT
-    value: 0.278
-    std: 0.02
+  - model: Graphormer-SPD
+    model_key: graphormer-spd
+    model_plain: Graphormer-SPD
+    value: 0.492
+    std: 0.004
     metric: RMSE
     higher_is_better: false
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    arxiv_id: '2002.08264'
-    title: Molecule Attention Transformer
-    date: Feb 19, 2020
-    date_display: Feb 2020
-    date_iso: '2020-02-19'
-    venue: Graph Representation Learning workshop and Machine Learning and the Physical
-      Sciences workshop at NeurIPS 2019
-    codebase_url: https://github.com/gmum/MAT
-    uses_external_data: true
-    input_feature_source: null
+    arxiv_id: '2305.13987'
+    title: On Structural Expressive Power of Graph Transformers
+    date: May 23, 2023
+    date_display: May 2023
+    date_iso: '2023-05-23'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
+    uses_external_data: false
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.278
-    sort_std: 0.02
+    sort_value: 0.492
+    sort_std: 0.004
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MoLFormer-XL
-    model_key: molformer-xl
-    model_plain: MoLFormer-XL
-    value: 0.2787
-    std: null
+  - model: conan-FGW
+    model_key: conan-fgw
+    model_plain: conan-FGW
+    value: 0.514
+    std: 0.019
     metric: RMSE
     higher_is_better: false
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2402.01975'
+    title: Structure-Aware E(3)-Invariant Molecular Conformer Aggregation Networks
+    date: Feb 3, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-03'
+    venue: International Conference on Machine Learning
+    codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.2787
-    sort_std: null
+    sort_value: 0.514
+    sort_std: 0.019
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1699,7 +1695,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 13
+    global_rank: 7
     sort_value: 0.564
     sort_std: 0.015
     comparison_type: global_top
@@ -1763,8 +1759,8 @@ results:
     value_note: ''
     sort_value: 0.565
     sort_std: 0.041
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1830,8 +1826,8 @@ results:
     value_note: ''
     sort_value: 0.579
     sort_std: 0.038
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1897,8 +1893,8 @@ results:
     value_note: ''
     sort_value: 0.685
     sort_std: 0.13
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1964,8 +1960,8 @@ results:
     value_note: ''
     sort_value: 0.772
     sort_std: 0.102
-    global_rank: 46
-    paper_rank: 46
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2031,8 +2027,8 @@ results:
     value_note: ''
     sort_value: 0.925
     sort_std: 0.061
-    global_rank: 78
-    paper_rank: 78
+    global_rank: 72
+    paper_rank: 72
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2098,8 +2094,8 @@ results:
     value_note: ''
     sort_value: 0.943
     sort_std: 0.024
-    global_rank: 82
-    paper_rank: 82
+    global_rank: 76
+    paper_rank: 76
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2165,8 +2161,8 @@ results:
     value_note: ''
     sort_value: 1.373
     sort_std: 0.219
-    global_rank: 130
-    paper_rank: 130
+    global_rank: 125
+    paper_rank: 125
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2232,8 +2228,8 @@ results:
     value_note: ''
     sort_value: 1.463
     sort_std: 0.341
-    global_rank: 133
-    paper_rank: 133
+    global_rank: 128
+    paper_rank: 128
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2299,8 +2295,8 @@ results:
     value_note: ''
     sort_value: 3.075
     sort_std: 1.034
-    global_rank: 158
-    paper_rank: 158
+    global_rank: 152
+    paper_rank: 152
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2322,10 +2318,79 @@ results:
 - &id009
   dataset: FreeSolv
   rows:
-  - model: 10% ZINC + 10% PubChem
-    model_key: 10% zinc + 10% pubchem
-    model_plain: 10% ZINC + 10% PubChem
-    value: 0.205
+  - model: SE(3)-I MPPH
+    model_key: se(3)-i mpph
+    model_plain: SE(3)-I MPPH
+    value: 0.354
+    std: 0.053
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2312.07633'
+    title: SE(3)-Invariant Multiparameter Persistent Homology for Chiral-Sensitive
+      Molecular Property Prediction
+    date: Dec 12, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-12'
+    venue: NeurIPS 2023 AI for Science Workshop
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: integrating SE(3)-invariance into Vietoris-Rips persistent
+      homology
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.354
+    sort_std: 0.053
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: ECFP-4 + RF
+    model_key: ecfp-4 + rf
+    model_plain: ECFP-4 + RF
+    value: 0.56
+    std: 0.066
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: random_forest
+    architecture_label: RF
+    architecture_title: Random forest
+    arxiv_id: '2312.07633'
+    title: SE(3)-Invariant Multiparameter Persistent Homology for Chiral-Sensitive
+      Molecular Property Prediction
+    date: Dec 12, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-12'
+    venue: NeurIPS 2023 AI for Science Workshop
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: trained on ECFP-4 fingerprints
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.56
+    sort_std: 0.066
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GPSE + GPS
+    model_key: gpse + gps
+    model_plain: GPSE + GPS
+    value: 0.682
     std: null
     metric: RMSE
     higher_is_better: false
@@ -2333,91 +2398,22 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.205
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: MoLFormer-XL
-    model_key: molformer-xl
-    model_plain: MoLFormer-XL
-    value: 0.2308
-    std: null
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.2308
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MoLFormer-Base
-    model_key: molformer-base
-    model_plain: MoLFormer-Base
-    value: 0.2596
-    std: null
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
-    uses_external_data: false
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2307.07107'
+    title: Graph Positional and Structural Encoder
+    date: Jul 14, 2023
+    date_display: Jul 2023
+    date_iso: '2023-07-14'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/G-Taxonomy-Workgroup/GPSE
+    uses_external_data: true
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.2596
+    sort_value: 0.682
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
@@ -2480,8 +2476,8 @@ results:
     value_note: ''
     sort_value: 0.955
     sort_std: 0.051
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2547,8 +2543,8 @@ results:
     value_note: ''
     sort_value: 0.983
     sort_std: 0.079
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2614,8 +2610,8 @@ results:
     value_note: ''
     sort_value: 1.38
     sort_std: 0.234
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2681,8 +2677,8 @@ results:
     value_note: ''
     sort_value: 1.415
     sort_std: 0.254
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2748,8 +2744,8 @@ results:
     value_note: ''
     sort_value: 1.668
     sort_std: 0.114
-    global_rank: 38
-    paper_rank: 38
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2815,8 +2811,8 @@ results:
     value_note: ''
     sort_value: 1.68
     sort_std: 0.013
-    global_rank: 39
-    paper_rank: 39
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2849,10 +2845,10 @@ results:
     venue: Nature Machine Intelligence
     codebase_url: https://github.com/PaddlePaddle/PaddleHelix
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 73
+    global_rank: 69
     sort_value: 2.346
     sort_std: 0.122
     comparison_type: global_top
@@ -2916,8 +2912,8 @@ results:
     value_note: ''
     sort_value: 2.479
     sort_std: 0.556
-    global_rank: 76
-    paper_rank: 76
+    global_rank: 72
+    paper_rank: 72
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2983,8 +2979,8 @@ results:
     value_note: ''
     sort_value: 2.685
     sort_std: 1.766
-    global_rank: 83
-    paper_rank: 83
+    global_rank: 79
+    paper_rank: 79
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2993,7 +2989,7 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
-    is_std_outlier: false
+    is_std_outlier: true
   - model: GINE
     model_key: gine
     model_plain: GINE
@@ -3050,8 +3046,8 @@ results:
     value_note: ''
     sort_value: 6.971
     sort_std: 3.892
-    global_rank: 129
-    paper_rank: 129
+    global_rank: 125
+    paper_rank: 125
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3298,8 +3294,8 @@ results:
     value_note: ''
     sort_value: 0.67
     sort_std: 0.005
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3399,7 +3395,7 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 66
@@ -3466,8 +3462,8 @@ results:
     value_note: ''
     sort_value: 0.61
     sort_std: 0.005
-    global_rank: 147
-    paper_rank: 147
+    global_rank: 149
+    paper_rank: 149
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3533,8 +3529,8 @@ results:
     value_note: ''
     sort_value: 0.609
     sort_std: 0.02
-    global_rank: 148
-    paper_rank: 148
+    global_rank: 150
+    paper_rank: 150
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3600,8 +3596,8 @@ results:
     value_note: ''
     sort_value: 0.599
     sort_std: 0.015
-    global_rank: 186
-    paper_rank: 186
+    global_rank: 187
+    paper_rank: 187
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3667,8 +3663,8 @@ results:
     value_note: ''
     sort_value: 0.584
     sort_std: 0.025
-    global_rank: 210
-    paper_rank: 210
+    global_rank: 211
+    paper_rank: 211
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3734,8 +3730,8 @@ results:
     value_note: ''
     sort_value: 0.583
     sort_std: 0.012
-    global_rank: 213
-    paper_rank: 213
+    global_rank: 214
+    paper_rank: 214
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3801,8 +3797,8 @@ results:
     value_note: ''
     sort_value: 0.55
     sort_std: 0.007
-    global_rank: 237
-    paper_rank: 237
+    global_rank: 238
+    paper_rank: 238
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3982,9 +3978,9 @@ results:
     sort_value: 0.8668
     sort_std: 0.0077
     global_rank: 5
-    paper_rank: 298
-    rank_delta: 293
-    rank_delta_abs: 293
+    paper_rank: 290
+    rank_delta: 285
+    rank_delta_abs: 285
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4049,8 +4045,8 @@ results:
     value_note: ''
     sort_value: 0.844
     sort_std: 0.004
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4116,8 +4112,8 @@ results:
     value_note: ''
     sort_value: 0.843
     sort_std: 0.004
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4152,7 +4148,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 16
+    global_rank: 14
     sort_value: 0.84
     sort_std: 0.004
     comparison_type: global_top
@@ -4216,8 +4212,8 @@ results:
     value_note: ''
     sort_value: 0.832
     sort_std: 0.012
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4283,8 +4279,8 @@ results:
     value_note: ''
     sort_value: 0.832
     sort_std: 0.009
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4350,8 +4346,8 @@ results:
     value_note: ''
     sort_value: 0.813
     sort_std: 0.01
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4417,8 +4413,8 @@ results:
     value_note: ''
     sort_value: 0.807
     sort_std: 0.011
-    global_rank: 51
-    paper_rank: 51
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4484,8 +4480,8 @@ results:
     value_note: ''
     sort_value: 0.793
     sort_std: 0.015
-    global_rank: 88
-    paper_rank: 88
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4551,8 +4547,8 @@ results:
     value_note: ''
     sort_value: 0.582
     sort_std: 0.051
-    global_rank: 351
-    paper_rank: 351
+    global_rank: 342
+    paper_rank: 342
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4833,9 +4829,9 @@ results:
     sort_value: 0.741
     sort_std: 0.004
     global_rank: 16
-    paper_rank: 170
-    rank_delta: 154
-    rank_delta_abs: 154
+    paper_rank: 172
+    rank_delta: 156
+    rank_delta_abs: 156
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -5446,8 +5442,8 @@ results:
     value_note: ''
     sort_value: 0.809
     sort_std: 0.016
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5513,8 +5509,8 @@ results:
     value_note: ''
     sort_value: 0.806
     sort_std: 0.007
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5580,8 +5576,8 @@ results:
     value_note: ''
     sort_value: 0.805
     sort_std: 0.005
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5647,8 +5643,8 @@ results:
     value_note: ''
     sort_value: 0.804
     sort_std: 0.021
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5850,8 +5846,8 @@ results:
     value_note: ''
     sort_value: 0.7905
     sort_std: 0.0132
-    global_rank: 68
-    paper_rank: 98
+    global_rank: 69
+    paper_rank: 99
     rank_delta: 30
     rank_delta_abs: 30
     rank_delta_direction: worse
@@ -5917,8 +5913,8 @@ results:
     value_note: ''
     sort_value: 0.787
     sort_std: 0.008
-    global_rank: 79
-    paper_rank: 79
+    global_rank: 80
+    paper_rank: 80
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6017,8 +6013,8 @@ results:
     value_note: ''
     sort_value: 0.756
     sort_std: 0.014
-    global_rank: 237
-    paper_rank: 311
+    global_rank: 238
+    paper_rank: 312
     rank_delta: 74
     rank_delta_abs: 74
     rank_delta_direction: worse

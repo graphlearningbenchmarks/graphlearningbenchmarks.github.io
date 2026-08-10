@@ -479,7 +479,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 96
+    global_rank: 99
   - model: GAE+Dine
     model_key: gae+dine
     model_plain: GAE+Dine
@@ -542,7 +542,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 146
+    global_rank: 154
   - model: DeepWalk
     model_key: deepwalk
     model_plain: DeepWalk
@@ -607,7 +607,48 @@ results:
     comparison_source_arxiv: '2009.10273'
     is_best: false
     is_std_outlier: false
-    global_rank: 166
+    global_rank: 174
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    metric_values:
+    - 0.462
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2407.00494'
+    title: Graph Neural Networks Gone Hogwild
+    published_venue: ''
+    date: Jun 29, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-29'
+    codebase_url: ''
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 183
+    is_best: false
+    sort_value: 0.462
+    sort_std: null
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
   - model: GraphAE
     model_key: graphae
     model_plain: GraphAE
@@ -670,7 +711,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 175
+    global_rank: 184
   - model: InfWalk
     model_key: infwalk
     model_plain: InfWalk
@@ -733,7 +774,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 185
+    global_rank: 194
   - model: DGLFRM
     model_key: dglfrm
     model_plain: DGLFRM
@@ -796,7 +837,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 186
+    global_rank: 195
   metrics:
   - F1
   - Topological Alignment

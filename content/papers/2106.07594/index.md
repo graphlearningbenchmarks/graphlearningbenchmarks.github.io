@@ -124,7 +124,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -193,7 +193,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 29
+    global_rank: 23
     sort_value: 0.826
     sort_std: 0.022
     comparison_type: global_top
@@ -257,10 +257,10 @@ results:
     value_note: ''
     sort_value: 0.794
     sort_std: null
-    global_rank: 172
-    paper_rank: 349
-    rank_delta: 177
-    rank_delta_abs: 177
+    global_rank: 151
+    paper_rank: 320
+    rank_delta: 169
+    rank_delta_abs: 169
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -293,7 +293,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 180
+    global_rank: 157
     sort_value: 0.792
     sort_std: 0.024
     comparison_type: global_top
@@ -335,7 +335,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -502,9 +502,9 @@ results:
     sort_value: 0.904
     sort_std: 0.057
     global_rank: 171
-    paper_rank: 660
-    rank_delta: 489
-    rank_delta_abs: 489
+    paper_rank: 659
+    rank_delta: 488
+    rank_delta_abs: 488
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -570,9 +570,9 @@ results:
     sort_value: 0.8993
     sort_std: 0.0616
     global_rank: 213
-    paper_rank: 772
-    rank_delta: 559
-    rank_delta_abs: 559
+    paper_rank: 779
+    rank_delta: 566
+    rank_delta_abs: 566
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -610,13 +610,12 @@ results:
     date_iso: '2021-06-10'
     published_venue: ICML 2021
     published_conference: ICML 2021
-    at_pub_value: 0.8767
-    at_pub_std: 0.0079
-    at_pub_source_arxiv: '2106.05819'
-    at_pub_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
-      Learning
-    at_pub_source_date_iso: '2021-06-10'
-    at_pub_source_date_label: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2024-01-08'
     value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
@@ -639,9 +638,9 @@ results:
     sort_value: 0.8967
     sort_std: 0.0524
     global_rank: 239
-    paper_rank: 373
-    rank_delta: 134
-    rank_delta_abs: 134
+    paper_rank: 374
+    rank_delta: 135
+    rank_delta_abs: 135
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -679,22 +678,21 @@ results:
     date_iso: '2021-06-10'
     published_venue: ICML 2021
     published_conference: ICML 2021
-    at_pub_value: 0.8901
-    at_pub_std: 0.0113
-    at_pub_source_arxiv: '2106.05819'
-    at_pub_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
-      Learning
-    at_pub_source_date_iso: '2021-06-10'
-    at_pub_source_date_label: NeurIPS 2021
+    at_pub_value: 0.89
+    at_pub_std: 0.011
+    at_pub_source_arxiv: '2006.05582'
+    at_pub_source_title: Contrastive Multi-View Representation Learning on Graphs
+    at_pub_source_date_iso: '2020-06-01'
+    at_pub_source_date_label: ICML 2020
     value_gap_source_date_iso: '2023-05-31'
     value_gap_source_date_label: KDD 2023
-    gap_vs_at_pub: null
+    gap_vs_at_pub: 9.999999999998899e-05
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
-    insignificant_improvement_at_pub: false
+    insignificant_improvement_at_pub: true
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
+    insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.893
     true_std: 0.0514
@@ -748,13 +746,12 @@ results:
     date_iso: '2021-06-10'
     published_venue: ICML 2021
     published_conference: ICML 2021
-    at_pub_value: 0.868
-    at_pub_std: 0.0134
-    at_pub_source_arxiv: '2106.05819'
-    at_pub_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
-      Learning
-    at_pub_source_date_iso: '2021-06-10'
-    at_pub_source_date_label: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2025-05-25'
     value_gap_source_date_label: ICML 2025
     gap_vs_at_pub: null
@@ -775,8 +772,8 @@ results:
     value_note: ''
     sort_value: 0.8829
     sort_std: 0.0131
-    global_rank: 341
-    paper_rank: 421
+    global_rank: 342
+    paper_rank: 422
     rank_delta: 80
     rank_delta_abs: 80
     rank_delta_direction: worse
@@ -843,8 +840,8 @@ results:
     value_note: ''
     sort_value: 0.877
     sort_std: 0.008
-    global_rank: 370
-    paper_rank: 389
+    global_rank: 371
+    paper_rank: 390
     rank_delta: 19
     rank_delta_abs: 19
     rank_delta_direction: worse
@@ -910,8 +907,8 @@ results:
     value_note: ''
     sort_value: 0.8744
     sort_std: 0.0272
-    global_rank: 383
-    paper_rank: 383
+    global_rank: 385
+    paper_rank: 385
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -946,7 +943,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 429
+    global_rank: 430
     sort_value: 0.866
     sort_std: 0.0495
     comparison_type: global_top
@@ -1010,8 +1007,8 @@ results:
     value_note: ''
     sort_value: 0.8644
     sort_std: 0.0125
-    global_rank: 433
-    paper_rank: 570
+    global_rank: 434
+    paper_rank: 571
     rank_delta: 137
     rank_delta_abs: 137
     rank_delta_direction: worse
@@ -1079,10 +1076,10 @@ results:
     value_note: ''
     sort_value: 0.852
     sort_std: 0.009
-    global_rank: 479
-    paper_rank: 639
-    rank_delta: 160
-    rank_delta_abs: 160
+    global_rank: 480
+    paper_rank: 638
+    rank_delta: 158
+    rank_delta_abs: 158
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1149,9 +1146,9 @@ results:
     sort_value: 0.8447
     sort_std: 0.0037
     global_rank: 514
-    paper_rank: 852
-    rank_delta: 338
-    rank_delta_abs: 338
+    paper_rank: 863
+    rank_delta: 349
+    rank_delta_abs: 349
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1215,8 +1212,8 @@ results:
     value_note: ''
     sort_value: 0.7263
     sort_std: 0.102
-    global_rank: 812
-    paper_rank: 812
+    global_rank: 819
+    paper_rank: 819
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1395,9 +1392,9 @@ results:
     sort_value: 0.86
     sort_std: 0.018
     global_rank: 10
-    paper_rank: 245
-    rank_delta: 235
-    rank_delta_abs: 235
+    paper_rank: 244
+    rank_delta: 234
+    rank_delta_abs: 234
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1431,7 +1428,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 81
+    global_rank: 82
     sort_value: 0.8303
     sort_std: 0.0137
     comparison_type: global_top
@@ -1469,12 +1466,13 @@ results:
     date_iso: '2021-06-10'
     published_venue: ICML 2021
     published_conference: ICML 2021
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.7787
+    at_pub_std: 0.0041
+    at_pub_source_arxiv: '2106.05819'
+    at_pub_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
+      Learning
+    at_pub_source_date_iso: '2021-06-10'
+    at_pub_source_date_label: NeurIPS 2021
     value_gap_source_date_iso: '2022-05-19'
     value_gap_source_date_label: NeurIPS 2022
     gap_vs_at_pub: null
@@ -1497,9 +1495,9 @@ results:
     sort_value: 0.825
     sort_std: 0.0013
     global_rank: 115
-    paper_rank: 362
-    rank_delta: 247
-    rank_delta_abs: 247
+    paper_rank: 361
+    rank_delta: 246
+    rank_delta_abs: 246
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1537,12 +1535,13 @@ results:
     date_iso: '2021-06-10'
     published_venue: ICML 2021
     published_conference: ICML 2021
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.7836
+    at_pub_std: 0.0053
+    at_pub_source_arxiv: '2106.05819'
+    at_pub_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
+      Learning
+    at_pub_source_date_iso: '2021-06-10'
+    at_pub_source_date_label: NeurIPS 2021
     value_gap_source_date_iso: '2022-05-19'
     value_gap_source_date_label: NeurIPS 2022
     gap_vs_at_pub: null
@@ -1565,9 +1564,9 @@ results:
     sort_value: 0.817
     sort_std: 0.0026
     global_rank: 157
-    paper_rank: 334
-    rank_delta: 177
-    rank_delta_abs: 177
+    paper_rank: 333
+    rank_delta: 176
+    rank_delta_abs: 176
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1672,12 +1671,13 @@ results:
     date_iso: '2021-06-10'
     published_venue: ICML 2021
     published_conference: ICML 2021
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.7807
+    at_pub_std: 0.0047
+    at_pub_source_arxiv: '2106.05819'
+    at_pub_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
+      Learning
+    at_pub_source_date_iso: '2021-06-10'
+    at_pub_source_date_label: NeurIPS 2021
     value_gap_source_date_iso: '2022-05-31'
     value_gap_source_date_label: ICML 2022
     gap_vs_at_pub: null
@@ -1699,8 +1699,8 @@ results:
     value_note: ''
     sort_value: 0.784
     sort_std: 0.005
-    global_rank: 332
-    paper_rank: 348
+    global_rank: 331
+    paper_rank: 347
     rank_delta: 16
     rank_delta_abs: 16
     rank_delta_direction: worse
@@ -1766,8 +1766,8 @@ results:
     value_note: ''
     sort_value: 0.775
     sort_std: 0.0074
-    global_rank: 378
-    paper_rank: 427
+    global_rank: 375
+    paper_rank: 424
     rank_delta: 49
     rank_delta_abs: 49
     rank_delta_direction: worse
@@ -1833,10 +1833,10 @@ results:
     value_note: ''
     sort_value: 0.754
     sort_std: 0.012
-    global_rank: 450
-    paper_rank: 501
-    rank_delta: 51
-    rank_delta_abs: 51
+    global_rank: 449
+    paper_rank: 497
+    rank_delta: 48
+    rank_delta_abs: 48
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1900,10 +1900,10 @@ results:
     value_note: ''
     sort_value: 0.5976
     sort_std: 0.0035
-    global_rank: 619
-    paper_rank: 641
-    rank_delta: 22
-    rank_delta_abs: 22
+    global_rank: 616
+    paper_rank: 635
+    rank_delta: 19
+    rank_delta_abs: 19
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1968,8 +1968,8 @@ results:
     value_note: ''
     sort_value: 0.549
     sort_std: 0.016
-    global_rank: 637
-    paper_rank: 637
+    global_rank: 631
+    paper_rank: 631
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2047,7 +2047,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -2113,7 +2113,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: unknown
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 12
@@ -2154,12 +2154,13 @@ results:
     date_iso: '2021-06-10'
     published_venue: ICML 2021
     published_conference: ICML 2021
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.8953
+    at_pub_std: 0.0084
+    at_pub_source_arxiv: '2106.05819'
+    at_pub_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
+      Learning
+    at_pub_source_date_iso: '2021-06-10'
+    at_pub_source_date_label: NeurIPS 2021
     value_gap_source_date_iso: '2024-01-31'
     value_gap_source_date_label: WWW 2024
     gap_vs_at_pub: null
@@ -2180,10 +2181,10 @@ results:
     value_note: ''
     sort_value: 0.9169
     sort_std: 0.007
-    global_rank: 22
-    paper_rank: 41
-    rank_delta: 19
-    rank_delta_abs: 19
+    global_rank: 23
+    paper_rank: 43
+    rank_delta: 20
+    rank_delta_abs: 20
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2247,10 +2248,10 @@ results:
     value_note: ''
     sort_value: 0.8939
     sort_std: 0.0181
-    global_rank: 44
-    paper_rank: 65
-    rank_delta: 21
-    rank_delta_abs: 21
+    global_rank: 46
+    paper_rank: 68
+    rank_delta: 22
+    rank_delta_abs: 22
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2315,8 +2316,8 @@ results:
     value_note: ''
     sort_value: 0.845
     sort_std: 0.006
-    global_rank: 62
-    paper_rank: 65
+    global_rank: 65
+    paper_rank: 68
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -2382,8 +2383,8 @@ results:
     value_note: ''
     sort_value: 0.7804
     sort_std: 0.0039
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 73
+    paper_rank: 73
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2449,8 +2450,8 @@ results:
     value_note: ''
     sort_value: 0.7734
     sort_std: 0.0018
-    global_rank: 72
-    paper_rank: 72
+    global_rank: 75
+    paper_rank: 75
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2517,8 +2518,8 @@ results:
     value_note: ''
     sort_value: 0.758
     sort_std: 0.01
-    global_rank: 76
-    paper_rank: 76
+    global_rank: 80
+    paper_rank: 80
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2585,8 +2586,8 @@ results:
     value_note: ''
     sort_value: 0.715
     sort_std: 0.004
-    global_rank: 80
-    paper_rank: 80
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2652,8 +2653,8 @@ results:
     value_note: ''
     sort_value: 0.6882
     sort_std: 0.0041
-    global_rank: 82
-    paper_rank: 82
+    global_rank: 85
+    paper_rank: 85
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

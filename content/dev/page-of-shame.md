@@ -20,13 +20,13 @@ Each row also compares against the **best known at publication** (best result fo
 
 | Statistic | Count |
 |---|---:|
-| Flagged papers | 969 |
-| Flagged rows | 12924 |
-| Baseline rows | 12664 |
-| Best at pub | 8543 |
-| Best today only (not best at pub) | 3458 |
-| At-pub best ≠ today's best (different source papers) | 7996 |
-| At-pub best = today's best (same source paper) | 4928 |
+| Flagged papers | 945 |
+| Flagged rows | 12657 |
+| Baseline rows | 12410 |
+| Best at pub | 8299 |
+| Best today only (not best at pub) | 3404 |
+| At-pub best ≠ today's best (different source papers) | 7806 |
+| At-pub best = today's best (same source paper) | 4851 |
 
 ### Today's best source timing
 
@@ -34,8 +34,8 @@ When the **best reported** holder published relative to the viewing paper:
 
 | Timing | Rows |
 |---|---:|
-| Already known at publication | 5458 |
-| Published later (field moved on) | 7466 |
+| Already known at publication | 5409 |
+| Published later (field moved on) | 7248 |
 | Same paper | 0 |
 | Unknown date | 0 |
 
@@ -43,64 +43,64 @@ When the **best reported** holder published relative to the viewing paper:
 
 | Dataset | Wrong Rows | Best at pub | Best today only | Papers | Models | Worst Rank Δ |
 |---|---:|---:|---:|---:|---:|---:|
-| PubMed | 840 | 625 | 207 | 169 | 122 | 896 |
-| Cora | 809 | 583 | 210 | 184 | 133 | 1066 |
-| CiteSeer | 781 | 583 | 183 | 166 | 138 | 948 |
-| Actor | 730 | 534 | 141 | 121 | 93 | 485 |
-| Amazon-Photo | 688 | 459 | 189 | 134 | 94 | 685 |
-| Texas | 638 | 369 | 156 | 128 | 98 | 656 |
-| Amazon-Computers | 578 | 356 | 200 | 114 | 82 | 603 |
-| Cornell | 540 | 364 | 123 | 122 | 86 | 623 |
-| NCI1 | 523 | 326 | 108 | 122 | 78 | 644 |
-| MUTAG | 388 | 205 | 68 | 144 | 76 | 804 |
-| COLLAB | 301 | 214 | 67 | 80 | 59 | 384 |
-| Squirrel | 286 | 195 | 76 | 52 | 49 | 264 |
-| Chameleon | 275 | 204 | 69 | 56 | 55 | 314 |
-| WikiCS | 265 | 169 | 83 | 50 | 70 | 281 |
-| Coauthor-Physics | 257 | 168 | 76 | 67 | 43 | 344 |
-| BBBP | 209 | 142 | 52 | 47 | 46 | 270 |
-| ogbn-products | 208 | 136 | 65 | 69 | 50 | 384 |
-| Coauthor-CS | 197 | 124 | 62 | 48 | 31 | 251 |
-| Tox21 | 183 | 139 | 35 | 48 | 41 | 321 |
-| MD17 | 167 | 133 | 34 | 35 | 41 | 115 |
-| Amazon-ratings | 156 | 98 | 55 | 35 | 28 | 212 |
-| PROTEINS | 155 | 74 | 36 | 69 | 44 | 477 |
-| BACE | 153 | 102 | 35 | 42 | 40 | 272 |
-| DBLP | 150 | 110 | 37 | 29 | 39 | 191 |
-| ToxCast | 150 | 110 | 33 | 33 | 34 | 176 |
+| PubMed | 912 | 668 | 234 | 174 | 130 | 944 |
+| CiteSeer | 817 | 605 | 194 | 168 | 137 | 959 |
+| Cora | 783 | 570 | 187 | 177 | 122 | 1004 |
+| Actor | 720 | 526 | 143 | 121 | 93 | 484 |
+| Amazon-Photo | 660 | 398 | 218 | 128 | 91 | 628 |
+| Texas | 615 | 351 | 152 | 122 | 95 | 618 |
+| Amazon-Computers | 540 | 319 | 199 | 106 | 78 | 557 |
+| Cornell | 534 | 355 | 127 | 119 | 84 | 608 |
+| NCI1 | 521 | 322 | 109 | 121 | 78 | 638 |
+| MUTAG | 393 | 209 | 68 | 145 | 76 | 815 |
+| Squirrel | 316 | 219 | 79 | 55 | 54 | 272 |
+| Chameleon | 309 | 230 | 75 | 59 | 65 | 330 |
+| COLLAB | 297 | 208 | 69 | 80 | 58 | 351 |
+| Coauthor-Physics | 228 | 144 | 71 | 57 | 43 | 298 |
+| BBBP | 218 | 154 | 49 | 46 | 45 | 273 |
+| WikiCS | 218 | 132 | 72 | 44 | 59 | 266 |
+| ogbn-products | 194 | 128 | 59 | 63 | 48 | 352 |
+| Tox21 | 189 | 149 | 32 | 46 | 40 | 314 |
+| PROTEINS | 184 | 91 | 39 | 77 | 53 | 511 |
+| Coauthor-CS | 173 | 105 | 57 | 42 | 27 | 226 |
+| MD17 | 163 | 127 | 36 | 35 | 40 | 113 |
+| ToxCast | 162 | 119 | 33 | 33 | 35 | 178 |
+| BACE | 157 | 106 | 34 | 40 | 39 | 275 |
+| SIDER | 153 | 82 | 37 | 38 | 36 | 222 |
+| Amazon-ratings | 136 | 82 | 52 | 31 | 26 | 206 |
 
 ### Most affected models
 
 | Model | Wrong Rows | Best at pub | Best today only | Papers | Datasets | Worst Rank Δ |
 |---|---:|---:|---:|---:|---:|---:|
-| GCN | 1760 | 1316 | 382 | 555 | 78 | 1033 |
-| GAT | 1162 | 911 | 218 | 376 | 65 | 995 |
-| GraphSAGE | 473 | 290 | 131 | 194 | 52 | 869 |
-| GIN | 459 | 315 | 93 | 201 | 56 | 811 |
-| MLP | 405 | 259 | 137 | 132 | 36 | 683 |
-| APPNP | 299 | 227 | 63 | 105 | 23 | 756 |
-| DGI | 267 | 149 | 114 | 107 | 26 | 898 |
-| SGC | 254 | 191 | 59 | 98 | 23 | 833 |
-| GraphCL | 236 | 138 | 42 | 74 | 25 | 860 |
-| GCNII | 231 | 141 | 79 | 91 | 20 | 797 |
-| GPRGNN | 220 | 145 | 62 | 69 | 26 | 820 |
-| H2GCN | 207 | 143 | 45 | 78 | 21 | 815 |
-| MVGRL | 204 | 130 | 64 | 80 | 24 | 759 |
-| GRACE | 199 | 108 | 80 | 72 | 21 | 838 |
-| GatedGCN | 132 | 90 | 42 | 57 | 14 | 195 |
-| InfoGraph | 131 | 82 | 16 | 52 | 12 | 236 |
-| FAGCN | 128 | 104 | 17 | 48 | 16 | 704 |
-| BGRL | 124 | 88 | 19 | 48 | 23 | 750 |
-| JOAO | 122 | 91 | 29 | 35 | 16 | 316 |
-| WL | 120 | 102 | 9 | 59 | 6 | 685 |
-| GCA | 113 | 78 | 30 | 44 | 15 | 708 |
-| GloGNN | 106 | 76 | 28 | 43 | 19 | 723 |
-| SAGE | 105 | 52 | 48 | 56 | 24 | 829 |
-| DeepWalk | 105 | 75 | 30 | 42 | 16 | 649 |
-| JKNet | 104 | 84 | 15 | 37 | 14 | 852 |
+| GCN | 1708 | 1267 | 379 | 537 | 77 | 972 |
+| GAT | 1126 | 875 | 217 | 362 | 66 | 937 |
+| GIN | 449 | 301 | 92 | 196 | 55 | 813 |
+| GraphSAGE | 436 | 282 | 102 | 185 | 52 | 914 |
+| MLP | 407 | 260 | 138 | 130 | 35 | 719 |
+| APPNP | 293 | 222 | 62 | 102 | 24 | 777 |
+| DGI | 270 | 158 | 108 | 103 | 24 | 895 |
+| SGC | 250 | 189 | 58 | 98 | 22 | 848 |
+| GraphCL | 237 | 136 | 45 | 71 | 24 | 646 |
+| GCNII | 221 | 138 | 73 | 87 | 18 | 787 |
+| MVGRL | 205 | 122 | 74 | 78 | 24 | 771 |
+| GRACE | 205 | 113 | 80 | 73 | 21 | 696 |
+| H2GCN | 204 | 137 | 47 | 79 | 20 | 825 |
+| GPRGNN | 196 | 126 | 58 | 65 | 22 | 830 |
+| InfoGraph | 136 | 85 | 17 | 53 | 12 | 233 |
+| BGRL | 134 | 99 | 15 | 46 | 22 | 726 |
+| GatedGCN | 125 | 82 | 43 | 56 | 14 | 185 |
+| FAGCN | 124 | 100 | 17 | 47 | 15 | 711 |
+| JOAO | 124 | 95 | 27 | 36 | 16 | 311 |
+| GCA | 122 | 84 | 31 | 46 | 15 | 723 |
+| WL | 122 | 104 | 9 | 59 | 6 | 696 |
+| DeepWalk | 108 | 71 | 36 | 42 | 16 | 691 |
+| SAGE | 100 | 51 | 43 | 52 | 25 | 802 |
+| GAE | 100 | 61 | 28 | 34 | 18 | 570 |
+| ContextPred | 98 | 74 | 22 | 24 | 9 | 241 |
 
 
-Detailed table: 969 rows (loaded below).
+Detailed table: 945 rows (loaded below).
 
 
 ### Flagged Rows

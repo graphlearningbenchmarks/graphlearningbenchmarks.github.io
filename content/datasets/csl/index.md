@@ -13,7 +13,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 10
-result_count: 110
+result_count: 104
 best_model:
   model: PPGN
   value: 1.0
@@ -71,11 +71,6 @@ papers:
   title: 'MAG-GNN: Reinforcement Learning Boosted Graph Neural Network'
   date_iso: '2023-10-29'
   venue: NeurIPS 2023
-- arxiv_id: '2309.00738'
-  title: Rethinking the Power of Graph Canonization in Graph Representation Learning
-    with Stability
-  date_iso: '2023-09-01'
-  venue: ''
 - arxiv_id: '2303.10576'
   title: An Efficient Subgraph GNN with Provable Substructure Counting Power
   date_iso: '2023-03-19'
@@ -88,10 +83,6 @@ papers:
   title: A Generalization of ViT/MLP-Mixer to Graphs
   date_iso: '2022-12-27'
   venue: ICML 2022
-- arxiv_id: '2210.02636'
-  title: Geodesic Graph Neural Network for Efficient Graph Representation Learning
-  date_iso: '2022-10-06'
-  venue: NeurIPS 2022
 - arxiv_id: '2205.13328'
   title: How Powerful are $K$-hop Message Passing Graph Neural Networks
   date_iso: '2022-05-26'
@@ -498,58 +489,6 @@ variants:
     - 1.0
     metric_stds:
     - null
-  - model: PF-GNN
-    model_plain: PF-GNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.02636'
-    title: Geodesic Graph Neural Network for Efficient Graph Representation Learning
-    date: Oct 6, 2022
-    date_iso: '2022-10-06'
-    date_display: Oct 2022
-    codebase_url: https://github.com/woodcutter1998/gdgnn
-    published_conference: NeurIPS 2022
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2022
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 1.0
-    metric_stds:
-    - null
-  - model: 4-GDGNN
-    model_plain: 4-GDGNN
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2210.02636'
-    title: Geodesic Graph Neural Network for Efficient Graph Representation Learning
-    date: Oct 6, 2022
-    date_iso: '2022-10-06'
-    date_display: Oct 2022
-    codebase_url: https://github.com/woodcutter1998/gdgnn
-    published_conference: NeurIPS 2022
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2022
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 1.0
-    metric_stds:
-    - null
   - model: Full
     model_plain: Full
     is_baseline: true
@@ -680,6 +619,33 @@ variants:
     - 1.0
     metric_stds:
     - null
+  - model: PF-GNN
+    model_plain: PF-GNN
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2401.17752'
+    title: 'PF-GNN: Differentiable particle filtering based approximation of universal
+      graph representations'
+    date: Jan 31, 2024
+    date_iso: '2024-01-31'
+    date_display: Jan 2024
+    codebase_url: https://github.com/pfgnn/PF-GNN
+    published_conference: ICLR 2024
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2024
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 1.0
+    metric_stds:
+    - 0.0
   - model: GCN
     model_plain: GCN
     is_baseline: true
@@ -1411,45 +1377,71 @@ variants:
     - 0.978
     metric_stds:
     - 0.10916
-  - model: GC-GNN (GIN)
-    model_plain: GC-GNN (GIN)
-    is_baseline: false
+  - model: 3-GCN
+    model_plain: 3-GCN
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2309.00738'
-    title: Rethinking the Power of Graph Canonization in Graph Representation Learning
-      with Stability
-    date: Sep 1, 2023
-    date_iso: '2023-09-01'
-    date_display: Sep 2023
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2502.16233'
+    title: Graph Self-Supervised Learning with Learnable Structural and Positional
+      Encodings
+    date: Feb 22, 2025
+    date_iso: '2025-02-22'
+    date_display: Feb 2025
+    codebase_url: https://github.com/wokas36/StructPosGSSL
+    published_conference: WWW 2025
+    published_conference_short: WWW
+    published_conference_slug: www
+    published_venue: WWW 2025
     uses_external_data: false
     is_best: true
     is_std_outlier: false
     metric_values:
-    - 0.9667
+    - 0.957
     metric_stds:
-    - 0.072
-  row_count: 110
+    - 0.148
+  - model: 3-GNN
+    model_plain: 3-GNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2303.10576'
+    title: An Efficient Subgraph GNN with Provable Substructure Counting Power
+    date: Mar 19, 2023
+    date_iso: '2023-03-19'
+    date_display: Mar 2023
+    codebase_url: https://github.com/pkuyzy/ESC-GNN
+    published_conference: KDD 2023
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.957
+    metric_stds:
+    - null
+  row_count: 104
   rows_json: /data/datasets/csl/standard-split-rows.json
   chart_json: /data/datasets/csl/standard-split-chart.json
   arch_counts:
-    gnn: 76
-    hybrid: 12
+    gnn: 74
+    hybrid: 8
     graph_transformer: 9
     llm: 0
     walk: 1
     traditional: 6
   metric_counts:
-  - 110
+  - 104
   milestones: &id001
   - value: 0.8
     std: 0.0

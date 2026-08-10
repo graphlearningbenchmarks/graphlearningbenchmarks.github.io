@@ -56,8 +56,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - FMP
-mrr: 0.0286
-adjusted_mrr: 0.0095
+mrr: 0.0357
+adjusted_mrr: 0.0119
 mrr_dataset_count: 1
 benchmark_categories:
 - LINKX Benchmarks
@@ -74,72 +74,6 @@ results:
 - &id001
   dataset: Pokec
   rows:
-  - model: Polynormer-r
-    model_key: polynormer-r
-    model_plain: Polynormer-r
-    value: 0.861
-    std: 0.0005
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2403.01232'
-    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/cornell-zhang/Polynormer
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.861
-    sort_std: 0.0005
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Polynormer
-    model_key: polynormer
-    model_plain: Polynormer
-    value: 0.8595
-    std: 0.0007
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2403.01232'
-    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/cornell-zhang/Polynormer
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.8595
-    sort_std: 0.0007
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
   - model: MoE-H2GCN
     model_key: moe-h2gcn
     model_plain: MoE-H2GCN
@@ -165,13 +99,79 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 1
     sort_value: 0.8302
     sort_std: 0.003
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
+    is_std_outlier: false
+  - model: att-Node-level NLSFs
+    model_key: att-node-level nlsfs
+    model_plain: att-Node-level NLSFs
+    value: 0.8296
+    std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.01249'
+    title: Equivariant Machine Learning on Graphs with Nonlinear Spectral Filters
+    date: Jun 3, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-03'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8296
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: OptBasisGNN
+    model_key: optbasisgnn
+    model_plain: OptBasisGNN
+    value: 0.8283
+    std: 0.0
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.01249'
+    title: Equivariant Machine Learning on Graphs with Nonlinear Spectral Filters
+    date: Jun 3, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-03'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.8283
+    sort_std: 0.0
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
     is_std_outlier: false
   - model: GCN
     model_key: gcn
@@ -231,10 +231,10 @@ results:
     value_note: ''
     sort_value: 0.7601
     sort_std: 0.0049
-    global_rank: 26
-    paper_rank: 32
-    rank_delta: 6
-    rank_delta_abs: 6
+    global_rank: 22
+    paper_rank: 25
+    rank_delta: 3
+    rank_delta_abs: 3
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -268,7 +268,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 27
+    global_rank: 23
     sort_value: 0.7576
     sort_std: 0.0004
     comparison_type: global_top
@@ -313,38 +313,37 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: ICLR 2024
+    value_gap_source_date_iso: '2023-11-09'
+    value_gap_source_date_label: ICLR 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
-    surpassed_since_pub: true
+    surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7223
-    true_std: 0.0018
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.7177
+    true_std: 0.0618
+    value_gap_source_arxiv: '2311.05185'
+    value_gap_source_title: Mixture of Weak & Strong Experts on Graphs
     value_gap_source_is_current_paper: false
-    value_gap: 0.024700000000000055
+    value_gap: 0.020100000000000007
     has_value_note: false
     value_note: ''
-    sort_value: 0.7223
-    sort_std: 0.0018
-    global_rank: 32
-    paper_rank: 36
-    rank_delta: 4
-    rank_delta_abs: 4
+    sort_value: 0.7177
+    sort_std: 0.0618
+    global_rank: 26
+    paper_rank: 29
+    rank_delta: 3
+    rank_delta_abs: 3
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
-    is_std_outlier: false
+    is_std_outlier: true
   - model: SGC
     model_key: sgc
     model_plain: SGC
@@ -403,8 +402,8 @@ results:
     value_note: ''
     sort_value: 0.7124
     sort_std: 0.0046
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -472,8 +471,8 @@ results:
     value_note: ''
     sort_value: 0.705
     sort_std: 0.005
-    global_rank: 35
-    paper_rank: 35
+    global_rank: 28
+    paper_rank: 28
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -542,8 +541,8 @@ results:
     value_note: ''
     sort_value: 0.7048
     sort_std: 0.0077
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -612,8 +611,8 @@ results:
     value_note: ''
     sort_value: 0.6691
     sort_std: 0.0146
-    global_rank: 38
-    paper_rank: 38
+    global_rank: 32
+    paper_rank: 32
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

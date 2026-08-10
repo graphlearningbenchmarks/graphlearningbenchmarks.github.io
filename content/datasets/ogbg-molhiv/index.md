@@ -14,7 +14,7 @@ stats:
   avg_nodes: 25.5
   avg_edges: 27.5
   num_classes: 2
-result_count: 380
+result_count: 370
 best_model:
   model: Multi-RF Fusion with Multi-GNN Blending
   value: 0.8476
@@ -35,6 +35,10 @@ papers:
   title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
   date_iso: '2026-03-21'
   venue: ''
+- arxiv_id: '2510.04567'
+  title: 'GILT: An LLM-Free, Tuning-Free Graph Foundational Model for In-Context Learning'
+  date_iso: '2025-10-06'
+  venue: ICML 2025
 - arxiv_id: '2509.24886'
   title: Adaptive Canonicalization with Application to Invariant Anisotropic Geometric
     Networks
@@ -73,10 +77,6 @@ papers:
   title: Towards Few-shot Self-explaining Graph Neural Networks
   date_iso: '2024-08-14'
   venue: ''
-- arxiv_id: '2407.09709'
-  title: 'GOFA: A Generative One-For-All Model for Joint Graph Language Modeling'
-  date_iso: '2024-07-12'
-  venue: ICLR 2024
 - arxiv_id: '2407.04236'
   title: Graph Pooling via Ricci Flow
   date_iso: '2024-07-05'
@@ -117,11 +117,6 @@ papers:
 - arxiv_id: '2402.16402'
   title: Graph Learning with Distributional Edge Layouts
   date_iso: '2024-02-26'
-  venue: ''
-- arxiv_id: '2402.07191'
-  title: Improving Subgraph Extraction for Graph Invariant Learning via Graph Sinkhorn
-    Attention
-  date_iso: '2024-02-11'
   venue: ''
 - arxiv_id: '2402.04924'
   title: 'Two Trades are not Baffled: Condensing Graph via Crafting Rational Gradient
@@ -217,11 +212,6 @@ papers:
     Finding Untrained GNNs Tickets'
   date_iso: '2022-11-28'
   venue: LoG 2022
-- arxiv_id: '2211.14568'
-  title: 'BeGin: Extensive Benchmark Scenarios and An Easy-to-use Framework for Graph
-    Continual Learning'
-  date_iso: '2022-11-26'
-  venue: ''
 - arxiv_id: '2211.06605'
   title: Comprehensive Analysis of Over-smoothing in Graph Neural Networks from Markov
     Chains Perspective
@@ -355,7 +345,6 @@ variants:
   - AUC
   - AUC-ROC
   - Accuracy
-  - FWT
   - Size
   - Sparsity
   - Suffic.
@@ -364,7 +353,6 @@ variants:
   - AUC
   - AUC-ROC
   - Accuracy
-  - FWT
   - Size
   - Sparsity
   - Suffic.
@@ -402,10 +390,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0002
-    - null
     - null
     - null
     - null
@@ -442,10 +428,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0003
-    - null
     - null
     - null
     - null
@@ -482,10 +466,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0015
-    - null
     - null
     - null
     - null
@@ -522,10 +504,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0021
-    - null
     - null
     - null
     - null
@@ -563,10 +543,46 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0063
     - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: two augmentation methods based on environment subgraphs
+    model_plain: two augmentation methods based on environment subgraphs
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2206.02886'
+    title: Graph Rationalization with Environment-based Augmentations
+    date: Jun 6, 2022
+    date_iso: '2022-06-06'
+    date_display: Jun 2022
+    codebase_url: https://github.com/liugangcode/GREA
+    published_conference: KDD 2022
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8191
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.024
     - null
     - null
     - null
@@ -603,10 +619,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0049
-    - null
     - null
     - null
     - null
@@ -643,10 +657,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0079
-    - null
     - null
     - null
     - null
@@ -684,11 +696,47 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - null
     - null
     - null
+    - null
+    - null
+    - null
+    - null
+  - model: OOD-GNN
+    model_plain: OOD-GNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2206.02886'
+    title: Graph Rationalization with Environment-based Augmentations
+    date: Jun 6, 2022
+    date_iso: '2022-06-06'
+    date_display: Jun 2022
+    codebase_url: https://github.com/liugangcode/GREA
+    published_conference: KDD 2022
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8096
+    - 0.7799
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0132
+    - 0.0078
     - null
     - null
     - null
@@ -724,10 +772,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0057
-    - null
     - null
     - null
     - null
@@ -764,10 +810,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.016
-    - null
     - null
     - null
     - null
@@ -805,10 +849,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0094
-    - null
     - null
     - null
     - null
@@ -845,10 +887,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0065
-    - null
     - null
     - null
     - null
@@ -885,10 +925,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.007
-    - null
     - null
     - null
     - null
@@ -925,51 +963,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0083
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: PNA+GSINA
-    model_plain: PNA+GSINA
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2402.07191'
-    title: Improving Subgraph Extraction for Graph Invariant Learning via Graph Sinkhorn
-      Attention
-    date: Feb 11, 2024
-    date_iso: '2024-02-11'
-    date_display: Feb 2024
-    codebase_url: https://github.com/dingfangyu/GSINA
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8055
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0097
-    - null
     - null
     - null
     - null
@@ -1007,9 +1002,7 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
-    - null
     - null
     - null
     - null
@@ -1047,10 +1040,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0053
-    - null
     - null
     - null
     - null
@@ -1062,7 +1053,7 @@ variants:
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: 47.0
+    params_millions: null
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
@@ -1087,10 +1078,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0053
-    - null
     - null
     - null
     - null
@@ -1127,10 +1116,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.005
-    - null
     - null
     - null
     - null
@@ -1167,10 +1154,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.021
-    - null
     - null
     - null
     - null
@@ -1207,10 +1192,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.009
-    - null
     - null
     - null
     - null
@@ -1247,10 +1230,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.009
-    - null
     - null
     - null
     - null
@@ -1288,10 +1269,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.009
-    - null
     - null
     - null
     - null
@@ -1328,51 +1307,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0144
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: PNA+GSAT
-    model_plain: PNA+GSAT
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2402.07191'
-    title: Improving Subgraph Extraction for Graph Invariant Learning via Graph Sinkhorn
-      Attention
-    date: Feb 11, 2024
-    date_iso: '2024-02-11'
-    date_display: Feb 2024
-    codebase_url: https://github.com/dingfangyu/GSINA
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8024
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0073
-    - null
     - null
     - null
     - null
@@ -1410,10 +1346,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0305
-    - null
     - null
     - null
     - null
@@ -1451,10 +1385,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0118
-    - null
     - null
     - null
     - null
@@ -1492,10 +1424,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0152
-    - null
     - null
     - null
     - null
@@ -1532,10 +1462,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0068
-    - null
     - null
     - null
     - null
@@ -1572,10 +1500,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.015
-    - null
     - null
     - null
     - null
@@ -1612,10 +1538,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0104
-    - null
     - null
     - null
     - null
@@ -1652,10 +1576,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0071
-    - null
     - null
     - null
     - null
@@ -1692,10 +1614,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0055
-    - null
     - null
     - null
     - null
@@ -1733,10 +1653,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0055
-    - null
     - null
     - null
     - null
@@ -1774,10 +1692,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0055
-    - null
     - null
     - null
     - null
@@ -1814,10 +1730,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.01
-    - null
     - null
     - null
     - null
@@ -1854,10 +1768,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0067
-    - null
     - null
     - null
     - null
@@ -1894,10 +1806,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0117
-    - null
     - null
     - null
     - null
@@ -1934,10 +1844,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.02
-    - null
     - null
     - null
     - null
@@ -1975,10 +1883,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0178
-    - null
     - null
     - null
     - null
@@ -2015,10 +1921,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.004
-    - null
     - null
     - null
     - null
@@ -2056,10 +1960,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0192
-    - null
     - null
     - null
     - null
@@ -2096,10 +1998,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0097
-    - null
     - null
     - null
     - null
@@ -2136,10 +2036,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0119
-    - null
     - null
     - null
     - null
@@ -2177,10 +2075,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0119
-    - null
     - null
     - null
     - null
@@ -2217,9 +2113,7 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
-    - null
     - null
     - null
     - null
@@ -2258,10 +2152,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0035
-    - null
     - null
     - null
     - null
@@ -2298,11 +2190,47 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0035
     - null
     - null
+    - null
+    - null
+    - null
+    - null
+  - model: IRM
+    model_plain: IRM
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2206.02886'
+    title: Graph Rationalization with Environment-based Augmentations
+    date: Jun 6, 2022
+    date_iso: '2022-06-06'
+    date_display: Jun 2022
+    codebase_url: https://github.com/liugangcode/GREA
+    published_conference: KDD 2022
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7947
+    - 0.7817
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0186
+    - 0.012
     - null
     - null
     - null
@@ -2338,7 +2266,6 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0097
     - null
@@ -2347,64 +2274,21 @@ variants:
     - null
     - null
     - null
-    - null
-  - model: PIN
-    model_plain: PIN
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2308.06838'
-    title: 'Weisfeiler and Lehman Go Paths: Learning Topological Features via Path
-      Complexes'
-    date: Aug 13, 2023
-    date_iso: '2023-08-13'
-    date_display: Aug 2023
-    codebase_url: ''
-    published_conference: AAAI 2023
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7944
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.014
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  row_count: 380
+  row_count: 370
   rows_json: /data/datasets/ogbg-molhiv/standard-split-rows.json
   chart_json: /data/datasets/ogbg-molhiv/standard-split-chart.json
   arch_counts:
-    gnn: 217
-    hybrid: 83
-    graph_transformer: 33
-    llm: 7
+    gnn: 214
+    hybrid: 80
+    graph_transformer: 32
+    llm: 4
     walk: 0
-    traditional: 23
+    traditional: 22
   metric_counts:
-  - 344
+  - 348
   - 9
   - 8
   - 10
-  - 6
   - 2
   - 2
   - 2
@@ -2475,14 +2359,6 @@ variants:
       arxiv_id: '2505.18289'
       title: Convexified Message-Passing Graph Neural Networks
       date: '2025-05-23'
-    FWT:
-    - value: 21.4
-      std: 4.7
-      model: TWP
-      arxiv_id: '2211.14568'
-      title: 'BeGin: Extensive Benchmark Scenarios and An Easy-to-use Framework for
-        Graph Continual Learning'
-      date: '2022-11-26'
     Size:
     - value: 1.0
       std: 0.0

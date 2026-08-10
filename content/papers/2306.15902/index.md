@@ -63,27 +63,27 @@ abstract: Out-of-distribution (OOD) graph generalization are critical for many r
   conducted on both node- and graph-level tasks consistently demonstrate the superior
   generalization ability of IS-GIB. The code is available at https://github.com/YangLing0818/GraphOOD.
 codebase_url: https://github.com/YangLing0818/GraphOOD
-extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+extraction_model: google/gemma-4-26B-A4B-it
 has_results: true
 paper_type: method
 proposed_models:
 - IS-GIB
-mrr: 0.2568
-adjusted_mrr: 0.1712
-mrr_dataset_count: 2
+mrr: 0.5
+adjusted_mrr: 0.1667
+mrr_dataset_count: 1
 benchmark_categories:
 - Classic
 benchmark_coverage:
 - benchmark: Classic
   benchmark_slug: classic
-  evaluated: 2
+  evaluated: 1
   total: 12
 task_categories:
 - node_classification
 experiment_scopes:
 - node-level
 results:
-- &id002
+- &id001
   dataset: CiteSeer
   rows:
   - model: CNA
@@ -136,14 +136,15 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 4.1.1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    protocol_note: Test accuracy on CiteSeer using the standard Planetoid split (Yang
+      et al. 2016).
     date: Jun 28, 2023
     date_display: Jun 2023
     date_iso: '2023-06-28'
@@ -204,14 +205,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 4.1.1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    protocol_note: Test accuracy on CiteSeer using the standard Planetoid split (Yang
+      et al. 2016).
     date: Jun 28, 2023
     date_display: Jun 2023
     date_iso: '2023-06-28'
@@ -272,14 +274,15 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 4.1.1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    protocol_note: Test accuracy on CiteSeer using the standard Planetoid split (Yang
+      et al. 2016).
     date: Jun 28, 2023
     date_display: Jun 2023
     date_iso: '2023-06-28'
@@ -340,14 +343,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 4.1.1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    protocol_note: Test accuracy on CiteSeer using the standard Planetoid split (Yang
+      et al. 2016).
     date: Jun 28, 2023
     date_display: Jun 2023
     date_iso: '2023-06-28'
@@ -408,14 +412,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 4.1.1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    protocol_note: Test accuracy on CiteSeer using the standard Planetoid split (Yang
+      et al. 2016).
     date: Jun 28, 2023
     date_display: Jun 2023
     date_iso: '2023-06-28'
@@ -476,14 +481,15 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 4.1.1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    protocol_note: Test accuracy on CiteSeer using the standard Planetoid split (Yang
+      et al. 2016).
     date: Jun 28, 2023
     date_display: Jun 2023
     date_iso: '2023-06-28'
@@ -544,14 +550,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 4.1.1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    protocol_note: Test accuracy on CiteSeer using the standard Planetoid split (Yang
+      et al. 2016).
     date: Jun 28, 2023
     date_display: Jun 2023
     date_iso: '2023-06-28'
@@ -612,14 +619,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 4.1.1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    protocol_note: Test accuracy on CiteSeer using the standard Planetoid split (Yang
+      et al. 2016).
     date: Jun 28, 2023
     date_display: Jun 2023
     date_iso: '2023-06-28'
@@ -680,14 +688,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 4.1.1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    protocol_note: Test accuracy on CiteSeer using the standard Planetoid split (Yang
+      et al. 2016).
     date: Jun 28, 2023
     date_display: Jun 2023
     date_iso: '2023-06-28'
@@ -748,14 +757,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 4.1.1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    protocol_note: Test accuracy on CiteSeer using the standard Planetoid split (Yang
+      et al. 2016).
     date: Jun 28, 2023
     date_display: Jun 2023
     date_iso: '2023-06-28'
@@ -874,871 +884,10 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
-  dataset: Cora
-  rows:
-  - model: Exphormer
-    model_key: exphormer
-    model_plain: Exphormer
-    value: 0.9635
-    std: 0.0019
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    venue: The Web Conference
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9635
-    sort_std: 0.0019
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SGFormer
-    model_key: sgformer
-    model_plain: SGFormer
-    value: 0.9629
-    std: 0.0015
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    venue: The Web Conference
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.9629
-    sort_std: 0.0015
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Coral
-    model_key: coral
-    model_plain: Coral
-    value: 0.9574
-    std: 0.0039
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    venue: The Web Conference
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9574
-    sort_std: 0.0039
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: IRM
-    model_key: irm
-    model_plain: IRM
-    value: 0.8365
-    std: 0.0301
-    paper_value: 0.8365
-    paper_std: 0.0301
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 4.1.1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
-    date: Jun 28, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-28'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-02-23'
-    value_gap_source_date_label: WWW 2026
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9572
-    true_std: 0.0031
-    value_gap_source_arxiv: '2602.19622'
-    value_gap_source_title: 'VecFormer: Towards Efficient and Generalizable Graph
-      Transformer with Graph Token Attention'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.12070000000000003
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9572
-    sort_std: 0.0031
-    global_rank: 4
-    paper_rank: 454
-    rank_delta: 450
-    rank_delta_abs: 450
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: ERM
-    model_key: erm
-    model_plain: ERM
-    value: 0.8273
-    std: 0.0273
-    paper_value: 0.8273
-    paper_std: 0.0273
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 4.1.1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
-    date: Jun 28, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-28'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-02-23'
-    value_gap_source_date_label: WWW 2026
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9557
-    true_std: 0.004
-    value_gap_source_arxiv: '2602.19622'
-    value_gap_source_title: 'VecFormer: Towards Efficient and Generalizable Graph
-      Transformer with Graph Token Attention'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.12839999999999996
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9557
-    sort_std: 0.004
-    global_rank: 6
-    paper_rank: 574
-    rank_delta: 568
-    rank_delta_abs: 568
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GroupDRO
-    model_key: groupdro
-    model_plain: GroupDRO
-    value: 0.8345
-    std: 0.0345
-    paper_value: 0.8345
-    paper_std: 0.0345
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 4.1.1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
-    date: Jun 28, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-28'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-02-23'
-    value_gap_source_date_label: WWW 2026
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9538
-    true_std: 0.0023
-    value_gap_source_arxiv: '2602.19622'
-    value_gap_source_title: 'VecFormer: Towards Efficient and Generalizable Graph
-      Transformer with Graph Token Attention'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.11929999999999996
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9538
-    sort_std: 0.0023
-    global_rank: 7
-    paper_rank: 500
-    rank_delta: 493
-    rank_delta_abs: 493
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.9004
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2401.09125'
-    title: Understanding Heterophily for Graph Neural Networks
-    date: Jan 17, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-17'
-    venue: International Conference on Machine Learning
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 42
-    sort_value: 0.9004
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: IS-GIB
-    model_key: is-gib
-    model_plain: IS-GIB
-    value: 0.8915
-    std: 0.0302
-    paper_value: 0.8915
-    paper_std: 0.0302
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 4.1.1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
-    date: Jun 28, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-28'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-06-28'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8915
-    true_std: 0.0302
-    value_gap_source_arxiv: '2306.15902'
-    value_gap_source_title: Individual and Structural Graph Information Bottlenecks
-      for Out-of-Distribution Generalization
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8915
-    sort_std: 0.0302
-    global_rank: 73
-    paper_rank: 73
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Size-inv
-    model_key: size-inv
-    model_plain: Size-inv
-    value: 0.8623
-    std: 0.0167
-    paper_value: 0.8623
-    paper_std: 0.0167
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 4.1.1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
-    date: Jun 28, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-28'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-06-28'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8623
-    true_std: 0.0167
-    value_gap_source_arxiv: '2306.15902'
-    value_gap_source_title: Individual and Structural Graph Information Bottlenecks
-      for Out-of-Distribution Generalization
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8623
-    sort_std: 0.0167
-    global_rank: 262
-    paper_rank: 262
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: EERM
-    model_key: eerm
-    model_plain: EERM
-    value: 0.8598
-    std: 0.0312
-    paper_value: 0.8598
-    paper_std: 0.0312
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 4.1.1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
-    date: Jun 28, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-28'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-06-28'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8598
-    true_std: 0.0312
-    value_gap_source_arxiv: '2306.15902'
-    value_gap_source_title: Individual and Structural Graph Information Bottlenecks
-      for Out-of-Distribution Generalization
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8598
-    sort_std: 0.0312
-    global_rank: 273
-    paper_rank: 273
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SR-GNN
-    model_key: sr-gnn
-    model_plain: SR-GNN
-    value: 0.8576
-    std: 0.0298
-    paper_value: 0.8576
-    paper_std: 0.0298
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 4.1.1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
-    date: Jun 28, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-28'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-06-28'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8576
-    true_std: 0.0298
-    value_gap_source_arxiv: '2306.15902'
-    value_gap_source_title: Individual and Structural Graph Information Bottlenecks
-      for Out-of-Distribution Generalization
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8576
-    sort_std: 0.0298
-    global_rank: 287
-    paper_rank: 287
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: OOD-GNN
-    model_key: ood-gnn
-    model_plain: OOD-GNN
-    value: 0.8497
-    std: 0.0245
-    paper_value: 0.8497
-    paper_std: 0.0245
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 4.1.1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
-    date: Jun 28, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-28'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-06-28'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8497
-    true_std: 0.0245
-    value_gap_source_arxiv: '2306.15902'
-    value_gap_source_title: Individual and Structural Graph Information Bottlenecks
-      for Out-of-Distribution Generalization
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8497
-    sort_std: 0.0245
-    global_rank: 339
-    paper_rank: 339
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GOOD
-    model_key: good
-    model_plain: GOOD
-    value: 0.8495
-    std: 0.0287
-    paper_value: 0.8495
-    paper_std: 0.0287
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 4.1.1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
-    date: Jun 28, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-28'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-06-28'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8495
-    true_std: 0.0287
-    value_gap_source_arxiv: '2306.15902'
-    value_gap_source_title: Individual and Structural Graph Information Bottlenecks
-      for Out-of-Distribution Generalization
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8495
-    sort_std: 0.0287
-    global_rank: 340
-    paper_rank: 340
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: DIR
-    model_key: dir
-    model_plain: DIR
-    value: 0.8412
-    std: 0.0395
-    paper_value: 0.8412
-    paper_std: 0.0395
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 4.1.1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
-    date: Jun 28, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-28'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-06-28'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8412
-    true_std: 0.0395
-    value_gap_source_arxiv: '2306.15902'
-    value_gap_source_title: Individual and Structural Graph Information Bottlenecks
-      for Out-of-Distribution Generalization
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8412
-    sort_std: 0.0395
-    global_rank: 402
-    paper_rank: 402
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MLP
-    model_key: mlp
-    model_plain: MLP
-    value: 0.7768
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2401.09125'
-    title: Understanding Heterophily for Graph Neural Networks
-    date: Jan 17, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-17'
-    venue: International Conference on Machine Learning
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 853
-    sort_value: 0.7768
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  rank_metric: Accuracy
-  higher_is_better: true
-  experiment_scope: node-level
-  dataset_primary_metric: Accuracy
-  paper_metrics:
-  - Accuracy
-  metric: Accuracy
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
 results_grouped:
 - benchmark: Classic
   datasets:
   - *id001
-  - *id002
 datasets_by_scope:
 - scope: node-level
   label: Node-level
@@ -1746,8 +895,6 @@ datasets_by_scope:
   - benchmark: Classic
     benchmark_slug: classic
     datasets:
-    - dataset: Cora
-      dataset_slug: cora
     - dataset: CiteSeer
       dataset_slug: citeseer
 single_proposed_model: IS-GIB

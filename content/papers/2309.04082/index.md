@@ -837,7 +837,7 @@ results:
   metric: F1
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id002
+- &id003
   dataset: CiteSeer
   rows:
   - model: MixHop
@@ -3377,7 +3377,7 @@ results:
   metric: F1
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id003
+- &id002
   dataset: PubMed
   rows:
   - model: MixHop
@@ -5775,10 +5775,10 @@ datasets_by_scope:
     datasets:
     - dataset: Cora
       dataset_slug: cora
-    - dataset: CiteSeer
-      dataset_slug: citeseer
     - dataset: PubMed
       dataset_slug: pubmed
+    - dataset: CiteSeer
+      dataset_slug: citeseer
   - benchmark: Heterophilic Graphs
     benchmark_slug: heterophilic-graphs
     datasets:

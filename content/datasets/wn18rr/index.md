@@ -12,7 +12,7 @@ stats:
   avg_nodes: 40943.0
   avg_edges: 93003.0
   num_classes: 11
-result_count: 237
+result_count: 228
 best_model:
   model: PNA, Msg_r^2, f(t)=t
   value: 0.947
@@ -57,10 +57,6 @@ papers:
   title: Relation-Aware Graph Foundation Model
   date_iso: '2025-05-17'
   venue: ''
-- arxiv_id: '2502.00806'
-  title: 'UniGraph2: Learning a Unified Embedding Space to Bind Multimodal Graphs'
-  date_iso: '2025-02-02'
-  venue: WWW 2025
 - arxiv_id: '2412.16441'
   title: 'Towards Graph Foundation Models: Learning Generalities Across Graphs via
     Task-Trees'
@@ -735,38 +731,6 @@ variants:
     - null
     - null
     - null
-  - model: UniGraph2
-    model_plain: UniGraph2
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2502.00806'
-    title: 'UniGraph2: Learning a Unified Embedding Space to Bind Multimodal Graphs'
-    date: Feb 2, 2025
-    date_iso: '2025-02-02'
-    date_display: Feb 2025
-    codebase_url: https://github.com/yf-he/UniGraph2
-    published_conference: WWW 2025
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2025
-    uses_external_data: true
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8786
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0006
-    - null
-    - null
-    - null
   - model: GAT
     model_plain: GAT
     is_baseline: true
@@ -895,38 +859,6 @@ variants:
     - null
     metric_stds:
     - 0.0026
-    - null
-    - null
-    - null
-  - model: UniGraph
-    model_plain: UniGraph
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    arxiv_id: '2502.00806'
-    title: 'UniGraph2: Learning a Unified Embedding Space to Bind Multimodal Graphs'
-    date: Feb 2, 2025
-    date_iso: '2025-02-02'
-    date_display: Feb 2025
-    codebase_url: https://github.com/yf-he/UniGraph2
-    published_conference: WWW 2025
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2025
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8406
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0024
     - null
     - null
     - null
@@ -1819,22 +1751,92 @@ variants:
     - null
     - null
     - null
-  row_count: 237
+  - model: Linear
+    model_plain: Linear
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2411.06070'
+    title: 'GFT: Graph Foundation Model with Transferable Tree Vocabulary'
+    date: Nov 9, 2024
+    date_iso: '2024-11-09'
+    date_display: Nov 2024
+    codebase_url: https://github.com/Zehong-Wang/GFT
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.785
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+  - model: DGI
+    model_plain: DGI
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2411.06070'
+    title: 'GFT: Graph Foundation Model with Transferable Tree Vocabulary'
+    date: Nov 9, 2024
+    date_iso: '2024-11-09'
+    date_display: Nov 2024
+    codebase_url: https://github.com/Zehong-Wang/GFT
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7575
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+  row_count: 228
   rows_json: /data/datasets/wn18rr/standard-split-rows.json
   chart_json: /data/datasets/wn18rr/standard-split-chart.json
   arch_counts:
-    gnn: 126
-    hybrid: 43
-    graph_transformer: 3
-    llm: 15
+    gnn: 121
+    hybrid: 42
+    graph_transformer: 2
+    llm: 14
     walk: 4
-    traditional: 42
+    traditional: 41
   metric_counts:
-  - 190
+  - 181
   - 5
   - 42
   - 5
   milestones: &id001
+  - value: 0.44
+    std: null
+    model: ComplEx
+    arxiv_id: '1707.01476'
+    title: Knowledge Graphs
+    date: '2017-07-05'
   - value: 0.477
     std: 0.001
     model: RotatE
@@ -1853,25 +1855,26 @@ variants:
     arxiv_id: '2009.14332'
     title: Multi-hop Attention Graph Neural Networks
     date: '2020-09-29'
-  - value: 0.533
+  - value: 0.551
+    std: null
+    model: NBFnet
+    arxiv_id: '2106.06935'
+    title: 'Neural Bellman-Ford Networks: A General Graph Neural Network Framework
+      for Link Prediction'
+    date: '2021-06-13'
+  - value: 0.701
     std: null
     model: RED-GNN
-    arxiv_id: '2212.05767'
-    title: 'A Survey of Knowledge Graph Reasoning on Graph Types: Static, Dynamic,
-      and Multi-Modal'
-    date: '2022-12-12'
-  - value: 0.553
+    arxiv_id: '2108.06040'
+    title: Knowledge Graph Reasoning with Relational Digraph
+    date: '2021-08-13'
+  - value: 0.947
     std: null
-    model: KGCF
-    arxiv_id: '2302.13083'
-    title: Knowledge Graph Completion with Counterfactual Augmentation
-    date: '2023-02-25'
-  - value: 0.9191
-    std: null
-    model: GFT
-    arxiv_id: '2411.06070'
-    title: 'GFT: Graph Foundation Model with Transferable Tree Vocabulary'
-    date: '2024-11-09'
+    model: PNA, Msg_r^2, f(t)=t
+    arxiv_id: '2302.02209'
+    title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
+      Graphs
+    date: '2023-02-04'
   milestones_by_metric:
     MRR: *id001
     ACC:

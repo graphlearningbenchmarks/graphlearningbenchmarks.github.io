@@ -12,7 +12,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: null
-result_count: 117
+result_count: 112
 best_model:
   model: DeMol
   value: 0.0603
@@ -78,10 +78,6 @@ papers:
   title: Pure Transformers are Powerful Graph Learners
   date_iso: '2022-07-06'
   venue: NeurIPS 2022
-- arxiv_id: '2206.00133'
-  title: Pre-training via Denoising for Molecular Property Prediction
-  date_iso: '2022-05-31'
-  venue: ICLR 2022
 - arxiv_id: '2205.12454'
   title: Recipe for a General, Powerful, Scalable Graph Transformer
   date_iso: '2022-05-25'
@@ -169,6 +165,33 @@ variants:
     - 0.0671
     metric_stds:
     - null
+  - model: TGT-At (+RDKit)
+    model_plain: TGT-At (+RDKit)
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 203.0
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2402.04538'
+    title: 'Triplet Interaction Improves Graph Transformers: Accurate Molecular Graph
+      Learning with Triplet Graph Transformers'
+    date: Feb 7, 2024
+    date_iso: '2024-02-07'
+    date_display: Feb 2024
+    codebase_url: https://github.com/shamim-hussain/tgt
+    published_conference: ICML 2024
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2024
+    uses_external_data: true
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.0683
+    metric_stds:
+    - null
   - model: UniMol
     model_plain: UniMol
     is_baseline: true
@@ -194,6 +217,60 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.0693
+    metric_stds:
+    - null
+  - model: Uni-Mol+ (+RDKit)
+    model_plain: Uni-Mol+ (+RDKit)
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 77.0
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2402.04538'
+    title: 'Triplet Interaction Improves Graph Transformers: Accurate Molecular Graph
+      Learning with Triplet Graph Transformers'
+    date: Feb 7, 2024
+    date_iso: '2024-02-07'
+    date_display: Feb 2024
+    codebase_url: https://github.com/shamim-hussain/tgt
+    published_conference: ICML 2024
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2024
+    uses_external_data: true
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.0705
+    metric_stds:
+    - null
+  - model: GPS
+    model_plain: GPS
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 44.3
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2402.04538'
+    title: 'Triplet Interaction Improves Graph Transformers: Accurate Molecular Graph
+      Learning with Triplet Graph Transformers'
+    date: Feb 7, 2024
+    date_iso: '2024-02-07'
+    date_display: Feb 2024
+    codebase_url: https://github.com/shamim-hussain/tgt
+    published_conference: ICML 2024
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.072
     metric_stds:
     - null
   - model: Transformer-M
@@ -281,6 +358,33 @@ variants:
     is_baseline: true
     is_overridden: false
     override_reason: ''
+    params_millions: 69.0
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2402.04538'
+    title: 'Triplet Interaction Improves Graph Transformers: Accurate Molecular Graph
+      Learning with Triplet Graph Transformers'
+    date: Feb 7, 2024
+    date_iso: '2024-02-07'
+    date_display: Feb 2024
+    codebase_url: https://github.com/shamim-hussain/tgt
+    published_conference: ICML 2024
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.0782
+    metric_stds:
+    - null
+  - model: Transformer-M
+    model_plain: Transformer-M
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
     params_millions: null
     architecture_type: graph_transformer
     architecture_label: GT
@@ -353,6 +457,33 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.08
+    metric_stds:
+    - null
+  - model: GEM-2 (+RDKit)
+    model_plain: GEM-2 (+RDKit)
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 32.1
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2402.04538'
+    title: 'Triplet Interaction Improves Graph Transformers: Accurate Molecular Graph
+      Learning with Triplet Graph Transformers'
+    date: Feb 7, 2024
+    date_iso: '2024-02-07'
+    date_display: Feb 2024
+    codebase_url: https://github.com/shamim-hussain/tgt
+    published_conference: ICML 2024
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2024
+    uses_external_data: true
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.08059999999999999
     metric_stds:
     - null
   - model: GEM-2
@@ -852,6 +983,33 @@ variants:
     - 0.0862
     metric_stds:
     - null
+  - model: GraphGPS
+    model_plain: GraphGPS
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 13.8
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2402.04538'
+    title: 'Triplet Interaction Improves Graph Transformers: Accurate Molecular Graph
+      Learning with Triplet Graph Transformers'
+    date: Feb 7, 2024
+    date_iso: '2024-02-07'
+    date_display: Feb 2024
+    codebase_url: https://github.com/shamim-hussain/tgt
+    published_conference: ICML 2024
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.0862
+    metric_stds:
+    - null
   - model: Graphormer
     model_plain: Graphormer
     is_baseline: true
@@ -1061,6 +1219,33 @@ variants:
     - 0.0876
     metric_stds:
     - null
+  - model: GRPE
+    model_plain: GRPE
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 118.3
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2402.04538'
+    title: 'Triplet Interaction Improves Graph Transformers: Accurate Molecular Graph
+      Learning with Triplet Graph Transformers'
+    date: Feb 7, 2024
+    date_iso: '2024-02-07'
+    date_display: Feb 2024
+    codebase_url: https://github.com/shamim-hussain/tgt
+    published_conference: ICML 2024
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.0876
+    metric_stds:
+    - null
   - model: EGT-Medium
     model_plain: EGT-Medium
     is_baseline: true
@@ -1243,200 +1428,18 @@ variants:
     - 0.0898
     metric_stds:
     - null
-  - model: EGT-Small
-    model_plain: EGT-Small
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 11.5
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2305.11424'
-    title: IJCAI--23 Formatting Instructions
-    date: May 19, 2023
-    date_iso: '2023-05-19'
-    date_display: May 2023
-    codebase_url: https://github.com/czczup/GPTrans
-    published_conference: IJCAI 2023
-    published_conference_short: IJCAI
-    published_conference_slug: ijcai
-    published_venue: IJCAI 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.0899
-    metric_stds:
-    - null
-  - model: Graphormer-B
-    model_plain: Graphormer-B
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 47.1
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2305.11424'
-    title: IJCAI--23 Formatting Instructions
-    date: May 19, 2023
-    date_iso: '2023-05-19'
-    date_display: May 2023
-    codebase_url: https://github.com/czczup/GPTrans
-    published_conference: IJCAI 2023
-    published_conference_short: IJCAI
-    published_conference_slug: ijcai
-    published_venue: IJCAI 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.0906
-    metric_stds:
-    - null
-  - model: Graphormer-S
-    model_plain: Graphormer-S
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 12.5
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2305.11424'
-    title: IJCAI--23 Formatting Instructions
-    date: May 19, 2023
-    date_iso: '2023-05-19'
-    date_display: May 2023
-    codebase_url: https://github.com/czczup/GPTrans
-    published_conference: IJCAI 2023
-    published_conference_short: IJCAI
-    published_conference_slug: ijcai
-    published_venue: IJCAI 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.091
-    metric_stds:
-    - null
-  - model: TokenGT Lap
-    model_plain: TokenGT Lap
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 48.5
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2401.10119'
-    title: Towards Principled Graph Transformers
-    date: Jan 18, 2024
-    date_iso: '2024-01-18'
-    date_display: Jan 2024
-    codebase_url: https://github.com/luis-mueller/towards-principled-gts
-    published_conference: NeurIPS 2024
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.091
-    metric_stds:
-    - null
-  - model: TokenGT (Lap)
-    model_plain: TokenGT (Lap)
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2207.02505'
-    title: Pure Transformers are Powerful Graph Learners
-    date: Jul 6, 2022
-    date_iso: '2022-07-06'
-    date_display: Jul 2022
-    codebase_url: https://github.com/jw9730/tokengt
-    published_conference: NeurIPS 2022
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.091
-    metric_stds:
-    - null
-  - model: TokenGT
-    model_plain: TokenGT
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 48.5
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2210.01765'
-    title: One Transformer Can Understand Both 2D & 3D Molecular Data
-    date: Oct 4, 2022
-    date_iso: '2022-10-04'
-    date_display: Oct 2022
-    codebase_url: https://github.com/lsj2408/Transformer-M
-    published_conference: ICLR 2022
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.091
-    metric_stds:
-    - null
-  - model: Specformer-medium
-    model_plain: Specformer-medium
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2303.01028'
-    title: 'Specformer: Spectral Graph Neural Networks Meet Transformers'
-    date: Mar 2, 2023
-    date_iso: '2023-03-02'
-    date_display: Mar 2023
-    codebase_url: https://github.com/bdy9527/Specformer
-    published_conference: ICLR 2023
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.0916
-    metric_stds:
-    - null
-  row_count: 117
+  row_count: 112
   rows_json: /data/datasets/pcqm4mv2/standard-split-rows.json
   chart_json: /data/datasets/pcqm4mv2/standard-split-chart.json
   arch_counts:
-    gnn: 45
+    gnn: 41
     hybrid: 24
-    graph_transformer: 42
+    graph_transformer: 41
     llm: 0
     walk: 0
     traditional: 2
   metric_counts:
-  - 117
+  - 112
   milestones: &id001
   - value: 0.1205
     std: null
@@ -1450,6 +1453,39 @@ variants:
     arxiv_id: '2201.12787'
     title: 'GRPE: Relative Positional Encoding for Graph Transformer'
     date: '2022-01-30'
+  - value: 0.0858
+    std: null
+    model: GTs
+    arxiv_id: '2205.12454'
+    title: Recipe for a General, Powerful, Scalable Graph Transformer
+    date: '2022-05-25'
+  - value: 0.0806
+    std: null
+    model: GEM-2
+    arxiv_id: '2208.05863'
+    title: 'GEM-2: Next Generation Molecular Property Prediction Network by Modeling
+      Full-range Many-body Interactions'
+    date: '2022-08-11'
+  - value: 0.0787
+    std: null
+    model: Transformer-M
+    arxiv_id: '2210.01765'
+    title: One Transformer Can Understand Both 2D & 3D Molecular Data
+    date: '2022-10-04'
+  - value: 0.0683
+    std: null
+    model: TGT-At (+RDKit)
+    arxiv_id: '2402.04538'
+    title: 'Triplet Interaction Improves Graph Transformers: Accurate Molecular Graph
+      Learning with Triplet Graph Transformers'
+    date: '2024-02-07'
+  - value: 0.0603
+    std: null
+    model: DeMol
+    arxiv_id: '2603.00568'
+    title: Enhancing Molecular Property Predictions by Learning from Bond Modelling
+      and Interactions
+    date: '2026-02-28'
   milestones_by_metric:
     MAE: *id001
 ---

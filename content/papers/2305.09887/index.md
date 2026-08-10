@@ -82,39 +82,6 @@ results:
 - &id001
   dataset: ogbl-citation2
   rows:
-  - model: MPLP
-    model_key: mplp
-    model_plain: MPLP
-    value: 0.9072
-    std: 0.0012
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.03845'
-    title: Reconsidering the Performance of GAE in Link Prediction
-    date: Nov 6, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-06'
-    venue: International Conference on Information and Knowledge Management
-    codebase_url: https://github.com/GraphPKU/Refined-GAE
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9072
-    sort_std: 0.0012
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
   - model: CFG
     model_key: cfg
     model_plain: CFG
@@ -140,13 +107,13 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: Each node is a paper with 128-dimensional word2vec features
     is_global_top: true
-    global_rank: 2
+    global_rank: 1
     sort_value: 0.8997
     sort_std: 0.0015
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: SIEG
     model_key: sieg
@@ -173,13 +140,46 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: Each node is a paper with 128-dimensional word2vec features
     is_global_top: true
-    global_rank: 3
+    global_rank: 2
     sort_value: 0.8987
     sort_std: 0.0018
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
+    is_std_outlier: false
+  - model: LPFormer
+    model_key: lpformer
+    model_plain: LPFormer
+    value: 0.8981
+    std: 0.0013
+    metric: MRR
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2310.11009'
+    title: 'LPFormer: An Adaptive Graph Transformer for Link Prediction'
+    date: Oct 17, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-17'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/HarryShomer/LPFormer
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.8981
+    sort_std: 0.0013
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
     is_std_outlier: false
   - model: GCN
     model_key: gcn
@@ -207,7 +207,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 17
+    global_rank: 14
     sort_value: 0.8705
     sort_std: 0.0004
     comparison_type: global_top
@@ -272,8 +272,8 @@ results:
     value_note: ''
     sort_value: 0.8375
     sort_std: 0.0043
-    global_rank: 32
-    paper_rank: 32
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -340,8 +340,8 @@ results:
     value_note: ''
     sort_value: 0.8328
     sort_std: 0.0024
-    global_rank: 35
-    paper_rank: 35
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -408,8 +408,8 @@ results:
     value_note: ''
     sort_value: 0.824
     sort_std: 0.0028
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -476,8 +476,8 @@ results:
     value_note: ''
     sort_value: 0.8195
     sort_std: 0.002
-    global_rank: 42
-    paper_rank: 42
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -544,8 +544,8 @@ results:
     value_note: ''
     sort_value: 0.8188
     sort_std: 0.0002
-    global_rank: 43
-    paper_rank: 43
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -581,7 +581,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 78
+    global_rank: 72
     sort_value: 0.3917
     sort_std: 0.0044
     comparison_type: global_top

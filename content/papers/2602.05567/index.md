@@ -35,8 +35,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - MAGPrompt+
-mrr: 0.175
-adjusted_mrr: 0.175
+mrr: 0.1749
+adjusted_mrr: 0.1749
 mrr_dataset_count: 6
 benchmark_categories:
 - Classic
@@ -223,8 +223,8 @@ results:
     value_note: ''
     sort_value: 0.8682
     sort_std: 0.0521
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -257,10 +257,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 41
+    global_rank: 43
     sort_value: 0.8646
     sort_std: 0.0081
     comparison_type: global_top
@@ -474,8 +474,8 @@ results:
     value_note: ''
     sort_value: 0.9319
     sort_std: 0.0206
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 6
+    paper_rank: 6
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -542,8 +542,8 @@ results:
     value_note: ''
     sort_value: 0.9299
     sort_std: 0.0371
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -610,8 +610,8 @@ results:
     value_note: ''
     sort_value: 0.9279
     sort_std: 0.0357
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -678,8 +678,8 @@ results:
     value_note: ''
     sort_value: 0.9273
     sort_std: 0.0282
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -712,10 +712,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 32
+    global_rank: 34
     sort_value: 0.8875
     sort_std: 0.0049
     comparison_type: global_top
@@ -791,7 +791,7 @@ results:
     venue: IEEE Transactions on Knowledge and Data Engineering
     codebase_url: https://github.com/YangLing0818/GraphOOD
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -825,7 +825,7 @@ results:
     venue: IEEE Transactions on Knowledge and Data Engineering
     codebase_url: https://github.com/YangLing0818/GraphOOD
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
@@ -961,10 +961,10 @@ results:
     value_note: ''
     sort_value: 0.7031
     sort_std: 0.0039
-    global_rank: 666
-    paper_rank: 945
-    rank_delta: 279
-    rank_delta_abs: 279
+    global_rank: 665
+    paper_rank: 958
+    rank_delta: 293
+    rank_delta_abs: 293
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1030,10 +1030,10 @@ results:
     value_note: ''
     sort_value: 0.5967
     sort_std: 0.1187
-    global_rank: 893
-    paper_rank: 951
-    rank_delta: 58
-    rank_delta_abs: 58
+    global_rank: 908
+    paper_rank: 964
+    rank_delta: 56
+    rank_delta_abs: 56
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1099,8 +1099,8 @@ results:
     value_note: ''
     sort_value: 0.5282
     sort_std: 0.0418
-    global_rank: 927
-    paper_rank: 927
+    global_rank: 942
+    paper_rank: 942
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1169,8 +1169,8 @@ results:
     value_note: ''
     sort_value: 0.4971
     sort_std: 0.0225
-    global_rank: 937
-    paper_rank: 937
+    global_rank: 950
+    paper_rank: 950
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1240,8 +1240,8 @@ results:
     value_note: ''
     sort_value: 0.4902
     sort_std: 0.0453
-    global_rank: 940
-    paper_rank: 940
+    global_rank: 953
+    paper_rank: 953
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1309,8 +1309,8 @@ results:
     value_note: ''
     sort_value: 0.4707
     sort_std: 0.0309
-    global_rank: 942
-    paper_rank: 942
+    global_rank: 955
+    paper_rank: 955
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1378,8 +1378,8 @@ results:
     value_note: ''
     sort_value: 0.4436
     sort_std: 0.0252
-    global_rank: 953
-    paper_rank: 953
+    global_rank: 966
+    paper_rank: 966
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1447,8 +1447,8 @@ results:
     value_note: ''
     sort_value: 0.4113
     sort_std: 0.0159
-    global_rank: 957
-    paper_rank: 957
+    global_rank: 970
+    paper_rank: 970
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1516,8 +1516,8 @@ results:
     value_note: ''
     sort_value: 0.4045
     sort_std: 0.0355
-    global_rank: 958
-    paper_rank: 958
+    global_rank: 971
+    paper_rank: 971
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1731,10 +1731,10 @@ results:
     value_note: ''
     sort_value: 0.7617
     sort_std: 0.0298
-    global_rank: 117
-    paper_rank: 173
-    rank_delta: 56
-    rank_delta_abs: 56
+    global_rank: 120
+    paper_rank: 177
+    rank_delta: 57
+    rank_delta_abs: 57
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1798,8 +1798,8 @@ results:
     value_note: ''
     sort_value: 0.7506
     sort_std: 0.0102
-    global_rank: 127
-    paper_rank: 143
+    global_rank: 131
+    paper_rank: 147
     rank_delta: 16
     rank_delta_abs: 16
     rank_delta_direction: worse
@@ -1866,8 +1866,8 @@ results:
     value_note: ''
     sort_value: 0.7181
     sort_std: 0.1158
-    global_rank: 160
-    paper_rank: 160
+    global_rank: 164
+    paper_rank: 164
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1934,8 +1934,8 @@ results:
     value_note: ''
     sort_value: 0.6791
     sort_std: 0.1273
-    global_rank: 189
-    paper_rank: 189
+    global_rank: 193
+    paper_rank: 193
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2002,8 +2002,8 @@ results:
     value_note: ''
     sort_value: 0.6499
     sort_std: 0.131
-    global_rank: 203
-    paper_rank: 203
+    global_rank: 207
+    paper_rank: 207
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2025,134 +2025,166 @@ results:
 - &id003
   dataset: ENZYMES
   rows:
-  - model: BGNN(m)-CS
-    model_key: bgnn(m)-cs
-    model_plain: BGNN(m)-CS
-    value: 0.8068
-    std: 0.0149
+  - model: GMN
+    model_key: gmn
+    model_plain: GMN
+    value: 0.7866
+    std: null
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-12'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: ''
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2002.09518'
+    title: Memory-Based Graph Networks
+    date: Feb 21, 2020
+    date_display: Feb 2020
+    date_iso: '2020-02-21'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/amirkhas/GraphMemoryNet
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.8068
-    sort_std: 0.0149
+    sort_value: 0.7866
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: BGNN
-    model_key: bgnn
-    model_plain: BGNN
-    value: 0.7936
-    std: 0.0281
+  - model: MemGNN
+    model_key: memgnn
+    model_plain: MemGNN
+    value: 0.755
+    std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-12'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: ''
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2002.09518'
+    title: Memory-Based Graph Networks
+    date: Feb 21, 2020
+    date_display: Feb 2020
+    date_iso: '2020-02-21'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/amirkhas/GraphMemoryNet
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.7936
-    sort_std: 0.0281
+    sort_value: 0.755
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: BGNN(m)-SC
-    model_key: bgnn(m)-sc
-    model_plain: BGNN(m)-SC
-    value: 0.7889
-    std: 0.0079
+  - model: TFGW SP
+    model_key: tfgw sp (l=2)
+    model_plain: TFGW SP
+    value: 0.751
+    std: 0.05
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-12'
-    venue: AAAI Conference on Artificial Intelligence
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2205.15733'
+    title: Template based Graph Neural Network with Optimal Transport Distances
+    date: May 31, 2022
+    date_display: May 2022
+    date_iso: '2022-05-31'
+    venue: Neural Information Processing Systems
     codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.7889
-    sort_std: 0.0079
+    sort_value: 0.751
+    sort_std: 0.05
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.762
-    std: 0.028
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    value: 0.7
+    std: 0.04944
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: 0.51
+    params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2305.06102'
-    title: Towards Better Graph Representation Learning with Parameterized Decomposition
-      & Filtering
-    date: May 10, 2023
-    date_display: May 2023
-    date_iso: '2023-05-10'
-    venue: International Conference on Machine Learning
-    codebase_url: https://github.com/qslim/PDF
+    arxiv_id: '2003.00982'
+    title: GNNBenchmark
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    venue: Journal of machine learning research
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 8
-    sort_value: 0.762
-    sort_std: 0.028
+    global_rank: 17
+    sort_value: 0.7
+    sort_std: 0.04944
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.68167
+    std: 0.05449
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2003.00982'
+    title: GNNBenchmark
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    venue: Journal of machine learning research
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 27
+    sort_value: 0.68167
+    sort_std: 0.05449
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2183,7 +2215,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 145
+    global_rank: 133
     sort_value: 0.55833
     sort_std: 0.03516
     comparison_type: global_top
@@ -2248,8 +2280,8 @@ results:
     value_note: ''
     sort_value: 0.3719
     sort_std: 0.0279
-    global_rank: 246
-    paper_rank: 246
+    global_rank: 239
+    paper_rank: 239
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2397,7 +2429,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 81
+    global_rank: 82
     sort_value: 0.8303
     sort_std: 0.0137
     comparison_type: global_top
@@ -2435,39 +2467,39 @@ results:
     date_iso: '2026-02-05'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.6707
-    at_pub_std: 0.0196
-    at_pub_source_arxiv: '2503.00750'
-    at_pub_source_title: Edge Prompt Tuning for Graph Neural Networks
-    at_pub_source_date_iso: '2025-03-02'
-    at_pub_source_date_label: ICLR 2025
-    value_gap_source_date_iso: '2026-02-04'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-02-05'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.007699999999999929
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
+    insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.6707
-    true_std: 0.0196
-    value_gap_source_arxiv: '2602.04244'
-    value_gap_source_title: 'GraphVec: Cross-Domain Graph Vectorization for Graph-Level
-      Representation Learning'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.007699999999999929
+    true_value: 0.663
+    true_std: 0.0254
+    value_gap_source_arxiv: '2602.05567'
+    value_gap_source_title: 'MAGPrompt: Message-Adaptive Graph Prompt Tuning for Graph
+      Neural Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.6707
-    sort_std: 0.0196
-    global_rank: 568
-    paper_rank: 573
-    rank_delta: 5
-    rank_delta_abs: 5
-    rank_delta_direction: worse
-    has_value_gap: true
+    sort_value: 0.663
+    sort_std: 0.0254
+    global_rank: 570
+    paper_rank: 570
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2503,12 +2535,12 @@ results:
     date_iso: '2026-02-05'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.6456
-    at_pub_std: 0.011
-    at_pub_source_arxiv: '2503.00750'
-    at_pub_source_title: Edge Prompt Tuning for Graph Neural Networks
-    at_pub_source_date_iso: '2025-03-02'
-    at_pub_source_date_label: ICLR 2025
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-02-05'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -2530,8 +2562,8 @@ results:
     value_note: ''
     sort_value: 0.6456
     sort_std: 0.011
-    global_rank: 591
-    paper_rank: 591
+    global_rank: 588
+    paper_rank: 588
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2571,12 +2603,12 @@ results:
     date_iso: '2026-02-05'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.6319
-    at_pub_std: 0.0171
-    at_pub_source_arxiv: '2503.00750'
-    at_pub_source_title: Edge Prompt Tuning for Graph Neural Networks
-    at_pub_source_date_iso: '2025-03-02'
-    at_pub_source_date_label: ICLR 2025
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-02-05'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -2598,8 +2630,8 @@ results:
     value_note: ''
     sort_value: 0.6319
     sort_std: 0.0171
-    global_rank: 600
-    paper_rank: 600
+    global_rank: 596
+    paper_rank: 596
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2639,12 +2671,12 @@ results:
     date_iso: '2026-02-05'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.6266
-    at_pub_std: 0.0183
-    at_pub_source_arxiv: '2503.00750'
-    at_pub_source_title: Edge Prompt Tuning for Graph Neural Networks
-    at_pub_source_date_iso: '2025-03-02'
-    at_pub_source_date_label: ICLR 2025
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-02-05'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -2666,8 +2698,8 @@ results:
     value_note: ''
     sort_value: 0.6266
     sort_std: 0.0183
-    global_rank: 602
-    paper_rank: 602
+    global_rank: 597
+    paper_rank: 597
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2734,8 +2766,8 @@ results:
     value_note: ''
     sort_value: 0.6249
     sort_std: 0.0195
-    global_rank: 606
-    paper_rank: 606
+    global_rank: 600
+    paper_rank: 600
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2775,12 +2807,12 @@ results:
     date_iso: '2026-02-05'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.5914
-    at_pub_std: 0.0212
-    at_pub_source_arxiv: '2503.00750'
-    at_pub_source_title: Edge Prompt Tuning for Graph Neural Networks
-    at_pub_source_date_iso: '2025-03-02'
-    at_pub_source_date_label: ICLR 2025
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-02-05'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -2802,8 +2834,8 @@ results:
     value_note: ''
     sort_value: 0.5914
     sort_std: 0.0212
-    global_rank: 624
-    paper_rank: 624
+    global_rank: 619
+    paper_rank: 619
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2985,9 +3017,9 @@ results:
     sort_value: 0.6913
     sort_std: 0.0116
     global_rank: 8
-    paper_rank: 176
-    rank_delta: 168
-    rank_delta_abs: 168
+    paper_rank: 177
+    rank_delta: 169
+    rank_delta_abs: 169
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3053,9 +3085,9 @@ results:
     sort_value: 0.6865
     sort_std: 0.0072
     global_rank: 11
-    paper_rank: 151
-    rank_delta: 140
-    rank_delta_abs: 140
+    paper_rank: 153
+    rank_delta: 142
+    rank_delta_abs: 142
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3086,7 +3118,7 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 66
@@ -3155,8 +3187,8 @@ results:
     value_note: ''
     sort_value: 0.6217
     sort_std: 0.0427
-    global_rank: 107
-    paper_rank: 107
+    global_rank: 106
+    paper_rank: 106
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3223,8 +3255,8 @@ results:
     value_note: ''
     sort_value: 0.6201
     sort_std: 0.0436
-    global_rank: 109
-    paper_rank: 109
+    global_rank: 108
+    paper_rank: 108
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3292,8 +3324,8 @@ results:
     value_note: ''
     sort_value: 0.6076
     sort_std: 0.0495
-    global_rank: 151
-    paper_rank: 151
+    global_rank: 153
+    paper_rank: 153
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3361,8 +3393,8 @@ results:
     value_note: ''
     sort_value: 0.6009
     sort_std: 0.0582
-    global_rank: 181
-    paper_rank: 181
+    global_rank: 182
+    paper_rank: 182
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

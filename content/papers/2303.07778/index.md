@@ -199,9 +199,9 @@ results:
     sort_value: 0.9487
     sort_std: 0.0059
     global_rank: 3
-    paper_rank: 54
-    rank_delta: 51
-    rank_delta_abs: 51
+    paper_rank: 52
+    rank_delta: 49
+    rank_delta_abs: 49
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -239,17 +239,17 @@ results:
     date_iso: '2023-03-14'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.935
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2112.08331'
-    at_pub_source_title: Model Stealing Attacks Against Inductive Graph Neural Networks
-    at_pub_source_date_iso: '2021-12-15'
-    at_pub_source_date_label: '2021'
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2023-10-17'
     value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.033400000000000096
-    worse_than_at_pub: true
-    surpassed_since_pub: false
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
@@ -267,46 +267,12 @@ results:
     sort_value: 0.9424
     sort_std: 0.0043
     global_rank: 7
-    paper_rank: 55
-    rank_delta: 48
-    rank_delta_abs: 48
+    paper_rank: 53
+    rank_delta: 46
+    rank_delta_abs: 46
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Model Stealing Attacks Against Inductive Graph Neural
-      Networks
-    comparison_source_arxiv: '2112.08331'
-    is_best: false
-    is_std_outlier: false
-  - model: SAGE
-    model_key: sage
-    model_plain: SAGE
-    value: 0.937
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2112.08331'
-    title: Model Stealing Attacks Against Inductive Graph Neural Networks
-    date: Dec 15, 2021
-    date_display: Dec 2021
-    date_iso: '2021-12-15'
-    venue: IEEE Symposium on Security and Privacy
-    codebase_url: https://github.com/xinleihe/GNNStealing
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 16
-    sort_value: 0.937
-    sort_std: null
-    comparison_type: global_top
+    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -369,10 +335,10 @@ results:
     value_note: ''
     sort_value: 0.9324
     sort_std: 0.0049
-    global_rank: 29
-    paper_rank: 45
-    rank_delta: 16
-    rank_delta_abs: 16
+    global_rank: 28
+    paper_rank: 43
+    rank_delta: 15
+    rank_delta_abs: 15
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -438,8 +404,8 @@ results:
     value_note: ''
     sort_value: 0.9323
     sort_std: 0.0034
-    global_rank: 32
-    paper_rank: 32
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -506,10 +472,10 @@ results:
     value_note: ''
     sort_value: 0.93
     sort_std: 0.0055
-    global_rank: 37
-    paper_rank: 47
-    rank_delta: 10
-    rank_delta_abs: 10
+    global_rank: 36
+    paper_rank: 45
+    rank_delta: 9
+    rank_delta_abs: 9
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -575,8 +541,8 @@ results:
     value_note: ''
     sort_value: 0.9233
     sort_std: 0.0038
-    global_rank: 42
-    paper_rank: 45
+    global_rank: 40
+    paper_rank: 43
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -644,8 +610,8 @@ results:
     value_note: ''
     sort_value: 0.9164
     sort_std: 0.0044
-    global_rank: 47
-    paper_rank: 47
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -712,8 +678,8 @@ results:
     value_note: ''
     sort_value: 0.9106
     sort_std: 0.0044
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -780,8 +746,8 @@ results:
     value_note: ''
     sort_value: 0.9101
     sort_std: 0.0056
-    global_rank: 51
-    paper_rank: 51
+    global_rank: 49
+    paper_rank: 49
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -848,8 +814,8 @@ results:
     value_note: ''
     sort_value: 0.9056
     sort_std: 0.0056
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 52
+    paper_rank: 52
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -916,13 +882,46 @@ results:
     value_note: ''
     sort_value: 0.8933
     sort_std: 0.0059
-    global_rank: 59
-    paper_rank: 59
+    global_rank: 57
+    paper_rank: 57
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.7529
+    std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2104.12840'
+    title: 'AdaGNN: Graph Neural Networks with Adaptive Frequency Response Filter'
+    date: Apr 26, 2021
+    date_display: Apr 2021
+    date_iso: '2021-04-26'
+    venue: International Conference on Information and Knowledge Management
+    codebase_url: https://github.com/yushundong/AdaGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 73
+    sort_value: 0.7529
+    sort_std: 0.002
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1926,7 +1925,7 @@ results:
     venue: arXiv.org
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
@@ -1996,9 +1995,9 @@ results:
     sort_value: 0.8859
     sort_std: 0.001
     global_rank: 31
-    paper_rank: 90
-    rank_delta: 59
-    rank_delta_abs: 59
+    paper_rank: 88
+    rank_delta: 57
+    rank_delta_abs: 57
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2066,48 +2065,15 @@ results:
     sort_value: 0.8758
     sort_std: 0.002
     global_rank: 36
-    paper_rank: 96
-    rank_delta: 60
-    rank_delta_abs: 60
+    paper_rank: 94
+    rank_delta: 58
+    rank_delta_abs: 58
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive
       Learning on Hypergraphs'
     comparison_source_arxiv: '2206.04739'
-    is_best: false
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.872
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2112.08331'
-    title: Model Stealing Attacks Against Inductive Graph Neural Networks
-    date: Dec 15, 2021
-    date_display: Dec 2021
-    date_iso: '2021-12-15'
-    venue: IEEE Symposium on Security and Privacy
-    codebase_url: https://github.com/xinleihe/GNNStealing
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 38
-    sort_value: 0.872
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GANN
@@ -2167,8 +2133,8 @@ results:
     value_note: ''
     sort_value: 0.8204
     sort_std: 0.0022
-    global_rank: 75
-    paper_rank: 75
+    global_rank: 73
+    paper_rank: 73
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2234,8 +2200,8 @@ results:
     value_note: ''
     sort_value: 0.817
     sort_std: null
-    global_rank: 76
-    paper_rank: 94
+    global_rank: 74
+    paper_rank: 92
     rank_delta: 18
     rank_delta_abs: 18
     rank_delta_direction: worse
@@ -2268,10 +2234,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/wooner49/TriCL
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 82
+    global_rank: 80
     sort_value: 0.8118
     sort_std: 0.002
     comparison_type: global_top
@@ -2336,8 +2302,8 @@ results:
     value_note: ''
     sort_value: 0.8092
     sort_std: 0.002
-    global_rank: 83
-    paper_rank: 83
+    global_rank: 81
+    paper_rank: 81
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2404,8 +2370,8 @@ results:
     value_note: ''
     sort_value: 0.8045
     sort_std: 0.0083
-    global_rank: 87
-    paper_rank: 87
+    global_rank: 85
+    paper_rank: 85
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2472,8 +2438,8 @@ results:
     value_note: ''
     sort_value: 0.804
     sort_std: 0.0042
-    global_rank: 88
-    paper_rank: 88
+    global_rank: 86
+    paper_rank: 86
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2540,8 +2506,8 @@ results:
     value_note: ''
     sort_value: 0.8033
     sort_std: 0.0097
-    global_rank: 89
-    paper_rank: 89
+    global_rank: 87
+    paper_rank: 87
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2608,8 +2574,8 @@ results:
     value_note: ''
     sort_value: 0.7998
     sort_std: 0.0089
-    global_rank: 90
-    paper_rank: 90
+    global_rank: 88
+    paper_rank: 88
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2676,8 +2642,8 @@ results:
     value_note: ''
     sort_value: 0.7962
     sort_std: 0.0058
-    global_rank: 92
-    paper_rank: 92
+    global_rank: 90
+    paper_rank: 90
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2744,8 +2710,8 @@ results:
     value_note: ''
     sort_value: 0.7962
     sort_std: 0.0074
-    global_rank: 93
-    paper_rank: 93
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2812,8 +2778,8 @@ results:
     value_note: ''
     sort_value: 0.7927
     sort_std: 0.0054
-    global_rank: 95
-    paper_rank: 95
+    global_rank: 93
+    paper_rank: 93
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2880,13 +2846,46 @@ results:
     value_note: ''
     sort_value: 0.7832
     sort_std: 0.0078
-    global_rank: 97
-    paper_rank: 97
+    global_rank: 95
+    paper_rank: 95
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.7455
+    std: 0.0061
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2602.12613'
+    title: 'Coden: Efficient Temporal Graph Neural Networks for Continuous Prediction'
+    date: Feb 13, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-13'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 120
+    sort_value: 0.7455
+    sort_std: 0.0061
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2948,8 +2947,8 @@ results:
     value_note: ''
     sort_value: 0.7429
     sort_std: 0.0071
-    global_rank: 123
-    paper_rank: 123
+    global_rank: 121
+    paper_rank: 121
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

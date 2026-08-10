@@ -113,7 +113,7 @@ results:
     venue: International Conference on Learning Representations
     codebase_url: https://github.com/cornell-zhang/Polynormer
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -179,7 +179,7 @@ results:
     venue: Accepted by NeurIPS 2025
     codebase_url: https://github.com/sunjss/over-aggregating
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
@@ -249,10 +249,10 @@ results:
     value_note: ''
     sort_value: 0.8443
     sort_std: 0.01
-    global_rank: 17
-    paper_rank: 140
-    rank_delta: 123
-    rank_delta_abs: 123
+    global_rank: 18
+    paper_rank: 147
+    rank_delta: 129
+    rank_delta_abs: 129
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -319,10 +319,10 @@ results:
     value_note: ''
     sort_value: 0.8364
     sort_std: 0.0067
-    global_rank: 37
-    paper_rank: 125
-    rank_delta: 88
-    rank_delta_abs: 88
+    global_rank: 39
+    paper_rank: 132
+    rank_delta: 93
+    rank_delta_abs: 93
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -389,10 +389,10 @@ results:
     value_note: ''
     sort_value: 0.8243
     sort_std: 0.0044
-    global_rank: 65
-    paper_rank: 125
-    rank_delta: 60
-    rank_delta_abs: 60
+    global_rank: 68
+    paper_rank: 131
+    rank_delta: 63
+    rank_delta_abs: 63
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -423,10 +423,10 @@ results:
     venue: Accepted by NeurIPS 2025
     codebase_url: https://github.com/sunjss/over-aggregating
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 66
+    global_rank: 69
     sort_value: 0.8243
     sort_std: 0.0044
     comparison_type: global_top
@@ -491,8 +491,8 @@ results:
     value_note: ''
     sort_value: 0.8041
     sort_std: 0.0036
-    global_rank: 82
-    paper_rank: 82
+    global_rank: 87
+    paper_rank: 87
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -559,8 +559,8 @@ results:
     value_note: ''
     sort_value: 0.7666
     sort_std: 0.0044
-    global_rank: 120
-    paper_rank: 120
+    global_rank: 126
+    paper_rank: 126
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -595,7 +595,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 128
+    global_rank: 135
     sort_value: 0.7362
     sort_std: 0.002
     comparison_type: global_top
@@ -660,8 +660,8 @@ results:
     value_note: ''
     sort_value: 0.7242
     sort_std: 0.0061
-    global_rank: 135
-    paper_rank: 135
+    global_rank: 142
+    paper_rank: 142
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -728,8 +728,8 @@ results:
     value_note: ''
     sort_value: 0.6934
     sort_std: 0.052
-    global_rank: 142
-    paper_rank: 142
+    global_rank: 149
+    paper_rank: 149
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -796,8 +796,8 @@ results:
     value_note: ''
     sort_value: 0.689
     sort_std: 0.0346
-    global_rank: 143
-    paper_rank: 143
+    global_rank: 150
+    paper_rank: 150
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -979,85 +979,14 @@ results:
     sort_value: 0.9191
     sort_std: null
     global_rank: 17
-    paper_rank: 133
-    rank_delta: 116
-    rank_delta_abs: 116
+    paper_rank: 125
+    rank_delta: 108
+    rank_delta_abs: 108
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'GFT: Graph Foundation Model with Transferable Tree Vocabulary'
     comparison_source_arxiv: '2411.06070'
-    is_best: false
-    is_std_outlier: false
-  - model: UniGraph2
-    model_key: unigraph2
-    model_plain: UniGraph2
-    value: 0.148
-    std: 0.007
-    paper_value: 0.148
-    paper_std: 0.007
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: he2025unigraph2
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: link_prediction
-    protocol_decision: standard
-    protocol_note: Inductive-entity shift via KG completion with test-time candidate
-      entities held out.
-    date: May 7, 2026
-    date_display: May 2026
-    date_iso: '2026-05-07'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8786
-    at_pub_std: 0.0006
-    at_pub_source_arxiv: '2502.00806'
-    at_pub_source_title: 'UniGraph2: Learning a Unified Embedding Space to Bind Multimodal
-      Graphs'
-    at_pub_source_date_iso: '2025-02-02'
-    at_pub_source_date_label: WWW 2025
-    value_gap_source_date_iso: '2025-02-02'
-    value_gap_source_date_label: WWW 2025
-    gap_vs_at_pub: 0.7306
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8786
-    true_std: 0.0006
-    value_gap_source_arxiv: '2502.00806'
-    value_gap_source_title: 'UniGraph2: Learning a Unified Embedding Space to Bind
-      Multimodal Graphs'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.7306
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8786
-    sort_std: 0.0006
-    global_rank: 18
-    paper_rank: 134
-    rank_delta: 116
-    rank_delta_abs: 116
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'UniGraph2: Learning a Unified Embedding Space to Bind
-      Multimodal Graphs'
-    comparison_source_arxiv: '2502.00806'
     is_best: false
     is_std_outlier: false
   - model: GAT
@@ -1119,10 +1048,10 @@ results:
     value_note: ''
     sort_value: 0.8552
     sort_std: 0.0012
-    global_rank: 19
-    paper_rank: 133
-    rank_delta: 114
-    rank_delta_abs: 114
+    global_rank: 18
+    paper_rank: 125
+    rank_delta: 107
+    rank_delta_abs: 107
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1190,10 +1119,10 @@ results:
     value_note: ''
     sort_value: 0.8298
     sort_std: 0.0022
-    global_rank: 27
-    paper_rank: 134
-    rank_delta: 107
-    rank_delta_abs: 107
+    global_rank: 25
+    paper_rank: 127
+    rank_delta: 102
+    rank_delta_abs: 102
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1261,10 +1190,10 @@ results:
     value_note: ''
     sort_value: 0.8227
     sort_std: 0.0018
-    global_rank: 29
-    paper_rank: 133
-    rank_delta: 104
-    rank_delta_abs: 104
+    global_rank: 27
+    paper_rank: 125
+    rank_delta: 98
+    rank_delta_abs: 98
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1299,7 +1228,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 30
+    global_rank: 28
     sort_value: 0.8124
     sort_std: 0.0055
     comparison_type: global_top
@@ -1366,10 +1295,10 @@ results:
     value_note: ''
     sort_value: 0.8
     sort_std: null
-    global_rank: 32
-    paper_rank: 135
-    rank_delta: 103
-    rank_delta_abs: 103
+    global_rank: 30
+    paper_rank: 128
+    rank_delta: 98
+    rank_delta_abs: 98
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1435,10 +1364,10 @@ results:
     value_note: ''
     sort_value: 0.7899
     sort_std: null
-    global_rank: 33
-    paper_rank: 129
-    rank_delta: 96
-    rank_delta_abs: 96
+    global_rank: 31
+    paper_rank: 121
+    rank_delta: 90
+    rank_delta_abs: 90
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1503,10 +1432,10 @@ results:
     value_note: ''
     sort_value: 0.7544
     sort_std: null
-    global_rank: 36
-    paper_rank: 128
-    rank_delta: 92
-    rank_delta_abs: 92
+    global_rank: 33
+    paper_rank: 120
+    rank_delta: 87
+    rank_delta_abs: 87
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1571,8 +1500,76 @@ results:
     value_note: ''
     sort_value: 0.152
     sort_std: 0.019
-    global_rank: 134
-    paper_rank: 134
+    global_rank: 126
+    paper_rank: 126
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: UniGraph2
+    model_key: unigraph2
+    model_plain: UniGraph2
+    value: 0.148
+    std: 0.007
+    paper_value: 0.148
+    paper_std: 0.007
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 1
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: he2025unigraph2
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: link_prediction
+    protocol_decision: standard
+    protocol_note: Inductive-entity shift via KG completion with test-time candidate
+      entities held out.
+    date: May 7, 2026
+    date_display: May 2026
+    date_iso: '2026-05-07'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-05-07'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.148
+    true_std: 0.007
+    value_gap_source_arxiv: '2605.06576'
+    value_gap_source_title: On the Safety of Graph Representation Learning
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.148
+    sort_std: 0.007
+    global_rank: 127
+    paper_rank: 127
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1639,8 +1636,8 @@ results:
     value_note: ''
     sort_value: 0.094
     sort_std: 0.013
-    global_rank: 135
-    paper_rank: 135
+    global_rank: 128
+    paper_rank: 128
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

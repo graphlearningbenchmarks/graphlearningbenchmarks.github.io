@@ -8,7 +8,7 @@ primary_metric: ROC-AUC
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.MoleculeNet.html
 stats: null
-result_count: 400
+result_count: 407
 best_model:
   model: MAGPrompt+
   value: 0.9432
@@ -90,10 +90,6 @@ papers:
     Graph Classification
   date_iso: '2024-07-16'
   venue: ''
-- arxiv_id: '2407.09709'
-  title: 'GOFA: A Generative One-For-All Model for Joint Graph Language Modeling'
-  date_iso: '2024-07-12'
-  venue: ICLR 2024
 - arxiv_id: '2406.10727'
   title: 'Text-space Graph Foundation Models: Comprehensive Benchmarks and New Insights'
   date_iso: '2024-06-15'
@@ -151,6 +147,11 @@ papers:
   title: 'Generative Explanations for Graph Neural Network: Methods and Evaluations'
   date_iso: '2023-11-09'
   venue: ''
+- arxiv_id: '2311.01038'
+  title: 'Better with Less: A Data-Active Perspective on Pre-Training Graph Neural
+    Networks'
+  date_iso: '2023-11-02'
+  venue: NeurIPS 2023
 - arxiv_id: '2310.14753'
   title: Rethinking Tokenizer and Decoder in Masked Graph Modeling for Molecules
   date_iso: '2023-10-23'
@@ -269,15 +270,16 @@ papers:
   title: Motif-based Graph Self-Supervised Learning for Molecular Property Prediction
   date_iso: '2021-10-03'
   venue: NeurIPS 2021
+- arxiv_id: '2106.09553'
+  title: How Much Structural Information Large Scale Molecular Language Representations
+    Can Capture?
+  date_iso: '2021-06-17'
+  venue: ''
 - arxiv_id: '2106.06130'
   title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation Learning for Property
     Prediction'
   date_iso: '2021-06-11'
   venue: ''
-- arxiv_id: '2106.05819'
-  title: Adversarial Graph Augmentation to Improve Graph Contrastive Learning
-  date_iso: '2021-06-10'
-  venue: NeurIPS 2021
 - arxiv_id: '2010.09885'
   title: 'ChemBERTa: Large-Scale Self-Supervised Pretraining for Molecular Property
     Prediction'
@@ -399,6 +401,35 @@ variants:
     - null
     metric_stds:
     - 0.021
+    - null
+  - model: MoLFormer-XL
+    model_plain: MoLFormer-XL
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2106.09553'
+    title: How Much Structural Information Large Scale Molecular Language Representations
+      Can Capture?
+    date: Jun 17, 2021
+    date_iso: '2021-06-17'
+    date_display: Jun 2021
+    codebase_url: https://github.com/IBM/molformer
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: true
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.937
+    - null
+    metric_stds:
+    - null
     - null
   - model: Masking Node + Supervised
     model_plain: Masking Node + Supervised
@@ -840,7 +871,7 @@ variants:
     published_conference_short: AAAI
     published_conference_slug: aaai
     published_venue: AAAI 2021
-    uses_external_data: null
+    uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
@@ -953,7 +984,7 @@ variants:
     published_conference_short: AAAI
     published_conference_slug: aaai
     published_venue: AAAI 2021
-    uses_external_data: null
+    uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
@@ -981,7 +1012,7 @@ variants:
     published_conference_short: AAAI
     published_conference_slug: aaai
     published_venue: AAAI 2021
-    uses_external_data: null
+    uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
@@ -1057,25 +1088,25 @@ variants:
     architecture_type: walk
     architecture_label: Walk
     architecture_title: Random-walk graph embedding
-    arxiv_id: '2202.09346'
-    title: Improving Molecular Contrastive Learning via Faulty Negative Mitigation
-      and Decomposed Fragment Contrast
-    date: Feb 18, 2022
-    date_iso: '2022-02-18'
-    date_display: Feb 2022
-    codebase_url: ''
+    arxiv_id: '2106.09553'
+    title: How Much Structural Information Large Scale Molecular Language Representations
+      Can Capture?
+    date: Jun 17, 2021
+    date_iso: '2021-06-17'
+    date_display: Jun 2021
+    codebase_url: https://github.com/IBM/molformer
     published_conference: ''
     published_conference_short: ''
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.912
     - null
     metric_stds:
-    - 0.03
+    - null
     - null
   - model: GROVER_large
     model_plain: GROVER_large
@@ -1096,11 +1127,40 @@ variants:
     published_conference_short: AAAI
     published_conference_slug: aaai
     published_venue: AAAI 2021
-    uses_external_data: true
+    uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
     - 0.911
+    - null
+    metric_stds:
+    - null
+    - null
+  - model: MoLFormer-Base
+    model_plain: MoLFormer-Base
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2106.09553'
+    title: How Much Structural Information Large Scale Molecular Language Representations
+      Can Capture?
+    date: Jun 17, 2021
+    date_iso: '2021-06-17'
+    date_display: Jun 2021
+    codebase_url: https://github.com/IBM/molformer
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: true
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.909
     - null
     metric_stds:
     - null
@@ -1124,7 +1184,7 @@ variants:
     published_conference_short: AAAI
     published_conference_slug: aaai
     published_venue: AAAI 2021
-    uses_external_data: null
+    uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
@@ -1597,6 +1657,34 @@ variants:
     metric_stds:
     - 0.028
     - null
+  - model: TF-Robust
+    model_plain: TF-Robust
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2110.01191'
+    title: 'Molformer: Motif-based Transformer on 3D Heterogeneous Molecular Graphs'
+    date: Oct 4, 2021
+    date_iso: '2021-10-04'
+    date_display: Oct 2021
+    codebase_url: https://github.com/smiles724/Molformer
+    published_conference: AAAI 2021
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.86
+    - null
+    metric_stds:
+    - null
+    - null
   - model: GraphMVP
     model_plain: GraphMVP
     is_baseline: true
@@ -1625,34 +1713,6 @@ variants:
     - null
     metric_stds:
     - 0.034
-    - null
-  - model: TF-Robust
-    model_plain: TF-Robust
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2310.07351'
-    title: Atom-Motif Contrastive Transformer for Molecular Property Prediction
-    date: Oct 11, 2023
-    date_iso: '2023-10-11'
-    date_display: Oct 2023
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.86
-    - null
-    metric_stds:
-    - 0.087
     - null
   - model: Masking+Sup
     model_plain: Masking+Sup
@@ -1683,75 +1743,18 @@ variants:
     metric_stds:
     - 0.02
     - null
-  - model: MoAMa
-    model_plain: MoAMa
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2412.15589'
-    title: Pre-training Graph Neural Networks on Molecules by Using Subgraph-Conditioned
-      Graph Information Bottleneck
-    date: Dec 20, 2024
-    date_iso: '2024-12-20'
-    date_display: Dec 2024
-    codebase_url: https://github.com/NSLab-CUK/S-CGIB
-    published_conference: AAAI 2024
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8589
-    - null
-    metric_stds:
-    - 0.0061
-    - null
-  - model: MGCN
-    model_plain: MGCN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2110.01191'
-    title: 'Molformer: Motif-based Transformer on 3D Heterogeneous Molecular Graphs'
-    date: Oct 4, 2021
-    date_iso: '2021-10-04'
-    date_display: Oct 2021
-    codebase_url: https://github.com/smiles724/Molformer
-    published_conference: AAAI 2021
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2021
-    uses_external_data: null
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.85
-    - null
-    metric_stds:
-    - null
-    - null
-  row_count: 400
+  row_count: 407
   rows_json: /data/datasets/bbbp/scaffold-split-rows.json
   chart_json: /data/datasets/bbbp/scaffold-split-chart.json
   arch_counts:
-    gnn: 217
+    gnn: 221
     hybrid: 82
-    graph_transformer: 14
-    llm: 15
+    graph_transformer: 16
+    llm: 13
     walk: 1
-    traditional: 44
+    traditional: 46
   metric_counts:
-  - 383
+  - 390
   - 17
   milestones: &id001
   - value: 0.688
@@ -1760,24 +1763,19 @@ variants:
     arxiv_id: '1905.12265'
     title: Strategies for Pre-training Graph Neural Networks
     date: '2019-05-29'
-  - value: 0.725
-    std: 0.006
-    model: rf
+  - value: 0.737
+    std: 0.009
+    model: MAT
     arxiv_id: '2002.08264'
     title: Molecule Attention Transformer
     date: '2020-02-19'
-  - value: 0.926
+  - value: 0.937
     std: null
-    model: Molformer
-    arxiv_id: '2110.01191'
-    title: 'Molformer: Motif-based Transformer on 3D Heterogeneous Molecular Graphs'
-    date: '2021-10-04'
-  - value: 0.9343
-    std: 0.025
-    model: Masking Node + Supervised
-    arxiv_id: '2207.06010'
-    title: Does GNN Pretraining Help Molecular Representation?
-    date: '2022-07-13'
+    model: MoLFormer-XL
+    arxiv_id: '2106.09553'
+    title: How Much Structural Information Large Scale Molecular Language Representations
+      Can Capture?
+    date: '2021-06-17'
   - value: 0.94
     std: 0.021
     model: SE(3)-I MPPH

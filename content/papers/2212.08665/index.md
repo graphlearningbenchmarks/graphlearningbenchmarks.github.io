@@ -79,8 +79,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - HSAN
-mrr: 0.27
-adjusted_mrr: 0.18
+mrr: 0.2717
+adjusted_mrr: 0.1812
 mrr_dataset_count: 2
 benchmark_categories:
 - Hypergraph Benchmarks
@@ -286,9 +286,9 @@ results:
     sort_value: 0.7966
     sort_std: 0.0025
     global_rank: 15
-    paper_rank: 26
-    rank_delta: 11
-    rank_delta_abs: 11
+    paper_rank: 24
+    rank_delta: 9
+    rank_delta_abs: 9
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -353,9 +353,9 @@ results:
     sort_value: 0.76
     sort_std: 0.008
     global_rank: 16
-    paper_rank: 29
-    rank_delta: 13
-    rank_delta_abs: 13
+    paper_rank: 27
+    rank_delta: 11
+    rank_delta_abs: 11
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -399,8 +399,8 @@ results:
     at_pub_source_title: Simple Contrastive Graph Clustering
     at_pub_source_date_iso: '2022-05-11'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2023-08-17'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2022-05-11'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: 0.020100000000000007
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -411,16 +411,16 @@ results:
     today_delta_significant: true
     true_value: 0.7174
     true_std: 0.0093
-    value_gap_source_arxiv: '2308.08963'
-    value_gap_source_title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
+    value_gap_source_arxiv: '2205.07865'
+    value_gap_source_title: Simple Contrastive Graph Clustering
     value_gap_source_is_current_paper: false
     value_gap: 0.020100000000000007
     has_value_note: false
     value_note: ''
     sort_value: 0.7174
     sort_std: 0.0093
-    global_rank: 24
-    paper_rank: 29
+    global_rank: 22
+    paper_rank: 27
     rank_delta: 5
     rank_delta_abs: 5
     rank_delta_direction: worse
@@ -487,8 +487,8 @@ results:
     value_note: ''
     sort_value: 0.7115
     sort_std: 0.008
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -535,7 +535,7 @@ results:
       Augmentation'
     at_pub_source_date_iso: '2022-12-07'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2023-08-17'
+    value_gap_source_date_iso: '2023-07-27'
     value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.027100000000000013
     worse_than_at_pub: true
@@ -547,16 +547,16 @@ results:
     today_delta_significant: true
     true_value: 0.7103
     true_std: 0.0064
-    value_gap_source_arxiv: '2308.08963'
-    value_gap_source_title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
+    value_gap_source_arxiv: '2307.14613'
+    value_gap_source_title: Self-Contrastive Graph Diffusion Network
     value_gap_source_is_current_paper: false
     value_gap: 0.027100000000000013
     has_value_note: false
     value_note: ''
     sort_value: 0.7103
     sort_std: 0.0064
-    global_rank: 26
-    paper_rank: 30
+    global_rank: 24
+    paper_rank: 28
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -604,7 +604,7 @@ results:
       Augmentation'
     at_pub_source_date_iso: '2022-12-07'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2023-08-17'
+    value_gap_source_date_iso: '2023-07-27'
     value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.38539999999999996
     worse_than_at_pub: true
@@ -616,16 +616,16 @@ results:
     today_delta_significant: true
     true_value: 0.6999
     true_std: 0.0034
-    value_gap_source_arxiv: '2308.08963'
-    value_gap_source_title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
+    value_gap_source_arxiv: '2307.14613'
+    value_gap_source_title: Self-Contrastive Graph Diffusion Network
     value_gap_source_is_current_paper: false
     value_gap: 0.38539999999999996
     has_value_note: false
     value_note: ''
     sort_value: 0.6999
     sort_std: 0.0034
-    global_rank: 27
-    paper_rank: 56
+    global_rank: 25
+    paper_rank: 54
     rank_delta: 29
     rank_delta_abs: 29
     rank_delta_direction: worse
@@ -672,7 +672,7 @@ results:
     at_pub_source_title: Simple Contrastive Graph Clustering
     at_pub_source_date_iso: '2022-05-11'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2023-08-17'
+    value_gap_source_date_iso: '2023-07-27'
     value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.053300000000000014
     worse_than_at_pub: true
@@ -684,18 +684,18 @@ results:
     today_delta_significant: true
     true_value: 0.6987
     true_std: 0.0054
-    value_gap_source_arxiv: '2308.08963'
-    value_gap_source_title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
+    value_gap_source_arxiv: '2307.14613'
+    value_gap_source_title: Self-Contrastive Graph Diffusion Network
     value_gap_source_is_current_paper: false
     value_gap: 0.053300000000000014
     has_value_note: false
     value_note: ''
     sort_value: 0.6987
     sort_std: 0.0054
-    global_rank: 28
-    paper_rank: 40
-    rank_delta: 12
-    rank_delta_abs: 12
+    global_rank: 27
+    paper_rank: 38
+    rank_delta: 11
+    rank_delta_abs: 11
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -759,8 +759,8 @@ results:
     value_note: ''
     sort_value: 0.6808
     sort_std: 0.0176
-    global_rank: 32
-    paper_rank: 42
+    global_rank: 30
+    paper_rank: 40
     rank_delta: 10
     rank_delta_abs: 10
     rank_delta_direction: worse
@@ -826,8 +826,8 @@ results:
     value_note: ''
     sort_value: 0.6805
     sort_std: 0.0181
-    global_rank: 33
-    paper_rank: 36
+    global_rank: 31
+    paper_rank: 34
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -895,8 +895,8 @@ results:
     value_note: ''
     sort_value: 0.6676
     sort_std: 0.0067
-    global_rank: 35
-    paper_rank: 35
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -964,8 +964,8 @@ results:
     value_note: ''
     sort_value: 0.6639
     sort_std: 0.0065
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1032,8 +1032,8 @@ results:
     value_note: ''
     sort_value: 0.6592
     sort_std: 0.008
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1099,8 +1099,8 @@ results:
     value_note: ''
     sort_value: 0.6483
     sort_std: 0.0059
-    global_rank: 40
-    paper_rank: 42
+    global_rank: 38
+    paper_rank: 40
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -1167,8 +1167,8 @@ results:
     value_note: ''
     sort_value: 0.6283
     sort_std: 0.0159
-    global_rank: 42
-    paper_rank: 42
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1864,8 +1864,8 @@ results:
     value_note: ''
     sort_value: 0.5455
     sort_std: 0.0097
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1933,8 +1933,8 @@ results:
     value_note: ''
     sort_value: 0.5344
     sort_std: 0.0081
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 16
+    paper_rank: 16
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2001,8 +2001,8 @@ results:
     value_note: ''
     sort_value: 0.5153
     sort_std: 0.0038
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2069,8 +2069,8 @@ results:
     value_note: ''
     sort_value: 0.47
     sort_std: 0.06
-    global_rank: 23
-    paper_rank: 28
+    global_rank: 22
+    paper_rank: 27
     rank_delta: 5
     rank_delta_abs: 5
     rank_delta_direction: worse
@@ -2138,8 +2138,8 @@ results:
     value_note: ''
     sort_value: 0.4375
     sort_std: 0.0078
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

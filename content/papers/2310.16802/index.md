@@ -59,7 +59,7 @@ benchmark_coverage:
 - benchmark: Quantum Chemistry
   benchmark_slug: quantum-chemistry
   evaluated: 1
-  total: 3
+  total: 1
 task_categories:
 - graph_regression
 experiment_scopes:
@@ -229,9 +229,9 @@ results:
     sort_value: 0.0046
     sort_std: null
     global_rank: 14
-    paper_rank: 100
-    rank_delta: 86
-    rank_delta_abs: 86
+    paper_rank: 98
+    rank_delta: 84
+    rank_delta_abs: 84
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -270,21 +270,21 @@ results:
     date_iso: '2023-10-25'
     published_venue: ICLR 2023
     published_conference: ICLR 2023
-    at_pub_value: 0.0507
+    at_pub_value: 0.4
     at_pub_std: null
-    at_pub_source_arxiv: '2210.16518'
-    at_pub_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural network
-      with vector-scalar interactive message passing for molecules'
-    at_pub_source_date_iso: '2022-10-29'
-    at_pub_source_date_label: '2022'
+    at_pub_source_arxiv: '2306.06482'
+    at_pub_source_title: 'TensorNet: Cartesian Tensor Representations for Efficient
+      Learning of Molecular Potentials'
+    at_pub_source_date_iso: '2023-06-10'
+    at_pub_source_date_label: NeurIPS 2023
     value_gap_source_date_iso: '2024-02-07'
     value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.2493
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
+    gap_vs_at_pub: 0.10000000000000003
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: true
     insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
+    improvement_surpassed_since_pub: true
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.0507
@@ -299,15 +299,15 @@ results:
     sort_value: 0.0507
     sort_std: null
     global_rank: 48
-    paper_rank: 106
-    rank_delta: 58
-    rank_delta_abs: 58
+    paper_rank: 104
+    rank_delta: 56
+    rank_delta_abs: 56
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
-    comparison_source_arxiv: '2210.16518'
+    comparison_type: improved
+    comparison_source_title: 'TensorNet: Cartesian Tensor Representations for Efficient
+      Learning of Molecular Potentials'
+    comparison_source_arxiv: '2306.06482'
     is_best: false
     is_std_outlier: false
   - model: JMP-L
@@ -367,8 +367,8 @@ results:
     value_note: ''
     sort_value: 0.3
     sort_std: null
-    global_rank: 107
-    paper_rank: 107
+    global_rank: 105
+    paper_rank: 105
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -435,8 +435,8 @@ results:
     value_note: ''
     sort_value: 0.7
     sort_std: null
-    global_rank: 112
-    paper_rank: 112
+    global_rank: 110
+    paper_rank: 110
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -503,8 +503,8 @@ results:
     value_note: ''
     sort_value: 1.0
     sort_std: null
-    global_rank: 113
-    paper_rank: 113
+    global_rank: 111
+    paper_rank: 111
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -571,8 +571,8 @@ results:
     value_note: ''
     sort_value: 1.0
     sort_std: null
-    global_rank: 114
-    paper_rank: 114
+    global_rank: 112
+    paper_rank: 112
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

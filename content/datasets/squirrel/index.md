@@ -12,7 +12,7 @@ stats:
   avg_nodes: 5201.0
   avg_edges: 217073.0
   num_classes: 5
-result_count: 427
+result_count: 445
 best_model:
   model: IBG-NN
   value: 0.7763
@@ -83,6 +83,10 @@ papers:
     Graphs'
   date_iso: '2025-09-16'
   venue: ''
+- arxiv_id: '2506.19343'
+  title: Discrepancy-Aware Graph Mask Auto-Encoder
+  date_iso: '2025-06-24'
+  venue: KDD 2025
 - arxiv_id: '2506.14291'
   title: 'Equivariance Everywhere All At Once: A Recipe for Graph Foundation Models'
   date_iso: '2025-06-17'
@@ -107,6 +111,10 @@ papers:
   title: Graph Neural Networks Need Cluster-Normalize-Activate Modules
   date_iso: '2024-12-05'
   venue: NeurIPS 2024
+- arxiv_id: '2411.19392'
+  title: Scale-aware Message Passing For Graph Node Classification
+  date_iso: '2024-11-28'
+  venue: ''
 - arxiv_id: '2410.02158'
   title: 'SCNode: Spatial and Contextual Coordinates for Graph Representation Learning'
   date_iso: '2024-10-03'
@@ -139,6 +147,11 @@ papers:
   title: 'Cross-Domain Graph Data Scaling: A Showcase with Diffusion Models'
   date_iso: '2024-06-04'
   venue: NeurIPS 2024
+- arxiv_id: '2404.17099'
+  title: Unleashing the Potential of Fractional Calculus in Graph Neural Networks
+    with FROND
+  date_iso: '2024-04-26'
+  venue: ICLR 2024
 - arxiv_id: '2403.20221'
   title: Graph Neural Aggregation-diffusion with Metastability
   date_iso: '2024-03-29'
@@ -218,10 +231,6 @@ papers:
   title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph Networks'
   date_iso: '2022-10-18'
   venue: ICLR 2022
-- arxiv_id: '2210.03930'
-  title: Hierarchical Graph Transformer with Adaptive Node Sampling
-  date_iso: '2022-10-08'
-  venue: NeurIPS 2022
 - arxiv_id: '2210.00513'
   title: Gradient Gating for Deep Multi-Rate Learning on Graphs
   date_iso: '2022-10-02'
@@ -242,6 +251,10 @@ papers:
   title: Restructuring Graphs for Higher Homophily via Adaptive Spectral Clustering
   date_iso: '2022-06-06'
   venue: AAAI 2022
+- arxiv_id: '2204.04874'
+  title: Augmentation-Free Graph Contrastive Learning with Performance Guarantee
+  date_iso: '2022-04-11'
+  venue: ''
 - arxiv_id: '2112.14531'
   title: 'Designing the Topology of Graph Neural Networks: A Novel Feature Fusion
     Perspective'
@@ -259,10 +272,6 @@ papers:
   title: Simplifying approach to Node Classification in Graph Neural Networks
   date_iso: '2021-11-12'
   venue: ''
-- arxiv_id: '2106.06134'
-  title: Is Homophily a Necessity for Graph Neural Networks?
-  date_iso: '2021-06-11'
-  venue: ICLR 2021
 - arxiv_id: '2105.07634'
   title: Improving Graph Neural Networks with Simple Architecture Design
   date_iso: '2021-05-17'
@@ -406,6 +415,90 @@ variants:
     metric_stds:
     - 0.0192
     - null
+  - model: ScaleNet
+    model_plain: ScaleNet
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2411.19392'
+    title: Scale-aware Message Passing For Graph Node Classification
+    date: Nov 28, 2024
+    date_iso: '2024-11-28'
+    date_display: Nov 2024
+    codebase_url: https://github.com/Qin87/ScaleNet
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.76
+    - null
+    metric_stds:
+    - 0.02
+    - null
+  - model: LargeScaleNet
+    model_plain: LargeScaleNet
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2411.19392'
+    title: Scale-aware Message Passing For Graph Node Classification
+    date: Nov 28, 2024
+    date_iso: '2024-11-28'
+    date_display: Nov 2024
+    codebase_url: https://github.com/Qin87/ScaleNet
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.759
+    - null
+    metric_stds:
+    - 0.02
+    - null
+  - model: Dir-GNN
+    model_plain: Dir-GNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2411.19392'
+    title: Scale-aware Message Passing For Graph Node Classification
+    date: Nov 28, 2024
+    date_iso: '2024-11-28'
+    date_display: Nov 2024
+    codebase_url: https://github.com/Qin87/ScaleNet
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.756
+    - null
+    metric_stds:
+    - 0.019
+    - null
   - model: NDDGNN
     model_plain: NDDGNN
     is_baseline: true
@@ -433,34 +526,6 @@ variants:
     - null
     metric_stds:
     - 0.0195
-    - null
-  - model: Dir-GNN
-    model_plain: Dir-GNN
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2412.04064'
-    title: Graph Neural Networks Need Cluster-Normalize-Activate Modules
-    date: Dec 5, 2024
-    date_iso: '2024-12-05'
-    date_display: Dec 2024
-    codebase_url: https://github.com/ml-research/cna_modules
-    published_conference: NeurIPS 2024
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2024
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.7531
-    - null
-    metric_stds:
-    - 0.0192
     - null
   - model: DirGNN
     model_plain: DirGNN
@@ -658,6 +723,34 @@ variants:
     metric_stds:
     - 0.022
     - null
+  - model: DGMAE
+    model_plain: DGMAE
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2506.19343'
+    title: Discrepancy-Aware Graph Mask Auto-Encoder
+    date: Jun 24, 2025
+    date_iso: '2025-06-24'
+    date_display: Jun 2025
+    codebase_url: https://github.com/zhengziyu77/DGMAE
+    published_conference: KDD 2025
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7247
+    - null
+    metric_stds:
+    - 0.0177
+    - null
   - model: GraphPAE
     model_plain: GraphPAE
     is_baseline: true
@@ -770,15 +863,15 @@ variants:
     metric_stds:
     - 0.0088
     - null
-  - model: H2GCN + UniGAP
-    model_plain: H2GCN + UniGAP
+  - model: UniGAP
+    model_plain: UniGAP
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
     arxiv_id: '2407.19420'
     title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
       Over-Smoothing in Node Classification Tasks'
@@ -1052,64 +1145,6 @@ variants:
     - null
     metric_stds:
     - 0.0233
-    - null
-  - model: GCN + UniGAP
-    model_plain: GCN + UniGAP
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.19420'
-    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
-      Over-Smoothing in Node Classification Tasks'
-    date: Jul 28, 2024
-    date_iso: '2024-07-28'
-    date_display: Jul 2024
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.6558
-    - null
-    metric_stds:
-    - 0.016
-    - null
-  - model: GraphSAGE + UniGAP
-    model_plain: GraphSAGE + UniGAP
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2407.19420'
-    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
-      Over-Smoothing in Node Classification Tasks'
-    date: Jul 28, 2024
-    date_iso: '2024-07-28'
-    date_display: Jul 2024
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.6532
-    - null
-    metric_stds:
-    - 0.014
     - null
   - model: NWR-GAE
     model_plain: NWR-GAE
@@ -1619,6 +1654,35 @@ variants:
     metric_stds:
     - 0.006
     - null
+  - model: F-GREAD-BS
+    model_plain: F-GREAD-BS
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2404.17099'
+    title: Unleashing the Potential of Fractional Calculus in Graph Neural Networks
+      with FROND
+    date: Apr 26, 2024
+    date_iso: '2024-04-26'
+    date_display: Apr 2024
+    codebase_url: https://github.com/zknus/ICLR2024-FROND
+    published_conference: ICLR 2024
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6086
+    - null
+    metric_stds:
+    - 0.0105
+    - null
   - model: Sine-Poly(A)-sh
     model_plain: Sine-Poly(A)-sh
     is_baseline: false
@@ -1647,74 +1711,18 @@ variants:
     metric_stds:
     - 0.0056
     - null
-  - model: GCN
-    model_plain: GCN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2401.09125'
-    title: Understanding Heterophily for Graph Neural Networks
-    date: Jan 17, 2024
-    date_iso: '2024-01-17'
-    date_display: Jan 2024
-    codebase_url: ''
-    published_conference: ICML 2024
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.6067
-    - null
-    metric_stds:
-    - null
-    - null
-  - model: LON-GNN
-    model_plain: LON-GNN
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2303.13750'
-    title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
-    date: Mar 24, 2023
-    date_iso: '2023-03-24'
-    date_display: Mar 2023
-    codebase_url: https://github.com/TaoLbr1993/LON-GNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.6061
-    - null
-    metric_stds:
-    - 0.0169
-    - null
-  row_count: 427
+  row_count: 445
   rows_json: /data/datasets/squirrel/standard-split-rows.json
   chart_json: /data/datasets/squirrel/standard-split-chart.json
   arch_counts:
-    gnn: 317
-    hybrid: 44
-    graph_transformer: 15
+    gnn: 326
+    hybrid: 51
+    graph_transformer: 11
     llm: 0
-    walk: 5
-    traditional: 16
+    walk: 7
+    traditional: 17
   metric_counts:
-  - 421
+  - 439
   - 6
   milestones: &id001
   - value: 0.59
@@ -1735,6 +1743,12 @@ variants:
     arxiv_id: '2111.06748'
     title: Simplifying approach to Node Classification in Graph Neural Networks
     date: '2021-11-12'
+  - value: 0.76
+    std: 0.02
+    model: ScaleNet
+    arxiv_id: '2411.19392'
+    title: Scale-aware Message Passing For Graph Node Classification
+    date: '2024-11-28'
   - value: 0.7747
     std: 0.0128
     model: Trans.Conv+CNA

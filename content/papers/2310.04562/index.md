@@ -50,8 +50,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - Ultra fine-tuned
-mrr: 0.0118
-adjusted_mrr: 0.0039
+mrr: 0.013
+adjusted_mrr: 0.0043
 mrr_dataset_count: 1
 benchmark_categories:
 - Knowledge Graphs
@@ -196,7 +196,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 27
+    global_rank: 25
     sort_value: 0.8298
     sort_std: 0.0022
     comparison_type: global_top
@@ -261,8 +261,8 @@ results:
     value_note: ''
     sort_value: 0.64
     sort_std: null
-    global_rank: 48
-    paper_rank: 60
+    global_rank: 40
+    paper_rank: 52
     rank_delta: 12
     rank_delta_abs: 12
     rank_delta_direction: worse
@@ -328,8 +328,8 @@ results:
     value_note: ''
     sort_value: 0.48
     sort_std: null
-    global_rank: 85
-    paper_rank: 85
+    global_rank: 77
+    paper_rank: 77
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

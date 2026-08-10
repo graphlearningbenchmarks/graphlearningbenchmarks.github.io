@@ -182,7 +182,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 7
+    global_rank: 6
     sort_value: 0.9593
     sort_std: 0.0025
     comparison_type: global_top
@@ -246,8 +246,8 @@ results:
     value_note: ''
     sort_value: 0.9301
     sort_std: 0.0007
-    global_rank: 87
-    paper_rank: 87
+    global_rank: 76
+    paper_rank: 76
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -283,7 +283,7 @@ results:
     feature_source_evidence: MLP operating solely on node features can sufficiently
       close the gap
     is_global_top: true
-    global_rank: 112
+    global_rank: 96
     sort_value: 0.928
     sort_std: 0.002
     comparison_type: global_top
@@ -347,8 +347,8 @@ results:
     value_note: ''
     sort_value: 0.9263
     sort_std: 0.0008
-    global_rank: 123
-    paper_rank: 123
+    global_rank: 108
+    paper_rank: 108
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -414,8 +414,8 @@ results:
     value_note: ''
     sort_value: 0.9241
     sort_std: 0.0007
-    global_rank: 131
-    paper_rank: 131
+    global_rank: 115
+    paper_rank: 115
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -481,8 +481,8 @@ results:
     value_note: ''
     sort_value: 0.9208
     sort_std: 0.0007
-    global_rank: 149
-    paper_rank: 149
+    global_rank: 132
+    paper_rank: 132
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -548,8 +548,8 @@ results:
     value_note: ''
     sort_value: 0.9133
     sort_std: 0.0007
-    global_rank: 169
-    paper_rank: 169
+    global_rank: 151
+    paper_rank: 151
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -615,8 +615,8 @@ results:
     value_note: ''
     sort_value: 0.6529
     sort_std: 0.014
-    global_rank: 244
-    paper_rank: 244
+    global_rank: 223
+    paper_rank: 223
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -682,8 +682,8 @@ results:
     value_note: ''
     sort_value: 0.6379
     sort_std: 0.0189
-    global_rank: 246
-    paper_rank: 246
+    global_rank: 225
+    paper_rank: 225
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -749,8 +749,8 @@ results:
     value_note: ''
     sort_value: 0.637
     sort_std: 0.0093
-    global_rank: 247
-    paper_rank: 247
+    global_rank: 226
+    paper_rank: 226
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -816,8 +816,8 @@ results:
     value_note: ''
     sort_value: 0.5527
     sort_std: 0.03
-    global_rank: 250
-    paper_rank: 250
+    global_rank: 228
+    paper_rank: 228
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

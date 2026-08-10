@@ -34,10 +34,10 @@ Datasets in this report are missing one of the baseline families we usually want
 | GraphBench | Topological Sorting | node_classification | MAE | 0 | — |
 | GraphBench | Weather Forecasting | node_classification | MAE | 0 | — |
 | Heterogeneous Graph Benchmarks | RCDD | link_prediction | MRR | 0 | — |
-| Hypergraph Benchmarks | BAT | node_classification | F1 | 111 | — |
+| Hypergraph Benchmarks | BAT | node_classification | F1 | 99 | — |
 | Hypergraph Benchmarks | Congress | node_classification | Accuracy | 13 | — |
 | Hypergraph Benchmarks | DBLP-CA | node_classification | Accuracy | 27 | mlp |
-| Hypergraph Benchmarks | EAT | node_classification | F1 | 86 | — |
+| Hypergraph Benchmarks | EAT | node_classification | F1 | 74 | — |
 | Hypergraph Benchmarks | House | node_classification | Accuracy | 74 | mlp |
 | Hypergraph Benchmarks | LEN | node_classification | Accuracy | 0 | — |
 | Hypergraph Benchmarks | Senate | node_classification | Accuracy | 14 | — |
@@ -48,9 +48,9 @@ Datasets in this report are missing one of the baseline families we usually want
 | Other Graph Benchmarks | MovieLens Film | node_classification | Micro-F1 | 7 | — |
 | Power Flow Benchmarks | Case 1 | graph_regression | Accuracy | 17 | — |
 | Power Flow Benchmarks | Case 2 | graph_regression | Accuracy | 4 | — |
-| Quantum Chemistry | MD17 | graph_regression | MAE | 410 | — |
+| Quantum Chemistry | MD17 | graph_regression | MAE | 404 | — |
 
-### No MLP Baseline (74)
+### No MLP Baseline (77)
 
 
-Detailed table: 74 rows (loaded below).
+Detailed table: 77 rows (loaded below).

@@ -12,7 +12,7 @@ stats:
   avg_nodes: 1334889.0
   avg_edges: null
   num_classes: null
-result_count: 138
+result_count: 135
 best_model:
   model: ELGNN
   value: 0.9777
@@ -27,10 +27,6 @@ papers:
 - arxiv_id: '2502.02479'
   title: Using Random Noise Equivariantly to Boost Graph Neural Networks Universally
   date_iso: '2025-02-04'
-  venue: ''
-- arxiv_id: '2411.03845'
-  title: Reconsidering the Performance of GAE in Link Prediction
-  date_iso: '2024-11-06'
   venue: ''
 - arxiv_id: '2411.01410'
   title: PageRank Bandits for Link Prediction
@@ -203,37 +199,7 @@ variants:
     - null
   - model: AGDN
     model_plain: AGDN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2310.14166'
-    title: Ensemble Learning for Graph Neural Networks
-    date: Oct 22, 2023
-    date_iso: '2023-10-22'
-    date_display: Oct 2023
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9538
-    - null
-    - null
-    metric_stds:
-    - 0.0094
-    - null
-    - null
-  - model: MPNNs
-    model_plain: MPNNs
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
@@ -259,36 +225,6 @@ variants:
     - null
     metric_stds:
     - 0.0094
-    - null
-    - null
-  - model: Optimized GAE
-    model_plain: Optimized GAE
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.03845'
-    title: Reconsidering the Performance of GAE in Link Prediction
-    date: Nov 6, 2024
-    date_iso: '2024-11-06'
-    date_display: Nov 2024
-    codebase_url: https://github.com/GraphPKU/Refined-GAE
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9443
-    - null
-    - null
-    metric_stds:
-    - 0.0057
     - null
     - null
   - model: PSG
@@ -1374,36 +1310,6 @@ variants:
     - 0.0095
     - null
     - null
-  - model: GAE(SAGE)
-    model_plain: GAE(SAGE)
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.03845'
-    title: Reconsidering the Performance of GAE in Link Prediction
-    date: Nov 6, 2024
-    date_iso: '2024-11-06'
-    date_display: Nov 2024
-    codebase_url: https://github.com/GraphPKU/Refined-GAE
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.539
-    - null
-    - null
-    metric_stds:
-    - 0.0474
-    - null
-    - null
   - model: SAGE
     model_plain: SAGE
     is_baseline: true
@@ -1645,21 +1551,119 @@ variants:
     - 0.0239
     - null
     - null
-  row_count: 138
+  - model: GAE-PS2
+    model_plain: GAE-PS2
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2212.12488'
+    title: 'Bring Your Own View: Graph Neural Networks for Link Prediction with Personalized
+      Subgraph Selection'
+    date: Dec 23, 2022
+    date_iso: '2022-12-23'
+    date_display: Dec 2022
+    codebase_url: https://github.com/qiaoyu-tan/PS2
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.4953
+    - null
+    - null
+    metric_stds:
+    - 0.0599
+    - null
+    - null
+  - model: PEG-DW
+    model_plain: PEG-DW
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2203.00199'
+    title: Equivariant and Stable Positional Encoding for More Powerful Graph Neural
+      Networks
+    date: Mar 1, 2022
+    date_iso: '2022-03-01'
+    date_display: Mar 2022
+    codebase_url: https://github.com/Graph-COM/PEG
+    published_conference: ICLR 2022
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.4793
+    - null
+    - null
+    metric_stds:
+    - 0.0021
+    - null
+    - null
+  - model: NCNC (GCN)
+    model_plain: NCNC (GCN)
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.16687'
+    title: Link Prediction with Untrained Message Passing Layers
+    date: Jun 24, 2024
+    date_iso: '2024-06-24'
+    date_display: Jun 2024
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.4653
+    - null
+    - null
+    metric_stds:
+    - 0.2924
+    - null
+    - null
+  row_count: 135
   rows_json: /data/datasets/ogbl-ddi/standard-split-rows.json
   chart_json: /data/datasets/ogbl-ddi/standard-split-chart.json
   arch_counts:
-    gnn: 87
+    gnn: 84
     hybrid: 14
     graph_transformer: 1
     llm: 1
     walk: 4
     traditional: 27
   metric_counts:
-  - 120
+  - 117
   - 8
   - 10
   milestones: &id001
+  - value: 0.539
+    std: 0.0474
+    model: GraphSAGE
+    arxiv_id: '2005.00687'
+    title: OGB
+    date: '2020-05-02'
   - value: 0.623
     std: 0.091
     model: LRGA+GCN
@@ -1668,7 +1672,7 @@ variants:
     date: '2020-06-14'
   - value: 0.9538
     std: 0.0094
-    model: MPNNs
+    model: AGDN
     arxiv_id: '2012.15024'
     title: Adaptive Graph Diffusion Networks
     date: '2020-12-30'

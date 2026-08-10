@@ -396,8 +396,14 @@ variants:
     traditional: 0
   metric_counts:
   - 13
-  milestones: []
+  milestones: &id001
+  - value: 0.9345
+    std: 0.0079
+    model: HealHGNN
+    arxiv_id: '2603.00599'
+    title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian Local Exchanger
+    date: '2026-02-28'
   milestones_by_metric:
-    Accuracy: []
+    Accuracy: *id001
 ---
 

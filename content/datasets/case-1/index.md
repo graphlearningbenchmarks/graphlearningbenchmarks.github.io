@@ -541,9 +541,15 @@ variants:
   metric_counts:
   - 4
   - 13
-  milestones: []
+  milestones: &id001
+  - value: 0.9987
+    std: null
+    model: RMGL
+    arxiv_id: '2601.01387'
+    title: Power Flow Benchmarks
+    date: '2026-01-04'
   milestones_by_metric:
-    Accuracy: []
+    Accuracy: *id001
     Pearson correlation:
     - value: 0.888
       std: null

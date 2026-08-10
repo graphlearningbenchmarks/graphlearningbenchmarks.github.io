@@ -102,9 +102,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Tango_GPS
-    model_key: tango_gps
-    model_plain: Tango_GPS
+  - model: TANGO-GPS
+    model_key: tango-gps
+    model_plain: TANGO-GPS
     value: 0.80113
     std: 0.00138
     metric: Accuracy
@@ -226,9 +226,9 @@ results:
     sort_value: 0.77856
     sort_std: 0.00104
     global_rank: 27
-    paper_rank: 129
-    rank_delta: 102
-    rank_delta_abs: 102
+    paper_rank: 123
+    rank_delta: 96
+    rank_delta_abs: 96
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -294,9 +294,9 @@ results:
     sort_value: 0.76691
     sort_std: 0.00247
     global_rank: 53
-    paper_rank: 128
-    rank_delta: 75
-    rank_delta_abs: 75
+    paper_rank: 122
+    rank_delta: 69
+    rank_delta_abs: 69
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -396,9 +396,9 @@ results:
     sort_value: 0.75738
     sort_std: 0.00106
     global_rank: 61
-    paper_rank: 126
-    rank_delta: 65
-    rank_delta_abs: 65
+    paper_rank: 120
+    rank_delta: 59
+    rank_delta_abs: 59
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -465,9 +465,9 @@ results:
     sort_value: 0.73169
     sort_std: 0.00662
     global_rank: 68
-    paper_rank: 121
-    rank_delta: 53
-    rank_delta_abs: 53
+    paper_rank: 115
+    rank_delta: 47
+    rank_delta_abs: 47
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -533,10 +533,10 @@ results:
     value_note: ''
     sort_value: 0.69026
     sort_std: 0.01372
-    global_rank: 74
-    paper_rank: 115
-    rank_delta: 41
-    rank_delta_abs: 41
+    global_rank: 73
+    paper_rank: 110
+    rank_delta: 37
+    rank_delta_abs: 37
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -576,10 +576,10 @@ results:
     published_conference: ICLR 2023
     at_pub_value: 0.64716
     at_pub_std: 0.01553
-    at_pub_source_arxiv: '2201.12787'
-    at_pub_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
-    at_pub_source_date_iso: '2022-01-30'
-    at_pub_source_date_label: '2022'
+    at_pub_source_arxiv: '2201.09332'
+    at_pub_source_title: How Expressive are Transformers in Spectral Domain for Graphs?
+    at_pub_source_date_iso: '2022-01-23'
+    at_pub_source_date_label: TMLR 2022
     value_gap_source_date_iso: '2026-05-07'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.12115999999999993
@@ -601,15 +601,16 @@ results:
     value_note: ''
     sort_value: 0.64716
     sort_std: 0.01553
-    global_rank: 85
-    paper_rank: 104
-    rank_delta: 19
-    rank_delta_abs: 19
+    global_rank: 82
+    paper_rank: 99
+    rank_delta: 17
+    rank_delta_abs: 17
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
-    comparison_source_arxiv: '2201.12787'
+    comparison_source_title: How Expressive are Transformers in Spectral Domain for
+      Graphs?
+    comparison_source_arxiv: '2201.09332'
     is_best: false
     is_std_outlier: false
   - model: GraphSAGE
@@ -637,7 +638,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 87
+    global_rank: 83
     sort_value: 0.63884
     sort_std: 0.0011
     comparison_type: global_top
@@ -701,8 +702,8 @@ results:
     value_note: ''
     sort_value: 0.598
     sort_std: 0.049
-    global_rank: 97
-    paper_rank: 97
+    global_rank: 92
+    paper_rank: 92
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -738,7 +739,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 126
+    global_rank: 120
     sort_value: 0.20973
     sort_std: 4.0e-05
     comparison_type: global_top
@@ -802,8 +803,8 @@ results:
     value_note: ''
     sort_value: 0.122
     sort_std: 0.006
-    global_rank: 129
-    paper_rank: 129
+    global_rank: 123
+    paper_rank: 123
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -869,8 +870,8 @@ results:
     value_note: ''
     sort_value: 0.078
     sort_std: 0.006
-    global_rank: 130
-    paper_rank: 130
+    global_rank: 124
+    paper_rank: 124
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1081,8 +1082,8 @@ results:
     value_note: ''
     sort_value: 0.86865
     sort_std: 0.00043
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1148,8 +1149,8 @@ results:
     value_note: ''
     sort_value: 0.86581
     sort_std: 0.00037
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 59
+    paper_rank: 59
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1184,7 +1185,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 68
+    global_rank: 66
     sort_value: 0.86508
     sort_std: 0.00085
     comparison_type: global_top
@@ -1249,10 +1250,10 @@ results:
     value_note: ''
     sort_value: 0.85614
     sort_std: 0.00032
-    global_rank: 91
-    paper_rank: 125
-    rank_delta: 34
-    rank_delta_abs: 34
+    global_rank: 88
+    paper_rank: 121
+    rank_delta: 33
+    rank_delta_abs: 33
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1316,10 +1317,10 @@ results:
     value_note: ''
     sort_value: 0.8559
     sort_std: 0.0001
-    global_rank: 92
-    paper_rank: 126
-    rank_delta: 34
-    rank_delta_abs: 34
+    global_rank: 89
+    paper_rank: 122
+    rank_delta: 33
+    rank_delta_abs: 33
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1384,10 +1385,10 @@ results:
     value_note: ''
     sort_value: 0.84808
     sort_std: 0.00068
-    global_rank: 101
-    paper_rank: 122
-    rank_delta: 21
-    rank_delta_abs: 21
+    global_rank: 98
+    paper_rank: 118
+    rank_delta: 20
+    rank_delta_abs: 20
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1452,8 +1453,8 @@ results:
     value_note: ''
     sort_value: 0.81329
     sort_std: 0.0215
-    global_rank: 109
-    paper_rank: 109
+    global_rank: 105
+    paper_rank: 105
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1519,8 +1520,8 @@ results:
     value_note: ''
     sort_value: 0.56482
     sort_std: 0.03549
-    global_rank: 128
-    paper_rank: 128
+    global_rank: 124
+    paper_rank: 124
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1555,7 +1556,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 130
+    global_rank: 126
     sort_value: 0.5052
     sort_std: 0.0
     comparison_type: global_top
@@ -1588,7 +1589,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 131
+    global_rank: 127
     sort_value: 0.50519
     sort_std: 0.0
     comparison_type: global_top

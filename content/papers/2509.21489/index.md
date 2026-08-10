@@ -56,8 +56,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GraphPFN
-mrr: 0.0063
-adjusted_mrr: 0.0021
+mrr: 0.0068
+adjusted_mrr: 0.0023
 mrr_dataset_count: 1
 benchmark_categories:
 - Heterophily Benchmark
@@ -74,9 +74,9 @@ results:
 - &id001
   dataset: Amazon-ratings
   rows:
-  - model: H2GCN + UniGAP
-    model_key: h2gcn + unigap
-    model_plain: H2GCN + UniGAP
+  - model: UniGAP
+    model_key: unigap
+    model_plain: UniGAP
     value: 0.6375
     std: 0.011
     metric: Accuracy
@@ -85,9 +85,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
     arxiv_id: '2407.19420'
     title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
       Over-Smoothing in Node Classification Tasks'
@@ -97,7 +97,7 @@ results:
     venue: arXiv.org
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -108,48 +108,14 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GraphSAGE + UniGAP
-    model_key: graphsage + unigap
-    model_plain: GraphSAGE + UniGAP
-    value: 0.6283
-    std: 0.009
+  - model: H2GCN + HalfHop
+    model_key: h2gcn + halfhop
+    model_plain: H2GCN + HalfHop
+    value: 0.5961
+    std: 0.01
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2407.19420'
-    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
-      Over-Smoothing in Node Classification Tasks'
-    date: Jul 28, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-28'
-    venue: arXiv.org
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.6283
-    sort_std: 0.009
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GCN + UniGAP
-    model_key: gcn + unigap
-    model_plain: GCN + UniGAP
-    value: 0.5976
-    std: 0.008
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
@@ -165,12 +131,46 @@ results:
     venue: arXiv.org
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.5961
+    sort_std: 0.01
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE + HalfHop
+    model_key: graphsage + halfhop
+    model_plain: GraphSAGE + HalfHop
+    value: 0.5897
+    std: 0.015
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2407.19420'
+    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
+      Over-Smoothing in Node Classification Tasks'
+    date: Jul 28, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-28'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.5976
-    sort_std: 0.008
+    sort_value: 0.5897
+    sort_std: 0.015
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -202,7 +202,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 14
+    global_rank: 12
     sort_value: 0.5569
     sort_std: 0.0023
     comparison_type: global_top
@@ -267,10 +267,10 @@ results:
     value_note: ''
     sort_value: 0.5559
     sort_std: 0.0027
-    global_rank: 16
-    paper_rank: 203
-    rank_delta: 187
-    rank_delta_abs: 187
+    global_rank: 14
+    paper_rank: 195
+    rank_delta: 181
+    rank_delta_abs: 181
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -336,10 +336,10 @@ results:
     value_note: ''
     sort_value: 0.554
     sort_std: 0.002
-    global_rank: 17
-    paper_rank: 205
-    rank_delta: 188
-    rank_delta_abs: 188
+    global_rank: 15
+    paper_rank: 197
+    rank_delta: 182
+    rank_delta_abs: 182
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -406,10 +406,10 @@ results:
     value_note: ''
     sort_value: 0.5411
     sort_std: 0.0034
-    global_rank: 26
-    paper_rank: 202
-    rank_delta: 176
-    rank_delta_abs: 176
+    global_rank: 25
+    paper_rank: 193
+    rank_delta: 168
+    rank_delta_abs: 168
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -454,7 +454,7 @@ results:
     at_pub_source_title: Bundle Neural Networks for message diffusion on graphs
     at_pub_source_date_iso: '2024-05-24'
     at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2025-08-07'
+    value_gap_source_date_iso: '2025-07-19'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: 0.09610000000000002
     worse_than_at_pub: true
@@ -466,19 +466,19 @@ results:
     today_delta_significant: true
     true_value: 0.5117
     true_std: 0.0066
-    value_gap_source_arxiv: '2508.05070'
-    value_gap_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
-      Flows'
+    value_gap_source_arxiv: '2507.14484'
+    value_gap_source_title: 'ReDiSC: A Reparameterized Masked Diffusion Model for
+      Scalable Node Classification with Structured Predictions'
     value_gap_source_is_current_paper: false
     value_gap: 0.09610000000000002
     has_value_note: false
     value_note: ''
     sort_value: 0.5117
     sort_std: 0.0066
-    global_rank: 81
-    paper_rank: 202
-    rank_delta: 121
-    rank_delta_abs: 121
+    global_rank: 73
+    paper_rank: 192
+    rank_delta: 119
+    rank_delta_abs: 119
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -511,7 +511,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 95
+    global_rank: 85
     sort_value: 0.5058
     sort_std: null
     comparison_type: global_top
@@ -575,8 +575,8 @@ results:
     value_note: ''
     sort_value: 0.4605
     sort_std: 0.0023
-    global_rank: 155
-    paper_rank: 155
+    global_rank: 144
+    paper_rank: 144
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -642,8 +642,8 @@ results:
     value_note: ''
     sort_value: 0.4589
     sort_std: 0.0053
-    global_rank: 158
-    paper_rank: 158
+    global_rank: 147
+    paper_rank: 147
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -709,8 +709,8 @@ results:
     value_note: ''
     sort_value: 0.4489
     sort_std: 0.0015
-    global_rank: 167
-    paper_rank: 167
+    global_rank: 157
+    paper_rank: 157
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -776,8 +776,8 @@ results:
     value_note: ''
     sort_value: 0.4397
     sort_std: 0.0052
-    global_rank: 177
-    paper_rank: 177
+    global_rank: 166
+    paper_rank: 166
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -843,8 +843,8 @@ results:
     value_note: ''
     sort_value: 0.43
     sort_std: 0.0013
-    global_rank: 185
-    paper_rank: 185
+    global_rank: 174
+    paper_rank: 174
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -910,8 +910,8 @@ results:
     value_note: ''
     sort_value: 0.399
     sort_std: 0.0043
-    global_rank: 208
-    paper_rank: 208
+    global_rank: 200
+    paper_rank: 200
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -977,8 +977,8 @@ results:
     value_note: ''
     sort_value: 0.3349
     sort_std: 0.0344
-    global_rank: 219
-    paper_rank: 219
+    global_rank: 211
+    paper_rank: 211
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1044,8 +1044,8 @@ results:
     value_note: ''
     sort_value: 0.2936
     sort_std: 0.0124
-    global_rank: 220
-    paper_rank: 220
+    global_rank: 212
+    paper_rank: 212
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1064,7 +1064,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id003
   dataset: Questions
   rows:
   - model: GraphPFN
@@ -1880,7 +1880,7 @@ results:
   metric: Average Precision
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id003
+- &id002
   dataset: Tolokers
   rows:
   - model: G2T-LimiX (ICL, E)
@@ -2778,10 +2778,10 @@ datasets_by_scope:
     datasets:
     - dataset: Amazon-ratings
       dataset_slug: amazon-ratings
-    - dataset: Questions
-      dataset_slug: questions
     - dataset: Tolokers
       dataset_slug: tolokers
+    - dataset: Questions
+      dataset_slug: questions
 single_proposed_model: GraphPFN
 main_figure: /figures/2509.21489/main_figure.jpegoptim.jpg
 ---

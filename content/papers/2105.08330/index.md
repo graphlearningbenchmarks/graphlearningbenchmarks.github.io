@@ -56,7 +56,7 @@ task_categories:
 experiment_scopes:
 - node-level
 results:
-- &id003
+- &id002
   dataset: ogbn-mag
   rows:
   - model: LMSPS+LP+MS
@@ -352,7 +352,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 72
+    global_rank: 76
     sort_value: 0.3243
     sort_std: null
     comparison_type: global_top
@@ -565,8 +565,8 @@ results:
     value_note: ''
     sort_value: 0.8154
     sort_std: 0.005
-    global_rank: 124
-    paper_rank: 124
+    global_rank: 106
+    paper_rank: 106
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -633,8 +633,8 @@ results:
     value_note: ''
     sort_value: 0.8041
     sort_std: 0.0022
-    global_rank: 156
-    paper_rank: 156
+    global_rank: 137
+    paper_rank: 137
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -701,8 +701,8 @@ results:
     value_note: ''
     sort_value: 0.7936
     sort_std: 0.0057
-    global_rank: 194
-    paper_rank: 194
+    global_rank: 169
+    paper_rank: 169
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -769,8 +769,8 @@ results:
     value_note: ''
     sort_value: 0.787
     sort_std: 0.0036
-    global_rank: 231
-    paper_rank: 231
+    global_rank: 205
+    paper_rank: 205
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -837,8 +837,8 @@ results:
     value_note: ''
     sort_value: 0.785
     sort_std: 0.0014
-    global_rank: 239
-    paper_rank: 239
+    global_rank: 213
+    paper_rank: 213
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -873,7 +873,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 394
+    global_rank: 361
     sort_value: 0.6605
     sort_std: 0.002
     comparison_type: global_top
@@ -890,7 +890,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id003
   dataset: ogbn-proteins
   rows:
   - model: LD
@@ -1155,8 +1155,8 @@ results:
     value_note: ''
     sort_value: 0.813
     sort_std: 0.0065
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1224,47 +1224,13 @@ results:
     value_note: ''
     sort_value: 0.8129
     sort_std: 0.0067
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MLP
-    model_key: mlp
-    model_plain: MLP
-    value: 0.7204
-    std: 0.0048
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    venue: The Web Conference
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 69
-    sort_value: 0.7204
-    sort_std: 0.0048
-    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1293,10 +1259,10 @@ datasets_by_scope:
     datasets:
     - dataset: ogbn-products
       dataset_slug: ogbn-products
-    - dataset: ogbn-proteins
-      dataset_slug: ogbn-proteins
     - dataset: ogbn-mag
       dataset_slug: ogbn-mag
+    - dataset: ogbn-proteins
+      dataset_slug: ogbn-proteins
 main_figure: /figures/2105.08330/main_figure.jpegoptim.jpg
 ---
 

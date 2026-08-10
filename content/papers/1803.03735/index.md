@@ -48,8 +48,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - AGNN
-mrr: 0.0028
-adjusted_mrr: 0.0019
+mrr: 0.0027
+adjusted_mrr: 0.0018
 mrr_dataset_count: 2
 benchmark_categories:
 - Classic
@@ -63,7 +63,7 @@ task_categories:
 experiment_scopes:
 - node-level
 results:
-- &id001
+- &id002
   dataset: CiteSeer
   rows:
   - model: CNA
@@ -122,7 +122,7 @@ results:
     venue: IEEE Transactions on Knowledge and Data Engineering
     codebase_url: https://github.com/YangLing0818/GraphOOD
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -156,7 +156,7 @@ results:
     venue: IEEE Transactions on Knowledge and Data Engineering
     codebase_url: https://github.com/YangLing0818/GraphOOD
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
@@ -232,10 +232,10 @@ results:
     published_conference: ''
     at_pub_value: 0.703
     at_pub_std: null
-    at_pub_source_arxiv: '1609.02907'
-    at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
-    at_pub_source_date_iso: '2016-09-09'
-    at_pub_source_date_label: ICLR 2016
+    at_pub_source_arxiv: '1710.10370'
+    at_pub_source_title: Topology Adaptive Graph Convolutional Networks
+    at_pub_source_date_iso: '2017-10-28'
+    at_pub_source_date_label: '2017'
     value_gap_source_date_iso: '2023-05-10'
     value_gap_source_date_label: ICML 2023
     gap_vs_at_pub: null
@@ -257,9 +257,9 @@ results:
     sort_value: 0.8769
     sort_std: 0.004
     global_rank: 21
-    paper_rank: 666
-    rank_delta: 645
-    rank_delta_abs: 645
+    paper_rank: 665
+    rank_delta: 644
+    rank_delta_abs: 644
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -323,10 +323,10 @@ results:
     value_note: ''
     sort_value: 0.738
     sort_std: 0.007
-    global_rank: 282
-    paper_rank: 543
-    rank_delta: 261
-    rank_delta_abs: 261
+    global_rank: 288
+    paper_rank: 539
+    rank_delta: 251
+    rank_delta_abs: 251
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -424,8 +424,8 @@ results:
     value_note: ''
     sort_value: 0.709
     sort_std: 0.05
-    global_rank: 629
-    paper_rank: 629
+    global_rank: 628
+    paper_rank: 628
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -465,12 +465,12 @@ results:
     date_iso: '2018-02-15'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.691
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '1609.02907'
-    at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
-    at_pub_source_date_iso: '2016-09-09'
-    at_pub_source_date_label: ICLR 2016
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2020-01-15'
     value_gap_source_date_label: '2020'
     gap_vs_at_pub: null
@@ -492,8 +492,8 @@ results:
     value_note: ''
     sort_value: 0.691
     sort_std: null
-    global_rank: 711
-    paper_rank: 711
+    global_rank: 713
+    paper_rank: 713
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -533,12 +533,12 @@ results:
     date_iso: '2018-02-15'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.596
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '1609.02907'
-    at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
-    at_pub_source_date_iso: '2016-09-09'
-    at_pub_source_date_label: ICLR 2016
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2019-03-28'
     value_gap_source_date_label: ICML 2019
     gap_vs_at_pub: null
@@ -559,10 +559,10 @@ results:
     value_note: ''
     sort_value: 0.681
     sort_std: 0.001
-    global_rank: 746
-    paper_rank: 894
-    rank_delta: 148
-    rank_delta_abs: 148
+    global_rank: 748
+    paper_rank: 909
+    rank_delta: 161
+    rank_delta_abs: 161
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -600,12 +600,12 @@ results:
     date_iso: '2018-02-15'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.601
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '1609.02907'
-    at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
-    at_pub_source_date_iso: '2016-09-09'
-    at_pub_source_date_label: ICLR 2016
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2019-03-28'
     value_gap_source_date_label: ICML 2019
     gap_vs_at_pub: null
@@ -626,10 +626,10 @@ results:
     value_note: ''
     sort_value: 0.677
     sort_std: 0.016
-    global_rank: 759
-    paper_rank: 892
-    rank_delta: 133
-    rank_delta_abs: 133
+    global_rank: 764
+    paper_rank: 907
+    rank_delta: 143
+    rank_delta_abs: 143
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -694,10 +694,10 @@ results:
     value_note: ''
     sort_value: 0.6552
     sort_std: 0.0018
-    global_rank: 825
-    paper_rank: 919
-    rank_delta: 94
-    rank_delta_abs: 94
+    global_rank: 832
+    paper_rank: 934
+    rank_delta: 102
+    rank_delta_abs: 102
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -737,10 +737,10 @@ results:
     published_conference: ''
     at_pub_value: 0.647
     at_pub_std: null
-    at_pub_source_arxiv: '1609.02907'
-    at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
-    at_pub_source_date_iso: '2016-09-09'
-    at_pub_source_date_label: ICLR 2016
+    at_pub_source_arxiv: '1710.10370'
+    at_pub_source_title: Topology Adaptive Graph Convolutional Networks
+    at_pub_source_date_iso: '2017-10-28'
+    at_pub_source_date_label: '2017'
     value_gap_source_date_iso: '2020-03-17'
     value_gap_source_date_label: '2020'
     gap_vs_at_pub: null
@@ -761,8 +761,8 @@ results:
     value_note: ''
     sort_value: 0.647
     sort_std: null
-    global_rank: 839
-    paper_rank: 839
+    global_rank: 849
+    paper_rank: 849
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -829,8 +829,8 @@ results:
     value_note: ''
     sort_value: 0.64
     sort_std: null
-    global_rank: 850
-    paper_rank: 850
+    global_rank: 861
+    paper_rank: 861
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -897,8 +897,8 @@ results:
     value_note: ''
     sort_value: 0.64
     sort_std: null
-    global_rank: 851
-    paper_rank: 851
+    global_rank: 862
+    paper_rank: 862
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -965,8 +965,8 @@ results:
     value_note: ''
     sort_value: 0.572
     sort_std: null
-    global_rank: 912
-    paper_rank: 912
+    global_rank: 928
+    paper_rank: 928
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1033,8 +1033,8 @@ results:
     value_note: ''
     sort_value: 0.536
     sort_std: null
-    global_rank: 924
-    paper_rank: 924
+    global_rank: 939
+    paper_rank: 939
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1074,12 +1074,12 @@ results:
     date_iso: '2018-02-15'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.453
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '1609.02907'
-    at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
-    at_pub_source_date_iso: '2016-09-09'
-    at_pub_source_date_label: ICLR 2016
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2025-07-19'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -1101,8 +1101,8 @@ results:
     value_note: ''
     sort_value: 0.498
     sort_std: 0.0
-    global_rank: 935
-    paper_rank: 947
+    global_rank: 948
+    paper_rank: 960
     rank_delta: 12
     rank_delta_abs: 12
     rank_delta_direction: worse
@@ -1121,7 +1121,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id001
   dataset: PubMed
   rows:
   - model: LGTL
@@ -1158,40 +1158,6 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SAGN
-    model_key: sagn
-    model_plain: SAGN
-    value: 0.9517
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2605.24867'
-    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
-      Graph Learning'
-    date: May 24, 2026
-    date_display: May 2026
-    date_iso: '2026-05-24'
-    venue: Accepted by ICML 2026
-    codebase_url: https://github.com/Uncnbb/KCoT
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.9517
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
   - model: MixHop (LO)
     model_key: mixhop (lo)
     model_plain: MixHop (LO)
@@ -1218,7 +1184,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 2
     sort_value: 0.9513
     sort_std: 0.0038
     comparison_type: global_top
@@ -1226,11 +1192,11 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.9487
-    std: null
+  - model: GraphSAGE (LO)
+    model_key: graphsage (lo)
+    model_plain: GraphSAGE (LO)
+    value: 0.9511
+    std: 0.0036
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -1240,25 +1206,25 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2605.24867'
-    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
-      Graph Learning'
-    date: May 24, 2026
-    date_display: May 2026
-    date_iso: '2026-05-24'
-    venue: Accepted by ICML 2026
-    codebase_url: https://github.com/Uncnbb/KCoT
+    arxiv_id: '2405.13902'
+    title: 'LOGIN: A Large Language Model Consulted Graph Neural Network Training
+      Framework'
+    date: May 22, 2024
+    date_display: May 2024
+    date_iso: '2024-05-22'
+    venue: Web Search and Data Mining
+    codebase_url: https://github.com/QiaoYRan/LOGIN
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 9
-    sort_value: 0.9487
-    sort_std: null
+    global_rank: 3
+    sort_value: 0.9511
+    sort_std: 0.0036
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: GCN
     model_key: gcn
@@ -1292,12 +1258,12 @@ results:
     published_conference: ''
     at_pub_value: 0.79
     at_pub_std: null
-    at_pub_source_arxiv: '1609.02907'
-    at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
-    at_pub_source_date_iso: '2016-09-09'
-    at_pub_source_date_label: ICLR 2016
-    value_gap_source_date_iso: '2026-05-24'
-    value_gap_source_date_label: ICML 2026
+    at_pub_source_arxiv: '1710.10370'
+    at_pub_source_title: Topology Adaptive Graph Convolutional Networks
+    at_pub_source_date_iso: '2017-10-28'
+    at_pub_source_date_label: '2017'
+    value_gap_source_date_iso: '2025-05-19'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
@@ -1307,20 +1273,20 @@ results:
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.9296
-    true_std: null
-    value_gap_source_arxiv: '2605.24867'
-    value_gap_source_title: 'Clustering as Reasoning: A $k$-Means Interpretation of
-      Chain-of-Thought Graph Learning'
+    true_std: 0.0015
+    value_gap_source_arxiv: '2505.15845'
+    value_gap_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem
+      in Tokenized Graph Learning Models'
     value_gap_source_is_current_paper: false
     value_gap: 0.13959999999999995
     has_value_note: false
     value_note: ''
     sort_value: 0.9296
-    sort_std: null
-    global_rank: 21
-    paper_rank: 611
-    rank_delta: 590
-    rank_delta_abs: 590
+    sort_std: 0.0015
+    global_rank: 19
+    paper_rank: 641
+    rank_delta: 622
+    rank_delta_abs: 622
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1387,12 +1353,46 @@ results:
     sort_value: 0.898
     sort_std: null
     global_rank: 93
-    paper_rank: 849
-    rank_delta: 756
-    rank_delta_abs: 756
+    paper_rank: 900
+    rank_delta: 807
+    rank_delta_abs: 807
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.8881
+    std: 0.0015
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2506.07168'
+    title: Efficient Text-Attributed Graph Learning through Selective Annotation and
+      Graph Alignment
+    date: Jun 8, 2025
+    date_display: Jun 2025
+    date_iso: '2025-06-08'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 134
+    sort_value: 0.8881
+    sort_std: 0.0015
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1422,7 +1422,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 233
+    global_rank: 243
     sort_value: 0.869
     sort_std: 0.0074
     comparison_type: global_top
@@ -1487,10 +1487,10 @@ results:
     value_note: ''
     sort_value: 0.852
     sort_std: 0.0002
-    global_rank: 268
-    paper_rank: 820
-    rank_delta: 552
-    rank_delta_abs: 552
+    global_rank: 287
+    paper_rank: 870
+    rank_delta: 583
+    rank_delta_abs: 583
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1555,10 +1555,10 @@ results:
     value_note: ''
     sort_value: 0.8006
     sort_std: 0.0055
-    global_rank: 470
-    paper_rank: 644
-    rank_delta: 174
-    rank_delta_abs: 174
+    global_rank: 498
+    paper_rank: 675
+    rank_delta: 177
+    rank_delta_abs: 177
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1623,8 +1623,8 @@ results:
     value_note: ''
     sort_value: 0.799
     sort_std: 0.07
-    global_rank: 487
-    paper_rank: 487
+    global_rank: 516
+    paper_rank: 516
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1691,8 +1691,8 @@ results:
     value_note: ''
     sort_value: 0.79
     sort_std: null
-    global_rank: 619
-    paper_rank: 619
+    global_rank: 649
+    paper_rank: 649
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1759,8 +1759,8 @@ results:
     value_note: ''
     sort_value: 0.789
     sort_std: 0.05
-    global_rank: 633
-    paper_rank: 633
+    global_rank: 664
+    paper_rank: 664
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1769,7 +1769,7 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
-    is_std_outlier: false
+    is_std_outlier: true
   - model: Bootstrap
     model_key: bootstrap
     model_plain: Bootstrap
@@ -1827,8 +1827,8 @@ results:
     value_note: ''
     sort_value: 0.788
     sort_std: null
-    global_rank: 649
-    paper_rank: 649
+    global_rank: 680
+    paper_rank: 680
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1870,10 +1870,11 @@ results:
     published_conference: ''
     at_pub_value: 0.772
     at_pub_std: null
-    at_pub_source_arxiv: '1609.02907'
-    at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
-    at_pub_source_date_iso: '2016-09-09'
-    at_pub_source_date_label: ICLR 2016
+    at_pub_source_arxiv: '1611.08402'
+    at_pub_source_title: Geometric deep learning on graphs and manifolds using mixture
+      model CNNs
+    at_pub_source_date_iso: '2016-11-25'
+    at_pub_source_date_label: '2016'
     value_gap_source_date_iso: '2020-03-17'
     value_gap_source_date_label: '2020'
     gap_vs_at_pub: null
@@ -1894,8 +1895,8 @@ results:
     value_note: ''
     sort_value: 0.772
     sort_std: null
-    global_rank: 759
-    paper_rank: 759
+    global_rank: 798
+    paper_rank: 798
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1937,10 +1938,10 @@ results:
     published_conference: ''
     at_pub_value: 0.739
     at_pub_std: null
-    at_pub_source_arxiv: '1609.02907'
-    at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
-    at_pub_source_date_iso: '2016-09-09'
-    at_pub_source_date_label: ICLR 2016
+    at_pub_source_arxiv: '1710.10903'
+    at_pub_source_title: Graph Attention Networks
+    at_pub_source_date_iso: '2017-10-30'
+    at_pub_source_date_label: ICLR 2017
     value_gap_source_date_iso: '2020-01-15'
     value_gap_source_date_label: '2020'
     gap_vs_at_pub: null
@@ -1962,8 +1963,8 @@ results:
     value_note: ''
     sort_value: 0.739
     sort_std: null
-    global_rank: 841
-    paper_rank: 841
+    global_rank: 892
+    paper_rank: 892
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1971,6 +1972,73 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SemiEmb
+    model_key: semiemb
+    model_plain: SemiEmb
+    value: 0.711
+    std: null
+    paper_value: 0.711
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: WRMC12
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: fixed split from YCS16
+    date: Feb 15, 2018
+    date_display: Feb 2018
+    date_iso: '2018-02-15'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.717
+    at_pub_std: null
+    at_pub_source_arxiv: '1710.10903'
+    at_pub_source_title: Graph Attention Networks
+    at_pub_source_date_iso: '2017-10-30'
+    at_pub_source_date_label: ICLR 2017
+    value_gap_source_date_iso: '2017-10-30'
+    value_gap_source_date_label: ICLR 2017
+    gap_vs_at_pub: 0.006000000000000005
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.717
+    true_std: null
+    value_gap_source_arxiv: '1710.10903'
+    value_gap_source_title: Graph Attention Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.006000000000000005
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.717
+    sort_std: null
+    global_rank: 909
+    paper_rank: 916
+    rank_delta: 7
+    rank_delta_abs: 7
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Graph Attention Networks
+    comparison_source_arxiv: '1710.10903'
     is_best: false
     is_std_outlier: false
   - model: LP
@@ -2005,10 +2073,11 @@ results:
     published_conference: ''
     at_pub_value: 0.63
     at_pub_std: null
-    at_pub_source_arxiv: '1609.02907'
-    at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
-    at_pub_source_date_iso: '2016-09-09'
-    at_pub_source_date_label: ICLR 2016
+    at_pub_source_arxiv: '1611.08402'
+    at_pub_source_title: Geometric deep learning on graphs and manifolds using mixture
+      model CNNs
+    at_pub_source_date_iso: '2016-11-25'
+    at_pub_source_date_label: '2016'
     value_gap_source_date_iso: '2025-07-19'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -2030,10 +2099,10 @@ results:
     value_note: ''
     sort_value: 0.716
     sort_std: 0.0
-    global_rank: 858
-    paper_rank: 898
-    rank_delta: 40
-    rank_delta_abs: 40
+    global_rank: 910
+    paper_rank: 951
+    rank_delta: 41
+    rank_delta_abs: 41
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2098,8 +2167,8 @@ results:
     value_note: ''
     sort_value: 0.714
     sort_std: null
-    global_rank: 861
-    paper_rank: 861
+    global_rank: 913
+    paper_rank: 913
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2141,10 +2210,11 @@ results:
     published_conference: ''
     at_pub_value: 0.707
     at_pub_std: null
-    at_pub_source_arxiv: '1609.02907'
-    at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
-    at_pub_source_date_iso: '2016-09-09'
-    at_pub_source_date_label: ICLR 2016
+    at_pub_source_arxiv: '1611.08402'
+    at_pub_source_title: Geometric deep learning on graphs and manifolds using mixture
+      model CNNs
+    at_pub_source_date_iso: '2016-11-25'
+    at_pub_source_date_label: '2016'
     value_gap_source_date_iso: '2023-01-23'
     value_gap_source_date_label: ICLR 2023
     gap_vs_at_pub: null
@@ -2165,80 +2235,12 @@ results:
     value_note: ''
     sort_value: 0.713
     sort_std: 0.014
-    global_rank: 863
-    paper_rank: 868
-    rank_delta: 5
-    rank_delta_abs: 5
+    global_rank: 915
+    paper_rank: 919
+    rank_delta: 4
+    rank_delta_abs: 4
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SemiEmb
-    model_key: semiemb
-    model_plain: SemiEmb
-    value: 0.711
-    std: null
-    paper_value: 0.711
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: WRMC12
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: fixed split from YCS16
-    date: Feb 15, 2018
-    date_display: Feb 2018
-    date_iso: '2018-02-15'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.711
-    at_pub_std: null
-    at_pub_source_arxiv: '1609.02907'
-    at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
-    at_pub_source_date_iso: '2016-09-09'
-    at_pub_source_date_label: ICLR 2016
-    value_gap_source_date_iso: '2020-01-15'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.711
-    true_std: null
-    value_gap_source_arxiv: '2001.05140'
-    value_gap_source_title: 'Graph-Bert: Only Attention is Needed for Learning Graph
-      Representations'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.711
-    sort_std: null
-    global_rank: 865
-    paper_rank: 865
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2301,8 +2303,8 @@ results:
     value_note: ''
     sort_value: 0.698
     sort_std: null
-    global_rank: 874
-    paper_rank: 874
+    global_rank: 925
+    paper_rank: 925
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2369,8 +2371,8 @@ results:
     value_note: ''
     sort_value: 0.622
     sort_std: null
-    global_rank: 901
-    paper_rank: 901
+    global_rank: 953
+    paper_rank: 953
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2401,10 +2403,10 @@ datasets_by_scope:
   - benchmark: Classic
     benchmark_slug: classic
     datasets:
-    - dataset: CiteSeer
-      dataset_slug: citeseer
     - dataset: PubMed
       dataset_slug: pubmed
+    - dataset: CiteSeer
+      dataset_slug: citeseer
 single_proposed_model: AGNN
 main_figure: /figures/1803.03735/main_figure.jpegoptim.jpg
 ---

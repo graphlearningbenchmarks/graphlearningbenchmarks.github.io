@@ -12,7 +12,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 10
-result_count: 254
+result_count: 252
 best_model:
   model: S^2 GCN + PE
   value: 0.7311
@@ -24,10 +24,6 @@ papers:
   title: 'RADE: Random Add-Drop Edge as a Regularizer'
   date_iso: '2026-05-30'
   venue: ICML 2026
-- arxiv_id: '2605.13383'
-  title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
-  date_iso: '2026-05-13'
-  venue: ''
 - arxiv_id: '2605.12358'
   title: From Message-Passing to Linearized Graph Sequence Models
   date_iso: '2026-05-12'
@@ -36,6 +32,10 @@ papers:
   title: 'Latent-Hysteresis Graph ODEs: Modeling Coupled Topology-Feature Evolution
     via Continuous Phase Transitions'
   date_iso: '2026-04-27'
+  venue: ''
+- arxiv_id: '2601.19094'
+  title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+  date_iso: '2026-01-27'
   venue: ''
 - arxiv_id: '2601.18917'
   title: 'GraIP: A Benchmarking Framework For Neural Graph Inverse Problems'
@@ -61,10 +61,6 @@ papers:
   title: Long-Range Graph Wavelet Networks
   date_iso: '2025-09-08'
   venue: NeurIPS 2025
-- arxiv_id: '2508.05070'
-  title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-  date_iso: '2025-08-07'
-  venue: ''
 - arxiv_id: '2506.01231'
   title: Towards Efficient Few-shot Graph Neural Architecture Search via Partitioning
     Gradient Contribution
@@ -112,6 +108,10 @@ papers:
 - arxiv_id: '2407.01214'
   title: Revisiting Random Walks for Learning on Graphs
   date_iso: '2024-07-01'
+  venue: ICLR 2024
+- arxiv_id: '2407.00494'
+  title: Graph Neural Networks Gone Hogwild
+  date_iso: '2024-06-29'
   venue: ICLR 2024
 - arxiv_id: '2406.12059'
   title: A Scalable and Effective Alternative to Graph Transformers
@@ -518,37 +518,7 @@ variants:
     - null
     - null
     metric_stds:
-    - 0.0028
     - null
-    - null
-  - model: Schrödinger
-    model_plain: Schrödinger
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2605.13383'
-    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
-    date: May 13, 2026
-    date_iso: '2026-05-13'
-    date_display: May 2026
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.7207
-    - null
-    - null
-    metric_stds:
-    - 0.0099
     - null
     - null
   - model: Lie UniGCN
@@ -642,36 +612,6 @@ variants:
     - 0.0058
     - null
     - null
-  - model: DRew-GCN+LapPE
-    model_plain: DRew-GCN+LapPE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2310.07430'
-    title: Non-backtracking Graph Neural Networks
-    date: Oct 11, 2023
-    date_iso: '2023-10-11'
-    date_display: Oct 2023
-    codebase_url: https://github.com/seonghyun26/nba-gnn
-    published_conference: TMLR 2023
-    published_conference_short: TMLR
-    published_conference_slug: tmlr
-    published_venue: TMLR 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.715
-    - null
-    - null
-    metric_stds:
-    - 0.0044
-    - null
-    - null
   - model: DRew+LapPE
     model_plain: DRew+LapPE
     is_baseline: true
@@ -762,6 +702,36 @@ variants:
     - 0.0044
     - null
     - null
+  - model: DRew-GCN+LapPE
+    model_plain: DRew-GCN+LapPE
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2510.02565'
+    title: On The Expressive Power of GNN Derivatives
+    date: Oct 2, 2025
+    date_iso: '2025-10-02'
+    date_display: Oct 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.715
+    - null
+    - null
+    metric_stds:
+    - 0.0044
+    - null
+    - null
   - model: HGODE
     model_plain: HGODE
     is_baseline: false
@@ -832,16 +802,16 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2310.07430'
-    title: Non-backtracking Graph Neural Networks
-    date: Oct 11, 2023
-    date_iso: '2023-10-11'
-    date_display: Oct 2023
-    codebase_url: https://github.com/seonghyun26/nba-gnn
-    published_conference: TMLR 2023
-    published_conference_short: TMLR
-    published_conference_slug: tmlr
-    published_venue: TMLR 2023
+    arxiv_id: '2605.12358'
+    title: From Message-Passing to Linearized Graph Sequence Models
+    date: May 12, 2026
+    date_iso: '2026-05-12'
+    date_display: May 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -1062,36 +1032,6 @@ variants:
     - null
     metric_stds:
     - 0.0035
-    - null
-    - null
-  - model: NBA-GIN+LapPE
-    model_plain: NBA-GIN+LapPE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2310.07430'
-    title: Non-backtracking Graph Neural Networks
-    date: Oct 11, 2023
-    date_iso: '2023-10-11'
-    date_display: Oct 2023
-    codebase_url: https://github.com/seonghyun26/nba-gnn
-    published_conference: TMLR 2023
-    published_conference_short: TMLR
-    published_conference_slug: tmlr
-    published_venue: TMLR 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7071
-    - null
-    - null
-    metric_stds:
-    - 0.0067
     - null
     - null
   - model: Graph Mamba
@@ -1365,66 +1305,6 @@ variants:
     - 0.003
     - null
     - null
-  - model: Tango_GPS
-    model_plain: Tango_GPS
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_iso: '2025-08-07'
-    date_display: Aug 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7021
-    - null
-    - null
-    metric_stds:
-    - 0.0043
-    - null
-    - null
-  - model: PH-DGN
-    model_plain: PH-DGN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_iso: '2025-08-07'
-    date_display: Aug 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7012
-    - null
-    - null
-    metric_stds:
-    - 0.0045
-    - null
-    - null
   - model: Narrow O. GCN
     model_plain: Narrow O. GCN
     is_baseline: true
@@ -1576,36 +1456,6 @@ variants:
     - 0.0082
     - null
     - null
-  - model: NBA-GatedGCN+LapPE
-    model_plain: NBA-GatedGCN+LapPE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2310.07430'
-    title: Non-backtracking Graph Neural Networks
-    date: Oct 11, 2023
-    date_iso: '2023-10-11'
-    date_display: Oct 2023
-    codebase_url: https://github.com/seonghyun26/nba-gnn
-    published_conference: TMLR 2023
-    published_conference_short: TMLR
-    published_conference_slug: tmlr
-    published_venue: TMLR 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.6982
-    - null
-    - null
-    metric_stds:
-    - 0.0014
-    - null
-    - null
   - model: FROND
     model_plain: FROND
     is_baseline: true
@@ -1646,16 +1496,16 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2310.07430'
-    title: Non-backtracking Graph Neural Networks
-    date: Oct 11, 2023
-    date_iso: '2023-10-11'
-    date_display: Oct 2023
-    codebase_url: https://github.com/seonghyun26/nba-gnn
-    published_conference: TMLR 2023
-    published_conference_short: TMLR
-    published_conference_slug: tmlr
-    published_venue: TMLR 2023
+    arxiv_id: '2605.12358'
+    title: From Message-Passing to Linearized Graph Sequence Models
+    date: May 12, 2026
+    date_iso: '2026-05-12'
+    date_display: May 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -1727,18 +1577,168 @@ variants:
     - 0.0043
     - null
     - null
-  row_count: 254
+  - model: Graph-MLPMixer
+    model_plain: Graph-MLPMixer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2312.01538'
+    title: Recurrent Distance Filtering for Graph Representation Learning
+    date: Dec 3, 2023
+    date_iso: '2023-12-03'
+    date_display: Dec 2023
+    codebase_url: https://github.com/skeletondyh/GRED
+    published_conference: ICML 2023
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.697
+    - null
+    - null
+    metric_stds:
+    - 0.008
+    - null
+    - null
+  - model: Graph MLP-Mixer
+    model_plain: Graph MLP-Mixer
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2212.13350'
+    title: A Generalization of ViT/MLP-Mixer to Graphs
+    date: Dec 27, 2022
+    date_iso: '2022-12-27'
+    date_display: Dec 2022
+    codebase_url: https://github.com/XiaoxinHe/Graph-ViT-MLPMixer
+    published_conference: ICML 2022
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.697
+    - null
+    - null
+    metric_stds:
+    - 0.008
+    - null
+    - null
+  - model: HOD-GNN
+    model_plain: HOD-GNN
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2510.02565'
+    title: On The Expressive Power of GNN Derivatives
+    date: Oct 2, 2025
+    date_iso: '2025-10-02'
+    date_display: Oct 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6968
+    - null
+    - null
+    metric_stds:
+    - 0.0056
+    - null
+    - null
+  - model: CRaWl
+    model_plain: CRaWl
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_iso: '2024-02-13'
+    date_display: Feb 2024
+    codebase_url: ''
+    published_conference: KDD 2024
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6963
+    - null
+    - null
+    metric_stds:
+    - 0.0079
+    - null
+    - null
+  - model: PPGT
+    model_plain: PPGT
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2504.12588'
+    title: Plain Transformers Can be Powerful Graph Learners
+    date: Apr 17, 2025
+    date_iso: '2025-04-17'
+    date_display: Apr 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6961
+    - null
+    - null
+    metric_stds:
+    - 0.0062
+    - null
+    - null
+  row_count: 252
   rows_json: /data/datasets/peptides-func/standard-split-rows.json
   chart_json: /data/datasets/peptides-func/standard-split-chart.json
   arch_counts:
-    gnn: 124
-    hybrid: 45
+    gnn: 127
+    hybrid: 44
     graph_transformer: 47
     llm: 0
     walk: 1
     traditional: 26
   metric_counts:
-  - 229
+  - 227
   - 17
   - 8
   milestones: &id001
@@ -1755,7 +1755,7 @@ variants:
     title: A Generalization of ViT/MLP-Mixer to Graphs
     date: '2022-12-27'
   - value: 0.7207
-    std: 0.0028
+    std: null
     model: NBA-GCN+LapPE
     arxiv_id: '2310.07430'
     title: Non-backtracking Graph Neural Networks
@@ -1782,6 +1782,13 @@ variants:
       title: Molecular fingerprints are strong models for peptide function prediction
       date: '2025-01-29'
     Accuracy:
+    - value: 0.443
+      std: 0.022
+      model: FoSR
+      arxiv_id: '2309.09384'
+      title: Mitigating Over-Smoothing and Over-Squashing using Augmentations of Forman-Ricci
+        Curvature
+      date: '2023-09-17'
     - value: 0.69
       std: 0.01
       model: ORC

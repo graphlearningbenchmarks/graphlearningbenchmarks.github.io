@@ -52,8 +52,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - FP
-mrr: 0.0109
-adjusted_mrr: 0.0109
+mrr: 0.0121
+adjusted_mrr: 0.0121
 mrr_dataset_count: 3
 benchmark_categories:
 - Classic
@@ -268,8 +268,8 @@ results:
     value_note: ''
     sort_value: 0.8565
     sort_std: null
-    global_rank: 372
-    paper_rank: 372
+    global_rank: 343
+    paper_rank: 343
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -305,7 +305,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 394
+    global_rank: 365
     sort_value: 0.8463
     sort_std: null
     comparison_type: global_top
@@ -518,8 +518,8 @@ results:
     value_note: ''
     sort_value: 0.7222
     sort_std: null
-    global_rank: 39
-    paper_rank: 39
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -555,7 +555,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 104
+    global_rank: 97
     sort_value: 0.6831
     sort_std: null
     comparison_type: global_top
@@ -768,8 +768,8 @@ results:
     value_note: ''
     sort_value: 0.787
     sort_std: null
-    global_rank: 234
-    paper_rank: 234
+    global_rank: 208
+    paper_rank: 208
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -804,7 +804,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 394
+    global_rank: 361
     sort_value: 0.6605
     sort_std: 0.002
     comparison_type: global_top

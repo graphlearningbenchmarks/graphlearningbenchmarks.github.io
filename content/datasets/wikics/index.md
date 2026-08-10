@@ -12,7 +12,7 @@ stats:
   avg_nodes: 11701.0
   avg_edges: 297350.0
   num_classes: 10
-result_count: 498
+result_count: 440
 best_model:
   model: GCN
   value: 0.9302
@@ -34,11 +34,6 @@ papers:
     Synthetic Graph Priors
   date_iso: '2026-04-21'
   venue: ICLR 2026
-- arxiv_id: '2604.08980'
-  title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware Graph
-    Learning'
-  date_iso: '2026-04-10'
-  venue: ''
 - arxiv_id: '2603.19596'
   title: 'CO-EVOLVE: Bidirectional Co-Evolution of Graph Structure and Semantics for
     Heterophilous Learning'
@@ -67,11 +62,6 @@ papers:
     for Graph Foundation Models'
   date_iso: '2025-10-20'
   venue: NeurIPS 2025
-- arxiv_id: '2510.16885'
-  title: 'UniGTE: Unified Graph–Text Encoding for Zero-Shot Generalization across
-    Graph Tasks and Domains'
-  date_iso: '2025-10-19'
-  venue: NeurIPS 2025
 - arxiv_id: '2510.16311'
   title: 'Toward General Digraph Contrastive Learning: A Dual Spatial Perspective'
   date_iso: '2025-10-18'
@@ -95,16 +85,15 @@ papers:
     Augmentations
   date_iso: '2025-06-25'
   venue: ''
+- arxiv_id: '2506.19343'
+  title: Discrepancy-Aware Graph Mask Auto-Encoder
+  date_iso: '2025-06-24'
+  venue: KDD 2025
 - arxiv_id: '2505.19762'
   title: 'Language Models as Messengers: Enhancing Message Passing in Heterophilic
     Graph Learning'
   date_iso: '2025-05-26'
   venue: ''
-- arxiv_id: '2505.17599'
-  title: Dynamic Bundling with Large Language Models for Zero-Shot Inference on Text-Attributed
-    Graphs
-  date_iso: '2025-05-23'
-  venue: NeurIPS 2025
 - arxiv_id: '2505.12684'
   title: Towards Effective Federated Graph Foundation Model via Mitigating Knowledge
     Entanglement
@@ -122,11 +111,6 @@ papers:
   title: 'LLM as GNN: Graph Vocabulary Learning for Text-Attributed Graph Foundation
     Models'
   date_iso: '2025-03-05'
-  venue: ''
-- arxiv_id: '2502.11836'
-  title: 'Model Generalization on Text Attribute Graphs: Principles with Large Language
-    Models'
-  date_iso: '2025-02-17'
   venue: ''
 - arxiv_id: '2501.18739'
   title: 'Beyond Message Passing: Neural Graph Pattern Machine'
@@ -148,11 +132,6 @@ papers:
   title: Even Sparser Graph Transformers
   date_iso: '2024-11-25'
   venue: NeurIPS 2024
-- arxiv_id: '2410.10329'
-  title: 'GraphCLIP: Enhancing Transferability in Graph Foundation Models for Text-Attributed
-    Graphs'
-  date_iso: '2024-10-14'
-  venue: WWW 2024
 - arxiv_id: '2410.02622'
   title: 'Diss-l-ECT: Dissecting Graph Data with local Euler Characteristic Transforms'
   date_iso: '2024-10-03'
@@ -170,14 +149,6 @@ papers:
     in Node Classification Tasks'
   date_iso: '2024-07-28'
   venue: ''
-- arxiv_id: '2407.09709'
-  title: 'GOFA: A Generative One-For-All Model for Joint Graph Language Modeling'
-  date_iso: '2024-07-12'
-  venue: ICLR 2024
-- arxiv_id: '2407.07457'
-  title: 'GLBench: A Comprehensive Benchmark for Graph with Large Language Models'
-  date_iso: '2024-07-10'
-  venue: NeurIPS 2024
 - arxiv_id: '2406.15044'
   title: 'From Overfitting to Robustness: Quantity, Quality, and Variety Oriented
     Negative Sample Selection in Graph Contrastive Learning'
@@ -275,10 +246,6 @@ papers:
   title: Graph Communal Contrastive Learning
   date_iso: '2021-10-28'
   venue: WWW 2021
-- arxiv_id: '2106.05470'
-  title: Automated Self-Supervised Learning for Graphs
-  date_iso: '2021-06-10'
-  venue: ICLR 2021
 - arxiv_id: '2106.02466'
   title: 'Graph Barlow Twins: A self-supervised representation learning framework
     for graphs'
@@ -1090,41 +1057,6 @@ variants:
     - null
     - null
     - null
-  - model: GraphSAGE + UniGAP
-    model_plain: GraphSAGE + UniGAP
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2407.19420'
-    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
-      Over-Smoothing in Node Classification Tasks'
-    date: Jul 28, 2024
-    date_iso: '2024-07-28'
-    date_display: Jul 2024
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8652
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.048
-    - null
-    - null
-    - null
-    - null
   - model: Disam
     model_plain: Disam
     is_baseline: true
@@ -1226,41 +1158,6 @@ variants:
     - null
     metric_stds:
     - 0.0039
-    - null
-    - null
-    - null
-    - null
-  - model: H2GCN + UniGAP
-    model_plain: H2GCN + UniGAP
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.19420'
-    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
-      Over-Smoothing in Node Classification Tasks'
-    date: Jul 28, 2024
-    date_iso: '2024-07-28'
-    date_display: Jul 2024
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: true
-    metric_values:
-    - 0.8614
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.065
     - null
     - null
     - null
@@ -1405,41 +1302,6 @@ variants:
     - null
     - null
     - null
-  - model: GPRGNN + UniGAP
-    model_plain: GPRGNN + UniGAP
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.19420'
-    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
-      Over-Smoothing in Node Classification Tasks'
-    date: Jul 28, 2024
-    date_iso: '2024-07-28'
-    date_display: Jul 2024
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: true
-    metric_values:
-    - 0.8565
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.054
-    - null
-    - null
-    - null
-    - null
   - model: GrokFormer
     model_plain: GrokFormer
     is_baseline: false
@@ -1574,76 +1436,6 @@ variants:
     - null
     metric_stds:
     - 0.0063
-    - null
-    - null
-    - null
-    - null
-  - model: GGCN + UniGAP
-    model_plain: GGCN + UniGAP
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.19420'
-    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
-      Over-Smoothing in Node Classification Tasks'
-    date: Jul 28, 2024
-    date_iso: '2024-07-28'
-    date_display: Jul 2024
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8514
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.049
-    - null
-    - null
-    - null
-    - null
-  - model: LLM-BP (appr.)
-    model_plain: LLM-BP (appr.)
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2502.11836'
-    title: 'Model Generalization on Text Attribute Graphs: Principles with Large Language
-      Models'
-    date: Feb 17, 2025
-    date_iso: '2025-02-17'
-    date_display: Feb 2025
-    codebase_url: https://github.com/Graph-COM/LLM_BP
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8492
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
     - null
     - null
     - null
@@ -2065,18 +1857,188 @@ variants:
     - null
     - null
     - null
-  row_count: 498
+  - model: PolyFormer
+    model_plain: PolyFormer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2411.17296'
+    title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    date: Nov 26, 2024
+    date_iso: '2024-11-26'
+    date_display: Nov 2024
+    codebase_url: https://github.com/GGA23/GrokFormer
+    published_conference: ICML 2024
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8362
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0017
+    - null
+    - null
+    - null
+    - null
+  - model: BernNet
+    model_plain: BernNet
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2411.17296'
+    title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    date: Nov 26, 2024
+    date_iso: '2024-11-26'
+    date_display: Nov 2024
+    codebase_url: https://github.com/GGA23/GrokFormer
+    published_conference: ICML 2024
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8356
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0061
+    - null
+    - null
+    - null
+    - null
+  - model: STAG + Prompt Tuning
+    model_plain: STAG + Prompt Tuning*
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2507.19526'
+    title: Quantizing Text-attributed Graphs for Semantic-Structural Integration
+    date: Jul 20, 2025
+    date_iso: '2025-07-20'
+    date_display: Jul 2025
+    codebase_url: ''
+    published_conference: KDD 2025
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: true
+    metric_values:
+    - 0.8355
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0594
+    - null
+    - null
+    - null
+    - null
+  - model: H2GCN
+    model_plain: H2GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2411.17296'
+    title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    date: Nov 26, 2024
+    date_iso: '2024-11-26'
+    date_display: Nov 2024
+    codebase_url: https://github.com/GGA23/GrokFormer
+    published_conference: ICML 2024
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8345
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0026
+    - null
+    - null
+    - null
+    - null
+  - model: NAGphormer
+    model_plain: NAGphormer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2411.17296'
+    title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    date: Nov 26, 2024
+    date_iso: '2024-11-26'
+    date_display: Nov 2024
+    codebase_url: https://github.com/GGA23/GrokFormer
+    published_conference: ICML 2024
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8341
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0034
+    - null
+    - null
+    - null
+    - null
+  row_count: 440
   rows_json: /data/datasets/wikics/standard-split-rows.json
   chart_json: /data/datasets/wikics/standard-split-chart.json
   arch_counts:
-    gnn: 236
-    hybrid: 60
-    graph_transformer: 30
-    llm: 74
-    walk: 12
+    gnn: 222
+    hybrid: 47
+    graph_transformer: 31
+    llm: 45
+    walk: 13
     traditional: 62
   metric_counts:
-  - 467
+  - 409
   - 12
   - 7
   - 12
@@ -2095,6 +2057,12 @@ variants:
     arxiv_id: '2102.06514'
     title: Large-Scale Representation Learning on Graphs via Bootstrapping
     date: '2021-02-12'
+  - value: 0.833
+    std: 0.0
+    model: GIRL
+    arxiv_id: '2201.12843'
+    title: Graph Representation Learning via Aggregation Enhancement
+    date: '2022-01-30'
   - value: 0.9302
     std: 0.0011
     model: GCN

@@ -12,13 +12,13 @@ stats:
   avg_nodes: 30561187.0
   avg_edges: null
   num_classes: null
-result_count: 112
+result_count: 106
 best_model:
-  model: MPLP
-  value: 0.9072
+  model: CFG
+  value: 0.8997
   metric: MRR
-  arxiv_id: '2309.00976'
-  paper_title: Pure Message Passing Can Estimate Common Neighbor for Link Prediction
+  arxiv_id: '2309.06574'
+  paper_title: 'Circle Feature Graphormer: Can Circle Features Stimulate Graph Transformer?'
 papers:
 - arxiv_id: '2508.17630'
   title: 'Quantum Graph Attention Network: A Novel Quantum Multi-Head Attention Mechanism
@@ -28,10 +28,6 @@ papers:
 - arxiv_id: '2504.06193'
   title: 'Weak Models Can be Good Teachers: A Case Study on Link Prediction with MLPs'
   date_iso: '2025-04-08'
-  venue: ''
-- arxiv_id: '2411.03845'
-  title: Reconsidering the Performance of GAE in Link Prediction
-  date_iso: '2024-11-06'
   venue: ''
 - arxiv_id: '2409.17475'
   title: On the Impact of Feature Heterophily on Link Prediction with Graph Neural
@@ -58,10 +54,6 @@ papers:
   title: 'Circle Feature Graphormer: Can Circle Features Stimulate Graph Transformer?'
   date_iso: '2023-09-11'
   venue: ''
-- arxiv_id: '2309.00976'
-  title: Pure Message Passing Can Estimate Common Neighbor for Link Prediction
-  date_iso: '2023-09-02'
-  venue: NeurIPS 2023
 - arxiv_id: '2305.09887'
   title: 'Simplifying Distributed Neural Network Training on Massive Graphs: Randomized
     Partitions Improve Model Aggregation'
@@ -96,11 +88,6 @@ papers:
   title: 'Neo-GNNs: Neighborhood Overlap-aware Graph Neural Networks for Link Prediction'
   date_iso: '2022-06-09'
   venue: NeurIPS 2022
-- arxiv_id: '2202.13538'
-  title: Algorithm and System Co-design for Efficient Subgraph-based Graph Representation
-    Learning
-  date_iso: '2022-02-28'
-  venue: ''
 - arxiv_id: '2112.02936'
   title: Pairwise Learning for Neural Link Prediction
   date_iso: '2021-12-06'
@@ -141,34 +128,6 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
-  - model: MPLP
-    model_plain: MPLP
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2309.00976'
-    title: Pure Message Passing Can Estimate Common Neighbor for Link Prediction
-    date: Sep 2, 2023
-    date_iso: '2023-09-02'
-    date_display: Sep 2023
-    codebase_url: https://github.com/Barcavin/efficient-node-labelling
-    published_conference: NeurIPS 2023
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2023
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.9072
-    - null
-    metric_stds:
-    - 0.0012
-    - null
   - model: CFG
     model_plain: CFG
     is_baseline: false
@@ -189,7 +148,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.8997
@@ -217,7 +176,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.8987
@@ -245,7 +204,7 @@ variants:
     published_conference_slug: kdd
     published_venue: KDD 2023
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.8981
@@ -262,19 +221,19 @@ variants:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2202.13538'
-    title: Algorithm and System Co-design for Efficient Subgraph-based Graph Representation
-      Learning
-    date: Feb 28, 2022
-    date_iso: '2022-02-28'
-    date_display: Feb 2022
-    codebase_url: https://github.com/Graph-COM/SUREL
+    arxiv_id: '2303.03379'
+    title: 'SUREL+: Moving from Walks to Sets for Scalable Subgraph-based Graph Representation
+      Learning'
+    date: Mar 6, 2023
+    date_iso: '2023-03-06'
+    date_display: Mar 2023
+    codebase_url: 'https://github.com/Graph-COM/SUREL_Plus{https:'
     published_conference: ''
     published_conference_short: ''
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.8974
@@ -291,16 +250,16 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2309.00976'
-    title: Pure Message Passing Can Estimate Common Neighbor for Link Prediction
-    date: Sep 2, 2023
-    date_iso: '2023-09-02'
-    date_display: Sep 2023
-    codebase_url: https://github.com/Barcavin/efficient-node-labelling
-    published_conference: NeurIPS 2023
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2023
+    arxiv_id: '2310.11009'
+    title: 'LPFormer: An Adaptive Graph Transformer for Link Prediction'
+    date: Oct 17, 2023
+    date_iso: '2023-10-17'
+    date_display: Oct 2023
+    codebase_url: https://github.com/HarryShomer/LPFormer
+    published_conference: KDD 2023
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2023
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -365,34 +324,6 @@ variants:
     - null
     metric_stds:
     - 0.0018
-    - null
-  - model: Optimized GAE
-    model_plain: Optimized GAE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.03845'
-    title: Reconsidering the Performance of GAE in Link Prediction
-    date: Nov 6, 2024
-    date_iso: '2024-11-06'
-    date_display: Nov 2024
-    codebase_url: https://github.com/GraphPKU/Refined-GAE
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8874
-    - null
-    metric_stds:
-    - 0.0006
     - null
   - model: PoS+
     model_plain: PoS+
@@ -526,34 +457,6 @@ variants:
     published_conference_short: ICLR
     published_conference_slug: iclr
     published_venue: ICLR 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8756
-    - null
-    metric_stds:
-    - 0.0011
-    - null
-  - model: ELPH
-    model_plain: ELPH
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2309.00976'
-    title: Pure Message Passing Can Estimate Common Neighbor for Link Prediction
-    date: Sep 2, 2023
-    date_iso: '2023-09-02'
-    date_display: Sep 2023
-    codebase_url: https://github.com/Barcavin/efficient-node-labelling
-    published_conference: NeurIPS 2023
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2023
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -818,9 +721,9 @@ variants:
     metric_stds:
     - 0.0029
     - null
-  - model: MPNNs
-    model_plain: MPNNs
-    is_baseline: true
+  - model: AGDN
+    model_plain: AGDN
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
@@ -959,34 +862,6 @@ variants:
     metric_stds:
     - 0.0021
     - null
-  - model: GAE(GCN)
-    model_plain: GAE(GCN)
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.03845'
-    title: Reconsidering the Performance of GAE in Link Prediction
-    date: Nov 6, 2024
-    date_iso: '2024-11-06'
-    date_display: Nov 2024
-    codebase_url: https://github.com/GraphPKU/Refined-GAE
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8474
-    - null
-    metric_stds:
-    - 0.0021
-    - null
   - model: GCN
     model_plain: GCN
     is_baseline: true
@@ -1071,35 +946,6 @@ variants:
     - null
     metric_stds:
     - 0.0355
-    - null
-  - model: DeepWalk
-    model_plain: DeepWalk
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: walk
-    architecture_label: Walk
-    architecture_title: Random-walk graph embedding
-    arxiv_id: '2202.13538'
-    title: Algorithm and System Co-design for Efficient Subgraph-based Graph Representation
-      Learning
-    date: Feb 28, 2022
-    date_iso: '2022-02-28'
-    date_display: Feb 2022
-    codebase_url: https://github.com/Graph-COM/SUREL
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8447
-    - null
-    metric_stds:
-    - 0.0004
     - null
   - model: SuperTMA
     model_plain: SuperTMA
@@ -1558,20 +1404,167 @@ variants:
     metric_stds:
     - 0.001
     - null
-  row_count: 112
+  - model: GATv2
+    model_plain: GATv2
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2508.17630'
+    title: 'Quantum Graph Attention Network: A Novel Quantum Multi-Head Attention
+      Mechanism for Graph Learning'
+    date: Aug 25, 2025
+    date_iso: '2025-08-25'
+    date_display: Aug 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8014
+    - null
+    metric_stds:
+    - 0.0071
+    - null
+  - model: ClusterGCN
+    model_plain: ClusterGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2005.00687'
+    title: OGB
+    date: May 2, 2020
+    date_iso: '2020-05-02'
+    date_display: May 2020
+    codebase_url: https://github.com/snap-stanford/ogb
+    published_conference: NeurIPS 2020
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2020
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8004
+    - null
+    metric_stds:
+    - 0.0025
+    - null
+  - model: GraphSAINT
+    model_plain: GraphSAINT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2005.00687'
+    title: OGB
+    date: May 2, 2020
+    date_iso: '2020-05-02'
+    date_display: May 2020
+    codebase_url: https://github.com/snap-stanford/ogb
+    published_conference: NeurIPS 2020
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2020
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7985
+    - null
+    metric_stds:
+    - 0.004
+    - null
+  - model: DE-GNN
+    model_plain: DE-GNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2303.00170'
+    title: Asymmetric Learning for Graph Neural Network based Link Prediction
+    date: Mar 1, 2023
+    date_iso: '2023-03-01'
+    date_display: Mar 2023
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7885
+    - null
+    metric_stds:
+    - 0.0017
+    - null
+  - model: ZO
+    model_plain: ZO
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2304.10074'
+    title: Improving Graph Neural Networks on Multi-node Tasks with the Labeling Trick
+    date: Apr 20, 2023
+    date_iso: '2023-04-20'
+    date_display: Apr 2023
+    codebase_url: https://github.com/GraphPKU/LabelingTrick
+    published_conference: JMLR 2023
+    published_conference_short: JMLR
+    published_conference_slug: jmlr
+    published_venue: JMLR 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.785
+    - null
+    metric_stds:
+    - 0.0108
+    - null
+  row_count: 106
   rows_json: /data/datasets/ogbl-citation2/standard-split-rows.json
   chart_json: /data/datasets/ogbl-citation2/standard-split-chart.json
   arch_counts:
-    gnn: 53
-    hybrid: 13
+    gnn: 49
+    hybrid: 12
     graph_transformer: 1
     llm: 3
-    walk: 4
+    walk: 3
     traditional: 36
   metric_counts:
-  - 109
+  - 103
   - 3
   milestones: &id001
+  - value: 0.8474
+    std: 0.0021
+    model: GCN
+    arxiv_id: '2005.00687'
+    title: OGB
+    date: '2020-05-02'
   - value: 0.8767
     std: 0.0032
     model: SEAL
@@ -1579,19 +1572,25 @@ variants:
     title: 'Labeling Trick: A Theory of Using Graph Neural Networks for Multi-Node
       Representation Learning'
     date: '2020-10-30'
+  - value: 0.8814
+    std: 0.0008
+    model: PoS+
+    arxiv_id: '2301.12562'
+    title: Simplifying Subgraph Representation Learning for Scalable Link Prediction
+    date: '2023-01-29'
   - value: 0.8974
     std: 0.0018
     model: SUREL
-    arxiv_id: '2202.13538'
-    title: Algorithm and System Co-design for Efficient Subgraph-based Graph Representation
-      Learning
-    date: '2022-02-28'
-  - value: 0.9072
-    std: 0.0012
-    model: MPLP
-    arxiv_id: '2309.00976'
-    title: Pure Message Passing Can Estimate Common Neighbor for Link Prediction
-    date: '2023-09-02'
+    arxiv_id: '2303.03379'
+    title: 'SUREL+: Moving from Walks to Sets for Scalable Subgraph-based Graph Representation
+      Learning'
+    date: '2023-03-06'
+  - value: 0.8997
+    std: 0.0015
+    model: CFG
+    arxiv_id: '2309.06574'
+    title: 'Circle Feature Graphormer: Can Circle Features Stimulate Graph Transformer?'
+    date: '2023-09-11'
   milestones_by_metric:
     MRR: *id001
     Hits@200:

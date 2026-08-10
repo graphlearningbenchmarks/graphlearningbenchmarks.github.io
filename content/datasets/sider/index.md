@@ -12,7 +12,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 27
-result_count: 302
+result_count: 303
 best_model:
   model: KA-GAT
   value: 0.847
@@ -107,15 +107,15 @@ papers:
     Prediction: A Systematic Survey'
   date_iso: '2024-02-11'
   venue: ''
-- arxiv_id: '2402.07191'
-  title: Improving Subgraph Extraction for Graph Invariant Learning via Graph Sinkhorn
-    Attention
-  date_iso: '2024-02-11'
-  venue: ''
 - arxiv_id: '2312.13583'
   title: Fine-tuning Graph Neural Networks by Preserving Graph Generative Patterns
   date_iso: '2023-12-21'
   venue: AAAI 2023
+- arxiv_id: '2311.01038'
+  title: 'Better with Less: A Data-Active Perspective on Pre-Training Graph Neural
+    Networks'
+  date_iso: '2023-11-02'
+  venue: NeurIPS 2023
 - arxiv_id: '2310.14753'
   title: Rethinking Tokenizer and Decoder in Masked Graph Modeling for Molecules
   date_iso: '2023-10-23'
@@ -226,10 +226,6 @@ papers:
     Prediction'
   date_iso: '2021-06-11'
   venue: ''
-- arxiv_id: '2106.05819'
-  title: Adversarial Graph Augmentation to Improve Graph Contrastive Learning
-  date_iso: '2021-06-10'
-  venue: NeurIPS 2021
 - arxiv_id: '2106.04509'
   title: 'MoCL: Data-driven Molecular Fingerprint via Knowledge-aware Contrastive
     Learning from Molecular Graph'
@@ -809,34 +805,6 @@ variants:
     metric_stds:
     - 0.011
     - null
-  - model: 1B MolGP
-    model_plain: 1B MolGP
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 1000.0
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2404.11568'
-    title: On the Scalability of GNNs for Molecular Graphs
-    date: Apr 17, 2024
-    date_iso: '2024-04-17'
-    date_display: Apr 2024
-    codebase_url: ''
-    published_conference: NeurIPS 2024
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.67
-    - null
-    metric_stds:
-    - null
-    - null
   - model: LiGhT FT
     model_plain: LiGhT FT
     is_baseline: true
@@ -864,6 +832,34 @@ variants:
     - null
     metric_stds:
     - 0.005
+    - null
+  - model: 1B MolGPS
+    model_plain: 1B MolGPS
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: 1000.0
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2404.11568'
+    title: On the Scalability of GNNs for Molecular Graphs
+    date: Apr 17, 2024
+    date_iso: '2024-04-17'
+    date_display: Apr 2024
+    codebase_url: ''
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.67
+    - null
+    metric_stds:
+    - null
     - null
   - model: EdgePred SUPT_soft
     model_plain: EdgePred SUPT_soft
@@ -1685,18 +1681,18 @@ variants:
     metric_stds:
     - 0.009
     - null
-  row_count: 302
+  row_count: 303
   rows_json: /data/datasets/sider/scaffold-split-rows.json
   chart_json: /data/datasets/sider/scaffold-split-chart.json
   arch_counts:
-    gnn: 190
-    hybrid: 74
+    gnn: 191
+    hybrid: 73
     graph_transformer: 10
     llm: 5
     walk: 1
     traditional: 15
   metric_counts:
-  - 289
+  - 290
   - 13
   milestones: &id001
   - value: 0.5921

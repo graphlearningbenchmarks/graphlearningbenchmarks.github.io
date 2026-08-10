@@ -15,7 +15,7 @@ stats:
   num_classes: 2
 result_count: 226
 best_model:
-  model: GC-GNN (GraphSAGE)
+  model: GC-GNN (GCN)
   value: 0.921
   metric: Accuracy
   arxiv_id: '2309.00738'
@@ -206,8 +206,8 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
-  - model: GC-GNN (GraphSAGE)
-    model_plain: GC-GNN (GraphSAGE)
+  - model: GC-GNN (GCN)
+    model_plain: GC-GNN (GCN)
     is_baseline: false
     is_overridden: false
     override_reason: ''
@@ -1574,7 +1574,7 @@ variants:
     date: '2021-01-20'
   - value: 0.921
     std: 0.081
-    model: GC-GNN (GraphSAGE)
+    model: GC-GNN (GCN)
     arxiv_id: '2309.00738'
     title: Rethinking the Power of Graph Canonization in Graph Representation Learning
       with Stability

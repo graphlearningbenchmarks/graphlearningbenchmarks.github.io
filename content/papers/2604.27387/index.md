@@ -41,8 +41,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - HGUL
-mrr: 0.0392
-adjusted_mrr: 0.0261
+mrr: 0.0413
+adjusted_mrr: 0.0275
 mrr_dataset_count: 2
 benchmark_categories:
 - OGB
@@ -64,72 +64,6 @@ results:
 - &id002
   dataset: Pokec
   rows:
-  - model: Polynormer-r
-    model_key: polynormer-r
-    model_plain: Polynormer-r
-    value: 0.861
-    std: 0.0005
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2403.01232'
-    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/cornell-zhang/Polynormer
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.861
-    sort_std: 0.0005
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Polynormer
-    model_key: polynormer
-    model_plain: Polynormer
-    value: 0.8595
-    std: 0.0007
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2403.01232'
-    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/cornell-zhang/Polynormer
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.8595
-    sort_std: 0.0007
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
   - model: MoE-H2GCN
     model_key: moe-h2gcn
     model_plain: MoE-H2GCN
@@ -155,13 +89,79 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 1
     sort_value: 0.8302
     sort_std: 0.003
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
+    is_std_outlier: false
+  - model: att-Node-level NLSFs
+    model_key: att-node-level nlsfs
+    model_plain: att-Node-level NLSFs
+    value: 0.8296
+    std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.01249'
+    title: Equivariant Machine Learning on Graphs with Nonlinear Spectral Filters
+    date: Jun 3, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-03'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8296
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: OptBasisGNN
+    model_key: optbasisgnn
+    model_plain: OptBasisGNN
+    value: 0.8283
+    std: 0.0
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.01249'
+    title: Equivariant Machine Learning on Graphs with Nonlinear Spectral Filters
+    date: Jun 3, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-03'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.8283
+    sort_std: 0.0
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
     is_std_outlier: false
   - model: LINKX
     model_key: linkx
@@ -221,10 +221,10 @@ results:
     value_note: ''
     sort_value: 0.8204
     sort_std: 0.001
-    global_rank: 7
-    paper_rank: 53
-    rank_delta: 46
-    rank_delta_abs: 46
+    global_rank: 5
+    paper_rank: 44
+    rank_delta: 39
+    rank_delta_abs: 39
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -291,86 +291,16 @@ results:
     value_note: ''
     sort_value: 0.8107
     sort_std: 0.0016
-    global_rank: 10
-    paper_rank: 56
-    rank_delta: 46
-    rank_delta_abs: 46
+    global_rank: 8
+    paper_rank: 47
+    rank_delta: 39
+    rank_delta_abs: 39
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Graph Neural Networks with Learnable and Optimal Polynomial
       Bases
     comparison_source_arxiv: '2302.12432'
-    is_best: false
-    is_std_outlier: false
-  - model: NAGphormer
-    model_key: nagphormer
-    model_plain: NAGphormer
-    value: 0.1707
-    std: 0.0034
-    paper_value: 0.1707
-    paper_std: 0.0034
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to pokec (score=83)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Apr 30, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.7659
-    at_pub_std: 0.0025
-    at_pub_source_arxiv: '2403.01232'
-    at_pub_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear
-      Time'
-    at_pub_source_date_iso: '2024-03-02'
-    at_pub_source_date_label: ICLR 2024
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.5952000000000001
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7659
-    true_std: 0.0025
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.5952000000000001
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7659
-    sort_std: 0.0025
-    global_rank: 23
-    paper_rank: 61
-    rank_delta: 38
-    rank_delta_abs: 38
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer
-      in Linear Time'
-    comparison_source_arxiv: '2403.01232'
     is_best: false
     is_std_outlier: false
   - model: GCN
@@ -429,10 +359,10 @@ results:
     value_note: ''
     sort_value: 0.7601
     sort_std: 0.0049
-    global_rank: 26
-    paper_rank: 58
-    rank_delta: 32
-    rank_delta_abs: 32
+    global_rank: 22
+    paper_rank: 49
+    rank_delta: 27
+    rank_delta_abs: 27
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -496,10 +426,10 @@ results:
     value_note: ''
     sort_value: 0.7576
     sort_std: 0.0004
-    global_rank: 27
-    paper_rank: 52
-    rank_delta: 25
-    rank_delta_abs: 25
+    global_rank: 23
+    paper_rank: 43
+    rank_delta: 20
+    rank_delta_abs: 20
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -537,16 +467,15 @@ results:
     date_iso: '2026-04-30'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.7223
-    at_pub_std: 0.0018
-    at_pub_source_arxiv: '2403.01232'
-    at_pub_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear
-      Time'
-    at_pub_source_date_iso: '2024-03-02'
-    at_pub_source_date_label: ICLR 2024
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.43720000000000003
+    at_pub_value: 0.7177
+    at_pub_std: 0.0618
+    at_pub_source_arxiv: '2311.05185'
+    at_pub_source_title: Mixture of Weak & Strong Experts on Graphs
+    at_pub_source_date_iso: '2023-11-09'
+    at_pub_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2023-11-09'
+    value_gap_source_date_label: ICLR 2023
+    gap_vs_at_pub: 0.4326
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -554,29 +483,27 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.7223
-    true_std: 0.0018
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
+    true_value: 0.7177
+    true_std: 0.0618
+    value_gap_source_arxiv: '2311.05185'
+    value_gap_source_title: Mixture of Weak & Strong Experts on Graphs
     value_gap_source_is_current_paper: false
-    value_gap: 0.43720000000000003
+    value_gap: 0.4326
     has_value_note: false
     value_note: ''
-    sort_value: 0.7223
-    sort_std: 0.0018
-    global_rank: 32
-    paper_rank: 59
-    rank_delta: 27
-    rank_delta_abs: 27
+    sort_value: 0.7177
+    sort_std: 0.0618
+    global_rank: 26
+    paper_rank: 50
+    rank_delta: 24
+    rank_delta_abs: 24
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer
-      in Linear Time'
-    comparison_source_arxiv: '2403.01232'
+    comparison_source_title: Mixture of Weak & Strong Experts on Graphs
+    comparison_source_arxiv: '2311.05185'
     is_best: false
-    is_std_outlier: false
+    is_std_outlier: true
   - model: MLP
     model_key: mlp
     model_plain: MLP
@@ -602,7 +529,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 36
+    global_rank: 29
     sort_value: 0.7048
     sort_std: 0.0077
     comparison_type: global_top
@@ -668,10 +595,10 @@ results:
     value_note: ''
     sort_value: 0.6691
     sort_std: 0.0146
-    global_rank: 38
-    paper_rank: 59
-    rank_delta: 21
-    rank_delta_abs: 21
+    global_rank: 32
+    paper_rank: 50
+    rank_delta: 18
+    rank_delta_abs: 18
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -736,8 +663,8 @@ results:
     value_note: ''
     sort_value: 0.5337
     sort_std: 0.0215
-    global_rank: 49
-    paper_rank: 59
+    global_rank: 40
+    paper_rank: 50
     rank_delta: 10
     rank_delta_abs: 10
     rank_delta_direction: worse
@@ -804,8 +731,8 @@ results:
     value_note: ''
     sort_value: 0.3305
     sort_std: 0.0057
-    global_rank: 51
-    paper_rank: 51
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -872,8 +799,8 @@ results:
     value_note: ''
     sort_value: 0.3166
     sort_std: 0.0086
-    global_rank: 52
-    paper_rank: 52
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -940,8 +867,8 @@ results:
     value_note: ''
     sort_value: 0.3144
     sort_std: 0.0096
-    global_rank: 53
-    paper_rank: 53
+    global_rank: 44
+    paper_rank: 44
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1008,8 +935,8 @@ results:
     value_note: ''
     sort_value: 0.3114
     sort_std: 0.0059
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1076,8 +1003,8 @@ results:
     value_note: ''
     sort_value: 0.3101
     sort_std: 0.0026
-    global_rank: 55
-    paper_rank: 55
+    global_rank: 46
+    paper_rank: 46
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1144,8 +1071,8 @@ results:
     value_note: ''
     sort_value: 0.3089
     sort_std: 0.008
-    global_rank: 56
-    paper_rank: 56
+    global_rank: 47
+    paper_rank: 47
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1212,8 +1139,8 @@ results:
     value_note: ''
     sort_value: 0.2985
     sort_std: 0.0047
-    global_rank: 57
-    paper_rank: 57
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1280,8 +1207,8 @@ results:
     value_note: ''
     sort_value: 0.2909
     sort_std: 0.0033
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 49
+    paper_rank: 49
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1348,8 +1275,8 @@ results:
     value_note: ''
     sort_value: 0.2867
     sort_std: 0.0019
-    global_rank: 59
-    paper_rank: 59
+    global_rank: 50
+    paper_rank: 50
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1416,8 +1343,8 @@ results:
     value_note: ''
     sort_value: 0.2315
     sort_std: 0.0043
-    global_rank: 60
-    paper_rank: 60
+    global_rank: 51
+    paper_rank: 51
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1484,8 +1411,76 @@ results:
     value_note: ''
     sort_value: 0.2209
     sort_std: 0.0094
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 52
+    paper_rank: 52
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: NAGphormer
+    model_key: nagphormer
+    model_plain: NAGphormer
+    value: 0.1707
+    std: 0.0034
+    paper_value: 0.1707
+    paper_std: 0.0034
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to pokec (score=83)'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Apr 30, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-30'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1707
+    true_std: 0.0034
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1707
+    sort_std: 0.0034
+    global_rank: 53
+    paper_rank: 53
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2929,7 +2924,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 72
+    global_rank: 76
     sort_value: 0.3243
     sort_std: null
     comparison_type: global_top

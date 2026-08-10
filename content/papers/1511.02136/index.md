@@ -34,7 +34,7 @@ paper_type: method
 proposed_models:
 - 5-hop DCNN
 - DCNNs
-mrr: 0.0029
+mrr: 0.003
 adjusted_mrr: 0.001
 mrr_dataset_count: 1
 benchmark_categories:
@@ -53,37 +53,37 @@ results:
   dataset: ENZYMES
   is_multi_metric: true
   rows:
-  - model: BGNN(m)-CS
-    model_key: bgnn(m)-cs
-    model_plain: BGNN(m)-CS
+  - model: GMN
+    model_key: gmn
+    model_plain: GMN
     metric_values:
-    - 0.8068
+    - 0.7866
     - null
     - null
     metric_stds:
-    - 0.0149
+    - null
     - null
     - null
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2002.09518'
+    title: Memory-Based Graph Networks
     published_venue: ''
-    date: Oct 12, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-12'
-    codebase_url: ''
+    date: Feb 21, 2020
+    date_display: Feb 2020
+    date_iso: '2020-02-21'
+    codebase_url: https://github.com/amirkhas/GraphMemoryNet
     uses_external_data: false
     is_global_top: true
     global_rank: 1
     is_best: true
-    sort_value: 0.8068
-    sort_std: 0.0149
+    sort_value: 0.7866
+    sort_std: null
     has_value_gap: false
     has_value_note: false
     paper_rank: null
@@ -94,120 +94,160 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: BGNN
-    model_key: bgnn
-    model_plain: BGNN
+  - model: MemGNN
+    model_key: memgnn
+    model_plain: MemGNN
     metric_values:
-    - 0.7936
+    - 0.755
     - null
     - null
     metric_stds:
-    - 0.0281
     - null
-    - null
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    published_venue: ''
-    date: Oct 12, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-12'
-    codebase_url: ''
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 2
-    is_best: true
-    sort_value: 0.7936
-    sort_std: 0.0281
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: BGNN(m)-SC
-    model_key: bgnn(m)-sc
-    model_plain: BGNN(m)-SC
-    metric_values:
-    - 0.7889
-    - null
-    - null
-    metric_stds:
-    - 0.0079
-    - null
-    - null
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    published_venue: ''
-    date: Oct 12, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-12'
-    codebase_url: ''
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 3
-    is_best: true
-    sort_value: 0.7889
-    sort_std: 0.0079
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    metric_values:
-    - 0.762
-    - null
-    - null
-    metric_stds:
-    - 0.028
     - null
     - null
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: 0.51
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2002.09518'
+    title: Memory-Based Graph Networks
+    published_venue: ''
+    date: Feb 21, 2020
+    date_display: Feb 2020
+    date_iso: '2020-02-21'
+    codebase_url: https://github.com/amirkhas/GraphMemoryNet
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 2
+    is_best: false
+    sort_value: 0.755
+    sort_std: null
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: TFGW SP
+    model_key: tfgw sp (l=2)
+    model_plain: TFGW SP
+    metric_values:
+    - 0.751
+    - null
+    - null
+    metric_stds:
+    - 0.05
+    - null
+    - null
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2205.15733'
+    title: Template based Graph Neural Network with Optimal Transport Distances
+    published_venue: ''
+    date: May 31, 2022
+    date_display: May 2022
+    date_iso: '2022-05-31'
+    codebase_url: ''
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 3
+    is_best: true
+    sort_value: 0.751
+    sort_std: 0.05
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    metric_values:
+    - 0.7
+    - null
+    - null
+    metric_stds:
+    - 0.04944
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2305.06102'
-    title: Towards Better Graph Representation Learning with Parameterized Decomposition
-      & Filtering
+    arxiv_id: '2003.00982'
+    title: GNNBenchmark
     published_venue: ''
-    date: May 10, 2023
-    date_display: May 2023
-    date_iso: '2023-05-10'
-    codebase_url: https://github.com/qslim/PDF
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
     uses_external_data: false
     is_global_top: true
-    global_rank: 8
+    global_rank: 17
     is_best: false
-    sort_value: 0.762
-    sort_std: 0.028
+    sort_value: 0.7
+    sort_std: 0.04944
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    metric_values:
+    - 0.68167
+    - null
+    - null
+    metric_stds:
+    - 0.05449
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2003.00982'
+    title: GNNBenchmark
+    published_venue: ''
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 27
+    is_best: false
+    sort_value: 0.68167
+    sort_std: 0.05449
     has_value_gap: false
     has_value_note: false
     paper_rank: null
@@ -245,7 +285,7 @@ results:
     codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
     uses_external_data: false
     is_global_top: true
-    global_rank: 145
+    global_rank: 133
     is_best: false
     sort_value: 0.55833
     sort_std: 0.03516
@@ -321,7 +361,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 167
+    global_rank: 155
   - model: l2logistic
     model_key: l2logistic
     model_plain: l2logistic
@@ -384,7 +424,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 337
+    global_rank: 328
   - model: 5-hop DCNN
     model_key: 5-hop dcnn
     model_plain: 5-hop DCNN
@@ -446,7 +486,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 343
+    global_rank: 334
   - model: l1logistic
     model_key: l1logistic
     model_plain: l1logistic
@@ -509,7 +549,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 345
+    global_rank: 336
   - model: DCNNs
     model_key: dcnns
     model_plain: DCNNs
@@ -571,7 +611,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 346
+    global_rank: 337
   metrics:
   - Accuracy
   - F (micro)

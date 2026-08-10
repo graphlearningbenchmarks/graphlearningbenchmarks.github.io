@@ -65,393 +65,38 @@ abstract: The expressivity of Graph Neural Networks (GNNs) has been studied broa
   by universal graph canonization consistently outperform GNN baselines and successfully
   improve the SOTA performance up to $31\
 codebase_url: ''
-extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+extraction_model: google/gemma-4-26B-A4B-it
 has_results: true
 paper_type: method
 proposed_models:
-- GC-GNN (GIN)
 - GIN (backbone)
-- GC-GNN (GraphSAGE)
 - GC-GNN (GCN)
-mrr: 0.0083
-adjusted_mrr: 0.0083
+mrr: 0.0065
+adjusted_mrr: 0.0065
 mrr_dataset_count: 6
 benchmark_categories:
 - TU Dortmund
 - OGB
-- GNNBenchmark
 benchmark_coverage:
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
-  evaluated: 3
+  evaluated: 4
   total: 11
 - benchmark: OGB
   benchmark_slug: ogb
   evaluated: 2
   total: 16
-- benchmark: GNNBenchmark
-  benchmark_slug: gnnbenchmark
-  evaluated: 1
-  total: 6
 task_categories:
 - graph_classification
 experiment_scopes:
 - graph-level
 results:
-- &id006
-  dataset: CSL
-  rows:
-  - model: PPGN
-    model_key: ppgn
-    model_plain: PPGN
-    value: 1.0
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.01214'
-    title: Revisiting Random Walks for Learning on Graphs
-    date: Jul 1, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-01'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/jw9730/random-walk
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 1.0
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: RW-AgentNet
-    model_key: rw-agentnet
-    model_plain: RW-AgentNet
-    value: 1.0
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: walk
-    architecture_label: Walk
-    architecture_title: Random-walk graph embedding
-    arxiv_id: '2407.01214'
-    title: Revisiting Random Walks for Learning on Graphs
-    date: Jul 1, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-01'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/jw9730/random-walk
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 1.0
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: AgentNet
-    model_key: agentnet
-    model_plain: AgentNet
-    value: 1.0
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2407.01214'
-    title: Revisiting Random Walks for Learning on Graphs
-    date: Jul 1, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-01'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/jw9730/random-walk
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 1.0
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 1.0
-    std: 0.0
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2003.00982'
-    title: GNNBenchmark
-    date: Jan 1, 2023
-    date_display: Jan 2023
-    date_iso: '2023-01-01'
-    venue: Journal of machine learning research
-    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: Node Positional Encoding with Laplacian Eigenvectors
-    is_global_top: true
-    global_rank: 9
-    sort_value: 1.0
-    sort_std: 0.0
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GC-GNN (GIN)
-    model_key: gc-gnn (gin)
-    model_plain: GC-GNN (GIN)
-    value: 0.9667
-    std: 0.072
-    paper_value: 0.9667
-    paper_std: 0.072
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test accuracy on synthetic CSL dataset for graph isomorphism test.
-    date: Sep 1, 2023
-    date_display: Sep 2023
-    date_iso: '2023-09-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-09-01'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.9667
-    true_std: 0.072
-    value_gap_source_arxiv: '2309.00738'
-    value_gap_source_title: Rethinking the Power of Graph Canonization in Graph Representation
-      Learning with Stability
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9667
-    sort_std: 0.072
-    global_rank: 50
-    paper_rank: 50
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GIN (backbone)
-    model_key: gin (backbone)
-    model_plain: GIN (backbone)
-    value: 0.1157
-    std: 0.0081
-    paper_value: 0.1157
-    paper_std: 0.0081
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test accuracy on synthetic CSL dataset for graph isomorphism test.
-    date: Sep 1, 2023
-    date_display: Sep 2023
-    date_iso: '2023-09-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-09-01'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.1157
-    true_std: 0.0081
-    value_gap_source_arxiv: '2309.00738'
-    value_gap_source_title: Rethinking the Power of Graph Canonization in Graph Representation
-      Learning with Stability
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.1157
-    sort_std: 0.0081
-    global_rank: 79
-    paper_rank: 79
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN (backbone)
-    model_key: gcn (backbone)
-    model_plain: GCN (backbone)
-    value: 0.0133
-    std: 0.0281
-    paper_value: 0.0133
-    paper_std: 0.0281
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test accuracy on synthetic CSL dataset for graph isomorphism test.
-    date: Sep 1, 2023
-    date_display: Sep 2023
-    date_iso: '2023-09-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-09-01'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.0133
-    true_std: 0.0281
-    value_gap_source_arxiv: '2309.00738'
-    value_gap_source_title: Rethinking the Power of Graph Canonization in Graph Representation
-      Learning with Stability
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.0133
-    sort_std: 0.0281
-    global_rank: 99
-    paper_rank: 99
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  rank_metric: Accuracy
-  higher_is_better: true
-  experiment_scope: graph-level
-  dataset_primary_metric: Accuracy
-  paper_metrics:
-  - Accuracy
-  metric: Accuracy
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
-- &id003
+- &id004
   dataset: D&D
   rows:
-  - model: GC-GNN (GraphSAGE)
-    model_key: gc-gnn (graphsage)
-    model_plain: GC-GNN (GraphSAGE)
+  - model: GC-GNN (GCN)
+    model_key: gc-gnn (gcn)
+    model_plain: GC-GNN (GCN)
     value: 0.921
     std: 0.081
     paper_value: 0.921
@@ -466,14 +111,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: The paper describes GC-GNN as enhancing GNNs with graph
+      canonization positional encodings.
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for D&D dataset
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -634,14 +280,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for D&D dataset
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -702,14 +348,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for D&D dataset
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -770,14 +416,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for D&D dataset
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -838,14 +484,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for D&D dataset
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -906,14 +552,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for D&D dataset
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -974,14 +620,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for D&D dataset
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -1042,14 +688,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for D&D dataset
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -1110,14 +756,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for D&D dataset
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -1178,14 +824,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for D&D dataset
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -1246,14 +892,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for D&D dataset
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -1314,14 +960,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for D&D dataset
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -1382,14 +1028,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for D&D dataset
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -1450,14 +1096,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for D&D dataset
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -1518,14 +1164,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for D&D dataset
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -1578,137 +1224,169 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id003
   dataset: ENZYMES
   rows:
-  - model: BGNN(m)-CS
-    model_key: bgnn(m)-cs
-    model_plain: BGNN(m)-CS
-    value: 0.8068
-    std: 0.0149
+  - model: GMN
+    model_key: gmn
+    model_plain: GMN
+    value: 0.7866
+    std: null
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-12'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: ''
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2002.09518'
+    title: Memory-Based Graph Networks
+    date: Feb 21, 2020
+    date_display: Feb 2020
+    date_iso: '2020-02-21'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/amirkhas/GraphMemoryNet
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.8068
-    sort_std: 0.0149
+    sort_value: 0.7866
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: BGNN
-    model_key: bgnn
-    model_plain: BGNN
-    value: 0.7936
-    std: 0.0281
+  - model: MemGNN
+    model_key: memgnn
+    model_plain: MemGNN
+    value: 0.755
+    std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-12'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: ''
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2002.09518'
+    title: Memory-Based Graph Networks
+    date: Feb 21, 2020
+    date_display: Feb 2020
+    date_iso: '2020-02-21'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/amirkhas/GraphMemoryNet
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.7936
-    sort_std: 0.0281
+    sort_value: 0.755
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: BGNN(m)-SC
-    model_key: bgnn(m)-sc
-    model_plain: BGNN(m)-SC
-    value: 0.7889
-    std: 0.0079
+  - model: TFGW SP
+    model_key: tfgw sp (l=2)
+    model_plain: TFGW SP
+    value: 0.751
+    std: 0.05
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-12'
-    venue: AAAI Conference on Artificial Intelligence
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2205.15733'
+    title: Template based Graph Neural Network with Optimal Transport Distances
+    date: May 31, 2022
+    date_display: May 2022
+    date_iso: '2022-05-31'
+    venue: Neural Information Processing Systems
     codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.7889
-    sort_std: 0.0079
+    sort_value: 0.751
+    sort_std: 0.05
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.762
-    std: 0.028
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    value: 0.7
+    std: 0.04944
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: 0.51
+    params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2305.06102'
-    title: Towards Better Graph Representation Learning with Parameterized Decomposition
-      & Filtering
-    date: May 10, 2023
-    date_display: May 2023
-    date_iso: '2023-05-10'
-    venue: International Conference on Machine Learning
-    codebase_url: https://github.com/qslim/PDF
+    arxiv_id: '2003.00982'
+    title: GNNBenchmark
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    venue: Journal of machine learning research
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 8
-    sort_value: 0.762
-    sort_std: 0.028
+    global_rank: 17
+    sort_value: 0.7
+    sort_std: 0.04944
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.68167
+    std: 0.05449
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2003.00982'
+    title: GNNBenchmark
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    venue: Journal of machine learning research
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 27
+    sort_value: 0.68167
+    sort_std: 0.05449
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1731,14 +1409,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for ENZYMES dataset
+    protocol_note: Accuracy on ENZYMES using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -1770,10 +1448,10 @@ results:
     value_note: ''
     sort_value: 0.6767
     sort_std: 0.0374
-    global_rank: 43
-    paper_rank: 246
-    rank_delta: 203
-    rank_delta_abs: 203
+    global_rank: 32
+    paper_rank: 239
+    rank_delta: 207
+    rank_delta_abs: 207
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1806,7 +1484,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 145
+    global_rank: 133
     sort_value: 0.55833
     sort_std: 0.03516
     comparison_type: global_top
@@ -1831,14 +1509,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for ENZYMES dataset
+    protocol_note: Accuracy on ENZYMES using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -1871,8 +1549,8 @@ results:
     value_note: ''
     sort_value: 0.385
     sort_std: 0.063
-    global_rank: 233
-    paper_rank: 233
+    global_rank: 226
+    paper_rank: 226
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1899,14 +1577,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for ENZYMES dataset
+    protocol_note: Accuracy on ENZYMES using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -1939,8 +1617,8 @@ results:
     value_note: ''
     sort_value: 0.383
     sort_std: 0.064
-    global_rank: 235
-    paper_rank: 235
+    global_rank: 228
+    paper_rank: 228
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1967,14 +1645,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for ENZYMES dataset
+    protocol_note: Accuracy on ENZYMES using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -2007,8 +1685,8 @@ results:
     value_note: ''
     sort_value: 0.383
     sort_std: 0.071
-    global_rank: 236
-    paper_rank: 236
+    global_rank: 229
+    paper_rank: 229
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2035,14 +1713,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for ENZYMES dataset
+    protocol_note: Accuracy on ENZYMES using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -2075,8 +1753,8 @@ results:
     value_note: ''
     sort_value: 0.379
     sort_std: 0.063
-    global_rank: 239
-    paper_rank: 239
+    global_rank: 232
+    paper_rank: 232
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2103,14 +1781,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: The paper describes GC-GNN as enhancing GNNs with graph
+      canonization positional encodings.
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for ENZYMES dataset
+    protocol_note: Accuracy on ENZYMES using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -2143,8 +1822,8 @@ results:
     value_note: ''
     sort_value: 0.377
     sort_std: 0.069
-    global_rank: 240
-    paper_rank: 240
+    global_rank: 233
+    paper_rank: 233
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2171,14 +1850,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for ENZYMES dataset
+    protocol_note: Accuracy on ENZYMES using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -2211,8 +1890,8 @@ results:
     value_note: ''
     sort_value: 0.375
     sort_std: 0.064
-    global_rank: 243
-    paper_rank: 243
+    global_rank: 236
+    paper_rank: 236
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2239,14 +1918,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for ENZYMES dataset
+    protocol_note: Accuracy on ENZYMES using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -2279,8 +1958,8 @@ results:
     value_note: ''
     sort_value: 0.312
     sort_std: 0.067
-    global_rank: 268
-    paper_rank: 268
+    global_rank: 259
+    paper_rank: 259
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2307,14 +1986,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for ENZYMES dataset
+    protocol_note: Accuracy on ENZYMES using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -2347,8 +2026,8 @@ results:
     value_note: ''
     sort_value: 0.307
     sort_std: 0.063
-    global_rank: 272
-    paper_rank: 272
+    global_rank: 261
+    paper_rank: 261
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2375,14 +2054,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for ENZYMES dataset
+    protocol_note: Accuracy on ENZYMES using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -2415,8 +2094,8 @@ results:
     value_note: ''
     sort_value: 0.307
     sort_std: 0.063
-    global_rank: 273
-    paper_rank: 273
+    global_rank: 262
+    paper_rank: 262
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2443,14 +2122,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for ENZYMES dataset
+    protocol_note: Accuracy on ENZYMES using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -2483,8 +2162,8 @@ results:
     value_note: ''
     sort_value: 0.307
     sort_std: 0.056
-    global_rank: 274
-    paper_rank: 274
+    global_rank: 263
+    paper_rank: 263
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2511,14 +2190,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for ENZYMES dataset
+    protocol_note: Accuracy on ENZYMES using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -2551,8 +2230,8 @@ results:
     value_note: ''
     sort_value: 0.302
     sort_std: 0.042
-    global_rank: 277
-    paper_rank: 277
+    global_rank: 265
+    paper_rank: 265
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2579,14 +2258,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for ENZYMES dataset
+    protocol_note: Accuracy on ENZYMES using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -2619,8 +2298,8 @@ results:
     value_note: ''
     sort_value: 0.295
     sort_std: 0.057
-    global_rank: 281
-    paper_rank: 281
+    global_rank: 269
+    paper_rank: 269
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2647,14 +2326,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for ENZYMES dataset
+    protocol_note: Accuracy on ENZYMES using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -2687,8 +2366,8 @@ results:
     value_note: ''
     sort_value: 0.29
     sort_std: 0.08
-    global_rank: 283
-    paper_rank: 283
+    global_rank: 270
+    paper_rank: 270
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2715,14 +2394,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for ENZYMES dataset
+    protocol_note: Accuracy on ENZYMES using 10-fold CV
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -2755,8 +2434,8 @@ results:
     value_note: ''
     sort_value: 0.273
     sort_std: 0.055
-    global_rank: 292
-    paper_rank: 292
+    global_rank: 279
+    paper_rank: 279
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2800,7 +2479,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -2894,14 +2573,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for MUTAG dataset
+    protocol_note: 10-fold CV on MUTAG for graph classification accuracy
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -2936,9 +2615,9 @@ results:
     sort_value: 0.95
     sort_std: 0.061
     global_rank: 22
-    paper_rank: 324
-    rank_delta: 302
-    rank_delta_abs: 302
+    paper_rank: 325
+    rank_delta: 303
+    rank_delta_abs: 303
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2963,14 +2642,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for MUTAG dataset
+    protocol_note: 10-fold CV on MUTAG for graph classification accuracy
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -3004,9 +2683,9 @@ results:
     sort_value: 0.947
     sort_std: 0.019
     global_rank: 26
-    paper_rank: 362
-    rank_delta: 336
-    rank_delta_abs: 336
+    paper_rank: 363
+    rank_delta: 337
+    rank_delta_abs: 337
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3064,14 +2743,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for MUTAG dataset
+    protocol_note: 10-fold CV on MUTAG for graph classification accuracy
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -3131,14 +2810,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for MUTAG dataset
+    protocol_note: 10-fold CV on MUTAG for graph classification accuracy
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -3199,14 +2878,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for MUTAG dataset
+    protocol_note: 10-fold CV on MUTAG for graph classification accuracy
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -3251,9 +2930,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GC-GNN (GraphSAGE)
-    model_key: gc-gnn (graphsage)
-    model_plain: GC-GNN (GraphSAGE)
+  - model: GC-GNN (GCN)
+    model_key: gc-gnn (gcn)
+    model_plain: GC-GNN (GCN)
     value: 0.894
     std: 0.088
     paper_value: 0.894
@@ -3268,14 +2947,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: The proposed graph-canonization-enhanced GNNs take one-hot
+      encodings of (v1|G)... as nodes' positional encodings
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for MUTAG dataset
+    protocol_note: 10-fold CV on MUTAG for graph classification accuracy
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -3308,8 +2988,8 @@ results:
     value_note: ''
     sort_value: 0.894
     sort_std: 0.088
-    global_rank: 270
-    paper_rank: 270
+    global_rank: 271
+    paper_rank: 271
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3336,14 +3016,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for MUTAG dataset
+    protocol_note: 10-fold CV on MUTAG for graph classification accuracy
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -3376,8 +3056,8 @@ results:
     value_note: ''
     sort_value: 0.883
     sort_std: 0.092
-    global_rank: 340
-    paper_rank: 340
+    global_rank: 341
+    paper_rank: 341
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3404,14 +3084,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for MUTAG dataset
+    protocol_note: 10-fold CV on MUTAG for graph classification accuracy
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -3444,8 +3124,8 @@ results:
     value_note: ''
     sort_value: 0.879
     sort_std: 0.082
-    global_rank: 358
-    paper_rank: 358
+    global_rank: 359
+    paper_rank: 359
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3480,7 +3160,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 429
+    global_rank: 430
     sort_value: 0.866
     sort_std: 0.0495
     comparison_type: global_top
@@ -3505,14 +3185,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for MUTAG dataset
+    protocol_note: 10-fold CV on MUTAG for graph classification accuracy
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -3573,14 +3253,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for MUTAG dataset
+    protocol_note: 10-fold CV on MUTAG for graph classification accuracy
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -3641,14 +3321,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for MUTAG dataset
+    protocol_note: 10-fold CV on MUTAG for graph classification accuracy
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -3681,8 +3361,8 @@ results:
     value_note: ''
     sort_value: 0.829
     sort_std: 0.111
-    global_rank: 583
-    paper_rank: 583
+    global_rank: 584
+    paper_rank: 584
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3709,14 +3389,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for MUTAG dataset
+    protocol_note: 10-fold CV on MUTAG for graph classification accuracy
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -3749,8 +3429,8 @@ results:
     value_note: ''
     sort_value: 0.819
     sort_std: 0.102
-    global_rank: 634
-    paper_rank: 634
+    global_rank: 633
+    paper_rank: 633
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3777,14 +3457,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for MUTAG dataset
+    protocol_note: 10-fold CV on MUTAG for graph classification accuracy
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -3817,8 +3497,8 @@ results:
     value_note: ''
     sort_value: 0.74
     sort_std: 0.088
-    global_rank: 792
-    paper_rank: 792
+    global_rank: 799
+    paper_rank: 799
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3845,14 +3525,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for MUTAG dataset
+    protocol_note: 10-fold CV on MUTAG for graph classification accuracy
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -3885,8 +3565,8 @@ results:
     value_note: ''
     sort_value: 0.739
     sort_std: 0.107
-    global_rank: 798
-    paper_rank: 798
+    global_rank: 805
+    paper_rank: 805
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3913,14 +3593,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy reported for MUTAG dataset
+    protocol_note: 10-fold CV on MUTAG for graph classification accuracy
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -3953,8 +3633,8 @@ results:
     value_note: ''
     sort_value: 0.734
     sort_std: 0.108
-    global_rank: 805
-    paper_rank: 805
+    global_rank: 812
+    paper_rank: 812
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3973,7 +3653,1206 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id002
+  dataset: PROTEINS
+  rows:
+  - model: MSH-GNN
+    model_key: msh-gnn
+    model_plain: MSH-GNN
+    value: 0.941
+    std: 0.033
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.15015'
+    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
+    date: May 21, 2025
+    date_display: May 2025
+    date_iso: '2025-05-21'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.941
+    sort_std: 0.033
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GRDL
+    model_key: grdl
+    model_plain: GRDL
+    value: 0.826
+    std: 0.012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2408.11370'
+    title: 'Graph Classification via Reference Distribution Learning: Theory and Practice'
+    date: Aug 21, 2024
+    date_display: Aug 2024
+    date_iso: '2024-08-21'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.826
+    sort_std: 0.012
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GMN
+    model_key: gmn
+    model_plain: GMN
+    value: 0.8225
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2002.09518'
+    title: Memory-Based Graph Networks
+    date: Feb 21, 2020
+    date_display: Feb 2020
+    date_iso: '2020-02-21'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/amirkhas/GraphMemoryNet
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.8225
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN-AK+
+    model_key: gin-ak+
+    model_plain: GIN-AK+
+    value: 0.752
+    std: 0.047
+    paper_value: 0.752
+    paper_std: 0.047
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS dataset for graph classification
+    date: Sep 1, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-12-14'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.789
+    true_std: 0.054
+    value_gap_source_arxiv: '2312.08671'
+    value_gap_source_title: 'Permutation-Invariant graph partitioning: How graph neural
+      networks capture structural interactions?'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.03700000000000003
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.789
+    sort_std: 0.054
+    global_rank: 36
+    paper_rank: 255
+    rank_delta: 219
+    rank_delta_abs: 219
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.788
+    std: 0.041
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2312.08671'
+    title: 'Permutation-Invariant graph partitioning: How graph neural networks capture
+      structural interactions?'
+    date: Dec 14, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-14'
+    venue: Neural Networks
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 38
+    sort_value: 0.788
+    sort_std: 0.041
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSNN
+    model_key: graphsnn
+    model_plain: GraphSNN
+    value: 0.747
+    std: 0.039
+    paper_value: 0.747
+    paper_std: 0.039
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS dataset for graph classification
+    date: Sep 1, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.784
+    at_pub_std: 0.027
+    at_pub_source_arxiv: '2308.08235'
+    at_pub_source_title: 'The Expressive Power of Graph Neural Networks: A Survey'
+    at_pub_source_date_iso: '2023-08-16'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-12-14'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.03700000000000003
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.7842
+    true_std: 0.027
+    value_gap_source_arxiv: '2312.08671'
+    value_gap_source_title: 'Permutation-Invariant graph partitioning: How graph neural
+      networks capture structural interactions?'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.03720000000000001
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7842
+    sort_std: 0.027
+    global_rank: 46
+    paper_rank: 305
+    rank_delta: 259
+    rank_delta_abs: 259
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: ESAN
+    model_key: esan
+    model_plain: ESAN
+    value: 0.758
+    std: 0.045
+    paper_value: 0.758
+    paper_std: 0.045
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS dataset for graph classification
+    date: Sep 1, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.759
+    at_pub_std: 0.043
+    at_pub_source_arxiv: '2308.08235'
+    at_pub_source_title: 'The Expressive Power of Graph Neural Networks: A Survey'
+    at_pub_source_date_iso: '2023-08-16'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-12-14'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.0010000000000000009
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.771
+    true_std: 0.046
+    value_gap_source_arxiv: '2312.08671'
+    value_gap_source_title: 'Permutation-Invariant graph partitioning: How graph neural
+      networks capture structural interactions?'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.013000000000000012
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.771
+    sort_std: 0.046
+    global_rank: 92
+    paper_rank: 185
+    rank_delta: 93
+    rank_delta_abs: 93
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GC-GNN (GCN)
+    model_key: gc-gnn (gcn)
+    model_plain: GC-GNN (GCN)
+    value: 0.767
+    std: 0.051
+    paper_value: 0.767
+    paper_std: 0.051
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: The paper describes GC-GNN as enhancing GNNs with graph
+      canonization positional encodings.
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS dataset for graph classification
+    date: Sep 1, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-09-01'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.767
+    true_std: 0.051
+    value_gap_source_arxiv: '2309.00738'
+    value_gap_source_title: Rethinking the Power of Graph Canonization in Graph Representation
+      Learning with Stability
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.767
+    sort_std: 0.051
+    global_rank: 111
+    paper_rank: 111
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DropGNN
+    model_key: dropgnn
+    model_plain: DropGNN
+    value: 0.763
+    std: 0.061
+    paper_value: 0.763
+    paper_std: 0.061
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS dataset for graph classification
+    date: Sep 1, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-09-01'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.763
+    true_std: 0.061
+    value_gap_source_arxiv: '2309.00738'
+    value_gap_source_title: Rethinking the Power of Graph Canonization in Graph Representation
+      Learning with Stability
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.763
+    sort_std: 0.061
+    global_rank: 152
+    paper_rank: 152
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.76
+    std: 0.032
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2504.13426'
+    title: Simplifying Graph Convolutional Networks with Redundancy-Free Neighbors
+    date: Apr 18, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-18'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 170
+    sort_value: 0.76
+    sort_std: 0.032
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SignNet
+    model_key: signnet
+    model_plain: SignNet
+    value: 0.756
+    std: 0.041
+    paper_value: 0.756
+    paper_std: 0.041
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS dataset for graph classification
+    date: Sep 1, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-09-01'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.756
+    true_std: 0.041
+    value_gap_source_arxiv: '2309.00738'
+    value_gap_source_title: Rethinking the Power of Graph Canonization in Graph Representation
+      Learning with Stability
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.756
+    sort_std: 0.041
+    global_rank: 212
+    paper_rank: 212
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Nested GraphSAGE
+    model_key: nested graphsage
+    model_plain: Nested GraphSAGE
+    value: 0.742
+    std: 0.037
+    paper_value: 0.742
+    paper_std: 0.037
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS dataset for graph classification
+    date: Sep 1, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-09-01'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.742
+    true_std: 0.037
+    value_gap_source_arxiv: '2309.00738'
+    value_gap_source_title: Rethinking the Power of Graph Canonization in Graph Representation
+      Learning with Stability
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.742
+    sort_std: 0.037
+    global_rank: 343
+    paper_rank: 343
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Nested GIN
+    model_key: nested gin
+    model_plain: Nested GIN
+    value: 0.739
+    std: 0.051
+    paper_value: 0.739
+    paper_std: 0.051
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS dataset for graph classification
+    date: Sep 1, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-09-01'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.739
+    true_std: 0.051
+    value_gap_source_arxiv: '2309.00738'
+    value_gap_source_title: Rethinking the Power of Graph Canonization in Graph Representation
+      Learning with Stability
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.739
+    sort_std: 0.051
+    global_rank: 359
+    paper_rank: 359
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Nested GAT
+    model_key: nested gat
+    model_plain: Nested GAT
+    value: 0.737
+    std: 0.048
+    paper_value: 0.737
+    paper_std: 0.048
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS dataset for graph classification
+    date: Sep 1, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-09-01'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.737
+    true_std: 0.048
+    value_gap_source_arxiv: '2309.00738'
+    value_gap_source_title: Rethinking the Power of Graph Canonization in Graph Representation
+      Learning with Stability
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.737
+    sort_std: 0.048
+    global_rank: 370
+    paper_rank: 370
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GNN-RNI
+    model_key: gnn-rni
+    model_plain: GNN-RNI
+    value: 0.735
+    std: 0.045
+    paper_value: 0.735
+    paper_std: 0.045
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS dataset for graph classification
+    date: Sep 1, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-09-01'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.735
+    true_std: 0.045
+    value_gap_source_arxiv: '2309.00738'
+    value_gap_source_title: Rethinking the Power of Graph Canonization in Graph Representation
+      Learning with Stability
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.735
+    sort_std: 0.045
+    global_rank: 383
+    paper_rank: 383
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Nested GCN
+    model_key: nested gcn
+    model_plain: Nested GCN
+    value: 0.733
+    std: 0.04
+    paper_value: 0.733
+    paper_std: 0.04
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS dataset for graph classification
+    date: Sep 1, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-09-01'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.733
+    true_std: 0.04
+    value_gap_source_arxiv: '2309.00738'
+    value_gap_source_title: Rethinking the Power of Graph Canonization in Graph Representation
+      Learning with Stability
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.733
+    sort_std: 0.04
+    global_rank: 394
+    paper_rank: 394
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GAT (backbone)
+    model_key: gat (backbone)
+    model_plain: GAT (backbone)
+    value: 0.72
+    std: 0.033
+    paper_value: 0.72
+    paper_std: 0.033
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS dataset for graph classification
+    date: Sep 1, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-09-01'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.72
+    true_std: 0.033
+    value_gap_source_arxiv: '2309.00738'
+    value_gap_source_title: Rethinking the Power of Graph Canonization in Graph Representation
+      Learning with Stability
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.72
+    sort_std: 0.033
+    global_rank: 453
+    paper_rank: 453
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN (backbone)
+    model_key: gcn (backbone)
+    model_plain: GCN (backbone)
+    value: 0.717
+    std: 0.047
+    paper_value: 0.717
+    paper_std: 0.047
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS dataset for graph classification
+    date: Sep 1, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-09-01'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.717
+    true_std: 0.047
+    value_gap_source_arxiv: '2309.00738'
+    value_gap_source_title: Rethinking the Power of Graph Canonization in Graph Representation
+      Learning with Stability
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.717
+    sort_std: 0.047
+    global_rank: 466
+    paper_rank: 466
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE (backbone)
+    model_key: graphsage (backbone)
+    model_plain: GraphSAGE (backbone)
+    value: 0.712
+    std: 0.052
+    paper_value: 0.712
+    paper_std: 0.052
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS dataset for graph classification
+    date: Sep 1, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-09-01'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.712
+    true_std: 0.052
+    value_gap_source_arxiv: '2309.00738'
+    value_gap_source_title: Rethinking the Power of Graph Canonization in Graph Representation
+      Learning with Stability
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.712
+    sort_std: 0.052
+    global_rank: 483
+    paper_rank: 483
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN (backbone)
+    model_key: gin (backbone)
+    model_plain: GIN (backbone)
+    value: 0.706
+    std: 0.043
+    paper_value: 0.706
+    paper_std: 0.043
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS dataset for graph classification
+    date: Sep 1, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-09-01'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.706
+    true_std: 0.043
+    value_gap_source_arxiv: '2309.00738'
+    value_gap_source_title: Rethinking the Power of Graph Canonization in Graph Representation
+      Learning with Stability
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.706
+    sort_std: 0.043
+    global_rank: 494
+    paper_rank: 494
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id005
   dataset: ogbg-molhiv
   rows:
   - model: Multi-RF Fusion with Multi-GNN Blending
@@ -4101,7 +4980,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 10
+    global_rank: 12
     sort_value: 0.809
     sort_std: 0.016
     comparison_type: global_top
@@ -4126,14 +5005,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard OGB scaffold split for graph classification.
+    protocol_note: ROC-AUC on ogbg-molhiv using official scaffold split.
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -4166,8 +5045,8 @@ results:
     value_note: ''
     sort_value: 0.7803
     sort_std: 0.017
-    global_rank: 107
-    paper_rank: 107
+    global_rank: 108
+    paper_rank: 108
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4227,14 +5106,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard OGB scaffold split for graph classification.
+    protocol_note: ROC-AUC on ogbg-molhiv using official scaffold split.
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -4267,8 +5146,8 @@ results:
     value_note: ''
     sort_value: 0.7744
     sort_std: 0.0098
-    global_rank: 137
-    paper_rank: 137
+    global_rank: 138
+    paper_rank: 138
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4295,14 +5174,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard OGB scaffold split for graph classification.
+    protocol_note: ROC-AUC on ogbg-molhiv using official scaffold split.
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -4335,8 +5214,8 @@ results:
     value_note: ''
     sort_value: 0.7705
     sort_std: 0.0195
-    global_rank: 165
-    paper_rank: 165
+    global_rank: 166
+    paper_rank: 166
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4363,14 +5242,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard OGB scaffold split for graph classification.
+    protocol_note: ROC-AUC on ogbg-molhiv using official scaffold split.
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -4403,8 +5282,8 @@ results:
     value_note: ''
     sort_value: 0.7609
     sort_std: 0.0158
-    global_rank: 215
-    paper_rank: 215
+    global_rank: 216
+    paper_rank: 216
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4431,14 +5310,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard OGB scaffold split for graph classification.
+    protocol_note: ROC-AUC on ogbg-molhiv using official scaffold split.
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -4471,8 +5350,8 @@ results:
     value_note: ''
     sort_value: 0.7501
     sort_std: 0.014
-    global_rank: 255
-    paper_rank: 255
+    global_rank: 256
+    paper_rank: 256
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4491,7 +5370,7 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id006
   dataset: ogbg-molpcba
   rows:
   - model: HIG with Graphormer
@@ -4643,14 +5522,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    protocol_note: ogbg-molpcba scaffold split, AP metric
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -4711,14 +5590,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    protocol_note: ogbg-molpcba scaffold split, AP metric
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -4779,14 +5658,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    protocol_note: ogbg-molpcba scaffold split, AP metric
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -4847,14 +5726,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    protocol_note: ogbg-molpcba scaffold split, AP metric
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -4915,14 +5794,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    protocol_note: ogbg-molpcba scaffold split, AP metric
     date: Sep 1, 2023
     date_display: Sep 2023
     date_iso: '2023-09-01'
@@ -4981,12 +5860,10 @@ results_grouped:
   - *id001
   - *id002
   - *id003
+  - *id004
 - benchmark: OGB
   datasets:
-  - *id004
   - *id005
-- benchmark: GNNBenchmark
-  datasets:
   - *id006
 datasets_by_scope:
 - scope: graph-level
@@ -4997,6 +5874,8 @@ datasets_by_scope:
     datasets:
     - dataset: MUTAG
       dataset_slug: mutag
+    - dataset: PROTEINS
+      dataset_slug: proteins
     - dataset: ENZYMES
       dataset_slug: enzymes
     - dataset: D&D
@@ -5008,11 +5887,6 @@ datasets_by_scope:
       dataset_slug: ogbg-molhiv
     - dataset: ogbg-molpcba
       dataset_slug: ogbg-molpcba
-  - benchmark: GNNBenchmark
-    benchmark_slug: gnnbenchmark
-    datasets:
-    - dataset: CSL
-      dataset_slug: csl
 main_figure: /figures/2309.00738/main_figure.jpegoptim.jpg
 ---
 

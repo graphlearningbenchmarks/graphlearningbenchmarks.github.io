@@ -48,8 +48,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - EM
-mrr: 0.0053
-adjusted_mrr: 0.0035
+mrr: 0.0051
+adjusted_mrr: 0.0034
 mrr_dataset_count: 2
 benchmark_categories:
 - MoleculeNet
@@ -190,10 +190,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 41
+    global_rank: 43
     sort_value: 0.8646
     sort_std: 0.0081
     comparison_type: global_top
@@ -258,8 +258,8 @@ results:
     value_note: ''
     sort_value: 0.729
     sort_std: 0.007
-    global_rank: 258
-    paper_rank: 258
+    global_rank: 265
+    paper_rank: 265
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -326,8 +326,8 @@ results:
     value_note: ''
     sort_value: 0.722
     sort_std: 0.004
-    global_rank: 262
-    paper_rank: 262
+    global_rank: 269
+    paper_rank: 269
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -394,8 +394,8 @@ results:
     value_note: ''
     sort_value: 0.719
     sort_std: 0.008
-    global_rank: 263
-    paper_rank: 263
+    global_rank: 270
+    paper_rank: 270
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -462,8 +462,8 @@ results:
     value_note: ''
     sort_value: 0.715
     sort_std: 0.005
-    global_rank: 269
-    paper_rank: 269
+    global_rank: 276
+    paper_rank: 276
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -530,8 +530,8 @@ results:
     value_note: ''
     sort_value: 0.713
     sort_std: 0.007
-    global_rank: 271
-    paper_rank: 271
+    global_rank: 278
+    paper_rank: 278
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -598,8 +598,8 @@ results:
     value_note: ''
     sort_value: 0.71
     sort_std: 0.003
-    global_rank: 272
-    paper_rank: 272
+    global_rank: 279
+    paper_rank: 279
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -666,8 +666,8 @@ results:
     value_note: ''
     sort_value: 0.701
     sort_std: 0.006
-    global_rank: 280
-    paper_rank: 280
+    global_rank: 287
+    paper_rank: 287
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -882,8 +882,8 @@ results:
     value_note: ''
     sort_value: 0.729
     sort_std: 0.007
-    global_rank: 150
-    paper_rank: 150
+    global_rank: 154
+    paper_rank: 154
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -950,8 +950,8 @@ results:
     value_note: ''
     sort_value: 0.722
     sort_std: 0.004
-    global_rank: 156
-    paper_rank: 156
+    global_rank: 160
+    paper_rank: 160
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1018,8 +1018,8 @@ results:
     value_note: ''
     sort_value: 0.719
     sort_std: 0.008
-    global_rank: 159
-    paper_rank: 159
+    global_rank: 163
+    paper_rank: 163
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1086,8 +1086,8 @@ results:
     value_note: ''
     sort_value: 0.715
     sort_std: 0.005
-    global_rank: 166
-    paper_rank: 166
+    global_rank: 170
+    paper_rank: 170
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1154,8 +1154,8 @@ results:
     value_note: ''
     sort_value: 0.713
     sort_std: 0.007
-    global_rank: 167
-    paper_rank: 167
+    global_rank: 171
+    paper_rank: 171
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1222,8 +1222,8 @@ results:
     value_note: ''
     sort_value: 0.71
     sort_std: 0.003
-    global_rank: 169
-    paper_rank: 169
+    global_rank: 173
+    paper_rank: 173
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1290,8 +1290,8 @@ results:
     value_note: ''
     sort_value: 0.701
     sort_std: 0.006
-    global_rank: 172
-    paper_rank: 172
+    global_rank: 176
+    paper_rank: 176
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

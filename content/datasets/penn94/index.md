@@ -12,7 +12,7 @@ stats:
   avg_nodes: 41554.0
   avg_edges: 1362229.0
   num_classes: 2
-result_count: 106
+result_count: 109
 best_model:
   model: ChebNet2D
   value: 0.8762
@@ -24,6 +24,10 @@ papers:
   title: Frequency-Corrupt Based Graph Self-Supervised Learning
   date_iso: '2026-04-17'
   venue: WWW 2026
+- arxiv_id: '2506.19343'
+  title: Discrepancy-Aware Graph Mask Auto-Encoder
+  date_iso: '2025-06-24'
+  venue: KDD 2025
 - arxiv_id: '2504.20430'
   title: Learning Laplacian Positional Encodings for Heterophilous Graphs
   date_iso: '2025-04-29'
@@ -82,14 +86,14 @@ papers:
   title: Clarify Confused Nodes via Separated Learning
   date_iso: '2023-06-04'
   venue: ''
-- arxiv_id: '2303.06344'
-  title: Graph Contrastive Learning under Heterophily via Graph Filters
-  date_iso: '2023-03-11'
-  venue: ''
 - arxiv_id: '2302.12432'
   title: Graph Neural Networks with Learnable and Optimal Polynomial Bases
   date_iso: '2023-02-24'
   venue: ICML 2023
+- arxiv_id: '2210.05382'
+  title: Uplifting Message Passing Neural Network with Graph Original Information
+  date_iso: '2022-10-08'
+  venue: ''
 - arxiv_id: '2206.03601'
   title: Decoupled Self-supervised Learning for Non-Homophilou Graphs
   date_iso: '2022-06-07'
@@ -228,6 +232,32 @@ variants:
     - 0.8557
     metric_stds:
     - null
+  - model: INGNN
+    model_plain: INGNN
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.05382'
+    title: Uplifting Message Passing Neural Network with Graph Original Information
+    date: Oct 8, 2022
+    date_iso: '2022-10-08'
+    date_display: Oct 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8544
+    metric_stds:
+    - 0.006
   - model: att-Node-level NLSFs
     model_plain: att-Node-level NLSFs
     is_baseline: false
@@ -700,6 +730,32 @@ variants:
     - 0.8365
     metric_stds:
     - 0.006
+  - model: MixHop
+    model_plain: MixHop
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.05382'
+    title: Uplifting Message Passing Neural Network with Graph Original Information
+    date: Oct 8, 2022
+    date_iso: '2022-10-08'
+    date_display: Oct 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8363
+    metric_stds:
+    - 0.0054
   - model: GrokFormer
     model_plain: GrokFormer
     is_baseline: false
@@ -726,6 +782,32 @@ variants:
     - 0.8359
     metric_stds:
     - 0.0026
+  - model: AdaGNN
+    model_plain: AdaGNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.05382'
+    title: Uplifting Message Passing Neural Network with Graph Original Information
+    date: Oct 8, 2022
+    date_iso: '2022-10-08'
+    date_display: Oct 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8355
+    metric_stds:
+    - 0.0031
   - model: GPR-GNN
     model_plain: GPR-GNN
     is_baseline: true
@@ -804,32 +886,6 @@ variants:
     - 0.8352
     metric_stds:
     - 0.002
-  - model: MixHop
-    model_plain: MixHop
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2302.12432'
-    title: Graph Neural Networks with Learnable and Optimal Polynomial Bases
-    date: Feb 24, 2023
-    date_iso: '2023-02-24'
-    date_display: Feb 2023
-    codebase_url: https://github.com/yuziGuo/FarOptBasis
-    published_conference: ICML 2023
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8347
-    metric_stds:
-    - 0.0071
   - model: MoE-H2GCN
     model_plain: MoE-H2GCN
     is_baseline: true
@@ -1012,32 +1068,6 @@ variants:
     - 0.8307
     metric_stds:
     - 0.0135
-  - model: ACM-GCN
-    model_plain: ACM-GCN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2306.02285'
-    title: Clarify Confused Nodes via Separated Learning
-    date: Jun 4, 2023
-    date_iso: '2023-06-04'
-    date_display: Jun 2023
-    codebase_url: https://github.com/GISec-Team/NCGNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8298
-    metric_stds:
-    - 0.0063
   - model: GCNII
     model_plain: GCNII
     is_baseline: true
@@ -1116,6 +1146,32 @@ variants:
     - 0.8268
     metric_stds:
     - 0.0032
+  - model: ACM-GCN
+    model_plain: ACM-GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.05382'
+    title: Uplifting Message Passing Neural Network with Graph Original Information
+    date: Oct 8, 2022
+    date_iso: '2022-10-08'
+    date_display: Oct 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8268
+    metric_stds:
+    - 0.006
   - model: ChebNet
     model_plain: ChebNet
     is_baseline: true
@@ -1326,6 +1382,32 @@ variants:
     - 0.8161
     metric_stds:
     - 0.0027
+  - model: H2GCN
+    model_plain: H2GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.05382'
+    title: Uplifting Message Passing Neural Network with Graph Original Information
+    date: Oct 8, 2022
+    date_iso: '2022-10-08'
+    date_display: Oct 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8154
+    metric_stds:
+    - 0.0056
   - model: GAT
     model_plain: GAT
     is_baseline: true
@@ -1335,114 +1417,35 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2311.05185'
-    title: Mixture of Weak & Strong Experts on Graphs
-    date: Nov 9, 2023
-    date_iso: '2023-11-09'
-    date_display: Nov 2023
-    codebase_url: https://github.com/VITA-Group/Graph-Mixture-of-Experts
-    published_conference: ICLR 2023
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2023
+    arxiv_id: '2210.05382'
+    title: Uplifting Message Passing Neural Network with Graph Original Information
+    date: Oct 8, 2022
+    date_iso: '2022-10-08'
+    date_display: Oct 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
     uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
-    - 0.8153
+    - 0.8145
     metric_stds:
     - 0.0055
-  - model: SGC
-    model_plain: SGC
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2403.07954'
-    title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive Krylov Subspace
-      Approach'
-    date: Mar 12, 2024
-    date_iso: '2024-03-12'
-    date_display: Mar 2024
-    codebase_url: https://github.com/kkhuang81/AdaptKry
-    published_conference: WWW 2024
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8144
-    metric_stds:
-    - 0.0015
-  - model: GPRGNN
-    model_plain: GPRGNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2312.14438'
-    title: 'PC-Conv: Unifying Homophily and Heterophily with Two-fold Filtering'
-    date: Dec 22, 2023
-    date_iso: '2023-12-22'
-    date_display: Dec 2023
-    codebase_url: https://github.com/uestclbh/PC-Conv
-    published_conference: AAAI 2023
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8138
-    metric_stds:
-    - 0.0016
-  - model: GPR-GNN
-    model_plain: GPR-GNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2311.05185'
-    title: Mixture of Weak & Strong Experts on Graphs
-    date: Nov 9, 2023
-    date_iso: '2023-11-09'
-    date_display: Nov 2023
-    codebase_url: https://github.com/VITA-Group/Graph-Mixture-of-Experts
-    published_conference: ICLR 2023
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8138
-    metric_stds:
-    - 0.0016
-  row_count: 106
+  row_count: 109
   rows_json: /data/datasets/penn94/standard-split-rows.json
   chart_json: /data/datasets/penn94/standard-split-chart.json
   arch_counts:
-    gnn: 79
-    hybrid: 14
+    gnn: 82
+    hybrid: 13
     graph_transformer: 8
     llm: 0
     walk: 3
     traditional: 2
   metric_counts:
-  - 106
+  - 109
   milestones: &id001
   - value: 0.8486
     std: 0.0033
@@ -1450,12 +1453,18 @@ variants:
     arxiv_id: '2202.03580'
     title: Convolutional Neural Networks on Graphs with Chebyshev Approximation, Revisited
     date: '2022-02-04'
-  - value: 0.856
-    std: 0.004
+  - value: 0.8557
+    std: null
     model: GloGNN
-    arxiv_id: '2303.06344'
-    title: Graph Contrastive Learning under Heterophily via Graph Filters
-    date: '2023-03-11'
+    arxiv_id: '2205.07308'
+    title: Finding Global Homophily in Graph Neural Networks When Meeting Heterophily
+    date: '2022-05-15'
+  - value: 0.856
+    std: 0.0027
+    model: GloGNN
+    arxiv_id: '2210.05382'
+    title: Uplifting Message Passing Neural Network with Graph Original Information
+    date: '2022-10-08'
   - value: 0.8574
     std: 0.0042
     model: GloGNN

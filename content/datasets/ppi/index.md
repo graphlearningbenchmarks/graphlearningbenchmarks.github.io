@@ -12,7 +12,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 121
-result_count: 295
+result_count: 310
 best_model:
   model: GAMLP(JK)
   value: 0.9982
@@ -45,6 +45,10 @@ papers:
   title: Disentangled Generative Graph Representation Learning
   date_iso: '2024-08-24'
   venue: ''
+- arxiv_id: '2407.00494'
+  title: Graph Neural Networks Gone Hogwild
+  date_iso: '2024-06-29'
+  venue: ICLR 2024
 - arxiv_id: '2402.10380'
   title: Subgraph-level Universal Prompt Tuning
   date_iso: '2024-02-16'
@@ -226,6 +230,10 @@ papers:
     Networks'
   date_iso: '2019-05-20'
   venue: KDD 2019
+- arxiv_id: '1901.01343'
+  title: Graph Neural Networks With Convolutional ARMA Filters
+  date_iso: '2019-01-05'
+  venue: ''
 - arxiv_id: '1901.00596'
   title: A Comprehensive Survey on Graph Neural Networks
   date_iso: '2019-01-01'
@@ -239,6 +247,10 @@ papers:
     Graphs'
   date_iso: '2018-03-20'
   venue: ''
+- arxiv_id: '1710.10903'
+  title: Graph Attention Networks
+  date_iso: '2017-10-30'
+  venue: ICLR 2017
 - arxiv_id: '1710.03059'
   title: Learning Graph Representations with Embedding Propagation
   date_iso: '2017-10-09'
@@ -2088,18 +2100,18 @@ variants:
     - null
     - null
     - null
-  row_count: 295
+  row_count: 310
   rows_json: /data/datasets/ppi/standard-split-rows.json
   chart_json: /data/datasets/ppi/standard-split-chart.json
   arch_counts:
-    gnn: 203
-    hybrid: 56
-    graph_transformer: 1
+    gnn: 213
+    hybrid: 57
+    graph_transformer: 2
     llm: 1
     walk: 6
-    traditional: 13
+    traditional: 15
   metric_counts:
-  - 238
+  - 253
   - 15
   - 19
   - 2
@@ -2112,6 +2124,12 @@ variants:
     arxiv_id: '1706.02216'
     title: Inductive Representation Learning on Large Graphs
     date: '2017-06-07'
+  - value: 0.973
+    std: 0.002
+    model: GAT
+    arxiv_id: '1710.10903'
+    title: Graph Attention Networks
+    date: '2017-10-30'
   - value: 0.9871
     std: 0.0002
     model: GaAN
@@ -2173,7 +2191,13 @@ variants:
       title: 'Cluster-GCN: An Efficient Algorithm for Training Deep and Large Graph
         Convolutional Networks'
       date: '2019-05-20'
-    Overlap Consistency: []
+    Overlap Consistency:
+    - value: 0.937
+      std: 0.001
+      model: DiSe-GAE
+      arxiv_id: '2410.21043'
+      title: Disentangled and Self-Explainable Node Representation Learning
+      date: '2024-10-28'
     ROC-AUC:
     - value: 0.8191
       std: null
@@ -2181,6 +2205,12 @@ variants:
       arxiv_id: '2402.10380'
       title: Subgraph-level Universal Prompt Tuning
       date: '2024-02-16'
-    Topological Alignment: []
+    Topological Alignment:
+    - value: 0.569
+      std: 0.022
+      model: DW+Dine
+      arxiv_id: '2410.21043'
+      title: Disentangled and Self-Explainable Node Representation Learning
+      date: '2024-10-28'
 ---
 

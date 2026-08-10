@@ -108,8 +108,9 @@ results:
     venue: Trans. Mach. Learn. Res.
     codebase_url: https://github.com/workrep20232/PROXI
     uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: combines all relevant proximity information about node
+      pairs... structural proximity... and domain proximity
     is_global_top: true
     global_rank: 1
     sort_value: 0.765
@@ -141,7 +142,7 @@ results:
     venue: Trans. Mach. Learn. Res.
     codebase_url: https://github.com/workrep20232/PROXI
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -257,8 +258,8 @@ results:
       for Multi-Node Representation Learning'
     at_pub_source_date_iso: '2020-10-30'
     at_pub_source_date_label: NeurIPS 2020
-    value_gap_source_date_iso: '2024-11-06'
-    value_gap_source_date_label: '2024'
+    value_gap_source_date_iso: '2023-10-17'
+    value_gap_source_date_label: KDD 2023
     gap_vs_at_pub: 0.11029999999999995
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -269,18 +270,18 @@ results:
     today_delta_significant: true
     true_value: 0.6474
     true_std: 0.0043
-    value_gap_source_arxiv: '2411.03845'
-    value_gap_source_title: Reconsidering the Performance of GAE in Link Prediction
+    value_gap_source_arxiv: '2310.11009'
+    value_gap_source_title: 'LPFormer: An Adaptive Graph Transformer for Link Prediction'
     value_gap_source_is_current_paper: false
     value_gap: 0.11029999999999995
     has_value_note: false
     value_note: ''
     sort_value: 0.6474
     sort_std: 0.0043
-    global_rank: 21
+    global_rank: 20
     paper_rank: 44
-    rank_delta: 23
-    rank_delta_abs: 23
+    rank_delta: 24
+    rank_delta_abs: 24
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -413,8 +414,8 @@ results:
     value_note: ''
     sort_value: 0.5273
     sort_std: 0.0047
-    global_rank: 49
-    paper_rank: 49
+    global_rank: 50
+    paper_rank: 50
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -480,8 +481,8 @@ results:
     value_note: ''
     sort_value: 0.5221
     sort_std: 0.0072
-    global_rank: 52
-    paper_rank: 52
+    global_rank: 53
+    paper_rank: 53
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -517,7 +518,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 88
+    global_rank: 91
     sort_value: 0.4438
     sort_std: 0.0347
     comparison_type: global_top

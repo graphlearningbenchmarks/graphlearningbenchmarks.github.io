@@ -12,7 +12,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 12
-result_count: 481
+result_count: 470
 best_model:
   model: HIMP
   value: 0.874
@@ -24,10 +24,6 @@ papers:
   title: A Systematic Survey and Benchmark of Deep Learning for Molecular Property
     Prediction in the Foundation Model Era
   date_iso: '2026-04-17'
-  venue: ''
-- arxiv_id: '2604.11257'
-  title: Unified Graph Prompt Learning via Low-Rank Graph Message Prompting
-  date_iso: '2026-04-13'
   venue: ''
 - arxiv_id: '2602.01771'
   title: '<SO$ _k$>: One LLM Token for Explicit Graph Structural Understanding'
@@ -119,11 +115,6 @@ papers:
     Prediction: A Systematic Survey'
   date_iso: '2024-02-11'
   venue: ''
-- arxiv_id: '2402.07191'
-  title: Improving Subgraph Extraction for Graph Invariant Learning via Graph Sinkhorn
-    Attention
-  date_iso: '2024-02-11'
-  venue: ''
 - arxiv_id: '2312.13583'
   title: Fine-tuning Graph Neural Networks by Preserving Graph Generative Patterns
   date_iso: '2023-12-21'
@@ -136,6 +127,11 @@ papers:
 - arxiv_id: '2312.04234'
   title: Graph Convolutions Enrich the Self-Attention in Transformers!
   date_iso: '2023-12-07'
+  venue: NeurIPS 2023
+- arxiv_id: '2311.01038'
+  title: 'Better with Less: A Data-Active Perspective on Pre-Training Graph Neural
+    Networks'
+  date_iso: '2023-11-02'
   venue: NeurIPS 2023
 - arxiv_id: '2310.20082'
   title: Efficient Subgraph GNNs by Learning Effective Selection Policies
@@ -282,10 +278,6 @@ papers:
     Prediction'
   date_iso: '2021-06-11'
   venue: ''
-- arxiv_id: '2106.05819'
-  title: Adversarial Graph Augmentation to Improve Graph Contrastive Learning
-  date_iso: '2021-06-10'
-  venue: NeurIPS 2021
 - arxiv_id: '2102.11533'
   title: Accurate Learning of Graph Representations with Graph Multiset Pooling
   date_iso: '2021-02-23'
@@ -535,38 +527,6 @@ variants:
     - 0.005
     - null
     - null
-  - model: GPPT
-    model_plain: GPPT
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2604.11257'
-    title: Unified Graph Prompt Learning via Low-Rank Graph Message Prompting
-    date: Apr 13, 2026
-    date_iso: '2026-04-13'
-    date_display: Apr 2026
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.8508
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0629
-    - null
-    - null
-    - null
   - model: GINE
     model_plain: GINE
     is_baseline: false
@@ -661,38 +621,6 @@ variants:
     - null
     metric_stds:
     - 0.0058
-    - null
-    - null
-    - null
-  - model: LR-GMP
-    model_plain: LR-GMP
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2604.11257'
-    title: Unified Graph Prompt Learning via Low-Rank Graph Message Prompting
-    date: Apr 13, 2026
-    date_iso: '2026-04-13'
-    date_display: Apr 2026
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.8493
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0507
     - null
     - null
     - null
@@ -1764,38 +1692,6 @@ variants:
     - null
     - null
     - null
-  - model: UniPrompt
-    model_plain: UniPrompt
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2604.11257'
-    title: Unified Graph Prompt Learning via Low-Rank Graph Message Prompting
-    date: Apr 13, 2026
-    date_iso: '2026-04-13'
-    date_display: Apr 2026
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: true
-    metric_values:
-    - 0.8103
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.1241
-    - null
-    - null
-    - null
   - model: Bypass
     model_plain: Bypass
     is_baseline: true
@@ -1926,20 +1822,20 @@ variants:
     - null
     - null
     - null
-  - model: EdgePrompt+
-    model_plain: EdgePrompt+
-    is_baseline: true
+  - model: EdgePred SUPT_hard
+    model_plain: EdgePred SUPT_hard
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2604.11257'
-    title: Unified Graph Prompt Learning via Low-Rank Graph Message Prompting
-    date: Apr 13, 2026
-    date_iso: '2026-04-13'
-    date_display: Apr 2026
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2402.10380'
+    title: Subgraph-level Universal Prompt Tuning
+    date: Feb 16, 2024
+    date_iso: '2024-02-16'
+    date_display: Feb 2024
     codebase_url: ''
     published_conference: ''
     published_conference_short: ''
@@ -1949,27 +1845,125 @@ variants:
     is_best: false
     is_std_outlier: false
     metric_values:
-    - 0.808
+    - 0.8076
     - null
     - null
     - null
     metric_stds:
-    - 0.0491
     - null
     - null
     - null
-  row_count: 481
+    - null
+  - model: AttentiveFP
+    model_plain: AttentiveFP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.09346'
+    title: Improving Molecular Contrastive Learning via Faulty Negative Mitigation
+      and Decomposed Fragment Contrast
+    date: Feb 18, 2022
+    date_iso: '2022-02-18'
+    date_display: Feb 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.807
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.02
+    - null
+    - null
+    - null
+  - model: GatedGCN
+    model_plain: GatedGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 2.8
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2309.10131'
+    title: Deep Prompt Tuning for Graph Transformers
+    date: Sep 18, 2023
+    date_iso: '2023-09-18'
+    date_display: Sep 2023
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.807
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.011
+    - null
+    - null
+    - null
+  - model: ContextPred
+    model_plain: ContextPred
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2206.03364'
+    title: 'KPGT: Knowledge-Guided Pre-training of Graph Transformer for Molecular
+      Property Prediction'
+    date: Jun 2, 2022
+    date_iso: '2022-06-02'
+    date_display: Jun 2022
+    codebase_url: https://github.com/lihan97/KPGT
+    published_conference: KDD 2022
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2022
+    uses_external_data: true
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.806
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.012
+    - null
+    - null
+    - null
+  row_count: 470
   rows_json: /data/datasets/tox21/scaffold-split-rows.json
   chart_json: /data/datasets/tox21/scaffold-split-chart.json
   arch_counts:
-    gnn: 289
-    hybrid: 97
+    gnn: 281
+    hybrid: 94
     graph_transformer: 16
     llm: 14
     walk: 1
-    traditional: 28
+    traditional: 27
   metric_counts:
-  - 439
+  - 428
   - 46
   - 3
   - 2
@@ -2016,6 +2010,12 @@ variants:
       title: 'Permutation-Invariant graph partitioning: How graph neural networks
         capture structural interactions?'
       date: '2023-12-14'
-    ROCAUC: []
+    ROCAUC:
+    - value: 0.7895
+      std: 0.0069
+      model: Graph-ViT + GFSA
+      arxiv_id: '2312.04234'
+      title: Graph Convolutions Enrich the Self-Attention in Transformers!
+      date: '2023-12-07'
 ---
 

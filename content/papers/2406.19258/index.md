@@ -192,9 +192,9 @@ results:
     sort_value: 0.9487
     sort_std: 0.0059
     global_rank: 3
-    paper_rank: 20
-    rank_delta: 17
-    rank_delta_abs: 17
+    paper_rank: 19
+    rank_delta: 16
+    rank_delta_abs: 16
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -262,9 +262,9 @@ results:
     sort_value: 0.9454
     sort_std: 0.0043
     global_rank: 4
-    paper_rank: 16
-    rank_delta: 12
-    rank_delta_abs: 12
+    paper_rank: 15
+    rank_delta: 11
+    rank_delta_abs: 11
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -331,9 +331,9 @@ results:
     sort_value: 0.9442
     sort_std: 0.0049
     global_rank: 5
-    paper_rank: 20
-    rank_delta: 15
-    rank_delta_abs: 15
+    paper_rank: 19
+    rank_delta: 14
+    rank_delta_abs: 14
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -546,39 +546,6 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SAGE
-    model_key: sage
-    model_plain: SAGE
-    value: 0.937
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2112.08331'
-    title: Model Stealing Attacks Against Inductive Graph Neural Networks
-    date: Dec 15, 2021
-    date_display: Dec 2021
-    date_iso: '2021-12-15'
-    venue: IEEE Symposium on Security and Privacy
-    codebase_url: https://github.com/xinleihe/GNNStealing
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 16
-    sort_value: 0.937
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
   - model: NCLA
     model_key: ncla
     model_plain: NCLA
@@ -636,8 +603,8 @@ results:
     value_note: ''
     sort_value: 0.9346
     sort_std: 0.0039
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -704,8 +671,8 @@ results:
     value_note: ''
     sort_value: 0.9332
     sort_std: 0.003
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -772,8 +739,8 @@ results:
     value_note: ''
     sort_value: 0.9331
     sort_std: 0.0026
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -840,8 +807,8 @@ results:
     value_note: ''
     sort_value: 0.9331
     sort_std: null
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -908,8 +875,8 @@ results:
     value_note: ''
     sort_value: 0.9327
     sort_std: 0.0029
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -976,8 +943,8 @@ results:
     value_note: ''
     sort_value: 0.9326
     sort_std: null
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1045,8 +1012,8 @@ results:
     value_note: ''
     sort_value: 0.9324
     sort_std: 0.0049
-    global_rank: 29
-    paper_rank: 29
+    global_rank: 28
+    paper_rank: 28
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1113,8 +1080,8 @@ results:
     value_note: ''
     sort_value: 0.9324
     sort_std: 0.0031
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1181,8 +1148,8 @@ results:
     value_note: ''
     sort_value: 0.9324
     sort_std: 0.0066
-    global_rank: 31
-    paper_rank: 31
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1249,8 +1216,8 @@ results:
     value_note: ''
     sort_value: 0.9323
     sort_std: null
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 32
+    paper_rank: 32
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1317,8 +1284,8 @@ results:
     value_note: ''
     sort_value: 0.9312
     sort_std: null
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1385,8 +1352,8 @@ results:
     value_note: ''
     sort_value: 0.9304
     sort_std: 0.0128
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1454,8 +1421,8 @@ results:
     value_note: ''
     sort_value: 0.93
     sort_std: 0.0055
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 36
+    paper_rank: 36
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1523,8 +1490,8 @@ results:
     value_note: ''
     sort_value: 0.9284
     sort_std: null
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1591,13 +1558,47 @@ results:
     value_note: ''
     sort_value: 0.9243
     sort_std: null
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.9233
+    std: 0.0038
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.11025'
+    title: 'SignGT: Signed Attention-based Graph Transformer for Graph Representation
+      Learning'
+    date: Oct 17, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-17'
+    venue: Knowledge and Information Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 40
+    sort_value: 0.9233
+    sort_std: 0.0038
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

@@ -39,37 +39,29 @@ abstract: 'Graph transformers (GTs) have emerged as a promising architecture tha
   GNN and GT baselines on most datasets, even without the use of nonlinear activation
   functions. Source code of Polynormer is freely available at: github.com/cornell-zhang/Polynormer.'
 codebase_url: https://github.com/cornell-zhang/Polynormer
-extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+extraction_model: google/gemma-4-26B-A4B-it
 has_results: true
 paper_type: method
 proposed_models:
 - Polynormer
 - Polynormer-r
-mrr: 0.1187
-adjusted_mrr: 0.1187
-mrr_dataset_count: 11
+- Polynormer-v1
+- Polynormer-v2
+mrr: 0.1093
+adjusted_mrr: 0.1093
+mrr_dataset_count: 9
 benchmark_categories:
 - Classic
-- OGB
 - Heterophily Benchmark
-- LINKX Benchmarks
 benchmark_coverage:
 - benchmark: Classic
   benchmark_slug: classic
   evaluated: 4
   total: 12
-- benchmark: OGB
-  benchmark_slug: ogb
-  evaluated: 1
-  total: 16
 - benchmark: Heterophily Benchmark
   benchmark_slug: heterophily-benchmark
   evaluated: 5
   total: 5
-- benchmark: LINKX Benchmarks
-  benchmark_slug: linkx-benchmarks
-  evaluated: 1
-  total: 6
 task_categories:
 - node_classification
 experiment_scopes:
@@ -129,15 +121,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: kipf2016semi
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Computer dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -171,9 +163,9 @@ results:
     sort_value: 0.9412
     sort_std: 0.0008
     global_rank: 2
-    paper_rank: 169
-    rank_delta: 167
-    rank_delta_abs: 167
+    paper_rank: 164
+    rank_delta: 162
+    rank_delta_abs: 162
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -198,15 +190,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: velivckovic2017graph
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Computer dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -214,11 +206,10 @@ results:
     published_conference: ICLR 2024
     at_pub_value: 0.9078
     at_pub_std: 0.0013
-    at_pub_source_arxiv: '2305.12677'
-    at_pub_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    at_pub_source_date_iso: '2023-05-22'
-    at_pub_source_date_label: '2023'
+    at_pub_source_arxiv: '2310.05296'
+    at_pub_source_title: Tailoring Self-Attention for Graph via Rooted Subtrees
+    at_pub_source_date_iso: '2023-10-08'
+    at_pub_source_date_label: NeurIPS 2023
     value_gap_source_date_iso: '2026-05-18'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -241,9 +232,9 @@ results:
     sort_value: 0.9398
     sort_std: 0.0022
     global_rank: 3
-    paper_rank: 93
-    rank_delta: 90
-    rank_delta_abs: 90
+    paper_rank: 90
+    rank_delta: 87
+    rank_delta_abs: 87
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -268,15 +259,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Computer dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -310,9 +301,9 @@ results:
     sort_value: 0.9378
     sort_std: 0.001
     global_rank: 6
-    paper_rank: 9
-    rank_delta: 3
-    rank_delta_abs: 3
+    paper_rank: 10
+    rank_delta: 4
+    rank_delta_abs: 4
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -337,15 +328,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets. -r denotes Polynormer with ReLU activation.
+    protocol_note: Node classification accuracy on Computer dataset, averaged over
+      10 runs (Polynormer with ReLU).
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -423,6 +414,142 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: Polynormer-v2
+    model_key: polynormer-v2
+    model_plain: Polynormer-v2
+    value: 0.9325
+    std: 0.0022
+    paper_value: 0.9325
+    paper_std: 0.0022
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification accuracy on Computer dataset.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-02'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.9325
+    true_std: 0.0022
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9325
+    sort_std: 0.0022
+    global_rank: 10
+    paper_rank: 10
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Polynormer-v1
+    model_key: polynormer-v1
+    model_plain: Polynormer-v1
+    value: 0.9318
+    std: 0.0018
+    paper_value: 0.9318
+    paper_std: 0.0018
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification accuracy on Computer dataset.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-02'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.9318
+    true_std: 0.0018
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9318
+    sort_std: 0.0018
+    global_rank: 11
+    paper_rank: 11
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: GOAT
     model_key: goat
     model_plain: GOAT
@@ -440,15 +567,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: ''
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Computer dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -482,9 +609,9 @@ results:
     sort_value: 0.9229
     sort_std: 0.0037
     global_rank: 21
-    paper_rank: 86
-    rank_delta: 65
-    rank_delta_abs: 65
+    paper_rank: 84
+    rank_delta: 63
+    rank_delta_abs: 63
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -509,15 +636,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: ''
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Computer dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -550,8 +677,8 @@ results:
     value_note: ''
     sort_value: 0.9203
     sort_std: 0.0013
-    global_rank: 29
-    paper_rank: 29
+    global_rank: 28
+    paper_rank: 28
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -578,15 +705,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: ''
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Computer dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -598,8 +725,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-10-24'
-    value_gap_source_date_label: NeurIPS 2025
+    value_gap_source_date_iso: '2024-03-02'
+    value_gap_source_date_label: ICLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -610,16 +737,17 @@ results:
     today_delta_significant: false
     true_value: 0.9199
     true_std: 0.0076
-    value_gap_source_arxiv: '2510.21267'
-    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9199
     sort_std: 0.0076
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -627,77 +755,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: NAGphormer
-    model_key: nagphormer
-    model_plain: NAGphormer
-    value: 0.9122
-    std: 0.0014
-    paper_value: 0.9122
-    paper_std: 0.0014
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: chen2022nagphormer
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ICLR 2024
-    published_conference: ICLR 2024
-    at_pub_value: 0.9195
-    at_pub_std: 0.0009
-    at_pub_source_arxiv: '2305.12677'
-    at_pub_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    at_pub_source_date_iso: '2023-05-22'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-05-22'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.007299999999999973
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9195
-    true_std: 0.0009
-    value_gap_source_arxiv: '2305.12677'
-    value_gap_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    value_gap_source_is_current_paper: false
-    value_gap: 0.007299999999999973
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9195
-    sort_std: 0.0009
-    global_rank: 31
-    paper_rank: 63
-    rank_delta: 32
-    rank_delta_abs: 32
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    comparison_source_arxiv: '2305.12677'
     is_best: false
     is_std_outlier: false
   - model: GGCN
@@ -717,15 +774,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: ''
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Computer dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -759,8 +816,8 @@ results:
     value_note: ''
     sort_value: 0.9181
     sort_std: 0.002
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -788,15 +845,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: Shirzad2023ExphormerST
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Computer dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -829,10 +886,10 @@ results:
     value_note: ''
     sort_value: 0.918
     sort_std: 0.0035
-    global_rank: 41
-    paper_rank: 56
-    rank_delta: 15
-    rank_delta_abs: 15
+    global_rank: 39
+    paper_rank: 55
+    rank_delta: 16
+    rank_delta_abs: 16
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -857,15 +914,15 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: ''
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Computer dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -898,10 +955,79 @@ results:
     value_note: ''
     sort_value: 0.9179
     sort_std: 0.0063
-    global_rank: 42
-    paper_rank: 66
+    global_rank: 40
+    paper_rank: 64
     rank_delta: 24
     rank_delta_abs: 24
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: NAGphormer
+    model_key: nagphormer
+    model_plain: NAGphormer
+    value: 0.9122
+    std: 0.0014
+    paper_value: 0.9122
+    paper_std: 0.0014
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: chen2022nagphormer
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification accuracy on Computer dataset, averaged over
+      10 runs.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: 0.9122
+    at_pub_std: 0.0014
+    at_pub_source_arxiv: '2310.05296'
+    at_pub_source_title: Tailoring Self-Attention for Graph via Rooted Subtrees
+    at_pub_source_date_iso: '2023-10-08'
+    at_pub_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2026-05-18'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9169
+    true_std: 0.003
+    value_gap_source_arxiv: '2605.20248'
+    value_gap_source_title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions
+      in Node Classification'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0047000000000000375
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9169
+    sort_std: 0.003
+    global_rank: 47
+    paper_rank: 62
+    rank_delta: 15
+    rank_delta_abs: 15
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -926,15 +1052,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: hamilton2017inductive
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Computer dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -967,8 +1093,8 @@ results:
     value_note: ''
     sort_value: 0.912
     sort_std: 0.0029
-    global_rank: 66
-    paper_rank: 66
+    global_rank: 64
+    paper_rank: 64
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -995,26 +1121,26 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: ''
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Computer dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
     published_venue: ICLR 2024
     published_conference: ICLR 2024
     at_pub_value: 0.9112
-    at_pub_std: 0.0019
-    at_pub_source_arxiv: '2305.12677'
-    at_pub_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    at_pub_source_date_iso: '2023-05-22'
+    at_pub_std: 0.0043
+    at_pub_source_arxiv: '2310.11025'
+    at_pub_source_title: 'SignGT: Signed Attention-based Graph Transformer for Graph
+      Representation Learning'
+    at_pub_source_date_iso: '2023-10-17'
     at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2025-05-23'
     value_gap_source_date_label: '2025'
@@ -1037,16 +1163,16 @@ results:
     value_note: ''
     sort_value: 0.9112
     sort_std: 0.0019
-    global_rank: 69
-    paper_rank: 326
-    rank_delta: 257
-    rank_delta_abs: 257
+    global_rank: 67
+    paper_rank: 299
+    rank_delta: 232
+    rank_delta_abs: 232
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    comparison_source_arxiv: '2305.12677'
+    comparison_source_title: 'SignGT: Signed Attention-based Graph Transformer for
+      Graph Representation Learning'
+    comparison_source_arxiv: '2310.11025'
     is_best: false
     is_std_outlier: false
   - model: GCNII
@@ -1066,15 +1192,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: ''
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Computer dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -1108,8 +1234,8 @@ results:
     value_note: ''
     sort_value: 0.9104
     sort_std: 0.0041
-    global_rank: 77
-    paper_rank: 77
+    global_rank: 75
+    paper_rank: 75
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1137,15 +1263,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: gasteiger2018predict
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Computer dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -1153,11 +1279,10 @@ results:
     published_conference: ICLR 2024
     at_pub_value: 0.9018
     at_pub_std: 0.0017
-    at_pub_source_arxiv: '2305.12677'
-    at_pub_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    at_pub_source_date_iso: '2023-05-22'
-    at_pub_source_date_label: '2023'
+    at_pub_source_arxiv: '2310.05296'
+    at_pub_source_title: Tailoring Self-Attention for Graph via Rooted Subtrees
+    at_pub_source_date_iso: '2023-10-08'
+    at_pub_source_date_label: NeurIPS 2023
     value_gap_source_date_iso: '2024-06-27'
     value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
@@ -1179,10 +1304,10 @@ results:
     value_note: ''
     sort_value: 0.9093
     sort_std: 0.0018
-    global_rank: 88
-    paper_rank: 121
-    rank_delta: 33
-    rank_delta_abs: 33
+    global_rank: 86
+    paper_rank: 117
+    rank_delta: 31
+    rank_delta_abs: 31
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1207,15 +1332,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: chien2020adaptive
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Computer dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -1223,11 +1348,10 @@ results:
     published_conference: ICLR 2024
     at_pub_value: 0.8932
     at_pub_std: 0.0029
-    at_pub_source_arxiv: '2305.12677'
-    at_pub_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    at_pub_source_date_iso: '2023-05-22'
-    at_pub_source_date_label: '2023'
+    at_pub_source_arxiv: '2310.05296'
+    at_pub_source_title: Tailoring Self-Attention for Graph via Rooted Subtrees
+    at_pub_source_date_iso: '2023-10-08'
+    at_pub_source_date_label: NeurIPS 2023
     value_gap_source_date_iso: '2024-06-27'
     value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
@@ -1249,10 +1373,10 @@ results:
     value_note: ''
     sort_value: 0.905
     sort_std: 0.0091
-    global_rank: 103
-    paper_rank: 191
-    rank_delta: 88
-    rank_delta_abs: 88
+    global_rank: 101
+    paper_rank: 183
+    rank_delta: 82
+    rank_delta_abs: 82
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1277,27 +1401,26 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: bojchevski2020scaling
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Computer dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
     published_venue: ICLR 2024
     published_conference: ICLR 2024
-    at_pub_value: 0.8869
-    at_pub_std: 0.0021
-    at_pub_source_arxiv: '2305.12677'
-    at_pub_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    at_pub_source_date_iso: '2023-05-22'
-    at_pub_source_date_label: '2023'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2025-05-23'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -1319,8 +1442,8 @@ results:
     value_note: ''
     sort_value: 0.8869
     sort_std: 0.0021
-    global_rank: 230
-    paper_rank: 230
+    global_rank: 216
+    paper_rank: 216
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1356,7 +1479,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 394
+    global_rank: 365
     sort_value: 0.8463
     sort_std: null
     comparison_type: global_top
@@ -1381,15 +1504,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: hua2022high
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Computer dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -1422,8 +1545,8 @@ results:
     value_note: ''
     sort_value: 0.834
     sort_std: 0.0133
-    global_rank: 449
-    paper_rank: 449
+    global_rank: 420
+    paper_rank: 420
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1445,73 +1568,6 @@ results:
 - &id001
   dataset: Amazon-Photo
   rows:
-  - model: MSH-GNN
-    model_key: msh-gnn
-    model_plain: MSH-GNN
-    value: 0.9766
-    std: 0.005
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.15015'
-    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
-    date: May 21, 2025
-    date_display: May 2025
-    date_iso: '2025-05-21'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9766
-    sort_std: 0.005
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GeoMancer
-    model_key: geomancer
-    model_plain: GeoMancer
-    value: 0.9705
-    std: 0.0013
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2510.04522'
-    title: 'Toward a Unified Geometry Understanding: Riemannian Diffusion Framework
-      for Graph Generation and Prediction'
-    date: Oct 6, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-06'
-    venue: Accepted by NeurIPS 2025
-    codebase_url: https://github.com/RingBDStack/GeoMancer
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.9705
-    sort_std: 0.0013
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
   - model: GraphTARIF
     model_key: graphtarif
     model_plain: GraphTARIF
@@ -1538,7 +1594,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 1
     sort_value: 0.9703
     sort_std: 0.0019
     comparison_type: global_top
@@ -1563,15 +1619,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: node classification accuracy on Photo dataset, averaged over 10
+      runs
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -1605,10 +1661,10 @@ results:
     value_note: ''
     sort_value: 0.9669
     sort_std: 0.0014
-    global_rank: 5
-    paper_rank: 148
-    rank_delta: 143
-    rank_delta_abs: 143
+    global_rank: 2
+    paper_rank: 139
+    rank_delta: 137
+    rank_delta_abs: 137
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1617,75 +1673,38 @@ results:
     comparison_source_arxiv: '2310.11025'
     is_best: false
     is_std_outlier: false
-  - model: NAGphormer
-    model_key: nagphormer
-    model_plain: NAGphormer
-    value: 0.9549
-    std: 0.0011
-    paper_value: 0.9549
-    paper_std: 0.0011
+  - model: DAM-GT
+    model_key: dam-gt
+    model_plain: DAM-GT
+    value: 0.9666
+    std: 0.0013
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    uses_external_data: 0
+    arxiv_id: '2505.17660'
+    title: 'DAM-GT: Dual Positional Encoding-Based Attention Masking Graph Transformer
+      for Node Classification'
+    date: May 23, 2025
+    date_display: May 2025
+    date_iso: '2025-05-23'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ICLR 2024
-    published_conference: ICLR 2024
-    at_pub_value: 0.9661
-    at_pub_std: 0.0021
-    at_pub_source_arxiv: '2305.12677'
-    at_pub_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    at_pub_source_date_iso: '2023-05-22'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-05-22'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.011199999999999988
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9661
-    true_std: 0.0021
-    value_gap_source_arxiv: '2305.12677'
-    value_gap_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    value_gap_source_is_current_paper: false
-    value_gap: 0.011199999999999988
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9661
-    sort_std: 0.0021
-    global_rank: 7
-    paper_rank: 47
-    rank_delta: 40
-    rank_delta_abs: 40
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    comparison_source_arxiv: '2305.12677'
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9666
+    sort_std: 0.0013
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: Polynormer
@@ -1705,15 +1724,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: node classification accuracy on Photo dataset, averaged over 10
+      runs
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -1746,10 +1765,10 @@ results:
     value_note: ''
     sort_value: 0.9657
     sort_std: 0.0023
-    global_rank: 10
-    paper_rank: 18
-    rank_delta: 8
-    rank_delta_abs: 8
+    global_rank: 5
+    paper_rank: 12
+    rank_delta: 7
+    rank_delta_abs: 7
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1774,15 +1793,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets. -r denotes Polynormer with ReLU activation.
+    protocol_note: node classification accuracy on Photo dataset, averaged over 10
+      runs
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -1815,8 +1834,8 @@ results:
     value_note: ''
     sort_value: 0.9646
     sort_std: 0.0026
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1852,7 +1871,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 13
+    global_rank: 8
     sort_value: 0.9643
     sort_std: 0.0027
     comparison_type: global_top
@@ -1877,15 +1896,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: node classification accuracy on Photo dataset, averaged over 10
+      runs
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -1919,16 +1938,221 @@ results:
     value_note: ''
     sort_value: 0.9632
     sort_std: 0.0008
-    global_rank: 16
-    paper_rank: 293
-    rank_delta: 277
-    rank_delta_abs: 277
+    global_rank: 9
+    paper_rank: 285
+    rank_delta: 276
+    rank_delta_abs: 276
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'SignGT: Signed Attention-based Graph Transformer for
       Graph Representation Learning'
     comparison_source_arxiv: '2310.11025'
+    is_best: false
+    is_std_outlier: false
+  - model: NAGphormer
+    model_key: nagphormer
+    model_plain: NAGphormer
+    value: 0.9549
+    std: 0.0011
+    paper_value: 0.9549
+    paper_std: 0.0011
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification accuracy on Photo dataset, averaged over 10
+      runs
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: 0.9549
+    at_pub_std: 0.0011
+    at_pub_source_arxiv: '2310.05296'
+    at_pub_source_title: Tailoring Self-Attention for Graph via Rooted Subtrees
+    at_pub_source_date_iso: '2023-10-08'
+    at_pub_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2026-05-18'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9614
+    true_std: 0.0016
+    value_gap_source_arxiv: '2605.20248'
+    value_gap_source_title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions
+      in Node Classification'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.006500000000000061
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9614
+    sort_std: 0.0016
+    global_rank: 12
+    paper_rank: 38
+    rank_delta: 26
+    rank_delta_abs: 26
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Polynormer-v1
+    model_key: polynormer-v1
+    model_plain: Polynormer-v1
+    value: 0.9611
+    std: 0.0023
+    paper_value: 0.9611
+    paper_std: 0.0023
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification accuracy on Photo dataset
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-02'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.9611
+    true_std: 0.0023
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9611
+    sort_std: 0.0023
+    global_rank: 13
+    paper_rank: 13
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Polynormer-v2
+    model_key: polynormer-v2
+    model_plain: Polynormer-v2
+    value: 0.9609
+    std: 0.003
+    paper_value: 0.9609
+    paper_std: 0.003
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification accuracy on Photo dataset
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-02'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.9609
+    true_std: 0.003
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9609
+    sort_std: 0.003
+    global_rank: 14
+    paper_rank: 14
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: APPNP
@@ -1948,15 +2172,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: node classification accuracy on Photo dataset, averaged over 10
+      runs
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -1990,10 +2214,10 @@ results:
     value_note: ''
     sort_value: 0.9573
     sort_std: 0.0012
-    global_rank: 27
-    paper_rank: 121
-    rank_delta: 94
-    rank_delta_abs: 94
+    global_rank: 23
+    paper_rank: 111
+    rank_delta: 88
+    rank_delta_abs: 88
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2018,15 +2242,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: node classification accuracy on Photo dataset, averaged over 10
+      runs
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -2059,10 +2283,10 @@ results:
     value_note: ''
     sort_value: 0.9569
     sort_std: 0.0039
-    global_rank: 30
-    paper_rank: 53
-    rank_delta: 23
-    rank_delta_abs: 23
+    global_rank: 26
+    paper_rank: 44
+    rank_delta: 18
+    rank_delta_abs: 18
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2087,15 +2311,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: node classification accuracy on Photo dataset, averaged over 10
+      runs
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -2129,10 +2353,10 @@ results:
     value_note: ''
     sort_value: 0.9549
     sort_std: 0.0014
-    global_rank: 48
-    paper_rank: 109
-    rank_delta: 61
-    rank_delta_abs: 61
+    global_rank: 39
+    paper_rank: 99
+    rank_delta: 60
+    rank_delta_abs: 60
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2158,26 +2382,26 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: node classification accuracy on Photo dataset, averaged over 10
+      runs
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
     published_venue: ICLR 2024
     published_conference: ICLR 2024
     at_pub_value: 0.9527
-    at_pub_std: 0.0017
-    at_pub_source_arxiv: '2305.12677'
-    at_pub_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    at_pub_source_date_iso: '2023-05-22'
+    at_pub_std: 0.0022
+    at_pub_source_arxiv: '2310.11025'
+    at_pub_source_title: 'SignGT: Signed Attention-based Graph Transformer for Graph
+      Representation Learning'
+    at_pub_source_date_iso: '2023-10-17'
     at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2025-05-23'
     value_gap_source_date_label: '2025'
@@ -2200,16 +2424,16 @@ results:
     value_note: ''
     sort_value: 0.9527
     sort_std: 0.0017
-    global_rank: 61
-    paper_rank: 190
-    rank_delta: 129
-    rank_delta_abs: 129
+    global_rank: 51
+    paper_rank: 182
+    rank_delta: 131
+    rank_delta_abs: 131
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    comparison_source_arxiv: '2305.12677'
+    comparison_source_title: 'SignGT: Signed Attention-based Graph Transformer for
+      Graph Representation Learning'
+    comparison_source_arxiv: '2310.11025'
     is_best: false
     is_std_outlier: false
   - model: OrderedGNN
@@ -2229,15 +2453,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: node classification accuracy on Photo dataset, averaged over 10
+      runs
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -2270,8 +2494,8 @@ results:
     value_note: ''
     sort_value: 0.951
     sort_std: 0.002
-    global_rank: 75
-    paper_rank: 75
+    global_rank: 65
+    paper_rank: 65
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2298,15 +2522,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: node classification accuracy on Photo dataset, averaged over 10
+      runs
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -2318,8 +2542,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-10-24'
-    value_gap_source_date_label: NeurIPS 2025
+    value_gap_source_date_iso: '2024-03-02'
+    value_gap_source_date_label: ICLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2330,16 +2554,17 @@ results:
     today_delta_significant: false
     true_value: 0.951
     true_std: 0.0047
-    value_gap_source_arxiv: '2510.21267'
-    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.951
     sort_std: 0.0047
-    global_rank: 76
-    paper_rank: 76
+    global_rank: 66
+    paper_rank: 66
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2366,15 +2591,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: node classification accuracy on Photo dataset, averaged over 10
+      runs
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -2406,8 +2631,8 @@ results:
     value_note: ''
     sort_value: 0.9508
     sort_std: 0.0026
-    global_rank: 78
-    paper_rank: 104
+    global_rank: 68
+    paper_rank: 94
     rank_delta: 26
     rank_delta_abs: 26
     rank_delta_direction: worse
@@ -2434,15 +2659,15 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: node classification accuracy on Photo dataset, averaged over 10
+      runs
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -2450,11 +2675,10 @@ results:
     published_conference: ICLR 2024
     at_pub_value: 0.9506
     at_pub_std: 0.0013
-    at_pub_source_arxiv: '2305.12677'
-    at_pub_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    at_pub_source_date_iso: '2023-05-22'
-    at_pub_source_date_label: '2023'
+    at_pub_source_arxiv: '2310.05296'
+    at_pub_source_title: Tailoring Self-Attention for Graph via Rooted Subtrees
+    at_pub_source_date_iso: '2023-10-08'
+    at_pub_source_date_label: NeurIPS 2023
     value_gap_source_date_iso: '2025-12-09'
     value_gap_source_date_label: LoG 2025
     gap_vs_at_pub: null
@@ -2476,8 +2700,8 @@ results:
     value_note: ''
     sort_value: 0.9506
     sort_std: 0.0013
-    global_rank: 79
-    paper_rank: 79
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2504,15 +2728,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: node classification accuracy on Photo dataset, averaged over 10
+      runs
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -2545,8 +2769,8 @@ results:
     value_note: ''
     sort_value: 0.945
     sort_std: 0.0011
-    global_rank: 109
-    paper_rank: 109
+    global_rank: 99
+    paper_rank: 99
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2573,15 +2797,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: node classification accuracy on Photo dataset, averaged over 10
+      runs
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -2614,10 +2838,10 @@ results:
     value_note: ''
     sort_value: 0.9433
     sort_std: 0.0021
-    global_rank: 121
-    paper_rank: 257
-    rank_delta: 136
-    rank_delta_abs: 136
+    global_rank: 111
+    paper_rank: 250
+    rank_delta: 139
+    rank_delta_abs: 139
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2642,15 +2866,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: node classification accuracy on Photo dataset, averaged over 10
+      runs
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -2684,8 +2908,8 @@ results:
     value_note: ''
     sort_value: 0.943
     sort_std: 0.002
-    global_rank: 122
-    paper_rank: 122
+    global_rank: 112
+    paper_rank: 112
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2713,27 +2937,26 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: node classification accuracy on Photo dataset, averaged over 10
+      runs
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
     published_venue: ICLR 2024
     published_conference: ICLR 2024
-    at_pub_value: 0.9361
-    at_pub_std: 0.0012
-    at_pub_source_arxiv: '2305.12677'
-    at_pub_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    at_pub_source_date_iso: '2023-05-22'
-    at_pub_source_date_label: '2023'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2025-05-23'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -2755,8 +2978,8 @@ results:
     value_note: ''
     sort_value: 0.9361
     sort_std: 0.0012
-    global_rank: 167
-    paper_rank: 167
+    global_rank: 158
+    paper_rank: 158
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2791,7 +3014,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 434
+    global_rank: 426
     sort_value: 0.9128
     sort_std: 0.0063
     comparison_type: global_top
@@ -2816,15 +3039,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: node classification accuracy on Photo dataset, averaged over 10
+      runs
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -2857,8 +3080,8 @@ results:
     value_note: ''
     sort_value: 0.8992
     sort_std: 0.0072
-    global_rank: 503
-    paper_rank: 503
+    global_rank: 496
+    paper_rank: 496
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2877,12 +3100,12 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id007
+- &id006
   dataset: Amazon-ratings
   rows:
-  - model: H2GCN + UniGAP
-    model_key: h2gcn + unigap
-    model_plain: H2GCN + UniGAP
+  - model: UniGAP
+    model_key: unigap
+    model_plain: UniGAP
     value: 0.6375
     std: 0.011
     metric: Accuracy
@@ -2891,9 +3114,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
     arxiv_id: '2407.19420'
     title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
       Over-Smoothing in Node Classification Tasks'
@@ -2903,7 +3126,7 @@ results:
     venue: arXiv.org
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -2914,48 +3137,14 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GraphSAGE + UniGAP
-    model_key: graphsage + unigap
-    model_plain: GraphSAGE + UniGAP
-    value: 0.6283
-    std: 0.009
+  - model: H2GCN + HalfHop
+    model_key: h2gcn + halfhop
+    model_plain: H2GCN + HalfHop
+    value: 0.5961
+    std: 0.01
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2407.19420'
-    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
-      Over-Smoothing in Node Classification Tasks'
-    date: Jul 28, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-28'
-    venue: arXiv.org
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.6283
-    sort_std: 0.009
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GCN + UniGAP
-    model_key: gcn + unigap
-    model_plain: GCN + UniGAP
-    value: 0.5976
-    std: 0.008
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
@@ -2971,12 +3160,46 @@ results:
     venue: arXiv.org
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.5961
+    sort_std: 0.01
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE + HalfHop
+    model_key: graphsage + halfhop
+    model_plain: GraphSAGE + HalfHop
+    value: 0.5897
+    std: 0.015
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2407.19420'
+    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
+      Over-Smoothing in Node Classification Tasks'
+    date: Jul 28, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-28'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.5976
-    sort_std: 0.008
+    sort_value: 0.5897
+    sort_std: 0.015
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2999,15 +3222,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: platonov2023a
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs on heterophilic
-      datasets
+    protocol_note: Accuracy on amazon-ratings heterophilic dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -3040,10 +3263,10 @@ results:
     value_note: ''
     sort_value: 0.5681
     sort_std: 0.009
-    global_rank: 9
-    paper_rank: 215
-    rank_delta: 206
-    rank_delta_abs: 206
+    global_rank: 7
+    paper_rank: 207
+    rank_delta: 200
+    rank_delta_abs: 200
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3077,7 +3300,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 14
+    global_rank: 12
     sort_value: 0.5569
     sort_std: 0.0023
     comparison_type: global_top
@@ -3102,15 +3325,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: platonov2023a
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs on heterophilic
-      datasets
+    protocol_note: Accuracy on amazon-ratings heterophilic dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -3143,8 +3366,8 @@ results:
     value_note: ''
     sort_value: 0.554
     sort_std: 0.002
-    global_rank: 17
-    paper_rank: 33
+    global_rank: 15
+    paper_rank: 31
     rank_delta: 16
     rank_delta_abs: 16
     rank_delta_direction: worse
@@ -3171,15 +3394,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs on heterophilic
-      datasets
+    protocol_note: Accuracy on amazon-ratings heterophilic dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -3212,10 +3435,10 @@ results:
     value_note: ''
     sort_value: 0.5496
     sort_std: 0.0022
-    global_rank: 20
-    paper_rank: 22
-    rank_delta: 2
-    rank_delta_abs: 2
+    global_rank: 18
+    paper_rank: 21
+    rank_delta: 3
+    rank_delta_abs: 3
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3240,15 +3463,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs on heterophilic
-      datasets
+    protocol_note: Accuracy on amazon-ratings heterophilic dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -3281,8 +3504,144 @@ results:
     value_note: ''
     sort_value: 0.5481
     sort_std: 0.0049
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 20
+    paper_rank: 20
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Polynormer-v1
+    model_key: polynormer-v1
+    model_plain: Polynormer-v1
+    value: 0.5446
+    std: 0.004
+    paper_value: 0.5446
+    paper_std: 0.004
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 4
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on amazon-ratings heterophilic dataset.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-02'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.5446
+    true_std: 0.004
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5446
+    sort_std: 0.004
+    global_rank: 22
+    paper_rank: 22
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Polynormer-v2
+    model_key: polynormer-v2
+    model_plain: Polynormer-v2
+    value: 0.5441
+    std: 0.0035
+    paper_value: 0.5441
+    paper_std: 0.0035
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 4
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on amazon-ratings heterophilic dataset.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-02'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.5441
+    true_std: 0.0035
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5441
+    sort_std: 0.0035
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3309,15 +3668,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: platonov2023a
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs on heterophilic
-      datasets
+    protocol_note: Accuracy on amazon-ratings heterophilic dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -3350,10 +3709,10 @@ results:
     value_note: ''
     sort_value: 0.5411
     sort_std: 0.0034
-    global_rank: 26
-    paper_rank: 126
-    rank_delta: 100
-    rank_delta_abs: 100
+    global_rank: 25
+    paper_rank: 113
+    rank_delta: 88
+    rank_delta_abs: 88
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3378,15 +3737,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs on heterophilic
-      datasets
+    protocol_note: Accuracy on amazon-ratings heterophilic dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -3419,8 +3778,8 @@ results:
     value_note: ''
     sort_value: 0.5351
     sort_std: 0.0046
-    global_rank: 35
-    paper_rank: 35
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3447,15 +3806,15 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs on heterophilic
-      datasets
+    protocol_note: Accuracy on amazon-ratings heterophilic dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -3488,10 +3847,10 @@ results:
     value_note: ''
     sort_value: 0.5327
     sort_std: 0.0066
-    global_rank: 42
-    paper_rank: 47
-    rank_delta: 5
-    rank_delta_abs: 5
+    global_rank: 41
+    paper_rank: 45
+    rank_delta: 4
+    rank_delta_abs: 4
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3516,15 +3875,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: platonov2023a
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs on heterophilic
-      datasets
+    protocol_note: Accuracy on amazon-ratings heterophilic dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -3557,8 +3916,8 @@ results:
     value_note: ''
     sort_value: 0.5274
     sort_std: 0.0083
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 51
+    paper_rank: 51
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3585,15 +3944,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: platonov2023a
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs on heterophilic
-      datasets
+    protocol_note: Accuracy on amazon-ratings heterophilic dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -3605,7 +3964,7 @@ results:
     at_pub_source_title: Evolving Computation Graphs
     at_pub_source_date_iso: '2023-06-22'
     at_pub_source_date_label: ICML 2023
-    value_gap_source_date_iso: '2025-08-07'
+    value_gap_source_date_iso: '2025-07-19'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
@@ -3617,17 +3976,17 @@ results:
     today_delta_significant: false
     true_value: 0.527
     true_std: 0.0062
-    value_gap_source_arxiv: '2508.05070'
-    value_gap_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
-      Flows'
+    value_gap_source_arxiv: '2507.14484'
+    value_gap_source_title: 'ReDiSC: A Reparameterized Masked Diffusion Model for
+      Scalable Node Classification with Structured Predictions'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.527
     sort_std: 0.0062
-    global_rank: 56
-    paper_rank: 56
+    global_rank: 53
+    paper_rank: 53
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3654,15 +4013,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs on heterophilic
-      datasets
+    protocol_note: Accuracy on amazon-ratings heterophilic dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -3695,81 +4054,12 @@ results:
     value_note: ''
     sort_value: 0.5126
     sort_std: 0.0072
-    global_rank: 79
-    paper_rank: 79
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: OrderedGNN
-    model_key: orderedgnn
-    model_plain: OrderedGNN
-    value: 0.4729
-    std: 0.0065
-    paper_value: 0.4729
-    paper_std: 0.0065
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs on heterophilic
-      datasets
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ICLR 2024
-    published_conference: ICLR 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-12-16'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.5115
-    true_std: 0.0046
-    value_gap_source_arxiv: '2512.14908'
-    value_gap_source_title: 'ATLAS: Adaptive Topology-based Learning at Scale for
-      Homophilic and Heterophilic Graphs'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.03859999999999997
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.5115
-    sort_std: 0.0046
-    global_rank: 82
-    paper_rank: 144
-    rank_delta: 62
-    rank_delta_abs: 62
-    rank_delta_direction: worse
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3800,7 +4090,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 95
+    global_rank: 85
     sort_value: 0.5058
     sort_std: null
     comparison_type: global_top
@@ -3825,15 +4115,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: platonov2023a
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs on heterophilic
-      datasets
+    protocol_note: Accuracy on amazon-ratings heterophilic dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -3865,10 +4155,10 @@ results:
     value_note: ''
     sort_value: 0.4988
     sort_std: 0.004
-    global_rank: 108
-    paper_rank: 215
-    rank_delta: 107
-    rank_delta_abs: 107
+    global_rank: 96
+    paper_rank: 207
+    rank_delta: 111
+    rank_delta_abs: 111
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3893,15 +4183,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: platonov2023a
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs on heterophilic
-      datasets
+    protocol_note: Accuracy on amazon-ratings heterophilic dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -3933,10 +4223,10 @@ results:
     value_note: ''
     sort_value: 0.4956
     sort_std: 0.004
-    global_rank: 113
-    paper_rank: 167
-    rank_delta: 54
-    rank_delta_abs: 54
+    global_rank: 101
+    paper_rank: 157
+    rank_delta: 56
+    rank_delta_abs: 56
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3961,15 +4251,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs on heterophilic
-      datasets
+    protocol_note: Accuracy on amazon-ratings heterophilic dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -4002,8 +4292,8 @@ results:
     value_note: ''
     sort_value: 0.4821
     sort_std: 0.0053
-    global_rank: 134
-    paper_rank: 134
+    global_rank: 122
+    paper_rank: 122
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4030,15 +4320,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs on heterophilic
-      datasets
+    protocol_note: Accuracy on amazon-ratings heterophilic dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -4071,8 +4361,8 @@ results:
     value_note: ''
     sort_value: 0.4793
     sort_std: 0.0058
-    global_rank: 139
-    paper_rank: 139
+    global_rank: 127
+    paper_rank: 127
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4099,15 +4389,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs on heterophilic
-      datasets
+    protocol_note: Accuracy on amazon-ratings heterophilic dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -4119,8 +4409,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-04-10'
-    value_gap_source_date_label: '2026'
+    value_gap_source_date_iso: '2024-03-02'
+    value_gap_source_date_label: ICLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -4131,17 +4421,17 @@ results:
     today_delta_significant: false
     true_value: 0.4789
     true_std: 0.0039
-    value_gap_source_arxiv: '2604.08980'
-    value_gap_source_title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware
-      Graph Learning'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.4789
     sort_std: 0.0039
-    global_rank: 140
-    paper_rank: 140
+    global_rank: 128
+    paper_rank: 128
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4168,15 +4458,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs on heterophilic
-      datasets
+    protocol_note: Accuracy on amazon-ratings heterophilic dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -4208,8 +4498,77 @@ results:
     value_note: ''
     sort_value: 0.4784
     sort_std: 0.0065
-    global_rank: 141
-    paper_rank: 141
+    global_rank: 129
+    paper_rank: 129
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: OrderedGNN
+    model_key: orderedgnn
+    model_plain: OrderedGNN
+    value: 0.4729
+    std: 0.0065
+    paper_value: 0.4729
+    paper_std: 0.0065
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on amazon-ratings heterophilic dataset, averaged over
+      10 runs.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-02'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4729
+    true_std: 0.0065
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4729
+    sort_std: 0.0065
+    global_rank: 133
+    paper_rank: 133
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4236,15 +4595,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs on heterophilic
-      datasets
+    protocol_note: Accuracy on amazon-ratings heterophilic dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -4276,10 +4635,10 @@ results:
     value_note: ''
     sort_value: 0.4548
     sort_std: 0.005
-    global_rank: 161
-    paper_rank: 179
-    rank_delta: 18
-    rank_delta_abs: 18
+    global_rank: 151
+    paper_rank: 168
+    rank_delta: 17
+    rank_delta_abs: 17
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -4304,15 +4663,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs on heterophilic
-      datasets
+    protocol_note: Accuracy on amazon-ratings heterophilic dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -4345,8 +4704,8 @@ results:
     value_note: ''
     sort_value: 0.4461
     sort_std: 0.005
-    global_rank: 171
-    paper_rank: 171
+    global_rank: 160
+    paper_rank: 160
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4373,15 +4732,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs on heterophilic
-      datasets
+    protocol_note: Accuracy on amazon-ratings heterophilic dataset, averaged over
+      10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -4414,8 +4773,8 @@ results:
     value_note: ''
     sort_value: 0.43
     sort_std: 0.0032
-    global_rank: 186
-    paper_rank: 186
+    global_rank: 175
+    paper_rank: 175
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4437,106 +4796,104 @@ results:
 - &id003
   dataset: Coauthor-Physics
   rows:
-  - model: GeoMancer
-    model_key: geomancer
-    model_plain: GeoMancer
-    value: 0.9878
-    std: 0.0012
+  - model: GrokFormer
+    model_key: grokformer
+    model_plain: GrokFormer
+    value: 0.9831
+    std: 0.0018
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2510.04522'
-    title: 'Toward a Unified Geometry Understanding: Riemannian Diffusion Framework
-      for Graph Generation and Prediction'
-    date: Oct 6, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-06'
-    venue: Accepted by NeurIPS 2025
-    codebase_url: https://github.com/RingBDStack/GeoMancer
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2411.17296'
+    title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    date: Nov 26, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-26'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/GGA23/GrokFormer
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.9878
-    sort_std: 0.0012
+    sort_value: 0.9831
+    sort_std: 0.0018
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LGD
-    model_key: lgd
-    model_plain: LGD
-    value: 0.9855
-    std: 0.0012
+  - model: PolyFormer
+    model_key: polyformer
+    model_plain: PolyFormer
+    value: 0.9808
+    std: 0.0027
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2510.04522'
-    title: 'Toward a Unified Geometry Understanding: Riemannian Diffusion Framework
-      for Graph Generation and Prediction'
-    date: Oct 6, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-06'
-    venue: Accepted by NeurIPS 2025
-    codebase_url: https://github.com/RingBDStack/GeoMancer
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2411.17296'
+    title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    date: Nov 26, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-26'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/GGA23/GrokFormer
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.9855
-    sort_std: 0.0012
+    sort_value: 0.9808
+    sort_std: 0.0027
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MSH-GNN
-    model_key: msh-gnn
-    model_plain: MSH-GNN
-    value: 0.9837
-    std: 0.0008
+  - model: SGFormer
+    model_key: sgformer
+    model_plain: SGFormer
+    value: 0.9796
+    std: 0.0081
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.15015'
-    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
-    date: May 21, 2025
-    date_display: May 2025
-    date_iso: '2025-05-21'
-    venue: null
-    codebase_url: ''
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2411.17296'
+    title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    date: Nov 26, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-26'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/GGA23/GrokFormer
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.9837
-    sort_std: 0.0008
+    sort_value: 0.9796
+    sort_std: 0.0081
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: NAGphormer
     model_key: nagphormer
@@ -4555,15 +4912,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: chen2022nagphormer
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Physics dataset, 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -4571,11 +4927,10 @@ results:
     published_conference: ICLR 2024
     at_pub_value: 0.9734
     at_pub_std: 0.0003
-    at_pub_source_arxiv: '2305.12677'
-    at_pub_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    at_pub_source_date_iso: '2023-05-22'
-    at_pub_source_date_label: '2023'
+    at_pub_source_arxiv: '2310.05296'
+    at_pub_source_title: Tailoring Self-Attention for Graph via Rooted Subtrees
+    at_pub_source_date_iso: '2023-10-08'
+    at_pub_source_date_label: NeurIPS 2023
     value_gap_source_date_iso: '2024-11-26'
     value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
@@ -4596,10 +4951,10 @@ results:
     value_note: ''
     sort_value: 0.9785
     sort_std: 0.0026
-    global_rank: 8
-    paper_rank: 26
-    rank_delta: 18
-    rank_delta_abs: 18
+    global_rank: 5
+    paper_rank: 21
+    rank_delta: 16
+    rank_delta_abs: 16
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -4624,15 +4979,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: velivckovic2017graph
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Physics dataset, 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -4664,10 +5018,10 @@ results:
     value_note: ''
     sort_value: 0.9782
     sort_std: 0.0028
-    global_rank: 9
-    paper_rank: 84
-    rank_delta: 75
-    rank_delta_abs: 75
+    global_rank: 6
+    paper_rank: 75
+    rank_delta: 69
+    rank_delta_abs: 69
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4692,15 +5046,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: chien2020adaptive
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Physics dataset, 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -4732,10 +5085,10 @@ results:
     value_note: ''
     sort_value: 0.9777
     sort_std: 0.0015
-    global_rank: 10
-    paper_rank: 49
-    rank_delta: 39
-    rank_delta_abs: 39
+    global_rank: 7
+    paper_rank: 41
+    rank_delta: 34
+    rank_delta_abs: 34
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4760,15 +5113,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: kipf2016semi
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Physics dataset, 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -4801,10 +5153,10 @@ results:
     value_note: ''
     sort_value: 0.9774
     sort_std: 0.0035
-    global_rank: 12
-    paper_rank: 82
-    rank_delta: 70
-    rank_delta_abs: 70
+    global_rank: 9
+    paper_rank: 73
+    rank_delta: 64
+    rank_delta_abs: 64
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4830,15 +5182,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: ''
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Physics dataset, 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -4870,10 +5221,10 @@ results:
     value_note: ''
     sort_value: 0.976
     sort_std: 0.0005
-    global_rank: 16
-    paper_rank: 40
-    rank_delta: 24
-    rank_delta_abs: 24
+    global_rank: 13
+    paper_rank: 32
+    rank_delta: 19
+    rank_delta_abs: 19
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -4906,7 +5257,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 22
+    global_rank: 18
     sort_value: 0.9739
     sort_std: 0.0018
     comparison_type: global_top
@@ -4931,14 +5282,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Polynormer with ReLU activation.
+    protocol_note: Node classification accuracy on Physics dataset, 10 runs (Polynormer
+      with ReLU).
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -4971,8 +5323,8 @@ results:
     value_note: ''
     sort_value: 0.9727
     sort_std: 0.0008
-    global_rank: 31
-    paper_rank: 31
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4999,15 +5351,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Physics dataset, 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -5040,8 +5391,8 @@ results:
     value_note: ''
     sort_value: 0.9722
     sort_std: 0.0006
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 28
+    paper_rank: 28
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5068,15 +5419,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: Shirzad2023ExphormerST
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Physics dataset, 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -5109,10 +5459,10 @@ results:
     value_note: ''
     sort_value: 0.972
     sort_std: 0.001
-    global_rank: 38
-    paper_rank: 49
-    rank_delta: 11
-    rank_delta_abs: 11
+    global_rank: 29
+    paper_rank: 41
+    rank_delta: 12
+    rank_delta_abs: 12
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -5137,32 +5487,30 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: ''
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Physics dataset, 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
     published_venue: ICLR 2024
     published_conference: ICLR 2024
-    at_pub_value: 0.9719
-    at_pub_std: 0.0004
-    at_pub_source_arxiv: '2305.12677'
-    at_pub_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    at_pub_source_date_iso: '2023-05-22'
-    at_pub_source_date_label: '2023'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2025-05-23'
     value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.007399999999999962
-    worse_than_at_pub: true
-    surpassed_since_pub: false
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
@@ -5179,16 +5527,15 @@ results:
     value_note: ''
     sort_value: 0.9719
     sort_std: 0.0004
-    global_rank: 39
-    paper_rank: 71
+    global_rank: 30
+    paper_rank: 62
     rank_delta: 32
     rank_delta_abs: 32
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    comparison_source_arxiv: '2305.12677'
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GGCN
@@ -5208,15 +5555,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: ''
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Physics dataset, 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -5228,8 +5574,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-04-10'
-    value_gap_source_date_label: '2026'
+    value_gap_source_date_iso: '2024-03-02'
+    value_gap_source_date_label: ICLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5240,17 +5586,17 @@ results:
     today_delta_significant: false
     true_value: 0.9707
     true_std: 0.0005
-    value_gap_source_arxiv: '2604.08980'
-    value_gap_source_title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware
-      Graph Learning'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9707
     sort_std: 0.0005
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 36
+    paper_rank: 36
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5277,15 +5623,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: ''
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Physics dataset, 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -5297,8 +5642,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-04-10'
-    value_gap_source_date_label: '2026'
+    value_gap_source_date_iso: '2024-03-02'
+    value_gap_source_date_label: ICLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5309,17 +5654,17 @@ results:
     today_delta_significant: false
     true_value: 0.97
     true_std: 0.0008
-    value_gap_source_arxiv: '2604.08980'
-    value_gap_source_title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware
-      Graph Learning'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.97
     sort_std: 0.0008
-    global_rank: 46
-    paper_rank: 46
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5346,15 +5691,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: ''
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Physics dataset, 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -5366,8 +5710,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-10-24'
-    value_gap_source_date_label: NeurIPS 2025
+    value_gap_source_date_iso: '2024-03-02'
+    value_gap_source_date_label: ICLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5378,16 +5722,17 @@ results:
     today_delta_significant: false
     true_value: 0.966
     true_std: 0.0018
-    value_gap_source_arxiv: '2510.21267'
-    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.966
     sort_std: 0.0018
-    global_rank: 63
-    paper_rank: 63
+    global_rank: 53
+    paper_rank: 53
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5414,15 +5759,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: gasteiger2018predict
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Physics dataset, 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -5430,13 +5774,12 @@ results:
     published_conference: ICLR 2024
     at_pub_value: 0.9654
     at_pub_std: 0.0007
-    at_pub_source_arxiv: '2305.12677'
-    at_pub_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    at_pub_source_date_iso: '2023-05-22'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2026-04-10'
-    value_gap_source_date_label: '2026'
+    at_pub_source_arxiv: '2310.05296'
+    at_pub_source_title: Tailoring Self-Attention for Graph via Rooted Subtrees
+    at_pub_source_date_iso: '2023-10-08'
+    at_pub_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2025-05-23'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5447,17 +5790,17 @@ results:
     today_delta_significant: false
     true_value: 0.9654
     true_std: 0.0007
-    value_gap_source_arxiv: '2604.08980'
-    value_gap_source_title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware
-      Graph Learning'
+    value_gap_source_arxiv: '2505.17660'
+    value_gap_source_title: 'DAM-GT: Dual Positional Encoding-Based Attention Masking
+      Graph Transformer for Node Classification'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9654
     sort_std: 0.0007
-    global_rank: 66
-    paper_rank: 66
+    global_rank: 56
+    paper_rank: 56
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5484,15 +5827,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: hamilton2017inductive
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Physics dataset, 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -5505,8 +5847,8 @@ results:
       Neural Networks from the Topological View
     at_pub_source_date_iso: '2019-09-07'
     at_pub_source_date_label: AAAI 2019
-    value_gap_source_date_iso: '2026-04-10'
-    value_gap_source_date_label: '2026'
+    value_gap_source_date_iso: '2024-11-25'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: 0.03489999999999993
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5517,17 +5859,16 @@ results:
     today_delta_significant: false
     true_value: 0.9649
     true_std: 0.0006
-    value_gap_source_arxiv: '2604.08980'
-    value_gap_source_title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware
-      Graph Learning'
+    value_gap_source_arxiv: '2411.16278'
+    value_gap_source_title: Even Sparser Graph Transformers
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9649
     sort_std: 0.0006
-    global_rank: 67
-    paper_rank: 67
+    global_rank: 57
+    paper_rank: 57
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5555,15 +5896,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: ''
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Physics dataset, 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -5596,10 +5936,10 @@ results:
     value_note: ''
     sort_value: 0.9647
     sort_std: 0.0016
-    global_rank: 70
-    paper_rank: 79
-    rank_delta: 9
-    rank_delta_abs: 9
+    global_rank: 60
+    paper_rank: 70
+    rank_delta: 10
+    rank_delta_abs: 10
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -5624,15 +5964,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: hua2022high
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Physics dataset, 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -5644,8 +5983,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-04-10'
-    value_gap_source_date_label: '2026'
+    value_gap_source_date_iso: '2024-03-02'
+    value_gap_source_date_label: ICLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5656,17 +5995,17 @@ results:
     today_delta_significant: false
     true_value: 0.9624
     true_std: 0.0024
-    value_gap_source_arxiv: '2604.08980'
-    value_gap_source_title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware
-      Graph Learning'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9624
     sort_std: 0.0024
-    global_rank: 80
-    paper_rank: 80
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5693,15 +6032,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: ''
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Physics dataset, 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -5714,8 +6052,8 @@ results:
       for Graph Convolutional Networks
     at_pub_source_date_iso: '2023-02-17'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2026-04-10'
-    value_gap_source_date_label: '2026'
+    value_gap_source_date_iso: '2024-03-02'
+    value_gap_source_date_label: ICLR 2024
     gap_vs_at_pub: 0.020299999999999985
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5726,17 +6064,17 @@ results:
     today_delta_significant: false
     true_value: 0.9597
     true_std: 0.0011
-    value_gap_source_arxiv: '2604.08980'
-    value_gap_source_title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware
-      Graph Learning'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9597
     sort_std: 0.0011
-    global_rank: 93
-    paper_rank: 93
+    global_rank: 84
+    paper_rank: 84
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5773,7 +6111,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 92
+    global_rank: 83
     sort_value: 0.9597
     sort_std: 0.0007
     comparison_type: global_top
@@ -5798,29 +6136,27 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: bojchevski2020scaling
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Node classification accuracy on Physics dataset, 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
     published_venue: ICLR 2024
     published_conference: ICLR 2024
-    at_pub_value: 0.9551
-    at_pub_std: 0.0008
-    at_pub_source_arxiv: '2305.12677'
-    at_pub_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    at_pub_source_date_iso: '2023-05-22'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2026-04-10'
-    value_gap_source_date_label: '2026'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-05-23'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5831,17 +6167,17 @@ results:
     today_delta_significant: false
     true_value: 0.9551
     true_std: 0.0008
-    value_gap_source_arxiv: '2604.08980'
-    value_gap_source_title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware
-      Graph Learning'
+    value_gap_source_arxiv: '2505.17660'
+    value_gap_source_title: 'DAM-GT: Dual Positional Encoding-Based Attention Masking
+      Graph Transformer for Node Classification'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9551
     sort_std: 0.0008
-    global_rank: 150
-    paper_rank: 150
+    global_rank: 140
+    paper_rank: 140
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5860,7 +6196,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id010
+- &id008
   dataset: Minesweeper
   rows:
   - model: BuNN
@@ -5929,39 +6265,6 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Tango_GPS
-    model_key: tango_gps
-    model_plain: Tango_GPS
-    value: 0.9839
-    std: 0.0054
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_display: Aug 2025
-    date_iso: '2025-08-07'
-    venue: arXiv.org
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9839
-    sort_std: 0.0054
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
   - model: Polynormer-r
     model_key: polynormer-r
     model_plain: Polynormer-r
@@ -5979,14 +6282,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged results over 10 runs on heterophilic datasets
+    protocol_note: ROC AUC on minesweeper heterophilic dataset, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -6019,8 +6322,8 @@ results:
     value_note: ''
     sort_value: 0.9746
     sort_std: 0.0036
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 3
+    paper_rank: 3
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6047,14 +6350,81 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged results over 10 runs on heterophilic datasets
+    protocol_note: ROC AUC on minesweeper heterophilic dataset, averaged over 10 runs.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-10-24'
+    value_gap_source_date_label: NeurIPS 2025
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.9713
+    true_std: 0.0017
+    value_gap_source_arxiv: '2510.21267'
+    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0017000000000000348
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9713
+    sort_std: 0.0017
+    global_rank: 6
+    paper_rank: 6
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Polynormer-v1
+    model_key: polynormer-v1
+    model_plain: Polynormer-v1
+    value: 0.9696
+    std: 0.0052
+    paper_value: 0.9696
+    paper_std: 0.0052
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 4
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC AUC on minesweeper heterophilic dataset.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -6087,6 +6457,74 @@ results:
     value_note: ''
     sort_value: 0.9696
     sort_std: 0.0052
+    global_rank: 7
+    paper_rank: 7
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Polynormer-v2
+    model_key: polynormer-v2
+    model_plain: Polynormer-v2
+    value: 0.9648
+    std: 0.0037
+    paper_value: 0.9648
+    paper_std: 0.0037
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 4
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC AUC on minesweeper heterophilic dataset.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-02'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.9648
+    true_std: 0.0037
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9648
+    sort_std: 0.0037
     global_rank: 8
     paper_rank: 8
     rank_delta: 0
@@ -6115,14 +6553,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: platonov2023a
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged results over 10 runs on heterophilic datasets
+    protocol_note: ROC AUC on minesweeper heterophilic dataset, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -6134,8 +6572,8 @@ results:
     at_pub_source_title: Evolving Computation Graphs
     at_pub_source_date_iso: '2023-06-22'
     at_pub_source_date_label: ICML 2023
-    value_gap_source_date_iso: '2025-08-07'
-    value_gap_source_date_label: '2025'
+    value_gap_source_date_iso: '2024-05-25'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -6146,17 +6584,16 @@ results:
     today_delta_significant: false
     true_value: 0.9391
     true_std: 0.0035
-    value_gap_source_arxiv: '2508.05070'
-    value_gap_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
-      Flows'
+    value_gap_source_arxiv: '2405.16185'
+    value_gap_source_title: Differentiable Cluster Graph Neural Network
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9391
     sort_std: 0.0035
-    global_rank: 35
-    paper_rank: 35
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6183,14 +6620,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: platonov2023a
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged results over 10 runs on heterophilic datasets
+    protocol_note: ROC AUC on minesweeper heterophilic dataset, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -6222,8 +6659,8 @@ results:
     value_note: ''
     sort_value: 0.9358
     sort_std: 0.0005
-    global_rank: 40
-    paper_rank: 43
+    global_rank: 38
+    paper_rank: 41
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -6254,14 +6691,81 @@ results:
     date_iso: '2026-05-13'
     venue: null
     codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
+    uses_external_data: null
+    input_feature_source: unknown
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 44
+    global_rank: 42
     sort_value: 0.9351
     sort_std: 0.0057
     comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphGPS
+    model_key: graphgps
+    model_plain: GraphGPS
+    value: 0.9063
+    std: 0.0067
+    paper_value: 0.9063
+    paper_std: 0.0067
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC AUC on minesweeper heterophilic dataset, averaged over 10 runs.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-10-24'
+    value_gap_source_date_label: NeurIPS 2025
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9326
+    true_std: 0.001
+    value_gap_source_arxiv: '2510.21267'
+    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: 0.02629999999999999
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9326
+    sort_std: 0.001
+    global_rank: 44
+    paper_rank: 71
+    rank_delta: 27
+    rank_delta_abs: 27
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -6283,14 +6787,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: Shirzad2023ExphormerST
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged results over 10 runs on heterophilic datasets
+    protocol_note: ROC AUC on minesweeper heterophilic dataset, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -6323,10 +6827,10 @@ results:
     value_note: ''
     sort_value: 0.9226
     sort_std: 0.0056
-    global_rank: 55
-    paper_rank: 72
-    rank_delta: 17
-    rank_delta_abs: 17
+    global_rank: 52
+    paper_rank: 68
+    rank_delta: 16
+    rank_delta_abs: 16
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -6351,14 +6855,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: hua2022high
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged results over 10 runs on heterophilic datasets
+    protocol_note: ROC AUC on minesweeper heterophilic dataset, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -6391,8 +6895,8 @@ results:
     value_note: ''
     sort_value: 0.9193
     sort_std: 0.0077
-    global_rank: 57
-    paper_rank: 57
+    global_rank: 54
+    paper_rank: 54
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6419,14 +6923,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: platonov2023a
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged results over 10 runs on heterophilic datasets
+    protocol_note: ROC AUC on minesweeper heterophilic dataset, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -6459,8 +6963,8 @@ results:
     value_note: ''
     sort_value: 0.9183
     sort_std: 0.0056
-    global_rank: 60
-    paper_rank: 60
+    global_rank: 57
+    paper_rank: 57
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6487,14 +6991,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: platonov2023a
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged results over 10 runs on heterophilic datasets
+    protocol_note: ROC AUC on minesweeper heterophilic dataset, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -6526,10 +7030,10 @@ results:
     value_note: ''
     sort_value: 0.915
     sort_std: 0.0006
-    global_rank: 63
-    paper_rank: 84
-    rank_delta: 21
-    rank_delta_abs: 21
+    global_rank: 60
+    paper_rank: 80
+    rank_delta: 20
+    rank_delta_abs: 20
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -6554,14 +7058,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: platonov2023a
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged results over 10 runs on heterophilic datasets
+    protocol_note: ROC AUC on minesweeper heterophilic dataset, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -6594,10 +7098,10 @@ results:
     value_note: ''
     sort_value: 0.9101
     sort_std: 0.005
-    global_rank: 69
-    paper_rank: 112
-    rank_delta: 43
-    rank_delta_abs: 43
+    global_rank: 65
+    paper_rank: 111
+    rank_delta: 46
+    rank_delta_abs: 46
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -6622,14 +7126,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged results over 10 runs on heterophilic datasets
+    protocol_note: ROC AUC on minesweeper heterophilic dataset, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -6661,75 +7165,8 @@ results:
     value_note: ''
     sort_value: 0.9089
     sort_std: 0.0058
-    global_rank: 71
-    paper_rank: 71
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphGPS
-    model_key: graphgps
-    model_plain: GraphGPS
-    value: 0.9063
-    std: 0.0067
-    paper_value: 0.9063
-    paper_std: 0.0067
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Averaged results over 10 runs on heterophilic datasets
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ICLR 2024
-    published_conference: ICLR 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-11-25'
-    value_gap_source_date_label: NeurIPS 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.9063
-    true_std: 0.0067
-    value_gap_source_arxiv: '2411.16278'
-    value_gap_source_title: Even Sparser Graph Transformers
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9063
-    sort_std: 0.0067
-    global_rank: 75
-    paper_rank: 75
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6756,14 +7193,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: platonov2023a
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged results over 10 runs on heterophilic datasets
+    protocol_note: ROC AUC on minesweeper heterophilic dataset, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -6775,8 +7212,8 @@ results:
     at_pub_source_title: Evolving Computation Graphs
     at_pub_source_date_iso: '2023-06-22'
     at_pub_source_date_label: ICML 2023
-    value_gap_source_date_iso: '2025-08-07'
-    value_gap_source_date_label: '2025'
+    value_gap_source_date_iso: '2024-05-25'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -6787,17 +7224,16 @@ results:
     today_delta_significant: false
     true_value: 0.9008
     true_std: 0.007
-    value_gap_source_arxiv: '2508.05070'
-    value_gap_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
-      Flows'
+    value_gap_source_arxiv: '2405.16185'
+    value_gap_source_title: Differentiable Cluster Graph Neural Network
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9008
     sort_std: 0.007
-    global_rank: 79
-    paper_rank: 79
+    global_rank: 75
+    paper_rank: 75
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6824,14 +7260,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: platonov2023a
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged results over 10 runs on heterophilic datasets
+    protocol_note: ROC AUC on minesweeper heterophilic dataset, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -6863,8 +7299,8 @@ results:
     value_note: ''
     sort_value: 0.8995
     sort_std: 0.0038
-    global_rank: 81
-    paper_rank: 84
+    global_rank: 77
+    paper_rank: 80
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -6891,14 +7327,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: platonov2023a
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged results over 10 runs on heterophilic datasets
+    protocol_note: ROC AUC on minesweeper heterophilic dataset, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -6931,8 +7367,8 @@ results:
     value_note: ''
     sort_value: 0.8754
     sort_std: 0.0122
-    global_rank: 99
-    paper_rank: 99
+    global_rank: 97
+    paper_rank: 97
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6959,14 +7395,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: platonov2023a
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged results over 10 runs on heterophilic datasets
+    protocol_note: ROC AUC on minesweeper heterophilic dataset, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -6999,8 +7435,8 @@ results:
     value_note: ''
     sort_value: 0.8705
     sort_std: 0.0069
-    global_rank: 101
-    paper_rank: 101
+    global_rank: 99
+    paper_rank: 99
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7027,14 +7463,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged results over 10 runs on heterophilic datasets
+    protocol_note: ROC AUC on minesweeper heterophilic dataset, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -7066,8 +7502,8 @@ results:
     value_note: ''
     sort_value: 0.8671
     sort_std: 0.0088
-    global_rank: 102
-    paper_rank: 102
+    global_rank: 100
+    paper_rank: 100
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7094,14 +7530,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: platonov2023a
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged results over 10 runs on heterophilic datasets
+    protocol_note: ROC AUC on minesweeper heterophilic dataset, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -7133,8 +7569,8 @@ results:
     value_note: ''
     sort_value: 0.8624
     sort_std: 0.0061
-    global_rank: 104
-    paper_rank: 104
+    global_rank: 102
+    paper_rank: 102
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7161,14 +7597,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: chen2022nagphormer
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged results over 10 runs on heterophilic datasets
+    protocol_note: ROC AUC on minesweeper heterophilic dataset, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -7201,8 +7637,8 @@ results:
     value_note: ''
     sort_value: 0.8419
     sort_std: 0.0066
-    global_rank: 108
-    paper_rank: 108
+    global_rank: 106
+    paper_rank: 106
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7229,14 +7665,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: pmlr-v202-kong23a
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged results over 10 runs on heterophilic datasets
+    protocol_note: ROC AUC on minesweeper heterophilic dataset, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -7269,8 +7705,8 @@ results:
     value_note: ''
     sort_value: 0.8109
     sort_std: 0.0102
-    global_rank: 111
-    paper_rank: 111
+    global_rank: 110
+    paper_rank: 110
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7297,14 +7733,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: platonov2023a
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged results over 10 runs on heterophilic datasets
+    protocol_note: ROC AUC on minesweeper heterophilic dataset, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -7336,10 +7772,10 @@ results:
     value_note: ''
     sort_value: 0.6253
     sort_std: 0.0134
-    global_rank: 138
+    global_rank: 139
     paper_rank: 146
-    rank_delta: 8
-    rank_delta_abs: 8
+    rank_delta: 7
+    rank_delta_abs: 7
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -7390,939 +7826,84 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id011
-  dataset: Pokec
+- &id009
+  dataset: Questions
   rows:
-  - model: Polynormer-r
-    model_key: polynormer-r
-    model_plain: Polynormer-r
-    value: 0.861
-    std: 0.0005
-    paper_value: 0.861
-    paper_std: 0.0005
-    metric: Accuracy
+  - model: UniGAP
+    model_key: unigap
+    model_plain: UniGAP
+    value: 0.8421
+    std: 0.008
+    metric: ROC-AUC
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Polynormer with ReLU activation.
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ICLR 2024
-    published_conference: ICLR 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.861
-    true_std: 0.0005
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.861
-    sort_std: 0.0005
-    global_rank: 1
-    paper_rank: 1
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Polynormer
-    model_key: polynormer
-    model_plain: Polynormer
-    value: 0.8595
-    std: 0.0007
-    paper_value: 0.8595
-    paper_std: 0.0007
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Averaged node classification accuracy on large-scale datasets using
-      mini-batch training via random partitioning.
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ICLR 2024
-    published_conference: ICLR 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8595
-    true_std: 0.0007
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8595
-    sort_std: 0.0007
-    global_rank: 2
-    paper_rank: 2
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MoE-H2GCN
-    model_key: moe-h2gcn
-    model_plain: MoE-H2GCN
-    value: 0.8302
-    std: 0.003
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2311.05185'
-    title: Mixture of Weak & Strong Experts on Graphs
-    date: Nov 9, 2023
-    date_display: Nov 2023
-    date_iso: '2023-11-09'
-    venue: Accepted for publication in ICLR 2024
-    codebase_url: https://github.com/VITA-Group/Graph-Mixture-of-Experts
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.8302
-    sort_std: 0.003
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: LINKX
-    model_key: linkx
-    model_plain: LINKX
-    value: 0.8204
-    std: 0.0007
-    paper_value: 0.8204
-    paper_std: 0.0007
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: lim2021large
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Averaged node classification accuracy on large-scale datasets using
-      mini-batch training via random partitioning.
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ICLR 2024
-    published_conference: ICLR 2024
-    at_pub_value: 0.8204
-    at_pub_std: 0.0007
-    at_pub_source_arxiv: '2202.03580'
-    at_pub_source_title: Convolutional Neural Networks on Graphs with Chebyshev Approximation,
-      Revisited
-    at_pub_source_date_iso: '2022-02-04'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2024-06-03'
-    value_gap_source_date_label: NeurIPS 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8204
-    true_std: 0.001
-    value_gap_source_arxiv: '2406.01249'
-    value_gap_source_title: Equivariant Machine Learning on Graphs with Nonlinear
-      Spectral Filters
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8204
-    sort_std: 0.001
-    global_rank: 7
-    paper_rank: 7
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GPRGNN
-    model_key: gprgnn
-    model_plain: GPRGNN
-    value: 0.7883
-    std: 0.0005
-    paper_value: 0.7883
-    paper_std: 0.0005
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Averaged node classification accuracy on large-scale datasets using
-      mini-batch training via random partitioning.
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ICLR 2024
-    published_conference: ICLR 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-06-03'
-    value_gap_source_date_label: NeurIPS 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8074
-    true_std: 0.002
-    value_gap_source_arxiv: '2406.01249'
-    value_gap_source_title: Equivariant Machine Learning on Graphs with Nonlinear
-      Spectral Filters
-    value_gap_source_is_current_paper: false
-    value_gap: 0.019100000000000006
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8074
-    sort_std: 0.002
-    global_rank: 14
-    paper_rank: 17
-    rank_delta: 3
-    rank_delta_abs: 3
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: NAGphormer
-    model_key: nagphormer
-    model_plain: NAGphormer
-    value: 0.7659
-    std: 0.0025
-    paper_value: 0.7659
-    paper_std: 0.0025
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Averaged node classification accuracy on large-scale datasets using
-      mini-batch training via random partitioning.
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ICLR 2024
-    published_conference: ICLR 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7659
-    true_std: 0.0025
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7659
-    sort_std: 0.0025
-    global_rank: 23
-    paper_rank: 23
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.7545
-    std: 0.0017
-    paper_value: 0.7545
-    paper_std: 0.0017
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Averaged node classification accuracy on large-scale datasets using
-      mini-batch training via random partitioning.
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ICLR 2024
-    published_conference: ICLR 2024
-    at_pub_value: 0.7601
-    at_pub_std: 0.0049
-    at_pub_source_arxiv: '2311.05185'
-    at_pub_source_title: Mixture of Weak & Strong Experts on Graphs
-    at_pub_source_date_iso: '2023-11-09'
-    at_pub_source_date_label: ICLR 2023
-    value_gap_source_date_iso: '2023-11-09'
-    value_gap_source_date_label: ICLR 2023
-    gap_vs_at_pub: 0.005600000000000049
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.7601
-    true_std: 0.0049
-    value_gap_source_arxiv: '2311.05185'
-    value_gap_source_title: Mixture of Weak & Strong Experts on Graphs
-    value_gap_source_is_current_paper: false
-    value_gap: 0.005600000000000049
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7601
-    sort_std: 0.0049
-    global_rank: 26
-    paper_rank: 27
-    rank_delta: 1
-    rank_delta_abs: 1
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.7576
-    std: 0.0004
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2311.05185'
-    title: Mixture of Weak & Strong Experts on Graphs
-    date: Nov 9, 2023
-    date_display: Nov 2023
-    date_iso: '2023-11-09'
-    venue: Accepted for publication in ICLR 2024
-    codebase_url: https://github.com/VITA-Group/Graph-Mixture-of-Experts
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 27
-    sort_value: 0.7576
-    sort_std: 0.0004
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: DIFFormer
-    model_key: difformer
-    model_plain: DIFFormer
-    value: 0.7389
-    std: 0.0035
-    paper_value: 0.7389
-    paper_std: 0.0035
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Averaged node classification accuracy on large-scale datasets using
-      mini-batch training via random partitioning.
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ICLR 2024
-    published_conference: ICLR 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7389
-    true_std: 0.0035
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7389
-    sort_std: 0.0035
-    global_rank: 28
-    paper_rank: 28
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.7223
-    std: 0.0018
-    paper_value: 0.7223
-    paper_std: 0.0018
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Averaged node classification accuracy on large-scale datasets using
-      mini-batch training via random partitioning.
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ICLR 2024
-    published_conference: ICLR 2024
-    at_pub_value: 0.7177
-    at_pub_std: 0.0618
-    at_pub_source_arxiv: '2311.05185'
-    at_pub_source_title: Mixture of Weak & Strong Experts on Graphs
-    at_pub_source_date_iso: '2023-11-09'
-    at_pub_source_date_label: ICLR 2023
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.0046000000000000485
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: true
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7223
-    true_std: 0.0018
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7223
-    sort_std: 0.0018
-    global_rank: 32
-    paper_rank: 32
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: NodeFormer
-    model_key: nodeformer
-    model_plain: NodeFormer
-    value: 0.71
-    std: 0.013
-    paper_value: 0.71
-    paper_std: 0.013
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Averaged node classification accuracy on large-scale datasets using
-      mini-batch training via random partitioning.
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ICLR 2024
-    published_conference: ICLR 2024
-    at_pub_value: 0.6832
-    at_pub_std: 0.0045
-    at_pub_source_arxiv: '2301.09474'
-    at_pub_source_title: 'Discovering Data Geometry: Energy-Driven Neural Diffusion'
-    at_pub_source_date_iso: '2023-01-23'
-    at_pub_source_date_label: ICLR 2023
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.026799999999999935
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.71
-    true_std: 0.013
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.71
-    sort_std: 0.013
-    global_rank: 34
-    paper_rank: 34
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'Discovering Data Geometry: Energy-Driven Neural Diffusion'
-    comparison_source_arxiv: '2301.09474'
-    is_best: false
-    is_std_outlier: false
-  - model: MLP
-    model_key: mlp
-    model_plain: MLP
-    value: 0.7048
-    std: 0.0077
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2202.04187'
-    title: 'FMP: Toward Fair Graph Message Passing against Topology Bias'
-    date: Feb 8, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-08'
-    venue: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2407.19420'
+    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
+      Over-Smoothing in Node Classification Tasks'
+    date: Jul 28, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-28'
+    venue: arXiv.org
     codebase_url: ''
     uses_external_data: false
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 36
-    sort_value: 0.7048
-    sort_std: 0.0077
+    global_rank: 1
+    sort_value: 0.8421
+    sort_std: 0.008
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
-  - model: GOAT
-    model_key: goat
-    model_plain: GOAT
-    value: 0.6637
-    std: 0.0094
-    paper_value: 0.6637
-    paper_std: 0.0094
-    metric: Accuracy
+  - model: H2GCN + AdaEdge
+    model_key: h2gcn + adaedge
+    model_plain: H2GCN + AdaEdge
+    value: 0.8134
+    std: 0.007
+    metric: ROC-AUC
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2407.19420'
+    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
+      Over-Smoothing in Node Classification Tasks'
+    date: Jul 28, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-28'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: pmlr-v202-kong23a
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Averaged node classification accuracy on large-scale datasets using
-      mini-batch training via random partitioning.
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ICLR 2024
-    published_conference: ICLR 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.6637
-    true_std: 0.0094
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6637
-    sort_std: 0.0094
-    global_rank: 39
-    paper_rank: 39
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8134
+    sort_std: 0.007
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  rank_metric: Accuracy
-  higher_is_better: true
-  experiment_scope: node-level
-  dataset_primary_metric: Accuracy
-  paper_metrics:
-  - Accuracy
-  metric: Accuracy
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
-- &id008
-  dataset: Questions
-  is_multi_metric: true
-  rows:
-  - model: GraphSAGE + UniGAP
-    model_key: graphsage + unigap
-    model_plain: GraphSAGE + UniGAP
-    metric_values:
-    - 0.8421
-    - null
-    metric_stds:
-    - 0.008
-    - null
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2407.19420'
-    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
-      Over-Smoothing in Node Classification Tasks'
-    published_venue: ''
-    date: Jul 28, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-28'
-    codebase_url: ''
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 1
-    is_best: true
-    sort_value: 0.8421
-    sort_std: 0.008
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: H2GCN + UniGAP
-    model_key: h2gcn + unigap
-    model_plain: H2GCN + UniGAP
-    metric_values:
-    - 0.8359
-    - null
-    metric_stds:
-    - 0.007
-    - null
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.19420'
-    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
-      Over-Smoothing in Node Classification Tasks'
-    published_venue: ''
-    date: Jul 28, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-28'
-    codebase_url: ''
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 2
-    is_best: true
-    sort_value: 0.8359
-    sort_std: 0.007
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: GCN + UniGAP
-    model_key: gcn + unigap
-    model_plain: GCN + UniGAP
-    metric_values:
-    - 0.8273
-    - null
-    metric_stds:
-    - 0.009
-    - null
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.19420'
-    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
-      Over-Smoothing in Node Classification Tasks'
-    published_venue: ''
-    date: Jul 28, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-28'
-    codebase_url: ''
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 3
-    is_best: true
-    sort_value: 0.8273
-    sort_std: 0.009
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: H2GCN
-    model_key: h2gcn
-    model_plain: H2GCN
-    metric_values:
-    - 0.6359
-    - null
-    metric_stds:
-    - 0.0146
-    - null
+  - model: GCN +AdaEdge
+    model_key: gcn +adaedge
+    model_plain: GCN +AdaEdge
+    value: 0.8085
+    std: 0.008
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -8330,19 +7911,56 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.7928
+    arxiv_id: '2407.19420'
+    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
+      Over-Smoothing in Node Classification Tasks'
+    date: Jul 28, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-28'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.8085
     sort_std: 0.008
-    true_value: 0.7928
-    true_std: 0.008
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: H2GCN
+    model_key: h2gcn
+    model_plain: H2GCN
+    value: 0.6359
+    std: 0.0146
     paper_value: 0.6359
     paper_std: 0.0146
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 0.15689999999999993
-    value_gap_source_arxiv: '2407.19420'
-    value_gap_source_title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach
-      to Mitigate Over-Smoothing in Node Classification Tasks'
-    value_note: ''
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: platonov2023a
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on questions heterophilic dataset, averaged over 10 runs
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: 0.6359
     at_pub_std: 0.0146
     at_pub_source_arxiv: '2306.12943'
@@ -8359,31 +7977,37 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.7928
+    true_std: 0.008
+    value_gap_source_arxiv: '2407.19420'
+    value_gap_source_title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach
+      to Mitigate Over-Smoothing in Node Classification Tasks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.15689999999999993
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7928
+    sort_std: 0.008
+    global_rank: 9
+    paper_rank: 127
+    rank_delta: 118
+    rank_delta_abs: 118
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 14
   - model: GCN
     model_key: gcn
     model_plain: GCN
-    metric_values:
-    - 0.7609
-    - null
-    metric_stds:
-    - 0.0127
-    - null
+    value: 0.7609
+    std: 0.0127
+    paper_value: 0.7609
+    paper_std: 0.0127
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -8391,19 +8015,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.7902
-    sort_std: 0.006
-    true_value: 0.7902
-    true_std: 0.006
-    paper_value: 0.7609
-    paper_std: 0.0127
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 0.029299999999999993
-    value_gap_source_arxiv: '2407.19420'
-    value_gap_source_title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach
-      to Mitigate Over-Smoothing in Node Classification Tasks'
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: platonov2023a
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on questions heterophilic dataset, averaged over 10 runs
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: 0.7609
     at_pub_std: 0.0127
     at_pub_source_arxiv: '2306.12943'
@@ -8420,31 +8045,37 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.7902
+    true_std: 0.006
+    value_gap_source_arxiv: '2407.19420'
+    value_gap_source_title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach
+      to Mitigate Over-Smoothing in Node Classification Tasks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.029299999999999993
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7902
+    sort_std: 0.006
+    global_rank: 12
+    paper_rank: 55
+    rank_delta: 43
+    rank_delta_abs: 43
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 17
   - model: Polynormer
     model_key: polynormer
     model_plain: Polynormer
-    metric_values:
-    - 0.7795
-    - 0.7795
-    metric_stds:
-    - 0.0106
-    - 0.0106
+    value: 0.7795
+    std: 0.0106
+    paper_value: 0.7795
+    paper_std: 0.0106
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
@@ -8452,19 +8083,20 @@ results:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    sort_value: 0.7892
-    sort_std: 0.0089
-    true_value: 0.7892
-    true_std: 0.0089
-    paper_value: 0.7795
-    paper_std: 0.0106
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 0.009700000000000042
-    value_gap_source_arxiv: '2410.02158'
-    value_gap_source_title: 'SCNode: Spatial and Contextual Coordinates for Graph
-      Representation Learning'
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on questions heterophilic dataset, averaged over 10 runs
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -8481,31 +8113,37 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: true
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.7892
+    true_std: 0.0089
+    value_gap_source_arxiv: '2410.02158'
+    value_gap_source_title: 'SCNode: Spatial and Contextual Coordinates for Graph
+      Representation Learning'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.009700000000000042
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7892
+    sort_std: 0.0089
+    global_rank: 16
+    paper_rank: 24
+    rank_delta: 8
+    rank_delta_abs: 8
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 21
   - model: Polynormer-r
     model_key: polynormer-r
     model_plain: Polynormer-r
-    metric_values:
-    - 0.7892
-    - 0.7892
-    metric_stds:
-    - 0.0089
-    - 0.0089
+    value: 0.7892
+    std: 0.0089
+    paper_value: 0.7892
+    paper_std: 0.0089
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
@@ -8513,19 +8151,20 @@ results:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    sort_value: 0.7892
-    sort_std: 0.0089
-    true_value: 0.7892
-    true_std: 0.0089
-    paper_value: 0.7892
-    paper_std: 0.0089
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on questions heterophilic dataset, averaged over 10 runs
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -8542,31 +8181,37 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.7892
+    true_std: 0.0089
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7892
+    sort_std: 0.0089
+    global_rank: 17
+    paper_rank: 17
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 22
   - model: FSGNN
     model_key: fsgnn
     model_plain: FSGNN
-    metric_values:
-    - 0.7886
-    - null
-    metric_stds:
-    - 0.0092
-    - null
+    value: 0.7886
+    std: 0.0092
+    paper_value: 0.7886
+    paper_std: 0.0092
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -8574,27 +8219,28 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.7886
-    sort_std: 0.0092
-    true_value: 0.7886
-    true_std: 0.0092
-    paper_value: 0.7886
-    paper_std: 0.0092
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2508.05070'
-    value_gap_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
-      Flows'
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: platonov2023a
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on questions heterophilic dataset, averaged over 10 runs
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: 0.7886
     at_pub_std: 0.0092
     at_pub_source_arxiv: '2306.12943'
     at_pub_source_title: Evolving Computation Graphs
     at_pub_source_date_iso: '2023-06-22'
     at_pub_source_date_label: ICML 2023
-    value_gap_source_date_iso: '2025-08-07'
-    value_gap_source_date_label: '2025'
+    value_gap_source_date_iso: '2024-10-03'
+    value_gap_source_date_label: TMLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -8603,31 +8249,37 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.7886
+    true_std: 0.0092
+    value_gap_source_arxiv: '2410.02158'
+    value_gap_source_title: 'SCNode: Spatial and Contextual Coordinates for Graph
+      Representation Learning'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7886
+    sort_std: 0.0092
+    global_rank: 18
+    paper_rank: 18
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 23
   - model: GraphSAGE
     model_key: graphsage
     model_plain: GraphSAGE
-    metric_values:
-    - 0.7644
-    - null
-    metric_stds:
-    - 0.0062
-    - null
+    value: 0.7644
+    std: 0.0062
+    paper_value: 0.7644
+    paper_std: 0.0062
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -8635,19 +8287,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.7721
-    sort_std: 0.013
-    true_value: 0.7721
-    true_std: 0.013
-    paper_value: 0.7644
-    paper_std: 0.0062
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 0.00770000000000004
-    value_gap_source_arxiv: '2407.19420'
-    value_gap_source_title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach
-      to Mitigate Over-Smoothing in Node Classification Tasks'
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: platonov2023a
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on questions heterophilic dataset, averaged over 10 runs
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: 0.7169
     at_pub_std: null
     at_pub_source_arxiv: '2312.17679'
@@ -8665,32 +8318,38 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.7721
+    true_std: 0.013
+    value_gap_source_arxiv: '2407.19420'
+    value_gap_source_title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach
+      to Mitigate Over-Smoothing in Node Classification Tasks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.00770000000000004
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7721
+    sort_std: 0.013
+    global_rank: 41
+    paper_rank: 50
+    rank_delta: 9
+    rank_delta_abs: 9
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: improved
     comparison_source_title: Data Augmentation for Supervised Graph Outlier Detection
       via Latent Diffusion Models
     comparison_source_arxiv: '2312.17679'
     is_best: false
     is_std_outlier: false
-    global_rank: 48
   - model: GAT-sep
     model_key: gat-sep
     model_plain: GAT-sep
-    metric_values:
-    - 0.7679
-    - null
-    metric_stds:
-    - 0.0071
-    - null
+    value: 0.7679
+    std: 0.0071
+    paper_value: 0.7679
+    paper_std: 0.0071
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -8698,27 +8357,28 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.7679
-    sort_std: 0.0071
-    true_value: 0.7679
-    true_std: 0.0071
-    paper_value: 0.7679
-    paper_std: 0.0071
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2508.05070'
-    value_gap_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
-      Flows'
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: platonov2023a
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on questions heterophilic dataset, averaged over 10 runs
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: 0.7679
     at_pub_std: 0.0071
     at_pub_source_arxiv: '2306.12943'
     at_pub_source_title: Evolving Computation Graphs
     at_pub_source_date_iso: '2023-06-22'
     at_pub_source_date_label: ICML 2023
-    value_gap_source_date_iso: '2025-08-07'
-    value_gap_source_date_label: '2025'
+    value_gap_source_date_iso: '2024-05-25'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -8727,31 +8387,34 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.7679
+    true_std: 0.0071
+    value_gap_source_arxiv: '2405.16185'
+    value_gap_source_title: Differentiable Cluster Graph Neural Network
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7679
+    sort_std: 0.0071
+    global_rank: 48
+    paper_rank: 48
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 55
   - model: SAGE
     model_key: sage
     model_plain: SAGE
-    metric_values:
-    - 0.7644
-    - null
-    metric_stds:
-    - 0.0062
-    - null
+    value: 0.7644
+    std: 0.0062
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -8761,36 +8424,32 @@ results:
     architecture_title: Message-passing GNN
     arxiv_id: '2605.13383'
     title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
-    published_venue: ''
     date: May 13, 2026
     date_display: May 2026
     date_iso: '2026-05-13'
+    venue: null
     codebase_url: ''
-    uses_external_data: false
+    uses_external_data: null
+    input_feature_source: raw_features
+    feature_source_evidence: ''
     is_global_top: true
-    global_rank: 59
-    is_best: false
+    global_rank: 51
     sort_value: 0.7644
     sort_std: 0.0062
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: tGNN
     model_key: tgnn
     model_plain: tGNN
-    metric_values:
-    - 0.7638
-    - null
-    metric_stds:
-    - 0.0179
-    - null
+    value: 0.7638
+    std: 0.0179
+    paper_value: 0.7638
+    paper_std: 0.0179
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -8798,19 +8457,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.7638
-    sort_std: 0.0179
-    true_value: 0.7638
-    true_std: 0.0179
-    paper_value: 0.7638
-    paper_std: 0.0179
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: hua2022high
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on questions heterophilic dataset, averaged over 10 runs
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -8827,31 +8487,37 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.7638
+    true_std: 0.0179
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7638
+    sort_std: 0.0179
+    global_rank: 52
+    paper_rank: 52
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 60
   - model: Dir-GNN
     model_key: dir-gnn
     model_plain: Dir-GNN
-    metric_values:
-    - 0.7613
-    - null
-    metric_stds:
-    - 0.0124
-    - null
+    value: 0.7613
+    std: 0.0124
+    paper_value: 0.7613
+    paper_std: 0.0124
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -8859,19 +8525,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.7613
-    sort_std: 0.0124
-    true_value: 0.7613
-    true_std: 0.0124
-    paper_value: 0.7613
-    paper_std: 0.0124
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on questions heterophilic dataset, averaged over 10 runs
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -8888,31 +8555,37 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.7613
+    true_std: 0.0124
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7613
+    sort_std: 0.0124
+    global_rank: 54
+    paper_rank: 54
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 62
   - model: GOAT
     model_key: goat
     model_plain: GOAT
-    metric_values:
-    - 0.7576
-    - null
-    metric_stds:
-    - 0.0166
-    - null
+    value: 0.7576
+    std: 0.0166
+    paper_value: 0.7576
+    paper_std: 0.0166
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -8920,18 +8593,20 @@ results:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    sort_value: 0.7576
-    sort_std: 0.0166
-    true_value: 0.7576
-    true_std: 0.0166
-    paper_value: 0.7576
-    paper_std: 0.0166
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2510.21267'
-    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: pmlr-v202-kong23a
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on questions heterophilic dataset, averaged over 10 runs
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -8948,31 +8623,36 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.7576
+    true_std: 0.0166
+    value_gap_source_arxiv: '2510.21267'
+    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7576
+    sort_std: 0.0166
+    global_rank: 59
+    paper_rank: 59
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 67
   - model: GraphGPS
     model_key: graphgps
     model_plain: GraphGPS
-    metric_values:
-    - 0.7173
-    - null
-    metric_stds:
-    - 0.0147
-    - null
+    value: 0.7173
+    std: 0.0147
+    paper_value: 0.7173
+    paper_std: 0.0147
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -8980,18 +8660,20 @@ results:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    sort_value: 0.7548
-    sort_std: 0.0066
-    true_value: 0.7548
-    true_std: 0.0066
-    paper_value: 0.7173
-    paper_std: 0.0147
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 0.03749999999999998
-    value_gap_source_arxiv: '2510.21267'
-    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on questions heterophilic dataset, averaged over 10 runs
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -9008,31 +8690,36 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.7548
+    true_std: 0.0066
+    value_gap_source_arxiv: '2510.21267'
+    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: 0.03749999999999998
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7548
+    sort_std: 0.0066
+    global_rank: 67
+    paper_rank: 85
+    rank_delta: 18
+    rank_delta_abs: 18
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 77
   - model: OrderedGNN
     model_key: orderedgnn
     model_plain: OrderedGNN
-    metric_values:
-    - 0.7509
-    - null
-    metric_stds:
-    - 0.01
-    - null
+    value: 0.7509
+    std: 0.01
+    paper_value: 0.7509
+    paper_std: 0.01
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -9040,19 +8727,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.7509
-    sort_std: 0.01
-    true_value: 0.7509
-    true_std: 0.01
-    paper_value: 0.7509
-    paper_std: 0.01
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on questions heterophilic dataset, averaged over 10 runs
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -9069,31 +8757,37 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.7509
+    true_std: 0.01
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7509
+    sort_std: 0.01
+    global_rank: 73
+    paper_rank: 73
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 82
   - model: G^2-GNN
     model_key: g^2-gnn
     model_plain: G^2-GNN
-    metric_values:
-    - 0.7482
-    - null
-    metric_stds:
-    - 0.0092
-    - null
+    value: 0.7482
+    std: 0.0092
+    paper_value: 0.7482
+    paper_std: 0.0092
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -9101,19 +8795,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.7482
-    sort_std: 0.0092
-    true_value: 0.7482
-    true_std: 0.0092
-    paper_value: 0.7482
-    paper_std: 0.0092
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on questions heterophilic dataset, averaged over 10 runs
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -9130,92 +8825,37 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 83
-  - model: GloGNN
-    model_key: glognn
-    model_plain: GloGNN
-    metric_values:
-    - 0.6574
-    - null
-    metric_stds:
-    - 0.0119
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.7442
-    sort_std: 0.013
-    true_value: 0.7442
-    true_std: 0.013
-    paper_value: 0.6574
-    paper_std: 0.0119
-    has_value_gap: true
+    true_value: 0.7482
+    true_std: 0.0092
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
-    value_gap: 0.08679999999999999
-    value_gap_source_arxiv: '2505.14033'
-    value_gap_source_title: 'Partition-wise Graph Filtering: A Unified Perspective
-      Through the Lens of Graph Coarsening'
     value_note: ''
-    at_pub_value: 0.6574
-    at_pub_std: 0.0119
-    at_pub_source_arxiv: '2306.12943'
-    at_pub_source_title: Evolving Computation Graphs
-    at_pub_source_date_iso: '2023-06-22'
-    at_pub_source_date_label: ICML 2023
-    value_gap_source_date_iso: '2025-05-20'
-    value_gap_source_date_label: KDD 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    sort_value: 0.7482
+    sort_std: 0.0092
+    global_rank: 74
+    paper_rank: 74
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 86
   - model: NodeFormer
     model_key: nodeformer
     model_plain: NodeFormer
-    metric_values:
-    - 0.7427
-    - null
-    metric_stds:
-    - 0.0146
-    - null
+    value: 0.7427
+    std: 0.0146
+    paper_value: 0.7427
+    paper_std: 0.0146
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -9223,18 +8863,20 @@ results:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    sort_value: 0.7427
-    sort_std: 0.0146
-    true_value: 0.7427
-    true_std: 0.0146
-    paper_value: 0.7427
-    paper_std: 0.0146
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2510.21267'
-    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on questions heterophilic dataset, averaged over 10 runs
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -9251,31 +8893,36 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.7427
+    true_std: 0.0146
+    value_gap_source_arxiv: '2510.21267'
+    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7427
+    sort_std: 0.0146
+    global_rank: 77
+    paper_rank: 77
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 87
   - model: Exphormer
     model_key: exphormer
     model_plain: Exphormer
-    metric_values:
-    - 0.7394
-    - null
-    metric_stds:
-    - 0.0106
-    - null
+    value: 0.7394
+    std: 0.0106
+    paper_value: 0.7394
+    paper_std: 0.0106
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -9283,18 +8930,20 @@ results:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    sort_value: 0.7394
-    sort_std: 0.0106
-    true_value: 0.7394
-    true_std: 0.0106
-    paper_value: 0.7394
-    paper_std: 0.0106
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2510.21267'
-    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: Shirzad2023ExphormerST
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on questions heterophilic dataset, averaged over 10 runs
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -9311,31 +8960,36 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.7394
+    true_std: 0.0106
+    value_gap_source_arxiv: '2510.21267'
+    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7394
+    sort_std: 0.0106
+    global_rank: 78
+    paper_rank: 78
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 88
   - model: DIFFormer
     model_key: difformer
     model_plain: DIFFormer
-    metric_values:
-    - 0.7215
-    - null
-    metric_stds:
-    - 0.0131
-    - null
+    value: 0.7215
+    std: 0.0131
+    paper_value: 0.7215
+    paper_std: 0.0131
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -9343,18 +8997,20 @@ results:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    sort_value: 0.7215
-    sort_std: 0.0131
-    true_value: 0.7215
-    true_std: 0.0131
-    paper_value: 0.7215
-    paper_std: 0.0131
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2510.21267'
-    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on questions heterophilic dataset, averaged over 10 runs
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -9371,31 +9027,36 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.7215
+    true_std: 0.0131
+    value_gap_source_arxiv: '2510.21267'
+    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7215
+    sort_std: 0.0131
+    global_rank: 85
+    paper_rank: 85
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 97
   - model: GGCN
     model_key: ggcn
     model_plain: GGCN
-    metric_values:
-    - 0.711
-    - null
-    metric_stds:
-    - 0.0157
-    - null
+    value: 0.711
+    std: 0.0157
+    paper_value: 0.711
+    paper_std: 0.0157
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -9403,19 +9064,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.711
-    sort_std: 0.0157
-    true_value: 0.711
-    true_std: 0.0157
-    paper_value: 0.711
-    paper_std: 0.0157
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on questions heterophilic dataset, averaged over 10 runs
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -9432,31 +9094,35 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.711
+    true_std: 0.0157
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.711
+    sort_std: 0.0157
+    global_rank: 89
+    paper_rank: 89
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 102
   - model: MLP
     model_key: mlp
     model_plain: MLP
-    metric_values:
-    - 0.7082
-    - null
-    metric_stds:
-    - 0.001
-    - null
+    value: 0.7082
+    std: 0.001
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -9466,36 +9132,32 @@ results:
     architecture_title: Traditional / classical method
     arxiv_id: '2508.17531'
     title: 'Gumbel-MPNN: Graph Rewiring with Gumbel-Softmax'
-    published_venue: ''
     date: Aug 24, 2025
     date_display: Aug 2025
     date_iso: '2025-08-24'
+    venue: European Conference on Artificial Intelligence
     codebase_url: https://github.com/Bobowner/Gumbel-Softmax-MPNN
     uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
     is_global_top: true
-    global_rank: 104
-    is_best: false
+    global_rank: 91
     sort_value: 0.7082
     sort_std: 0.001
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: NAGphormer
     model_key: nagphormer
     model_plain: NAGphormer
-    metric_values:
-    - 0.6817
-    - null
-    metric_stds:
-    - 0.0153
-    - null
+    value: 0.6817
+    std: 0.0153
+    paper_value: 0.6817
+    paper_std: 0.0153
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -9503,18 +9165,20 @@ results:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    sort_value: 0.6817
-    sort_std: 0.0153
-    true_value: 0.6817
-    true_std: 0.0153
-    paper_value: 0.6817
-    paper_std: 0.0153
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2510.21267'
-    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: chen2022nagphormer
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on questions heterophilic dataset, averaged over 10 runs
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -9531,31 +9195,36 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.6817
+    true_std: 0.0153
+    value_gap_source_arxiv: '2510.21267'
+    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6817
+    sort_std: 0.0153
+    global_rank: 111
+    paper_rank: 111
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 128
-  - model: GPRGNN
-    model_key: gprgnn
-    model_plain: GPRGNN
-    metric_values:
-    - 0.5548
-    - null
-    metric_stds:
-    - 0.0091
-    - null
+  - model: GloGNN
+    model_key: glognn
+    model_plain: GloGNN
+    value: 0.6574
+    std: 0.0119
+    paper_value: 0.6574
+    paper_std: 0.0119
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -9563,102 +9232,136 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.6458
-    sort_std: 0.012
-    true_value: 0.6458
-    true_std: 0.012
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: platonov2023a
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on questions heterophilic dataset, averaged over 10 runs
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: 0.6574
+    at_pub_std: 0.0119
+    at_pub_source_arxiv: '2306.12943'
+    at_pub_source_title: Evolving Computation Graphs
+    at_pub_source_date_iso: '2023-06-22'
+    at_pub_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2024-11-08'
+    value_gap_source_date_label: NeurIPS 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.6715
+    true_std: 0.0192
+    value_gap_source_arxiv: '2411.05274'
+    value_gap_source_title: Distributed-Order Fractional Graph Operating Network
+    value_gap_source_is_current_paper: false
+    value_gap: 0.014100000000000001
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6715
+    sort_std: 0.0192
+    global_rank: 115
+    paper_rank: 119
+    rank_delta: 4
+    rank_delta_abs: 4
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GPRGNN
+    model_key: gprgnn
+    model_plain: GPRGNN
+    value: 0.5548
+    std: 0.0091
     paper_value: 0.5548
     paper_std: 0.0091
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 0.09100000000000008
-    value_gap_source_arxiv: '2505.14033'
-    value_gap_source_title: 'Partition-wise Graph Filtering: A Unified Perspective
-      Through the Lens of Graph Coarsening'
-    value_note: ''
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: platonov2023a
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on questions heterophilic dataset, averaged over 10 runs
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-05-20'
-    value_gap_source_date_label: KDD 2025
+    value_gap_source_date_iso: '2025-10-24'
+    value_gap_source_date_label: NeurIPS 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
-    surpassed_since_pub: true
+    surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    today_delta_significant: false
+    true_value: 0.5548
+    true_std: 0.0091
+    value_gap_source_arxiv: '2510.21267'
+    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5548
+    sort_std: 0.0091
+    global_rank: 147
+    paper_rank: 147
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 141
-  metrics:
-  - ROC-AUC
-  - Accuracy
-  primary_metric: ROC-AUC
   rank_metric: ROC-AUC
   higher_is_better: true
   experiment_scope: node-level
   dataset_primary_metric: ROC-AUC
   paper_metrics:
   - ROC-AUC
-  - Accuracy
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id006
+- &id005
   dataset: Roman-empire
   rows:
-  - model: Dir-NT
-    model_key: dir-nt
-    model_plain: Dir-NT
-    value: 0.9477
-    std: 0.0031
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2604.08980'
-    title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware Graph
-      Learning'
-    date: Apr 10, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-10'
-    venue: arXiv.org
-    codebase_url: https://github.com/cf020031308/MoNT
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9477
-    sort_std: 0.0031
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
   - model: Dir-Poly
     model_key: dir-poly
     model_plain: Dir-Poly
@@ -9685,7 +9388,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 1
     sort_value: 0.9451
     sort_std: 0.0022
     comparison_type: global_top
@@ -9718,9 +9421,42 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 2
     sort_value: 0.9387
     sort_std: 0.0041
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: LargeScaleNet
+    model_key: largescalenet
+    model_plain: LargeScaleNet
+    value: 0.9358
+    std: 0.0024
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2411.19392'
+    title: Scale-aware Message Passing For Graph Node Classification
+    date: Nov 28, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-28'
+    venue: null
+    codebase_url: https://github.com/Qin87/ScaleNet
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9358
+    sort_std: 0.0024
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -9743,14 +9479,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs
+    protocol_note: Accuracy on roman-empire heterophilic dataset, averaged over 10
+      runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -9783,10 +9520,10 @@ results:
     value_note: ''
     sort_value: 0.9266
     sort_std: 0.006
-    global_rank: 8
-    paper_rank: 14
-    rank_delta: 6
-    rank_delta_abs: 6
+    global_rank: 7
+    paper_rank: 11
+    rank_delta: 4
+    rank_delta_abs: 4
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -9811,14 +9548,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs
+    protocol_note: Accuracy on roman-empire heterophilic dataset, averaged over 10
+      runs (Polynormer with ReLU).
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -9851,8 +9589,144 @@ results:
     value_note: ''
     sort_value: 0.9255
     sort_std: 0.0037
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 8
+    paper_rank: 8
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Polynormer-v1
+    model_key: polynormer-v1
+    model_plain: Polynormer-v1
+    value: 0.9213
+    std: 0.005
+    paper_value: 0.9213
+    paper_std: 0.005
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 4
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on roman-empire heterophilic dataset.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-02'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.9213
+    true_std: 0.005
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9213
+    sort_std: 0.005
+    global_rank: 12
+    paper_rank: 12
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Polynormer-v2
+    model_key: polynormer-v2
+    model_plain: Polynormer-v2
+    value: 0.9133
+    std: 0.0039
+    paper_value: 0.9133
+    paper_std: 0.0039
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 4
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on roman-empire heterophilic dataset.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-02'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.9133
+    true_std: 0.0039
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9133
+    sort_std: 0.0039
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9879,14 +9753,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs
+    protocol_note: Accuracy on roman-empire heterophilic dataset, averaged over 10
+      runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -9898,8 +9773,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-04-10'
-    value_gap_source_date_label: '2026'
+    value_gap_source_date_iso: '2025-05-28'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -9910,17 +9785,16 @@ results:
     today_delta_significant: false
     true_value: 0.9123
     true_std: 0.0032
-    value_gap_source_arxiv: '2604.08980'
-    value_gap_source_title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware
-      Graph Learning'
+    value_gap_source_arxiv: '2505.22362'
+    value_gap_source_title: Directed Homophily-Aware Graph Neural Network
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9123
     sort_std: 0.0032
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9947,14 +9821,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: platonov2023a
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs
+    protocol_note: Accuracy on roman-empire heterophilic dataset, averaged over 10
+      runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -9987,10 +9862,10 @@ results:
     value_note: ''
     sort_value: 0.9106
     sort_std: 0.0027
-    global_rank: 29
-    paper_rank: 71
-    rank_delta: 42
-    rank_delta_abs: 42
+    global_rank: 24
+    paper_rank: 63
+    rank_delta: 39
+    rank_delta_abs: 39
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -10015,14 +9890,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs
+    protocol_note: Accuracy on roman-empire heterophilic dataset, averaged over 10
+      runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -10035,8 +9911,8 @@ results:
       Models'
     at_pub_source_date_iso: '2024-02-13'
     at_pub_source_date_label: KDD 2024
-    value_gap_source_date_iso: '2025-10-24'
-    value_gap_source_date_label: NeurIPS 2025
+    value_gap_source_date_iso: '2024-03-02'
+    value_gap_source_date_label: ICLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -10047,16 +9923,17 @@ results:
     today_delta_significant: false
     true_value: 0.8903
     true_std: 0.0037
-    value_gap_source_arxiv: '2510.21267'
-    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8903
     sort_std: 0.0037
-    global_rank: 42
-    paper_rank: 42
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10083,14 +9960,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: platonov2023a
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs
+    protocol_note: Accuracy on roman-empire heterophilic dataset, averaged over 10
+      runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -10102,7 +9980,7 @@ results:
     at_pub_source_title: Evolving Computation Graphs
     at_pub_source_date_iso: '2023-06-22'
     at_pub_source_date_label: ICML 2023
-    value_gap_source_date_iso: '2025-08-07'
+    value_gap_source_date_iso: '2025-07-19'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
@@ -10114,17 +9992,17 @@ results:
     today_delta_significant: false
     true_value: 0.8875
     true_std: 0.0041
-    value_gap_source_arxiv: '2508.05070'
-    value_gap_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
-      Flows'
+    value_gap_source_arxiv: '2507.14484'
+    value_gap_source_title: 'ReDiSC: A Reparameterized Masked Diffusion Model for
+      Scalable Node Classification with Structured Predictions'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8875
     sort_std: 0.0041
-    global_rank: 46
-    paper_rank: 46
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10148,18 +10026,19 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_display: Aug 2025
-    date_iso: '2025-08-07'
-    venue: arXiv.org
-    codebase_url: ''
+    arxiv_id: '2507.14484'
+    title: 'ReDiSC: A Reparameterized Masked Diffusion Model for Scalable Node Classification
+      with Structured Predictions'
+    date: Jul 19, 2025
+    date_display: Jul 2025
+    date_iso: '2025-07-19'
+    venue: null
+    codebase_url: https://github.com/liyle3/REDISC
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 72
+    global_rank: 64
     sort_value: 0.8574
     sort_std: 0.0067
     comparison_type: global_top
@@ -10184,14 +10063,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs
+    protocol_note: Accuracy on roman-empire heterophilic dataset, averaged over 10
+      runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -10224,10 +10104,10 @@ results:
     value_note: ''
     sort_value: 0.8288
     sort_std: 0.0071
-    global_rank: 84
-    paper_rank: 112
-    rank_delta: 28
-    rank_delta_abs: 28
+    global_rank: 74
+    paper_rank: 103
+    rank_delta: 29
+    rank_delta_abs: 29
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -10252,14 +10132,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: platonov2023a
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs
+    protocol_note: Accuracy on roman-empire heterophilic dataset, averaged over 10
+      runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -10291,8 +10172,8 @@ results:
     value_note: ''
     sort_value: 0.8272
     sort_std: 0.0082
-    global_rank: 85
-    paper_rank: 126
+    global_rank: 75
+    paper_rank: 116
     rank_delta: 41
     rank_delta_abs: 41
     rank_delta_direction: worse
@@ -10319,14 +10200,15 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs
+    protocol_note: Accuracy on roman-empire heterophilic dataset, averaged over 10
+      runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -10359,8 +10241,8 @@ results:
     value_note: ''
     sort_value: 0.8272
     sort_std: 0.0068
-    global_rank: 86
-    paper_rank: 90
+    global_rank: 76
+    paper_rank: 80
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -10370,9 +10252,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: G²-GNN
-    model_key: g²-gnn
-    model_plain: G²-GNN
+  - model: G^2-GNN
+    model_key: g^2-gnn
+    model_plain: G^2-GNN
     value: 0.8216
     std: 0.0078
     paper_value: 0.8216
@@ -10387,14 +10269,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
+    table_ref: Table 2
+    source_ref: ''
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs
+    protocol_note: Accuracy on roman-empire heterophilic dataset, averaged over 10
+      runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -10427,8 +10310,8 @@ results:
     value_note: ''
     sort_value: 0.8216
     sort_std: 0.0078
-    global_rank: 88
-    paper_rank: 88
+    global_rank: 80
+    paper_rank: 80
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10455,14 +10338,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs
+    protocol_note: Accuracy on roman-empire heterophilic dataset, averaged over 10
+      runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -10495,8 +10379,8 @@ results:
     value_note: ''
     sort_value: 0.7995
     sort_std: 0.0075
-    global_rank: 99
-    paper_rank: 99
+    global_rank: 90
+    paper_rank: 90
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10523,14 +10407,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: platonov2023a
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs
+    protocol_note: Accuracy on roman-empire heterophilic dataset, averaged over 10
+      runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -10563,8 +10448,8 @@ results:
     value_note: ''
     sort_value: 0.7992
     sort_std: 0.0056
-    global_rank: 100
-    paper_rank: 100
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10591,14 +10476,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs
+    protocol_note: Accuracy on roman-empire heterophilic dataset, averaged over 10
+      runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -10610,8 +10496,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-10-24'
-    value_gap_source_date_label: NeurIPS 2025
+    value_gap_source_date_iso: '2024-03-02'
+    value_gap_source_date_label: ICLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -10622,16 +10508,17 @@ results:
     today_delta_significant: false
     true_value: 0.791
     true_std: 0.0032
-    value_gap_source_arxiv: '2510.21267'
-    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.791
     sort_std: 0.0032
-    global_rank: 103
-    paper_rank: 103
+    global_rank: 94
+    paper_rank: 94
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10658,14 +10545,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs
+    protocol_note: Accuracy on roman-empire heterophilic dataset, averaged over 10
+      runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -10698,8 +10586,8 @@ results:
     value_note: ''
     sort_value: 0.7483
     sort_std: 0.0081
-    global_rank: 119
-    paper_rank: 164
+    global_rank: 109
+    paper_rank: 154
     rank_delta: 45
     rank_delta_abs: 45
     rank_delta_direction: worse
@@ -10726,14 +10614,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs
+    protocol_note: Accuracy on roman-empire heterophilic dataset, averaged over 10
+      runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -10766,8 +10655,8 @@ results:
     value_note: ''
     sort_value: 0.7446
     sort_std: 0.0054
-    global_rank: 121
-    paper_rank: 121
+    global_rank: 111
+    paper_rank: 111
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10794,14 +10683,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs
+    protocol_note: Accuracy on roman-empire heterophilic dataset, averaged over 10
+      runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -10814,8 +10704,8 @@ results:
       Models'
     at_pub_source_date_iso: '2024-02-13'
     at_pub_source_date_label: KDD 2024
-    value_gap_source_date_iso: '2025-10-24'
-    value_gap_source_date_label: NeurIPS 2025
+    value_gap_source_date_iso: '2024-11-25'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -10826,16 +10716,16 @@ results:
     today_delta_significant: false
     true_value: 0.7434
     true_std: 0.0077
-    value_gap_source_arxiv: '2510.21267'
-    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
+    value_gap_source_arxiv: '2411.16278'
+    value_gap_source_title: Even Sparser Graph Transformers
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7434
     sort_std: 0.0077
-    global_rank: 124
-    paper_rank: 124
+    global_rank: 114
+    paper_rank: 114
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10862,14 +10752,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: platonov2023a
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs
+    protocol_note: Accuracy on roman-empire heterophilic dataset, averaged over 10
+      runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -10901,8 +10792,8 @@ results:
     value_note: ''
     sort_value: 0.7344
     sort_std: 0.003
-    global_rank: 127
-    paper_rank: 160
+    global_rank: 117
+    paper_rank: 150
     rank_delta: 33
     rank_delta_abs: 33
     rank_delta_direction: worse
@@ -10929,14 +10820,15 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs
+    protocol_note: Accuracy on roman-empire heterophilic dataset, averaged over 10
+      runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -10949,8 +10841,8 @@ results:
       Models'
     at_pub_source_date_iso: '2024-02-13'
     at_pub_source_date_label: KDD 2024
-    value_gap_source_date_iso: '2025-10-24'
-    value_gap_source_date_label: NeurIPS 2025
+    value_gap_source_date_iso: '2024-11-25'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -10961,16 +10853,16 @@ results:
     today_delta_significant: false
     true_value: 0.7159
     true_std: 0.0125
-    value_gap_source_arxiv: '2510.21267'
-    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
+    value_gap_source_arxiv: '2411.16278'
+    value_gap_source_title: Even Sparser Graph Transformers
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7159
     sort_std: 0.0125
-    global_rank: 133
-    paper_rank: 133
+    global_rank: 123
+    paper_rank: 123
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10997,14 +10889,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: platonov2023a
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs
+    protocol_note: Accuracy on roman-empire heterophilic dataset, averaged over 10
+      runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -11036,8 +10929,8 @@ results:
     value_note: ''
     sort_value: 0.6809
     sort_std: 0.0029
-    global_rank: 146
-    paper_rank: 180
+    global_rank: 136
+    paper_rank: 170
     rank_delta: 34
     rank_delta_abs: 34
     rank_delta_direction: worse
@@ -11064,14 +10957,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: platonov2023a
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification results over 10 runs
+    protocol_note: Accuracy on roman-empire heterophilic dataset, averaged over 10
+      runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -11103,8 +10997,8 @@ results:
     value_note: ''
     sort_value: 0.6739
     sort_std: 0.003
-    global_rank: 148
-    paper_rank: 184
+    global_rank: 138
+    paper_rank: 174
     rank_delta: 36
     rank_delta_abs: 36
     rank_delta_direction: worse
@@ -11139,7 +11033,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 151
+    global_rank: 141
     sort_value: 0.6665
     sort_std: 0.0047
     comparison_type: global_top
@@ -11156,19 +11050,18 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id009
+- &id007
   dataset: Tolokers
-  is_multi_metric: true
   rows:
   - model: Polynormer-r
     model_key: polynormer-r
     model_plain: Polynormer-r
-    metric_values:
-    - 0.8591
-    - 0.8591
-    metric_stds:
-    - 0.0074
-    - 0.0074
+    value: 0.8591
+    std: 0.0074
+    paper_value: 0.8591
+    paper_std: 0.0074
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
@@ -11176,19 +11069,20 @@ results:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    sort_value: 0.8591
-    sort_std: 0.0074
-    true_value: 0.8591
-    true_std: 0.0074
-    paper_value: 0.8591
-    paper_std: 0.0074
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on tolokers heterophilic dataset, averaged over 10 runs.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -11205,31 +11099,35 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.8591
+    true_std: 0.0074
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8591
+    sort_std: 0.0074
+    global_rank: 1
+    paper_rank: 1
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-    global_rank: 1
   - model: DC-GNN
     model_key: dc-gnn
     model_plain: DC-GNN
-    metric_values:
-    - 0.8588
-    - null
-    metric_stds:
-    - 0.0081
-    - null
+    value: 0.8588
+    std: 0.0081
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
@@ -11239,36 +11137,30 @@ results:
     architecture_title: Message-passing GNN
     arxiv_id: '2405.16185'
     title: Differentiable Cluster Graph Neural Network
-    published_venue: ''
     date: May 25, 2024
     date_display: May 2024
     date_iso: '2024-05-25'
+    venue: arXiv.org
     codebase_url: ''
     uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    is_best: true
     sort_value: 0.8588
     sort_std: 0.0081
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: true
     is_std_outlier: false
   - model: Polynormer + Wideformer
     model_key: polynormer + wideformer
     model_plain: Polynormer + Wideformer
-    metric_values:
-    - 0.8533
-    - null
-    metric_stds:
-    - 0.0023
-    - null
+    value: 0.8533
+    std: 0.0023
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
@@ -11278,36 +11170,32 @@ results:
     architecture_title: Graph transformer
     arxiv_id: '2510.21267'
     title: Relieving the Over-Aggregating Effect in Graph Transformers
-    published_venue: ''
     date: Oct 24, 2025
     date_display: Oct 2025
     date_iso: '2025-10-24'
+    venue: Accepted by NeurIPS 2025
     codebase_url: https://github.com/sunjss/over-aggregating
     uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    is_best: true
     sort_value: 0.8533
     sort_std: 0.0023
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: true
     is_std_outlier: false
   - model: Polynormer
     model_key: polynormer
     model_plain: Polynormer
-    metric_values:
-    - 0.8483
-    - 0.8483
-    metric_stds:
-    - 0.0072
-    - 0.0072
+    value: 0.8483
+    std: 0.0072
+    paper_value: 0.8483
+    paper_std: 0.0072
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
@@ -11315,79 +11203,20 @@ results:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    sort_value: 0.8483
-    sort_std: 0.0072
-    true_value: 0.8483
-    true_std: 0.0072
-    paper_value: 0.8483
-    paper_std: 0.0072
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2410.02158'
-    value_gap_source_title: 'SCNode: Spatial and Contextual Coordinates for Graph
-      Representation Learning'
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-10-03'
-    value_gap_source_date_label: TMLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on tolokers heterophilic dataset, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-    global_rank: 7
-  - model: GraphGPS
-    model_key: graphgps
-    model_plain: GraphGPS
-    metric_values:
-    - 0.8371
-    - null
-    metric_stds:
-    - 0.0048
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    sort_value: 0.8395
-    sort_std: 0.0081
-    true_value: 0.8395
-    true_std: 0.0081
-    paper_value: 0.8371
-    paper_std: 0.0048
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 0.0024000000000000687
-    value_gap_source_arxiv: '2510.21267'
-    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
-    value_note: ''
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -11404,31 +11233,103 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: true
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
+    true_value: 0.8509
+    true_std: 0.0021
+    value_gap_source_arxiv: '2510.21267'
+    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0025999999999999357
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8509
+    sort_std: 0.0021
+    global_rank: 7
+    paper_rank: 8
+    rank_delta: 1
+    rank_delta_abs: 1
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GraphGPS
+    model_key: graphgps
+    model_plain: GraphGPS
+    value: 0.8371
+    std: 0.0048
+    paper_value: 0.8371
+    paper_std: 0.0048
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on tolokers heterophilic dataset, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-10-24'
+    value_gap_source_date_label: NeurIPS 2025
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.8395
+    true_std: 0.0081
+    value_gap_source_arxiv: '2510.21267'
+    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0024000000000000687
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8395
+    sort_std: 0.0081
+    global_rank: 28
+    paper_rank: 35
+    rank_delta: 7
+    rank_delta_abs: 7
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 26
   - model: GAT-sep
     model_key: gat-sep
     model_plain: GAT-sep
-    metric_values:
-    - 0.8378
-    - null
-    metric_stds:
-    - 0.0043
-    - null
+    value: 0.8378
+    std: 0.0043
+    paper_value: 0.8378
+    paper_std: 0.0043
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -11436,18 +11337,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.8378
-    sort_std: 0.0043
-    true_value: 0.8378
-    true_std: 0.0043
-    paper_value: 0.8378
-    paper_std: 0.0043
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2405.16185'
-    value_gap_source_title: Differentiable Cluster Graph Neural Network
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: platonov2023a
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on tolokers heterophilic dataset, averaged over 10 runs.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: 0.8378
     at_pub_std: 0.0043
     at_pub_source_arxiv: '2306.12943'
@@ -11464,31 +11367,36 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.8378
+    true_std: 0.0043
+    value_gap_source_arxiv: '2405.16185'
+    value_gap_source_title: Differentiable Cluster Graph Neural Network
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8378
+    sort_std: 0.0043
+    global_rank: 30
+    paper_rank: 30
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 28
   - model: Exphormer
     model_key: exphormer
     model_plain: Exphormer
-    metric_values:
-    - 0.8377
-    - null
-    metric_stds:
-    - 0.0078
-    - null
+    value: 0.8377
+    std: 0.0078
+    paper_value: 0.8377
+    paper_std: 0.0078
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -11496,18 +11404,20 @@ results:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    sort_value: 0.8377
-    sort_std: 0.0078
-    true_value: 0.8377
-    true_std: 0.0078
-    paper_value: 0.8377
-    paper_std: 0.0078
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2510.21267'
-    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: Shirzad2023ExphormerST
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on tolokers heterophilic dataset, averaged over 10 runs.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: 0.8377
     at_pub_std: 0.0078
     at_pub_source_arxiv: '2402.08678'
@@ -11525,31 +11435,36 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.8377
+    true_std: 0.0078
+    value_gap_source_arxiv: '2510.21267'
+    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8377
+    sort_std: 0.0078
+    global_rank: 31
+    paper_rank: 31
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 29
   - model: GCN
     model_key: gcn
     model_plain: GCN
-    metric_values:
-    - 0.8364
-    - null
-    metric_stds:
-    - 0.0067
-    - null
+    value: 0.8364
+    std: 0.0067
+    paper_value: 0.8364
+    paper_std: 0.0067
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -11557,19 +11472,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.8364
-    sort_std: 0.0067
-    true_value: 0.8364
-    true_std: 0.0067
-    paper_value: 0.8364
-    paper_std: 0.0067
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2605.13383'
-    value_gap_source_title: 'Beyond Oversquashing: Understanding Signal Propagation
-      in GNNs Via Observables'
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: platonov2023a
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on tolokers heterophilic dataset, averaged over 10 runs.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: 0.8364
     at_pub_std: 0.0067
     at_pub_source_arxiv: '2202.07082'
@@ -11586,31 +11502,37 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.8364
+    true_std: 0.0067
+    value_gap_source_arxiv: '2605.13383'
+    value_gap_source_title: 'Beyond Oversquashing: Understanding Signal Propagation
+      in GNNs Via Observables'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8364
+    sort_std: 0.0067
+    global_rank: 39
+    paper_rank: 39
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 37
   - model: DIFFormer
     model_key: difformer
     model_plain: DIFFormer
-    metric_values:
-    - 0.8357
-    - null
-    metric_stds:
-    - 0.0068
-    - null
+    value: 0.8357
+    std: 0.0068
+    paper_value: 0.8357
+    paper_std: 0.0068
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -11618,18 +11540,20 @@ results:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    sort_value: 0.8357
-    sort_std: 0.0068
-    true_value: 0.8357
-    true_std: 0.0068
-    paper_value: 0.8357
-    paper_std: 0.0068
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2510.21267'
-    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on tolokers heterophilic dataset, averaged over 10 runs.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -11646,31 +11570,36 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.8357
+    true_std: 0.0068
+    value_gap_source_arxiv: '2510.21267'
+    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8357
+    sort_std: 0.0068
+    global_rank: 40
+    paper_rank: 40
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 38
   - model: GOAT
     model_key: goat
     model_plain: GOAT
-    metric_values:
-    - 0.8311
-    - null
-    metric_stds:
-    - 0.0104
-    - null
+    value: 0.8311
+    std: 0.0104
+    paper_value: 0.8311
+    paper_std: 0.0104
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -11678,18 +11607,20 @@ results:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    sort_value: 0.8311
-    sort_std: 0.0104
-    true_value: 0.8311
-    true_std: 0.0104
-    paper_value: 0.8311
-    paper_std: 0.0104
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2510.21267'
-    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: pmlr-v202-kong23a
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on tolokers heterophilic dataset, averaged over 10 runs.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: 0.8311
     at_pub_std: 0.0104
     at_pub_source_arxiv: '2402.08678'
@@ -11707,31 +11638,36 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.8311
+    true_std: 0.0104
+    value_gap_source_arxiv: '2510.21267'
+    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8311
+    sort_std: 0.0104
+    global_rank: 52
+    paper_rank: 52
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 49
   - model: FSGNN
     model_key: fsgnn
     model_plain: FSGNN
-    metric_values:
-    - 0.8276
-    - null
-    metric_stds:
-    - 0.0061
-    - null
+    value: 0.8276
+    std: 0.0061
+    paper_value: 0.8276
+    paper_std: 0.0061
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -11739,19 +11675,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.8276
-    sort_std: 0.0061
-    true_value: 0.8276
-    true_std: 0.0061
-    paper_value: 0.8276
-    paper_std: 0.0061
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2512.14908'
-    value_gap_source_title: 'ATLAS: Adaptive Topology-based Learning at Scale for
-      Homophilic and Heterophilic Graphs'
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: platonov2023a
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on tolokers heterophilic dataset, averaged over 10 runs.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: 0.8276
     at_pub_std: 0.0061
     at_pub_source_arxiv: '2306.12943'
@@ -11768,31 +11705,37 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.8276
+    true_std: 0.0061
+    value_gap_source_arxiv: '2512.14908'
+    value_gap_source_title: 'ATLAS: Adaptive Topology-based Learning at Scale for
+      Homophilic and Heterophilic Graphs'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8276
+    sort_std: 0.0061
+    global_rank: 56
+    paper_rank: 56
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 53
   - model: G^2-GNN
     model_key: g^2-gnn
     model_plain: G^2-GNN
-    metric_values:
-    - 0.8251
-    - null
-    metric_stds:
-    - 0.008
-    - null
+    value: 0.8251
+    std: 0.008
+    paper_value: 0.8251
+    paper_std: 0.008
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -11800,19 +11743,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.8251
-    sort_std: 0.008
-    true_value: 0.8251
-    true_std: 0.008
-    paper_value: 0.8251
-    paper_std: 0.008
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on tolokers heterophilic dataset, averaged over 10 runs.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -11829,31 +11773,37 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.8251
+    true_std: 0.008
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8251
+    sort_std: 0.008
+    global_rank: 67
+    paper_rank: 67
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 64
   - model: GraphSAGE
     model_key: graphsage
     model_plain: GraphSAGE
-    metric_values:
-    - 0.8243
-    - null
-    metric_stds:
-    - 0.0044
-    - null
+    value: 0.8243
+    std: 0.0044
+    paper_value: 0.8243
+    paper_std: 0.0044
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -11861,18 +11811,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.8243
-    sort_std: 0.0044
-    true_value: 0.8243
-    true_std: 0.0044
-    paper_value: 0.8243
-    paper_std: 0.0044
-    has_value_gap: true
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2510.21267'
-    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: platonov2023a
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on tolokers heterophilic dataset, averaged over 10 runs.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: 0.7942
     at_pub_std: null
     at_pub_source_arxiv: '2312.17679'
@@ -11890,32 +11842,35 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.8243
+    true_std: 0.0044
+    value_gap_source_arxiv: '2510.21267'
+    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8243
+    sort_std: 0.0044
+    global_rank: 69
+    paper_rank: 69
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
     comparison_type: improved
     comparison_source_title: Data Augmentation for Supervised Graph Outlier Detection
       via Latent Diffusion Models
     comparison_source_arxiv: '2312.17679'
     is_best: false
     is_std_outlier: false
-    global_rank: 66
   - model: SAGE
     model_key: sage
     model_plain: SAGE
-    metric_values:
-    - 0.8243
-    - null
-    metric_stds:
-    - 0.0044
-    - null
+    value: 0.8243
+    std: 0.0044
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -11925,36 +11880,32 @@ results:
     architecture_title: Message-passing GNN
     arxiv_id: '2605.13383'
     title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
-    published_venue: ''
     date: May 13, 2026
     date_display: May 2026
     date_iso: '2026-05-13'
+    venue: null
     codebase_url: ''
-    uses_external_data: false
+    uses_external_data: null
+    input_feature_source: unknown
+    feature_source_evidence: ''
     is_global_top: true
-    global_rank: 65
-    is_best: false
+    global_rank: 68
     sort_value: 0.8243
     sort_std: 0.0044
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: Dir-GNN
     model_key: dir-gnn
     model_plain: Dir-GNN
-    metric_values:
-    - 0.8119
-    - null
-    metric_stds:
-    - 0.0105
-    - null
+    value: 0.8119
+    std: 0.0105
+    paper_value: 0.8119
+    paper_std: 0.0105
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -11962,19 +11913,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.8119
-    sort_std: 0.0105
-    true_value: 0.8119
-    true_std: 0.0105
-    paper_value: 0.8119
-    paper_std: 0.0105
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on tolokers heterophilic dataset, averaged over 10 runs.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -11991,31 +11943,37 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.8119
+    true_std: 0.0105
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8119
+    sort_std: 0.0105
+    global_rank: 77
+    paper_rank: 77
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 73
   - model: NAGphormer
     model_key: nagphormer
     model_plain: NAGphormer
-    metric_values:
-    - 0.7832
-    - null
-    metric_stds:
-    - 0.0095
-    - null
+    value: 0.7832
+    std: 0.0095
+    paper_value: 0.7832
+    paper_std: 0.0095
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -12023,18 +11981,20 @@ results:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    sort_value: 0.7832
-    sort_std: 0.0095
-    true_value: 0.7832
-    true_std: 0.0095
-    paper_value: 0.7832
-    paper_std: 0.0095
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2510.21267'
-    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: chen2022nagphormer
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on tolokers heterophilic dataset, averaged over 10 runs.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: 0.7832
     at_pub_std: 0.0095
     at_pub_source_arxiv: '2402.08678'
@@ -12052,31 +12012,36 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.7832
+    true_std: 0.0095
+    value_gap_source_arxiv: '2510.21267'
+    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7832
+    sort_std: 0.0095
+    global_rank: 105
+    paper_rank: 105
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 100
   - model: H2GCN
     model_key: h2gcn
     model_plain: H2GCN
-    metric_values:
-    - 0.7335
-    - null
-    metric_stds:
-    - 0.0101
-    - null
+    value: 0.7335
+    std: 0.0101
+    paper_value: 0.7335
+    paper_std: 0.0101
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -12084,19 +12049,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.7815
-    sort_std: null
-    true_value: 0.7815
-    true_std: null
-    paper_value: 0.7335
-    paper_std: 0.0101
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 0.04799999999999993
-    value_gap_source_arxiv: '2505.19762'
-    value_gap_source_title: 'Language Models as Messengers: Enhancing Message Passing
-      in Heterophilic Graph Learning'
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: platonov2023a
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on tolokers heterophilic dataset, averaged over 10 runs.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: 0.7335
     at_pub_std: 0.0101
     at_pub_source_arxiv: '2202.07082'
@@ -12113,31 +12079,37 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.7815
+    true_std: null
+    value_gap_source_arxiv: '2505.19762'
+    value_gap_source_title: 'Language Models as Messengers: Enhancing Message Passing
+      in Heterophilic Graph Learning'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.04799999999999993
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7815
+    sort_std: null
+    global_rank: 108
+    paper_rank: 137
+    rank_delta: 29
+    rank_delta_abs: 29
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 102
   - model: NodeFormer
     model_key: nodeformer
     model_plain: NodeFormer
-    metric_values:
-    - 0.781
-    - null
-    metric_stds:
-    - 0.0103
-    - null
+    value: 0.781
+    std: 0.0103
+    paper_value: 0.781
+    paper_std: 0.0103
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -12145,18 +12117,20 @@ results:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    sort_value: 0.781
-    sort_std: 0.0103
-    true_value: 0.781
-    true_std: 0.0103
-    paper_value: 0.781
-    paper_std: 0.0103
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2510.21267'
-    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on tolokers heterophilic dataset, averaged over 10 runs.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -12173,31 +12147,36 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.781
+    true_std: 0.0103
+    value_gap_source_arxiv: '2510.21267'
+    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.781
+    sort_std: 0.0103
+    global_rank: 112
+    paper_rank: 112
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 106
   - model: GGCN
     model_key: ggcn
     model_plain: GGCN
-    metric_values:
-    - 0.7731
-    - null
-    metric_stds:
-    - 0.0114
-    - null
+    value: 0.7731
+    std: 0.0114
+    paper_value: 0.7731
+    paper_std: 0.0114
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -12205,19 +12184,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.7731
-    sort_std: 0.0114
-    true_value: 0.7731
-    true_std: 0.0114
-    paper_value: 0.7731
-    paper_std: 0.0114
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on tolokers heterophilic dataset, averaged over 10 runs.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -12234,31 +12214,37 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.7731
+    true_std: 0.0114
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7731
+    sort_std: 0.0114
+    global_rank: 121
+    paper_rank: 121
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 115
   - model: OrderedGNN
     model_key: orderedgnn
     model_plain: OrderedGNN
-    metric_values:
-    - 0.756
-    - null
-    metric_stds:
-    - 0.0136
-    - null
+    value: 0.756
+    std: 0.0136
+    paper_value: 0.756
+    paper_std: 0.0136
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -12266,19 +12252,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.756
-    sort_std: 0.0136
-    true_value: 0.756
-    true_std: 0.0136
-    paper_value: 0.756
-    paper_std: 0.0136
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2512.14908'
-    value_gap_source_title: 'ATLAS: Adaptive Topology-based Learning at Scale for
-      Homophilic and Heterophilic Graphs'
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on tolokers heterophilic dataset, averaged over 10 runs.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -12295,31 +12282,35 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.756
+    true_std: 0.0136
+    value_gap_source_arxiv: '2512.14908'
+    value_gap_source_title: 'ATLAS: Adaptive Topology-based Learning at Scale for
+      Homophilic and Heterophilic Graphs'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.756
+    sort_std: 0.0136
+    global_rank: 131
+    paper_rank: 131
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 125
   - model: MLP
     model_key: mlp
     model_plain: MLP
-    metric_values:
-    - 0.7362
-    - null
-    metric_stds:
-    - 0.002
-    - null
+    value: 0.7362
+    std: 0.002
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -12329,36 +12320,32 @@ results:
     architecture_title: Traditional / classical method
     arxiv_id: '2508.17531'
     title: 'Gumbel-MPNN: Graph Rewiring with Gumbel-Softmax'
-    published_venue: ''
     date: Aug 24, 2025
     date_display: Aug 2025
     date_iso: '2025-08-24'
+    venue: European Conference on Artificial Intelligence
     codebase_url: https://github.com/Bobowner/Gumbel-Softmax-MPNN
     uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
     is_global_top: true
-    global_rank: 128
-    is_best: false
+    global_rank: 135
     sort_value: 0.7362
     sort_std: 0.002
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: GloGNN
     model_key: glognn
     model_plain: GloGNN
-    metric_values:
-    - 0.7339
-    - null
-    metric_stds:
-    - 0.0117
-    - null
+    value: 0.7339
+    std: 0.0117
+    paper_value: 0.7339
+    paper_std: 0.0117
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -12366,19 +12353,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.7339
-    sort_std: 0.0117
-    true_value: 0.7339
-    true_std: 0.0117
-    paper_value: 0.7339
-    paper_std: 0.0117
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2512.14908'
-    value_gap_source_title: 'ATLAS: Adaptive Topology-based Learning at Scale for
-      Homophilic and Heterophilic Graphs'
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: platonov2023a
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on tolokers heterophilic dataset, averaged over 10 runs.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: 0.7339
     at_pub_std: 0.0117
     at_pub_source_arxiv: '2202.07082'
@@ -12395,31 +12383,37 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.7339
+    true_std: 0.0117
+    value_gap_source_arxiv: '2512.14908'
+    value_gap_source_title: 'ATLAS: Adaptive Topology-based Learning at Scale for
+      Homophilic and Heterophilic Graphs'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7339
+    sort_std: 0.0117
+    global_rank: 136
+    paper_rank: 136
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 129
   - model: GPRGNN
     model_key: gprgnn
     model_plain: GPRGNN
-    metric_values:
-    - 0.7294
-    - null
-    metric_stds:
-    - 0.0097
-    - null
+    value: 0.7294
+    std: 0.0097
+    paper_value: 0.7294
+    paper_std: 0.0097
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -12427,18 +12421,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.7294
-    sort_std: 0.0097
-    true_value: 0.7294
-    true_std: 0.0097
-    paper_value: 0.7294
-    paper_std: 0.0097
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2510.21267'
-    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: platonov2023a
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on tolokers heterophilic dataset, averaged over 10 runs.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -12455,31 +12451,36 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.7294
+    true_std: 0.0097
+    value_gap_source_arxiv: '2510.21267'
+    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7294
+    sort_std: 0.0097
+    global_rank: 141
+    paper_rank: 141
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 134
   - model: tGNN
     model_key: tgnn
     model_plain: tGNN
-    metric_values:
-    - 0.7084
-    - null
-    metric_stds:
-    - 0.0175
-    - null
+    value: 0.7084
+    std: 0.0175
+    paper_value: 0.7084
+    paper_std: 0.0175
+    metric: ROC-AUC
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -12487,19 +12488,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.7084
-    sort_std: 0.0175
-    true_value: 0.7084
-    true_std: 0.0175
-    paper_value: 0.7084
-    paper_std: 0.0175
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
-    value_note: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: hua2022high
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on tolokers heterophilic dataset, averaged over 10 runs.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -12516,33 +12518,34 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ICLR 2024
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    true_value: 0.7084
+    true_std: 0.0175
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7084
+    sort_std: 0.0175
+    global_rank: 146
+    paper_rank: 146
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 139
-  metrics:
-  - ROC-AUC
-  - Accuracy
-  primary_metric: ROC-AUC
   rank_metric: ROC-AUC
   higher_is_better: true
   experiment_scope: node-level
   dataset_primary_metric: ROC-AUC
   paper_metrics:
   - ROC-AUC
-  - Accuracy
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
@@ -12566,15 +12569,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Accuracy on WikiCS, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -12609,9 +12611,9 @@ results:
     sort_value: 0.9302
     sort_std: 0.0011
     global_rank: 1
-    paper_rank: 200
-    rank_delta: 199
-    rank_delta_abs: 199
+    paper_rank: 194
+    rank_delta: 193
+    rank_delta_abs: 193
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -12740,15 +12742,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Accuracy on WikiCS, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -12783,9 +12784,9 @@ results:
     sort_value: 0.8754
     sort_std: null
     global_rank: 12
-    paper_rank: 148
-    rank_delta: 136
-    rank_delta_abs: 136
+    paper_rank: 145
+    rank_delta: 133
+    rank_delta_abs: 133
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -12811,15 +12812,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Accuracy on WikiCS, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -12853,9 +12853,9 @@ results:
     sort_value: 0.8674
     sort_std: null
     global_rank: 18
-    paper_rank: 153
-    rank_delta: 135
-    rank_delta_abs: 135
+    paper_rank: 150
+    rank_delta: 132
+    rank_delta_abs: 132
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -12880,15 +12880,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Accuracy on WikiCS, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -12922,10 +12921,10 @@ results:
     value_note: ''
     sort_value: 0.8533
     sort_std: null
-    global_rank: 34
-    paper_rank: 218
-    rank_delta: 184
-    rank_delta_abs: 184
+    global_rank: 31
+    paper_rank: 210
+    rank_delta: 179
+    rank_delta_abs: 179
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -12950,15 +12949,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Accuracy on WikiCS, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -12990,10 +12988,10 @@ results:
     value_note: ''
     sort_value: 0.8341
     sort_std: 0.0034
-    global_rank: 53
-    paper_rank: 212
-    rank_delta: 159
-    rank_delta_abs: 159
+    global_rank: 48
+    paper_rank: 205
+    rank_delta: 157
+    rank_delta_abs: 157
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -13018,15 +13016,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Accuracy on WikiCS, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -13058,10 +13055,10 @@ results:
     value_note: ''
     sort_value: 0.8258
     sort_std: 0.0089
-    global_rank: 63
-    paper_rank: 178
-    rank_delta: 115
-    rank_delta_abs: 115
+    global_rank: 58
+    paper_rank: 172
+    rank_delta: 114
+    rank_delta_abs: 114
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -13086,15 +13083,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Accuracy on WikiCS, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -13127,10 +13123,10 @@ results:
     value_note: ''
     sort_value: 0.8146
     sort_std: 0.001
-    global_rank: 76
-    paper_rank: 244
-    rank_delta: 168
-    rank_delta_abs: 168
+    global_rank: 69
+    paper_rank: 235
+    rank_delta: 166
+    rank_delta_abs: 166
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -13155,15 +13151,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Accuracy on WikiCS, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -13196,10 +13191,10 @@ results:
     value_note: ''
     sort_value: 0.8103
     sort_std: 0.0094
-    global_rank: 80
-    paper_rank: 245
-    rank_delta: 165
-    rank_delta_abs: 165
+    global_rank: 74
+    paper_rank: 236
+    rank_delta: 162
+    rank_delta_abs: 162
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -13224,15 +13219,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Accuracy on WikiCS, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -13265,10 +13259,10 @@ results:
     value_note: ''
     sort_value: 0.8026
     sort_std: 0.0092
-    global_rank: 92
-    paper_rank: 116
-    rank_delta: 24
-    rank_delta_abs: 24
+    global_rank: 90
+    paper_rank: 112
+    rank_delta: 22
+    rank_delta_abs: 22
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -13293,15 +13287,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Accuracy on WikiCS, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -13334,8 +13327,144 @@ results:
     value_note: ''
     sort_value: 0.801
     sort_std: 0.0067
-    global_rank: 100
-    paper_rank: 100
+    global_rank: 97
+    paper_rank: 97
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Polynormer-v2
+    model_key: polynormer-v2
+    model_plain: Polynormer-v2
+    value: 0.8001
+    std: 0.0055
+    paper_value: 0.8001
+    paper_std: 0.0055
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on WikiCS.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-02'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8001
+    true_std: 0.0055
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8001
+    sort_std: 0.0055
+    global_rank: 99
+    paper_rank: 99
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Polynormer-v1
+    model_key: polynormer-v1
+    model_plain: Polynormer-v1
+    value: 0.7953
+    std: 0.0083
+    paper_value: 0.7953
+    paper_std: 0.0083
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on WikiCS.
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-02'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7953
+    true_std: 0.0083
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7953
+    sort_std: 0.0083
+    global_rank: 114
+    paper_rank: 114
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -13362,15 +13491,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Accuracy on WikiCS, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -13403,10 +13531,10 @@ results:
     value_note: ''
     sort_value: 0.7938
     sort_std: 0.0062
-    global_rank: 121
-    paper_rank: 164
-    rank_delta: 43
-    rank_delta_abs: 43
+    global_rank: 118
+    paper_rank: 158
+    rank_delta: 40
+    rank_delta_abs: 40
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -13431,15 +13559,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Accuracy on WikiCS, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -13471,8 +13598,8 @@ results:
     value_note: ''
     sort_value: 0.7926
     sort_std: 0.0057
-    global_rank: 125
-    paper_rank: 155
+    global_rank: 121
+    paper_rank: 151
     rank_delta: 30
     rank_delta_abs: 30
     rank_delta_direction: worse
@@ -13499,15 +13626,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Accuracy on WikiCS, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -13519,8 +13645,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-04-10'
-    value_gap_source_date_label: '2026'
+    value_gap_source_date_iso: '2025-01-30'
+    value_gap_source_date_label: ICML 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -13531,17 +13657,16 @@ results:
     today_delta_significant: false
     true_value: 0.7901
     true_std: 0.0068
-    value_gap_source_arxiv: '2604.08980'
-    value_gap_source_title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware
-      Graph Learning'
+    value_gap_source_arxiv: '2501.18739'
+    value_gap_source_title: 'Beyond Message Passing: Neural Graph Pattern Machine'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7901
     sort_std: 0.0068
-    global_rank: 138
-    paper_rank: 138
+    global_rank: 135
+    paper_rank: 135
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -13568,15 +13693,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Accuracy on WikiCS, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -13588,8 +13712,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-04-10'
-    value_gap_source_date_label: '2026'
+    value_gap_source_date_iso: '2024-03-02'
+    value_gap_source_date_label: ICLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -13600,17 +13724,17 @@ results:
     today_delta_significant: false
     true_value: 0.7844
     true_std: 0.0053
-    value_gap_source_arxiv: '2604.08980'
-    value_gap_source_title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware
-      Graph Learning'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7844
     sort_std: 0.0053
-    global_rank: 167
-    paper_rank: 167
+    global_rank: 161
+    paper_rank: 161
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -13637,15 +13761,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Accuracy on WikiCS, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -13678,10 +13801,10 @@ results:
     value_note: ''
     sort_value: 0.7796
     sort_std: 0.0063
-    global_rank: 183
-    paper_rank: 216
-    rank_delta: 33
-    rank_delta_abs: 33
+    global_rank: 177
+    paper_rank: 208
+    rank_delta: 31
+    rank_delta_abs: 31
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -13706,15 +13829,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Accuracy on WikiCS, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -13726,8 +13848,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-04-10'
-    value_gap_source_date_label: '2026'
+    value_gap_source_date_iso: '2024-03-02'
+    value_gap_source_date_label: ICLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -13738,17 +13860,17 @@ results:
     today_delta_significant: false
     true_value: 0.7789
     true_std: 0.0042
-    value_gap_source_arxiv: '2604.08980'
-    value_gap_source_title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware
-      Graph Learning'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7789
     sort_std: 0.0042
-    global_rank: 185
-    paper_rank: 185
+    global_rank: 179
+    paper_rank: 179
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -13783,7 +13905,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 246
+    global_rank: 237
     sort_value: 0.7469
     sort_std: 0.0085
     comparison_type: global_top
@@ -13808,15 +13930,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Accuracy on WikiCS, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -13849,8 +13970,8 @@ results:
     value_note: ''
     sort_value: 0.7346
     sort_std: 0.0056
-    global_rank: 254
-    paper_rank: 254
+    global_rank: 245
+    paper_rank: 245
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -13877,15 +13998,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Averaged node classification accuracy over 10 runs on homophilic
-      datasets.
+    protocol_note: Accuracy on WikiCS, averaged over 10 runs.
     date: Mar 2, 2024
     date_display: Mar 2024
     date_iso: '2024-03-02'
@@ -13897,8 +14017,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-04-10'
-    value_gap_source_date_label: '2026'
+    value_gap_source_date_iso: '2024-03-02'
+    value_gap_source_date_label: ICLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -13909,889 +14029,22 @@ results:
     today_delta_significant: false
     true_value: 0.7149
     true_std: 0.0105
-    value_gap_source_arxiv: '2604.08980'
-    value_gap_source_title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware
-      Graph Learning'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.01232'
+    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
+      Linear Time'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7149
     sort_std: 0.0105
-    global_rank: 276
-    paper_rank: 276
+    global_rank: 264
+    paper_rank: 264
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  rank_metric: Accuracy
-  higher_is_better: true
-  experiment_scope: node-level
-  dataset_primary_metric: Accuracy
-  paper_metrics:
-  - Accuracy
-  metric: Accuracy
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
-- &id005
-  dataset: ogbn-products
-  rows:
-  - model: Jacobi
-    model_key: jacobi
-    model_plain: Jacobi
-    value: 0.8968
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.19762'
-    title: 'Language Models as Messengers: Enhancing Message Passing in Heterophilic
-      Graph Learning'
-    date: May 26, 2025
-    date_display: May 2025
-    date_iso: '2025-05-26'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.8968
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GPR
-    model_key: gpr
-    model_plain: GPR
-    value: 0.8953
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.19762'
-    title: 'Language Models as Messengers: Enhancing Message Passing in Heterophilic
-      Graph Learning'
-    date: May 26, 2025
-    date_display: May 2025
-    date_iso: '2025-05-26'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.8953
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: LEMP4HG
-    model_key: lemp4hg
-    model_plain: LEMP4HG
-    value: 0.8939
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2505.19762'
-    title: 'Language Models as Messengers: Enhancing Message Passing in Heterophilic
-      Graph Learning'
-    date: May 26, 2025
-    date_display: May 2025
-    date_iso: '2025-05-26'
-    venue: null
-    codebase_url: ''
-    uses_external_data: true
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.8939
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SAGE
-    model_key: sage
-    model_plain: SAGE
-    value: 0.8933
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.19762'
-    title: 'Language Models as Messengers: Enhancing Message Passing in Heterophilic
-      Graph Learning'
-    date: May 26, 2025
-    date_display: May 2025
-    date_iso: '2025-05-26'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 4
-    sort_value: 0.8933
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.7564
-    std: 0.0021
-    paper_value: 0.7564
-    paper_std: 0.0021
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: hu2020open
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Mini-batch training via random partitioning due to graph size.
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ICLR 2024
-    published_conference: ICLR 2024
-    at_pub_value: 0.824
-    at_pub_std: 0.004
-    at_pub_source_arxiv: '2203.00638'
-    at_pub_source_title: 'PaSca: a Graph Neural Architecture Search System under the
-      Scalable Paradigm'
-    at_pub_source_date_iso: '2022-03-01'
-    at_pub_source_date_label: WWW 2022
-    value_gap_source_date_iso: '2025-05-26'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.0676
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8868
-    true_std: null
-    value_gap_source_arxiv: '2505.19762'
-    value_gap_source_title: 'Language Models as Messengers: Enhancing Message Passing
-      in Heterophilic Graph Learning'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.13040000000000007
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8868
-    sort_std: null
-    global_rank: 7
-    paper_rank: 286
-    rank_delta: 279
-    rank_delta_abs: 279
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'PaSca: a Graph Neural Architecture Search System under
-      the Scalable Paradigm'
-    comparison_source_arxiv: '2203.00638'
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.7945
-    std: 0.0059
-    paper_value: 0.7945
-    paper_std: 0.0059
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Mini-batch training via random partitioning due to graph size.
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ICLR 2024
-    published_conference: ICLR 2024
-    at_pub_value: 0.801
-    at_pub_std: 0.006
-    at_pub_source_arxiv: '2203.00638'
-    at_pub_source_title: 'PaSca: a Graph Neural Architecture Search System under the
-      Scalable Paradigm'
-    at_pub_source_date_iso: '2022-03-01'
-    at_pub_source_date_label: WWW 2022
-    value_gap_source_date_iso: '2025-05-26'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.006500000000000061
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8829
-    true_std: null
-    value_gap_source_arxiv: '2505.19762'
-    value_gap_source_title: 'Language Models as Messengers: Enhancing Message Passing
-      in Heterophilic Graph Learning'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.08840000000000003
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8829
-    sort_std: null
-    global_rank: 11
-    paper_rank: 189
-    rank_delta: 178
-    rank_delta_abs: 178
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Polynormer-r
-    model_key: polynormer-r
-    model_plain: Polynormer-r
-    value: 0.8382
-    std: 0.0011
-    paper_value: 0.8382
-    paper_std: 0.0011
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Polynormer with ReLU activation; mini-batch training via random
-      partitioning.
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ICLR 2024
-    published_conference: ICLR 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8382
-    true_std: 0.0011
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8382
-    sort_std: 0.0011
-    global_rank: 72
-    paper_rank: 72
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: NodeFormer
-    model_key: nodeformer
-    model_plain: NodeFormer
-    value: 0.7293
-    std: 0.0013
-    paper_value: 0.7293
-    paper_std: 0.0013
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: wu2022nodeformer
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Mini-batch training via random partitioning due to graph size.
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ICLR 2024
-    published_conference: ICLR 2024
-    at_pub_value: 0.6726
-    at_pub_std: 0.0071
-    at_pub_source_arxiv: '2401.15569'
-    at_pub_source_title: Efficient Tuning and Inference for Large Language Models
-      on Textual Graphs
-    at_pub_source_date_iso: '2024-01-28'
-    at_pub_source_date_label: IJCAI 2024
-    value_gap_source_date_iso: '2026-05-24'
-    value_gap_source_date_label: ICML 2026
-    gap_vs_at_pub: 0.05669999999999997
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: true
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8372
-    true_std: null
-    value_gap_source_arxiv: '2605.24867'
-    value_gap_source_title: 'Clustering as Reasoning: A $k$-Means Interpretation of
-      Chain-of-Thought Graph Learning'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.1079000000000001
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8372
-    sort_std: null
-    global_rank: 75
-    paper_rank: 350
-    rank_delta: 275
-    rank_delta_abs: 275
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Efficient Tuning and Inference for Large Language Models
-      on Textual Graphs
-    comparison_source_arxiv: '2401.15569'
-    is_best: false
-    is_std_outlier: false
-  - model: Polynormer
-    model_key: polynormer
-    model_plain: Polynormer
-    value: 0.8297
-    std: 0.0028
-    paper_value: 0.8297
-    paper_std: 0.0028
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Mini-batch training via random partitioning due to graph size.
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ICLR 2024
-    published_conference: ICLR 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8297
-    true_std: 0.0028
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8297
-    sort_std: 0.0028
-    global_rank: 90
-    paper_rank: 90
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GOAT
-    model_key: goat
-    model_plain: GOAT
-    value: 0.82
-    std: 0.0043
-    paper_value: 0.82
-    paper_std: 0.0043
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: pmlr-v202-kong23a
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Mini-batch training via random partitioning due to graph size.
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ICLR 2024
-    published_conference: ICLR 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.82
-    true_std: 0.0043
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.82
-    sort_std: 0.0043
-    global_rank: 113
-    paper_rank: 113
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GPRGNN
-    model_key: gprgnn
-    model_plain: GPRGNN
-    value: 0.7976
-    std: 0.0059
-    paper_value: 0.7976
-    paper_std: 0.0059
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: zhang2022hierarchical
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Mini-batch training via random partitioning due to graph size.
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ICLR 2024
-    published_conference: ICLR 2024
-    at_pub_value: 0.7976
-    at_pub_std: 0.0059
-    at_pub_source_arxiv: '2210.03930'
-    at_pub_source_title: Hierarchical Graph Transformer with Adaptive Node Sampling
-    at_pub_source_date_iso: '2022-10-08'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7976
-    true_std: 0.0059
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7976
-    sort_std: 0.0059
-    global_rank: 179
-    paper_rank: 179
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: DIFFormer
-    model_key: difformer
-    model_plain: DIFFormer
-    value: 0.7416
-    std: 0.0031
-    paper_value: 0.7416
-    paper_std: 0.0031
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: wu2023difformer
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Mini-batch training via random partitioning due to graph size.
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ICLR 2024
-    published_conference: ICLR 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7416
-    true_std: 0.0031
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7416
-    sort_std: 0.0031
-    global_rank: 330
-    paper_rank: 330
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: NAGphormer
-    model_key: nagphormer
-    model_plain: NAGphormer
-    value: 0.7355
-    std: 0.0021
-    paper_value: 0.7355
-    paper_std: 0.0021
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Mini-batch training via random partitioning due to graph size.
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ICLR 2024
-    published_conference: ICLR 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7355
-    true_std: 0.0021
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7355
-    sort_std: 0.0021
-    global_rank: 346
-    paper_rank: 346
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: LINKX
-    model_key: linkx
-    model_plain: LINKX
-    value: 0.7159
-    std: 0.0071
-    paper_value: 0.7159
-    paper_std: 0.0071
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: lim2021large
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Mini-batch training via random partitioning due to graph size.
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    published_venue: ICLR 2024
-    published_conference: ICLR 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7159
-    true_std: 0.0071
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7159
-    sort_std: 0.0071
-    global_rank: 362
-    paper_rank: 362
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MLP
-    model_key: mlp
-    model_plain: MLP
-    value: 0.6605
-    std: 0.002
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2211.16199'
-    title: Latent Graph Inference using Product Manifolds
-    date: Nov 26, 2022
-    date_display: Nov 2022
-    date_iso: '2022-11-26'
-    venue: International Conference on Learning Representations
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 394
-    sort_value: 0.6605
-    sort_std: 0.002
-    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -14812,19 +14065,13 @@ results_grouped:
   - *id002
   - *id003
   - *id004
-- benchmark: OGB
-  datasets:
-  - *id005
 - benchmark: Heterophily Benchmark
   datasets:
+  - *id005
   - *id006
   - *id007
   - *id008
   - *id009
-  - *id010
-- benchmark: LINKX Benchmarks
-  datasets:
-  - *id011
 datasets_by_scope:
 - scope: node-level
   label: Node-level
@@ -14840,11 +14087,6 @@ datasets_by_scope:
       dataset_slug: coauthor-physics
     - dataset: WikiCS
       dataset_slug: wikics
-  - benchmark: OGB
-    benchmark_slug: ogb
-    datasets:
-    - dataset: ogbn-products
-      dataset_slug: ogbn-products
   - benchmark: Heterophily Benchmark
     benchmark_slug: heterophily-benchmark
     datasets:
@@ -14852,17 +14094,12 @@ datasets_by_scope:
       dataset_slug: roman-empire
     - dataset: Amazon-ratings
       dataset_slug: amazon-ratings
-    - dataset: Questions
-      dataset_slug: questions
     - dataset: Tolokers
       dataset_slug: tolokers
     - dataset: Minesweeper
       dataset_slug: minesweeper
-  - benchmark: LINKX Benchmarks
-    benchmark_slug: linkx-benchmarks
-    datasets:
-    - dataset: Pokec
-      dataset_slug: pokec
+    - dataset: Questions
+      dataset_slug: questions
 main_figure: /figures/2403.01232/main_figure.jpegoptim.jpg
 ---
 

@@ -57,8 +57,8 @@ proposed_models:
 - GIN + LELM
 - GPS + LELM
 - LELM
-mrr: 0.0116
-adjusted_mrr: 0.0039
+mrr: 0.0122
+adjusted_mrr: 0.0041
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -130,7 +130,7 @@ results:
     venue: arXiv.org
     codebase_url: https://github.com/ocx-lab/FloydNet
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -204,15 +204,15 @@ results:
     date_iso: '2025-09-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.0262
-    at_pub_std: 0.0025
-    at_pub_source_arxiv: '2305.15747'
-    at_pub_source_title: Union Subgraph Neural Networks
-    at_pub_source_date_iso: '2023-05-25'
-    at_pub_source_date_label: AAAI 2023
-    value_gap_source_date_iso: '2023-05-25'
-    value_gap_source_date_label: AAAI 2023
-    gap_vs_at_pub: 0.1238
+    at_pub_value: 0.07
+    at_pub_std: 0.004
+    at_pub_source_arxiv: '2402.02005'
+    at_pub_source_title: Topology-Informed Graph Transformer
+    at_pub_source_date_iso: '2024-02-03'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2024-02-03'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.07999999999999999
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -220,25 +220,25 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.0262
-    true_std: 0.0025
-    value_gap_source_arxiv: '2305.15747'
-    value_gap_source_title: Union Subgraph Neural Networks
+    true_value: 0.07
+    true_std: 0.004
+    value_gap_source_arxiv: '2402.02005'
+    value_gap_source_title: Topology-Informed Graph Transformer
     value_gap_source_is_current_paper: false
-    value_gap: 0.1238
+    value_gap: 0.07999999999999999
     has_value_note: false
     value_note: ''
-    sort_value: 0.0262
-    sort_std: 0.0025
-    global_rank: 32
-    paper_rank: 90
-    rank_delta: 58
-    rank_delta_abs: 58
+    sort_value: 0.07
+    sort_std: 0.004
+    global_rank: 67
+    paper_rank: 85
+    rank_delta: 18
+    rank_delta_abs: 18
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Union Subgraph Neural Networks
-    comparison_source_arxiv: '2305.15747'
+    comparison_source_title: Topology-Informed Graph Transformer
+    comparison_source_arxiv: '2402.02005'
     is_best: false
     is_std_outlier: false
   - model: GIN
@@ -298,10 +298,10 @@ results:
     value_note: ''
     sort_value: 0.088
     sort_std: 0.002
-    global_rank: 74
-    paper_rank: 97
-    rank_delta: 23
-    rank_delta_abs: 23
+    global_rank: 71
+    paper_rank: 92
+    rank_delta: 21
+    rank_delta_abs: 21
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -366,8 +366,8 @@ results:
     value_note: ''
     sort_value: 0.104
     sort_std: null
-    global_rank: 80
-    paper_rank: 80
+    global_rank: 77
+    paper_rank: 77
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -402,7 +402,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 83
+    global_rank: 80
     sort_value: 0.113
     sort_std: 0.002
     comparison_type: global_top
@@ -467,8 +467,8 @@ results:
     value_note: ''
     sort_value: 0.13
     sort_std: null
-    global_rank: 86
-    paper_rank: 86
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -535,8 +535,8 @@ results:
     value_note: ''
     sort_value: 0.13
     sort_std: null
-    global_rank: 87
-    paper_rank: 87
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -603,8 +603,8 @@ results:
     value_note: ''
     sort_value: 0.238
     sort_std: null
-    global_rank: 98
-    paper_rank: 98
+    global_rank: 93
+    paper_rank: 93
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -671,8 +671,8 @@ results:
     value_note: ''
     sort_value: 0.25
     sort_std: null
-    global_rank: 100
-    paper_rank: 100
+    global_rank: 95
+    paper_rank: 95
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -739,8 +739,8 @@ results:
     value_note: ''
     sort_value: 0.285
     sort_std: null
-    global_rank: 104
-    paper_rank: 104
+    global_rank: 99
+    paper_rank: 99
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -807,8 +807,8 @@ results:
     value_note: ''
     sort_value: 1.493
     sort_std: null
-    global_rank: 116
-    paper_rank: 116
+    global_rank: 111
+    paper_rank: 111
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

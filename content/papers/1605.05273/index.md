@@ -52,9 +52,9 @@ results:
 - &id003
   dataset: D&D
   rows:
-  - model: GC-GNN (GraphSAGE)
-    model_key: gc-gnn (graphsage)
-    model_plain: GC-GNN (GraphSAGE)
+  - model: GC-GNN (GCN)
+    model_key: gc-gnn (gcn)
+    model_plain: GC-GNN (GCN)
     value: 0.921
     std: 0.081
     metric: Accuracy
@@ -75,8 +75,9 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: The paper describes GC-GNN as enhancing GNNs with graph
+      canonization positional encodings.
     is_global_top: true
     global_rank: 1
     sort_value: 0.921
@@ -622,7 +623,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -923,9 +924,9 @@ results:
     sort_value: 0.904
     sort_std: 0.057
     global_rank: 171
-    paper_rank: 660
-    rank_delta: 489
-    rank_delta_abs: 489
+    paper_rank: 659
+    rank_delta: 488
+    rank_delta_abs: 488
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1056,8 +1057,8 @@ results:
     value_note: ''
     sort_value: 0.8737
     sort_std: 0.0788
-    global_rank: 389
-    paper_rank: 389
+    global_rank: 390
+    paper_rank: 390
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1092,7 +1093,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 429
+    global_rank: 430
     sort_value: 0.866
     sort_std: 0.0495
     comparison_type: global_top
@@ -1156,8 +1157,8 @@ results:
     value_note: ''
     sort_value: 0.858
     sort_std: 0.002
-    global_rank: 455
-    paper_rank: 459
+    global_rank: 456
+    paper_rank: 460
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -1293,9 +1294,9 @@ results:
     sort_value: 0.835
     sort_std: 0.006
     global_rank: 559
-    paper_rank: 642
-    rank_delta: 83
-    rank_delta_abs: 83
+    paper_rank: 641
+    rank_delta: 82
+    rank_delta_abs: 82
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1508,7 +1509,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 81
+    global_rank: 82
     sort_value: 0.8303
     sort_std: 0.0137
     comparison_type: global_top
@@ -1572,8 +1573,8 @@ results:
     value_note: ''
     sort_value: 0.7859
     sort_std: 0.0189
-    global_rank: 323
-    paper_rank: 323
+    global_rank: 322
+    paper_rank: 322
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1639,8 +1640,8 @@ results:
     value_note: ''
     sort_value: 0.7634
     sort_std: 0.0168
-    global_rank: 423
-    paper_rank: 423
+    global_rank: 420
+    paper_rank: 420
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1707,10 +1708,10 @@ results:
     value_note: ''
     sort_value: 0.745
     sort_std: 0.003
-    global_rank: 470
-    paper_rank: 505
-    rank_delta: 35
-    rank_delta_abs: 35
+    global_rank: 468
+    paper_rank: 501
+    rank_delta: 33
+    rank_delta_abs: 33
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1774,8 +1775,8 @@ results:
     value_note: ''
     sort_value: 0.728
     sort_std: 0.0206
-    global_rank: 512
-    paper_rank: 512
+    global_rank: 508
+    paper_rank: 508
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1841,8 +1842,8 @@ results:
     value_note: ''
     sort_value: 0.7
     sort_std: 0.0198
-    global_rank: 539
-    paper_rank: 539
+    global_rank: 535
+    paper_rank: 535
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1909,10 +1910,10 @@ results:
     value_note: ''
     sort_value: 0.66
     sort_std: 0.001
-    global_rank: 577
-    paper_rank: 606
-    rank_delta: 29
-    rank_delta_abs: 29
+    global_rank: 573
+    paper_rank: 600
+    rank_delta: 27
+    rank_delta_abs: 27
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null

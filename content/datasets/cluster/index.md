@@ -13,7 +13,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 6
-result_count: 178
+result_count: 172
 best_model:
   model: GRPE-Small
   value: 0.81586
@@ -187,8 +187,8 @@ variants:
     - null
     - null
     - null
-  - model: Tango_GPS
-    model_plain: Tango_GPS
+  - model: TANGO-GPS
+    model_plain: TANGO-GPS
     is_baseline: false
     is_overridden: false
     override_reason: ''
@@ -638,8 +638,8 @@ variants:
     - null
     - null
     - null
-  - model: Tango_GatedGCN
-    model_plain: Tango_GatedGCN
+  - model: TANGO-GatedGCN
+    model_plain: TANGO-GatedGCN
     is_baseline: false
     is_overridden: false
     override_reason: ''
@@ -1762,18 +1762,18 @@ variants:
     - null
     - null
     - null
-  row_count: 178
+  row_count: 172
   rows_json: /data/datasets/cluster/standard-split-rows.json
   chart_json: /data/datasets/cluster/standard-split-chart.json
   arch_counts:
-    gnn: 77
+    gnn: 73
     hybrid: 36
-    graph_transformer: 48
+    graph_transformer: 46
     llm: 0
     walk: 0
     traditional: 11
   metric_counts:
-  - 146
+  - 140
   - 10
   - 11
   - 11
@@ -1804,7 +1804,14 @@ variants:
     date: '2022-01-30'
   milestones_by_metric:
     Accuracy: *id001
-    ACC: []
+    ACC:
+    - value: 0.741
+      std: 0.002
+      model: AutoGCN
+      arxiv_id: '2107.04755'
+      title: 'Beyond Low-pass Filtering: Graph Convolutional Networks with Automatic
+        Filtering'
+      date: '2021-07-10'
     AULC:
     - value: 62.36
       std: 0.26

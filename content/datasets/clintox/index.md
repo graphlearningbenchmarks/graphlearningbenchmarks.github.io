@@ -12,7 +12,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 2
-result_count: 310
+result_count: 315
 best_model:
   model: SE(3)-I MPPH
   value: 0.993
@@ -80,6 +80,10 @@ papers:
   title: Community-Invariant Graph Contrastive Learning
   date_iso: '2024-05-02'
   venue: ICML 2024
+- arxiv_id: '2404.15806'
+  title: 'Where to Mask: Structure-Guided Masking for Graph Masked Autoencoders'
+  date_iso: '2024-04-24'
+  venue: IJCAI 2024
 - arxiv_id: '2404.11568'
   title: On the Scalability of GNNs for Molecular Graphs
   date_iso: '2024-04-17'
@@ -102,11 +106,6 @@ papers:
     Prediction: A Systematic Survey'
   date_iso: '2024-02-11'
   venue: ''
-- arxiv_id: '2402.07191'
-  title: Improving Subgraph Extraction for Graph Invariant Learning via Graph Sinkhorn
-    Attention
-  date_iso: '2024-02-11'
-  venue: ''
 - arxiv_id: '2312.13583'
   title: Fine-tuning Graph Neural Networks by Preserving Graph Generative Patterns
   date_iso: '2023-12-21'
@@ -115,6 +114,11 @@ papers:
   title: SE(3)-Invariant Multiparameter Persistent Homology for Chiral-Sensitive Molecular
     Property Prediction
   date_iso: '2023-12-12'
+  venue: NeurIPS 2023
+- arxiv_id: '2311.01038'
+  title: 'Better with Less: A Data-Active Perspective on Pre-Training Graph Neural
+    Networks'
+  date_iso: '2023-11-02'
   venue: NeurIPS 2023
 - arxiv_id: '2310.14753'
   title: Rethinking Tokenizer and Decoder in Masked Graph Modeling for Molecules
@@ -576,7 +580,7 @@ variants:
     published_conference_short: AAAI
     published_conference_slug: aaai
     published_venue: AAAI 2021
-    uses_external_data: null
+    uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
@@ -958,35 +962,6 @@ variants:
     metric_stds:
     - 0.013
     - null
-  - model: GSINA
-    model_plain: GSINA
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2402.07191'
-    title: Improving Subgraph Extraction for Graph Invariant Learning via Graph Sinkhorn
-      Attention
-    date: Feb 11, 2024
-    date_iso: '2024-02-11'
-    date_display: Feb 2024
-    codebase_url: https://github.com/dingfangyu/GSINA
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9008
-    - null
-    metric_stds:
-    - 0.0206
-    - null
   - model: GeomMPNN
     model_plain: GeomMPNN
     is_baseline: true
@@ -1062,7 +1037,7 @@ variants:
     published_conference_short: AAAI
     published_conference_slug: aaai
     published_venue: AAAI 2021
-    uses_external_data: null
+    uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
@@ -1231,7 +1206,7 @@ variants:
     published_conference_short: AAAI
     published_conference_slug: aaai
     published_venue: AAAI 2021
-    uses_external_data: true
+    uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
@@ -1373,7 +1348,7 @@ variants:
     published_conference_short: AAAI
     published_conference_slug: aaai
     published_venue: AAAI 2021
-    uses_external_data: null
+    uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
@@ -1410,6 +1385,34 @@ variants:
     - null
     metric_stds:
     - 0.054
+    - null
+  - model: StructMAE-L
+    model_plain: StructMAE-L
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2404.15806'
+    title: 'Where to Mask: Structure-Guided Masking for Graph Masked Autoencoders'
+    date: Apr 24, 2024
+    date_iso: '2024-04-24'
+    date_display: Apr 2024
+    codebase_url: https://github.com/LiuChuang0059/StructMAE
+    published_conference: IJCAI 2024
+    published_conference_short: IJCAI
+    published_conference_slug: ijcai
+    published_venue: IJCAI 2024
+    uses_external_data: true
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.879
+    - null
+    metric_stds:
+    - 0.021
     - null
   - model: CoMPT
     model_plain: CoMPT
@@ -1697,18 +1700,18 @@ variants:
     metric_stds:
     - 0.017
     - null
-  row_count: 310
+  row_count: 315
   rows_json: /data/datasets/clintox/scaffold-split-rows.json
   chart_json: /data/datasets/clintox/scaffold-split-chart.json
   arch_counts:
-    gnn: 186
-    hybrid: 73
+    gnn: 189
+    hybrid: 74
     graph_transformer: 6
     llm: 6
     walk: 1
     traditional: 20
   metric_counts:
-  - 297
+  - 302
   - 13
   milestones: &id001
   - value: 0.8678

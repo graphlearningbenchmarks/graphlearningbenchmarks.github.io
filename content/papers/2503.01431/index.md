@@ -66,7 +66,7 @@ benchmark_coverage:
 - benchmark: Quantum Chemistry
   benchmark_slug: quantum-chemistry
   evaluated: 1
-  total: 3
+  total: 1
 task_categories:
 - graph_regression
 experiment_scopes:
@@ -236,9 +236,9 @@ results:
     sort_value: 0.0009
     sort_std: null
     global_rank: 7
-    paper_rank: 116
-    rank_delta: 109
-    rank_delta_abs: 109
+    paper_rank: 114
+    rank_delta: 107
+    rank_delta_abs: 107
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -306,9 +306,9 @@ results:
     sort_value: 0.01
     sort_std: null
     global_rank: 22
-    paper_rank: 121
-    rank_delta: 99
-    rank_delta_abs: 99
+    paper_rank: 119
+    rank_delta: 97
+    rank_delta_abs: 97
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -376,9 +376,9 @@ results:
     sort_value: 0.05
     sort_std: null
     global_rank: 46
-    paper_rank: 126
-    rank_delta: 80
-    rank_delta_abs: 80
+    paper_rank: 125
+    rank_delta: 79
+    rank_delta_abs: 79
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -446,9 +446,9 @@ results:
     sort_value: 0.052
     sort_std: null
     global_rank: 52
-    paper_rank: 116
-    rank_delta: 64
-    rank_delta_abs: 64
+    paper_rank: 114
+    rank_delta: 62
+    rank_delta_abs: 62
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -513,10 +513,10 @@ results:
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 65
-    paper_rank: 121
-    rank_delta: 56
-    rank_delta_abs: 56
+    global_rank: 64
+    paper_rank: 119
+    rank_delta: 55
+    rank_delta_abs: 55
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -581,8 +581,8 @@ results:
     value_note: ''
     sort_value: 1.0
     sort_std: null
-    global_rank: 115
-    paper_rank: 115
+    global_rank: 113
+    paper_rank: 113
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -649,8 +649,8 @@ results:
     value_note: ''
     sort_value: 1.0
     sort_std: null
-    global_rank: 116
-    paper_rank: 116
+    global_rank: 114
+    paper_rank: 114
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -717,8 +717,8 @@ results:
     value_note: ''
     sort_value: 1.7
     sort_std: null
-    global_rank: 118
-    paper_rank: 118
+    global_rank: 116
+    paper_rank: 116
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -785,8 +785,8 @@ results:
     value_note: ''
     sort_value: 8.9
     sort_std: null
-    global_rank: 123
-    paper_rank: 123
+    global_rank: 122
+    paper_rank: 122
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -853,8 +853,8 @@ results:
     value_note: ''
     sort_value: 9.9
     sort_std: null
-    global_rank: 125
-    paper_rank: 125
+    global_rank: 124
+    paper_rank: 124
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

@@ -61,21 +61,21 @@ abstract: Geometric deep learning has been revolutionizing the molecular modelin
   space and provide reasonable interpretability to map geometric representations to
   molecular structures.
 codebase_url: ''
-extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+extraction_model: google/gemma-4-26B-A4B-it
 has_results: true
 paper_type: method
 proposed_models:
 - ViSNet
-mrr: 0.1033
-adjusted_mrr: 0.0689
-mrr_dataset_count: 2
+mrr: 0.1667
+adjusted_mrr: 0.0556
+mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
 benchmark_coverage:
 - benchmark: Quantum Chemistry
   benchmark_slug: quantum-chemistry
-  evaluated: 2
-  total: 3
+  evaluated: 1
+  total: 1
 task_categories:
 - graph_regression
 experiment_scopes:
@@ -203,14 +203,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Force MAE for Naphthalene
+    protocol_note: MAE for energy and forces on MD17 molecules
     date: Oct 29, 2022
     date_display: Oct 2022
     date_iso: '2022-10-29'
@@ -254,76 +254,6 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: BOTNet
-    model_key: botnet
-    model_plain: BOTNet
-    value: 0.053
-    std: null
-    paper_value: 0.053
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to md17 (score=89)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: MAE for energy and forces on rMD17 molecules
-    date: Oct 29, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-29'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.03
-    at_pub_std: null
-    at_pub_source_arxiv: '2205.06643'
-    at_pub_source_title: The design space of E(3)-equivariant atom-centred interatomic
-      potentials
-    at_pub_source_date_iso: '2022-05-13'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2024-07-02'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.023
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.0007
-    true_std: null
-    value_gap_source_arxiv: '2407.02263'
-    value_gap_source_title: 'FreeCG: Free the Design Space of Clebsch–Gordan Transform
-      for Machine Learning Force Fields'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0523
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.0007
-    sort_std: null
-    global_rank: 5
-    paper_rank: 58
-    rank_delta: 53
-    rank_delta_abs: 53
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: The design space of E(3)-equivariant atom-centred interatomic
-      potentials
-    comparison_source_arxiv: '2205.06643'
-    is_best: false
-    is_std_outlier: false
   - model: NequIP
     model_key: nequip
     model_plain: NequIP
@@ -341,14 +271,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Energy MAE for Aspirin
+    protocol_note: MAE for energy and forces on MD17 molecules
     date: Oct 29, 2022
     date_display: Oct 2022
     date_iso: '2022-10-29'
@@ -383,151 +313,15 @@ results:
     sort_value: 0.0009
     sort_std: null
     global_rank: 7
-    paper_rank: 91
-    rank_delta: 84
-    rank_delta_abs: 84
+    paper_rank: 90
+    rank_delta: 83
+    rank_delta_abs: 83
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'So3krates: Equivariant attention for interactions on
       arbitrary length-scales in molecular systems'
     comparison_source_arxiv: '2205.14276'
-    is_best: false
-    is_std_outlier: false
-  - model: UNiTE
-    model_key: unite
-    model_plain: UNiTE
-    value: 0.055
-    std: null
-    paper_value: 0.055
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to md17 (score=89)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: MAE for energy and forces on rMD17 molecules
-    date: Oct 29, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-29'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-07-02'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.002
-    true_std: null
-    value_gap_source_arxiv: '2407.02263'
-    value_gap_source_title: 'FreeCG: Free the Design Space of Clebsch–Gordan Transform
-      for Machine Learning Force Fields'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.053
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.002
-    sort_std: null
-    global_rank: 9
-    paper_rank: 59
-    rank_delta: 50
-    rank_delta_abs: 50
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Allegro
-    model_key: allegro
-    model_plain: Allegro
-    value: 0.053
-    std: null
-    paper_value: 0.053
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to md17 (score=89)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: MAE for energy and forces on rMD17 molecules
-    date: Oct 29, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-29'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-07-02'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.0046
-    true_std: null
-    value_gap_source_arxiv: '2407.02263'
-    value_gap_source_title: 'FreeCG: Free the Design Space of Clebsch–Gordan Transform
-      for Machine Learning Force Fields'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0484
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.0046
-    sort_std: null
-    global_rank: 14
-    paper_rank: 58
-    rank_delta: 44
-    rank_delta_abs: 44
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: PaiNN
@@ -547,14 +341,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Energy MAE for Aspirin
+    protocol_note: MAE for energy and forces on MD17 molecules
     date: Oct 29, 2022
     date_display: Oct 2022
     date_iso: '2022-10-29'
@@ -589,9 +383,9 @@ results:
     sort_value: 0.01
     sort_std: null
     global_rank: 22
-    paper_rank: 98
-    rank_delta: 76
-    rank_delta_abs: 76
+    paper_rank: 96
+    rank_delta: 74
+    rank_delta_abs: 74
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -617,14 +411,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Energy MAE for Aspirin
+    protocol_note: MAE for energy and forces on MD17 molecules
     date: Oct 29, 2022
     date_display: Oct 2022
     date_iso: '2022-10-29'
@@ -659,9 +453,9 @@ results:
     sort_value: 0.05
     sort_std: null
     global_rank: 46
-    paper_rank: 109
-    rank_delta: 63
-    rank_delta_abs: 63
+    paper_rank: 107
+    rank_delta: 61
+    rank_delta_abs: 61
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -673,9 +467,9 @@ results:
   - model: GemNet
     model_key: gemnet
     model_plain: GemNet
-    value: 0.217
+    value: 0.085
     std: null
-    paper_value: 0.217
+    paper_value: 0.085
     paper_std: null
     metric: MAE
     higher_is_better: false
@@ -687,14 +481,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Force MAE for Aspirin
+    protocol_note: MAE for energy and forces on MD17 molecules
     date: Oct 29, 2022
     date_display: Oct 2022
     date_iso: '2022-10-29'
@@ -722,85 +516,17 @@ results:
     value_gap_source_title: On the Completeness of Invariant Geometric Deep Learning
       Models
     value_gap_source_is_current_paper: false
-    value_gap: 0.1668
+    value_gap: 0.034800000000000005
     has_value_note: false
     value_note: ''
     sort_value: 0.0502
     sort_std: null
     global_rank: 47
-    paper_rank: 100
-    rank_delta: 53
-    rank_delta_abs: 53
+    paper_rank: 67
+    rank_delta: 20
+    rank_delta_abs: 20
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MACE
-    model_key: mace
-    model_plain: MACE
-    value: 0.0507
-    std: null
-    paper_value: 0.0507
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to md17 (score=89)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: MAE for energy and forces on rMD17 molecules
-    date: Oct 29, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-29'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-02-07'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.0507
-    true_std: null
-    value_gap_source_arxiv: '2402.04836'
-    value_gap_source_title: On the Completeness of Invariant Geometric Deep Learning
-      Models
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.0507
-    sort_std: null
-    global_rank: 48
-    paper_rank: 48
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -823,14 +549,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Energy MAE for Aspirin
+    protocol_note: MAE for energy and forces on MD17 molecules
     date: Oct 29, 2022
     date_display: Oct 2022
     date_iso: '2022-10-29'
@@ -865,9 +591,9 @@ results:
     sort_value: 0.052
     sort_std: null
     global_rank: 51
-    paper_rank: 96
-    rank_delta: 45
-    rank_delta_abs: 45
+    paper_rank: 94
+    rank_delta: 43
+    rank_delta_abs: 43
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -893,14 +619,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Energy MAE for Aspirin
+    protocol_note: MAE for energy and forces on MD17 molecules
     date: Oct 29, 2022
     date_display: Oct 2022
     date_iso: '2022-10-29'
@@ -934,9 +660,9 @@ results:
     sort_value: 0.052
     sort_std: null
     global_rank: 54
-    paper_rank: 87
-    rank_delta: 33
-    rank_delta_abs: 33
+    paper_rank: 86
+    rank_delta: 32
+    rank_delta_abs: 32
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -962,14 +688,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Energy MAE for Aspirin
+    protocol_note: MAE for energy and forces on MD17 molecules
     date: Oct 29, 2022
     date_display: Oct 2022
     date_iso: '2022-10-29'
@@ -1004,83 +730,15 @@ results:
     sort_value: 0.052
     sort_std: null
     global_rank: 53
-    paper_rank: 92
-    rank_delta: 39
-    rank_delta_abs: 39
+    paper_rank: 91
+    rank_delta: 38
+    rank_delta_abs: 38
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'So3krates: Equivariant attention for interactions on
       arbitrary length-scales in molecular systems'
     comparison_source_arxiv: '2205.14276'
-    is_best: false
-    is_std_outlier: false
-  - model: NequlP
-    model_key: nequlp
-    model_plain: NequlP
-    value: 0.053
-    std: null
-    paper_value: 0.053
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to md17 (score=89)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: MAE for energy and forces on rMD17 molecules
-    date: Oct 29, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-29'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-10-29'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.053
-    true_std: null
-    value_gap_source_arxiv: '2210.16518'
-    value_gap_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.053
-    sort_std: null
-    global_rank: 59
-    paper_rank: 59
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: DimeNet++
@@ -1100,14 +758,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Energy MAE for Aspirin
+    protocol_note: MAE for energy and forces on MD17 molecules
     date: Oct 29, 2022
     date_display: Oct 2022
     date_iso: '2022-10-29'
@@ -1139,83 +797,15 @@ results:
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 65
-    paper_rank: 100
-    rank_delta: 35
-    rank_delta_abs: 35
+    global_rank: 64
+    paper_rank: 98
+    rank_delta: 34
+    rank_delta_abs: 34
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Directional Message Passing for Molecular Graphs
     comparison_source_arxiv: '2003.03123'
-    is_best: false
-    is_std_outlier: false
-  - model: ACE
-    model_key: ace
-    model_plain: ACE
-    value: 0.141
-    std: null
-    paper_value: 0.141
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to md17 (score=89)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: MAE for energy and forces on rMD17 molecules
-    date: Oct 29, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-29'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-10-29'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.141
-    true_std: null
-    value_gap_source_arxiv: '2210.16518'
-    value_gap_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.141
-    sort_std: null
-    global_rank: 93
-    paper_rank: 93
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   rank_metric: MAE
@@ -1227,878 +817,10 @@ results:
   metric: MAE
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
-  dataset: QM9
-  is_multi_metric: true
-  rows:
-  - model: PF-GNN
-    model_key: pf-gnn
-    model_plain: PF-GNN
-    metric_values:
-    - 0.017
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.001
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2401.17752'
-    title: 'PF-GNN: Differentiable particle filtering based approximation of universal
-      graph representations'
-    published_venue: ''
-    date: Jan 31, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-31'
-    codebase_url: https://github.com/pfgnn/PF-GNN
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 1
-    is_best: true
-    sort_value: 0.017
-    sort_std: 0.001
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: DimeNet++
-    model_key: dimenet++
-    model_plain: DimeNet++
-    metric_values:
-    - 32.6
-    - 29.7
-    - 43.5
-    - 6.32
-    - 6.53
-    - 7.56
-    - 23.0
-    - 24.6
-    - 19.5
-    - 1.21
-    - 6.28
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.019
-    sort_std: 0.001
-    true_value: 0.019
-    true_std: 0.001
-    paper_value: 32.6
-    paper_std: null
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 32.581
-    value_gap_source_arxiv: '2401.17752'
-    value_gap_source_title: 'PF-GNN: Differentiable particle filtering based approximation
-      of universal graph representations'
-    value_note: ''
-    at_pub_value: 0.032
-    at_pub_std: null
-    at_pub_source_arxiv: '2110.01191'
-    at_pub_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous Molecular
-      Graphs'
-    at_pub_source_date_iso: '2021-10-04'
-    at_pub_source_date_label: AAAI 2021
-    value_gap_source_date_iso: '2024-01-31'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 32.568000000000005
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: ''
-    date: Oct 29, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-29'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: behind
-    comparison_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    comparison_source_arxiv: '2110.01191'
-    is_best: true
-    is_std_outlier: false
-    global_rank: 2
-  - model: Molformer
-    model_key: molformer
-    model_plain: Molformer
-    metric_values:
-    - 0.025
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    arxiv_id: '2110.01191'
-    title: 'Molformer: Motif-based Transformer on 3D Heterogeneous Molecular Graphs'
-    published_venue: ''
-    date: Oct 4, 2021
-    date_display: Oct 2021
-    date_iso: '2021-10-04'
-    codebase_url: https://github.com/smiles724/Molformer
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 3
-    is_best: false
-    sort_value: 0.025
-    sort_std: null
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: SphereNet
-    model_key: spherenet
-    model_plain: SphereNet
-    metric_values:
-    - 31.1
-    - 24.5
-    - 44.9
-    - 6.26
-    - 6.33
-    - 7.78
-    - 22.0
-    - 22.8
-    - 18.9
-    - 1.12
-    - 6.36
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.032
-    sort_std: null
-    true_value: 0.032
-    true_std: null
-    paper_value: 31.1
-    paper_std: null
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 31.068
-    value_gap_source_arxiv: '2110.01191'
-    value_gap_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    value_note: ''
-    at_pub_value: 0.032
-    at_pub_std: null
-    at_pub_source_arxiv: '2110.01191'
-    at_pub_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous Molecular
-      Graphs'
-    at_pub_source_date_iso: '2021-10-04'
-    at_pub_source_date_label: AAAI 2021
-    value_gap_source_date_iso: '2021-10-04'
-    value_gap_source_date_label: AAAI 2021
-    gap_vs_at_pub: 31.068
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: ''
-    date: Oct 29, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-29'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: behind
-    comparison_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    comparison_source_arxiv: '2110.01191'
-    is_best: false
-    is_std_outlier: false
-    global_rank: 6
-  - model: PaiNN
-    model_key: painn
-    model_plain: PaiNN
-    metric_values:
-    - 45.7
-    - 12.0
-    - 45.0
-    - 5.85
-    - 5.98
-    - 7.35
-    - 24.0
-    - 27.6
-    - 20.4
-    - 1.28
-    - 5.83
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.046
-    sort_std: null
-    true_value: 0.046
-    true_std: null
-    paper_value: 45.7
-    paper_std: null
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 45.654
-    value_gap_source_arxiv: '2110.01191'
-    value_gap_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    value_note: ''
-    at_pub_value: 0.046
-    at_pub_std: null
-    at_pub_source_arxiv: '2110.01191'
-    at_pub_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous Molecular
-      Graphs'
-    at_pub_source_date_iso: '2021-10-04'
-    at_pub_source_date_label: AAAI 2021
-    value_gap_source_date_iso: '2021-10-04'
-    value_gap_source_date_label: AAAI 2021
-    gap_vs_at_pub: 45.654
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: ''
-    date: Oct 29, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-29'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: behind
-    comparison_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    comparison_source_arxiv: '2110.01191'
-    is_best: false
-    is_std_outlier: false
-    global_rank: 10
-  - model: SchNet
-    model_key: schnet
-    model_plain: SchNet
-    metric_values:
-    - 63.0
-    - 33.0
-    - 235.0
-    - 14.0
-    - 14.0
-    - 14.0
-    - 33.0
-    - 41.0
-    - 34.0
-    - 1.7
-    - 19.0
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.063
-    sort_std: null
-    true_value: 0.063
-    true_std: null
-    paper_value: 63.0
-    paper_std: null
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 62.937
-    value_gap_source_arxiv: '2110.01191'
-    value_gap_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    value_note: ''
-    at_pub_value: 0.063
-    at_pub_std: null
-    at_pub_source_arxiv: '2110.01191'
-    at_pub_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous Molecular
-      Graphs'
-    at_pub_source_date_iso: '2021-10-04'
-    at_pub_source_date_label: AAAI 2021
-    value_gap_source_date_iso: '2021-10-04'
-    value_gap_source_date_label: AAAI 2021
-    gap_vs_at_pub: 62.937
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: ''
-    date: Oct 29, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-29'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: behind
-    comparison_source_title: Fast and Uncertainty-Aware Directional Message Passing
-      for Non-Equilibrium Molecules
-    comparison_source_arxiv: '2011.14115'
-    is_best: false
-    is_std_outlier: false
-    global_rank: 15
-  - model: PaxNet
-    model_key: paxnet
-    model_plain: PaxNet
-    metric_values:
-    - 31.0
-    - 10.8
-    - 44.7
-    - 5.9
-    - 6.04
-    - 7.14
-    - 23.1
-    - 22.8
-    - 19.2
-    - 1.17
-    - 5.92
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 31.0
-    sort_std: null
-    true_value: 31.0
-    true_std: null
-    paper_value: 31.0
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2210.16518'
-    value_gap_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-10-29'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ''
-    date: Oct 29, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-29'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 24
-  - model: ViSNet
-    model_key: visnet
-    model_plain: ViSNet
-    metric_values:
-    - 31.7
-    - 9.5
-    - 41.1
-    - 4.23
-    - 4.52
-    - 5.86
-    - 23.0
-    - 17.3
-    - 14.8
-    - 1.56
-    - 4.25
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 31.7
-    sort_std: null
-    true_value: 31.7
-    true_std: null
-    paper_value: 31.7
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2210.16518'
-    value_gap_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-10-29'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ''
-    date: Oct 29, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-29'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 25
-  - model: ComENet
-    model_key: comenet
-    model_plain: ComENet
-    metric_values:
-    - 32.4
-    - 24.5
-    - 45.2
-    - 6.59
-    - 6.86
-    - 7.98
-    - 24.0
-    - 23.1
-    - 19.8
-    - 1.2
-    - 6.82
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 32.4
-    sort_std: null
-    true_value: 32.4
-    true_std: null
-    paper_value: 32.4
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2406.13265'
-    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-06-19'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ''
-    date: Oct 29, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-29'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 27
-  - model: ET
-    model_key: et
-    model_plain: ET
-    metric_values:
-    - 36.1
-    - 11.0
-    - 59.0
-    - 6.15
-    - 6.16
-    - 7.62
-    - 26.0
-    - 20.3
-    - 17.5
-    - 1.84
-    - 6.38
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    sort_value: 36.1
-    sort_std: null
-    true_value: 36.1
-    true_std: null
-    paper_value: 36.1
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2406.13265'
-    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-06-19'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ''
-    date: Oct 29, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-29'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 29
-  - model: EGNN
-    model_key: egnn
-    model_plain: EGNN
-    metric_values:
-    - 48.0
-    - 29.0
-    - 71.0
-    - 11.0
-    - 12.0
-    - 12.0
-    - 31.0
-    - 29.0
-    - 25.0
-    - 1.55
-    - 12.0
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 48.0
-    sort_std: null
-    true_value: 48.0
-    true_std: null
-    paper_value: 48.0
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2406.13265'
-    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-06-19'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ''
-    date: Oct 29, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-29'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 32
-  metrics:
-  - gap
-  - mu
-  - alpha
-  - U0
-  - H
-  - G
-  - Cv
-  - HOMO
-  - LUMO
-  - zpve
-  - U
-  primary_metric: gap
-  rank_metric: gap
-  higher_is_better: false
-  experiment_scope: graph-level
-  dataset_primary_metric: gap
-  paper_metrics:
-  - mu
-  - alpha
-  - gap
-  - U0
-  - H
-  - G
-  - Cv
-  - HOMO
-  - LUMO
-  - zpve
-  - U
-  metric: gap
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
 results_grouped:
 - benchmark: Quantum Chemistry
   datasets:
   - *id001
-  - *id002
 datasets_by_scope:
 - scope: graph-level
   label: Graph-level
@@ -2108,8 +830,6 @@ datasets_by_scope:
     datasets:
     - dataset: MD17
       dataset_slug: md17
-    - dataset: QM9
-      dataset_slug: qm9
 single_proposed_model: ViSNet
 main_figure: /figures/2210.16518/main_figure.jpegoptim.jpg
 ---

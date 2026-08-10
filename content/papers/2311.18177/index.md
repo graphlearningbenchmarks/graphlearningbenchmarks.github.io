@@ -41,8 +41,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - UniFilter
-mrr: 0.0331
-adjusted_mrr: 0.0331
+mrr: 0.0323
+adjusted_mrr: 0.0323
 mrr_dataset_count: 3
 benchmark_categories:
 - Classic
@@ -120,7 +120,7 @@ results:
     venue: IEEE Transactions on Neural Networks and Learning Systems
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -291,9 +291,9 @@ results:
     sort_value: 0.4198
     sort_std: 0.0089
     global_rank: 20
-    paper_rank: 215
-    rank_delta: 195
-    rank_delta_abs: 195
+    paper_rank: 208
+    rank_delta: 188
+    rank_delta_abs: 188
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -614,8 +614,8 @@ results:
       Bases
     at_pub_source_date_iso: '2023-02-24'
     at_pub_source_date_label: ICML 2023
-    value_gap_source_date_iso: '2025-12-16'
-    value_gap_source_date_label: '2025'
+    value_gap_source_date_iso: '2025-05-29'
+    value_gap_source_date_label: ICML 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -626,9 +626,9 @@ results:
     today_delta_significant: false
     true_value: 0.4117
     true_std: 0.0064
-    value_gap_source_arxiv: '2512.14908'
-    value_gap_source_title: 'ATLAS: Adaptive Topology-based Learning at Scale for
-      Homophilic and Heterophilic Graphs'
+    value_gap_source_arxiv: '2505.23014'
+    value_gap_source_title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in
+      the Perspective of A System of Hyperbolic Partial Differential Equations'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
@@ -703,8 +703,8 @@ results:
     value_note: ''
     sort_value: 0.4084
     sort_std: 0.0121
-    global_rank: 46
-    paper_rank: 46
+    global_rank: 47
+    paper_rank: 47
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -771,9 +771,9 @@ results:
     sort_value: 0.4082
     sort_std: 0.0179
     global_rank: 48
-    paper_rank: 144
-    rank_delta: 96
-    rank_delta_abs: 96
+    paper_rank: 137
+    rank_delta: 89
+    rank_delta_abs: 89
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -837,8 +837,8 @@ results:
     value_note: ''
     sort_value: 0.4048
     sort_std: 0.0062
-    global_rank: 53
-    paper_rank: 55
+    global_rank: 52
+    paper_rank: 54
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -873,7 +873,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 56
+    global_rank: 55
     sort_value: 0.4026
     sort_std: 0.0108
     comparison_type: global_top
@@ -1008,10 +1008,10 @@ results:
     value_note: ''
     sort_value: 0.3959
     sort_std: 0.0029
-    global_rank: 75
-    paper_rank: 132
-    rank_delta: 57
-    rank_delta_abs: 57
+    global_rank: 74
+    paper_rank: 126
+    rank_delta: 52
+    rank_delta_abs: 52
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1045,7 +1045,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 88
+    global_rank: 87
     sort_value: 0.3899
     sort_std: 0.0085
     comparison_type: global_top
@@ -1110,10 +1110,10 @@ results:
     value_note: ''
     sort_value: 0.3885
     sort_std: 0.0117
-    global_rank: 91
-    paper_rank: 243
-    rank_delta: 152
-    rank_delta_abs: 152
+    global_rank: 90
+    paper_rank: 239
+    rank_delta: 149
+    rank_delta_abs: 149
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1180,10 +1180,10 @@ results:
     value_note: ''
     sort_value: 0.386
     sort_std: 0.011
-    global_rank: 95
-    paper_rank: 199
-    rank_delta: 104
-    rank_delta_abs: 104
+    global_rank: 94
+    paper_rank: 192
+    rank_delta: 98
+    rank_delta_abs: 98
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1248,10 +1248,10 @@ results:
     value_note: ''
     sort_value: 0.3802
     sort_std: 0.0023
-    global_rank: 112
-    paper_rank: 145
-    rank_delta: 33
-    rank_delta_abs: 33
+    global_rank: 108
+    paper_rank: 138
+    rank_delta: 30
+    rank_delta_abs: 30
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1316,10 +1316,10 @@ results:
     value_note: ''
     sort_value: 0.369
     sort_std: null
-    global_rank: 173
-    paper_rank: 469
-    rank_delta: 296
-    rank_delta_abs: 296
+    global_rank: 166
+    paper_rank: 466
+    rank_delta: 300
+    rank_delta_abs: 300
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1386,85 +1386,16 @@ results:
     value_note: ''
     sort_value: 0.3648
     sort_std: 0.012
-    global_rank: 203
-    paper_rank: 356
-    rank_delta: 153
-    rank_delta_abs: 153
+    global_rank: 196
+    paper_rank: 350
+    rank_delta: 154
+    rank_delta_abs: 154
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'Towards Deep Attention in Graph Neural Networks: Problems
       and Remedies'
     comparison_source_arxiv: '2306.02376'
-    is_best: false
-    is_std_outlier: false
-  - model: SGC
-    model_key: sgc
-    model_plain: SGC
-    value: 0.3446
-    std: 0.0067
-    paper_value: 0.3446
-    paper_std: 0.0067
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: bag-of-words representations
-    table_ref: Table 1
-    source_ref: WuSZFYW19
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Accuracy on Actor test split using Geom-GCN 10 fixed splits.
-    date: Nov 30, 2023
-    date_display: Nov 2023
-    date_iso: '2023-11-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.349
-    at_pub_std: 0.007
-    at_pub_source_arxiv: '2206.02386'
-    at_pub_source_title: Restructuring Graphs for Higher Homophily via Adaptive Spectral
-      Clustering
-    at_pub_source_date_iso: '2022-06-06'
-    at_pub_source_date_label: AAAI 2022
-    value_gap_source_date_iso: '2024-05-21'
-    value_gap_source_date_label: ICML 2024
-    gap_vs_at_pub: 0.0043999999999999595
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.361
-    true_std: 0.0155
-    value_gap_source_arxiv: '2405.12474'
-    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
-      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.01639999999999997
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.361
-    sort_std: 0.0155
-    global_rank: 222
-    paper_rank: 304
-    rank_delta: 82
-    rank_delta_abs: 82
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: LINKX
@@ -1523,8 +1454,8 @@ results:
     value_note: ''
     sort_value: 0.361
     sort_std: 0.0155
-    global_rank: 221
-    paper_rank: 221
+    global_rank: 216
+    paper_rank: 216
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1590,15 +1521,84 @@ results:
     value_note: ''
     sort_value: 0.3605
     sort_std: 0.0035
-    global_rank: 224
-    paper_rank: 467
-    rank_delta: 243
-    rank_delta_abs: 243
+    global_rank: 218
+    paper_rank: 464
+    rank_delta: 246
+    rank_delta_abs: 246
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Hierarchical Graph Transformer with Adaptive Node Sampling
     comparison_source_arxiv: '2210.03930'
+    is_best: false
+    is_std_outlier: false
+  - model: SGC
+    model_key: sgc
+    model_plain: SGC
+    value: 0.3446
+    std: 0.0067
+    paper_value: 0.3446
+    paper_std: 0.0067
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: bag-of-words representations
+    table_ref: Table 1
+    source_ref: WuSZFYW19
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Actor test split using Geom-GCN 10 fixed splits.
+    date: Nov 30, 2023
+    date_display: Nov 2023
+    date_iso: '2023-11-30'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.349
+    at_pub_std: 0.007
+    at_pub_source_arxiv: '2206.02386'
+    at_pub_source_title: Restructuring Graphs for Higher Homophily via Adaptive Spectral
+      Clustering
+    at_pub_source_date_iso: '2022-06-06'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2022-06-06'
+    value_gap_source_date_label: AAAI 2022
+    gap_vs_at_pub: 0.0043999999999999595
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.349
+    true_std: 0.007
+    value_gap_source_arxiv: '2206.02386'
+    value_gap_source_title: Restructuring Graphs for Higher Homophily via Adaptive
+      Spectral Clustering
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0043999999999999595
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.349
+    sort_std: 0.007
+    global_rank: 282
+    paper_rank: 299
+    rank_delta: 17
+    rank_delta_abs: 17
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: ASGC
@@ -1658,8 +1658,8 @@ results:
     value_note: ''
     sort_value: 0.3341
     sort_std: 0.008
-    global_rank: 342
-    paper_rank: 342
+    global_rank: 336
+    paper_rank: 336
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1808,9 +1808,9 @@ results:
     sort_value: 0.856
     sort_std: null
     global_rank: 3
-    paper_rank: 157
-    rank_delta: 154
-    rank_delta_abs: 154
+    paper_rank: 165
+    rank_delta: 162
+    rank_delta_abs: 162
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1877,10 +1877,10 @@ results:
     value_note: ''
     sort_value: 0.783
     sort_std: 0.006
-    global_rank: 22
-    paper_rank: 90
-    rank_delta: 68
-    rank_delta_abs: 68
+    global_rank: 24
+    paper_rank: 96
+    rank_delta: 72
+    rank_delta_abs: 72
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1925,8 +1925,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1937,17 +1937,17 @@ results:
     today_delta_significant: false
     true_value: 0.7575
     true_std: 0.0165
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7575
     sort_std: 0.0165
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2015,10 +2015,10 @@ results:
     value_note: ''
     sort_value: 0.7476
     sort_std: 0.022
-    global_rank: 27
-    paper_rank: 96
-    rank_delta: 69
-    rank_delta_abs: 69
+    global_rank: 30
+    paper_rank: 102
+    rank_delta: 72
+    rank_delta_abs: 72
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2063,8 +2063,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2075,17 +2075,17 @@ results:
     today_delta_significant: false
     true_value: 0.7472
     true_std: 0.0129
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7472
     sort_std: 0.0129
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2132,8 +2132,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-12'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2144,17 +2144,17 @@ results:
     today_delta_significant: false
     true_value: 0.7426
     true_std: 0.0074
-    value_gap_source_arxiv: '2403.07954'
-    value_gap_source_title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive
-      Krylov Subspace Approach'
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7426
     sort_std: 0.0074
-    global_rank: 32
-    paper_rank: 32
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2201,8 +2201,8 @@ results:
     at_pub_source_title: How Powerful are Spectral Graph Neural Networks
     at_pub_source_date_iso: '2022-05-23'
     at_pub_source_date_label: ICML 2022
-    value_gap_source_date_iso: '2024-03-12'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2213,17 +2213,17 @@ results:
     today_delta_significant: false
     true_value: 0.742
     true_std: 0.0103
-    value_gap_source_arxiv: '2403.07954'
-    value_gap_source_title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive
-      Krylov Subspace Approach'
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.742
     sort_std: 0.0103
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2270,8 +2270,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-12'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2282,17 +2282,17 @@ results:
     today_delta_significant: false
     true_value: 0.7138
     true_std: 0.0106
-    value_gap_source_arxiv: '2403.07954'
-    value_gap_source_title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive
-      Krylov Subspace Approach'
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7138
     sort_std: 0.0106
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 58
+    paper_rank: 58
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2339,8 +2339,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-12'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2351,17 +2351,17 @@ results:
     today_delta_significant: false
     true_value: 0.7137
     true_std: 0.0101
-    value_gap_source_arxiv: '2403.07954'
-    value_gap_source_title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive
-      Krylov Subspace Approach'
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7137
     sort_std: 0.0101
-    global_rank: 55
-    paper_rank: 55
+    global_rank: 59
+    paper_rank: 59
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2429,8 +2429,8 @@ results:
     value_note: ''
     sort_value: 0.7133
     sort_std: 0.0242
-    global_rank: 56
-    paper_rank: 56
+    global_rank: 60
+    paper_rank: 60
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2473,10 +2473,11 @@ results:
     published_conference: ''
     at_pub_value: 0.6796
     at_pub_std: 0.0182
-    at_pub_source_arxiv: '2106.06134'
-    at_pub_source_title: Is Homophily a Necessity for Graph Neural Networks?
-    at_pub_source_date_iso: '2021-06-11'
-    at_pub_source_date_label: ICLR 2021
+    at_pub_source_arxiv: '2310.13845'
+    at_pub_source_title: Spectral-Aware Augmentation for Enhanced Graph Representation
+      Learning
+    at_pub_source_date_iso: '2023-10-20'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2024-01-17'
     value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.031399999999999983
@@ -2497,10 +2498,10 @@ results:
     value_note: ''
     sort_value: 0.7033
     sort_std: null
-    global_rank: 64
-    paper_rank: 117
-    rank_delta: 53
-    rank_delta_abs: 53
+    global_rank: 69
+    paper_rank: 123
+    rank_delta: 54
+    rank_delta_abs: 54
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2545,8 +2546,8 @@ results:
     at_pub_source_title: How Powerful are Spectral Graph Neural Networks
     at_pub_source_date_iso: '2022-05-23'
     at_pub_source_date_label: ICML 2022
-    value_gap_source_date_iso: '2024-03-12'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.0024000000000000687
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2557,17 +2558,17 @@ results:
     today_delta_significant: false
     true_value: 0.6853
     true_std: 0.0168
-    value_gap_source_arxiv: '2403.07954'
-    value_gap_source_title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive
-      Krylov Subspace Approach'
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.6853
     sort_std: 0.0168
-    global_rank: 80
-    paper_rank: 80
+    global_rank: 85
+    paper_rank: 85
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2635,8 +2636,8 @@ results:
     value_note: ''
     sort_value: 0.6842
     sort_std: 0.0132
-    global_rank: 82
-    paper_rank: 82
+    global_rank: 87
+    paper_rank: 87
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2705,10 +2706,10 @@ results:
     value_note: ''
     sort_value: 0.671
     sort_std: 0.029
-    global_rank: 95
-    paper_rank: 256
-    rank_delta: 161
-    rank_delta_abs: 161
+    global_rank: 101
+    paper_rank: 273
+    rank_delta: 172
+    rank_delta_abs: 172
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2754,8 +2755,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-12'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2766,17 +2767,17 @@ results:
     today_delta_significant: false
     true_value: 0.6702
     true_std: 0.0177
-    value_gap_source_arxiv: '2403.07954'
-    value_gap_source_title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive
-      Krylov Subspace Approach'
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.6702
     sort_std: 0.0177
-    global_rank: 96
-    paper_rank: 96
+    global_rank: 102
+    paper_rank: 102
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2824,8 +2825,8 @@ results:
       Networks
     at_pub_source_date_iso: '2021-11-12'
     at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2836,17 +2837,17 @@ results:
     today_delta_significant: false
     true_value: 0.6524
     true_std: 0.0087
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.6524
     sort_std: 0.0087
-    global_rank: 111
-    paper_rank: 111
+    global_rank: 118
+    paper_rank: 118
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2914,8 +2915,8 @@ results:
     value_note: ''
     sort_value: 0.6386
     sort_std: 0.0304
-    global_rank: 126
-    paper_rank: 126
+    global_rank: 132
+    paper_rank: 132
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2925,11 +2926,11 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.6215
-    std: 0.0042
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.634
+    std: 0.03
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -2939,20 +2940,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2210.03930'
-    title: Hierarchical Graph Transformer with Adaptive Node Sampling
-    date: Oct 8, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-08'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/zaixizhang/ANS-GT
+    arxiv_id: '2411.19392'
+    title: Scale-aware Message Passing For Graph Node Classification
+    date: Nov 28, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-28'
+    venue: null
+    codebase_url: https://github.com/Qin87/ScaleNet
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 138
-    sort_value: 0.6215
-    sort_std: 0.0042
+    global_rank: 136
+    sort_value: 0.634
+    sort_std: 0.03
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2996,8 +2997,8 @@ results:
       and Scalable Graph Learning Paradigm'
     at_pub_source_date_iso: '2022-11-21'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2024-03-12'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.0043999999999999595
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3008,17 +3009,17 @@ results:
     today_delta_significant: false
     true_value: 0.6092
     true_std: 0.0145
-    value_gap_source_arxiv: '2403.07954'
-    value_gap_source_title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive
-      Krylov Subspace Approach'
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.6092
     sort_std: 0.0145
-    global_rank: 148
-    paper_rank: 148
+    global_rank: 155
+    paper_rank: 155
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3086,8 +3087,8 @@ results:
     value_note: ''
     sort_value: 0.605
     sort_std: 0.0253
-    global_rank: 154
-    paper_rank: 154
+    global_rank: 161
+    paper_rank: 161
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3154,8 +3155,8 @@ results:
     value_note: ''
     sort_value: 0.603
     sort_std: 0.0231
-    global_rank: 156
-    paper_rank: 160
+    global_rank: 164
+    paper_rank: 168
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -3202,8 +3203,8 @@ results:
     at_pub_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
     at_pub_source_date_iso: '2023-03-24'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2024-03-12'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.0022999999999999687
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3214,17 +3215,17 @@ results:
     today_delta_significant: false
     true_value: 0.5951
     true_std: 0.0125
-    value_gap_source_arxiv: '2403.07954'
-    value_gap_source_title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive
-      Krylov Subspace Approach'
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.5951
     sort_std: 0.0125
-    global_rank: 162
-    paper_rank: 162
+    global_rank: 172
+    paper_rank: 172
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3259,7 +3260,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 195
+    global_rank: 208
     sort_value: 0.5429
     sort_std: null
     comparison_type: global_top
@@ -3276,7 +3277,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id003
   dataset: CiteSeer
   rows:
   - model: CNA
@@ -3335,7 +3336,7 @@ results:
     venue: IEEE Transactions on Knowledge and Data Engineering
     codebase_url: https://github.com/YangLing0818/GraphOOD
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -3369,7 +3370,7 @@ results:
     venue: IEEE Transactions on Knowledge and Data Engineering
     codebase_url: https://github.com/YangLing0818/GraphOOD
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
@@ -3470,9 +3471,9 @@ results:
     sort_value: 0.8769
     sort_std: 0.004
     global_rank: 21
-    paper_rank: 152
-    rank_delta: 131
-    rank_delta_abs: 131
+    paper_rank: 155
+    rank_delta: 134
+    rank_delta_abs: 134
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3583,8 +3584,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3595,10 +3596,10 @@ results:
     today_delta_significant: false
     true_value: 0.8149
     true_std: 0.0094
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -3651,8 +3652,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3663,10 +3664,10 @@ results:
     today_delta_significant: false
     true_value: 0.8139
     true_std: 0.0132
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -3740,9 +3741,9 @@ results:
     sort_value: 0.808
     sort_std: 0.0026
     global_rank: 46
-    paper_rank: 151
-    rank_delta: 105
-    rank_delta_abs: 105
+    paper_rank: 154
+    rank_delta: 108
+    rank_delta_abs: 108
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3786,8 +3787,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3798,10 +3799,10 @@ results:
     today_delta_significant: false
     true_value: 0.8078
     true_std: 0.0079
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -3875,9 +3876,9 @@ results:
     sort_value: 0.8076
     sort_std: 0.003
     global_rank: 48
-    paper_rank: 126
-    rank_delta: 78
-    rank_delta_abs: 78
+    paper_rank: 130
+    rank_delta: 82
+    rank_delta_abs: 82
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3921,8 +3922,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3933,10 +3934,10 @@ results:
     today_delta_significant: false
     true_value: 0.8058
     true_std: 0.0082
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -3989,8 +3990,8 @@ results:
     at_pub_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
     at_pub_source_date_iso: '2023-10-18'
     at_pub_source_date_label: WWW 2023
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.005299999999999971
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -4001,10 +4002,10 @@ results:
     today_delta_significant: false
     true_value: 0.8053
     true_std: 0.0079
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -4058,8 +4059,8 @@ results:
       Scalable Paradigm'
     at_pub_source_date_iso: '2022-03-01'
     at_pub_source_date_label: WWW 2022
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.07740000000000002
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -4070,10 +4071,10 @@ results:
     today_delta_significant: false
     true_value: 0.8014
     true_std: 0.0087
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -4127,8 +4128,8 @@ results:
     at_pub_source_title: Block Modeling-Guided Graph Convolutional Neural Networks
     at_pub_source_date_iso: '2021-12-27'
     at_pub_source_date_label: AAAI 2021
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.05010000000000003
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -4139,10 +4140,10 @@ results:
     today_delta_significant: false
     true_value: 0.8013
     true_std: 0.0084
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -4196,8 +4197,8 @@ results:
       Mutual Information Maximization
     at_pub_source_date_iso: '2022-03-23'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.020000000000000018
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -4208,10 +4209,10 @@ results:
     today_delta_significant: false
     true_value: 0.7965
     true_std: 0.0102
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -4265,8 +4266,8 @@ results:
     at_pub_source_title: Non-backtracking Graph Neural Networks
     at_pub_source_date_iso: '2023-10-11'
     at_pub_source_date_label: TMLR 2023
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.0534
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -4277,10 +4278,10 @@ results:
     today_delta_significant: false
     true_value: 0.7933
     true_std: 0.0057
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -4333,8 +4334,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -4345,85 +4346,17 @@ results:
     today_delta_significant: false
     true_value: 0.7851
     true_std: 0.0063
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7851
     sort_std: 0.0063
-    global_rank: 93
-    paper_rank: 93
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: ACM-GCN
-    model_key: acm-gcn
-    model_plain: ACM-GCN
-    value: 0.7732
-    std: 0.017
-    paper_value: 0.7732
-    paper_std: 0.017
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: Feature vectors of nodes are bag-of-words representations.
-    table_ref: Table 2
-    source_ref: LuanHLZZZCP22
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Accuracy on Planetoid split (Yang et al. 2016 fixed split).
-    date: Nov 30, 2023
-    date_display: Nov 2023
-    date_iso: '2023-11-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-10-03'
-    value_gap_source_date_label: TMLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7732
-    true_std: 0.017
-    value_gap_source_arxiv: '2410.02158'
-    value_gap_source_title: 'SCNode: Spatial and Contextual Coordinates for Graph
-      Representation Learning'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7732
-    sort_std: 0.017
-    global_rank: 127
-    paper_rank: 127
+    global_rank: 94
+    paper_rank: 94
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4463,24 +4396,93 @@ results:
     date_iso: '2023-11-30'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-10-03'
-    value_gap_source_date_label: TMLR 2024
-    gap_vs_at_pub: null
+    at_pub_value: 0.774
+    at_pub_std: 0.017
+    at_pub_source_arxiv: '2303.06344'
+    at_pub_source_title: Graph Contrastive Learning under Heterophily via Graph Filters
+    at_pub_source_date_iso: '2023-03-11'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-03-11'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.0018000000000000238
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.774
+    true_std: 0.017
+    value_gap_source_arxiv: '2303.06344'
+    value_gap_source_title: Graph Contrastive Learning under Heterophily via Graph
+      Filters
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0018000000000000238
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.774
+    sort_std: 0.017
+    global_rank: 128
+    paper_rank: 134
+    rank_delta: 6
+    rank_delta_abs: 6
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: ACM-GCN
+    model_key: acm-gcn
+    model_plain: ACM-GCN
+    value: 0.7732
+    std: 0.017
+    paper_value: 0.7732
+    paper_std: 0.017
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: Feature vectors of nodes are bag-of-words representations.
+    table_ref: Table 2
+    source_ref: LuanHLZZZCP22
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Planetoid split (Yang et al. 2016 fixed split).
+    date: Nov 30, 2023
+    date_display: Nov 2023
+    date_iso: '2023-11-30'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.6508
+    at_pub_std: 0.0191
+    at_pub_source_arxiv: '2210.05382'
+    at_pub_source_title: Uplifting Message Passing Neural Network with Graph Original
+      Information
+    at_pub_source_date_iso: '2022-10-08'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-10-03'
+    value_gap_source_date_label: TMLR 2024
+    gap_vs_at_pub: 0.12239999999999995
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.7722
-    true_std: 0.0178
+    true_value: 0.7732
+    true_std: 0.017
     value_gap_source_arxiv: '2410.02158'
     value_gap_source_title: 'SCNode: Spatial and Contextual Coordinates for Graph
       Representation Learning'
@@ -4488,17 +4490,18 @@ results:
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.7722
-    sort_std: 0.0178
+    sort_value: 0.7732
+    sort_std: 0.017
     global_rank: 131
     paper_rank: 131
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Uplifting Message Passing Neural Network with Graph Original
+      Information
+    comparison_source_arxiv: '2210.05382'
     is_best: false
     is_std_outlier: false
   - model: H2GCN
@@ -4558,8 +4561,8 @@ results:
     value_note: ''
     sort_value: 0.7711
     sort_std: 0.0157
-    global_rank: 139
-    paper_rank: 139
+    global_rank: 142
+    paper_rank: 142
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4626,8 +4629,8 @@ results:
     value_note: ''
     sort_value: 0.7681
     sort_std: 0.0189
-    global_rank: 148
-    paper_rank: 148
+    global_rank: 151
+    paper_rank: 151
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4673,8 +4676,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -4685,17 +4688,17 @@ results:
     today_delta_significant: false
     true_value: 0.7652
     true_std: 0.0036
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7652
     sort_std: 0.0036
-    global_rank: 152
-    paper_rank: 152
+    global_rank: 155
+    paper_rank: 155
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4763,8 +4766,8 @@ results:
     value_note: ''
     sort_value: 0.7626
     sort_std: 0.0295
-    global_rank: 158
-    paper_rank: 158
+    global_rank: 160
+    paper_rank: 160
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4831,8 +4834,8 @@ results:
     value_note: ''
     sort_value: 0.7319
     sort_std: 0.0099
-    global_rank: 359
-    paper_rank: 359
+    global_rank: 362
+    paper_rank: 362
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4887,79 +4890,11 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: Exphormer
-    model_key: exphormer
-    model_plain: Exphormer
-    value: 0.9635
-    std: 0.0019
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    venue: The Web Conference
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9635
-    sort_std: 0.0019
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SGFormer
-    model_key: sgformer
-    model_plain: SGFormer
-    value: 0.9629
-    std: 0.0015
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    venue: The Web Conference
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.9629
-    sort_std: 0.0015
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Coral
-    model_key: coral
-    model_plain: Coral
-    value: 0.9574
-    std: 0.0039
+  - model: MATE
+    model_key: mate
+    model_plain: MATE
+    value: 0.946
+    std: 0.007
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -4969,25 +4904,90 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    venue: The Web Conference
+    arxiv_id: '2407.20067'
+    title: 'xAI-Drop: Don''t Use What You Cannot Explain'
+    date: Jul 29, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-29'
+    venue: Learning on Graphs Conference
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.9574
-    sort_std: 0.0039
+    global_rank: 1
+    sort_value: 0.946
+    sort_std: 0.007
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
+    is_std_outlier: false
+  - model: GraphSAGE+CNA
+    model_key: graphsage+cna
+    model_plain: GraphSAGE+CNA
+    value: 0.9418
+    std: 0.0033
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.04064'
+    title: Graph Neural Networks Need Cluster-Normalize-Activate Modules
+    date: Dec 5, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-05'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/ml-research/cna_modules
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.9418
+    sort_std: 0.0033
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: DropAggr
+    model_key: dropaggr
+    model_plain: DropAggr
+    value: 0.938
+    std: 0.011
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2407.20067'
+    title: 'xAI-Drop: Don''t Use What You Cannot Explain'
+    date: Jul 29, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-29'
+    venue: Learning on Graphs Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.938
+    sort_std: 0.011
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
     is_std_outlier: false
   - model: GCN
     model_key: gcn
@@ -5046,10 +5046,10 @@ results:
     value_note: ''
     sort_value: 0.9004
     sort_std: null
-    global_rank: 42
-    paper_rank: 215
-    rank_delta: 173
-    rank_delta_abs: 173
+    global_rank: 31
+    paper_rank: 192
+    rank_delta: 161
+    rank_delta_abs: 161
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -5114,10 +5114,10 @@ results:
     value_note: ''
     sort_value: 0.8976
     sort_std: 0.016
-    global_rank: 50
-    paper_rank: 110
-    rank_delta: 60
-    rank_delta_abs: 60
+    global_rank: 37
+    paper_rank: 93
+    rank_delta: 56
+    rank_delta_abs: 56
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -5183,10 +5183,10 @@ results:
     value_note: ''
     sort_value: 0.8975
     sort_std: 0.0116
-    global_rank: 51
-    paper_rank: 156
-    rank_delta: 105
-    rank_delta_abs: 105
+    global_rank: 38
+    paper_rank: 137
+    rank_delta: 99
+    rank_delta_abs: 99
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -5231,8 +5231,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5243,17 +5243,17 @@ results:
     today_delta_significant: false
     true_value: 0.8949
     true_std: 0.0135
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8949
     sort_std: 0.0135
-    global_rank: 57
-    paper_rank: 57
+    global_rank: 44
+    paper_rank: 44
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5320,10 +5320,10 @@ results:
     value_note: ''
     sort_value: 0.8932
     sort_std: 0.011
-    global_rank: 66
-    paper_rank: 96
-    rank_delta: 30
-    rank_delta_abs: 30
+    global_rank: 53
+    paper_rank: 80
+    rank_delta: 27
+    rank_delta_abs: 27
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -5357,7 +5357,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 75
+    global_rank: 61
     sort_value: 0.8911
     sort_std: 0.0012
     comparison_type: global_top
@@ -5402,8 +5402,8 @@ results:
     at_pub_source_title: Shape-aware Graph Spectral Learning
     at_pub_source_date_iso: '2023-10-16'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2024-03-12'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5414,17 +5414,17 @@ results:
     today_delta_significant: false
     true_value: 0.8898
     true_std: 0.0072
-    value_gap_source_arxiv: '2403.07954'
-    value_gap_source_title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive
-      Krylov Subspace Approach'
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8898
     sort_std: 0.0072
-    global_rank: 80
-    paper_rank: 80
+    global_rank: 66
+    paper_rank: 66
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5471,8 +5471,8 @@ results:
     at_pub_source_title: Learned Low Precision Graph Neural Networks
     at_pub_source_date_iso: '2020-09-19'
     at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2026-05-24'
-    value_gap_source_date_label: ICML 2026
+    value_gap_source_date_iso: '2025-05-19'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: 0.016000000000000014
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -5482,20 +5482,20 @@ results:
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.8897
-    true_std: null
-    value_gap_source_arxiv: '2605.24867'
-    value_gap_source_title: 'Clustering as Reasoning: A $k$-Means Interpretation of
-      Chain-of-Thought Graph Learning'
+    true_std: 0.0014
+    value_gap_source_arxiv: '2505.15845'
+    value_gap_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem
+      in Tokenized Graph Learning Models'
     value_gap_source_is_current_paper: false
     value_gap: 0.016700000000000048
     has_value_note: false
     value_note: ''
     sort_value: 0.8897
-    sort_std: null
-    global_rank: 81
-    paper_rank: 187
-    rank_delta: 106
-    rank_delta_abs: 106
+    sort_std: 0.0014
+    global_rank: 67
+    paper_rank: 168
+    rank_delta: 101
+    rank_delta_abs: 101
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -5561,10 +5561,10 @@ results:
     value_note: ''
     sort_value: 0.8893
     sort_std: 0.0137
-    global_rank: 83
-    paper_rank: 118
-    rank_delta: 35
-    rank_delta_abs: 35
+    global_rank: 69
+    paper_rank: 101
+    rank_delta: 32
+    rank_delta_abs: 32
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -5605,10 +5605,10 @@ results:
     published_conference: ''
     at_pub_value: 0.8787
     at_pub_std: null
-    at_pub_source_arxiv: '2206.14418'
-    at_pub_source_title: Optimization-Induced Graph Implicit Nonlinear Diffusion
-    at_pub_source_date_iso: '2022-06-29'
-    at_pub_source_date_label: ICML 2022
+    at_pub_source_arxiv: '2307.16092'
+    at_pub_source_title: Feature Transportation Improves Graph Neural Networks
+    at_pub_source_date_iso: '2023-07-29'
+    at_pub_source_date_label: AAAI 2023
     value_gap_source_date_iso: '2025-05-19'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -5630,10 +5630,10 @@ results:
     value_note: ''
     sort_value: 0.8882
     sort_std: 0.0011
-    global_rank: 91
-    paper_rank: 159
-    rank_delta: 68
-    rank_delta_abs: 68
+    global_rank: 76
+    paper_rank: 140
+    rank_delta: 64
+    rank_delta_abs: 64
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -5678,8 +5678,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5690,17 +5690,17 @@ results:
     today_delta_significant: false
     true_value: 0.8857
     true_std: 0.0101
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8857
     sort_std: 0.0101
-    global_rank: 107
-    paper_rank: 107
+    global_rank: 90
+    paper_rank: 90
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5747,8 +5747,8 @@ results:
     at_pub_source_title: Block Modeling-Guided Graph Convolutional Neural Networks
     at_pub_source_date_iso: '2021-12-27'
     at_pub_source_date_label: AAAI 2021
-    value_gap_source_date_iso: '2024-03-12'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.018399999999999972
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5759,17 +5759,17 @@ results:
     today_delta_significant: false
     true_value: 0.8854
     true_std: 0.0067
-    value_gap_source_arxiv: '2403.07954'
-    value_gap_source_title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive
-      Krylov Subspace Approach'
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8854
     sort_std: 0.0067
-    global_rank: 109
-    paper_rank: 109
+    global_rank: 92
+    paper_rank: 92
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5836,8 +5836,8 @@ results:
     value_note: ''
     sort_value: 0.8853
     sort_std: 0.012
-    global_rank: 110
-    paper_rank: 120
+    global_rank: 93
+    paper_rank: 103
     rank_delta: 10
     rank_delta_abs: 10
     rank_delta_direction: worse
@@ -5904,10 +5904,10 @@ results:
     value_note: ''
     sort_value: 0.8832
     sort_std: 0.02
-    global_rank: 121
-    paper_rank: 187
-    rank_delta: 66
-    rank_delta_abs: 66
+    global_rank: 104
+    paper_rank: 168
+    rank_delta: 64
+    rank_delta_abs: 64
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -5973,82 +5973,12 @@ results:
     value_note: ''
     sort_value: 0.882
     sort_std: 0.0226
-    global_rank: 133
-    paper_rank: 133
+    global_rank: 116
+    paper_rank: 116
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SGC
-    model_key: sgc
-    model_plain: SGC
-    value: 0.8683
-    std: 0.0128
-    paper_value: 0.8683
-    paper_std: 0.0128
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: Feature vectors of nodes are bag-of-words representations.
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
-      for node classification Accuracy.
-    date: Nov 30, 2023
-    date_display: Nov 2023
-    date_iso: '2023-11-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8588
-    at_pub_std: 0.0361
-    at_pub_source_arxiv: '2302.12357'
-    at_pub_source_title: 'Auto-HeG: Automated Graph Neural Network on Heterophilic
-      Graphs'
-    at_pub_source_date_iso: '2023-02-23'
-    at_pub_source_date_label: WWW 2023
-    value_gap_source_date_iso: '2026-05-24'
-    value_gap_source_date_label: ICML 2026
-    gap_vs_at_pub: 0.009499999999999953
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: true
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8797
-    true_std: null
-    value_gap_source_arxiv: '2605.24867'
-    value_gap_source_title: 'Clustering as Reasoning: A $k$-Means Interpretation of
-      Chain-of-Thought Graph Learning'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.011400000000000077
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8797
-    sort_std: null
-    global_rank: 148
-    paper_rank: 225
-    rank_delta: 77
-    rank_delta_abs: 77
-    rank_delta_direction: worse
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -6111,10 +6041,10 @@ results:
     value_note: ''
     sort_value: 0.8781
     sort_std: 0.017
-    global_rank: 163
-    paper_rank: 170
-    rank_delta: 7
-    rank_delta_abs: 7
+    global_rank: 144
+    paper_rank: 150
+    rank_delta: 6
+    rank_delta_abs: 6
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -6159,8 +6089,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-12'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -6171,17 +6101,17 @@ results:
     today_delta_significant: false
     true_value: 0.8777
     true_std: 0.0067
-    value_gap_source_arxiv: '2403.07954'
-    value_gap_source_title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive
-      Krylov Subspace Approach'
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8777
     sort_std: 0.0067
-    global_rank: 165
-    paper_rank: 165
+    global_rank: 147
+    paper_rank: 147
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6229,8 +6159,8 @@ results:
       and Scalable Graph Learning Paradigm'
     at_pub_source_date_iso: '2022-11-21'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2024-03-12'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.009800000000000031
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -6241,17 +6171,17 @@ results:
     today_delta_significant: false
     true_value: 0.877
     true_std: 0.0069
-    value_gap_source_arxiv: '2403.07954'
-    value_gap_source_title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive
-      Krylov Subspace Approach'
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.877
     sort_std: 0.0069
-    global_rank: 168
-    paper_rank: 168
+    global_rank: 150
+    paper_rank: 150
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6298,8 +6228,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-12'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -6310,21 +6240,91 @@ results:
     today_delta_significant: false
     true_value: 0.87
     true_std: 0.0155
-    value_gap_source_arxiv: '2403.07954'
-    value_gap_source_title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive
-      Krylov Subspace Approach'
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.87
     sort_std: 0.0155
-    global_rank: 213
-    paper_rank: 213
+    global_rank: 191
+    paper_rank: 191
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SGC
+    model_key: sgc
+    model_plain: SGC
+    value: 0.8683
+    std: 0.0128
+    paper_value: 0.8683
+    paper_std: 0.0128
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: Feature vectors of nodes are bag-of-words representations.
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
+      for node classification Accuracy.
+    date: Nov 30, 2023
+    date_display: Nov 2023
+    date_iso: '2023-11-30'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.8588
+    at_pub_std: 0.0361
+    at_pub_source_arxiv: '2302.12357'
+    at_pub_source_title: 'Auto-HeG: Automated Graph Neural Network on Heterophilic
+      Graphs'
+    at_pub_source_date_iso: '2023-02-23'
+    at_pub_source_date_label: WWW 2023
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: 0.009499999999999953
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8683
+    true_std: 0.0128
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8683
+    sort_std: 0.0128
+    global_rank: 202
+    paper_rank: 202
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -6367,8 +6367,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-12'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -6379,17 +6379,17 @@ results:
     today_delta_significant: false
     true_value: 0.8535
     true_std: 0.0098
-    value_gap_source_arxiv: '2403.07954'
-    value_gap_source_title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive
-      Krylov Subspace Approach'
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8535
     sort_std: 0.0098
-    global_rank: 312
-    paper_rank: 312
+    global_rank: 270
+    paper_rank: 270
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6457,8 +6457,8 @@ results:
     value_note: ''
     sort_value: 0.8464
     sort_std: 0.0113
-    global_rank: 357
-    paper_rank: 357
+    global_rank: 307
+    paper_rank: 307
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6493,7 +6493,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 853
+    global_rank: 806
     sort_value: 0.7768
     sort_std: null
     comparison_type: global_top
@@ -6510,7 +6510,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id002
   dataset: PubMed
   rows:
   - model: LGTL
@@ -6547,40 +6547,6 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SAGN
-    model_key: sagn
-    model_plain: SAGN
-    value: 0.9517
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2605.24867'
-    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
-      Graph Learning'
-    date: May 24, 2026
-    date_display: May 2026
-    date_iso: '2026-05-24'
-    venue: Accepted by ICML 2026
-    codebase_url: https://github.com/Uncnbb/KCoT
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.9517
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
   - model: MixHop (LO)
     model_key: mixhop (lo)
     model_plain: MixHop (LO)
@@ -6607,7 +6573,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 2
     sort_value: 0.9513
     sort_std: 0.0038
     comparison_type: global_top
@@ -6615,11 +6581,11 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.9487
-    std: null
+  - model: GraphSAGE (LO)
+    model_key: graphsage (lo)
+    model_plain: GraphSAGE (LO)
+    value: 0.9511
+    std: 0.0036
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -6629,25 +6595,25 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2605.24867'
-    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
-      Graph Learning'
-    date: May 24, 2026
-    date_display: May 2026
-    date_iso: '2026-05-24'
-    venue: Accepted by ICML 2026
-    codebase_url: https://github.com/Uncnbb/KCoT
+    arxiv_id: '2405.13902'
+    title: 'LOGIN: A Large Language Model Consulted Graph Neural Network Training
+      Framework'
+    date: May 22, 2024
+    date_display: May 2024
+    date_iso: '2024-05-22'
+    venue: Web Search and Data Mining
+    codebase_url: https://github.com/QiaoYRan/LOGIN
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 9
-    sort_value: 0.9487
-    sort_std: null
+    global_rank: 3
+    sort_value: 0.9511
+    sort_std: 0.0036
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: H2GCN
     model_key: h2gcn
@@ -6706,10 +6672,10 @@ results:
     value_note: ''
     sort_value: 0.9361
     sort_std: 0.0013
-    global_rank: 19
+    global_rank: 16
     paper_rank: 107
-    rank_delta: 88
-    rank_delta_abs: 88
+    rank_delta: 91
+    rank_delta_abs: 91
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -6753,8 +6719,8 @@ results:
     at_pub_source_title: Tackling Over-Smoothing for General Graph Convolutional Networks
     at_pub_source_date_iso: '2020-08-22'
     at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2026-05-24'
-    value_gap_source_date_label: ICML 2026
+    value_gap_source_date_iso: '2025-05-19'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: 0.012800000000000034
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -6764,20 +6730,20 @@ results:
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.9296
-    true_std: null
-    value_gap_source_arxiv: '2605.24867'
-    value_gap_source_title: 'Clustering as Reasoning: A $k$-Means Interpretation of
-      Chain-of-Thought Graph Learning'
+    true_std: 0.0015
+    value_gap_source_arxiv: '2505.15845'
+    value_gap_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem
+      in Tokenized Graph Learning Models'
     value_gap_source_is_current_paper: false
     value_gap: 0.045399999999999996
     has_value_note: false
     value_note: ''
     sort_value: 0.9296
-    sort_std: null
-    global_rank: 21
-    paper_rank: 153
-    rank_delta: 132
-    rank_delta_abs: 132
+    sort_std: 0.0015
+    global_rank: 19
+    paper_rank: 157
+    rank_delta: 138
+    rank_delta_abs: 138
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -6822,8 +6788,8 @@ results:
     at_pub_source_title: Tackling Over-Smoothing for General Graph Convolutional Networks
     at_pub_source_date_iso: '2020-08-22'
     at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2026-05-24'
-    value_gap_source_date_label: ICML 2026
+    value_gap_source_date_iso: '2025-05-19'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: 0.03370000000000006
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -6833,20 +6799,20 @@ results:
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.9233
-    true_std: null
-    value_gap_source_arxiv: '2605.24867'
-    value_gap_source_title: 'Clustering as Reasoning: A $k$-Means Interpretation of
-      Chain-of-Thought Graph Learning'
+    true_std: 0.0018
+    value_gap_source_arxiv: '2505.15845'
+    value_gap_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem
+      in Tokenized Graph Learning Models'
     value_gap_source_is_current_paper: false
     value_gap: 0.06000000000000005
     has_value_note: false
     value_note: ''
     sort_value: 0.9233
-    sort_std: null
+    sort_std: 0.0018
     global_rank: 23
-    paper_rank: 247
-    rank_delta: 224
-    rank_delta_abs: 224
+    paper_rank: 259
+    rank_delta: 236
+    rank_delta_abs: 236
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -6891,8 +6857,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -6903,17 +6869,17 @@ results:
     today_delta_significant: false
     true_value: 0.9144
     true_std: 0.005
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9144
     sort_std: 0.005
-    global_rank: 32
-    paper_rank: 32
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6979,10 +6945,10 @@ results:
     value_note: ''
     sort_value: 0.9096
     sort_std: 0.0062
-    global_rank: 45
-    paper_rank: 87
-    rank_delta: 42
-    rank_delta_abs: 42
+    global_rank: 47
+    paper_rank: 86
+    rank_delta: 39
+    rank_delta_abs: 39
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -7026,8 +6992,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -7038,17 +7004,17 @@ results:
     today_delta_significant: false
     true_value: 0.9087
     true_std: 0.0034
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9087
     sort_std: 0.0034
-    global_rank: 48
-    paper_rank: 48
+    global_rank: 50
+    paper_rank: 50
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7094,8 +7060,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -7106,17 +7072,17 @@ results:
     today_delta_significant: false
     true_value: 0.903
     true_std: 0.0019
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.903
     sort_std: 0.0019
-    global_rank: 71
-    paper_rank: 71
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7184,10 +7150,10 @@ results:
     value_note: ''
     sort_value: 0.903
     sort_std: 0.0043
-    global_rank: 70
-    paper_rank: 79
-    rank_delta: 9
-    rank_delta_abs: 9
+    global_rank: 68
+    paper_rank: 78
+    rank_delta: 10
+    rank_delta_abs: 10
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -7251,10 +7217,10 @@ results:
     value_note: ''
     sort_value: 0.9004
     sort_std: 0.0141
-    global_rank: 86
-    paper_rank: 265
-    rank_delta: 179
-    rank_delta_abs: 179
+    global_rank: 85
+    paper_rank: 283
+    rank_delta: 198
+    rank_delta_abs: 198
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -7299,8 +7265,8 @@ results:
       and Hyperplane Perturbation
     at_pub_source_date_iso: '2022-11-28'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.11119999999999997
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -7311,17 +7277,17 @@ results:
     today_delta_significant: false
     true_value: 0.8962
     true_std: 0.0041
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8962
     sort_std: 0.0041
-    global_rank: 106
-    paper_rank: 106
+    global_rank: 105
+    paper_rank: 105
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7330,6 +7296,74 @@ results:
     comparison_source_title: Mitigating Overfitting in Graph Neural Networks via Feature
       and Hyperplane Perturbation
     comparison_source_arxiv: '2211.15081'
+    is_best: false
+    is_std_outlier: false
+  - model: GloGNN
+    model_key: glognn
+    model_plain: GloGNN
+    value: 0.8924
+    std: 0.0039
+    paper_value: 0.8924
+    paper_std: 0.0039
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: Feature vectors of nodes are bag-of-words representations.
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on Planetoid split (Yang et al. 2016).
+    date: Nov 30, 2023
+    date_display: Nov 2023
+    date_iso: '2023-11-30'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.896
+    at_pub_std: 0.004
+    at_pub_source_arxiv: '2303.06344'
+    at_pub_source_title: Graph Contrastive Learning under Heterophily via Graph Filters
+    at_pub_source_date_iso: '2023-03-11'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-03-11'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.0036000000000000476
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.896
+    true_std: 0.004
+    value_gap_source_arxiv: '2303.06344'
+    value_gap_source_title: Graph Contrastive Learning under Heterophily via Graph
+      Filters
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0036000000000000476
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.896
+    sort_std: 0.004
+    global_rank: 106
+    paper_rank: 117
+    rank_delta: 11
+    rank_delta_abs: 11
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: Specformer
@@ -7390,79 +7424,11 @@ results:
     sort_value: 0.8947
     sort_std: 0.0048
     global_rank: 109
-    paper_rank: 193
-    rank_delta: 84
-    rank_delta_abs: 84
+    paper_rank: 197
+    rank_delta: 88
+    rank_delta_abs: 88
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GloGNN
-    model_key: glognn
-    model_plain: GloGNN
-    value: 0.8924
-    std: 0.0039
-    paper_value: 0.8924
-    paper_std: 0.0039
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: Feature vectors of nodes are bag-of-words representations.
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Accuracy on Planetoid split (Yang et al. 2016).
-    date: Nov 30, 2023
-    date_display: Nov 2023
-    date_iso: '2023-11-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-10-03'
-    value_gap_source_date_label: TMLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8924
-    true_std: 0.0039
-    value_gap_source_arxiv: '2410.02158'
-    value_gap_source_title: 'SCNode: Spatial and Contextual Coordinates for Graph
-      Representation Learning'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8924
-    sort_std: 0.0039
-    global_rank: 117
-    paper_rank: 117
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -7505,8 +7471,8 @@ results:
       Scalable Paradigm'
     at_pub_source_date_iso: '2022-03-01'
     at_pub_source_date_label: WWW 2022
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.09589999999999999
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -7517,17 +7483,17 @@ results:
     today_delta_significant: false
     true_value: 0.8909
     true_std: 0.0043
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8909
     sort_std: 0.0043
-    global_rank: 124
-    paper_rank: 124
+    global_rank: 123
+    paper_rank: 123
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7574,34 +7540,68 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-05-20'
+    value_gap_source_date_label: KDD 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
+    insignificant_value_gap: true
     today_delta_significant: false
-    true_value: 0.8893
-    true_std: 0.0029
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
+    true_value: 0.8898
+    true_std: 0.004
+    value_gap_source_arxiv: '2505.14033'
+    value_gap_source_title: 'Partition-wise Graph Filtering: A Unified Perspective
+      Through the Lens of Graph Coarsening'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.000500000000000056
     has_value_note: false
     value_note: ''
-    sort_value: 0.8893
-    sort_std: 0.0029
-    global_rank: 134
-    paper_rank: 134
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
+    sort_value: 0.8898
+    sort_std: 0.004
+    global_rank: 130
+    paper_rank: 131
+    rank_delta: 1
+    rank_delta_abs: 1
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.8881
+    std: 0.0015
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2506.07168'
+    title: Efficient Text-Attributed Graph Learning through Selective Annotation and
+      Graph Alignment
+    date: Jun 8, 2025
+    date_display: Jun 2025
+    date_iso: '2025-06-08'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 134
+    sort_value: 0.8881
+    sort_std: 0.0015
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -7663,8 +7663,8 @@ results:
     value_note: ''
     sort_value: 0.8852
     sort_std: 0.0092
-    global_rank: 147
-    paper_rank: 147
+    global_rank: 149
+    paper_rank: 149
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7710,8 +7710,8 @@ results:
     at_pub_source_title: Language is All a Graph Needs
     at_pub_source_date_iso: '2023-08-14'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.00029999999999996696
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -7722,17 +7722,17 @@ results:
     today_delta_significant: false
     true_value: 0.8851
     true_std: 0.0039
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8851
     sort_std: 0.0039
-    global_rank: 148
-    paper_rank: 148
+    global_rank: 150
+    paper_rank: 150
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7778,8 +7778,8 @@ results:
     at_pub_source_title: Block Modeling-Guided Graph Convolutional Neural Networks
     at_pub_source_date_iso: '2021-12-27'
     at_pub_source_date_label: AAAI 2021
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.010800000000000032
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -7790,17 +7790,17 @@ results:
     today_delta_significant: false
     true_value: 0.8846
     true_std: 0.0031
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8846
     sort_std: 0.0031
-    global_rank: 152
-    paper_rank: 152
+    global_rank: 155
+    paper_rank: 155
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7868,10 +7868,10 @@ results:
     value_note: ''
     sort_value: 0.8832
     sort_std: 0.0055
-    global_rank: 159
-    paper_rank: 222
-    rank_delta: 63
-    rank_delta_abs: 63
+    global_rank: 164
+    paper_rank: 231
+    rank_delta: 67
+    rank_delta_abs: 67
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -7936,8 +7936,8 @@ results:
     value_note: ''
     sort_value: 0.8786
     sort_std: 0.0077
-    global_rank: 182
-    paper_rank: 182
+    global_rank: 187
+    paper_rank: 187
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7983,8 +7983,8 @@ results:
     at_pub_source_title: Non-backtracking Graph Neural Networks
     at_pub_source_date_iso: '2023-10-11'
     at_pub_source_date_label: TMLR 2023
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.006399999999999961
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -7995,17 +7995,17 @@ results:
     today_delta_significant: false
     true_value: 0.8782
     true_std: 0.0024
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8782
     sort_std: 0.0024
-    global_rank: 185
-    paper_rank: 185
+    global_rank: 190
+    paper_rank: 190
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8040,7 +8040,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 233
+    global_rank: 243
     sort_value: 0.869
     sort_std: 0.0074
     comparison_type: global_top
@@ -8084,8 +8084,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -8096,17 +8096,17 @@ results:
     today_delta_significant: false
     true_value: 0.8417
     true_std: 0.0024
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8417
     sort_std: 0.0024
-    global_rank: 290
-    paper_rank: 290
+    global_rank: 314
+    paper_rank: 314
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8285,10 +8285,10 @@ results:
     value_note: ''
     sort_value: 0.748
     sort_std: 0.005
-    global_rank: 8
-    paper_rank: 97
-    rank_delta: 89
-    rank_delta_abs: 89
+    global_rank: 10
+    paper_rank: 102
+    rank_delta: 92
+    rank_delta_abs: 92
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -8354,10 +8354,10 @@ results:
     value_note: ''
     sort_value: 0.7121
     sort_std: 0.0184
-    global_rank: 16
-    paper_rank: 60
-    rank_delta: 44
-    rank_delta_abs: 44
+    global_rank: 19
+    paper_rank: 62
+    rank_delta: 43
+    rank_delta_abs: 43
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -8401,8 +8401,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -8413,17 +8413,17 @@ results:
     today_delta_significant: false
     true_value: 0.674
     true_std: 0.0125
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.674
     sort_std: 0.0125
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 28
+    paper_rank: 28
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8490,10 +8490,10 @@ results:
     value_note: ''
     sort_value: 0.674
     sort_std: 0.0221
-    global_rank: 23
-    paper_rank: 81
-    rank_delta: 58
-    rank_delta_abs: 58
+    global_rank: 26
+    paper_rank: 85
+    rank_delta: 59
+    rank_delta_abs: 59
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -8537,8 +8537,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -8549,17 +8549,17 @@ results:
     today_delta_significant: false
     true_value: 0.6464
     true_std: 0.0081
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.6464
     sort_std: 0.0081
-    global_rank: 31
-    paper_rank: 31
+    global_rank: 32
+    paper_rank: 32
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8605,8 +8605,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-12'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -8617,17 +8617,17 @@ results:
     today_delta_significant: false
     true_value: 0.6362
     true_std: 0.0076
-    value_gap_source_arxiv: '2403.07954'
-    value_gap_source_title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive
-      Krylov Subspace Approach'
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.6362
     sort_std: 0.0076
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8694,10 +8694,10 @@ results:
     value_note: ''
     sort_value: 0.619
     sort_std: 0.014
-    global_rank: 41
-    paper_rank: 221
-    rank_delta: 180
-    rank_delta_abs: 180
+    global_rank: 42
+    paper_rank: 229
+    rank_delta: 187
+    rank_delta_abs: 187
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -8762,8 +8762,8 @@ results:
     value_note: ''
     sort_value: 0.6181
     sort_std: 0.018
-    global_rank: 42
-    paper_rank: 42
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8830,10 +8830,10 @@ results:
     value_note: ''
     sort_value: 0.6067
     sort_std: null
-    global_rank: 49
-    paper_rank: 86
-    rank_delta: 37
-    rank_delta_abs: 37
+    global_rank: 51
+    paper_rank: 90
+    rank_delta: 39
+    rank_delta_abs: 39
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -8877,8 +8877,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-12'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -8889,17 +8889,17 @@ results:
     today_delta_significant: false
     true_value: 0.5791
     true_std: 0.0089
-    value_gap_source_arxiv: '2403.07954'
-    value_gap_source_title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive
-      Krylov Subspace Approach'
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.5791
     sort_std: 0.0089
-    global_rank: 60
-    paper_rank: 60
+    global_rank: 62
+    paper_rank: 62
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8945,8 +8945,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-12'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -8957,17 +8957,17 @@ results:
     today_delta_significant: false
     true_value: 0.5772
     true_std: 0.0059
-    value_gap_source_arxiv: '2403.07954'
-    value_gap_source_title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive
-      Krylov Subspace Approach'
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.5772
     sort_std: 0.0059
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 63
+    paper_rank: 63
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9013,8 +9013,8 @@ results:
     at_pub_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
     at_pub_source_date_iso: '2023-03-24'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2024-03-12'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -9025,17 +9025,17 @@ results:
     today_delta_significant: false
     true_value: 0.5738
     true_std: 0.0125
-    value_gap_source_arxiv: '2403.07954'
-    value_gap_source_title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive
-      Krylov Subspace Approach'
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.5738
     sort_std: 0.0125
-    global_rank: 65
-    paper_rank: 65
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9103,10 +9103,10 @@ results:
     value_note: ''
     sort_value: 0.563
     sort_std: 0.022
-    global_rank: 73
-    paper_rank: 172
-    rank_delta: 99
-    rank_delta_abs: 99
+    global_rank: 77
+    paper_rank: 179
+    rank_delta: 102
+    rank_delta_abs: 102
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -9151,8 +9151,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-12'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -9163,17 +9163,17 @@ results:
     today_delta_significant: false
     true_value: 0.5271
     true_std: 0.0085
-    value_gap_source_arxiv: '2403.07954'
-    value_gap_source_title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive
-      Krylov Subspace Approach'
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.5271
     sort_std: 0.0085
-    global_rank: 90
-    paper_rank: 90
+    global_rank: 94
+    paper_rank: 94
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9241,8 +9241,8 @@ results:
     value_note: ''
     sort_value: 0.526
     sort_std: 0.017
-    global_rank: 91
-    paper_rank: 95
+    global_rank: 95
+    paper_rank: 99
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -9310,10 +9310,10 @@ results:
     value_note: ''
     sort_value: 0.523
     sort_std: 0.023
-    global_rank: 92
-    paper_rank: 290
-    rank_delta: 198
-    rank_delta_abs: 198
+    global_rank: 96
+    paper_rank: 301
+    rank_delta: 205
+    rank_delta_abs: 205
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -9380,8 +9380,8 @@ results:
     value_note: ''
     sort_value: 0.4885
     sort_std: 0.0078
-    global_rank: 105
-    paper_rank: 105
+    global_rank: 110
+    paper_rank: 110
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9428,8 +9428,8 @@ results:
       and Scalable Graph Learning Paradigm'
     at_pub_source_date_iso: '2022-11-21'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2024-03-12'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.054300000000000015
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -9440,17 +9440,17 @@ results:
     today_delta_significant: false
     true_value: 0.4559
     true_std: 0.014
-    value_gap_source_arxiv: '2403.07954'
-    value_gap_source_title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive
-      Krylov Subspace Approach'
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.4559
     sort_std: 0.014
-    global_rank: 125
-    paper_rank: 125
+    global_rank: 129
+    paper_rank: 129
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9459,6 +9459,39 @@ results:
     comparison_source_title: 'From Node Interaction to Hop Interaction: New Effective
       and Scalable Graph Learning Paradigm'
     comparison_source_arxiv: '2211.11761'
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.446
+    std: 0.013
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2411.19392'
+    title: Scale-aware Message Passing For Graph Node Classification
+    date: Nov 28, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-28'
+    venue: null
+    codebase_url: https://github.com/Qin87/ScaleNet
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 137
+    sort_value: 0.446
+    sort_std: 0.013
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: ChebNet
@@ -9517,10 +9550,10 @@ results:
     value_note: ''
     sort_value: 0.4386
     sort_std: 0.0164
-    global_rank: 137
-    paper_rank: 170
-    rank_delta: 33
-    rank_delta_abs: 33
+    global_rank: 142
+    paper_rank: 176
+    rank_delta: 34
+    rank_delta_abs: 34
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -9585,47 +9618,13 @@ results:
     value_note: ''
     sort_value: 0.438
     sort_std: 0.0148
-    global_rank: 139
-    paper_rank: 139
+    global_rank: 144
+    paper_rank: 144
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.4378
-    std: 0.019
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.19420'
-    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
-      Over-Smoothing in Node Classification Tasks'
-    date: Jul 28, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-28'
-    venue: arXiv.org
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 140
-    sort_value: 0.4378
-    sort_std: 0.019
-    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -9656,7 +9655,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 188
+    global_rank: 194
     sort_value: 0.393
     sort_std: 0.0079
     comparison_type: global_top
@@ -9721,10 +9720,10 @@ results:
     value_note: ''
     sort_value: 0.3881
     sort_std: 0.0197
-    global_rank: 191
-    paper_rank: 195
-    rank_delta: 4
-    rank_delta_abs: 4
+    global_rank: 198
+    paper_rank: 201
+    rank_delta: 3
+    rank_delta_abs: 3
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -9761,10 +9760,10 @@ datasets_by_scope:
     datasets:
     - dataset: Cora
       dataset_slug: cora
-    - dataset: CiteSeer
-      dataset_slug: citeseer
     - dataset: PubMed
       dataset_slug: pubmed
+    - dataset: CiteSeer
+      dataset_slug: citeseer
   - benchmark: Heterophilic Graphs
     benchmark_slug: heterophilic-graphs
     datasets:

@@ -49,7 +49,7 @@ has_results: true
 paper_type: method
 proposed_models:
 - MLAP
-mrr: 0.0205
+mrr: 0.0204
 adjusted_mrr: 0.0136
 mrr_dataset_count: 2
 benchmark_categories:
@@ -192,7 +192,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 10
+    global_rank: 12
     sort_value: 0.809
     sort_std: 0.016
     comparison_type: global_top
@@ -290,8 +290,8 @@ results:
     value_note: ''
     sort_value: 0.7708
     sort_std: 0.003
-    global_rank: 162
-    paper_rank: 162
+    global_rank: 163
+    paper_rank: 163
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -358,8 +358,8 @@ results:
     value_note: ''
     sort_value: 0.7651
     sort_std: 0.0027
-    global_rank: 192
-    paper_rank: 192
+    global_rank: 195
+    paper_rank: 195
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -426,8 +426,8 @@ results:
     value_note: ''
     sort_value: 0.7567
     sort_std: 0.0034
-    global_rank: 233
-    paper_rank: 233
+    global_rank: 234
+    paper_rank: 234
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

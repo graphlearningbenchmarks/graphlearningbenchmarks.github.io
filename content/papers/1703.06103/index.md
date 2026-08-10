@@ -54,7 +54,7 @@ paper_type: method
 proposed_models:
 - R-GCN
 mrr: 0.0562
-adjusted_mrr: 0.0375
+adjusted_mrr: 0.0374
 mrr_dataset_count: 2
 benchmark_categories:
 - TU Dortmund
@@ -100,7 +100,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -269,9 +269,9 @@ results:
     sort_value: 0.904
     sort_std: 0.057
     global_rank: 171
-    paper_rank: 655
-    rank_delta: 484
-    rank_delta_abs: 484
+    paper_rank: 654
+    rank_delta: 483
+    rank_delta_abs: 483
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -305,7 +305,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 429
+    global_rank: 430
     sort_value: 0.866
     sort_std: 0.0495
     comparison_type: global_top
@@ -370,8 +370,8 @@ results:
     value_note: ''
     sort_value: 0.7794
     sort_std: 0.0
-    global_rank: 734
-    paper_rank: 734
+    global_rank: 736
+    paper_rank: 736
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -439,8 +439,8 @@ results:
     value_note: ''
     sort_value: 0.7323
     sort_std: 0.0048
-    global_rank: 806
-    paper_rank: 806
+    global_rank: 813
+    paper_rank: 813
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -508,8 +508,8 @@ results:
     value_note: ''
     sort_value: 0.672
     sort_std: 0.0124
-    global_rank: 837
-    paper_rank: 837
+    global_rank: 844
+    paper_rank: 844
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

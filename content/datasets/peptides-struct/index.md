@@ -12,18 +12,15 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 11
-result_count: 252
+result_count: 243
 best_model:
-  model: Energy GNN + attention
-  value: 0.036000000000000004
+  model: GCN
+  value: 0.2421
   metric: MAE
-  arxiv_id: '2407.00494'
-  paper_title: Graph Neural Networks Gone Hogwild
+  arxiv_id: '2502.09263'
+  paper_title: Can Classic GNNs Be Strong Baselines for Graph-level Tasks? Simple
+    Architectures Meet Excellence
 papers:
-- arxiv_id: '2605.13383'
-  title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
-  date_iso: '2026-05-13'
-  venue: ''
 - arxiv_id: '2605.12358'
   title: From Message-Passing to Linearized Graph Sequence Models
   date_iso: '2026-05-12'
@@ -32,6 +29,10 @@ papers:
   title: Bridging Input Feature Spaces Towards Graph Foundation Models
   date_iso: '2026-05-06'
   venue: ICLR 2026
+- arxiv_id: '2601.19094'
+  title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+  date_iso: '2026-01-27'
+  venue: ''
 - arxiv_id: '2601.18917'
   title: 'GraIP: A Benchmarking Framework For Neural Graph Inverse Problems'
   date_iso: '2026-01-26'
@@ -52,10 +53,6 @@ papers:
   title: Long-Range Graph Wavelet Networks
   date_iso: '2025-09-08'
   venue: NeurIPS 2025
-- arxiv_id: '2508.05070'
-  title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-  date_iso: '2025-08-07'
-  venue: ''
 - arxiv_id: '2507.00647'
   title: Cooperative Sheaf Neural Networks
   date_iso: '2025-07-01'
@@ -165,10 +162,6 @@ papers:
   title: Recurrent Distance Filtering for Graph Representation Learning
   date_iso: '2023-12-03'
   venue: ICML 2023
-- arxiv_id: '2310.07430'
-  title: Non-backtracking Graph Neural Networks
-  date_iso: '2023-10-11'
-  venue: TMLR 2023
 - arxiv_id: '2310.01704'
   title: Transformers are efficient hierarchical chemical graph learners
   date_iso: '2023-10-02'
@@ -223,84 +216,6 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
-  - model: Energy GNN + attention
-    model_plain: Energy GNN + attention
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2407.00494'
-    title: Graph Neural Networks Gone Hogwild
-    date: Jun 29, 2024
-    date_iso: '2024-06-29'
-    date_display: Jun 2024
-    codebase_url: ''
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: true
-    metric_values:
-    - 0.036000000000000004
-    metric_stds:
-    - 0.038
-  - model: Energy GNN edge-wise
-    model_plain: Energy GNN edge-wise
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.00494'
-    title: Graph Neural Networks Gone Hogwild
-    date: Jun 29, 2024
-    date_iso: '2024-06-29'
-    date_display: Jun 2024
-    codebase_url: ''
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: true
-    metric_values:
-    - 0.04
-    metric_stds:
-    - 0.036000000000000004
-  - model: Energy GNN node-wise
-    model_plain: Energy GNN node-wise
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.00494'
-    title: Graph Neural Networks Gone Hogwild
-    date: Jun 29, 2024
-    date_iso: '2024-06-29'
-    date_display: Jun 2024
-    codebase_url: ''
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: true
-    metric_values:
-    - 0.195
-    metric_stds:
-    - 0.017
   - model: GCN
     model_plain: GCN
     is_baseline: true
@@ -322,7 +237,7 @@ variants:
     published_conference_slug: icml
     published_venue: ICML 2025
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.2421
@@ -348,64 +263,12 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2024
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.2422
     metric_stds:
     - 0.0007
-  - model: Tango_GPS
-    model_plain: Tango_GPS
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_iso: '2025-08-07'
-    date_display: Aug 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.2422
-    metric_stds:
-    - 0.0014
-  - model: NBA-GIN+LapPE
-    model_plain: NBA-GIN+LapPE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2310.07430'
-    title: Non-backtracking Graph Neural Networks
-    date: Oct 11, 2023
-    date_iso: '2023-10-11'
-    date_display: Oct 2023
-    codebase_url: https://github.com/seonghyun26/nba-gnn
-    published_conference: TMLR 2023
-    published_conference_short: TMLR
-    published_conference_slug: tmlr
-    published_venue: TMLR 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.2424
-    metric_stds:
-    - 0.001
   - model: UniGCN
     model_plain: UniGCN
     is_baseline: false
@@ -426,7 +289,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2024
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.2425
@@ -453,7 +316,7 @@ variants:
     published_conference_slug: icml
     published_venue: ICML 2025
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.2429
@@ -479,7 +342,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2024
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.2429
@@ -505,7 +368,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2024
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.2431
@@ -532,7 +395,7 @@ variants:
     published_conference_slug: icml
     published_venue: ICML 2025
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.2431
@@ -558,7 +421,7 @@ variants:
     published_conference_slug: iclr
     published_venue: ICLR 2025
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.2432
@@ -584,7 +447,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.2432
@@ -610,7 +473,7 @@ variants:
     published_conference_slug: tmlr
     published_venue: TMLR 2025
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.2433
@@ -636,7 +499,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2024
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.2433
@@ -662,7 +525,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.2437
@@ -694,32 +557,6 @@ variants:
     - 0.2438
     metric_stds:
     - null
-  - model: Schrödinger
-    model_plain: Schrödinger
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2605.13383'
-    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
-    date: May 13, 2026
-    date_iso: '2026-05-13'
-    date_display: May 2026
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.2439
-    metric_stds:
-    - 0.0011
   - model: Unitary GCN
     model_plain: Unitary GCN
     is_baseline: true
@@ -740,7 +577,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2024
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.2445
@@ -792,7 +629,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2024
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.2447
@@ -818,7 +655,7 @@ variants:
     published_conference_slug: iclr
     published_venue: ICLR 2025
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.24489999999999998
@@ -844,7 +681,7 @@ variants:
     published_conference_slug: iclr
     published_venue: ICLR 2026
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.2449
@@ -871,33 +708,7 @@ variants:
     published_conference_slug: icml
     published_venue: ICML 2025
     uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.2449
-    metric_stds:
-    - 0.0016
-  - model: Graph MLP-Mixer/ViT
-    model_plain: Graph MLP-Mixer/ViT
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2310.07430'
-    title: Non-backtracking Graph Neural Networks
-    date: Oct 11, 2023
-    date_iso: '2023-10-11'
-    date_display: Oct 2023
-    codebase_url: https://github.com/seonghyun26/nba-gnn
-    published_conference: TMLR 2023
-    published_conference_short: TMLR
-    published_conference_slug: tmlr
-    published_venue: TMLR 2023
-    uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.2449
@@ -923,7 +734,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.2449
@@ -949,7 +760,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.245
@@ -981,32 +792,6 @@ variants:
     - 0.245
     metric_stds:
     - 0.0011
-  - model: Tango_GatedGCN
-    model_plain: Tango_GatedGCN
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_iso: '2025-08-07'
-    date_display: Aug 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.2451
-    metric_stds:
-    - 0.0006
   - model: MGT
     model_plain: MGT
     is_baseline: true
@@ -1028,7 +813,7 @@ variants:
     published_conference_slug: icml
     published_venue: ICML 2025
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.2453
@@ -1055,7 +840,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.2453
@@ -1081,7 +866,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2024
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.2453
@@ -1531,18 +1316,226 @@ variants:
     - 0.2464
     metric_stds:
     - 0.0013
-  row_count: 252
+  - model: GPSE + GPS
+    model_plain: GPSE + GPS
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2510.02565'
+    title: On The Expressive Power of GNN Derivatives
+    date: Oct 2, 2025
+    date_iso: '2025-10-02'
+    date_display: Oct 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.2464
+    metric_stds:
+    - 0.0025
+  - model: GatedGCN+PE-ViT
+    model_plain: GatedGCN+PE-ViT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2405.13526'
+    title: 'Understanding Virtual Nodes: Oversquashing and Node Heterogeneity'
+    date: May 22, 2024
+    date_iso: '2024-05-22'
+    date_display: May 2024
+    codebase_url: ''
+    published_conference: ICLR 2024
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.2465
+    metric_stds:
+    - 0.0015
+  - model: S2GCN
+    model_plain: S2GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.17311'
+    title: Probabilistic Graph Rewiring via Virtual Nodes
+    date: May 27, 2024
+    date_iso: '2024-05-27'
+    date_display: May 2024
+    codebase_url: https://github.com/chendiqian/IPR-MPNN
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.2467
+    metric_stds:
+    - 0.0019
+  - model: S^2GCN
+    model_plain: S^2GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.19121'
+    title: Spatio-Spectral Graph Neural Networks
+    date: May 29, 2024
+    date_iso: '2024-05-29'
+    date_display: May 2024
+    codebase_url: ''
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.2467
+    metric_stds:
+    - 0.0019
+  - model: Graph ViT
+    model_plain: Graph ViT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_iso: '2024-02-13'
+    date_display: Feb 2024
+    codebase_url: ''
+    published_conference: KDD 2024
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.2468
+    metric_stds:
+    - 0.0015
+  - model: NeuralWalker
+    model_plain: NeuralWalker
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: walk
+    architecture_label: Walk
+    architecture_title: Random-walk graph embedding
+    arxiv_id: '2510.12111'
+    title: 'Chimera: State Space Models Beyond Sequences'
+    date: Oct 14, 2025
+    date_iso: '2025-10-14'
+    date_display: Oct 2025
+    codebase_url: https://github.com/goombalab/chimera
+    published_conference: TMLR 2025
+    published_conference_short: TMLR
+    published_conference_slug: tmlr
+    published_venue: TMLR 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.2468
+    metric_stds:
+    - 0.0005
+  - model: R-method
+    model_plain: R-method
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2502.01122'
+    title: Learning Efficient Positional Encodings with Graph Neural Networks
+    date: Feb 3, 2025
+    date_iso: '2025-02-03'
+    date_display: Feb 2025
+    codebase_url: https://github.com/ehejin/Pearl-PE
+    published_conference: ICLR 2025
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.247
+    metric_stds:
+    - 0.001
+  - model: LGSM
+    model_plain: LGSM
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2605.12358'
+    title: From Message-Passing to Linearized Graph Sequence Models
+    date: May 12, 2026
+    date_iso: '2026-05-12'
+    date_display: May 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.247
+    metric_stds:
+    - 0.0019
+  row_count: 243
   rows_json: /data/datasets/peptides-struct/standard-split-rows.json
   chart_json: /data/datasets/peptides-struct/standard-split-chart.json
   arch_counts:
-    gnn: 121
-    hybrid: 58
+    gnn: 119
+    hybrid: 56
     graph_transformer: 49
     llm: 0
     walk: 1
     traditional: 14
   metric_counts:
-  - 252
+  - 243
   milestones: &id001
   - value: 0.2529
     std: 0.0016
@@ -1563,24 +1556,25 @@ variants:
     title: Multiresolution Graph Transformers and Wavelet Positional Encoding for
       Learning Hierarchical Structures
     date: '2023-02-17'
-  - value: 0.2424
-    std: 0.001
-    model: NBA-GIN+LapPE
-    arxiv_id: '2310.07430'
-    title: Non-backtracking Graph Neural Networks
-    date: '2023-10-11'
+  - value: 0.2449
+    std: 0.0016
+    model: GAPH ViT
+    arxiv_id: '2405.15540'
+    title: Bundle Neural Networks for message diffusion on graphs
+    date: '2024-05-24'
   - value: 0.2422
-    std: 0.0014
-    model: Tango_GPS
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: '2025-08-07'
+    std: 0.0007
+    model: IPR-MPNN
+    arxiv_id: '2405.17311'
+    title: Probabilistic Graph Rewiring via Virtual Nodes
+    date: '2024-05-27'
   - value: 0.2421
     std: 0.0016
     model: GCN
-    arxiv_id: '2605.12358'
-    title: From Message-Passing to Linearized Graph Sequence Models
-    date: '2026-05-12'
+    arxiv_id: '2502.09263'
+    title: Can Classic GNNs Be Strong Baselines for Graph-level Tasks? Simple Architectures
+      Meet Excellence
+    date: '2025-02-13'
   milestones_by_metric:
     MAE: *id001
 ---

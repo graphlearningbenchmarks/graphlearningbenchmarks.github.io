@@ -13,18 +13,15 @@ stats:
   avg_nodes: 264.0
   avg_edges: 3667.0
   num_classes: null
-result_count: 25
+result_count: 21
 best_model:
-  model: FloydNet
-  value: 1.0
+  model: F_4-MPNN
+  value: 0.9793
   metric: Accuracy
-  arxiv_id: '2601.19094'
-  paper_title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+  arxiv_id: '2505.11298'
+  paper_title: 'Graph Representational Learning: When Does More Expressivity Hurt
+    Generalization?'
 papers:
-- arxiv_id: '2601.19094'
-  title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
-  date_iso: '2026-01-27'
-  venue: ''
 - arxiv_id: '2505.11298'
   title: 'Graph Representational Learning: When Does More Expressivity Hurt Generalization?'
   date_iso: '2025-05-16'
@@ -63,110 +60,6 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
-  - model: FloydNet
-    model_plain: FloydNet
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2601.19094'
-    title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
-    date: Jan 27, 2026
-    date_iso: '2026-01-27'
-    date_display: Jan 2026
-    codebase_url: https://github.com/ocx-lab/FloydNet
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 1.0
-    metric_stds:
-    - null
-  - model: PGN
-    model_plain: PGN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2601.19094'
-    title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
-    date: Jan 27, 2026
-    date_iso: '2026-01-27'
-    date_display: Jan 2026
-    codebase_url: https://github.com/ocx-lab/FloydNet
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.995
-    metric_stds:
-    - null
-  - model: RecGNN
-    model_plain: RecGNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2601.19094'
-    title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
-    date: Jan 27, 2026
-    date_iso: '2026-01-27'
-    date_display: Jan 2026
-    codebase_url: https://github.com/ocx-lab/FloydNet
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.995
-    metric_stds:
-    - null
-  - model: GIN(E)
-    model_plain: GIN(E)
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2601.19094'
-    title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
-    date: Jan 27, 2026
-    date_iso: '2026-01-27'
-    date_display: Jan 2026
-    codebase_url: https://github.com/ocx-lab/FloydNet
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.993
-    metric_stds:
-    - null
   - model: F_4-MPNN
     model_plain: F_4-MPNN
     is_baseline: true
@@ -187,7 +80,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.9793
@@ -213,7 +106,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.966
@@ -720,25 +613,25 @@ variants:
     - 0.412
     metric_stds:
     - null
-  row_count: 25
+  row_count: 21
   rows_json: ''
   chart_json: /data/datasets/er-graph/standard-split-chart.json
   arch_counts:
-    gnn: 16
-    hybrid: 1
+    gnn: 13
+    hybrid: 0
     graph_transformer: 0
     llm: 6
     walk: 2
     traditional: 0
   metric_counts:
-  - 25
+  - 21
   milestones: &id001
-  - value: 0.451
+  - value: 0.93
     std: null
-    model: Zero-shot
-    arxiv_id: '2310.04560'
-    title: 'Talk like a Graph: Encoding Graphs for Large Language Models'
-    date: '2023-10-06'
+    model: Diffusion Wavelets
+    arxiv_id: '1710.10321'
+    title: Learning Structural Node Embeddings via Diffusion Wavelets
+    date: '2017-10-27'
   - value: 0.9475
     std: null
     model: GraphWiz (LLaMA 2-13B)

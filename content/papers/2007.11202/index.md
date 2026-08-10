@@ -52,33 +52,27 @@ has_results: true
 paper_type: method
 proposed_models:
 - MathNet
-mrr: 0.0569
-adjusted_mrr: 0.0569
-mrr_dataset_count: 4
+mrr: 0.0613
+adjusted_mrr: 0.0613
+mrr_dataset_count: 3
 benchmark_categories:
 - TU Dortmund
-- Quantum Chemistry
 benchmark_coverage:
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
   evaluated: 3
   total: 11
-- benchmark: Quantum Chemistry
-  benchmark_slug: quantum-chemistry
-  evaluated: 1
-  total: 3
 task_categories:
 - graph_classification
-- graph_regression
 experiment_scopes:
 - graph-level
 results:
 - &id003
   dataset: D&D
   rows:
-  - model: GC-GNN (GraphSAGE)
-    model_key: gc-gnn (graphsage)
-    model_plain: GC-GNN (GraphSAGE)
+  - model: GC-GNN (GCN)
+    model_key: gc-gnn (gcn)
+    model_plain: GC-GNN (GCN)
     value: 0.921
     std: 0.081
     metric: Accuracy
@@ -99,8 +93,9 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: The paper describes GC-GNN as enhancing GNNs with graph
+      canonization positional encodings.
     is_global_top: true
     global_rank: 1
     sort_value: 0.921
@@ -831,134 +826,133 @@ results:
 - &id002
   dataset: ENZYMES
   rows:
-  - model: BGNN(m)-CS
-    model_key: bgnn(m)-cs
-    model_plain: BGNN(m)-CS
-    value: 0.8068
-    std: 0.0149
+  - model: GMN
+    model_key: gmn
+    model_plain: GMN
+    value: 0.7866
+    std: null
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-12'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: ''
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2002.09518'
+    title: Memory-Based Graph Networks
+    date: Feb 21, 2020
+    date_display: Feb 2020
+    date_iso: '2020-02-21'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/amirkhas/GraphMemoryNet
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.8068
-    sort_std: 0.0149
+    sort_value: 0.7866
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: BGNN
-    model_key: bgnn
-    model_plain: BGNN
-    value: 0.7936
-    std: 0.0281
+  - model: MemGNN
+    model_key: memgnn
+    model_plain: MemGNN
+    value: 0.755
+    std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-12'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: ''
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2002.09518'
+    title: Memory-Based Graph Networks
+    date: Feb 21, 2020
+    date_display: Feb 2020
+    date_iso: '2020-02-21'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/amirkhas/GraphMemoryNet
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.7936
-    sort_std: 0.0281
+    sort_value: 0.755
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: BGNN(m)-SC
-    model_key: bgnn(m)-sc
-    model_plain: BGNN(m)-SC
-    value: 0.7889
-    std: 0.0079
+  - model: TFGW SP
+    model_key: tfgw sp (l=2)
+    model_plain: TFGW SP
+    value: 0.751
+    std: 0.05
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-12'
-    venue: AAAI Conference on Artificial Intelligence
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2205.15733'
+    title: Template based Graph Neural Network with Optimal Transport Distances
+    date: May 31, 2022
+    date_display: May 2022
+    date_iso: '2022-05-31'
+    venue: Neural Information Processing Systems
     codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.7889
-    sort_std: 0.0079
+    sort_value: 0.751
+    sort_std: 0.05
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.762
-    std: 0.028
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    value: 0.7
+    std: 0.04944
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: 0.51
+    params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2305.06102'
-    title: Towards Better Graph Representation Learning with Parameterized Decomposition
-      & Filtering
-    date: May 10, 2023
-    date_display: May 2023
-    date_iso: '2023-05-10'
-    venue: International Conference on Machine Learning
-    codebase_url: https://github.com/qslim/PDF
+    arxiv_id: '2003.00982'
+    title: GNNBenchmark
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    venue: Journal of machine learning research
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 8
-    sort_value: 0.762
-    sort_std: 0.028
+    global_rank: 17
+    sort_value: 0.7
+    sort_std: 0.04944
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1022,16 +1016,49 @@ results:
     value_note: ''
     sort_value: 0.695
     sort_std: 0.032
-    global_rank: 30
-    paper_rank: 165
-    rank_delta: 135
-    rank_delta_abs: 135
+    global_rank: 19
+    paper_rank: 153
+    rank_delta: 134
+    rank_delta_abs: 134
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Dynamic Edge-Conditioned Filters in Convolutional Neural
       Networks on Graphs
     comparison_source_arxiv: '1704.02901'
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.68167
+    std: 0.05449
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2003.00982'
+    title: GNNBenchmark
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    venue: Journal of machine learning research
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 27
+    sort_value: 0.68167
+    sort_std: 0.05449
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: EigenPool
@@ -1091,8 +1118,8 @@ results:
     value_note: ''
     sort_value: 0.65
     sort_std: null
-    global_rank: 64
-    paper_rank: 64
+    global_rank: 52
+    paper_rank: 52
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1159,8 +1186,8 @@ results:
     value_note: ''
     sort_value: 0.6253
     sort_std: null
-    global_rank: 88
-    paper_rank: 88
+    global_rank: 76
+    paper_rank: 76
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1227,8 +1254,8 @@ results:
     value_note: ''
     sort_value: 0.625
     sort_std: 0.0385
-    global_rank: 89
-    paper_rank: 89
+    global_rank: 77
+    paper_rank: 77
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1295,8 +1322,8 @@ results:
     value_note: ''
     sort_value: 0.5712
     sort_std: null
-    global_rank: 140
-    paper_rank: 140
+    global_rank: 128
+    paper_rank: 128
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1331,7 +1358,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 145
+    global_rank: 133
     sort_value: 0.55833
     sort_std: 0.03516
     comparison_type: global_top
@@ -1395,10 +1422,10 @@ results:
     value_note: ''
     sort_value: 0.553
     sort_std: 0.0378
-    global_rank: 149
-    paper_rank: 219
-    rank_delta: 70
-    rank_delta_abs: 70
+    global_rank: 137
+    paper_rank: 211
+    rank_delta: 74
+    rank_delta_abs: 74
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1464,8 +1491,8 @@ results:
     value_note: ''
     sort_value: 0.426
     sort_std: 0.016
-    global_rank: 212
-    paper_rank: 215
+    global_rank: 202
+    paper_rank: 205
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -1509,7 +1536,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -1811,9 +1838,9 @@ results:
     sort_value: 0.904
     sort_std: 0.057
     global_rank: 171
-    paper_rank: 660
-    rank_delta: 489
-    rank_delta_abs: 489
+    paper_rank: 659
+    rank_delta: 488
+    rank_delta_abs: 488
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1914,7 +1941,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 429
+    global_rank: 430
     sort_value: 0.866
     sort_std: 0.0495
     comparison_type: global_top
@@ -1980,8 +2007,8 @@ results:
     value_note: ''
     sort_value: 0.8583
     sort_std: 0.0116
-    global_rank: 454
-    paper_rank: 454
+    global_rank: 455
+    paper_rank: 455
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2047,8 +2074,8 @@ results:
     value_note: ''
     sort_value: 0.858
     sort_std: 0.002
-    global_rank: 455
-    paper_rank: 459
+    global_rank: 456
+    paper_rank: 460
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -2182,10 +2209,10 @@ results:
     value_note: ''
     sort_value: 0.8244
     sort_std: 0.0129
-    global_rank: 606
-    paper_rank: 642
-    rank_delta: 36
-    rank_delta_abs: 36
+    global_rank: 607
+    paper_rank: 641
+    rank_delta: 34
+    rank_delta_abs: 34
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2202,567 +2229,12 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
-  dataset: QM7b
-  rows:
-  - model: DTNN
-    model_key: dtnn
-    model_plain: DTNN
-    value: 0.074
-    std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '1703.00564'
-    title: MoleculeNet
-    date: Mar 2, 2017
-    date_display: Mar 2017
-    date_iso: '2017-03-02'
-    venue: Chemical Science
-    codebase_url: https://github.com/deepchem/deepchem
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.074
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Multitask(CM)
-    model_key: multitask(cm)
-    model_plain: Multitask(CM)
-    value: 0.086
-    std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '1703.00564'
-    title: MoleculeNet
-    date: Mar 2, 2017
-    date_display: Mar 2017
-    date_iso: '2017-03-02'
-    venue: Chemical Science
-    codebase_url: https://github.com/deepchem/deepchem
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.086
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: KRR(CM)
-    model_key: krr(cm)
-    model_plain: KRR(CM)
-    value: 0.098
-    std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '1703.00564'
-    title: MoleculeNet
-    date: Mar 2, 2017
-    date_display: Mar 2017
-    date_iso: '2017-03-02'
-    venue: Chemical Science
-    codebase_url: https://github.com/deepchem/deepchem
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.098
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MathNet
-    model_key: mathnet
-    model_plain: MathNet
-    value: 42.7
-    std: 0.92
-    paper_value: 42.7
-    paper_std: 0.92
-    metric: MAE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: test MAE over 10 repetitions
-    date: Jul 22, 2020
-    date_display: Jul 2020
-    date_iso: '2020-07-22'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-07-22'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 42.7
-    true_std: 0.92
-    value_gap_source_arxiv: '2007.11202'
-    value_gap_source_title: 'MathNet: Haar-Like Wavelet Multiresolution-Analysis for
-      Graph Representation and Learning'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 42.7
-    sort_std: 0.92
-    global_rank: 22
-    paper_rank: 22
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCNConv+SAGPool
-    model_key: gcnconv+sagpool
-    model_plain: GCNConv+SAGPool
-    value: 43.6
-    std: 0.98
-    paper_value: 43.6
-    paper_std: 0.98
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: test MAE over 10 repetitions
-    date: Jul 22, 2020
-    date_display: Jul 2020
-    date_iso: '2020-07-22'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-07-22'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 43.6
-    true_std: 0.98
-    value_gap_source_arxiv: '2007.11202'
-    value_gap_source_title: 'MathNet: Haar-Like Wavelet Multiresolution-Analysis for
-      Graph Representation and Learning'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 43.6
-    sort_std: 0.98
-    global_rank: 23
-    paper_rank: 23
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GC
-    model_key: gc
-    model_plain: GC
-    value: 77.9
-    std: 2.1
-    paper_value: 77.9
-    paper_std: 2.1
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: wu2018moleculenet
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: test MAE over 10 repetitions
-    date: Jul 22, 2020
-    date_display: Jul 2020
-    date_iso: '2020-07-22'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 77.9
-    at_pub_std: 2.1
-    at_pub_source_arxiv: '1703.00564'
-    at_pub_source_title: MoleculeNet
-    at_pub_source_date_iso: '2017-03-02'
-    at_pub_source_date_label: '2017'
-    value_gap_source_date_iso: '2020-07-22'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 77.9
-    true_std: 2.1
-    value_gap_source_arxiv: '2007.11202'
-    value_gap_source_title: 'MathNet: Haar-Like Wavelet Multiresolution-Analysis for
-      Graph Representation and Learning'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 77.9
-    sort_std: 2.1
-    global_rank: 40
-    paper_rank: 40
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: KRR
-    model_key: krr
-    model_plain: KRR
-    value: 110.3
-    std: 4.7
-    paper_value: 110.3
-    paper_std: 4.7
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: wu2018moleculenet
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: test MAE over 10 repetitions
-    date: Jul 22, 2020
-    date_display: Jul 2020
-    date_iso: '2020-07-22'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-07-22'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 110.3
-    true_std: 4.7
-    value_gap_source_arxiv: '2007.11202'
-    value_gap_source_title: 'MathNet: Haar-Like Wavelet Multiresolution-Analysis for
-      Graph Representation and Learning'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 110.3
-    sort_std: 4.7
-    global_rank: 55
-    paper_rank: 55
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: rf
-    model_key: rf
-    model_plain: rf
-    value: 122.7
-    std: 4.2
-    paper_value: 122.7
-    paper_std: 4.2
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: random_forest
-    architecture_label: RF
-    architecture_title: Random forest
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: wu2018moleculenet
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: test MAE over 10 repetitions
-    date: Jul 22, 2020
-    date_display: Jul 2020
-    date_iso: '2020-07-22'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 122.7
-    at_pub_std: 4.2
-    at_pub_source_arxiv: '1703.00564'
-    at_pub_source_title: MoleculeNet
-    at_pub_source_date_iso: '2017-03-02'
-    at_pub_source_date_label: '2017'
-    value_gap_source_date_iso: '2025-02-18'
-    value_gap_source_date_label: ICLR 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 122.7
-    true_std: 4.2
-    value_gap_source_arxiv: '2502.12638'
-    value_gap_source_title: 'NExT-Mol: 3D Diffusion Meets 1D Language Modeling for
-      3D Molecule Generation'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 122.7
-    sort_std: 4.2
-    global_rank: 59
-    paper_rank: 59
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 122.9
-    std: 2.2
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2502.12638'
-    title: 'NExT-Mol: 3D Diffusion Meets 1D Language Modeling for 3D Molecule Generation'
-    date: Feb 18, 2025
-    date_display: Feb 2025
-    date_iso: '2025-02-18'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/acharkq/NExT-Mol
-    uses_external_data: false
-    input_feature_source: unknown
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 60
-    sort_value: 122.9
-    sort_std: 2.2
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Multitask
-    model_key: multitask
-    model_plain: Multitask
-    value: 123.7
-    std: 15.6
-    paper_value: 123.7
-    paper_std: 15.6
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: wu2018moleculenet
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: test MAE over 10 repetitions
-    date: Jul 22, 2020
-    date_display: Jul 2020
-    date_iso: '2020-07-22'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-07-22'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 123.7
-    true_std: 15.6
-    value_gap_source_arxiv: '2007.11202'
-    value_gap_source_title: 'MathNet: Haar-Like Wavelet Multiresolution-Analysis for
-      Graph Representation and Learning'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 123.7
-    sort_std: 15.6
-    global_rank: 61
-    paper_rank: 61
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  rank_metric: MAE
-  higher_is_better: false
-  experiment_scope: graph-level
-  dataset_primary_metric: MAE
-  paper_metrics:
-  - MAE
-  metric: MAE
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
 results_grouped:
 - benchmark: TU Dortmund
   datasets:
   - *id001
   - *id002
   - *id003
-- benchmark: Quantum Chemistry
-  datasets:
-  - *id004
 datasets_by_scope:
 - scope: graph-level
   label: Graph-level
@@ -2776,11 +2248,6 @@ datasets_by_scope:
       dataset_slug: enzymes
     - dataset: D&D
       dataset_slug: d-d
-  - benchmark: Quantum Chemistry
-    benchmark_slug: quantum-chemistry
-    datasets:
-    - dataset: QM7b
-      dataset_slug: qm7b
 single_proposed_model: MathNet
 main_figure: /figures/2007.11202/main_figure.jpegoptim.jpg
 ---

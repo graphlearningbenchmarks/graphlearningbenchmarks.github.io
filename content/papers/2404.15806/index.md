@@ -57,15 +57,15 @@ abstract: 'Graph masked autoencoders (GMAE) have emerged as a significant advanc
   outperforms existing state-of-the-art GMAE models in both unsupervised and transfer
   learning tasks. Codes are available at.'
 codebase_url: https://github.com/LiuChuang0059/StructMAE
-extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+extraction_model: google/gemma-4-26B-A4B-it
 has_results: true
 paper_type: method
 proposed_models:
 - StructMAE-P
 - StructMAE-L
-mrr: 0.0066
-adjusted_mrr: 0.0066
-mrr_dataset_count: 5
+mrr: 0.0089
+adjusted_mrr: 0.0089
+mrr_dataset_count: 6
 benchmark_categories:
 - TU Dortmund
 - MoleculeNet
@@ -76,7 +76,7 @@ benchmark_coverage:
   total: 11
 - benchmark: MoleculeNet
   benchmark_slug: moleculenet
-  evaluated: 1
+  evaluated: 2
   total: 9
 task_categories:
 - graph_classification
@@ -142,7 +142,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -203,14 +203,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: graphmae
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on COLLAB dataset for graph classification accuracy
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -243,10 +243,10 @@ results:
     value_note: ''
     sort_value: 0.827
     sort_std: 0.01
-    global_rank: 27
-    paper_rank: 133
-    rank_delta: 106
-    rank_delta_abs: 106
+    global_rank: 22
+    paper_rank: 113
+    rank_delta: 91
+    rank_delta_abs: 91
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -279,7 +279,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 29
+    global_rank: 23
     sort_value: 0.826
     sort_std: 0.022
     comparison_type: global_top
@@ -304,14 +304,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: s2gae
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on COLLAB dataset for graph classification accuracy
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -345,10 +345,10 @@ results:
     value_note: ''
     sort_value: 0.8235
     sort_std: 0.0234
-    global_rank: 33
-    paper_rank: 97
-    rank_delta: 64
-    rank_delta_abs: 64
+    global_rank: 27
+    paper_rank: 82
+    rank_delta: 55
+    rank_delta_abs: 55
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -373,14 +373,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: gin
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on COLLAB dataset for graph classification accuracy
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -413,10 +413,10 @@ results:
     value_note: ''
     sort_value: 0.822
     sort_std: 0.021
-    global_rank: 37
-    paper_rank: 135
-    rank_delta: 98
-    rank_delta_abs: 98
+    global_rank: 30
+    paper_rank: 115
+    rank_delta: 85
+    rank_delta_abs: 85
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -441,14 +441,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: diffpool
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on COLLAB dataset for graph classification accuracy
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -480,10 +480,10 @@ results:
     value_note: ''
     sort_value: 0.8213
     sort_std: 0.0043
-    global_rank: 41
-    paper_rank: 194
-    rank_delta: 153
-    rank_delta_abs: 153
+    global_rank: 34
+    paper_rank: 169
+    rank_delta: 135
+    rank_delta_abs: 135
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -508,14 +508,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: simGrace
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on COLLAB dataset for graph classification accuracy
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -548,10 +548,10 @@ results:
     value_note: ''
     sort_value: 0.8188
     sort_std: 0.0023
-    global_rank: 45
-    paper_rank: 340
-    rank_delta: 295
-    rank_delta_abs: 295
+    global_rank: 38
+    paper_rank: 311
+    rank_delta: 273
+    rank_delta_abs: 273
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -577,14 +577,15 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: The paper describes StructMAE as a generative GMAE method
+      masking nodes.
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on COLLAB dataset for graph classification accuracy
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -617,8 +618,8 @@ results:
     value_note: ''
     sort_value: 0.8146
     sort_std: 0.0027
-    global_rank: 67
-    paper_rank: 67
+    global_rank: 56
+    paper_rank: 56
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -645,14 +646,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: gcc
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on COLLAB dataset for graph classification accuracy
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -684,10 +685,10 @@ results:
     value_note: ''
     sort_value: 0.811
     sort_std: null
-    global_rank: 91
-    paper_rank: 194
-    rank_delta: 103
-    rank_delta_abs: 103
+    global_rank: 76
+    paper_rank: 169
+    rank_delta: 93
+    rank_delta_abs: 93
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -712,14 +713,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: graphCL
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on COLLAB dataset for graph classification accuracy
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -752,10 +753,10 @@ results:
     value_note: ''
     sort_value: 0.8108
     sort_std: 0.0017
-    global_rank: 96
-    paper_rank: 344
-    rank_delta: 248
-    rank_delta_abs: 248
+    global_rank: 81
+    paper_rank: 315
+    rank_delta: 234
+    rank_delta_abs: 234
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -781,14 +782,15 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: The paper describes StructMAE as a generative GMAE method
+      masking nodes.
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on COLLAB dataset for graph classification accuracy
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -821,8 +823,8 @@ results:
     value_note: ''
     sort_value: 0.8053
     sort_std: 0.0022
-    global_rank: 125
-    paper_rank: 125
+    global_rank: 106
+    paper_rank: 106
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -849,14 +851,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: infogcl
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on COLLAB dataset for graph classification accuracy
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -889,8 +891,8 @@ results:
     value_note: ''
     sort_value: 0.8001
     sort_std: 0.0132
-    global_rank: 152
-    paper_rank: 152
+    global_rank: 131
+    paper_rank: 131
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -917,14 +919,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: 'infoGraph:'
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on COLLAB dataset for graph classification accuracy
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -956,10 +958,10 @@ results:
     value_note: ''
     sort_value: 0.794
     sort_std: null
-    global_rank: 172
-    paper_rank: 349
-    rank_delta: 177
-    rank_delta_abs: 177
+    global_rank: 151
+    paper_rank: 320
+    rank_delta: 169
+    rank_delta_abs: 169
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -992,7 +994,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 180
+    global_rank: 157
     sort_value: 0.792
     sort_std: 0.024
     comparison_type: global_top
@@ -1017,14 +1019,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: joao
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on COLLAB dataset for graph classification accuracy
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -1057,10 +1059,10 @@ results:
     value_note: ''
     sort_value: 0.7553
     sort_std: 0.0018
-    global_rank: 287
-    paper_rank: 360
-    rank_delta: 73
-    rank_delta_abs: 73
+    global_rank: 261
+    paper_rank: 330
+    rank_delta: 69
+    rank_delta_abs: 69
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1076,6 +1078,1037 @@ results:
   paper_metrics:
   - Accuracy
   metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id005
+  dataset: ClinTox
+  rows:
+  - model: SE(3)-I MPPH
+    model_key: se(3)-i mpph
+    model_plain: SE(3)-I MPPH
+    value: 0.993
+    std: 0.004
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2312.07633'
+    title: SE(3)-Invariant Multiparameter Persistent Homology for Chiral-Sensitive
+      Molecular Property Prediction
+    date: Dec 12, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-12'
+    venue: NeurIPS 2023 AI for Science Workshop
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: integrating SE(3)-invariance into Vietoris-Rips persistent
+      homology
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.993
+    sort_std: 0.004
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: KA-GCN
+    model_key: ka-gcn
+    model_plain: KA-GCN
+    value: 0.992
+    std: 0.005
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2604.16586'
+    title: A Systematic Survey and Benchmark of Deep Learning for Molecular Property
+      Prediction in the Foundation Model Era
+    date: Apr 17, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-17'
+    venue: Journal of Chemical Theory and Computation
+    codebase_url: https://github.com/Zongru-Li/Survey-and-Benchmarks-of-DL-for-Molecular-Property-Prediction-in-the-Foundation-Model-Era
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.992
+    sort_std: 0.005
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: KA-GAT
+    model_key: ka-gat
+    model_plain: KA-GAT
+    value: 0.991
+    std: 0.005
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2604.16586'
+    title: A Systematic Survey and Benchmark of Deep Learning for Molecular Property
+      Prediction in the Foundation Model Era
+    date: Apr 17, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-17'
+    venue: Journal of Chemical Theory and Computation
+    codebase_url: https://github.com/Zongru-Li/Survey-and-Benchmarks-of-DL-for-Molecular-Property-Prediction-in-the-Foundation-Model-Era
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.991
+    sort_std: 0.005
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.913
+    std: 0.017
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2112.03806'
+    title: 'OOD-GNN: Out-of-Distribution Generalized Graph Neural Network'
+    date: Dec 7, 2021
+    date_display: Dec 2021
+    date_iso: '2021-12-07'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 19
+    sort_value: 0.913
+    sort_std: 0.017
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: StructMAE-L
+    model_key: structmae-l
+    model_plain: StructMAE-L
+    value: 0.879
+    std: 0.021
+    paper_value: 0.879
+    paper_std: 0.021
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: pre-trained on ZINC15
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on ClinTox using scaffold split
+    date: Apr 24, 2024
+    date_display: Apr 2024
+    date_iso: '2024-04-24'
+    published_venue: IJCAI 2024
+    published_conference: IJCAI 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-04-24'
+    value_gap_source_date_label: IJCAI 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.879
+    true_std: 0.021
+    value_gap_source_arxiv: '2404.15806'
+    value_gap_source_title: 'Where to Mask: Structure-Guided Masking for Graph Masked
+      Autoencoders'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.879
+    sort_std: 0.021
+    global_rank: 39
+    paper_rank: 39
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: StructMAE-P
+    model_key: structmae-p
+    model_plain: StructMAE-P
+    value: 0.86
+    std: 0.016
+    paper_value: 0.86
+    paper_std: 0.016
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: pre-trained on ZINC15
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on ClinTox using scaffold split
+    date: Apr 24, 2024
+    date_display: Apr 2024
+    date_iso: '2024-04-24'
+    published_venue: IJCAI 2024
+    published_conference: IJCAI 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-04-24'
+    value_gap_source_date_label: IJCAI 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.86
+    true_std: 0.016
+    value_gap_source_arxiv: '2404.15806'
+    value_gap_source_title: 'Where to Mask: Structure-Guided Masking for Graph Masked
+      Autoencoders'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.86
+    sort_std: 0.016
+    global_rank: 51
+    paper_rank: 51
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: RGCL
+    model_key: rgcl
+    model_plain: RGCL
+    value: 0.85
+    std: 0.008
+    paper_value: 0.85
+    paper_std: 0.008
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: pre-trained on ZINC15
+    table_ref: Table 2
+    source_ref: rgcl
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on ClinTox using scaffold split
+    date: Apr 24, 2024
+    date_display: Apr 2024
+    date_iso: '2024-04-24'
+    published_venue: IJCAI 2024
+    published_conference: IJCAI 2024
+    at_pub_value: 0.85
+    at_pub_std: 0.008
+    at_pub_source_arxiv: '2310.14753'
+    at_pub_source_title: Rethinking Tokenizer and Decoder in Masked Graph Modeling
+      for Molecules
+    at_pub_source_date_iso: '2023-10-23'
+    at_pub_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2024-04-24'
+    value_gap_source_date_label: IJCAI 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.85
+    true_std: 0.008
+    value_gap_source_arxiv: '2404.15806'
+    value_gap_source_title: 'Where to Mask: Structure-Guided Masking for Graph Masked
+      Autoencoders'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.85
+    sort_std: 0.008
+    global_rank: 57
+    paper_rank: 57
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphMAE
+    model_key: graphmae
+    model_plain: GraphMAE
+    value: 0.823
+    std: 0.012
+    paper_value: 0.823
+    paper_std: 0.012
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: pre-trained on ZINC15
+    table_ref: Table 2
+    source_ref: graphmae
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on ClinTox using scaffold split
+    date: Apr 24, 2024
+    date_display: Apr 2024
+    date_iso: '2024-04-24'
+    published_venue: IJCAI 2024
+    published_conference: IJCAI 2024
+    at_pub_value: 0.823
+    at_pub_std: 0.012
+    at_pub_source_arxiv: '2205.10803'
+    at_pub_source_title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
+    at_pub_source_date_iso: '2022-05-22'
+    at_pub_source_date_label: KDD 2022
+    value_gap_source_date_iso: '2025-03-06'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.823
+    true_std: 0.012
+    value_gap_source_arxiv: '2503.04362'
+    value_gap_source_title: A Generalist Cross-Domain Molecular Learning Framework
+      for Structure-Based Drug Discovery
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.823
+    sort_std: 0.012
+    global_rank: 71
+    paper_rank: 71
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: JOAO
+    model_key: joao
+    model_plain: JOAO
+    value: 0.813
+    std: 0.025
+    paper_value: 0.813
+    paper_std: 0.025
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: pre-trained on ZINC15
+    table_ref: Table 2
+    source_ref: joao
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on ClinTox using scaffold split
+    date: Apr 24, 2024
+    date_display: Apr 2024
+    date_iso: '2024-04-24'
+    published_venue: IJCAI 2024
+    published_conference: IJCAI 2024
+    at_pub_value: 0.8132
+    at_pub_std: 0.0249
+    at_pub_source_arxiv: '2202.02989'
+    at_pub_source_title: Graph Self-supervised Learning with Accurate Discrepancy
+      Learning
+    at_pub_source_date_iso: '2022-02-07'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2023-09-05'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.000200000000000089
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.8132
+    true_std: 0.0249
+    value_gap_source_arxiv: '2309.02304'
+    value_gap_source_title: Graph Self-Contrast Representation Learning
+    value_gap_source_is_current_paper: false
+    value_gap: 0.000200000000000089
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8132
+    sort_std: 0.0249
+    global_rank: 79
+    paper_rank: 79
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Mole-BERT
+    model_key: mole-bert
+    model_plain: Mole-BERT
+    value: 0.789
+    std: 0.03
+    paper_value: 0.789
+    paper_std: 0.03
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 1
+    input_feature_source: llm_features
+    feature_source_evidence: pre-trained on ZINC15
+    table_ref: Table 2
+    source_ref: molebert
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on ClinTox using scaffold split
+    date: Apr 24, 2024
+    date_display: Apr 2024
+    date_iso: '2024-04-24'
+    published_venue: IJCAI 2024
+    published_conference: IJCAI 2024
+    at_pub_value: 0.801
+    at_pub_std: 0.036
+    at_pub_source_arxiv: '2310.14216'
+    at_pub_source_title: 'UniMAP: Universal SMILES-Graph Representation Learning'
+    at_pub_source_date_iso: '2023-10-22'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-10-22'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.01200000000000001
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.801
+    true_std: 0.036
+    value_gap_source_arxiv: '2310.14216'
+    value_gap_source_title: 'UniMAP: Universal SMILES-Graph Representation Learning'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.01200000000000001
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.801
+    sort_std: 0.036
+    global_rank: 88
+    paper_rank: 95
+    rank_delta: 7
+    rank_delta_abs: 7
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphCL
+    model_key: graphcl
+    model_plain: GraphCL
+    value: 0.76
+    std: 0.027
+    paper_value: 0.76
+    paper_std: 0.027
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: pre-trained on ZINC15
+    table_ref: Table 2
+    source_ref: graphCL
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on ClinTox using scaffold split
+    date: Apr 24, 2024
+    date_display: Apr 2024
+    date_iso: '2024-04-24'
+    published_venue: IJCAI 2024
+    published_conference: IJCAI 2024
+    at_pub_value: 0.789
+    at_pub_std: 0.042
+    at_pub_source_arxiv: '2110.07728'
+    at_pub_source_title: 16 Pre-training Molecular Graph Representation with 3D Geometry
+    at_pub_source_date_iso: '2021-10-07'
+    at_pub_source_date_label: ICLR 2021
+    value_gap_source_date_iso: '2025-01-02'
+    value_gap_source_date_label: ICML 2025
+    gap_vs_at_pub: 0.029000000000000026
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.789
+    true_std: 0.042
+    value_gap_source_arxiv: '2501.01073'
+    value_gap_source_title: Graph Generative Pre-trained Transformer
+    value_gap_source_is_current_paper: false
+    value_gap: 0.029000000000000026
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.789
+    sort_std: 0.042
+    global_rank: 96
+    paper_rank: 121
+    rank_delta: 25
+    rank_delta_abs: 25
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphMAE2
+    model_key: graphmae2
+    model_plain: GraphMAE2
+    value: 0.788
+    std: 0.03
+    paper_value: 0.788
+    paper_std: 0.03
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: pre-trained on ZINC15
+    table_ref: Table 2
+    source_ref: graphmae2
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on ClinTox using scaffold split
+    date: Apr 24, 2024
+    date_display: Apr 2024
+    date_iso: '2024-04-24'
+    published_venue: IJCAI 2024
+    published_conference: IJCAI 2024
+    at_pub_value: 0.789
+    at_pub_std: 0.028
+    at_pub_source_arxiv: '2402.08023'
+    at_pub_source_title: 'UGMAE: A Unified Framework for Graph Masked Autoencoders'
+    at_pub_source_date_iso: '2024-02-12'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2024-02-12'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.0010000000000000009
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.789
+    true_std: 0.028
+    value_gap_source_arxiv: '2402.08023'
+    value_gap_source_title: 'UGMAE: A Unified Framework for Graph Masked Autoencoders'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0010000000000000009
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.789
+    sort_std: 0.028
+    global_rank: 100
+    paper_rank: 100
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphLoG
+    model_key: graphlog
+    model_plain: GraphLoG
+    value: 0.767
+    std: 0.033
+    paper_value: 0.767
+    paper_std: 0.033
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: pre-trained on ZINC15
+    table_ref: Table 2
+    source_ref: graphlog
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on ClinTox using scaffold split
+    date: Apr 24, 2024
+    date_display: Apr 2024
+    date_iso: '2024-04-24'
+    published_venue: IJCAI 2024
+    published_conference: IJCAI 2024
+    at_pub_value: 0.7872
+    at_pub_std: 0.0258
+    at_pub_source_arxiv: '2206.07869'
+    at_pub_source_title: Let Invariant Rationale Discovery Inspire Graph Contrastive
+      Learning
+    at_pub_source_date_iso: '2022-06-16'
+    at_pub_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2023-09-05'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.020199999999999996
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.7872
+    true_std: 0.0258
+    value_gap_source_arxiv: '2309.02304'
+    value_gap_source_title: Graph Self-Contrast Representation Learning
+    value_gap_source_is_current_paper: false
+    value_gap: 0.020199999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7872
+    sort_std: 0.0258
+    global_rank: 102
+    paper_rank: 117
+    rank_delta: 15
+    rank_delta_abs: 15
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: ContextPred
+    model_key: contextpred
+    model_plain: ContextPred
+    value: 0.659
+    std: 0.038
+    paper_value: 0.659
+    paper_std: 0.038
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: pre-trained on ZINC15
+    table_ref: Table 2
+    source_ref: pretrain-gnn
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on ClinTox using scaffold split
+    date: Apr 24, 2024
+    date_display: Apr 2024
+    date_iso: '2024-04-24'
+    published_venue: IJCAI 2024
+    published_conference: IJCAI 2024
+    at_pub_value: 0.772
+    at_pub_std: 0.0088
+    at_pub_source_arxiv: '2305.18407'
+    at_pub_source_title: A Group Symmetric Stochastic Differential Equation Model
+      for Molecule Multi-modal Pretraining
+    at_pub_source_date_iso: '2023-05-28'
+    at_pub_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2025-03-06'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.11299999999999999
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.772
+    true_std: 0.0088
+    value_gap_source_arxiv: '2503.04362'
+    value_gap_source_title: A Generalist Cross-Domain Molecular Learning Framework
+      for Structure-Based Drug Discovery
+    value_gap_source_is_current_paper: false
+    value_gap: 0.11299999999999999
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.772
+    sort_std: 0.0088
+    global_rank: 115
+    paper_rank: 202
+    rank_delta: 87
+    rank_delta_abs: 87
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: A Group Symmetric Stochastic Differential Equation Model
+      for Molecule Multi-modal Pretraining
+    comparison_source_arxiv: '2305.18407'
+    is_best: false
+    is_std_outlier: false
+  - model: Infomax
+    model_key: infomax
+    model_plain: Infomax
+    value: 0.699
+    std: 0.03
+    paper_value: 0.699
+    paper_std: 0.03
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: pre-trained on ZINC15
+    table_ref: Table 2
+    source_ref: pretrain-gnn
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on ClinTox using scaffold split
+    date: Apr 24, 2024
+    date_display: Apr 2024
+    date_iso: '2024-04-24'
+    published_venue: IJCAI 2024
+    published_conference: IJCAI 2024
+    at_pub_value: 0.73
+    at_pub_std: 0.032
+    at_pub_source_arxiv: '2110.00987'
+    at_pub_source_title: Motif-based Graph Self-Supervised Learning for Molecular
+      Property Prediction
+    at_pub_source_date_iso: '2021-10-03'
+    at_pub_source_date_label: NeurIPS 2021
+    value_gap_source_date_iso: '2021-10-03'
+    value_gap_source_date_label: NeurIPS 2021
+    gap_vs_at_pub: 0.031000000000000028
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.73
+    true_std: 0.032
+    value_gap_source_arxiv: '2110.00987'
+    value_gap_source_title: Motif-based Graph Self-Supervised Learning for Molecular
+      Property Prediction
+    value_gap_source_is_current_paper: false
+    value_gap: 0.031000000000000028
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.73
+    sort_std: 0.032
+    global_rank: 153
+    paper_rank: 178
+    rank_delta: 25
+    rank_delta_abs: 25
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: AttrMasking
+    model_key: attrmasking
+    model_plain: AttrMasking
+    value: 0.718
+    std: 0.041
+    paper_value: 0.718
+    paper_std: 0.041
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: pre-trained on ZINC15
+    table_ref: Table 2
+    source_ref: pretrain-gnn
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on ClinTox using scaffold split
+    date: Apr 24, 2024
+    date_display: Apr 2024
+    date_iso: '2024-04-24'
+    published_venue: IJCAI 2024
+    published_conference: IJCAI 2024
+    at_pub_value: 0.718
+    at_pub_std: 0.041
+    at_pub_source_arxiv: '2205.10803'
+    at_pub_source_title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
+    at_pub_source_date_iso: '2022-05-22'
+    at_pub_source_date_label: KDD 2022
+    value_gap_source_date_iso: '2024-06-01'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.718
+    true_std: 0.041
+    value_gap_source_arxiv: '2406.00403'
+    value_gap_source_title: Dual-perspective Cross Contrastive Learning in Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.718
+    sort_std: 0.041
+    global_rank: 165
+    paper_rank: 165
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: No-pretrain
+    model_key: no-pretrain
+    model_plain: No-pretrain
+    value: 0.582
+    std: 0.028
+    paper_value: 0.582
+    paper_std: 0.028
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on ClinTox using scaffold split
+    date: Apr 24, 2024
+    date_display: Apr 2024
+    date_iso: '2024-04-24'
+    published_venue: IJCAI 2024
+    published_conference: IJCAI 2024
+    at_pub_value: 0.582
+    at_pub_std: 0.028
+    at_pub_source_arxiv: '2205.10803'
+    at_pub_source_title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
+    at_pub_source_date_iso: '2022-05-22'
+    at_pub_source_date_label: KDD 2022
+    value_gap_source_date_iso: '2024-06-01'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: true
+    true_value: 0.644
+    true_std: 0.042
+    value_gap_source_arxiv: '2406.00403'
+    value_gap_source_title: Dual-perspective Cross Contrastive Learning in Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: 0.062000000000000055
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.644
+    sort_std: 0.042
+    global_rank: 210
+    paper_rank: 234
+    rank_delta: 24
+    rank_delta_abs: 24
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: ROC-AUC
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: ROC-AUC
+  paper_metrics:
+  - ROC-AUC
+  metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 - &id001
@@ -1103,7 +2136,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -1197,14 +2230,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: gin [21]
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Accuracy on MUTAG using 10-fold CV
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -1297,14 +2330,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: infogcl [27]
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Accuracy on MUTAG using 10-fold CV
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -1364,14 +2397,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: diffpool [22]
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Accuracy on MUTAG using 10-fold CV
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -1405,9 +2438,9 @@ results:
     sort_value: 0.894
     sort_std: 0.046
     global_rank: 256
-    paper_rank: 778
-    rank_delta: 522
-    rank_delta_abs: 522
+    paper_rank: 785
+    rank_delta: 529
+    rank_delta_abs: 529
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1432,14 +2465,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: infoGraph [23]
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Accuracy on MUTAG using 10-fold CV
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -1501,14 +2534,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: graphmae [29]
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Accuracy on MUTAG using 10-fold CV
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -1542,9 +2575,9 @@ results:
     sort_value: 0.893
     sort_std: 0.011
     global_rank: 274
-    paper_rank: 345
-    rank_delta: 71
-    rank_delta_abs: 71
+    paper_rank: 346
+    rank_delta: 72
+    rank_delta_abs: 72
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1569,14 +2602,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: s2gae [30]
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Accuracy on MUTAG using 10-fold CV
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -1611,9 +2644,9 @@ results:
     sort_value: 0.8927
     sort_std: 0.0153
     global_rank: 282
-    paper_rank: 342
-    rank_delta: 60
-    rank_delta_abs: 60
+    paper_rank: 343
+    rank_delta: 61
+    rank_delta_abs: 61
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1638,14 +2671,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: simGrace [28]
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Accuracy on MUTAG using 10-fold CV
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -1707,14 +2740,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Accuracy on MUTAG using 10-fold CV
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -1747,8 +2780,8 @@ results:
     value_note: ''
     sort_value: 0.8843
     sort_std: 0.0054
-    global_rank: 330
-    paper_rank: 330
+    global_rank: 331
+    paper_rank: 331
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1775,14 +2808,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: graphCL [24]
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Accuracy on MUTAG using 10-fold CV
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -1815,8 +2848,8 @@ results:
     value_note: ''
     sort_value: 0.8829
     sort_std: 0.0131
-    global_rank: 341
-    paper_rank: 421
+    global_rank: 342
+    paper_rank: 422
     rank_delta: 80
     rank_delta_abs: 80
     rank_delta_direction: worse
@@ -1843,14 +2876,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Accuracy on MUTAG using 10-fold CV
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -1883,8 +2916,8 @@ results:
     value_note: ''
     sort_value: 0.8791
     sort_std: 0.0039
-    global_rank: 353
-    paper_rank: 353
+    global_rank: 354
+    paper_rank: 354
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1911,14 +2944,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: joao [25]
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Accuracy on MUTAG using 10-fold CV
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -1951,8 +2984,8 @@ results:
     value_note: ''
     sort_value: 0.877
     sort_std: 0.008
-    global_rank: 370
-    paper_rank: 389
+    global_rank: 371
+    paper_rank: 390
     rank_delta: 19
     rank_delta_abs: 19
     rank_delta_direction: worse
@@ -1987,7 +3020,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 429
+    global_rank: 430
     sort_value: 0.866
     sort_std: 0.0495
     comparison_type: global_top
@@ -2058,14 +3091,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: gin [21]
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: Accuracy on NCI1 using 10-fold CV
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -2098,9 +3131,9 @@ results:
     sort_value: 0.9934
     sort_std: null
     global_rank: 2
-    paper_rank: 100
-    rank_delta: 98
-    rank_delta_abs: 98
+    paper_rank: 101
+    rank_delta: 99
+    rank_delta_abs: 99
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2158,14 +3191,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: diffpool [22]
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: Accuracy on NCI1 using 10-fold CV
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -2235,7 +3268,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 81
+    global_rank: 82
     sort_value: 0.8303
     sort_std: 0.0137
     comparison_type: global_top
@@ -2260,14 +3293,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: graphCL [24]
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: Accuracy on NCI1 using 10-fold CV
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -2301,9 +3334,9 @@ results:
     sort_value: 0.825
     sort_std: 0.0013
     global_rank: 115
-    paper_rank: 362
-    rank_delta: 247
-    rank_delta_abs: 247
+    paper_rank: 361
+    rank_delta: 246
+    rank_delta_abs: 246
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2329,14 +3362,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: s2gae [30]
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: Accuracy on NCI1 using 10-fold CV
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -2371,9 +3404,9 @@ results:
     sort_value: 0.8237
     sort_std: 0.0224
     global_rank: 122
-    paper_rank: 201
-    rank_delta: 79
-    rank_delta_abs: 79
+    paper_rank: 200
+    rank_delta: 78
+    rank_delta_abs: 78
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2398,14 +3431,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: Accuracy on NCI1 using 10-fold CV
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -2466,14 +3499,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: simGrace [28]
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: Accuracy on NCI1 using 10-fold CV
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -2507,9 +3540,9 @@ results:
     sort_value: 0.818
     sort_std: 0.0015
     global_rank: 151
-    paper_rank: 286
-    rank_delta: 135
-    rank_delta_abs: 135
+    paper_rank: 285
+    rank_delta: 134
+    rank_delta_abs: 134
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2535,14 +3568,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: Accuracy on NCI1 using 10-fold CV
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -2603,14 +3636,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: graphmae [29]
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: Accuracy on NCI1 using 10-fold CV
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -2643,8 +3676,8 @@ results:
     value_note: ''
     sort_value: 0.8042
     sort_std: 0.0035
-    global_rank: 220
-    paper_rank: 222
+    global_rank: 219
+    paper_rank: 221
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -2671,14 +3704,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: infogcl [27]
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: Accuracy on NCI1 using 10-fold CV
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -2738,14 +3771,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: joao [25]
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: Accuracy on NCI1 using 10-fold CV
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -2779,8 +3812,8 @@ results:
     value_note: ''
     sort_value: 0.784
     sort_std: 0.005
-    global_rank: 332
-    paper_rank: 348
+    global_rank: 331
+    paper_rank: 347
     rank_delta: 16
     rank_delta_abs: 16
     rank_delta_direction: worse
@@ -2807,14 +3840,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: infoGraph [23]
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: Accuracy on NCI1 using 10-fold CV
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -2846,8 +3879,8 @@ results:
     value_note: ''
     sort_value: 0.775
     sort_std: 0.0074
-    global_rank: 378
-    paper_rank: 427
+    global_rank: 375
+    paper_rank: 424
     rank_delta: 49
     rank_delta_abs: 49
     rank_delta_direction: worse
@@ -2869,6 +3902,72 @@ results:
 - &id003
   dataset: PROTEINS
   rows:
+  - model: MSH-GNN
+    model_key: msh-gnn
+    model_plain: MSH-GNN
+    value: 0.941
+    std: 0.033
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.15015'
+    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
+    date: May 21, 2025
+    date_display: May 2025
+    date_iso: '2025-05-21'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.941
+    sort_std: 0.033
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GRDL
+    model_key: grdl
+    model_plain: GRDL
+    value: 0.826
+    std: 0.012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2408.11370'
+    title: 'Graph Classification via Reference Distribution Learning: Theory and Practice'
+    date: Aug 21, 2024
+    date_display: Aug 2024
+    date_iso: '2024-08-21'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.826
+    sort_std: 0.012
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: GMN
     model_key: gmn
     model_plain: GMN
@@ -2894,81 +3993,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 3
     sort_value: 0.8225
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: CI-GNN
-    model_key: ci-gnn
-    model_plain: CI-GNN
-    value: 0.82
-    std: 0.02
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2301.01642'
-    title: 'CI-GNN: A Granger Causality-Inspired Graph Neural Network for Interpretable
-      Brain Network-Based Psychiatric Diagnosis'
-    date: Jan 4, 2023
-    date_display: Jan 2023
-    date_iso: '2023-01-04'
-    venue: Neural Networks
-    codebase_url: https://github.com/ZKZ-Brain/CI-GNN
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.82
-    sort_std: 0.02
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: DiffPool+GPL
-    model_key: diffpool+gpl
-    model_plain: DiffPool+GPL
-    value: 0.8196
-    std: 0.0286
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.11361'
-    title: 'Graph Structure Prompt Learning: A Novel Methodology to Improve Performance
-      of Graph Neural Networks'
-    date: Jul 16, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-16'
-    venue: Applied intelligence (Boston)
-    codebase_url: https://github.com/PreckLi/graph_prompt_learning
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.8196
-    sort_std: 0.0286
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: GIN
     model_key: gin
@@ -2987,14 +4018,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: gin
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on PROTEINS dataset
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -3028,16 +4059,16 @@ results:
     value_note: ''
     sort_value: 0.788
     sort_std: 0.041
-    global_rank: 27
-    paper_rank: 136
-    rank_delta: 109
-    rank_delta_abs: 109
+    global_rank: 38
+    paper_rank: 157
+    rank_delta: 119
+    rank_delta_abs: 119
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: SAGE
     model_key: sage
@@ -3064,7 +4095,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 63
+    global_rank: 80
     sort_value: 0.7726
     sort_std: 0.0228
     comparison_type: global_top
@@ -3089,14 +4120,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on PROTEINS dataset
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -3129,8 +4160,8 @@ results:
     value_note: ''
     sort_value: 0.7662
     sort_std: 0.0084
-    global_rank: 96
-    paper_rank: 96
+    global_rank: 116
+    paper_rank: 116
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3157,14 +4188,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: s2gae
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on PROTEINS dataset
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -3198,8 +4229,8 @@ results:
     value_note: ''
     sort_value: 0.7647
     sort_std: 0.0112
-    global_rank: 111
-    paper_rank: 126
+    global_rank: 131
+    paper_rank: 146
     rank_delta: 15
     rank_delta_abs: 15
     rank_delta_direction: worse
@@ -3234,7 +4265,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 153
+    global_rank: 170
     sort_value: 0.76
     sort_std: 0.032
     comparison_type: global_top
@@ -3259,14 +4290,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on PROTEINS dataset
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -3299,8 +4330,8 @@ results:
     value_note: ''
     sort_value: 0.7597
     sort_std: 0.0038
-    global_rank: 157
-    paper_rank: 157
+    global_rank: 174
+    paper_rank: 174
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3327,14 +4358,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: simGrace
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on PROTEINS dataset
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -3368,8 +4399,8 @@ results:
     value_note: ''
     sort_value: 0.7535
     sort_std: 0.0009
-    global_rank: 219
-    paper_rank: 219
+    global_rank: 238
+    paper_rank: 238
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3396,14 +4427,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: graphmae
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on PROTEINS dataset
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -3437,8 +4468,8 @@ results:
     value_note: ''
     sort_value: 0.753
     sort_std: 0.005
-    global_rank: 224
-    paper_rank: 224
+    global_rank: 243
+    paper_rank: 243
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3465,14 +4496,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: graphCL
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on PROTEINS dataset
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -3504,10 +4535,10 @@ results:
     value_note: ''
     sort_value: 0.7489
     sort_std: 0.0065
-    global_rank: 275
-    paper_rank: 309
-    rank_delta: 34
-    rank_delta_abs: 34
+    global_rank: 295
+    paper_rank: 331
+    rank_delta: 36
+    rank_delta_abs: 36
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3532,14 +4563,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: joao
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on PROTEINS dataset
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -3573,8 +4604,8 @@ results:
     value_note: ''
     sort_value: 0.746
     sort_std: 0.004
-    global_rank: 291
-    paper_rank: 297
+    global_rank: 313
+    paper_rank: 319
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -3601,14 +4632,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: 'infoGraph:'
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: 10-fold CV on PROTEINS dataset
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -3616,11 +4647,11 @@ results:
     published_conference: IJCAI 2024
     at_pub_value: 0.7444
     at_pub_std: 0.0031
-    at_pub_source_arxiv: '2202.03104'
-    at_pub_source_title: 'SimGRACE: A Simple Framework for Graph Contrastive Learning
-      without Data Augmentation'
-    at_pub_source_date_iso: '2022-02-07'
-    at_pub_source_date_label: WWW 2022
+    at_pub_source_arxiv: '2106.05819'
+    at_pub_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
+      Learning
+    at_pub_source_date_iso: '2021-06-10'
+    at_pub_source_date_label: NeurIPS 2021
     value_gap_source_date_iso: '2025-11-09'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -3642,8 +4673,8 @@ results:
     value_note: ''
     sort_value: 0.7444
     sort_std: 0.004
-    global_rank: 306
-    paper_rank: 306
+    global_rank: 328
+    paper_rank: 328
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3662,7 +4693,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id006
   dataset: SIDER
   rows:
   - model: KA-GAT
@@ -3790,7 +4821,7 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 66
@@ -3818,15 +4849,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: pre-trained on ZINC15
     table_ref: Table 1
     source_ref: joao
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 'Transfer learning task: pre-trained on ZINC15 and fine-tuned on
-      SIDER.'
+    protocol_note: ROC-AUC on SIDER test split via transfer learning from ZINC15
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -3861,9 +4891,9 @@ results:
     sort_value: 0.64
     sort_std: 0.01
     global_rank: 68
-    paper_rank: 183
-    rank_delta: 115
-    rank_delta_abs: 115
+    paper_rank: 184
+    rank_delta: 116
+    rank_delta_abs: 116
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3889,15 +4919,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: llm_features
+    feature_source_evidence: pre-trained on ZINC15
     table_ref: Table 1
     source_ref: molebert
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 'Transfer learning task: pre-trained on ZINC15 and fine-tuned on
-      SIDER.'
+    protocol_note: ROC-AUC on SIDER test split via transfer learning from ZINC15
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -3930,8 +4959,8 @@ results:
     value_note: ''
     sort_value: 0.628
     sort_std: 0.011
-    global_rank: 92
-    paper_rank: 92
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3958,15 +4987,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: pre-trained on ZINC15
     table_ref: Table 1
     source_ref: pretrain-gnn
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 'Transfer learning task: pre-trained on ZINC15 and fine-tuned on
-      SIDER.'
+    protocol_note: ROC-AUC on SIDER test split via transfer learning from ZINC15
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -4000,10 +5028,10 @@ results:
     value_note: ''
     sort_value: 0.622
     sort_std: 0.0059
-    global_rank: 105
-    paper_rank: 147
-    rank_delta: 42
-    rank_delta_abs: 42
+    global_rank: 104
+    paper_rank: 149
+    rank_delta: 45
+    rank_delta_abs: 45
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4029,15 +5057,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: pre-trained on ZINC15
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 'Transfer learning task: pre-trained on ZINC15 and fine-tuned on
-      SIDER.'
+    protocol_note: ROC-AUC on SIDER test split via transfer learning from ZINC15
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -4070,8 +5097,8 @@ results:
     value_note: ''
     sort_value: 0.62
     sort_std: 0.004
-    global_rank: 111
-    paper_rank: 111
+    global_rank: 110
+    paper_rank: 110
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4098,15 +5125,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: pre-trained on ZINC15
     table_ref: Table 1
     source_ref: graphCL
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 'Transfer learning task: pre-trained on ZINC15 and fine-tuned on
-      SIDER.'
+    protocol_note: ROC-AUC on SIDER test split via transfer learning from ZINC15
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -4140,10 +5166,10 @@ results:
     value_note: ''
     sort_value: 0.6183
     sort_std: 0.006
-    global_rank: 116
-    paper_rank: 163
-    rank_delta: 47
-    rank_delta_abs: 47
+    global_rank: 115
+    paper_rank: 164
+    rank_delta: 49
+    rank_delta_abs: 49
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -4168,15 +5194,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: pre-trained on ZINC15
     table_ref: Table 1
     source_ref: pretrain-gnn
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 'Transfer learning task: pre-trained on ZINC15 and fine-tuned on
-      SIDER.'
+    protocol_note: ROC-AUC on SIDER test split via transfer learning from ZINC15
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -4210,10 +5235,10 @@ results:
     value_note: ''
     sort_value: 0.616
     sort_std: 0.024
-    global_rank: 122
-    paper_rank: 208
-    rank_delta: 86
-    rank_delta_abs: 86
+    global_rank: 121
+    paper_rank: 209
+    rank_delta: 88
+    rank_delta_abs: 88
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4239,15 +5264,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: pre-trained on ZINC15
     table_ref: Table 1
     source_ref: graphlog
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 'Transfer learning task: pre-trained on ZINC15 and fine-tuned on
-      SIDER.'
+    protocol_note: ROC-AUC on SIDER test split via transfer learning from ZINC15
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -4281,10 +5305,10 @@ results:
     value_note: ''
     sort_value: 0.615
     sort_std: 0.013
-    global_rank: 125
-    paper_rank: 135
-    rank_delta: 10
-    rank_delta_abs: 10
+    global_rank: 124
+    paper_rank: 136
+    rank_delta: 12
+    rank_delta_abs: 12
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -4309,15 +5333,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: pre-trained on ZINC15
     table_ref: Table 1
     source_ref: rgcl
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 'Transfer learning task: pre-trained on ZINC15 and fine-tuned on
-      SIDER.'
+    protocol_note: ROC-AUC on SIDER test split via transfer learning from ZINC15
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -4349,10 +5372,10 @@ results:
     value_note: ''
     sort_value: 0.614
     sort_std: 0.006
-    global_rank: 130
-    paper_rank: 135
-    rank_delta: 5
-    rank_delta_abs: 5
+    global_rank: 129
+    paper_rank: 136
+    rank_delta: 7
+    rank_delta_abs: 7
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -4377,15 +5400,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: pre-trained on ZINC15
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 'Transfer learning task: pre-trained on ZINC15 and fine-tuned on
-      SIDER.'
+    protocol_note: ROC-AUC on SIDER test split via transfer learning from ZINC15
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -4418,8 +5440,8 @@ results:
     value_note: ''
     sort_value: 0.613
     sort_std: 0.005
-    global_rank: 134
-    paper_rank: 134
+    global_rank: 135
+    paper_rank: 135
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4446,15 +5468,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: pre-trained on ZINC15
     table_ref: Table 1
     source_ref: pretrain-gnn
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 'Transfer learning task: pre-trained on ZINC15 and fine-tuned on
-      SIDER.'
+    protocol_note: ROC-AUC on SIDER test split via transfer learning from ZINC15
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -4487,8 +5508,8 @@ results:
     value_note: ''
     sort_value: 0.6121
     sort_std: 0.0065
-    global_rank: 135
-    paper_rank: 143
+    global_rank: 136
+    paper_rank: 144
     rank_delta: 8
     rank_delta_abs: 8
     rank_delta_direction: worse
@@ -4515,53 +5536,53 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: pre-trained on ZINC15
     table_ref: Table 1
     source_ref: graphmae
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 'Transfer learning task: pre-trained on ZINC15 and fine-tuned on
-      SIDER.'
+    protocol_note: ROC-AUC on SIDER test split via transfer learning from ZINC15
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
     published_venue: IJCAI 2024
     published_conference: IJCAI 2024
-    at_pub_value: 0.603
-    at_pub_std: 0.011
-    at_pub_source_arxiv: '2309.04589'
-    at_pub_source_title: Motif-aware Attribute Masking for Molecular Graph Pre-training
-    at_pub_source_date_iso: '2023-09-08'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2025-03-06'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
+    at_pub_value: 0.605
+    at_pub_std: 0.012
+    at_pub_source_arxiv: '2311.01038'
+    at_pub_source_title: 'Better with Less: A Data-Active Perspective on Pre-Training
+      Graph Neural Networks'
+    at_pub_source_date_iso: '2023-11-02'
+    at_pub_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2023-11-02'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 0.0020000000000000018
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
+    insignificant_value_gap: true
     today_delta_significant: false
-    true_value: 0.603
-    true_std: 0.011
-    value_gap_source_arxiv: '2503.04362'
-    value_gap_source_title: A Generalist Cross-Domain Molecular Learning Framework
-      for Structure-Based Drug Discovery
+    true_value: 0.605
+    true_std: 0.012
+    value_gap_source_arxiv: '2311.01038'
+    value_gap_source_title: 'Better with Less: A Data-Active Perspective on Pre-Training
+      Graph Neural Networks'
     value_gap_source_is_current_paper: false
-    value_gap: null
+    value_gap: 0.0020000000000000018
     has_value_note: false
     value_note: ''
-    sort_value: 0.603
-    sort_std: 0.011
-    global_rank: 176
-    paper_rank: 176
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
+    sort_value: 0.605
+    sort_std: 0.012
+    global_rank: 165
+    paper_rank: 177
+    rank_delta: 12
+    rank_delta_abs: 12
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -4584,15 +5605,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: pre-trained on ZINC15
     table_ref: Table 1
     source_ref: graphmae2
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 'Transfer learning task: pre-trained on ZINC15 and fine-tuned on
-      SIDER.'
+    protocol_note: ROC-AUC on SIDER test split via transfer learning from ZINC15
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -4624,8 +5644,8 @@ results:
     value_note: ''
     sort_value: 0.597
     sort_std: 0.006
-    global_rank: 194
-    paper_rank: 194
+    global_rank: 195
+    paper_rank: 195
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4652,15 +5672,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 'Transfer learning task: pre-trained on ZINC15 and fine-tuned on
-      SIDER.'
+    protocol_note: ROC-AUC on SIDER test split via transfer learning from ZINC15
     date: Apr 24, 2024
     date_display: Apr 2024
     date_iso: '2024-04-24'
@@ -4692,8 +5711,8 @@ results:
     value_note: ''
     sort_value: 0.581
     sort_std: 0.01
-    global_rank: 215
-    paper_rank: 226
+    global_rank: 216
+    paper_rank: 227
     rank_delta: 11
     rank_delta_abs: 11
     rank_delta_direction: worse
@@ -4722,6 +5741,7 @@ results_grouped:
 - benchmark: MoleculeNet
   datasets:
   - *id005
+  - *id006
 datasets_by_scope:
 - scope: graph-level
   label: Graph-level
@@ -4740,6 +5760,8 @@ datasets_by_scope:
   - benchmark: MoleculeNet
     benchmark_slug: moleculenet
     datasets:
+    - dataset: ClinTox
+      dataset_slug: clintox
     - dataset: SIDER
       dataset_slug: sider
 main_figure: /figures/2404.15806/main_figure.jpegoptim.jpg

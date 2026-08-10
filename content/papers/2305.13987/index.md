@@ -53,13 +53,12 @@ has_results: true
 paper_type: method
 proposed_models:
 - Graphormer-SPIS
-mrr: 0.0311
-adjusted_mrr: 0.0207
+mrr: 0.0239
+adjusted_mrr: 0.0159
 mrr_dataset_count: 2
 benchmark_categories:
 - TU Dortmund
 - MoleculeNet
-- Quantum Chemistry
 benchmark_coverage:
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
@@ -69,10 +68,6 @@ benchmark_coverage:
   benchmark_slug: moleculenet
   evaluated: 1
   total: 9
-- benchmark: Quantum Chemistry
-  benchmark_slug: quantum-chemistry
-  evaluated: 1
-  total: 3
 task_categories:
 - graph_classification
 - graph_regression
@@ -82,108 +77,6 @@ results:
 - &id003
   dataset: ESOL
   rows:
-  - model: 10% ZINC + 10% PubChem
-    model_key: 10% zinc + 10% pubchem
-    model_plain: 10% ZINC + 10% PubChem
-    value: 0.2775
-    std: null
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.2775
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: MAT
-    model_key: mat
-    model_plain: MAT
-    value: 0.278
-    std: 0.02
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2002.08264'
-    title: Molecule Attention Transformer
-    date: Feb 19, 2020
-    date_display: Feb 2020
-    date_iso: '2020-02-19'
-    venue: Graph Representation Learning workshop and Machine Learning and the Physical
-      Sciences workshop at NeurIPS 2019
-    codebase_url: https://github.com/gmum/MAT
-    uses_external_data: true
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.278
-    sort_std: 0.02
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: MoLFormer-XL
-    model_key: molformer-xl
-    model_plain: MoLFormer-XL
-    value: 0.2787
-    std: null
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.2787
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
   - model: Graphormer-SPIS
     model_key: graphormer-spis
     model_plain: Graphormer-SPIS
@@ -240,8 +133,8 @@ results:
     value_note: ''
     sort_value: 0.484
     sort_std: 0.005
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 1
+    paper_rank: 1
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -249,7 +142,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: Graphormer-SPD
     model_key: graphormer-spd
@@ -307,13 +200,46 @@ results:
     value_note: ''
     sort_value: 0.492
     sort_std: 0.004
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 2
+    paper_rank: 2
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: conan-FGW
+    model_key: conan-fgw
+    model_plain: conan-FGW
+    value: 0.514
+    std: 0.019
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2402.01975'
+    title: Structure-Aware E(3)-Invariant Molecular Conformer Aggregation Networks
+    date: Feb 3, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-03'
+    venue: International Conference on Machine Learning
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.514
+    sort_std: 0.019
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -374,8 +300,8 @@ results:
     value_note: ''
     sort_value: 0.552
     sort_std: 0.007
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -441,8 +367,8 @@ results:
     value_note: ''
     sort_value: 0.564
     sort_std: 0.015
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -508,8 +434,8 @@ results:
     value_note: ''
     sort_value: 0.58
     sort_std: null
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -575,8 +501,8 @@ results:
     value_note: ''
     sort_value: 0.601
     sort_std: 0.008
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -642,8 +568,8 @@ results:
     value_note: ''
     sort_value: 0.612
     sort_std: 0.002
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -709,8 +635,8 @@ results:
     value_note: ''
     sort_value: 0.626
     sort_std: 0.017
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -776,8 +702,8 @@ results:
     value_note: ''
     sort_value: 0.639
     sort_std: 0.034
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -821,7 +747,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -1090,9 +1016,9 @@ results:
     sort_value: 0.922
     sort_std: 0.044
     global_rank: 71
-    paper_rank: 459
-    rank_delta: 388
-    rank_delta_abs: 388
+    paper_rank: 460
+    rank_delta: 389
+    rank_delta_abs: 389
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1359,9 +1285,9 @@ results:
     sort_value: 0.904
     sort_std: 0.078
     global_rank: 170
-    paper_rank: 482
-    rank_delta: 312
-    rank_delta_abs: 312
+    paper_rank: 483
+    rank_delta: 313
+    rank_delta_abs: 313
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1629,9 +1555,9 @@ results:
     sort_value: 0.901
     sort_std: 0.058
     global_rank: 196
-    paper_rank: 505
-    rank_delta: 309
-    rank_delta_abs: 309
+    paper_rank: 506
+    rank_delta: 310
+    rank_delta_abs: 310
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1696,8 +1622,8 @@ results:
     value_note: ''
     sort_value: 0.8842
     sort_std: 0.0567
-    global_rank: 331
-    paper_rank: 331
+    global_rank: 332
+    paper_rank: 332
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1732,7 +1658,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 429
+    global_rank: 430
     sort_value: 0.866
     sort_std: 0.0495
     comparison_type: global_top
@@ -1796,8 +1722,8 @@ results:
     value_note: ''
     sort_value: 0.861
     sort_std: null
-    global_rank: 448
-    paper_rank: 448
+    global_rank: 449
+    paper_rank: 449
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1863,8 +1789,8 @@ results:
     value_note: ''
     sort_value: 0.8549
     sort_std: 0.0851
-    global_rank: 472
-    paper_rank: 472
+    global_rank: 473
+    paper_rank: 473
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1899,7 +1825,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 778
+    global_rank: 785
     sort_value: 0.7518
     sort_std: 0.047
     comparison_type: global_top
@@ -1919,6 +1845,72 @@ results:
 - &id002
   dataset: PROTEINS
   rows:
+  - model: MSH-GNN
+    model_key: msh-gnn
+    model_plain: MSH-GNN
+    value: 0.941
+    std: 0.033
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.15015'
+    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
+    date: May 21, 2025
+    date_display: May 2025
+    date_iso: '2025-05-21'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.941
+    sort_std: 0.033
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GRDL
+    model_key: grdl
+    model_plain: GRDL
+    value: 0.826
+    std: 0.012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2408.11370'
+    title: 'Graph Classification via Reference Distribution Learning: Theory and Practice'
+    date: Aug 21, 2024
+    date_display: Aug 2024
+    date_iso: '2024-08-21'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.826
+    sort_std: 0.012
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: GMN
     model_key: gmn
     model_plain: GMN
@@ -1944,81 +1936,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 3
     sort_value: 0.8225
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: CI-GNN
-    model_key: ci-gnn
-    model_plain: CI-GNN
-    value: 0.82
-    std: 0.02
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2301.01642'
-    title: 'CI-GNN: A Granger Causality-Inspired Graph Neural Network for Interpretable
-      Brain Network-Based Psychiatric Diagnosis'
-    date: Jan 4, 2023
-    date_display: Jan 2023
-    date_iso: '2023-01-04'
-    venue: Neural Networks
-    codebase_url: https://github.com/ZKZ-Brain/CI-GNN
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.82
-    sort_std: 0.02
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: DiffPool+GPL
-    model_key: diffpool+gpl
-    model_plain: DiffPool+GPL
-    value: 0.8196
-    std: 0.0286
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.11361'
-    title: 'Graph Structure Prompt Learning: A Novel Methodology to Improve Performance
-      of Graph Neural Networks'
-    date: Jul 16, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-16'
-    venue: Applied intelligence (Boston)
-    codebase_url: https://github.com/PreckLi/graph_prompt_learning
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.8196
-    sort_std: 0.0286
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: Graphormer-SPIS
     model_key: graphormer-spis
@@ -2076,8 +2000,8 @@ results:
     value_note: ''
     sort_value: 0.7941
     sort_std: 0.0146
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2145,16 +2069,16 @@ results:
     value_note: ''
     sort_value: 0.788
     sort_std: 0.041
-    global_rank: 27
-    paper_rank: 159
-    rank_delta: 132
-    rank_delta_abs: 132
+    global_rank: 38
+    paper_rank: 176
+    rank_delta: 138
+    rank_delta_abs: 138
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: Graphormer-SPD
     model_key: graphormer-spd
@@ -2212,8 +2136,8 @@ results:
     value_note: ''
     sort_value: 0.7859
     sort_std: 0.0435
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2221,7 +2145,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: Graphormer-Neighbor
     model_key: graphormer-neighbor
@@ -2279,8 +2203,8 @@ results:
     value_note: ''
     sort_value: 0.7812
     sort_std: 0.0362
-    global_rank: 45
-    paper_rank: 45
+    global_rank: 57
+    paper_rank: 57
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2348,10 +2272,10 @@ results:
     value_note: ''
     sort_value: 0.78
     sort_std: 0.03
-    global_rank: 47
-    paper_rank: 435
-    rank_delta: 388
-    rank_delta_abs: 388
+    global_rank: 59
+    paper_rank: 483
+    rank_delta: 424
+    rank_delta_abs: 424
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2384,7 +2308,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 63
+    global_rank: 80
     sort_value: 0.7726
     sort_std: 0.0228
     comparison_type: global_top
@@ -2448,8 +2372,8 @@ results:
     value_note: ''
     sort_value: 0.7719
     sort_std: 0.0407
-    global_rank: 71
-    paper_rank: 71
+    global_rank: 88
+    paper_rank: 88
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2515,10 +2439,10 @@ results:
     value_note: ''
     sort_value: 0.7667
     sort_std: 0.0305
-    global_rank: 93
-    paper_rank: 159
-    rank_delta: 66
-    rank_delta_abs: 66
+    global_rank: 113
+    paper_rank: 176
+    rank_delta: 63
+    rank_delta_abs: 63
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2582,10 +2506,10 @@ results:
     value_note: ''
     sort_value: 0.7665
     sort_std: 0.0314
-    global_rank: 94
-    paper_rank: 149
-    rank_delta: 55
-    rank_delta_abs: 55
+    global_rank: 114
+    paper_rank: 168
+    rank_delta: 54
+    rank_delta_abs: 54
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2629,8 +2553,8 @@ results:
     at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
     at_pub_source_date_iso: '2021-06-23'
     at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2023-08-16'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-05-21'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: 0.020000000000000018
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2641,18 +2565,19 @@ results:
     today_delta_significant: false
     true_value: 0.766
     true_std: 0.05
-    value_gap_source_arxiv: '2308.08235'
-    value_gap_source_title: 'The Expressive Power of Graph Neural Networks: A Survey'
+    value_gap_source_arxiv: '2505.15015'
+    value_gap_source_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message
+      Passing
     value_gap_source_is_current_paper: false
     value_gap: 0.020000000000000018
     has_value_note: false
     value_note: ''
     sort_value: 0.766
     sort_std: 0.05
-    global_rank: 99
-    paper_rank: 290
-    rank_delta: 191
-    rank_delta_abs: 191
+    global_rank: 119
+    paper_rank: 312
+    rank_delta: 193
+    rank_delta_abs: 193
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2716,8 +2641,8 @@ results:
     value_note: ''
     sort_value: 0.762
     sort_std: 0.005
-    global_rank: 141
-    paper_rank: 141
+    global_rank: 160
+    paper_rank: 160
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2752,7 +2677,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 153
+    global_rank: 170
     sort_value: 0.76
     sort_std: 0.032
     comparison_type: global_top
@@ -2818,10 +2743,10 @@ results:
     value_note: ''
     sort_value: 0.756
     sort_std: 0.004
-    global_rank: 192
-    paper_rank: 255
-    rank_delta: 63
-    rank_delta_abs: 63
+    global_rank: 208
+    paper_rank: 275
+    rank_delta: 67
+    rank_delta_abs: 67
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2885,8 +2810,8 @@ results:
     value_note: ''
     sort_value: 0.755
     sort_std: null
-    global_rank: 203
-    paper_rank: 203
+    global_rank: 219
+    paper_rank: 219
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2952,8 +2877,8 @@ results:
     value_note: ''
     sort_value: 0.7531
     sort_std: 0.0073
-    global_rank: 223
-    paper_rank: 223
+    global_rank: 242
+    paper_rank: 242
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3019,8 +2944,8 @@ results:
     value_note: ''
     sort_value: 0.7455
     sort_std: 0.0274
-    global_rank: 298
-    paper_rank: 298
+    global_rank: 320
+    paper_rank: 320
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3039,508 +2964,6 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
-  dataset: QM9
-  is_multi_metric: true
-  rows:
-  - model: Equiformer v2
-    model_key: equiformer v2
-    model_plain: Equiformer v2
-    metric_values:
-    - 0.01
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.23086'
-    title: Equivariant Spherical Transformer for Efficient Molecular Modeling
-    published_venue: ''
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    codebase_url: ''
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 1
-    is_best: true
-    sort_value: 0.01
-    sort_std: null
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: EQGAT
-    model_key: eqgat
-    model_plain: EQGAT
-    metric_values:
-    - 0.011
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2505.23086'
-    title: Equivariant Spherical Transformer for Efficient Molecular Modeling
-    published_venue: ''
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    codebase_url: ''
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 2
-    is_best: false
-    sort_value: 0.011
-    sort_std: null
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: Equiformer
-    model_key: equiformer
-    model_plain: Equiformer
-    metric_values:
-    - 0.011
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.23086'
-    title: Equivariant Spherical Transformer for Efficient Molecular Modeling
-    published_venue: ''
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    codebase_url: ''
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 3
-    is_best: false
-    sort_value: 0.011
-    sort_std: null
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: Graphormer-SPIS
-    model_key: graphormer-spis
-    model_plain: Graphormer-SPIS
-    metric_values:
-    - null
-    - 0.3536
-    - 0.2365
-    - 2.1069
-    - 2.1069
-    - 2.1007
-    - 2.0994
-    - 0.1027
-    - 0.0686
-    - 0.0055
-    metric_stds:
-    - null
-    - 0.0003727
-    - 0.001105
-    - 0.0003581
-    - 0.0003694
-    - 0.0004798
-    - 0.0003115
-    - 6.856e-07
-    - 9.445e-05
-    - 5.311e-07
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    sort_value: 0.3536
-    sort_std: 0.0003727
-    true_value: 0.3536
-    true_std: 0.0003727
-    paper_value: 0.3536
-    paper_std: 0.0003727
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2305.13987'
-    value_gap_source_title: On Structural Expressive Power of Graph Transformers
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-05-23'
-    value_gap_source_date_label: KDD 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: KDD 2023
-    date: May 23, 2023
-    date_display: May 2023
-    date_iso: '2023-05-23'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 51
-  - model: Graphormer-SPD
-    model_key: graphormer-spd
-    model_plain: Graphormer-SPD
-    metric_values:
-    - null
-    - 0.3688
-    - 0.2417
-    - 3.821
-    - 3.8882
-    - 3.7888
-    - 3.8175
-    - 0.1034
-    - 0.0699
-    - 0.0061
-    metric_stds:
-    - null
-    - 0.000301
-    - 8.542e-07
-    - 0.07458
-    - 0.2049
-    - 0.1232
-    - 0.1508
-    - 5.555e-05
-    - 1.036e-05
-    - 0.0002012
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    sort_value: 0.3688
-    sort_std: 0.000301
-    true_value: 0.3688
-    true_std: 0.000301
-    paper_value: 0.3688
-    paper_std: 0.000301
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2305.13987'
-    value_gap_source_title: On Structural Expressive Power of Graph Transformers
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-05-23'
-    value_gap_source_date_label: KDD 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: KDD 2023
-    date: May 23, 2023
-    date_display: May 2023
-    date_iso: '2023-05-23'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 58
-  - model: Graphormer-Neighbor
-    model_key: graphormer-neighbor
-    model_plain: Graphormer-Neighbor
-    metric_values:
-    - null
-    - 0.6926
-    - 0.8597
-    - 1.0558
-    - 1.0552
-    - 1.054
-    - 1.0505
-    - 0.451
-    - 0.2644
-    - 0.0165
-    metric_stds:
-    - null
-    - 0.0001646
-    - 0.0006886
-    - 0.0008925
-    - 0.0002932
-    - 0.0006737
-    - 0.0006409
-    - 0.0001725
-    - 5.85e-05
-    - 3.954e-06
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    sort_value: 0.6926
-    sort_std: 0.0001646
-    true_value: 0.6926
-    true_std: 0.0001646
-    paper_value: 0.6926
-    paper_std: 0.0001646
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2305.13987'
-    value_gap_source_title: On Structural Expressive Power of Graph Transformers
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-05-23'
-    value_gap_source_date_label: KDD 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: KDD 2023
-    date: May 23, 2023
-    date_display: May 2023
-    date_iso: '2023-05-23'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 76
-  - model: Graphormer-id
-    model_key: graphormer-id
-    model_plain: Graphormer-id
-    metric_values:
-    - null
-    - 8.1654
-    - 24.562
-    - 3457.2
-    - 2041.3
-    - 3593.4
-    - 1468.9
-    - 5.4585
-    - 4.3868
-    - 1.3654
-    metric_stds:
-    - null
-    - 0.1095
-    - 0.1815
-    - 274.96
-    - 47.641
-    - 31.424
-    - 97.816
-    - 0.1456
-    - 0.2717
-    - 0.0391
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    sort_value: 8.1654
-    sort_std: 0.1095
-    true_value: 8.1654
-    true_std: 0.1095
-    paper_value: 8.1654
-    paper_std: 0.1095
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2305.13987'
-    value_gap_source_title: On Structural Expressive Power of Graph Transformers
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-05-23'
-    value_gap_source_date_label: KDD 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: KDD 2023
-    date: May 23, 2023
-    date_display: May 2023
-    date_iso: '2023-05-23'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: true
-    global_rank: 77
-  metrics:
-  - gap
-  - mu
-  - alpha
-  - U0
-  - U
-  - H
-  - G
-  - Cv
-  - LUMO
-  - zpve
-  primary_metric: gap
-  rank_metric: mu
-  higher_is_better: false
-  experiment_scope: graph-level
-  dataset_primary_metric: gap
-  paper_metrics:
-  - mu
-  - alpha
-  - U0
-  - U
-  - H
-  - G
-  - Cv
-  - LUMO
-  - zpve
-  metric: mu
-  uses_non_primary_metric: true
-  paper_has_primary_metric: false
 results_grouped:
 - benchmark: TU Dortmund
   datasets:
@@ -3549,9 +2972,6 @@ results_grouped:
 - benchmark: MoleculeNet
   datasets:
   - *id003
-- benchmark: Quantum Chemistry
-  datasets:
-  - *id004
 datasets_by_scope:
 - scope: graph-level
   label: Graph-level
@@ -3568,11 +2988,6 @@ datasets_by_scope:
     datasets:
     - dataset: ESOL
       dataset_slug: esol
-  - benchmark: Quantum Chemistry
-    benchmark_slug: quantum-chemistry
-    datasets:
-    - dataset: QM9
-      dataset_slug: qm9
 single_proposed_model: Graphormer-SPIS
 main_figure: /figures/2305.13987/main_figure.jpegoptim.jpg
 ---

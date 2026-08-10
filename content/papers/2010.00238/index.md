@@ -40,1080 +40,32 @@ abstract: Graph Neural Networks (GNNs) are powerful techniques in representation
   components, and the last empirical analysis further reveals the ingenious ability
   of AdamGNN in capturing long-range interactions.
 codebase_url: https://github.com/zhiqiangzhongddu/AdamGNN
-extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+extraction_model: google/gemma-4-26B-A4B-it
 has_results: true
 paper_type: method
 proposed_models:
 - AdamGNN
-- AdamGNN w/ GCN
-- AdamGNN w/ PNA
-- AdamGNN w/ GCNII
-mrr: 0.0279
-adjusted_mrr: 0.0279
-mrr_dataset_count: 5
+mrr: 0.0267
+adjusted_mrr: 0.0267
+mrr_dataset_count: 4
 benchmark_categories:
-- Classic
 - TU Dortmund
-- OGB
 benchmark_coverage:
-- benchmark: Classic
-  benchmark_slug: classic
-  evaluated: 2
-  total: 12
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
-  evaluated: 3
+  evaluated: 4
   total: 11
-- benchmark: OGB
-  benchmark_slug: ogb
-  evaluated: 1
-  total: 16
 task_categories:
 - graph_classification
-- node_classification
 experiment_scopes:
 - graph-level
-- node-level
 results:
-- &id001
-  dataset: CiteSeer
-  rows:
-  - model: CNA
-    model_key: cna
-    model_plain: CNA
-    value: 0.9575
-    std: 0.0058
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2412.04064'
-    title: Graph Neural Networks Need Cluster-Normalize-Activate Modules
-    date: Dec 5, 2024
-    date_display: Dec 2024
-    date_iso: '2024-12-05'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/ml-research/cna_modules
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9575
-    sort_std: 0.0058
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: IS-GIB
-    model_key: is-gib
-    model_plain: IS-GIB
-    value: 0.939
-    std: 0.0187
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2306.15902'
-    title: Individual and Structural Graph Information Bottlenecks for Out-of-Distribution
-      Generalization
-    date: Jun 28, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-28'
-    venue: IEEE Transactions on Knowledge and Data Engineering
-    codebase_url: https://github.com/YangLing0818/GraphOOD
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.939
-    sort_std: 0.0187
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: EERM
-    model_key: eerm
-    model_plain: EERM
-    value: 0.9112
-    std: 0.0145
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2306.15902'
-    title: Individual and Structural Graph Information Bottlenecks for Out-of-Distribution
-      Generalization
-    date: Jun 28, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-28'
-    venue: IEEE Transactions on Knowledge and Data Engineering
-    codebase_url: https://github.com/YangLing0818/GraphOOD
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9112
-    sort_std: 0.0145
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.7675
-    std: null
-    paper_value: 0.7675
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: HYL17
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised node classification using fixed split (Yang et
-      al. 2016).
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.753
-    at_pub_std: 0.0
-    at_pub_source_arxiv: '2009.09232'
-    at_pub_source_title: Learned Low Precision Graph Neural Networks
-    at_pub_source_date_iso: '2020-09-19'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2023-05-10'
-    value_gap_source_date_label: ICML 2023
-    gap_vs_at_pub: 0.014499999999999957
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: true
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8774
-    true_std: 0.0041
-    value_gap_source_arxiv: '2305.06142'
-    value_gap_source_title: Feature Expansion for Graph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.1099
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8774
-    sort_std: 0.0041
-    global_rank: 20
-    paper_rank: 150
-    rank_delta: 130
-    rank_delta_abs: 130
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Learned Low Precision Graph Neural Networks
-    comparison_source_arxiv: '2009.09232'
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.7613
-    std: null
-    paper_value: 0.7613
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: KW17
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised node classification using fixed split (Yang et
-      al. 2016).
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.768
-    at_pub_std: null
-    at_pub_source_arxiv: '2008.09864'
-    at_pub_source_title: Tackling Over-Smoothing for General Graph Convolutional Networks
-    at_pub_source_date_iso: '2020-08-22'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2023-05-10'
-    value_gap_source_date_label: ICML 2023
-    gap_vs_at_pub: 0.006700000000000039
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8769
-    true_std: 0.004
-    value_gap_source_arxiv: '2305.06142'
-    value_gap_source_title: Feature Expansion for Graph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.11560000000000004
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8769
-    sort_std: 0.004
-    global_rank: 21
-    paper_rank: 163
-    rank_delta: 142
-    rank_delta_abs: 142
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Tackling Over-Smoothing for General Graph Convolutional
-      Networks
-    comparison_source_arxiv: '2008.09864'
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.7696
-    std: null
-    paper_value: 0.7696
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: VCCRLB18
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised node classification using fixed split (Yang et
-      al. 2016).
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.786
-    at_pub_std: null
-    at_pub_source_arxiv: '2008.09864'
-    at_pub_source_title: Tackling Over-Smoothing for General Graph Convolutional Networks
-    at_pub_source_date_iso: '2020-08-22'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2023-05-10'
-    value_gap_source_date_label: ICML 2023
-    gap_vs_at_pub: 0.01640000000000008
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.808
-    true_std: 0.0026
-    value_gap_source_arxiv: '2305.06142'
-    value_gap_source_title: Feature Expansion for Graph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0384000000000001
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.808
-    sort_std: 0.0026
-    global_rank: 46
-    paper_rank: 141
-    rank_delta: 95
-    rank_delta_abs: 95
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Tackling Over-Smoothing for General Graph Convolutional
-      Networks
-    comparison_source_arxiv: '2008.09864'
-    is_best: false
-    is_std_outlier: false
-  - model: GCNII
-    model_key: gcnii
-    model_plain: GCNII
-    value: 0.7637
-    std: null
-    paper_value: 0.7637
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: CWHDL20
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised node classification using fixed split (Yang et
-      al. 2016).
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.734
-    at_pub_std: 0.006
-    at_pub_source_arxiv: '2007.02133'
-    at_pub_source_title: Simple and Deep Graph Convolutional Networks
-    at_pub_source_date_iso: '2020-07-04'
-    at_pub_source_date_label: ICML 2020
-    value_gap_source_date_iso: '2023-05-10'
-    value_gap_source_date_label: ICML 2023
-    gap_vs_at_pub: 0.02970000000000006
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: true
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8076
-    true_std: 0.003
-    value_gap_source_arxiv: '2305.06142'
-    value_gap_source_title: Feature Expansion for Graph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.04389999999999994
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8076
-    sort_std: 0.003
-    global_rank: 48
-    paper_rank: 155
-    rank_delta: 107
-    rank_delta_abs: 107
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Simple and Deep Graph Convolutional Networks
-    comparison_source_arxiv: '2007.02133'
-    is_best: false
-    is_std_outlier: false
-  - model: PNA
-    model_key: pna
-    model_plain: PNA
-    value: 0.7267
-    std: null
-    paper_value: 0.7267
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: CCBLV20
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised node classification using fixed split (Yang et
-      al. 2016).
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-03-23'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7828
-    true_std: 0.0005
-    value_gap_source_arxiv: '2203.12265'
-    value_gap_source_title: Node Representation Learning in Graph via Node-to-Neighbourhood
-      Mutual Information Maximization
-    value_gap_source_is_current_paper: false
-    value_gap: 0.05610000000000004
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7828
-    sort_std: 0.0005
-    global_rank: 102
-    paper_rank: 424
-    rank_delta: 322
-    rank_delta_abs: 322
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GRAND
-    model_key: grand
-    model_plain: GRAND
-    value: 0.7688
-    std: null
-    paper_value: 0.7688
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: FZDHLXYKT20
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised node classification using fixed split (Yang et
-      al. 2016).
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-10-01'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7688
-    true_std: null
-    value_gap_source_arxiv: '2010.00238'
-    value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7688
-    sort_std: null
-    global_rank: 145
-    paper_rank: 145
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.7639
-    std: null
-    paper_value: 0.7639
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: XHLJ19
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised node classification using fixed split (Yang et
-      al. 2016).
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.631
-    at_pub_std: 0.02
-    at_pub_source_arxiv: '1901.01343'
-    at_pub_source_title: Graph Neural Networks With Convolutional ARMA Filters
-    at_pub_source_date_iso: '2019-01-05'
-    at_pub_source_date_label: '2019'
-    value_gap_source_date_iso: '2020-10-01'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: 0.13290000000000002
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7639
-    true_std: null
-    value_gap_source_arxiv: '2010.00238'
-    value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7639
-    sort_std: null
-    global_rank: 155
-    paper_rank: 155
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Graph Neural Networks With Convolutional ARMA Filters
-    comparison_source_arxiv: '1901.01343'
-    is_best: false
-    is_std_outlier: false
-  - model: GXN
-    model_key: gxn
-    model_plain: GXN
-    value: 0.7593
-    std: null
-    paper_value: 0.7593
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: LCZT20
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised node classification using fixed split (Yang et
-      al. 2016).
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-10-01'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7593
-    true_std: null
-    value_gap_source_arxiv: '2010.00238'
-    value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7593
-    sort_std: null
-    global_rank: 174
-    paper_rank: 174
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: g-U-Net
-    model_key: g-u-net
-    model_plain: g-U-Net
-    value: 0.7559
-    std: null
-    paper_value: 0.7559
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: GJ19
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised node classification using fixed split (Yang et
-      al. 2016).
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-10-01'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7559
-    true_std: null
-    value_gap_source_arxiv: '2010.00238'
-    value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7559
-    sort_std: null
-    global_rank: 191
-    paper_rank: 191
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AdamGNN w/ GCNII
-    model_key: adamgnn w/ gcnii
-    model_plain: AdamGNN w/ GCNII
-    value: 0.7413
-    std: null
-    paper_value: 0.7413
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised node classification (Semi-NC) using fixed split
-      (Yang et al. 2016).
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-10-01'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7413
-    true_std: null
-    value_gap_source_arxiv: '2010.00238'
-    value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7413
-    sort_std: null
-    global_rank: 266
-    paper_rank: 266
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SAGE
-    model_key: sage
-    model_plain: SAGE
-    value: 0.7361
-    std: 0.019
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2401.15569'
-    title: Efficient Tuning and Inference for Large Language Models on Textual Graphs
-    date: Jan 28, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-28'
-    venue: International Joint Conference on Artificial Intelligence
-    codebase_url: https://github.com/ZhuYun97/ENGINE
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 299
-    sort_value: 0.7361
-    sort_std: 0.019
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AdamGNN w/ GCN
-    model_key: adamgnn w/ gcn
-    model_plain: AdamGNN w/ GCN
-    value: 0.7303
-    std: null
-    paper_value: 0.7303
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised node classification (Semi-NC) using fixed split
-      (Yang et al. 2016).
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-10-01'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7303
-    true_std: null
-    value_gap_source_arxiv: '2010.00238'
-    value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7303
-    sort_std: null
-    global_rank: 377
-    paper_rank: 377
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MLP
-    model_key: mlp
-    model_plain: MLP
-    value: 0.7087
-    std: null
-    paper_value: 0.7087
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: H99
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised node classification using fixed split (Yang et
-      al. 2016).
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.61
-    at_pub_std: 0.01
-    at_pub_source_arxiv: '2007.09296'
-    at_pub_source_title: Towards Deeper Graph Neural Networks
-    at_pub_source_date_iso: '2020-07-06'
-    at_pub_source_date_label: KDD 2020
-    value_gap_source_date_iso: '2025-08-24'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.09870000000000001
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: true
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7289
-    true_std: 0.001
-    value_gap_source_arxiv: '2508.17531'
-    value_gap_source_title: 'Gumbel-MPNN: Graph Rewiring with Gumbel-Softmax'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.020199999999999996
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7289
-    sort_std: 0.001
-    global_rank: 401
-    paper_rank: 632
-    rank_delta: 231
-    rank_delta_abs: 231
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Towards Deeper Graph Neural Networks
-    comparison_source_arxiv: '2007.09296'
-    is_best: false
-    is_std_outlier: false
-  - model: AdamGNN w/ PNA
-    model_key: adamgnn w/ pna
-    model_plain: AdamGNN w/ PNA
-    value: 0.709
-    std: null
-    paper_value: 0.709
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised node classification (Semi-NC) using fixed split
-      (Yang et al. 2016).
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-10-01'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.709
-    true_std: null
-    value_gap_source_arxiv: '2010.00238'
-    value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.709
-    sort_std: null
-    global_rank: 630
-    paper_rank: 630
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  rank_metric: Accuracy
-  higher_is_better: true
-  experiment_scope: node-level
-  dataset_primary_metric: Accuracy
-  paper_metrics:
-  - Accuracy
-  metric: Accuracy
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
-- &id005
+- &id004
   dataset: D&D
   rows:
-  - model: GC-GNN (GraphSAGE)
-    model_key: gc-gnn (graphsage)
-    model_plain: GC-GNN (GraphSAGE)
+  - model: GC-GNN (GCN)
+    model_key: gc-gnn (gcn)
+    model_plain: GC-GNN (GCN)
     value: 0.921
     std: 0.081
     metric: Accuracy
@@ -1134,8 +86,9 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: The paper describes GC-GNN as enhancing GNNs with graph
+      canonization positional encodings.
     is_global_top: true
     global_rank: 1
     sort_value: 0.921
@@ -1229,14 +182,14 @@ results:
     architecture_label: null
     architecture_title: ''
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -1329,14 +282,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: YYMRHL18
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -1396,14 +349,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: YJ20
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -1463,14 +416,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: RST20
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -1532,14 +485,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: ZCNC18
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -1601,14 +554,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: LLK19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -1668,14 +621,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: MWAT19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -1735,14 +688,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: MHSL19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -1802,14 +755,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: XHLJ19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -1869,14 +822,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: CCBLV20
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -1936,14 +889,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: LCZT20
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -2003,14 +956,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: GJ19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per canonical record
+    protocol_note: Accuracy on D&D dataset using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -2062,7 +1015,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id001
   dataset: MUTAG
   rows:
   - model: MSH-GNN
@@ -2087,7 +1040,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -2181,14 +1134,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: XHLJ19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Graph classification task on MUTAG
+    protocol_note: Accuracy on MUTAG using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -2221,9 +1174,9 @@ results:
     sort_value: 0.933
     sort_std: 0.029
     global_rank: 43
-    paper_rank: 778
-    rank_delta: 735
-    rank_delta_abs: 735
+    paper_rank: 785
+    rank_delta: 742
+    rank_delta_abs: 742
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2281,14 +1234,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: ZCNC18
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Graph classification task on MUTAG
+    protocol_note: Accuracy on MUTAG using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -2322,9 +1275,9 @@ results:
     sort_value: 0.9
     sort_std: 0.0224
     global_rank: 203
-    paper_rank: 822
-    rank_delta: 619
-    rank_delta_abs: 619
+    paper_rank: 829
+    rank_delta: 626
+    rank_delta_abs: 626
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2349,14 +1302,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: YYMRHL18
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Graph classification task on MUTAG
+    protocol_note: Accuracy on MUTAG using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -2390,9 +1343,9 @@ results:
     sort_value: 0.894
     sort_std: 0.046
     global_rank: 256
-    paper_rank: 800
-    rank_delta: 544
-    rank_delta_abs: 544
+    paper_rank: 807
+    rank_delta: 551
+    rank_delta_abs: 551
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2417,14 +1370,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: RST20
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Graph classification task on MUTAG
+    protocol_note: Accuracy on MUTAG using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -2457,10 +1410,10 @@ results:
     value_note: ''
     sort_value: 0.874
     sort_std: 0.057
-    global_rank: 385
-    paper_rank: 679
-    rank_delta: 294
-    rank_delta_abs: 294
+    global_rank: 387
+    paper_rank: 678
+    rank_delta: 291
+    rank_delta_abs: 291
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2493,7 +1446,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 429
+    global_rank: 430
     sort_value: 0.866
     sort_std: 0.0495
     comparison_type: global_top
@@ -2518,14 +1471,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: LCZT20
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Graph classification task on MUTAG
+    protocol_note: Accuracy on MUTAG using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -2558,10 +1511,10 @@ results:
     value_note: ''
     sort_value: 0.861
     sort_std: 0.083
-    global_rank: 444
-    paper_rank: 791
-    rank_delta: 347
-    rank_delta_abs: 347
+    global_rank: 445
+    paper_rank: 798
+    rank_delta: 353
+    rank_delta_abs: 353
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2586,14 +1539,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: MHSL19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Graph classification task on MUTAG
+    protocol_note: Accuracy on MUTAG using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -2626,9 +1579,9 @@ results:
     sort_value: 0.8406
     sort_std: 0.0662
     global_rank: 532
-    paper_rank: 724
-    rank_delta: 192
-    rank_delta_abs: 192
+    paper_rank: 726
+    rank_delta: 194
+    rank_delta_abs: 194
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2653,14 +1606,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: CCBLV20
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Graph classification task on MUTAG
+    protocol_note: Accuracy on MUTAG using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -2692,8 +1645,8 @@ results:
     value_note: ''
     sort_value: 0.8191
     sort_std: 0.0259
-    global_rank: 632
-    paper_rank: 632
+    global_rank: 631
+    paper_rank: 631
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2720,14 +1673,14 @@ results:
     architecture_label: null
     architecture_title: ''
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Graph classification task on MUTAG
+    protocol_note: Accuracy on MUTAG using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -2759,8 +1712,8 @@ results:
     value_note: ''
     sort_value: 0.8011
     sort_std: 0.0258
-    global_rank: 680
-    paper_rank: 680
+    global_rank: 679
+    paper_rank: 679
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2787,14 +1740,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: LLK19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Graph classification task on MUTAG
+    protocol_note: Accuracy on MUTAG using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -2826,10 +1779,10 @@ results:
     value_note: ''
     sort_value: 0.7986
     sort_std: 0.0236
-    global_rank: 691
-    paper_rank: 775
-    rank_delta: 84
-    rank_delta_abs: 84
+    global_rank: 690
+    paper_rank: 782
+    rank_delta: 92
+    rank_delta_abs: 92
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2854,14 +1807,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: YJ20
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Graph classification task on MUTAG
+    protocol_note: Accuracy on MUTAG using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -2894,10 +1847,10 @@ results:
     value_note: ''
     sort_value: 0.795
     sort_std: 0.0075
-    global_rank: 705
-    paper_rank: 746
-    rank_delta: 41
-    rank_delta_abs: 41
+    global_rank: 704
+    paper_rank: 748
+    rank_delta: 44
+    rank_delta_abs: 44
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2922,14 +1875,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: GJ19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Graph classification task on MUTAG
+    protocol_note: Accuracy on MUTAG using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -2961,8 +1914,8 @@ results:
     value_note: ''
     sort_value: 0.766
     sort_std: 0.0503
-    global_rank: 755
-    paper_rank: 755
+    global_rank: 757
+    paper_rank: 757
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2989,14 +1942,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: MWAT19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Graph classification task on MUTAG
+    protocol_note: Accuracy on MUTAG using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -3028,8 +1981,8 @@ results:
     value_note: ''
     sort_value: 0.7621
     sort_std: 0.0274
-    global_rank: 760
-    paper_rank: 760
+    global_rank: 762
+    paper_rank: 762
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3048,7 +2001,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id002
   dataset: NCI1
   rows:
   - model: WL-MLP
@@ -3102,14 +2055,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: XHLJ19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per dataset description
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -3142,9 +2095,9 @@ results:
     sort_value: 0.9934
     sort_std: null
     global_rank: 2
-    paper_rank: 430
-    rank_delta: 428
-    rank_delta_abs: 428
+    paper_rank: 427
+    rank_delta: 425
+    rank_delta_abs: 425
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3202,14 +2155,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: YYMRHL18
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per dataset description
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -3243,9 +2196,9 @@ results:
     sort_value: 0.921
     sort_std: 0.026
     global_rank: 5
-    paper_rank: 415
-    rank_delta: 410
-    rank_delta_abs: 410
+    paper_rank: 412
+    rank_delta: 407
+    rank_delta_abs: 407
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3279,7 +2232,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 81
+    global_rank: 82
     sort_value: 0.8303
     sort_std: 0.0137
     comparison_type: global_top
@@ -3304,14 +2257,14 @@ results:
     architecture_label: null
     architecture_title: ''
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per dataset description
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -3343,8 +2296,8 @@ results:
     value_note: ''
     sort_value: 0.7977
     sort_std: 0.0129
-    global_rank: 261
-    paper_rank: 261
+    global_rank: 260
+    paper_rank: 260
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3371,14 +2324,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: MHSL19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per dataset description
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -3410,8 +2363,8 @@ results:
     value_note: ''
     sort_value: 0.7938
     sort_std: 0.0173
-    global_rank: 280
-    paper_rank: 280
+    global_rank: 279
+    paper_rank: 279
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3438,14 +2391,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: LLK19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per dataset description
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -3477,8 +2430,8 @@ results:
     value_note: ''
     sort_value: 0.791
     sort_std: 0.03
-    global_rank: 287
-    paper_rank: 446
+    global_rank: 286
+    paper_rank: 445
     rank_delta: 159
     rank_delta_abs: 159
     rank_delta_direction: worse
@@ -3505,14 +2458,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: CCBLV20
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per dataset description
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -3544,8 +2497,8 @@ results:
     value_note: ''
     sort_value: 0.7896
     sort_std: 0.0101
-    global_rank: 296
-    paper_rank: 296
+    global_rank: 295
+    paper_rank: 295
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3572,14 +2525,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: MWAT19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per dataset description
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -3611,10 +2564,10 @@ results:
     value_note: ''
     sort_value: 0.787
     sort_std: 0.019
-    global_rank: 308
-    paper_rank: 376
-    rank_delta: 68
-    rank_delta_abs: 68
+    global_rank: 307
+    paper_rank: 373
+    rank_delta: 66
+    rank_delta_abs: 66
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3639,14 +2592,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: YJ20
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per dataset description
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -3678,10 +2631,10 @@ results:
     value_note: ''
     sort_value: 0.7864
     sort_std: 0.0153
-    global_rank: 315
-    paper_rank: 370
-    rank_delta: 55
-    rank_delta_abs: 55
+    global_rank: 314
+    paper_rank: 367
+    rank_delta: 53
+    rank_delta_abs: 53
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3706,14 +2659,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: RST20
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per dataset description
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -3746,8 +2699,8 @@ results:
     value_note: ''
     sort_value: 0.7821
     sort_std: 0.0175
-    global_rank: 340
-    paper_rank: 340
+    global_rank: 339
+    paper_rank: 339
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3775,14 +2728,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: GJ19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per dataset description
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -3814,8 +2767,8 @@ results:
     value_note: ''
     sort_value: 0.7756
     sort_std: 0.0192
-    global_rank: 376
-    paper_rank: 376
+    global_rank: 373
+    paper_rank: 373
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3842,14 +2795,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: ZCNC18
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per dataset description
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -3883,10 +2836,10 @@ results:
     value_note: ''
     sort_value: 0.7496
     sort_std: 0.0134
-    global_rank: 462
-    paper_rank: 516
-    rank_delta: 54
-    rank_delta_abs: 54
+    global_rank: 460
+    paper_rank: 512
+    rank_delta: 52
+    rank_delta_abs: 52
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -3912,14 +2865,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: LCZT20
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV as per dataset description
+    protocol_note: 10-fold CV on NCI1 for graph classification
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -3951,8 +2904,8 @@ results:
     value_note: ''
     sort_value: 0.7418
     sort_std: 0.022
-    global_rank: 486
-    paper_rank: 486
+    global_rank: 484
+    paper_rank: 484
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3971,29 +2924,28 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
-  dataset: PubMed
+- &id003
+  dataset: PROTEINS
   rows:
-  - model: LGTL
-    model_key: lgtl
-    model_plain: LGTL
-    value: 0.9518
-    std: 0.0011
+  - model: MSH-GNN
+    model_key: msh-gnn
+    model_plain: MSH-GNN
+    value: 0.941
+    std: 0.033
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2505.15845'
-    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
-      Learning Models'
-    date: May 19, 2025
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.15015'
+    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
+    date: May 21, 2025
     date_display: May 2025
-    date_iso: '2025-05-19'
+    date_iso: '2025-05-21'
     venue: null
     codebase_url: ''
     uses_external_data: false
@@ -4001,381 +2953,241 @@ results:
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.9518
-    sort_std: 0.0011
+    sort_value: 0.941
+    sort_std: 0.033
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SAGN
-    model_key: sagn
-    model_plain: SAGN
-    value: 0.9517
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2605.24867'
-    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
-      Graph Learning'
-    date: May 24, 2026
-    date_display: May 2026
-    date_iso: '2026-05-24'
-    venue: Accepted by ICML 2026
-    codebase_url: https://github.com/Uncnbb/KCoT
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.9517
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: MixHop (LO)
-    model_key: mixhop (lo)
-    model_plain: MixHop (LO)
-    value: 0.9513
-    std: 0.0038
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2405.13902'
-    title: 'LOGIN: A Large Language Model Consulted Graph Neural Network Training
-      Framework'
-    date: May 22, 2024
-    date_display: May 2024
-    date_iso: '2024-05-22'
-    venue: Web Search and Data Mining
-    codebase_url: https://github.com/QiaoYRan/LOGIN
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9513
-    sort_std: 0.0038
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.8601
-    std: null
-    paper_value: 0.8601
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: HYL17
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised node classification using fixed Planetoid split.
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.871
-    at_pub_std: null
-    at_pub_source_arxiv: '2008.09864'
-    at_pub_source_title: Tackling Over-Smoothing for General Graph Convolutional Networks
-    at_pub_source_date_iso: '2020-08-22'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2026-05-24'
-    value_gap_source_date_label: ICML 2026
-    gap_vs_at_pub: 0.01090000000000002
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9487
-    true_std: null
-    value_gap_source_arxiv: '2605.24867'
-    value_gap_source_title: 'Clustering as Reasoning: A $k$-Means Interpretation of
-      Chain-of-Thought Graph Learning'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.08860000000000001
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9487
-    sort_std: null
-    global_rank: 9
-    paper_rank: 251
-    rank_delta: 242
-    rank_delta_abs: 242
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Tackling Over-Smoothing for General Graph Convolutional
-      Networks
-    comparison_source_arxiv: '2008.09864'
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.8604
-    std: null
-    paper_value: 0.8604
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: KW17
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised node classification using fixed Planetoid split.
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.897
-    at_pub_std: null
-    at_pub_source_arxiv: '2008.09864'
-    at_pub_source_title: Tackling Over-Smoothing for General Graph Convolutional Networks
-    at_pub_source_date_iso: '2020-08-22'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2026-05-24'
-    value_gap_source_date_label: ICML 2026
-    gap_vs_at_pub: 0.036599999999999966
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9296
-    true_std: null
-    value_gap_source_arxiv: '2605.24867'
-    value_gap_source_title: 'Clustering as Reasoning: A $k$-Means Interpretation of
-      Chain-of-Thought Graph Learning'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.06919999999999993
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9296
-    sort_std: null
-    global_rank: 21
-    paper_rank: 249
-    rank_delta: 228
-    rank_delta_abs: 228
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Tackling Over-Smoothing for General Graph Convolutional
-      Networks
-    comparison_source_arxiv: '2008.09864'
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.8621
-    std: null
-    paper_value: 0.8621
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: VCCRLB18
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised node classification using fixed Planetoid split.
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.897
-    at_pub_std: null
-    at_pub_source_arxiv: '2008.09864'
-    at_pub_source_title: Tackling Over-Smoothing for General Graph Convolutional Networks
-    at_pub_source_date_iso: '2020-08-22'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2026-05-24'
-    value_gap_source_date_label: ICML 2026
-    gap_vs_at_pub: 0.03490000000000004
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9233
-    true_std: null
-    value_gap_source_arxiv: '2605.24867'
-    value_gap_source_title: 'Clustering as Reasoning: A $k$-Means Interpretation of
-      Chain-of-Thought Graph Learning'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.06120000000000003
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9233
-    sort_std: null
-    global_rank: 23
-    paper_rank: 247
-    rank_delta: 224
-    rank_delta_abs: 224
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Tackling Over-Smoothing for General Graph Convolutional
-      Networks
-    comparison_source_arxiv: '2008.09864'
-    is_best: false
-    is_std_outlier: false
-  - model: GCNII
-    model_key: gcnii
-    model_plain: GCNII
-    value: 0.8448
-    std: null
-    paper_value: 0.8448
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: CWHDL20
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised node classification using fixed Planetoid split.
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.803
-    at_pub_std: 0.004
-    at_pub_source_arxiv: '2007.02133'
-    at_pub_source_title: Simple and Deep Graph Convolutional Networks
-    at_pub_source_date_iso: '2020-07-04'
-    at_pub_source_date_label: ICML 2020
-    value_gap_source_date_iso: '2024-06-16'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.04179999999999995
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: true
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.903
-    true_std: 0.0043
-    value_gap_source_arxiv: '2406.10871'
-    value_gap_source_title: Graph Neural Reaction Diffusion Models Submitted to the
-      editors June 2023. Accepted in March 2024.
-    value_gap_source_is_current_paper: false
-    value_gap: 0.05820000000000003
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.903
-    sort_std: 0.0043
-    global_rank: 70
-    paper_rank: 282
-    rank_delta: 212
-    rank_delta_abs: 212
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Simple and Deep Graph Convolutional Networks
-    comparison_source_arxiv: '2007.02133'
-    is_best: false
-    is_std_outlier: false
-  - model: AdamGNN
-    model_key: adamgnn
-    model_plain: AdamGNN
-    value: 0.8981
-    std: null
-    paper_value: 0.8981
-    paper_std: null
+  - model: GRDL
+    model_key: grdl
+    model_plain: GRDL
+    value: 0.826
+    std: 0.012
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    uses_external_data: 0
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2408.11370'
+    title: 'Graph Classification via Reference Distribution Learning: Theory and Practice'
+    date: Aug 21, 2024
+    date_display: Aug 2024
+    date_iso: '2024-08-21'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.826
+    sort_std: 0.012
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GMN
+    model_key: gmn
+    model_plain: GMN
+    value: 0.8225
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2002.09518'
+    title: Memory-Based Graph Networks
+    date: Feb 21, 2020
+    date_display: Feb 2020
+    date_iso: '2020-02-21'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/amirkhas/GraphMemoryNet
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.8225
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DiffPool
+    model_key: diffpool
+    model_plain: DiffPool
+    value: 0.719
+    std: 0.0275
+    paper_value: 0.719
+    paper_std: 0.0275
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: YYMRHL18
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
+    evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Semi-supervised node classification using fixed Planetoid split.
+    protocol_note: Accuracy on PROTEINS dataset using 10-fold CV
+    date: Oct 1, 2020
+    date_display: Oct 2020
+    date_iso: '2020-10-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7625
+    at_pub_std: null
+    at_pub_source_arxiv: '2002.09518'
+    at_pub_source_title: Memory-Based Graph Networks
+    at_pub_source_date_iso: '2020-02-21'
+    at_pub_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2024-07-16'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.04349999999999998
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8161
+    true_std: 0.0232
+    value_gap_source_arxiv: '2407.11361'
+    value_gap_source_title: 'Graph Structure Prompt Learning: A Novel Methodology
+      to Improve Performance of Graph Neural Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.09710000000000008
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8161
+    sort_std: 0.0232
+    global_rank: 7
+    paper_rank: 455
+    rank_delta: 448
+    rank_delta_abs: 448
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Memory-Based Graph Networks
+    comparison_source_arxiv: '2002.09518'
+    is_best: false
+    is_std_outlier: false
+  - model: ASAP
+    model_key: asap
+    model_plain: ASAP
+    value: 0.7892
+    std: 0.0145
+    paper_value: 0.7892
+    paper_std: 0.0145
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: RST20
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on PROTEINS dataset using 10-fold CV
+    date: Oct 1, 2020
+    date_display: Oct 2020
+    date_iso: '2020-10-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7419
+    at_pub_std: 0.0079
+    at_pub_source_arxiv: '1911.07979'
+    at_pub_source_title: 'ASAP: Adaptive Structure Aware Pooling for Learning Hierarchical
+      Graph Representations'
+    at_pub_source_date_iso: '2019-11-18'
+    at_pub_source_date_label: AAAI 2019
+    value_gap_source_date_iso: '2020-10-01'
+    value_gap_source_date_label: '2020'
+    gap_vs_at_pub: 0.04730000000000001
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7892
+    true_std: 0.0145
+    value_gap_source_arxiv: '2010.00238'
+    value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7892
+    sort_std: 0.0145
+    global_rank: 35
+    paper_rank: 35
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: 'ASAP: Adaptive Structure Aware Pooling for Learning
+      Hierarchical Graph Representations'
+    comparison_source_arxiv: '1911.07979'
+    is_best: false
+    is_std_outlier: false
+  - model: StructPool
+    model_key: structpool
+    model_plain: StructPool
+    value: 0.7884
+    std: 0.017
+    paper_value: 0.7884
+    paper_std: 0.017
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: YJ20
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on PROTEINS dataset using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -4397,18 +3209,18 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.8981
-    true_std: null
+    true_value: 0.7884
+    true_std: 0.017
     value_gap_source_arxiv: '2010.00238'
     value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
     value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.8981
-    sort_std: null
-    global_rank: 92
-    paper_rank: 92
+    sort_value: 0.7884
+    sort_std: 0.017
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4418,13 +3230,13 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GRAND
-    model_key: grand
-    model_plain: GRAND
-    value: 0.8663
-    std: null
-    paper_value: 0.8663
-    paper_std: null
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.7537
+    std: 0.0162
+    paper_value: 0.7537
+    paper_std: 0.0162
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -4435,14 +3247,83 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: FZDHLXYKT20
+    table_ref: Table 2
+    source_ref: XHLJ19
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
+    evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Semi-supervised node classification using fixed Planetoid split.
+    protocol_note: Accuracy on PROTEINS dataset using 10-fold CV
+    date: Oct 1, 2020
+    date_display: Oct 2020
+    date_iso: '2020-10-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.762
+    at_pub_std: 0.028
+    at_pub_source_arxiv: '1905.12560'
+    at_pub_source_title: On the Equivalence between Graph Isomorphism Testing and
+      Function Approximation with GNNs
+    at_pub_source_date_iso: '2019-05-29'
+    at_pub_source_date_label: NeurIPS 2019
+    value_gap_source_date_iso: '2023-12-14'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.008299999999999974
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.788
+    true_std: 0.041
+    value_gap_source_arxiv: '2312.08671'
+    value_gap_source_title: 'Permutation-Invariant graph partitioning: How graph neural
+      networks capture structural interactions?'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0343
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.788
+    sort_std: 0.041
+    global_rank: 38
+    paper_rank: 237
+    rank_delta: 199
+    rank_delta_abs: 199
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: 3WL-GNN
+    model_key: 3wl-gnn
+    model_plain: 3WL-GNN
+    value: 0.7792
+    std: 0.0209
+    paper_value: 0.7792
+    paper_std: 0.0209
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: MHSL19
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on PROTEINS dataset using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -4454,33 +3335,99 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-02-17'
-    value_gap_source_date_label: '2026'
+    value_gap_source_date_iso: '2020-10-01'
+    value_gap_source_date_label: '2020'
     gap_vs_at_pub: null
     worse_than_at_pub: false
-    surpassed_since_pub: true
+    surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8902
-    true_std: 0.0051
-    value_gap_source_arxiv: '2602.15634'
-    value_gap_source_title: 'Beyond ReLU: Bifurcation, Oversmoothing, and Topological
-      Priors'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.023900000000000032
+    today_delta_significant: false
+    true_value: 0.7792
+    true_std: 0.0209
+    value_gap_source_arxiv: '2010.00238'
+    value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.8902
-    sort_std: 0.0051
-    global_rank: 130
-    paper_rank: 241
-    rank_delta: 111
-    rank_delta_abs: 111
-    rank_delta_direction: worse
-    has_value_gap: true
+    sort_value: 0.7792
+    sort_std: 0.0209
+    global_rank: 60
+    paper_rank: 60
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PNA
+    model_key: pna
+    model_plain: PNA
+    value: 0.7772
+    std: 0.0225
+    paper_value: 0.7772
+    paper_std: 0.0225
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: CCBLV20
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on PROTEINS dataset using 10-fold CV
+    date: Oct 1, 2020
+    date_display: Oct 2020
+    date_iso: '2020-10-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2020-10-01'
+    value_gap_source_date_label: '2020'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7772
+    true_std: 0.0225
+    value_gap_source_arxiv: '2010.00238'
+    value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7772
+    sort_std: 0.0225
+    global_rank: 64
+    paper_rank: 64
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -4489,8 +3436,8 @@ results:
   - model: SAGE
     model_key: sage
     model_plain: SAGE
-    value: 0.8881
-    std: 0.0015
+    value: 0.7726
+    std: 0.0228
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -4500,944 +3447,21 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2506.07168'
-    title: Efficient Text-Attributed Graph Learning through Selective Annotation and
-      Graph Alignment
-    date: Jun 8, 2025
-    date_display: Jun 2025
-    date_iso: '2025-06-08'
-    venue: Trans. Mach. Learn. Res.
+    arxiv_id: '2206.05416'
+    title: Semi-Supervised Hierarchical Graph Classification
+    date: Jun 11, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-11'
+    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
     codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 137
-    sort_value: 0.8881
-    sort_std: 0.0015
+    global_rank: 80
+    sort_value: 0.7726
+    sort_std: 0.0228
     comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.871
-    std: null
-    paper_value: 0.871
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: XHLJ19
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised node classification using fixed Planetoid split.
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.7738
-    at_pub_std: 0.0059
-    at_pub_source_arxiv: '2006.09136'
-    at_pub_source_title: When Does Self-Supervision Help Graph Convolutional Networks?
-    at_pub_source_date_iso: '2020-06-16'
-    at_pub_source_date_label: ICML 2020
-    value_gap_source_date_iso: '2023-08-21'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.09719999999999995
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: true
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.881
-    true_std: null
-    value_gap_source_arxiv: '2308.10737'
-    value_gap_source_title: 'UGSL: A Unified Framework for Benchmarking Graph Structure
-      Learning'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.010000000000000009
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.881
-    sort_std: null
-    global_rank: 176
-    paper_rank: 222
-    rank_delta: 46
-    rank_delta_abs: 46
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: When Does Self-Supervision Help Graph Convolutional Networks?
-    comparison_source_arxiv: '2006.09136'
-    is_best: false
-    is_std_outlier: false
-  - model: g-U-Net
-    model_key: g-u-net
-    model_plain: g-U-Net
-    value: 0.8767
-    std: null
-    paper_value: 0.8767
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: GJ19
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised node classification using fixed Planetoid split.
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-10-01'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8767
-    true_std: null
-    value_gap_source_arxiv: '2010.00238'
-    value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8767
-    sort_std: null
-    global_rank: 201
-    paper_rank: 201
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: PNA
-    model_key: pna
-    model_plain: PNA
-    value: 0.8763
-    std: null
-    paper_value: 0.8763
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: CCBLV20
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised node classification using fixed Planetoid split.
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-10-01'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8763
-    true_std: null
-    value_gap_source_arxiv: '2010.00238'
-    value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8763
-    sort_std: null
-    global_rank: 204
-    paper_rank: 204
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MLP
-    model_key: mlp
-    model_plain: MLP
-    value: 0.8341
-    std: null
-    paper_value: 0.8341
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: H99
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised node classification using fixed Planetoid split.
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.742
-    at_pub_std: 0.007
-    at_pub_source_arxiv: '2007.09296'
-    at_pub_source_title: Towards Deeper Graph Neural Networks
-    at_pub_source_date_iso: '2020-07-06'
-    at_pub_source_date_label: KDD 2020
-    value_gap_source_date_iso: '2023-09-29'
-    value_gap_source_date_label: TMLR 2023
-    gap_vs_at_pub: 0.09209999999999996
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: true
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.869
-    true_std: 0.0074
-    value_gap_source_arxiv: '2310.00183'
-    value_gap_source_title: On the Equivalence of Graph Convolution and Mixup
-    value_gap_source_is_current_paper: false
-    value_gap: 0.03490000000000004
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.869
-    sort_std: 0.0074
-    global_rank: 233
-    paper_rank: 308
-    rank_delta: 75
-    rank_delta_abs: 75
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Towards Deeper Graph Neural Networks
-    comparison_source_arxiv: '2007.09296'
-    is_best: false
-    is_std_outlier: false
-  - model: GXN
-    model_key: gxn
-    model_plain: GXN
-    value: 0.8602
-    std: null
-    paper_value: 0.8602
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: LCZT20
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised node classification using fixed Planetoid split.
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-10-01'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8602
-    true_std: null
-    value_gap_source_arxiv: '2010.00238'
-    value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8602
-    sort_std: null
-    global_rank: 251
-    paper_rank: 251
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AdamGNN w/ GCNII
-    model_key: adamgnn w/ gcnii
-    model_plain: AdamGNN w/ GCNII
-    value: 0.8137
-    std: null
-    paper_value: 0.8137
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised node classification using fixed Planetoid split.
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-10-01'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8137
-    true_std: null
-    value_gap_source_arxiv: '2010.00238'
-    value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8137
-    sort_std: null
-    global_rank: 371
-    paper_rank: 371
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AdamGNN w/ GCN
-    model_key: adamgnn w/ gcn
-    model_plain: AdamGNN w/ GCN
-    value: 0.8048
-    std: null
-    paper_value: 0.8048
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised node classification using fixed Planetoid split.
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-10-01'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8048
-    true_std: null
-    value_gap_source_arxiv: '2010.00238'
-    value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8048
-    sort_std: null
-    global_rank: 429
-    paper_rank: 429
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AdamGNN w/ PNA
-    model_key: adamgnn w/ pna
-    model_plain: AdamGNN w/ PNA
-    value: 0.7873
-    std: null
-    paper_value: 0.7873
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised node classification using fixed Planetoid split.
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-10-01'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7873
-    true_std: null
-    value_gap_source_arxiv: '2010.00238'
-    value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7873
-    sort_std: null
-    global_rank: 654
-    paper_rank: 654
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  rank_metric: Accuracy
-  higher_is_better: true
-  experiment_scope: node-level
-  dataset_primary_metric: Accuracy
-  paper_metrics:
-  - Accuracy
-  metric: Accuracy
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
-- &id006
-  dataset: ogbn-arxiv
-  rows:
-  - model: OFA
-    model_key: ofa
-    model_plain: OFA
-    value: 0.7764
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    arxiv_id: '2407.19941'
-    title: Boosting Cross-Domain and Cross-Task Generalization for Text-Attributed
-      Graphs from Structural Perspective
-    date: Jul 29, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-29'
-    venue: null
-    codebase_url: https://github.com/cy623/BooG
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.7764
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GIANT-XRT
-    model_key: giant-xrt
-    model_plain: GIANT-XRT
-    value: 0.7612
-    std: 0.0016
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2111.00064'
-    title: Node Feature Extraction by Self-Supervised Multi-scale Neighborhood Prediction
-    date: Oct 29, 2021
-    date_display: Oct 2021
-    date_iso: '2021-10-29'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/amzn/pecos
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.7612
-    sort_std: 0.0016
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GEGCN
-    model_key: gegcn
-    model_plain: GEGCN
-    value: 0.7576
-    std: 0.0064
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2603.26178'
-    title: 'Geometric Evolution Graph Convolutional Networks: Enhancing Graph Representation
-      Learning via Ricci Flow'
-    date: Mar 27, 2026
-    date_display: Mar 2026
-    date_iso: '2026-03-27'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: integrates Ricci flow with deep graph models... multi-scale
-      structural information is then incorporated into a GCN
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.7576
-    sort_std: 0.0064
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.7206
-    std: null
-    paper_value: 0.7206
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: OGB fixed split as per OGB leaderboard
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-10-03'
-    value_gap_source_date_label: TMLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7391
-    true_std: null
-    value_gap_source_arxiv: '2410.02158'
-    value_gap_source_title: 'SCNode: Spatial and Contextual Coordinates for Graph
-      Representation Learning'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.01849999999999996
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7391
-    sort_std: null
-    global_rank: 13
-    paper_rank: 46
-    rank_delta: 33
-    rank_delta_abs: 33
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.7174
-    std: null
-    paper_value: 0.7174
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: HFZDRLCL20
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: OGB fixed split as per OGB leaderboard
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-03-27'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.73
-    true_std: 0.0017
-    value_gap_source_arxiv: '2603.26178'
-    value_gap_source_title: 'Geometric Evolution Graph Convolutional Networks: Enhancing
-      Graph Representation Learning via Ricci Flow'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.012599999999999945
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.73
-    sort_std: 0.0017
-    global_rank: 25
-    paper_rank: 63
-    rank_delta: 38
-    rank_delta_abs: 38
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.7149
-    std: null
-    paper_value: 0.7149
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: HFZDRLCL20
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: OGB fixed split as per OGB leaderboard
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-03-27'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7277
-    true_std: 0.0016
-    value_gap_source_arxiv: '2603.26178'
-    value_gap_source_title: 'Geometric Evolution Graph Convolutional Networks: Enhancing
-      Graph Representation Learning via Ricci Flow'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.012800000000000034
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7277
-    sort_std: 0.0016
-    global_rank: 28
-    paper_rank: 71
-    rank_delta: 43
-    rank_delta_abs: 43
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCNII
-    model_key: gcnii
-    model_plain: GCNII
-    value: 0.7274
-    std: null
-    paper_value: 0.7274
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: HFZDRLCL20
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: OGB fixed split as per OGB leaderboard
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-12-30'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7274
-    true_std: 0.0016
-    value_gap_source_arxiv: '2012.15024'
-    value_gap_source_title: Adaptive Graph Diffusion Networks
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7274
-    sort_std: 0.0016
-    global_rank: 30
-    paper_rank: 30
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -5445,10 +3469,10 @@ results:
   - model: AdamGNN
     model_key: adamgnn
     model_plain: AdamGNN
-    value: 0.7265
-    std: null
-    paper_value: 0.7265
-    paper_std: null
+    value: 0.7704
+    std: 0.0078
+    paper_value: 0.7704
+    paper_std: 0.0078
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
@@ -5459,14 +3483,14 @@ results:
     architecture_label: null
     architecture_title: ''
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 1
+    table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
+    evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB fixed split as per OGB leaderboard
+    protocol_note: Accuracy on PROTEINS dataset using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -5488,18 +3512,18 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.7265
-    true_std: null
+    true_value: 0.7704
+    true_std: 0.0078
     value_gap_source_arxiv: '2010.00238'
     value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
     value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.7265
-    sort_std: null
-    global_rank: 31
-    paper_rank: 31
+    sort_value: 0.7704
+    sort_std: 0.0078
+    global_rank: 96
+    paper_rank: 96
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5509,13 +3533,13 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: PNA
-    model_key: pna
-    model_plain: PNA
-    value: 0.7237
-    std: null
-    paper_value: 0.7237
-    paper_std: null
+  - model: EigenPool
+    model_key: eigenpool
+    model_plain: EigenPool
+    value: 0.7519
+    std: 0.0195
+    paper_value: 0.7519
+    paper_std: 0.0195
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -5526,63 +3550,232 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
+    table_ref: Table 2
+    source_ref: MWAT19
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
+    evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB fixed split as per OGB leaderboard
+    protocol_note: Accuracy on PROTEINS dataset using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-10-01'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
+    at_pub_value: 0.741
+    at_pub_std: 0.031
+    at_pub_source_arxiv: '2009.10564'
+    at_pub_source_title: 'GraphCrop: Subgraph Cropping for Graph Classification'
+    at_pub_source_date_iso: '2020-09-22'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2021-01-20'
+    value_gap_source_date_label: WWW 2021
+    gap_vs_at_pub: 0.01090000000000002
     worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.766
+    true_std: null
+    value_gap_source_arxiv: '2101.08170'
+    value_gap_source_title: 'SUGAR: Subgraph Neural Network with Reinforcement Pooling
+      and Self-Supervised Mutual Information Mechanism'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.014100000000000001
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.766
+    sort_std: null
+    global_rank: 122
+    paper_rank: 261
+    rank_delta: 139
+    rank_delta_abs: 139
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.76
+    std: 0.032
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2504.13426'
+    title: Simplifying Graph Convolutional Networks with Redundancy-Free Neighbors
+    date: Apr 18, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-18'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 170
+    sort_value: 0.76
+    sort_std: 0.032
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SortPool
+    model_key: sortpool
+    model_plain: SortPool
+    value: 0.7049
+    std: 0.0237
+    paper_value: 0.7049
+    paper_std: 0.0237
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: ZCNC18
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on PROTEINS dataset using 10-fold CV
+    date: Oct 1, 2020
+    date_display: Oct 2020
+    date_iso: '2020-10-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7554
+    at_pub_std: null
+    at_pub_source_arxiv: '2002.09518'
+    at_pub_source_title: Memory-Based Graph Networks
+    at_pub_source_date_iso: '2020-02-21'
+    at_pub_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2024-07-16'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.05049999999999999
+    worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7237
-    true_std: null
-    value_gap_source_arxiv: '2010.00238'
-    value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
+    today_delta_significant: true
+    true_value: 0.7598
+    true_std: 0.0176
+    value_gap_source_arxiv: '2407.11361'
+    value_gap_source_title: 'Graph Structure Prompt Learning: A Novel Methodology
+      to Improve Performance of Graph Neural Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.05490000000000006
     has_value_note: false
     value_note: ''
-    sort_value: 0.7237
-    sort_std: null
-    global_rank: 35
-    paper_rank: 35
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    sort_value: 0.7598
+    sort_std: 0.0176
+    global_rank: 173
+    paper_rank: 499
+    rank_delta: 326
+    rank_delta_abs: 326
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Memory-Based Graph Networks
+    comparison_source_arxiv: '2002.09518'
+    is_best: false
+    is_std_outlier: false
+  - model: SAGPool
+    model_key: sagpool
+    model_plain: SAGPool
+    value: 0.7527
+    std: 0.0057
+    paper_value: 0.7527
+    paper_std: 0.0057
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: LLK19
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on PROTEINS dataset using 10-fold CV
+    date: Oct 1, 2020
+    date_display: Oct 2020
+    date_iso: '2020-10-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7186
+    at_pub_std: 0.0097
+    at_pub_source_arxiv: '1909.11855'
+    at_pub_source_title: Universal Graph Transformer Self-Attention Networks
+    at_pub_source_date_iso: '2019-09-26'
+    at_pub_source_date_label: WWW 2019
+    value_gap_source_date_iso: '2022-05-01'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.03410000000000002
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7595
+    true_std: 0.0452
+    value_gap_source_arxiv: '2205.15068'
+    value_gap_source_title: Embedding Graphs on Grassmann Manifold
+    value_gap_source_is_current_paper: false
+    value_gap: 0.006799999999999917
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7595
+    sort_std: 0.0452
+    global_rank: 175
+    paper_rank: 250
+    rank_delta: 75
+    rank_delta_abs: 75
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Universal Graph Transformer Self-Attention Networks
+    comparison_source_arxiv: '1909.11855'
     is_best: false
     is_std_outlier: false
   - model: g-U-Net
     model_key: g-u-net
     model_plain: g-U-Net
-    value: 0.7178
-    std: null
-    paper_value: 0.7178
-    paper_std: null
+    value: 0.7294
+    std: 0.0368
+    paper_value: 0.7294
+    paper_std: 0.0368
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -5593,14 +3786,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 1
+    table_ref: Table 2
     source_ref: GJ19
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
+    evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB fixed split as per OGB leaderboard
+    protocol_note: Accuracy on PROTEINS dataset using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -5622,152 +3815,18 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.7178
-    true_std: null
+    true_value: 0.7294
+    true_std: 0.0368
     value_gap_source_arxiv: '2010.00238'
     value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
     value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.7178
-    sort_std: null
-    global_rank: 61
-    paper_rank: 61
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.7176
-    std: null
-    paper_value: 0.7176
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: OGB fixed split as per OGB leaderboard
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-10-01'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7176
-    true_std: null
-    value_gap_source_arxiv: '2010.00238'
-    value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7176
-    sort_std: null
-    global_rank: 62
-    paper_rank: 62
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GRAND
-    model_key: grand
-    model_plain: GRAND
-    value: 0.7097
-    std: null
-    paper_value: 0.7097
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: OGB fixed split as per OGB leaderboard
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-10-01'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7097
-    true_std: null
-    value_gap_source_arxiv: '2010.00238'
-    value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7097
-    sort_std: null
-    global_rank: 88
-    paper_rank: 88
+    sort_value: 0.7294
+    sort_std: 0.0368
+    global_rank: 410
+    paper_rank: 410
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5780,10 +3839,10 @@ results:
   - model: GXN
     model_key: gxn
     model_plain: GXN
-    value: 0.7002
-    std: null
-    paper_value: 0.7002
-    paper_std: null
+    value: 0.7226
+    std: 0.0224
+    paper_value: 0.7226
+    paper_std: 0.0224
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -5794,14 +3853,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 1
+    table_ref: Table 2
     source_ref: LCZT20
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
+    evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB fixed split as per OGB leaderboard
+    protocol_note: Accuracy on PROTEINS dataset using 10-fold CV
     date: Oct 1, 2020
     date_display: Oct 2020
     date_iso: '2020-10-01'
@@ -5823,18 +3882,18 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.7002
-    true_std: null
+    true_value: 0.7226
+    true_std: 0.0224
     value_gap_source_arxiv: '2010.00238'
     value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
     value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.7002
-    sort_std: null
-    global_rank: 99
-    paper_rank: 99
+    sort_value: 0.7226
+    sort_std: 0.0224
+    global_rank: 444
+    paper_rank: 444
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5844,77 +3903,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: MLP
-    model_key: mlp
-    model_plain: MLP
-    value: 0.555
-    std: null
-    paper_value: 0.555
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: H99
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: OGB fixed split as per OGB leaderboard
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-07-29'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.6831
-    true_std: null
-    value_gap_source_arxiv: '2407.19941'
-    value_gap_source_title: Boosting Cross-Domain and Cross-Task Generalization for
-      Text-Attributed Graphs from Structural Perspective
-    value_gap_source_is_current_paper: false
-    value_gap: 0.1281
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6831
-    sort_std: null
-    global_rank: 104
-    paper_rank: 122
-    rank_delta: 18
-    rank_delta_abs: 18
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
   rank_metric: Accuracy
   higher_is_better: true
-  experiment_scope: node-level
+  experiment_scope: graph-level
   dataset_primary_metric: Accuracy
   paper_metrics:
   - Accuracy
@@ -5922,34 +3913,13 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: Classic
+- benchmark: TU Dortmund
   datasets:
   - *id001
   - *id002
-- benchmark: TU Dortmund
-  datasets:
   - *id003
   - *id004
-  - *id005
-- benchmark: OGB
-  datasets:
-  - *id006
 datasets_by_scope:
-- scope: node-level
-  label: Node-level
-  benchmarks:
-  - benchmark: Classic
-    benchmark_slug: classic
-    datasets:
-    - dataset: CiteSeer
-      dataset_slug: citeseer
-    - dataset: PubMed
-      dataset_slug: pubmed
-  - benchmark: OGB
-    benchmark_slug: ogb
-    datasets:
-    - dataset: ogbn-arxiv
-      dataset_slug: ogbn-arxiv
 - scope: graph-level
   label: Graph-level
   benchmarks:
@@ -5960,8 +3930,11 @@ datasets_by_scope:
       dataset_slug: mutag
     - dataset: NCI1
       dataset_slug: nci1
+    - dataset: PROTEINS
+      dataset_slug: proteins
     - dataset: D&D
       dataset_slug: d-d
+single_proposed_model: AdamGNN
 main_figure: /figures/2010.00238/main_figure.jpegoptim.jpg
 ---
 

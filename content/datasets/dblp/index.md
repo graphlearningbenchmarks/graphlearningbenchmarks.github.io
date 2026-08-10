@@ -12,14 +12,13 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 4
-result_count: 590
+result_count: 557
 best_model:
-  model: HERec
-  value: 0.9993
+  model: LMSPS
+  value: 0.9566
   metric: Micro-F1
-  arxiv_id: '1912.10832'
-  paper_title: An Attention-based Graph Neural Network for Heterogeneous Structural
-    Learning
+  arxiv_id: '2307.08430'
+  paper_title: Long-range Meta-path Search on Large-scale Heterogeneous Graphs
 papers:
 - arxiv_id: '2605.03076'
   title: Adaptive Negative Scheduling for Graph Contrastive Learning
@@ -39,11 +38,6 @@ papers:
   title: 'Coden: Efficient Temporal Graph Neural Networks for Continuous Prediction'
   date_iso: '2026-02-13'
   venue: ''
-- arxiv_id: '2603.01941'
-  title: 'BAED: a New Paradigm for Few-shot Graph Learning with Explanation in the
-    Loop'
-  date_iso: '2026-02-01'
-  venue: ''
 - arxiv_id: '2601.22943'
   title: 'Scalable Topology-Preserving Graph Coarsening: Concepts and Algorithms'
   date_iso: '2026-01-30'
@@ -51,10 +45,6 @@ papers:
 - arxiv_id: '2511.17923'
   title: Towards Efficient LLM-aware Heterogeneous Graph Learning
   date_iso: '2025-11-22'
-  venue: ''
-- arxiv_id: '2510.05750'
-  title: Are Heterogeneous Graph Neural Networks Truly Effective? A Causal Perspective
-  date_iso: '2025-10-07'
   venue: ''
 - arxiv_id: '2508.14097'
   title: Non-Dissipative Graph Propagation for Non-Local Community Detection
@@ -291,10 +281,6 @@ papers:
   title: 'Scattering GCN: Overcoming Oversmoothness in Graph Convolutional Networks'
   date_iso: '2020-03-18'
   venue: NeurIPS 2020
-- arxiv_id: '1912.10832'
-  title: An Attention-based Graph Neural Network for Heterogeneous Structural Learning
-  date_iso: '2019-12-19'
-  venue: AAAI 2019
 - arxiv_id: '1903.08889'
   title: Node Embedding over Temporal Graphs
   date_iso: '2019-03-01'
@@ -352,306 +338,6 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
-  - model: HERec
-    model_plain: HERec
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: walk
-    architecture_label: Walk
-    architecture_title: Random-walk graph embedding
-    arxiv_id: '1912.10832'
-    title: An Attention-based Graph Neural Network for Heterogeneous Structural Learning
-    date: Dec 19, 2019
-    date_iso: '2019-12-19'
-    date_display: Dec 2019
-    codebase_url: https://github.com/didi/hetsann
-    published_conference: AAAI 2019
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2019
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.9993
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: HetSANN
-    model_plain: HetSANN
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '1912.10832'
-    title: An Attention-based Graph Neural Network for Heterogeneous Structural Learning
-    date: Dec 19, 2019
-    date_iso: '2019-12-19'
-    date_display: Dec 2019
-    codebase_url: https://github.com/didi/hetsann
-    published_conference: AAAI 2019
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2019
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9972
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: DeepWalk
-    model_plain: DeepWalk
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: walk
-    architecture_label: Walk
-    architecture_title: Random-walk graph embedding
-    arxiv_id: '1912.10832'
-    title: An Attention-based Graph Neural Network for Heterogeneous Structural Learning
-    date: Dec 19, 2019
-    date_iso: '2019-12-19'
-    date_display: Dec 2019
-    codebase_url: https://github.com/didi/hetsann
-    published_conference: AAAI 2019
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2019
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9941
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: HetSANN.M.R
-    model_plain: HetSANN.M.R
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '1912.10832'
-    title: An Attention-based Graph Neural Network for Heterogeneous Structural Learning
-    date: Dec 19, 2019
-    date_iso: '2019-12-19'
-    date_display: Dec 2019
-    codebase_url: https://github.com/didi/hetsann
-    published_conference: AAAI 2019
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2019
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9911
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: HetSANN.M
-    model_plain: HetSANN.M
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '1912.10832'
-    title: An Attention-based Graph Neural Network for Heterogeneous Structural Learning
-    date: Dec 19, 2019
-    date_iso: '2019-12-19'
-    date_display: Dec 2019
-    codebase_url: https://github.com/didi/hetsann
-    published_conference: AAAI 2019
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2019
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9908
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: HetSANN.M.R.V
-    model_plain: HetSANN.M.R.V
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '1912.10832'
-    title: An Attention-based Graph Neural Network for Heterogeneous Structural Learning
-    date: Dec 19, 2019
-    date_iso: '2019-12-19'
-    date_display: Dec 2019
-    codebase_url: https://github.com/didi/hetsann
-    published_conference: AAAI 2019
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2019
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9869
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: LMSPS
     model_plain: LMSPS
     is_baseline: false
@@ -672,7 +358,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2023
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.9566
@@ -722,7 +408,7 @@ variants:
     published_conference_slug: www
     published_venue: WWW 2023
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.9561
@@ -772,7 +458,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.9555
@@ -823,7 +509,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.9544
@@ -873,7 +559,7 @@ variants:
     published_conference_slug: aaai
     published_venue: AAAI 2022
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.9542
@@ -923,7 +609,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2023
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.9531
@@ -973,7 +659,7 @@ variants:
     published_conference_slug: kdd
     published_venue: KDD 2022
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.952
@@ -1204,56 +890,6 @@ variants:
     - null
     - null
     - null
-  - model: RGCN
-    model_plain: RGCN
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2510.05750'
-    title: Are Heterogeneous Graph Neural Networks Truly Effective? A Causal Perspective
-    date: Oct 7, 2025
-    date_iso: '2025-10-07'
-    date_display: Oct 2025
-    codebase_url: https://github.com/YXNTU/CausalHGNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.95
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: EM-GCN[PO]
     model_plain: EM-GCN[PO]
     is_baseline: true
@@ -1443,56 +1079,6 @@ variants:
     - null
     metric_stds:
     - 0.0014
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: MECCH
-    model_plain: MECCH
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2510.05750'
-    title: Are Heterogeneous Graph Neural Networks Truly Effective? A Causal Perspective
-    date: Oct 7, 2025
-    date_iso: '2025-10-07'
-    date_display: Oct 2025
-    codebase_url: https://github.com/YXNTU/CausalHGNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9475
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
     - null
     - null
     - null
@@ -2109,106 +1695,6 @@ variants:
     - null
     - null
     - null
-  - model: HINormer
-    model_plain: HINormer
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2510.05750'
-    title: Are Heterogeneous Graph Neural Networks Truly Effective? A Causal Perspective
-    date: Oct 7, 2025
-    date_iso: '2025-10-07'
-    date_display: Oct 2025
-    codebase_url: https://github.com/YXNTU/CausalHGNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9445
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: PHGT
-    model_plain: PHGT
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2510.05750'
-    title: Are Heterogeneous Graph Neural Networks Truly Effective? A Causal Perspective
-    date: Oct 7, 2025
-    date_iso: '2025-10-07'
-    date_display: Oct 2025
-    codebase_url: https://github.com/YXNTU/CausalHGNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9444
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: GraphMSE
     model_plain: GraphMSE
     is_baseline: true
@@ -2461,56 +1947,6 @@ variants:
     - null
     - null
     - null
-  - model: simpleHGN
-    model_plain: simpleHGN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2510.05750'
-    title: Are Heterogeneous Graph Neural Networks Truly Effective? A Causal Perspective
-    date: Oct 7, 2025
-    date_iso: '2025-10-07'
-    date_display: Oct 2025
-    codebase_url: https://github.com/YXNTU/CausalHGNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9418
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: Transformer
     model_plain: Transformer
     is_baseline: true
@@ -2562,56 +1998,6 @@ variants:
     - null
     - null
     - null
-  - model: HERO
-    model_plain: HERO
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2510.05750'
-    title: Are Heterogeneous Graph Neural Networks Truly Effective? A Causal Perspective
-    date: Oct 7, 2025
-    date_iso: '2025-10-07'
-    date_display: Oct 2025
-    codebase_url: https://github.com/YXNTU/CausalHGNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9397
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: GTN
     model_plain: GTN
     is_baseline: true
@@ -2650,56 +2036,6 @@ variants:
     - null
     metric_stds:
     - 0.0054
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: ComCH
-    model_plain: ComCH
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2510.05750'
-    title: Are Heterogeneous Graph Neural Networks Truly Effective? A Causal Perspective
-    date: Oct 7, 2025
-    date_iso: '2025-10-07'
-    date_display: Oct 2025
-    codebase_url: https://github.com/YXNTU/CausalHGNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9391
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
     - null
     - null
     - null
@@ -2863,21 +2199,678 @@ variants:
     - null
     - null
     - null
-  row_count: 590
+  - model: MAGNN
+    model_plain: MAGNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2112.14936'
+    title: Heterogeneous Graph Benchmarks
+    date: Aug 14, 2021
+    date_iso: '2021-08-14'
+    date_display: Aug 2021
+    codebase_url: https://github.com/THUDM/HGB
+    published_conference: KDD 2021
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9376
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0045
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: LINKX (HDHGR)
+    model_plain: LINKX (HDHGR)
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2302.06299'
+    title: Homophily-oriented Heterogeneous Graph Rewiring
+    date: Feb 13, 2023
+    date_iso: '2023-02-13'
+    date_display: Feb 2023
+    codebase_url: ''
+    published_conference: WWW 2023
+    published_conference_short: WWW
+    published_conference_slug: www
+    published_venue: WWW 2023
+    uses_external_data: true
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9369
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0026
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: HAN
+    model_plain: HAN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2311.07929'
+    title: Variational Graph Autoencoder for Heterogeneous Information Networks with
+      Missing and Inaccurate Attributes
+    date: Nov 14, 2023
+    date_iso: '2023-11-14'
+    date_display: Nov 2023
+    codebase_url: ''
+    published_conference: KDD 2023
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9369
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: HGT
+    model_plain: HGT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2012.10024'
+    title: Leveraging Meta-path Contexts for Classification in Heterogeneous Information
+      Networks
+    date: Dec 18, 2020
+    date_iso: '2020-12-18'
+    date_display: Dec 2020
+    codebase_url: https://github.com/dingdanhao110/Conch
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9365
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: HGCML-P
+    model_plain: HGCML-P
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2210.00248'
+    title: Heterogeneous Graph Contrastive Multi-view Learning
+    date: Oct 1, 2022
+    date_iso: '2022-10-01'
+    date_display: Oct 2022
+    codebase_url: https://github.com/Zehong-Wang/HGCML
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9344
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0008
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: HGMAE
+    model_plain: HGMAE
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2412.00742'
+    title: Revisiting Self-Supervised Heterogeneous Graph Learning from Spectral Clustering
+      Perspective
+    date: Dec 1, 2024
+    date_iso: '2024-12-01'
+    date_display: Dec 2024
+    codebase_url: https://github.com/YujieMo/SCHOOL
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.934
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.006
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: FusedGAT
+    model_plain: FusedGAT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2407.11361'
+    title: 'Graph Structure Prompt Learning: A Novel Methodology to Improve Performance
+      of Graph Neural Networks'
+    date: Jul 16, 2024
+    date_iso: '2024-07-16'
+    date_display: Jul 2024
+    codebase_url: https://github.com/PreckLi/graph_prompt_learning
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.934
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.002
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: GAT
+    model_plain: GAT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2112.14936'
+    title: Heterogeneous Graph Benchmarks
+    date: Aug 14, 2021
+    date_iso: '2021-08-14'
+    date_display: Aug 2021
+    codebase_url: https://github.com/THUDM/HGB
+    published_conference: KDD 2021
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9339
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.003
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: HetGNN
+    model_plain: HetGNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2012.10024'
+    title: Leveraging Meta-path Contexts for Classification in Heterogeneous Information
+      Networks
+    date: Dec 18, 2020
+    date_iso: '2020-12-18'
+    date_display: Dec 2020
+    codebase_url: https://github.com/dingdanhao110/Conch
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9336
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: DMGI
+    model_plain: DMGI
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2311.07929'
+    title: Variational Graph Autoencoder for Heterogeneous Information Networks with
+      Missing and Inaccurate Attributes
+    date: Nov 14, 2023
+    date_iso: '2023-11-14'
+    date_display: Nov 2023
+    codebase_url: ''
+    published_conference: KDD 2023
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9331
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: HGCML
+    model_plain: HGCML
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2210.00248'
+    title: Heterogeneous Graph Contrastive Multi-view Learning
+    date: Oct 1, 2022
+    date_iso: '2022-10-01'
+    date_display: Oct 2022
+    codebase_url: https://github.com/Zehong-Wang/HGCML
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9329
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0012
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: GCN
+    model_plain: GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2012.10024'
+    title: Leveraging Meta-path Contexts for Classification in Heterogeneous Information
+      Networks
+    date: Dec 18, 2020
+    date_iso: '2020-12-18'
+    date_display: Dec 2020
+    codebase_url: https://github.com/dingdanhao110/Conch
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.931
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: GraphSAGE
+    model_plain: GraphSAGE
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.14481'
+    title: Efficient Heterogeneous Graph Learning via Random Projection
+    date: Oct 23, 2023
+    date_iso: '2023-10-23'
+    date_display: Oct 2023
+    codebase_url: https://github.com/CrawlScript/RpHGNN
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9306
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0047
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  row_count: 557
   rows_json: /data/datasets/dblp/standard-split-rows.json
   chart_json: /data/datasets/dblp/standard-split-chart.json
   arch_counts:
-    gnn: 404
-    hybrid: 70
-    graph_transformer: 21
+    gnn: 379
+    hybrid: 66
+    graph_transformer: 20
     llm: 3
-    walk: 30
+    walk: 27
     traditional: 49
   metric_counts:
-  - 290
+  - 273
   - 27
   - 13
-  - 197
+  - 181
   - 5
   - 9
   - 74
@@ -2894,12 +2887,31 @@ variants:
     arxiv_id: '1903.08889'
     title: Node Embedding over Temporal Graphs
     date: '2019-03-01'
-  - value: 0.9993
+  - value: 0.947
     std: null
-    model: HERec
-    arxiv_id: '1912.10832'
-    title: An Attention-based Graph Neural Network for Heterogeneous Structural Learning
-    date: '2019-12-19'
+    model: ConCH
+    arxiv_id: '2012.10024'
+    title: Leveraging Meta-path Contexts for Classification in Heterogeneous Information
+      Networks
+    date: '2020-12-18'
+  - value: 0.9542
+    std: 0.0017
+    model: SeHGNN
+    arxiv_id: '2207.02547'
+    title: Simple and Efficient Heterogeneous Graph Neural Network
+    date: '2022-07-06'
+  - value: 0.9561
+    std: 0.0012
+    model: PSHGCN
+    arxiv_id: '2305.19872'
+    title: Spectral Heterogeneous Graph Convolutions via Positive Noncommutative Polynomials
+    date: '2023-05-31'
+  - value: 0.9566
+    std: 0.002
+    model: LMSPS
+    arxiv_id: '2307.08430'
+    title: Long-range Meta-path Search on Large-scale Heterogeneous Graphs
+    date: '2023-07-17'
   milestones_by_metric:
     Micro-F1: *id001
     ACC:
@@ -2909,7 +2921,13 @@ variants:
       arxiv_id: '1706.01860'
       title: Attributed Network Embedding for Learning in a Dynamic Environment
       date: '2017-06-06'
-    ARI: []
+    ARI:
+    - value: 0.4635
+      std: null
+      model: NE
+      arxiv_id: '2203.10866'
+      title: Unsupervised Network Embedding Beyond Homophily
+      date: '2022-03-21'
     Accuracy:
     - value: 0.815
       std: null
@@ -2923,15 +2941,22 @@ variants:
       arxiv_id: '2006.04131'
       title: Deep Graph Contrastive Representation Learning
       date: '2020-06-07'
-    - value: 0.872
-      std: null
-      model: GIN
-      arxiv_id: '2112.08331'
-      title: Model Stealing Attacks Against Inductive Graph Neural Networks
-      date: '2021-12-15'
+    - value: 0.8495
+      std: 0.0015
+      model: F^2GNN
+      arxiv_id: '2112.14531'
+      title: 'Designing the Topology of Graph Neural Networks: A Novel Feature Fusion
+        Perspective'
+      date: '2021-12-29'
+    - value: 0.859
+      std: 0.001
+      model: GIRL
+      arxiv_id: '2201.12843'
+      title: Graph Representation Learning via Aggregation Enhancement
+      date: '2022-01-30'
     - value: 0.9112
       std: 0.001
-      model: TriCL
+      model: TriCL (L_n + L_g)
       arxiv_id: '2206.04739'
       title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning
         on Hypergraphs'
@@ -2943,7 +2968,13 @@ variants:
       title: 'Towards Human-like Perception: Learning Structural Causal Model in Heterogeneous
         Graph'
       date: '2023-12-10'
-    COS: []
+    COS:
+    - value: 0.585
+      std: 0.007
+      model: BN-Pool
+      arxiv_id: '2501.09821'
+      title: 'BN-Pool: Bayesian Nonparametric Pooling for Graphs'
+      date: '2025-01-16'
     Conductance:
     - value: 0.42
       std: 0.08
@@ -2958,13 +2989,13 @@ variants:
       arxiv_id: '2202.12533'
       title: Improved Dual Correlation Reduction Network
       date: '2022-02-25'
-    - value: 0.829
-      std: 0.0017
-      model: SynC SSL
-      arxiv_id: '2406.15797'
-      title: 'SynC: Synergistic Boosting of Structure and Representation for Deep
-        Graph Clustering'
-      date: '2024-06-22'
+    - value: 0.9454
+      std: 0.0123
+      model: AUG_bal
+      arxiv_id: '2302.14061'
+      title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous Information
+        Networks
+      date: '2023-02-27'
     F1-micro:
     - value: 0.8755
       std: null
@@ -2988,13 +3019,25 @@ variants:
       title: 'SlotGAT: Slot-based Message Passing for Heterogeneous Graphs'
       date: '2024-05-03'
     NMI:
-    - value: 0.41
-      std: 0.12
-      model: uAGNN
-      arxiv_id: '2508.14097'
-      title: Non-Dissipative Graph Propagation for Non-Local Community Detection
-      date: '2025-06-30'
-    ROC-AUC: []
-    Unweighted F1 Measure: []
+    - value: 0.4417
+      std: null
+      model: NE
+      arxiv_id: '2203.10866'
+      title: Unsupervised Network Embedding Beyond Homophily
+      date: '2022-03-21'
+    ROC-AUC:
+    - value: 0.939
+      std: null
+      model: DGI
+      arxiv_id: '2203.10866'
+      title: Unsupervised Network Embedding Beyond Homophily
+      date: '2022-03-21'
+    Unweighted F1 Measure:
+    - value: 0.707
+      std: 0.024
+      model: WD-GCN
+      arxiv_id: '1704.06199'
+      title: Dynamic Graph Convolutional Networks
+      date: '2017-04-20'
 ---
 

@@ -12,7 +12,7 @@ stats:
   avg_nodes: 1166243.0
   avg_edges: null
   num_classes: 40
-result_count: 171
+result_count: 160
 best_model:
   model: OFA
   value: 0.7764
@@ -138,14 +138,6 @@ papers:
   title: Learning Conjoint Attentions for Graph Neural Nets
   date_iso: '2021-02-05'
   venue: NeurIPS 2021
-- arxiv_id: '2012.15024'
-  title: Adaptive Graph Diffusion Networks
-  date_iso: '2020-12-30'
-  venue: ''
-- arxiv_id: '2010.00238'
-  title: Multi-grained Semantics-aware Graph Neural Networks
-  date_iso: '2020-10-01'
-  venue: ''
 variants:
 - slug: standard-split
   name: Standard split
@@ -819,38 +811,6 @@ variants:
     - null
     - null
     - null
-  - model: AGDN
-    model_plain: AGDN
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2012.15024'
-    title: Adaptive Graph Diffusion Networks
-    date: Dec 30, 2020
-    date_iso: '2020-12-30'
-    date_display: Dec 2020
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7341
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0025
-    - null
-    - null
-    - null
   - model: FedSage
     model_plain: FedSage
     is_baseline: true
@@ -1179,102 +1139,6 @@ variants:
     - null
     - null
     - null
-  - model: MAGNA
-    model_plain: MAGNA
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2012.15024'
-    title: Adaptive Graph Diffusion Networks
-    date: Dec 30, 2020
-    date_iso: '2020-12-30'
-    date_display: Dec 2020
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7276
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0014
-    - null
-    - null
-    - null
-  - model: GCNII
-    model_plain: GCNII
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2010.00238'
-    title: Multi-grained Semantics-aware Graph Neural Networks
-    date: Oct 1, 2020
-    date_iso: '2020-10-01'
-    date_display: Oct 2020
-    codebase_url: https://github.com/zhiqiangzhongddu/AdamGNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7274
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-  - model: AdamGNN
-    model_plain: AdamGNN
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2010.00238'
-    title: Multi-grained Semantics-aware Graph Neural Networks
-    date: Oct 1, 2020
-    date_iso: '2020-10-01'
-    date_display: Oct 2020
-    codebase_url: https://github.com/zhiqiangzhongddu/AdamGNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7265
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
   - model: SEA-GWNN
     model_plain: SEA-GWNN
     is_baseline: true
@@ -1368,38 +1232,6 @@ variants:
     - null
     metric_stds:
     - 0.0008
-    - null
-    - null
-    - null
-  - model: PNA
-    model_plain: PNA
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2010.00238'
-    title: Multi-grained Semantics-aware Graph Neural Networks
-    date: Oct 1, 2020
-    date_iso: '2020-10-01'
-    date_display: Oct 2020
-    codebase_url: https://github.com/zhiqiangzhongddu/AdamGNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7237
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
     - null
     - null
     - null
@@ -1565,38 +1397,6 @@ variants:
     - null
     - null
     - null
-  - model: JKNet
-    model_plain: JKNet
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 0.09
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2012.15024'
-    title: Adaptive Graph Diffusion Networks
-    date: Dec 30, 2020
-    date_iso: '2020-12-30'
-    date_display: Dec 2020
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7219
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0021
-    - null
-    - null
-    - null
   - model: Auto-GNN
     model_plain: Auto-GNN
     is_baseline: true
@@ -1731,20 +1531,20 @@ variants:
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: 0.04
+    params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2012.15024'
-    title: Adaptive Graph Diffusion Networks
-    date: Dec 30, 2020
-    date_iso: '2020-12-30'
-    date_display: Dec 2020
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
+    arxiv_id: '2410.02158'
+    title: 'SCNode: Spatial and Contextual Coordinates for Graph Representation Learning'
+    date: Oct 3, 2024
+    date_iso: '2024-10-03'
+    date_display: Oct 2024
+    codebase_url: https://github.com/joshem163/SCNode
+    published_conference: TMLR 2024
+    published_conference_short: TMLR
+    published_conference_slug: tmlr
+    published_venue: TMLR 2024
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -1754,12 +1554,44 @@ variants:
     - null
     - null
     metric_stds:
-    - 0.0025
     - null
     - null
     - null
-  - model: GAT
-    model_plain: GAT
+    - null
+  - model: Random
+    model_plain: Random
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2206.09166'
+    title: 'NAS-Bench-Graph: Benchmarking Graph Neural Architecture Search'
+    date: Jun 18, 2022
+    date_iso: '2022-06-18'
+    date_display: Jun 2022
+    codebase_url: https://github.com/THUMNLab/NAS-Bench-Graph
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7204
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0005
+    - null
+    - null
+    - null
+  - model: DEFT
+    model_plain: DEFT
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -1767,57 +1599,217 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2010.00238'
-    title: Multi-grained Semantics-aware Graph Neural Networks
-    date: Oct 1, 2020
-    date_iso: '2020-10-01'
-    date_display: Oct 2020
-    codebase_url: https://github.com/zhiqiangzhongddu/AdamGNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
+    arxiv_id: '2405.13806'
+    title: A General Graph Spectral Wavelet Convolution via Chebyshev Order Decomposition
+    date: May 22, 2024
+    date_iso: '2024-05-22'
+    date_display: May 2024
+    codebase_url: https://github.com/liun-online/WaveGC
+    published_conference: ICML 2024
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2024
     uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
-    - 0.7206
+    - 0.7201
     - null
     - null
     - null
     metric_stds:
+    - 0.002
     - null
     - null
     - null
+  - model: GNAS
+    model_plain: GNAS
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2206.09166'
+    title: 'NAS-Bench-Graph: Benchmarking Graph Neural Architecture Search'
+    date: Jun 18, 2022
+    date_iso: '2022-06-18'
+    date_display: Jun 2022
+    codebase_url: https://github.com/THUMNLab/NAS-Bench-Graph
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.72
     - null
-  row_count: 171
+    - null
+    - null
+    metric_stds:
+    - 0.0002
+    - null
+    - null
+    - null
+  - model: ORC (us)
+    model_plain: ORC (us)
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2407.04236'
+    title: Graph Pooling via Ricci Flow
+    date: Jul 5, 2024
+    date_iso: '2024-07-05'
+    date_display: Jul 2024
+    codebase_url: ''
+    published_conference: TMLR 2024
+    published_conference_short: TMLR
+    published_conference_slug: tmlr
+    published_venue: TMLR 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: true
+    metric_values:
+    - 0.72
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.036
+    - null
+    - null
+    - null
+  - model: GaAN
+    model_plain: GaAN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 1.471506
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2102.06986'
+    title: How Framelets Enhance Graph Neural Networks
+    date: Feb 13, 2021
+    date_iso: '2021-02-13'
+    date_display: Feb 2021
+    codebase_url: ''
+    published_conference: ICML 2021
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7197
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0018
+    - null
+    - null
+    - null
+  - model: UFGConv-R
+    model_plain: UFGConv-R
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2102.06986'
+    title: How Framelets Enhance Graph Neural Networks
+    date: Feb 13, 2021
+    date_iso: '2021-02-13'
+    date_display: Feb 2021
+    codebase_url: ''
+    published_conference: ICML 2021
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7197
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0012
+    - null
+    - null
+    - null
+  - model: UFGConvR
+    model_plain: UFGConvR
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.13806'
+    title: A General Graph Spectral Wavelet Convolution via Chebyshev Order Decomposition
+    date: May 22, 2024
+    date_iso: '2024-05-22'
+    date_display: May 2024
+    codebase_url: https://github.com/liun-online/WaveGC
+    published_conference: ICML 2024
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7197
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0012
+    - null
+    - null
+    - null
+  row_count: 160
   rows_json: /data/datasets/ogbn-arxiv/standard-split-rows.json
   chart_json: /data/datasets/ogbn-arxiv/standard-split-chart.json
   arch_counts:
-    gnn: 125
-    hybrid: 14
+    gnn: 116
+    hybrid: 13
     graph_transformer: 2
     llm: 6
     walk: 2
     traditional: 20
   metric_counts:
-  - 157
+  - 146
   - 5
   - 9
   - 9
   milestones: &id001
-  - value: 0.7274
-    std: null
-    model: GCNII
-    arxiv_id: '2010.00238'
-    title: Multi-grained Semantics-aware Graph Neural Networks
-    date: '2020-10-01'
-  - value: 0.7341
-    std: 0.0025
-    model: AGDN
-    arxiv_id: '2012.15024'
-    title: Adaptive Graph Diffusion Networks
-    date: '2020-12-30'
+  - value: 0.6402
+    std: 0.0018
+    model: GIN
+    arxiv_id: '2102.03147'
+    title: Learning Conjoint Attentions for Graph Neural Nets
+    date: '2021-02-05'
+  - value: 0.7197
+    std: 0.0018
+    model: GaAN
+    arxiv_id: '2102.06986'
+    title: How Framelets Enhance Graph Neural Networks
+    date: '2021-02-13'
   - value: 0.7612
     std: 0.0016
     model: GIANT-XRT

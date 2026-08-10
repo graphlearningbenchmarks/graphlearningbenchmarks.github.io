@@ -55,8 +55,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - EB-GNN
-mrr: 0.0624
-adjusted_mrr: 0.0416
+mrr: 0.0628
+adjusted_mrr: 0.0419
 mrr_dataset_count: 2
 benchmark_categories:
 - GNNBenchmark
@@ -267,8 +267,8 @@ results:
     value_note: ''
     sort_value: 0.6
     sort_std: null
-    global_rank: 62
-    paper_rank: 62
+    global_rank: 59
+    paper_rank: 59
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -335,8 +335,8 @@ results:
     value_note: ''
     sort_value: 0.2
     sort_std: null
-    global_rank: 73
-    paper_rank: 73
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -404,8 +404,8 @@ results:
     value_note: ''
     sort_value: 0.2
     sort_std: null
-    global_rank: 71
-    paper_rank: 71
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -472,8 +472,8 @@ results:
     value_note: ''
     sort_value: 0.2
     sort_std: null
-    global_rank: 72
-    paper_rank: 72
+    global_rank: 68
+    paper_rank: 68
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -541,8 +541,8 @@ results:
     value_note: ''
     sort_value: 0.1
     sort_std: null
-    global_rank: 85
-    paper_rank: 85
+    global_rank: 80
+    paper_rank: 80
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

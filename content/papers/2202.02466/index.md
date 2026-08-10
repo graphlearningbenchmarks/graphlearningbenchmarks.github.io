@@ -49,7 +49,7 @@ has_results: true
 paper_type: method
 proposed_models:
 - EERM
-mrr: 0.0014
+mrr: 0.0015
 adjusted_mrr: 0.0005
 mrr_dataset_count: 1
 benchmark_categories:
@@ -192,7 +192,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 47
+    global_rank: 45
     sort_value: 0.923
     sort_std: 0.007
     comparison_type: global_top
@@ -225,7 +225,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 76
+    global_rank: 73
     sort_value: 0.9001
     sort_std: 0.023
     comparison_type: global_top
@@ -291,8 +291,8 @@ results:
     value_note: ''
     sort_value: 0.5625
     sort_std: 0.0013
-    global_rank: 688
-    paper_rank: 688
+    global_rank: 651
+    paper_rank: 651
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -360,8 +360,8 @@ results:
     value_note: ''
     sort_value: 0.5612
     sort_std: 0.0042
-    global_rank: 690
-    paper_rank: 690
+    global_rank: 653
+    paper_rank: 653
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

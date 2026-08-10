@@ -49,103 +49,275 @@ abstract: Graph Neural Networks (GNNs) are powerful tools for processing relatio
   than LLM-based or tuning-based baselines, validating the effectiveness of our approach.
   Our code is available at:.
 codebase_url: https://github.com/yiming421/inductnode
-extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+extraction_model: google/gemma-4-26B-A4B-it
 has_results: true
 paper_type: method
 proposed_models:
-- GILT
-mrr: 0.0011
-adjusted_mrr: 0.0004
-mrr_dataset_count: 1
+- GILT (5-shot)
+mrr: 0.073
+adjusted_mrr: 0.0487
+mrr_dataset_count: 2
 benchmark_categories:
-- Classic
+- OGB
 benchmark_coverage:
-- benchmark: Classic
-  benchmark_slug: classic
-  evaluated: 1
-  total: 12
+- benchmark: OGB
+  benchmark_slug: ogb
+  evaluated: 2
+  total: 16
 task_categories:
-- node_classification
+- graph_classification
+- link_prediction
 experiment_scopes:
-- node-level
+- edge-level
+- graph-level
 results:
 - &id001
-  dataset: Cora
+  dataset: ogbg-molhiv
   rows:
-  - model: Exphormer
-    model_key: exphormer
-    model_plain: Exphormer
-    value: 0.9635
-    std: 0.0019
-    metric: Accuracy
+  - model: Multi-RF Fusion with Multi-GNN Blending
+    model_key: multi-rf fusion with multi-gnn blending
+    model_plain: Multi-RF Fusion with Multi-GNN Blending
+    value: 0.8476
+    std: 0.0002
+    metric: ROC-AUC
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    venue: The Web Conference
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2603.20724'
+    title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
+    date: Mar 21, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-21'
+    venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
+    input_feature_source: mixed
+    feature_source_evidence: Mixing pharmacophoric (FCFP) and structural (ECFP) fingerprints...
+      GNNs contributing only 12%
     is_global_top: true
     global_rank: 1
-    sort_value: 0.9635
-    sort_std: 0.0019
+    sort_value: 0.8476
+    sort_std: 0.0002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGFormer
-    model_key: sgformer
-    model_plain: SGFormer
-    value: 0.9629
+  - model: HyperFusion
+    model_key: hyperfusion
+    model_plain: HyperFusion
+    value: 0.8475
+    std: 0.0003
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2603.20724'
+    title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
+    date: Mar 21, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-21'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: unknown
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8475
+    sort_std: 0.0003
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: PAS+FPs
+    model_key: pas+fps
+    model_plain: PAS+FPs
+    value: 0.842
     std: 0.0015
-    metric: Accuracy
+    metric: ROC-AUC
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    venue: The Web Conference
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2603.20724'
+    title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
+    date: Mar 21, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-21'
+    venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: unknown
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
-    sort_value: 0.9629
+    global_rank: 3
+    sort_value: 0.842
     sort_std: 0.0015
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: Coral
-    model_key: coral
-    model_plain: Coral
-    value: 0.9574
-    std: 0.0039
-    metric: Accuracy
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    value: 0.809
+    std: 0.016
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 2.8
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2309.10131'
+    title: Deep Prompt Tuning for Graph Transformers
+    date: Sep 18, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-18'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 12
+    sort_value: 0.809
+    sort_std: 0.016
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.778
+    std: 0.0182
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 510.0
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2201.12787'
+    title: 'GRPE: Relative Positional Encoding for Graph Transformer'
+    date: Jan 30, 2022
+    date_display: Jan 2022
+    date_iso: '2022-01-30'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 120
+    sort_value: 0.778
+    sort_std: 0.0182
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GILT (5-shot)
+    model_key: gilt (5-shot)
+    model_plain: GILT (5-shot)
+    value: 0.6581
+    std: 0.0425
+    paper_value: 0.6581
+    paper_std: 0.0425
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: LLM-free and tuning-free architecture... operate directly
+      on text-independent graphs with numerical features
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on ogbg-molhiv using the official OGB scaffold split in
+      a 5-shot setting.
+    date: Oct 6, 2025
+    date_display: Oct 2025
+    date_iso: '2025-10-06'
+    published_venue: ICML 2025
+    published_conference: ICML 2025
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-10-06'
+    value_gap_source_date_label: ICML 2025
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6581
+    true_std: 0.0425
+    value_gap_source_arxiv: '2510.04567'
+    value_gap_source_title: 'GILT: An LLM-Free, Tuning-Free Graph Foundational Model
+      for In-Context Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6581
+    sort_std: 0.0425
+    global_rank: 318
+    paper_rank: 318
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GAT (5-shot)
+    model_key: gat (5-shot)
+    model_plain: GAT (5-shot)
+    value: 0.5589
+    std: 0.0453
+    paper_value: 0.5589
+    paper_std: 0.0453
+    metric: ROC-AUC
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -154,481 +326,136 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    venue: The Web Conference
-    codebase_url: ''
-    uses_external_data: false
+    uses_external_data: 0
     input_feature_source: raw_features
     feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9574
-    sort_std: 0.0039
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.689
-    std: 0.0585
-    paper_value: 0.689
-    paper_std: 0.0585
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
+    table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
+    evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 5-shot setting, Planetoid split (20 per class train)
+    protocol_note: ROC-AUC on ogbg-molhiv using the official OGB scaffold split in
+      a 5-shot setting.
     date: Oct 6, 2025
     date_display: Oct 2025
     date_iso: '2025-10-06'
     published_venue: ICML 2025
     published_conference: ICML 2025
-    at_pub_value: 0.9004
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2401.09125'
-    at_pub_source_title: Understanding Heterophily for Graph Neural Networks
-    at_pub_source_date_iso: '2024-01-17'
-    at_pub_source_date_label: ICML 2024
-    value_gap_source_date_iso: '2024-01-17'
-    value_gap_source_date_label: ICML 2024
-    gap_vs_at_pub: 0.21140000000000003
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9004
-    true_std: null
-    value_gap_source_arxiv: '2401.09125'
-    value_gap_source_title: Understanding Heterophily for Graph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.21140000000000003
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9004
-    sort_std: null
-    global_rank: 42
-    paper_rank: 961
-    rank_delta: 919
-    rank_delta_abs: 919
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Understanding Heterophily for Graph Neural Networks
-    comparison_source_arxiv: '2401.09125'
-    is_best: false
-    is_std_outlier: false
-  - model: SAGE
-    model_key: sage
-    model_plain: SAGE
-    value: 0.8911
-    std: 0.0012
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2506.07168'
-    title: Efficient Text-Attributed Graph Learning through Selective Annotation and
-      Graph Alignment
-    date: Jun 8, 2025
-    date_display: Jun 2025
-    date_iso: '2025-06-08'
-    venue: Trans. Mach. Learn. Res.
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 75
-    sort_value: 0.8911
-    sort_std: 0.0012
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.699
-    std: 0.0314
-    paper_value: 0.699
-    paper_std: 0.0314
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 5-shot setting, Planetoid split (20 per class train)
-    date: Oct 6, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-06'
-    published_venue: ICML 2025
-    published_conference: ICML 2025
-    at_pub_value: 0.8897
-    at_pub_std: 0.0014
-    at_pub_source_arxiv: '2505.15845'
-    at_pub_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in
-      Tokenized Graph Learning Models'
-    at_pub_source_date_iso: '2025-05-19'
-    at_pub_source_date_label: '2025'
-    value_gap_source_date_iso: '2026-05-24'
-    value_gap_source_date_label: ICML 2026
-    gap_vs_at_pub: 0.1907000000000001
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8897
-    true_std: null
-    value_gap_source_arxiv: '2605.24867'
-    value_gap_source_title: 'Clustering as Reasoning: A $k$-Means Interpretation of
-      Chain-of-Thought Graph Learning'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.1907000000000001
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8897
-    sort_std: null
-    global_rank: 81
-    paper_rank: 951
-    rank_delta: 870
-    rank_delta_abs: 870
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem
-      in Tokenized Graph Learning Models'
-    comparison_source_arxiv: '2505.15845'
-    is_best: false
-    is_std_outlier: false
-  - model: GraphCL
-    model_key: graphcl
-    model_plain: GraphCL
-    value: 0.6332
-    std: 0.0413
-    paper_value: 0.6332
-    paper_std: 0.0413
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 5-shot setting, Planetoid split (20 per class train)
-    date: Oct 6, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-06'
-    published_venue: ICML 2025
-    published_conference: ICML 2025
-    at_pub_value: 0.8428
-    at_pub_std: 0.0091
-    at_pub_source_arxiv: '2206.03601'
-    at_pub_source_title: Decoupled Self-supervised Learning for Non-Homophilou Graphs
-    at_pub_source_date_iso: '2022-06-07'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2026-03-02'
-    value_gap_source_date_label: WWW 2026
-    gap_vs_at_pub: 0.2096
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8653
-    true_std: null
-    value_gap_source_arxiv: '2603.01385'
-    value_gap_source_title: Toward Graph-Tokenizing Large Language Models with Reconstructive
-      Graph Instruction Tuning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.23209999999999997
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8653
-    sort_std: null
-    global_rank: 242
-    paper_rank: 998
-    rank_delta: 756
-    rank_delta_abs: 756
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Decoupled Self-supervised Learning for Non-Homophilou
-      Graphs
-    comparison_source_arxiv: '2206.03601'
-    is_best: false
-    is_std_outlier: false
-  - model: DGI
-    model_key: dgi
-    model_plain: DGI
-    value: 0.6144
-    std: 0.0434
-    paper_value: 0.6144
-    paper_std: 0.0434
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 5-shot setting, Planetoid split (20 per class train)
-    date: Oct 6, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-06'
-    published_venue: ICML 2025
-    published_conference: ICML 2025
-    at_pub_value: 0.863
-    at_pub_std: 0.002
-    at_pub_source_arxiv: '2306.02117'
-    at_pub_source_title: 'Oversmoothing: A Nightmare for Graph Contrastive Learning?'
-    at_pub_source_date_iso: '2023-06-03'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-06-03'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.24860000000000004
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.863
-    true_std: 0.002
-    value_gap_source_arxiv: '2306.02117'
-    value_gap_source_title: 'Oversmoothing: A Nightmare for Graph Contrastive Learning?'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.24860000000000004
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.863
-    sort_std: 0.002
-    global_rank: 256
-    paper_rank: 1002
-    rank_delta: 746
-    rank_delta_abs: 746
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'Oversmoothing: A Nightmare for Graph Contrastive Learning?'
-    comparison_source_arxiv: '2306.02117'
-    is_best: false
-    is_std_outlier: false
-  - model: OFA
-    model_key: ofa
-    model_plain: OFA
-    value: 0.413
-    std: 0.0189
-    paper_value: 0.413
-    paper_std: 0.0189
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 5-shot setting, Planetoid split (20 per class train)
-    date: Oct 6, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-06'
-    published_venue: ICML 2025
-    published_conference: ICML 2025
-    at_pub_value: 0.7941
-    at_pub_std: null
-    at_pub_source_arxiv: '2406.10727'
-    at_pub_source_title: 'Text-space Graph Foundation Models: Comprehensive Benchmarks
-      and New Insights'
-    at_pub_source_date_iso: '2024-06-15'
-    at_pub_source_date_label: NeurIPS 2024
-    value_gap_source_date_iso: '2024-06-15'
-    value_gap_source_date_label: NeurIPS 2024
-    gap_vs_at_pub: 0.38110000000000005
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7941
-    true_std: null
-    value_gap_source_arxiv: '2406.10727'
-    value_gap_source_title: 'Text-space Graph Foundation Models: Comprehensive Benchmarks
-      and New Insights'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.38110000000000005
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7941
-    sort_std: null
-    global_rank: 808
-    paper_rank: 1065
-    rank_delta: 257
-    rank_delta_abs: 257
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'Text-space Graph Foundation Models: Comprehensive Benchmarks
-      and New Insights'
-    comparison_source_arxiv: '2406.10727'
-    is_best: false
-    is_std_outlier: false
-  - model: GraphAny
-    model_key: graphany
-    model_plain: GraphAny
-    value: 0.7268
-    std: 0.0247
-    paper_value: 0.7268
-    paper_std: 0.0247
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 5-shot setting, Planetoid split (20 per class train)
-    date: Oct 6, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-06'
-    published_venue: ICML 2025
-    published_conference: ICML 2025
-    at_pub_value: 0.6556
-    at_pub_std: 0.0186
-    at_pub_source_arxiv: '2506.14291'
-    at_pub_source_title: 'Equivariance Everywhere All At Once: A Recipe for Graph
-      Foundation Models'
-    at_pub_source_date_iso: '2025-06-17'
-    at_pub_source_date_label: '2025'
-    value_gap_source_date_iso: '2025-12-09'
-    value_gap_source_date_label: LoG 2025
-    gap_vs_at_pub: 0.07120000000000004
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-10-06'
+    value_gap_source_date_label: ICML 2025
+    gap_vs_at_pub: null
     worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: true
+    improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7938
-    true_std: 0.0016
-    value_gap_source_arxiv: '2512.08798'
-    value_gap_source_title: Can TabPFN Compete with GNNs for Node Classification via
-      Graph Tabularization?
-    value_gap_source_is_current_paper: false
-    value_gap: 0.06699999999999995
+    today_delta_significant: false
+    true_value: 0.5589
+    true_std: 0.0453
+    value_gap_source_arxiv: '2510.04567'
+    value_gap_source_title: 'GILT: An LLM-Free, Tuning-Free Graph Foundational Model
+      for In-Context Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.7938
-    sort_std: 0.0016
-    global_rank: 813
-    paper_rank: 922
-    rank_delta: 109
-    rank_delta_abs: 109
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'Equivariance Everywhere All At Once: A Recipe for Graph
-      Foundation Models'
-    comparison_source_arxiv: '2506.14291'
+    sort_value: 0.5589
+    sort_std: 0.0453
+    global_rank: 325
+    paper_rank: 325
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: MLP
-    model_key: mlp
-    model_plain: MLP
-    value: 0.4254
-    std: 0.0589
-    paper_value: 0.4254
-    paper_std: 0.0589
-    metric: Accuracy
+  - model: GCN (5-shot)
+    model_key: gcn (5-shot)
+    model_plain: GCN (5-shot)
+    value: 0.5556
+    std: 0.0687
+    paper_value: 0.5556
+    paper_std: 0.0687
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on ogbg-molhiv using the official OGB scaffold split in
+      a 5-shot setting.
+    date: Oct 6, 2025
+    date_display: Oct 2025
+    date_iso: '2025-10-06'
+    published_venue: ICML 2025
+    published_conference: ICML 2025
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-10-06'
+    value_gap_source_date_label: ICML 2025
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.5556
+    true_std: 0.0687
+    value_gap_source_arxiv: '2510.04567'
+    value_gap_source_title: 'GILT: An LLM-Free, Tuning-Free Graph Foundational Model
+      for In-Context Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5556
+    sort_std: 0.0687
+    global_rank: 326
+    paper_rank: 326
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GFT (5-shot)
+    model_key: gft (5-shot)
+    model_plain: GFT (5-shot)
+    value: 0.5186
+    std: 0.0577
+    paper_value: 0.5186
+    paper_std: 0.0577
+    metric: ROC-AUC
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -637,82 +464,267 @@ results:
     architecture_type: other_traditional
     architecture_label: Trad
     architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: trailing only GFT which needs dataset specific tuning
+    table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
+    evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 5-shot setting, Planetoid split (20 per class train)
+    protocol_note: ROC-AUC on ogbg-molhiv using the official OGB scaffold split in
+      a 5-shot setting.
     date: Oct 6, 2025
     date_display: Oct 2025
     date_iso: '2025-10-06'
     published_venue: ICML 2025
     published_conference: ICML 2025
-    at_pub_value: 0.7768
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2401.09125'
-    at_pub_source_title: Understanding Heterophily for Graph Neural Networks
-    at_pub_source_date_iso: '2024-01-17'
-    at_pub_source_date_label: ICML 2024
-    value_gap_source_date_iso: '2024-01-17'
-    value_gap_source_date_label: ICML 2024
-    gap_vs_at_pub: 0.35140000000000005
-    worse_than_at_pub: true
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-10-06'
+    value_gap_source_date_label: ICML 2025
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7768
-    true_std: null
-    value_gap_source_arxiv: '2401.09125'
-    value_gap_source_title: Understanding Heterophily for Graph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.35140000000000005
+    today_delta_significant: false
+    true_value: 0.5186
+    true_std: 0.0577
+    value_gap_source_arxiv: '2510.04567'
+    value_gap_source_title: 'GILT: An LLM-Free, Tuning-Free Graph Foundational Model
+      for In-Context Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.7768
-    sort_std: null
-    global_rank: 853
-    paper_rank: 1064
-    rank_delta: 211
-    rank_delta_abs: 211
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Understanding Heterophily for Graph Neural Networks
-    comparison_source_arxiv: '2401.09125'
+    sort_value: 0.5186
+    sort_std: 0.0577
+    global_rank: 329
+    paper_rank: 329
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GILT
-    model_key: gilt
-    model_plain: GILT
-    value: 0.7322
-    std: 0.038
-    paper_value: 0.7322
-    paper_std: 0.038
-    metric: Accuracy
+  - model: OFA (5-shot)
+    model_key: ofa (5-shot)
+    model_plain: OFA (5-shot)
+    value: 0.5045
+    std: 0.0299
+    paper_value: 0.5045
+    paper_std: 0.0299
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on ogbg-molhiv using the official OGB scaffold split in
+      a 5-shot setting.
+    date: Oct 6, 2025
+    date_display: Oct 2025
+    date_iso: '2025-10-06'
+    published_venue: ICML 2025
+    published_conference: ICML 2025
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-10-06'
+    value_gap_source_date_label: ICML 2025
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.5045
+    true_std: 0.0299
+    value_gap_source_arxiv: '2510.04567'
+    value_gap_source_title: 'GILT: An LLM-Free, Tuning-Free Graph Foundational Model
+      for In-Context Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5045
+    sort_std: 0.0299
+    global_rank: 330
+    paper_rank: 330
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: ROC-AUC
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: ROC-AUC
+  paper_metrics:
+  - ROC-AUC
+  metric: ROC-AUC
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id002
+  dataset: ogbl-collab
+  rows:
+  - model: PROXI
+    model_key: proxi
+    model_plain: PROXI
+    value: 0.765
+    std: 0.0027
+    metric: Hits@50
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2410.01802'
+    title: 'PROXI: Challenging the GNNs for Link Prediction'
+    date: Oct 2, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-02'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/workrep20232/PROXI
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: combines all relevant proximity information about node
+      pairs... structural proximity... and domain proximity
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.765
+    sort_std: 0.0027
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: OGB Leader
+    model_key: ogb leader
+    model_plain: OGB Leader
+    value: 0.7129
+    std: 0.0018
+    metric: Hits@50
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2410.01802'
+    title: 'PROXI: Challenging the GNNs for Link Prediction'
+    date: Oct 2, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-02'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/workrep20232/PROXI
+    uses_external_data: false
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 1
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.7129
+    sort_std: 0.0018
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIDN
+    model_key: gidn
+    model_plain: GIDN
+    value: 0.7096
+    std: 0.0055
+    metric: Hits@50
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.01301'
+    title: 'GIDN: A Lightweight Graph Inception Diffusion Network for High-efficient
+      Link Prediction'
+    date: Oct 4, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-04'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.7096
+    sort_std: 0.0055
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GILT (5-shot)
+    model_key: gilt (5-shot)
+    model_plain: GILT (5-shot)
+    value: 0.6783
+    std: 0.0034
+    paper_value: 0.6783
+    paper_std: 0.0034
+    metric: Hits@50
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: GILT's architecture first tokenizes a task, converting
+      its structure and features into a set of tokens.
+    table_ref: Table 3a
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
+    evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: 5-shot setting, Planetoid split (20 per class train)
+    protocol_note: 5-shot evaluation on ogbl-collab link prediction task.
     date: Oct 6, 2025
     date_display: Oct 2025
     date_iso: '2025-10-06'
@@ -734,8 +746,8 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.7322
-    true_std: 0.038
+    true_value: 0.6783
+    true_std: 0.0034
     value_gap_source_arxiv: '2510.04567'
     value_gap_source_title: 'GILT: An LLM-Free, Tuning-Free Graph Foundational Model
       for In-Context Learning'
@@ -743,10 +755,10 @@ results:
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.7322
-    sort_std: 0.038
-    global_rank: 919
-    paper_rank: 919
+    sort_value: 0.6783
+    sort_std: 0.0034
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -756,14 +768,48 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GCOPE
-    model_key: gcope
-    model_plain: GCOPE
-    value: 0.6706
-    std: 0.0141
-    paper_value: 0.6706
-    paper_std: 0.0141
-    metric: Accuracy
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.6621
+    std: 0.0033
+    metric: Hits@50
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2409.17475'
+    title: On the Impact of Feature Heterophily on Link Prediction with Graph Neural
+      Networks
+    date: Sep 26, 2024
+    date_display: Sep 2024
+    date_iso: '2024-09-26'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/tensor-gales/HeteLinkPred
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 10
+    sort_value: 0.6621
+    sort_std: 0.0033
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: UniLP (5-shot)
+    model_key: unilp (5-shot)
+    model_plain: UniLP (5-shot)
+    value: 0.58
+    std: 0.031
+    paper_value: 0.58
+    paper_std: 0.031
+    metric: Hits@50
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -773,14 +819,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 1
+    table_ref: Table 3a
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
+    evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: 5-shot setting, Planetoid split (20 per class train)
+    protocol_note: 5-shot evaluation on ogbl-collab link prediction task.
     date: Oct 6, 2025
     date_display: Oct 2025
     date_iso: '2025-10-06'
@@ -802,8 +848,8 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.6706
-    true_std: 0.0141
+    true_value: 0.58
+    true_std: 0.031
     value_gap_source_arxiv: '2510.04567'
     value_gap_source_title: 'GILT: An LLM-Free, Tuning-Free Graph Foundational Model
       for In-Context Learning'
@@ -811,10 +857,10 @@ results:
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.6706
-    sort_std: 0.0141
-    global_rank: 979
-    paper_rank: 979
+    sort_value: 0.58
+    sort_std: 0.031
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -824,165 +870,72 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: MDGFM
-    model_key: mdgfm
-    model_plain: MDGFM
-    value: 0.6094
-    std: 0.0296
-    paper_value: 0.6094
-    paper_std: 0.0296
-    metric: Accuracy
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.4438
+    std: 0.0347
+    metric: Hits@50
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2504.06193'
+    title: 'Weak Models Can be Good Teachers: A Case Study on Link Prediction with
+      MLPs'
+    date: Apr 8, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-08'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 5-shot setting, Planetoid split (20 per class train)
-    date: Oct 6, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-06'
-    published_venue: ICML 2025
-    published_conference: ICML 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-10-06'
-    value_gap_source_date_label: ICML 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.6094
-    true_std: 0.0296
-    value_gap_source_arxiv: '2510.04567'
-    value_gap_source_title: 'GILT: An LLM-Free, Tuning-Free Graph Foundational Model
-      for In-Context Learning'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6094
-    sort_std: 0.0296
-    global_rank: 1004
-    paper_rank: 1004
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
+    is_global_top: true
+    global_rank: 91
+    sort_value: 0.4438
+    sort_std: 0.0347
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
-    is_std_outlier: false
-  - model: RiemannGFM
-    model_key: riemanngfm
-    model_plain: RiemannGFM
-    value: 0.4682
-    std: 0.1573
-    paper_value: 0.4682
-    paper_std: 0.1573
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 5-shot setting, Planetoid split (20 per class train)
-    date: Oct 6, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-06'
-    published_venue: ICML 2025
-    published_conference: ICML 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-10-06'
-    value_gap_source_date_label: ICML 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.4682
-    true_std: 0.1573
-    value_gap_source_arxiv: '2510.04567'
-    value_gap_source_title: 'GILT: An LLM-Free, Tuning-Free Graph Foundational Model
-      for In-Context Learning'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.4682
-    sort_std: 0.1573
-    global_rank: 1052
-    paper_rank: 1052
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  rank_metric: Accuracy
+    is_std_outlier: true
+  rank_metric: Hits@50
   higher_is_better: true
-  experiment_scope: node-level
-  dataset_primary_metric: Accuracy
+  experiment_scope: edge-level
+  dataset_primary_metric: Hits@50
   paper_metrics:
-  - Accuracy
-  metric: Accuracy
+  - Hits@50
+  metric: Hits@50
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: Classic
+- benchmark: OGB
   datasets:
   - *id001
+  - *id002
 datasets_by_scope:
-- scope: node-level
-  label: Node-level
+- scope: graph-level
+  label: Graph-level
   benchmarks:
-  - benchmark: Classic
-    benchmark_slug: classic
+  - benchmark: OGB
+    benchmark_slug: ogb
     datasets:
-    - dataset: Cora
-      dataset_slug: cora
-single_proposed_model: GILT
+    - dataset: ogbg-molhiv
+      dataset_slug: ogbg-molhiv
+- scope: edge-level
+  label: Edge-level
+  benchmarks:
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbl-collab
+      dataset_slug: ogbl-collab
+single_proposed_model: GILT (5-shot)
 main_figure: /figures/2510.04567/main_figure.jpegoptim.jpg
 ---
 

@@ -52,7 +52,7 @@ paper_type: method
 proposed_models:
 - FedSage
 - FedSage with globally shared NeighGen
-mrr: 0.0042
+mrr: 0.0041
 adjusted_mrr: 0.0014
 mrr_dataset_count: 1
 benchmark_categories:
@@ -126,7 +126,7 @@ results:
     venue: IEEE Transactions on Knowledge and Data Engineering
     codebase_url: https://github.com/YangLing0818/GraphOOD
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -160,7 +160,7 @@ results:
     venue: IEEE Transactions on Knowledge and Data Engineering
     codebase_url: https://github.com/YangLing0818/GraphOOD
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
@@ -261,8 +261,8 @@ results:
     value_note: ''
     sort_value: 0.7454
     sort_std: 0.0038
-    global_rank: 239
-    paper_rank: 239
+    global_rank: 243
+    paper_rank: 243
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -329,8 +329,8 @@ results:
     value_note: ''
     sort_value: 0.7326
     sort_std: 0.0055
-    global_rank: 343
-    paper_rank: 343
+    global_rank: 347
+    paper_rank: 347
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

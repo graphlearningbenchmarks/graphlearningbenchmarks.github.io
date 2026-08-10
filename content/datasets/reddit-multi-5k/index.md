@@ -12,7 +12,7 @@ stats:
   avg_nodes: 508.52
   avg_edges: 594.87
   num_classes: 5
-result_count: 49
+result_count: 42
 best_model:
   model: SpeGCL
   value: 0.5944
@@ -47,10 +47,6 @@ papers:
   title: Reinforced Causal Explainer for Graph Neural Networks
   date_iso: '2022-04-23'
   venue: ''
-- arxiv_id: '1810.00826'
-  title: How Powerful are Graph Neural Networks?
-  date_iso: '2018-10-01'
-  venue: ICLR 2018
 variants:
 - slug: 10-fold-cv
   name: 10-fold CV
@@ -124,32 +120,6 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.576
-    metric_stds:
-    - 0.015
-  - model: Sum--MLP (GIN-0)
-    model_plain: Sum--MLP (GIN-0)
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '1810.00826'
-    title: How Powerful are Graph Neural Networks?
-    date: Oct 1, 2018
-    date_iso: '2018-10-01'
-    date_display: Oct 2018
-    codebase_url: https://github.com/weihua916/powerful-gnns
-    published_conference: ICLR 2018
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2018
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.575
     metric_stds:
     - 0.015
   - model: LAMP-Soft
@@ -497,32 +467,6 @@ variants:
     - 0.557
     metric_stds:
     - 0.006
-  - model: Sum--1-Layer
-    model_plain: Sum--1-Layer
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '1810.00826'
-    title: How Powerful are Graph Neural Networks?
-    date: Oct 1, 2018
-    date_iso: '2018-10-01'
-    date_display: Oct 2018
-    codebase_url: https://github.com/weihua916/powerful-gnns
-    published_conference: ICLR 2018
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2018
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.551
-    metric_stds:
-    - 0.016
   - model: AD-GCL
     model_plain: AD-GCL
     is_baseline: true
@@ -550,32 +494,6 @@ variants:
     - 0.549
     metric_stds:
     - 0.004
-  - model: AWL
-    model_plain: AWL
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '1810.00826'
-    title: How Powerful are Graph Neural Networks?
-    date: Oct 1, 2018
-    date_iso: '2018-10-01'
-    date_display: Oct 2018
-    codebase_url: https://github.com/weihua916/powerful-gnns
-    published_conference: ICLR 2018
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2018
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.547
-    metric_stds:
-    - 0.029
   - model: GIMM-Un-Fit
     model_plain: GIMM-Un-Fit
     is_baseline: false
@@ -706,32 +624,6 @@ variants:
     - 0.5271
     metric_stds:
     - 0.0028
-  - model: WL subtree
-    model_plain: WL subtree
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '1810.00826'
-    title: How Powerful are Graph Neural Networks?
-    date: Oct 1, 2018
-    date_iso: '2018-10-01'
-    date_display: Oct 2018
-    codebase_url: https://github.com/weihua916/powerful-gnns
-    published_conference: ICLR 2018
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2018
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.525
-    metric_stds:
-    - 0.021
   - model: AutoGCL
     model_plain: AutoGCL
     is_baseline: true
@@ -784,32 +676,6 @@ variants:
     - 0.492
     metric_stds:
     - null
-  - model: PatchySan
-    model_plain: PatchySan
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '1810.00826'
-    title: How Powerful are Graph Neural Networks?
-    date: Oct 1, 2018
-    date_iso: '2018-10-01'
-    date_display: Oct 2018
-    codebase_url: https://github.com/weihua916/powerful-gnns
-    published_conference: ICLR 2018
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2018
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.491
-    metric_stds:
-    - 0.007
   - model: Coarsened
     model_plain: Coarsened
     is_baseline: true
@@ -1204,58 +1070,6 @@ variants:
     - 0.279
     metric_stds:
     - null
-  - model: Mean--MLP
-    model_plain: Mean--MLP
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '1810.00826'
-    title: How Powerful are Graph Neural Networks?
-    date: Oct 1, 2018
-    date_iso: '2018-10-01'
-    date_display: Oct 2018
-    codebase_url: https://github.com/weihua916/powerful-gnns
-    published_conference: ICLR 2018
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2018
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.2
-    metric_stds:
-    - 0.0
-  - model: Mean--1-Layer (GCN)
-    model_plain: Mean--1-Layer (GCN)
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '1810.00826'
-    title: How Powerful are Graph Neural Networks?
-    date: Oct 1, 2018
-    date_iso: '2018-10-01'
-    date_display: Oct 2018
-    codebase_url: https://github.com/weihua916/powerful-gnns
-    published_conference: ICLR 2018
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2018
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.2
-    metric_stds:
-    - 0.0
   - model: PGExplainer
     model_plain: PGExplainer
     is_baseline: false
@@ -1360,25 +1174,37 @@ variants:
     - 0.125
     metric_stds:
     - null
-  row_count: 49
+  row_count: 42
   rows_json: ''
   chart_json: /data/datasets/reddit-multi-5k/10-fold-cv-chart.json
   arch_counts:
-    gnn: 31
+    gnn: 25
     hybrid: 6
     graph_transformer: 0
     llm: 0
     walk: 2
-    traditional: 8
+    traditional: 7
   metric_counts:
-  - 49
+  - 42
   milestones: &id001
-  - value: 0.575
-    std: 0.015
-    model: Sum--MLP (GIN-0)
-    arxiv_id: '1810.00826'
-    title: How Powerful are Graph Neural Networks?
-    date: '2018-10-01'
+  - value: 0.472
+    std: null
+    model: RC-Explainer
+    arxiv_id: '2204.11028'
+    title: Reinforced Causal Explainer for Graph Neural Networks
+    date: '2022-04-23'
+  - value: 0.5396
+    std: 0.0051
+    model: GIMM-Un-Fit
+    arxiv_id: '2305.17437'
+    title: 'GIMM: InfoMin-Max for Automated Graph Contrastive Learning'
+    date: '2023-05-27'
+  - value: 0.5681
+    std: 0.025
+    model: GMCL-M
+    arxiv_id: '2401.03638'
+    title: Unifying Graph Contrastive Learning via Graph Message Augmentation
+    date: '2024-01-08'
   - value: 0.576
     std: 0.015
     model: GIN

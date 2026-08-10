@@ -47,64 +47,29 @@ abstract: 'Graph Neural Networks (GNNs) have received much attention in the grap
   ogbl-citation2 dataset. On the similar Tesla V100 GPU cards, AGDNs outperform Reversible
   GNNs (RevGNNs) with 13\'
 codebase_url: ''
-extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+extraction_model: google/gemma-4-26B-A4B-it
 has_results: true
 paper_type: method
 proposed_models:
 - AGDN
-mrr: 0.25
-adjusted_mrr: 0.0833
-mrr_dataset_count: 1
+mrr: 0.1382
+adjusted_mrr: 0.1382
+mrr_dataset_count: 3
 benchmark_categories:
 - OGB
 benchmark_coverage:
 - benchmark: OGB
   benchmark_slug: ogb
-  evaluated: 4
+  evaluated: 3
   total: 16
 task_categories:
 - link_prediction
-- node_classification
 experiment_scopes:
 - edge-level
-- node-level
 results:
 - &id003
   dataset: ogbl-citation2
   rows:
-  - model: MPLP
-    model_key: mplp
-    model_plain: MPLP
-    value: 0.9072
-    std: 0.0012
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.03845'
-    title: Reconsidering the Performance of GAE in Link Prediction
-    date: Nov 6, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-06'
-    venue: International Conference on Information and Knowledge Management
-    codebase_url: https://github.com/GraphPKU/Refined-GAE
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9072
-    sort_std: 0.0012
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
   - model: CFG
     model_key: cfg
     model_plain: CFG
@@ -130,13 +95,13 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: Each node is a paper with 128-dimensional word2vec features
     is_global_top: true
-    global_rank: 2
+    global_rank: 1
     sort_value: 0.8997
     sort_std: 0.0015
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: SIEG
     model_key: sieg
@@ -163,13 +128,46 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: Each node is a paper with 128-dimensional word2vec features
     is_global_top: true
-    global_rank: 3
+    global_rank: 2
     sort_value: 0.8987
     sort_std: 0.0018
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
+    is_std_outlier: false
+  - model: LPFormer
+    model_key: lpformer
+    model_plain: LPFormer
+    value: 0.8981
+    std: 0.0013
+    metric: MRR
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2310.11009'
+    title: 'LPFormer: An Adaptive Graph Transformer for Link Prediction'
+    date: Oct 17, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-17'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/HarryShomer/LPFormer
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.8981
+    sort_std: 0.0013
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
     is_std_outlier: false
   - model: SEAL
     model_key: seal
@@ -188,14 +186,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Official OGB split for ogbl-citation2 link prediction
+    protocol_note: Test MRR on ogbl-citation2 official split
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -208,8 +206,8 @@ results:
       for Multi-Node Representation Learning'
     at_pub_source_date_iso: '2020-10-30'
     at_pub_source_date_label: NeurIPS 2020
-    value_gap_source_date_iso: '2024-11-06'
-    value_gap_source_date_label: '2024'
+    value_gap_source_date_iso: '2023-10-17'
+    value_gap_source_date_label: KDD 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -220,16 +218,16 @@ results:
     today_delta_significant: false
     true_value: 0.8767
     true_std: 0.0032
-    value_gap_source_arxiv: '2411.03845'
-    value_gap_source_title: Reconsidering the Performance of GAE in Link Prediction
+    value_gap_source_arxiv: '2310.11009'
+    value_gap_source_title: 'LPFormer: An Adaptive Graph Transformer for Link Prediction'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8767
     sort_std: 0.0032
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -256,14 +254,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Official OGB split for ogbl-citation2 link prediction
+    protocol_note: Test MRR on ogbl-citation2 official split
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -296,8 +294,8 @@ results:
     value_note: ''
     sort_value: 0.8705
     sort_std: 0.0004
-    global_rank: 17
-    paper_rank: 26
+    global_rank: 14
+    paper_rank: 23
     rank_delta: 9
     rank_delta_abs: 9
     rank_delta_direction: worse
@@ -307,16 +305,16 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: MPNNs
-    model_key: mpnns
-    model_plain: MPNNs
+  - model: AGDN
+    model_key: agdn
+    model_plain: AGDN
     value: 0.8549
     std: 0.0029
     paper_value: 0.8549
     paper_std: 0.0029
     metric: MRR
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
@@ -324,14 +322,16 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
+    input_feature_source: raw_features
+    feature_source_evidence: The paper mentions using neighbor sampling (GraphSAINT)
+      for AGDN on ogbl-citation2 due to memory limits, but does not mention external
+      pretraining.
+    table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Official OGB split for ogbl-citation2 link prediction
+    protocol_note: Test MRR on ogbl-citation2 official split using GraphSAINT sampling
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -363,8 +363,8 @@ results:
     value_note: ''
     sort_value: 0.8549
     sort_std: 0.0029
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -391,14 +391,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Official OGB split for ogbl-citation2 link prediction
+    protocol_note: Test MRR on ogbl-citation2 official split
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -431,8 +431,8 @@ results:
     value_note: ''
     sort_value: 0.8492
     sort_std: 0.0029
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -468,7 +468,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 33
+    global_rank: 28
     sort_value: 0.8367
     sort_std: 0.0007
     comparison_type: global_top
@@ -493,14 +493,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Official OGB split for ogbl-citation2 link prediction
+    protocol_note: Test MRR on ogbl-citation2 official split
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -533,8 +533,8 @@ results:
     value_note: ''
     sort_value: 0.8264
     sort_std: 0.0001
-    global_rank: 38
-    paper_rank: 38
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -561,14 +561,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Official OGB split for ogbl-citation2 link prediction
+    protocol_note: Test MRR on ogbl-citation2 official split
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -601,8 +601,8 @@ results:
     value_note: ''
     sort_value: 0.762
     sort_std: 0.0
-    global_rank: 56
-    paper_rank: 68
+    global_rank: 50
+    paper_rank: 62
     rank_delta: 12
     rank_delta_abs: 12
     rank_delta_direction: worse
@@ -629,14 +629,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Official OGB split for ogbl-citation2 link prediction
+    protocol_note: Test MRR on ogbl-citation2 official split
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -669,8 +669,8 @@ results:
     value_note: ''
     sort_value: 0.7612
     sort_std: 0.0
-    global_rank: 57
-    paper_rank: 68
+    global_rank: 51
+    paper_rank: 62
     rank_delta: 11
     rank_delta_abs: 11
     rank_delta_direction: worse
@@ -697,14 +697,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Official OGB split for ogbl-citation2 link prediction
+    protocol_note: Test MRR on ogbl-citation2 official split
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -737,8 +737,8 @@ results:
     value_note: ''
     sort_value: 0.5308
     sort_std: 0.0419
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 62
+    paper_rank: 62
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -765,14 +765,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Official OGB split for ogbl-citation2 link prediction
+    protocol_note: Test MRR on ogbl-citation2 official split
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -804,8 +804,8 @@ results:
     value_note: ''
     sort_value: 0.5147
     sort_std: 0.0
-    global_rank: 71
-    paper_rank: 71
+    global_rank: 65
+    paper_rank: 65
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -841,7 +841,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 78
+    global_rank: 72
     sort_value: 0.3917
     sort_std: 0.0044
     comparison_type: global_top
@@ -858,7 +858,7 @@ results:
   metric: MRR
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id001
   dataset: ogbl-ddi
   rows:
   - model: ELGNN
@@ -928,16 +928,16 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: MPNNs
-    model_key: mpnns
-    model_plain: MPNNs
+  - model: AGDN
+    model_key: agdn
+    model_plain: AGDN
     value: 0.9538
     std: 0.0094
     paper_value: 0.9538
     paper_std: 0.0094
     metric: Hits@20
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
@@ -945,14 +945,16 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
+    input_feature_source: raw_features
+    feature_source_evidence: utilize learnable node embeddings instead of possible
+      node features on the ogbl-ddi
+    table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Official OGB link prediction split
+    protocol_note: Hits@20 on the official ogbl-ddi test split; uses learnable node
+      embeddings
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -964,8 +966,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-12-30'
-    value_gap_source_date_label: '2020'
+    value_gap_source_date_iso: '2023-10-22'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -976,54 +978,21 @@ results:
     today_delta_significant: false
     true_value: 0.9538
     true_std: 0.0094
-    value_gap_source_arxiv: '2012.15024'
-    value_gap_source_title: Adaptive Graph Diffusion Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2310.14166'
+    value_gap_source_title: Ensemble Learning for Graph Neural Networks
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9538
     sort_std: 0.0094
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 3
+    paper_rank: 3
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AGDN
-    model_key: agdn
-    model_plain: AGDN
-    value: 0.9538
-    std: 0.0094
-    metric: Hits@20
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2310.14166'
-    title: Ensemble Learning for Graph Neural Networks
-    date: Oct 22, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-22'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9538
-    sort_std: 0.0094
-    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1045,14 +1014,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Official OGB link prediction split
+    protocol_note: Hits@20 on the official ogbl-ddi test split
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -1084,8 +1053,8 @@ results:
     value_note: ''
     sort_value: 0.9088
     sort_std: 0.0313
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1120,7 +1089,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 22
+    global_rank: 20
     sort_value: 0.6719
     sort_std: 0.0118
     comparison_type: global_top
@@ -1145,14 +1114,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Official OGB link prediction split
+    protocol_note: Hits@20 on the official ogbl-ddi test split
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -1184,10 +1153,10 @@ results:
     value_note: ''
     sort_value: 0.6476
     sort_std: 0.0145
-    global_rank: 26
-    paper_rank: 56
-    rank_delta: 30
-    rank_delta_abs: 30
+    global_rank: 24
+    paper_rank: 53
+    rank_delta: 29
+    rank_delta_abs: 29
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1212,14 +1181,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Official OGB link prediction split
+    protocol_note: Hits@20 on the official ogbl-ddi test split
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -1251,8 +1220,8 @@ results:
     value_note: ''
     sort_value: 0.539
     sort_std: 0.0474
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1279,14 +1248,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Official OGB link prediction split
+    protocol_note: Hits@20 on the official ogbl-ddi test split
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -1319,8 +1288,8 @@ results:
     value_note: ''
     sort_value: 0.4974
     sort_std: 0.0239
-    global_rank: 46
-    paper_rank: 62
+    global_rank: 43
+    paper_rank: 59
     rank_delta: 16
     rank_delta_abs: 16
     rank_delta_direction: worse
@@ -1347,14 +1316,14 @@ results:
     architecture_label: Walk
     architecture_title: Random-walk graph embedding
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Official OGB link prediction split
+    protocol_note: Hits@20 on the official ogbl-ddi test split
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -1386,8 +1355,8 @@ results:
     value_note: ''
     sort_value: 0.264
     sort_std: 0.061
-    global_rank: 68
-    paper_rank: 73
+    global_rank: 65
+    paper_rank: 70
     rank_delta: 5
     rank_delta_abs: 5
     rank_delta_direction: worse
@@ -1414,14 +1383,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Official OGB link prediction split
+    protocol_note: Hits@20 on the official ogbl-ddi test split
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -1454,8 +1423,8 @@ results:
     value_note: ''
     sort_value: 0.1861
     sort_std: 0.0
-    global_rank: 79
-    paper_rank: 79
+    global_rank: 76
+    paper_rank: 76
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1482,14 +1451,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Official OGB link prediction split
+    protocol_note: Hits@20 on the official ogbl-ddi test split
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -1522,8 +1491,8 @@ results:
     value_note: ''
     sort_value: 0.1792
     sort_std: 0.0357
-    global_rank: 81
-    paper_rank: 84
+    global_rank: 78
+    paper_rank: 81
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -1550,14 +1519,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Official OGB link prediction split
+    protocol_note: Hits@20 on the official ogbl-ddi test split
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -1589,8 +1558,8 @@ results:
     value_note: ''
     sort_value: 0.1773
     sort_std: 0.0
-    global_rank: 83
-    paper_rank: 83
+    global_rank: 80
+    paper_rank: 80
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1617,14 +1586,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Official OGB link prediction split
+    protocol_note: Hits@20 on the official ogbl-ddi test split
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -1657,8 +1626,8 @@ results:
     value_note: ''
     sort_value: 0.0623
     sort_std: 0.0
-    global_rank: 95
-    paper_rank: 95
+    global_rank: 92
+    paper_rank: 92
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1680,72 +1649,6 @@ results:
 - &id002
   dataset: ogbl-ppa
   rows:
-  - model: Optimized GAE
-    model_key: optimized gae
-    model_plain: Optimized GAE
-    value: 0.7841
-    std: 0.0083
-    metric: Hits@100
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.03845'
-    title: Reconsidering the Performance of GAE in Link Prediction
-    date: Nov 6, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-06'
-    venue: International Conference on Information and Knowledge Management
-    codebase_url: https://github.com/GraphPKU/Refined-GAE
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.7841
-    sort_std: 0.0083
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: MPLP
-    model_key: mplp
-    model_plain: MPLP
-    value: 0.6524
-    std: 0.015
-    metric: Hits@100
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.03845'
-    title: Reconsidering the Performance of GAE in Link Prediction
-    date: Nov 6, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-06'
-    venue: International Conference on Information and Knowledge Management
-    codebase_url: https://github.com/GraphPKU/Refined-GAE
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.6524
-    sort_std: 0.015
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
   - model: OGB Leader
     model_key: ogb leader
     model_plain: OGB Leader
@@ -1768,16 +1671,82 @@ results:
     venue: Trans. Mach. Learn. Res.
     codebase_url: https://github.com/workrep20232/PROXI
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 1
     sort_value: 0.6524
     sort_std: 0.015
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
+    is_std_outlier: false
+  - model: PRB
+    model_key: prb
+    model_plain: PRB
+    value: 0.6347
+    std: 0.0175
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2411.01410'
+    title: PageRank Bandits for Link Prediction
+    date: Nov 3, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-03'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/jiaruzouu/PRB
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.6347
+    sort_std: 0.0175
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: LPFormer
+    model_key: lpformer
+    model_plain: LPFormer
+    value: 0.6332
+    std: 0.0063
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2310.11009'
+    title: 'LPFormer: An Adaptive Graph Transformer for Link Prediction'
+    date: Oct 17, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-17'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/HarryShomer/LPFormer
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.6332
+    sort_std: 0.0063
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
     is_std_outlier: false
   - model: SAGE
     model_key: sage
@@ -1804,7 +1773,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 16
+    global_rank: 14
     sort_value: 0.5013
     sort_std: 0.0055
     comparison_type: global_top
@@ -1829,14 +1798,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Test split for ogbl-ppa link prediction
+    protocol_note: Hits@100 on the test split of ogbl-ppa
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -1869,8 +1838,8 @@ results:
     value_note: ''
     sort_value: 0.4933
     sort_std: 0.0
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1897,14 +1866,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Test split for ogbl-ppa link prediction
+    protocol_note: Hits@100 on the test split of ogbl-ppa
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -1938,8 +1907,8 @@ results:
     value_note: ''
     sort_value: 0.488
     sort_std: 0.0316
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1974,7 +1943,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 26
+    global_rank: 23
     sort_value: 0.46
     sort_std: 0.0
     comparison_type: global_top
@@ -1982,16 +1951,16 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: MPNNs
-    model_key: mpnns
-    model_plain: MPNNs
+  - model: AGDN
+    model_key: agdn
+    model_plain: AGDN
     value: 0.4123
     std: 0.0159
     paper_value: 0.4123
     paper_std: 0.0159
     metric: Hits@100
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
@@ -1999,14 +1968,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
+    input_feature_source: raw_features
+    feature_source_evidence: utilize learnable node embeddings instead of possible
+      node features on the ogbl-ppa (dimension 128) datasets
+    table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Test split for ogbl-ppa link prediction
+    protocol_note: Hits@100 on the test split of ogbl-ppa
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -2038,8 +2008,8 @@ results:
     value_note: ''
     sort_value: 0.4123
     sort_std: 0.0159
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 32
+    paper_rank: 32
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2066,14 +2036,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Test split for ogbl-ppa link prediction
+    protocol_note: Hits@100 on the test split of ogbl-ppa
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -2106,8 +2076,8 @@ results:
     value_note: ''
     sort_value: 0.3245
     sort_std: 0.0
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2134,14 +2104,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Test split for ogbl-ppa link prediction
+    protocol_note: Hits@100 on the test split of ogbl-ppa
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -2173,8 +2143,8 @@ results:
     value_note: ''
     sort_value: 0.3238
     sort_std: 0.0258
-    global_rank: 45
-    paper_rank: 45
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2201,14 +2171,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Test split for ogbl-ppa link prediction
+    protocol_note: Hits@100 on the test split of ogbl-ppa
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -2240,8 +2210,8 @@ results:
     value_note: ''
     sort_value: 0.3229
     sort_std: 0.0094
-    global_rank: 47
-    paper_rank: 47
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2268,14 +2238,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Test split for ogbl-ppa link prediction
+    protocol_note: Hits@100 on the test split of ogbl-ppa
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -2307,8 +2277,8 @@ results:
     value_note: ''
     sort_value: 0.3084
     sort_std: 0.0178
-    global_rank: 49
-    paper_rank: 63
+    global_rank: 45
+    paper_rank: 59
     rank_delta: 14
     rank_delta_abs: 14
     rank_delta_direction: worse
@@ -2335,14 +2305,14 @@ results:
     architecture_label: Walk
     architecture_title: Random-walk graph embedding
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Test split for ogbl-ppa link prediction
+    protocol_note: Hits@100 on the test split of ogbl-ppa
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -2374,8 +2344,8 @@ results:
     value_note: ''
     sort_value: 0.289
     sort_std: 0.015
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 46
+    paper_rank: 46
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2402,14 +2372,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Test split for ogbl-ppa link prediction
+    protocol_note: Hits@100 on the test split of ogbl-ppa
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -2441,8 +2411,8 @@ results:
     value_note: ''
     sort_value: 0.2765
     sort_std: 0.0
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 50
+    paper_rank: 50
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2469,14 +2439,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Test split for ogbl-ppa link prediction
+    protocol_note: Hits@100 on the test split of ogbl-ppa
     date: Dec 30, 2020
     date_display: Dec 2020
     date_iso: '2020-12-30'
@@ -2509,8 +2479,8 @@ results:
     value_note: ''
     sort_value: 0.1655
     sort_std: 0.024
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 63
+    paper_rank: 63
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2529,755 +2499,25 @@ results:
   metric: Hits@100
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
-  dataset: ogbn-arxiv
-  rows:
-  - model: OFA
-    model_key: ofa
-    model_plain: OFA
-    value: 0.7764
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    arxiv_id: '2407.19941'
-    title: Boosting Cross-Domain and Cross-Task Generalization for Text-Attributed
-      Graphs from Structural Perspective
-    date: Jul 29, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-29'
-    venue: null
-    codebase_url: https://github.com/cy623/BooG
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.7764
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GIANT-XRT
-    model_key: giant-xrt
-    model_plain: GIANT-XRT
-    value: 0.7612
-    std: 0.0016
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2111.00064'
-    title: Node Feature Extraction by Self-Supervised Multi-scale Neighborhood Prediction
-    date: Oct 29, 2021
-    date_display: Oct 2021
-    date_iso: '2021-10-29'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/amzn/pecos
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.7612
-    sort_std: 0.0016
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GEGCN
-    model_key: gegcn
-    model_plain: GEGCN
-    value: 0.7576
-    std: 0.0064
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2603.26178'
-    title: 'Geometric Evolution Graph Convolutional Networks: Enhancing Graph Representation
-      Learning via Ricci Flow'
-    date: Mar 27, 2026
-    date_display: Mar 2026
-    date_iso: '2026-03-27'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: integrates Ricci flow with deep graph models... multi-scale
-      structural information is then incorporated into a GCN
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.7576
-    sort_std: 0.0064
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AGDN
-    model_key: agdn
-    model_plain: AGDN
-    value: 0.7341
-    std: 0.0025
-    paper_value: 0.7341
-    paper_std: 0.0025
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: OGB node classification standard split
-    date: Dec 30, 2020
-    date_display: Dec 2020
-    date_iso: '2020-12-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-03-27'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7522
-    true_std: 0.0007
-    value_gap_source_arxiv: '2603.26178'
-    value_gap_source_title: 'Geometric Evolution Graph Convolutional Networks: Enhancing
-      Graph Representation Learning via Ricci Flow'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.018100000000000005
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7522
-    sort_std: 0.0007
-    global_rank: 4
-    paper_rank: 19
-    rank_delta: 15
-    rank_delta_abs: 15
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.7174
-    std: 0.0029
-    paper_value: 0.7174
-    paper_std: 0.0029
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 0.11
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: OGB node classification standard split
-    date: Dec 30, 2020
-    date_display: Dec 2020
-    date_iso: '2020-12-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.7174
-    at_pub_std: null
-    at_pub_source_arxiv: '2010.00238'
-    at_pub_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    at_pub_source_date_iso: '2020-10-01'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2026-03-27'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.73
-    true_std: 0.0017
-    value_gap_source_arxiv: '2603.26178'
-    value_gap_source_title: 'Geometric Evolution Graph Convolutional Networks: Enhancing
-      Graph Representation Learning via Ricci Flow'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.012599999999999945
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.73
-    sort_std: 0.0017
-    global_rank: 25
-    paper_rank: 63
-    rank_delta: 38
-    rank_delta_abs: 38
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.7149
-    std: 0.0027
-    paper_value: 0.7149
-    paper_std: 0.0027
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 0.22
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: OGB node classification standard split
-    date: Dec 30, 2020
-    date_display: Dec 2020
-    date_iso: '2020-12-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.7149
-    at_pub_std: null
-    at_pub_source_arxiv: '2010.00238'
-    at_pub_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    at_pub_source_date_iso: '2020-10-01'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2026-03-27'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7277
-    true_std: 0.0016
-    value_gap_source_arxiv: '2603.26178'
-    value_gap_source_title: 'Geometric Evolution Graph Convolutional Networks: Enhancing
-      Graph Representation Learning via Ricci Flow'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.012800000000000034
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7277
-    sort_std: 0.0016
-    global_rank: 28
-    paper_rank: 71
-    rank_delta: 43
-    rank_delta_abs: 43
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MAGNA
-    model_key: magna
-    model_plain: MAGNA
-    value: 0.7276
-    std: 0.0014
-    paper_value: 0.7276
-    paper_std: 0.0014
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: OGB node classification standard split
-    date: Dec 30, 2020
-    date_display: Dec 2020
-    date_iso: '2020-12-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-12-30'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7276
-    true_std: 0.0014
-    value_gap_source_arxiv: '2012.15024'
-    value_gap_source_title: Adaptive Graph Diffusion Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7276
-    sort_std: 0.0014
-    global_rank: 29
-    paper_rank: 29
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCNII
-    model_key: gcnii
-    model_plain: GCNII
-    value: 0.7274
-    std: 0.0016
-    paper_value: 0.7274
-    paper_std: 0.0016
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 2.15
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: OGB node classification standard split
-    date: Dec 30, 2020
-    date_display: Dec 2020
-    date_iso: '2020-12-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.7274
-    at_pub_std: null
-    at_pub_source_arxiv: '2010.00238'
-    at_pub_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    at_pub_source_date_iso: '2020-10-01'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2020-12-30'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7274
-    true_std: 0.0016
-    value_gap_source_arxiv: '2012.15024'
-    value_gap_source_title: Adaptive Graph Diffusion Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7274
-    sort_std: 0.0016
-    global_rank: 30
-    paper_rank: 30
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: JKNet
-    model_key: jknet
-    model_plain: JKNet
-    value: 0.7219
-    std: 0.0021
-    paper_value: 0.7219
-    paper_std: 0.0021
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 0.09
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: OGB node classification standard split
-    date: Dec 30, 2020
-    date_display: Dec 2020
-    date_iso: '2020-12-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-12-30'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7219
-    true_std: 0.0021
-    value_gap_source_arxiv: '2012.15024'
-    value_gap_source_title: Adaptive Graph Diffusion Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7219
-    sort_std: 0.0021
-    global_rank: 41
-    paper_rank: 41
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: DAGNN
-    model_key: dagnn
-    model_plain: DAGNN
-    value: 0.7209
-    std: 0.0025
-    paper_value: 0.7209
-    paper_std: 0.0025
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 0.04
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: OGB node classification standard split
-    date: Dec 30, 2020
-    date_display: Dec 2020
-    date_iso: '2020-12-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-10-03'
-    value_gap_source_date_label: TMLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7209
-    true_std: null
-    value_gap_source_arxiv: '2410.02158'
-    value_gap_source_title: 'SCNode: Spatial and Contextual Coordinates for Graph
-      Representation Learning'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7209
-    sort_std: null
-    global_rank: 46
-    paper_rank: 46
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: DeeperGCN
-    model_key: deepergcn
-    model_plain: DeeperGCN
-    value: 0.7192
-    std: 0.0016
-    paper_value: 0.7192
-    paper_std: 0.0016
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 0.49
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: OGB node classification standard split
-    date: Dec 30, 2020
-    date_display: Dec 2020
-    date_iso: '2020-12-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-02-13'
-    value_gap_source_date_label: ICML 2021
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7192
-    true_std: 0.0017
-    value_gap_source_arxiv: '2102.06986'
-    value_gap_source_title: How Framelets Enhance Graph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7192
-    sort_std: 0.0017
-    global_rank: 56
-    paper_rank: 56
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.7176
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2010.00238'
-    title: Multi-grained Semantics-aware Graph Neural Networks
-    date: Oct 1, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-01'
-    venue: IEEE Transactions on Knowledge and Data Engineering
-    codebase_url: https://github.com/zhiqiangzhongddu/AdamGNN
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 62
-    sort_value: 0.7176
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MLP
-    model_key: mlp
-    model_plain: MLP
-    value: 0.6831
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2407.19941'
-    title: Boosting Cross-Domain and Cross-Task Generalization for Text-Attributed
-      Graphs from Structural Perspective
-    date: Jul 29, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-29'
-    venue: null
-    codebase_url: https://github.com/cy623/BooG
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 104
-    sort_value: 0.6831
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  rank_metric: Accuracy
-  higher_is_better: true
-  experiment_scope: node-level
-  dataset_primary_metric: Accuracy
-  paper_metrics:
-  - Accuracy
-  metric: Accuracy
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
 results_grouped:
 - benchmark: OGB
   datasets:
   - *id001
   - *id002
   - *id003
-  - *id004
 datasets_by_scope:
-- scope: node-level
-  label: Node-level
-  benchmarks:
-  - benchmark: OGB
-    benchmark_slug: ogb
-    datasets:
-    - dataset: ogbn-arxiv
-      dataset_slug: ogbn-arxiv
 - scope: edge-level
   label: Edge-level
   benchmarks:
   - benchmark: OGB
     benchmark_slug: ogb
     datasets:
+    - dataset: ogbl-ddi
+      dataset_slug: ogbl-ddi
     - dataset: ogbl-ppa
       dataset_slug: ogbl-ppa
     - dataset: ogbl-citation2
       dataset_slug: ogbl-citation2
-    - dataset: ogbl-ddi
-      dataset_slug: ogbl-ddi
 single_proposed_model: AGDN
 main_figure: /figures/2012.15024/main_figure.jpegoptim.jpg
 ---

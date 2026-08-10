@@ -41,7 +41,7 @@ benchmark_coverage:
 - benchmark: Quantum Chemistry
   benchmark_slug: quantum-chemistry
   evaluated: 1
-  total: 3
+  total: 1
 task_categories:
 - graph_regression
 experiment_scopes:
@@ -211,9 +211,9 @@ results:
     sort_value: 0.0009
     sort_std: null
     global_rank: 7
-    paper_rank: 122
-    rank_delta: 115
-    rank_delta_abs: 115
+    paper_rank: 120
+    rank_delta: 113
+    rank_delta_abs: 113
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -281,9 +281,9 @@ results:
     sort_value: 0.01
     sort_std: null
     global_rank: 22
-    paper_rank: 122
-    rank_delta: 100
-    rank_delta_abs: 100
+    paper_rank: 121
+    rank_delta: 99
+    rank_delta_abs: 99
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -351,9 +351,9 @@ results:
     sort_value: 0.05
     sort_std: null
     global_rank: 46
-    paper_rank: 125
-    rank_delta: 79
-    rank_delta_abs: 79
+    paper_rank: 124
+    rank_delta: 78
+    rank_delta_abs: 78
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -418,8 +418,8 @@ results:
     value_note: ''
     sort_value: 0.06
     sort_std: null
-    global_rank: 62
-    paper_rank: 122
+    global_rank: 61
+    paper_rank: 121
     rank_delta: 60
     rank_delta_abs: 60
     rank_delta_direction: worse
@@ -485,8 +485,8 @@ results:
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 65
-    paper_rank: 122
+    global_rank: 64
+    paper_rank: 121
     rank_delta: 57
     rank_delta_abs: 57
     rank_delta_direction: worse
@@ -552,8 +552,8 @@ results:
     value_note: ''
     sort_value: 2.1
     sort_std: 0.0
-    global_rank: 120
-    paper_rank: 120
+    global_rank: 118
+    paper_rank: 118
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -619,8 +619,8 @@ results:
     value_note: ''
     sort_value: 9.4
     sort_std: null
-    global_rank: 124
-    paper_rank: 124
+    global_rank: 123
+    paper_rank: 123
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

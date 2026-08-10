@@ -42,14 +42,14 @@ abstract: Graph Neural Networks (GNNs) have garnered significant attention for t
   We validate our approach through semi-supervised learning tasks on various datasets
   representing both homophilic and heterophilic graphs.
 codebase_url: ''
-extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+extraction_model: google/gemma-4-26B-A4B-it
 has_results: true
 paper_type: method
 proposed_models:
-- SPCNet-L
 - SPCNet-D
-mrr: 0.0506
-adjusted_mrr: 0.0506
+- SPCNet-L
+mrr: 0.1014
+adjusted_mrr: 0.1014
 mrr_dataset_count: 4
 benchmark_categories:
 - Heterophilic Graphs
@@ -127,7 +127,7 @@ results:
     venue: IEEE Transactions on Neural Networks and Learning Systems
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -188,14 +188,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods comparison
+    protocol_note: Polynomial-based method comparison on Actor dataset.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -240,74 +240,6 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: ACM-GCN
-    model_key: acm-gcn
-    model_plain: ACM-GCN
-    value: 0.3628
-    std: 0.0109
-    paper_value: 0.3628
-    paper_std: 0.0109
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: heterophilic methods comparison
-    date: Mar 6, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.366
-    at_pub_std: 0.01
-    at_pub_source_arxiv: '2205.13700'
-    at_pub_source_title: 'ES-GNN: Generalizing Graph Neural Networks Beyond Homophily
-      with Edge Splitting'
-    at_pub_source_date_iso: '2022-05-27'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2026-03-10'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.0031999999999999806
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.4198
-    true_std: 0.0089
-    value_gap_source_arxiv: '2603.09195'
-    value_gap_source_title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.056999999999999995
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.4198
-    sort_std: 0.0089
-    global_rank: 20
-    paper_rank: 215
-    rank_delta: 195
-    rank_delta_abs: 195
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
   - model: BernNet
     model_key: bernnet
     model_plain: BernNet
@@ -325,14 +257,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods comparison
+    protocol_note: Polynomial-based method comparison on Actor dataset.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -392,14 +324,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods comparison
+    protocol_note: Polynomial-based method comparison on Actor dataset.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -461,14 +393,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods comparison
+    protocol_note: Polynomial-based method comparison on Actor dataset.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -481,8 +413,8 @@ results:
       Bases
     at_pub_source_date_iso: '2023-02-24'
     at_pub_source_date_label: ICML 2023
-    value_gap_source_date_iso: '2025-12-16'
-    value_gap_source_date_label: '2025'
+    value_gap_source_date_iso: '2025-05-29'
+    value_gap_source_date_label: ICML 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -493,9 +425,9 @@ results:
     today_delta_significant: false
     true_value: 0.4117
     true_std: 0.0064
-    value_gap_source_arxiv: '2512.14908'
-    value_gap_source_title: 'ATLAS: Adaptive Topology-based Learning at Scale for
-      Homophilic and Heterophilic Graphs'
+    value_gap_source_arxiv: '2505.23014'
+    value_gap_source_title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in
+      the Perspective of A System of Hyperbolic Partial Differential Equations'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
@@ -504,6 +436,73 @@ results:
     sort_std: 0.0064
     global_rank: 42
     paper_rank: 42
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SPCNet-D
+    model_key: spcnet-d
+    model_plain: SPCNet-D
+    value: 0.4089
+    std: 0.0061
+    paper_value: 0.4089
+    paper_std: 0.0061
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Polynomial-based method comparison on Actor dataset.
+    date: Mar 6, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-06'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-06'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4089
+    true_std: 0.0061
+    value_gap_source_arxiv: '2403.03676'
+    value_gap_source_title: Simplified PCNet with Robustness
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4089
+    sort_std: 0.0061
+    global_rank: 46
+    paper_rank: 46
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -530,14 +529,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: heterophilic methods comparison
+    protocol_note: Heterophilic method comparison on Actor dataset.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -570,9 +569,9 @@ results:
     sort_value: 0.4082
     sort_std: 0.0179
     global_rank: 48
-    paper_rank: 144
-    rank_delta: 96
-    rank_delta_abs: 96
+    paper_rank: 137
+    rank_delta: 89
+    rank_delta_abs: 89
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -597,14 +596,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods comparison
+    protocol_note: Polynomial-based method comparison on Actor dataset.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -637,8 +636,8 @@ results:
     value_note: ''
     sort_value: 0.4048
     sort_std: 0.0062
-    global_rank: 53
-    paper_rank: 53
+    global_rank: 52
+    paper_rank: 52
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -665,14 +664,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods comparison
+    protocol_note: Polynomial-based method comparison on Actor dataset.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -704,10 +703,10 @@ results:
     value_note: ''
     sort_value: 0.4046
     sort_std: 0.0064
-    global_rank: 55
+    global_rank: 54
     paper_rank: 69
-    rank_delta: 14
-    rank_delta_abs: 14
+    rank_delta: 15
+    rank_delta_abs: 15
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -732,14 +731,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods comparison
+    protocol_note: Polynomial-based method comparison on Actor dataset.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -771,12 +770,79 @@ results:
     value_note: ''
     sort_value: 0.4026
     sort_std: 0.0108
-    global_rank: 56
+    global_rank: 55
     paper_rank: 57
-    rank_delta: 1
-    rank_delta_abs: 1
+    rank_delta: 2
+    rank_delta_abs: 2
     rank_delta_direction: worse
     has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SPCNet-L
+    model_key: spcnet-l
+    model_plain: SPCNet-L
+    value: 0.4023
+    std: 0.007
+    paper_value: 0.4023
+    paper_std: 0.007
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Polynomial-based method comparison on Actor dataset.
+    date: Mar 6, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-06'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-06'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4023
+    true_std: 0.007
+    value_gap_source_arxiv: '2403.03676'
+    value_gap_source_title: Simplified PCNet with Robustness
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4023
+    sort_std: 0.007
+    global_rank: 56
+    paper_rank: 56
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -799,14 +865,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods comparison
+    protocol_note: Polynomial-based method comparison on Actor dataset.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -866,14 +932,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods comparison
+    protocol_note: Polynomial-based method comparison on Actor dataset.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -917,143 +983,6 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GloGNN
-    model_key: glognn
-    model_plain: GloGNN
-    value: 0.377
-    std: 0.014
-    paper_value: 0.377
-    paper_std: 0.014
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: heterophilic methods comparison
-    date: Mar 6, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.3959
-    at_pub_std: 0.0029
-    at_pub_source_arxiv: '2310.11025'
-    at_pub_source_title: 'SignGT: Signed Attention-based Graph Transformer for Graph
-      Representation Learning'
-    at_pub_source_date_iso: '2023-10-17'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-10-17'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.018899999999999972
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.3959
-    true_std: 0.0029
-    value_gap_source_arxiv: '2310.11025'
-    value_gap_source_title: 'SignGT: Signed Attention-based Graph Transformer for
-      Graph Representation Learning'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.018899999999999972
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.3959
-    sort_std: 0.0029
-    global_rank: 75
-    paper_rank: 132
-    rank_delta: 57
-    rank_delta_abs: 57
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'SignGT: Signed Attention-based Graph Transformer for
-      Graph Representation Learning'
-    comparison_source_arxiv: '2310.11025'
-    is_best: false
-    is_std_outlier: false
-  - model: GGCN
-    model_key: ggcn
-    model_plain: GGCN
-    value: 0.3754
-    std: 0.0156
-    paper_value: 0.3754
-    paper_std: 0.0156
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: heterophilic methods comparison
-    date: Mar 6, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.3781
-    at_pub_std: 0.0156
-    at_pub_source_arxiv: '2307.16092'
-    at_pub_source_title: Feature Transportation Improves Graph Neural Networks
-    at_pub_source_date_iso: '2023-07-29'
-    at_pub_source_date_label: AAAI 2023
-    value_gap_source_date_iso: '2026-03-10'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.00269999999999998
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.3929
-    true_std: 0.0048
-    value_gap_source_arxiv: '2603.09195'
-    value_gap_source_title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.017500000000000016
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.3929
-    sort_std: 0.0048
-    global_rank: 82
-    paper_rank: 143
-    rank_delta: 61
-    rank_delta_abs: 61
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
   - model: GraphSAGE
     model_key: graphsage
     model_plain: GraphSAGE
@@ -1079,151 +1008,12 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 88
+    global_rank: 87
     sort_value: 0.3899
     sort_std: 0.0085
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: H2GCN
-    model_key: h2gcn
-    model_plain: H2GCN
-    value: 0.357
-    std: 0.01
-    paper_value: 0.357
-    paper_std: 0.01
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: heterophilic methods comparison
-    date: Mar 6, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.384
-    at_pub_std: 0.01
-    at_pub_source_arxiv: '2205.13700'
-    at_pub_source_title: 'ES-GNN: Generalizing Graph Neural Networks Beyond Homophily
-      with Edge Splitting'
-    at_pub_source_date_iso: '2022-05-27'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2026-03-10'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.027000000000000024
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.3885
-    true_std: 0.0117
-    value_gap_source_arxiv: '2603.09195'
-    value_gap_source_title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.03150000000000003
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.3885
-    sort_std: 0.0117
-    global_rank: 91
-    paper_rank: 243
-    rank_delta: 152
-    rank_delta_abs: 152
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'ES-GNN: Generalizing Graph Neural Networks Beyond Homophily
-      with Edge Splitting'
-    comparison_source_arxiv: '2205.13700'
-    is_best: false
-    is_std_outlier: false
-  - model: WRGAT
-    model_key: wrgat
-    model_plain: WRGAT
-    value: 0.3653
-    std: 0.0077
-    paper_value: 0.3653
-    paper_std: 0.0077
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: heterophilic methods comparison
-    date: Mar 6, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.386
-    at_pub_std: 0.011
-    at_pub_source_arxiv: '2205.13700'
-    at_pub_source_title: 'ES-GNN: Generalizing Graph Neural Networks Beyond Homophily
-      with Edge Splitting'
-    at_pub_source_date_iso: '2022-05-27'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-05-27'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: 0.020699999999999996
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.386
-    true_std: 0.011
-    value_gap_source_arxiv: '2205.13700'
-    value_gap_source_title: 'ES-GNN: Generalizing Graph Neural Networks Beyond Homophily
-      with Edge Splitting'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.020699999999999996
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.386
-    sort_std: 0.011
-    global_rank: 95
-    paper_rank: 199
-    rank_delta: 104
-    rank_delta_abs: 104
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'ES-GNN: Generalizing Graph Neural Networks Beyond Homophily
-      with Edge Splitting'
-    comparison_source_arxiv: '2205.13700'
     is_best: false
     is_std_outlier: false
   - model: TWIRLS
@@ -1243,14 +1033,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods comparison
+    protocol_note: Polynomial-based method comparison on Actor dataset.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -1283,8 +1073,8 @@ results:
     value_note: ''
     sort_value: 0.3813
     sort_std: 0.0081
-    global_rank: 108
-    paper_rank: 108
+    global_rank: 104
+    paper_rank: 104
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1311,14 +1101,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods comparison
+    protocol_note: Polynomial-based method comparison on Actor dataset.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -1350,79 +1140,12 @@ results:
     value_note: ''
     sort_value: 0.3802
     sort_std: 0.0023
-    global_rank: 112
-    paper_rank: 145
-    rank_delta: 33
-    rank_delta_abs: 33
+    global_rank: 108
+    paper_rank: 138
+    rank_delta: 30
+    rank_delta_abs: 30
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SPCNet-D
-    model_key: spcnet-d
-    model_plain: SPCNet-D
-    value: 0.3783
-    std: 0.0072
-    paper_value: 0.3783
-    paper_std: 0.0072
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: heterophilic methods comparison
-    date: Mar 6, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-06'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.3783
-    true_std: 0.0072
-    value_gap_source_arxiv: '2403.03676'
-    value_gap_source_title: Simplified PCNet with Robustness
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.3783
-    sort_std: 0.0072
-    global_rank: 125
-    paper_rank: 125
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1445,14 +1168,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods comparison
+    protocol_note: Polynomial-based method comparison on Actor dataset.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -1486,8 +1209,8 @@ results:
     value_note: ''
     sort_value: 0.3767
     sort_std: 0.0054
-    global_rank: 139
-    paper_rank: 139
+    global_rank: 133
+    paper_rank: 133
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1514,14 +1237,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods comparison
+    protocol_note: Polynomial-based method comparison on Actor dataset.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -1554,10 +1277,10 @@ results:
     value_note: ''
     sort_value: 0.369
     sort_std: null
-    global_rank: 173
-    paper_rank: 342
-    rank_delta: 169
-    rank_delta_abs: 169
+    global_rank: 166
+    paper_rank: 336
+    rank_delta: 170
+    rank_delta_abs: 170
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1583,14 +1306,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: heterophilic methods comparison
+    protocol_note: Heterophilic method comparison on Actor dataset.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -1624,83 +1347,16 @@ results:
     value_note: ''
     sort_value: 0.3648
     sort_std: 0.012
-    global_rank: 203
-    paper_rank: 356
-    rank_delta: 153
-    rank_delta_abs: 153
+    global_rank: 196
+    paper_rank: 350
+    rank_delta: 154
+    rank_delta_abs: 154
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'Towards Deep Attention in Graph Neural Networks: Problems
       and Remedies'
     comparison_source_arxiv: '2306.02376'
-    is_best: false
-    is_std_outlier: false
-  - model: LINKX
-    model_key: linkx
-    model_plain: LINKX
-    value: 0.361
-    std: 0.0155
-    paper_value: 0.361
-    paper_std: 0.0155
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: heterophilic methods comparison
-    date: Mar 6, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.361
-    at_pub_std: 0.0155
-    at_pub_source_arxiv: '2210.00513'
-    at_pub_source_title: Gradient Gating for Deep Multi-Rate Learning on Graphs
-    at_pub_source_date_iso: '2022-10-02'
-    at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2025-04-22'
-    value_gap_source_date_label: WWW 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.361
-    true_std: 0.0155
-    value_gap_source_arxiv: '2505.20034'
-    value_gap_source_title: Graph Wave Networks
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.361
-    sort_std: 0.0155
-    global_rank: 221
-    paper_rank: 221
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GAT
@@ -1720,14 +1376,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: heterophilic methods comparison
+    protocol_note: Heterophilic method comparison on Actor dataset.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -1759,82 +1415,15 @@ results:
     value_note: ''
     sort_value: 0.3605
     sort_std: 0.0035
-    global_rank: 224
-    paper_rank: 467
-    rank_delta: 243
-    rank_delta_abs: 243
+    global_rank: 218
+    paper_rank: 464
+    rank_delta: 246
+    rank_delta_abs: 246
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Hierarchical Graph Transformer with Adaptive Node Sampling
     comparison_source_arxiv: '2210.03930'
-    is_best: false
-    is_std_outlier: false
-  - model: SPCNet-L
-    model_key: spcnet-l
-    model_plain: SPCNet-L
-    value: 0.3536
-    std: 0.0014
-    paper_value: 0.3536
-    paper_std: 0.0014
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: semi-supervised node classification
-    date: Mar 6, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-06'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.3536
-    true_std: 0.0014
-    value_gap_source_arxiv: '2403.03676'
-    value_gap_source_title: Simplified PCNet with Robustness
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.3536
-    sort_std: 0.0014
-    global_rank: 268
-    paper_rank: 268
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: EGNN
@@ -1854,14 +1443,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods comparison
+    protocol_note: Polynomial-based method comparison on Actor dataset.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -1894,8 +1483,8 @@ results:
     value_note: ''
     sort_value: 0.3516
     sort_std: 0.0064
-    global_rank: 272
-    paper_rank: 272
+    global_rank: 267
+    paper_rank: 267
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1953,10 +1542,8 @@ results:
   - model: ACM-GCN
     model_key: acm-gcn
     model_plain: ACM-GCN
-    value: 0.8514
-    std: 0.0607
-    paper_value: 0.8514
-    paper_std: 0.0607
+    value: 0.948
+    std: 0.038
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -1966,54 +1553,21 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
+    arxiv_id: '2504.19785'
+    title: Heterophily-informed Message Passing
+    date: Apr 28, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-28'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/AaltoML/heterophily-imp
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: heterophilic methods
-    date: Mar 6, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8514
-    at_pub_std: 0.0607
-    at_pub_source_arxiv: '2211.11761'
-    at_pub_source_title: 'From Node Interaction to Hop Interaction: New Effective
-      and Scalable Graph Learning Paradigm'
-    at_pub_source_date_iso: '2022-11-21'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2025-04-28'
-    value_gap_source_date_label: TMLR 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.948
-    true_std: 0.038
-    value_gap_source_arxiv: '2504.19785'
-    value_gap_source_title: Heterophily-informed Message Passing
-    value_gap_source_is_current_paper: false
-    value_gap: 0.09659999999999991
-    has_value_note: false
-    value_note: ''
+    is_global_top: true
+    global_rank: 2
     sort_value: 0.948
     sort_std: 0.038
-    global_rank: 2
-    paper_rank: 117
-    rank_delta: 115
-    rank_delta_abs: 115
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
@@ -2068,14 +1622,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Node classification accuracy on Cornell.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -2135,14 +1689,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Node classification accuracy on Cornell.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -2202,14 +1756,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Node classification accuracy on Cornell.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -2269,14 +1823,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Node classification accuracy on Cornell.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -2288,8 +1842,8 @@ results:
     at_pub_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
     at_pub_source_date_iso: '2023-03-24'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2025-05-29'
-    value_gap_source_date_label: ICML 2025
+    value_gap_source_date_iso: '2024-03-06'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2300,10 +1854,9 @@ results:
     today_delta_significant: false
     true_value: 0.9295
     true_std: 0.0246
-    value_gap_source_arxiv: '2505.23014'
-    value_gap_source_title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in
-      the Perspective of A System of Hyperbolic Partial Differential Equations'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.03676'
+    value_gap_source_title: Simplified PCNet with Robustness
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -2337,14 +1890,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Node classification accuracy on Cornell.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -2357,8 +1910,8 @@ results:
       Revisited
     at_pub_source_date_iso: '2022-02-04'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2025-05-29'
-    value_gap_source_date_label: ICML 2025
+    value_gap_source_date_iso: '2024-03-06'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2369,88 +1922,20 @@ results:
     today_delta_significant: false
     true_value: 0.923
     true_std: 0.0148
-    value_gap_source_arxiv: '2505.23014'
-    value_gap_source_title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in
-      the Perspective of A System of Hyperbolic Partial Differential Equations'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.03676'
+    value_gap_source_title: Simplified PCNet with Robustness
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.923
     sort_std: 0.0148
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 16
+    paper_rank: 16
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GGCN
-    model_key: ggcn
-    model_plain: GGCN
-    value: 0.8568
-    std: 0.0663
-    paper_value: 0.8568
-    paper_std: 0.0663
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: heterophilic methods
-    date: Mar 6, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8568
-    at_pub_std: 0.0663
-    at_pub_source_arxiv: '2206.10991'
-    at_pub_source_title: Understanding convolution on graphs via energies
-    at_pub_source_date_iso: '2022-06-22'
-    at_pub_source_date_label: TMLR 2022
-    value_gap_source_date_iso: '2026-03-10'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.923
-    true_std: 0.0367
-    value_gap_source_arxiv: '2603.09195'
-    value_gap_source_title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.06620000000000004
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.923
-    sort_std: 0.0367
-    global_rank: 16
-    paper_rank: 107
-    rank_delta: 91
-    rank_delta_abs: 91
-    rank_delta_direction: worse
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2473,14 +1958,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Node classification accuracy on Cornell.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -2513,8 +1998,8 @@ results:
     value_note: ''
     sort_value: 0.9213
     sort_std: 0.0164
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2541,14 +2026,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Node classification accuracy on Cornell.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -2580,8 +2065,8 @@ results:
     value_note: ''
     sort_value: 0.9213
     sort_std: 0.0172
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2608,14 +2093,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Node classification accuracy on Cornell.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -2627,8 +2112,8 @@ results:
     at_pub_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
     at_pub_source_date_iso: '2023-03-24'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2025-05-29'
-    value_gap_source_date_label: ICML 2025
+    value_gap_source_date_iso: '2023-03-24'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.0029000000000000137
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2639,17 +2124,16 @@ results:
     today_delta_significant: false
     true_value: 0.9181
     true_std: 0.0196
-    value_gap_source_arxiv: '2505.23014'
-    value_gap_source_title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in
-      the Perspective of A System of Hyperbolic Partial Differential Equations'
+    value_gap_source_arxiv: '2303.13750'
+    value_gap_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
     value_gap_source_is_current_paper: false
     value_gap: 0.0029000000000000137
     has_value_note: false
     value_note: ''
     sort_value: 0.9181
     sort_std: 0.0196
-    global_rank: 23
-    paper_rank: 25
+    global_rank: 21
+    paper_rank: 23
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -2676,14 +2160,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Node classification accuracy on Cornell.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -2715,8 +2199,8 @@ results:
     value_note: ''
     sort_value: 0.9157
     sort_std: 0.0196
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2743,14 +2227,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Node classification accuracy on Cornell.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -2782,10 +2266,10 @@ results:
     value_note: ''
     sort_value: 0.9136
     sort_std: 0.007
-    global_rank: 27
-    paper_rank: 143
-    rank_delta: 116
-    rank_delta_abs: 116
+    global_rank: 25
+    paper_rank: 132
+    rank_delta: 107
+    rank_delta_abs: 107
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2810,14 +2294,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Node classification accuracy on Cornell.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -2850,8 +2334,8 @@ results:
     value_note: ''
     sort_value: 0.8983
     sort_std: 0.0229
-    global_rank: 35
-    paper_rank: 35
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2878,14 +2362,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Node classification accuracy on Cornell.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -2918,8 +2402,8 @@ results:
     value_note: ''
     sort_value: 0.8973
     sort_std: 0.0135
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2946,14 +2430,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Node classification accuracy on Cornell.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -2986,153 +2470,16 @@ results:
     value_note: ''
     sort_value: 0.8918
     sort_std: 0.0396
-    global_rank: 47
-    paper_rank: 143
-    rank_delta: 96
-    rank_delta_abs: 96
+    global_rank: 39
+    paper_rank: 132
+    rank_delta: 93
+    rank_delta_abs: 93
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
-    is_std_outlier: false
-  - model: H2GCN
-    model_key: h2gcn
-    model_plain: H2GCN
-    value: 0.827
-    std: 0.0528
-    paper_value: 0.827
-    paper_std: 0.0528
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: heterophilic methods
-    date: Mar 6, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.851
-    at_pub_std: 0.061
-    at_pub_source_arxiv: '2401.14580'
-    at_pub_source_title: 'Design your own universe: a physics-informed agnostic method
-      for enhancing graph neural networks'
-    at_pub_source_date_iso: '2024-01-26'
-    at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2026-03-10'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.02400000000000002
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.8623
-    true_std: 0.0471
-    value_gap_source_arxiv: '2603.09195'
-    value_gap_source_title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0353
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8623
-    sort_std: 0.0471
-    global_rank: 94
-    paper_rank: 174
-    rank_delta: 80
-    rank_delta_abs: 80
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GloGNN
-    model_key: glognn
-    model_plain: GloGNN
-    value: 0.8595
-    std: 0.051
-    paper_value: 0.8595
-    paper_std: 0.051
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: heterophilic methods
-    date: Mar 6, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8595
-    at_pub_std: 0.051
-    at_pub_source_arxiv: '2209.15454'
-    at_pub_source_title: 'GPNet: Simplifying Graph Neural Networks via Multi-channel
-      Geometric Polynomials'
-    at_pub_source_date_iso: '2022-09-30'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2025-07-27'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8595
-    true_std: 0.051
-    value_gap_source_arxiv: '2507.20127'
-    value_gap_source_title: 'Aggregation-aware MLP: An Unsupervised Approach for Graph
-      Message-passing'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8595
-    sort_std: 0.051
-    global_rank: 102
-    paper_rank: 102
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
     is_std_outlier: false
   - model: ARMA
     model_key: arma
@@ -3151,14 +2498,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Node classification accuracy on Cornell.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -3191,8 +2538,8 @@ results:
     value_note: ''
     sort_value: 0.8562
     sort_std: 0.0213
-    global_rank: 112
-    paper_rank: 112
+    global_rank: 103
+    paper_rank: 103
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3219,14 +2566,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Node classification accuracy on Cornell.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -3258,10 +2605,10 @@ results:
     value_note: ''
     sort_value: 0.8533
     sort_std: 0.0104
-    global_rank: 115
-    paper_rank: 149
-    rank_delta: 34
-    rank_delta_abs: 34
+    global_rank: 106
+    paper_rank: 138
+    rank_delta: 32
+    rank_delta_abs: 32
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3286,14 +2633,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Node classification accuracy on Cornell.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -3327,78 +2674,10 @@ results:
     value_note: ''
     sort_value: 0.838
     sort_std: 0.046
-    global_rank: 151
-    paper_rank: 198
+    global_rank: 140
+    paper_rank: 187
     rank_delta: 47
     rank_delta_abs: 47
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: LINKX
-    model_key: linkx
-    model_plain: LINKX
-    value: 0.7784
-    std: 0.0581
-    paper_value: 0.7784
-    paper_std: 0.0581
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: heterophilic methods
-    date: Mar 6, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.7784
-    at_pub_std: 0.058
-    at_pub_source_arxiv: '2209.15454'
-    at_pub_source_title: 'GPNet: Simplifying Graph Neural Networks via Multi-channel
-      Geometric Polynomials'
-    at_pub_source_date_iso: '2022-09-30'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2024-05-25'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.8346
-    true_std: 0.0061
-    value_gap_source_arxiv: '2405.16185'
-    value_gap_source_title: Differentiable Cluster Graph Neural Network
-    value_gap_source_is_current_paper: false
-    value_gap: 0.05620000000000003
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8346
-    sort_std: 0.0061
-    global_rank: 159
-    paper_rank: 259
-    rank_delta: 100
-    rank_delta_abs: 100
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3432,148 +2711,10 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 177
+    global_rank: 165
     sort_value: 0.8269
     sort_std: null
     comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.6189
-    std: 0.0505
-    paper_value: 0.6189
-    paper_std: 0.0505
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: heterophilic methods
-    date: Mar 6, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.819
-    at_pub_std: 0.054
-    at_pub_source_arxiv: '2206.02386'
-    at_pub_source_title: Restructuring Graphs for Higher Homophily via Adaptive Spectral
-      Clustering
-    at_pub_source_date_iso: '2022-06-06'
-    at_pub_source_date_label: AAAI 2022
-    value_gap_source_date_iso: '2022-06-06'
-    value_gap_source_date_label: AAAI 2022
-    gap_vs_at_pub: 0.20009999999999994
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.819
-    true_std: 0.054
-    value_gap_source_arxiv: '2206.02386'
-    value_gap_source_title: Restructuring Graphs for Higher Homophily via Adaptive
-      Spectral Clustering
-    value_gap_source_is_current_paper: false
-    value_gap: 0.20009999999999994
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.819
-    sort_std: 0.054
-    global_rank: 201
-    paper_rank: 436
-    rank_delta: 235
-    rank_delta_abs: 235
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Restructuring Graphs for Higher Homophily via Adaptive
-      Spectral Clustering
-    comparison_source_arxiv: '2206.02386'
-    is_best: false
-    is_std_outlier: false
-  - model: WRGAT
-    model_key: wrgat
-    model_plain: WRGAT
-    value: 0.8162
-    std: 0.039
-    paper_value: 0.8162
-    paper_std: 0.039
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: heterophilic methods
-    date: Mar 6, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8162
-    at_pub_std: 0.039
-    at_pub_source_arxiv: '2111.06748'
-    at_pub_source_title: Simplifying approach to Node Classification in Graph Neural
-      Networks
-    at_pub_source_date_iso: '2021-11-12'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2026-05-20'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8162
-    true_std: 0.039
-    value_gap_source_arxiv: '2605.21247'
-    value_gap_source_title: Graph Navier–Stokes Networks
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8162
-    sort_std: 0.039
-    global_rank: 203
-    paper_rank: 203
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -3595,14 +2736,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Node classification accuracy on Cornell.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -3635,84 +2776,16 @@ results:
     value_note: ''
     sort_value: 0.8082
     sort_std: 0.036
-    global_rank: 217
-    paper_rank: 398
-    rank_delta: 181
-    rank_delta_abs: 181
+    global_rank: 203
+    paper_rank: 387
+    rank_delta: 184
+    rank_delta_abs: 184
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Restructuring Graphs for Higher Homophily via Adaptive
       Spectral Clustering
     comparison_source_arxiv: '2206.02386'
-    is_best: false
-    is_std_outlier: false
-  - model: MixHop
-    model_key: mixhop
-    model_plain: MixHop
-    value: 0.7351
-    std: 0.0634
-    paper_value: 0.7351
-    paper_std: 0.0634
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: heterophilic methods
-    date: Mar 6, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.795
-    at_pub_std: 0.063
-    at_pub_source_arxiv: '2110.08128'
-    at_pub_source_title: Label-Wise Graph Convolutional Network for Heterophilic Graphs
-    at_pub_source_date_iso: '2021-10-15'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2021-10-15'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: 0.059900000000000064
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.795
-    true_std: 0.063
-    value_gap_source_arxiv: '2110.08128'
-    value_gap_source_title: Label-Wise Graph Convolutional Network for Heterophilic
-      Graphs
-    value_gap_source_is_current_paper: false
-    value_gap: 0.059900000000000064
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.795
-    sort_std: 0.063
-    global_rank: 231
-    paper_rank: 315
-    rank_delta: 84
-    rank_delta_abs: 84
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   rank_metric: Accuracy
@@ -3816,7 +2889,7 @@ results:
     venue: International Conference on Machine Learning
     codebase_url: https://github.com/Jinx-byebye/m2mgnn
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
@@ -3844,14 +2917,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: "Table \ref{tab:result_heter}"
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification on heterophilic dataset Penn94
+    protocol_note: Node classification accuracy on Penn94 test split
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -3912,14 +2985,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: "Table \ref{tab:result_heter}"
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification on heterophilic dataset Penn94
+    protocol_note: Node classification accuracy on Penn94 test split
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -3952,8 +3025,8 @@ results:
     value_note: ''
     sort_value: 0.8515
     sort_std: 0.002
-    global_rank: 7
-    paper_rank: 13
+    global_rank: 8
+    paper_rank: 14
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -3980,14 +3053,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: "Table \ref{tab:result_heter}"
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification on heterophilic dataset Penn94
+    protocol_note: Node classification accuracy on Penn94 test split
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -4019,8 +3092,8 @@ results:
     value_note: ''
     sort_value: 0.8475
     sort_std: 0.0027
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 14
+    paper_rank: 14
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4047,14 +3120,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: "Table \ref{tab:result_heter}"
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification on heterophilic dataset Penn94
+    protocol_note: Node classification accuracy on Penn94 test split
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -4086,10 +3159,10 @@ results:
     value_note: ''
     sort_value: 0.8455
     sort_std: 0.0054
-    global_rank: 16
-    paper_rank: 42
-    rank_delta: 26
-    rank_delta_abs: 26
+    global_rank: 17
+    paper_rank: 44
+    rank_delta: 27
+    rank_delta_abs: 27
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4114,14 +3187,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: "Table \ref{tab:result_heter}"
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification on heterophilic dataset Penn94
+    protocol_note: Node classification accuracy on Penn94 test split
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -4153,10 +3226,10 @@ results:
     value_note: ''
     sort_value: 0.8409
     sort_std: 0.002
-    global_rank: 20
-    paper_rank: 24
-    rank_delta: 4
-    rank_delta_abs: 4
+    global_rank: 21
+    paper_rank: 26
+    rank_delta: 5
+    rank_delta_abs: 5
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -4181,14 +3254,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: "Table \ref{tab:result_heter}"
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification on heterophilic dataset Penn94
+    protocol_note: Node classification accuracy on Penn94 test split
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -4220,8 +3293,8 @@ results:
     value_note: ''
     sort_value: 0.8323
     sort_std: 0.002
-    global_rank: 28
-    paper_rank: 35
+    global_rank: 30
+    paper_rank: 37
     rank_delta: 7
     rank_delta_abs: 7
     rank_delta_direction: worse
@@ -4229,73 +3302,6 @@ results:
     comparison_type: behind
     comparison_source_title: Shape-aware Graph Spectral Learning
     comparison_source_arxiv: '2310.10064'
-    is_best: false
-    is_std_outlier: false
-  - model: H2GCN
-    model_key: h2gcn
-    model_plain: H2GCN
-    value: 0.8131
-    std: 0.006
-    paper_value: 0.8131
-    paper_std: 0.006
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: "Table \ref{tab:result_heter}"
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Node classification on heterophilic dataset Penn94
-    date: Mar 6, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.832
-    at_pub_std: 0.0055
-    at_pub_source_arxiv: '2306.02285'
-    at_pub_source_title: Clarify Confused Nodes via Separated Learning
-    at_pub_source_date_iso: '2023-06-04'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-06-04'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.018899999999999917
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.832
-    true_std: 0.0055
-    value_gap_source_arxiv: '2306.02285'
-    value_gap_source_title: Clarify Confused Nodes via Separated Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.018899999999999917
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.832
-    sort_std: 0.0055
-    global_rank: 29
-    paper_rank: 42
-    rank_delta: 13
-    rank_delta_abs: 13
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Clarify Confused Nodes via Separated Learning
-    comparison_source_arxiv: '2306.02285'
     is_best: false
     is_std_outlier: false
   - model: ACM-GCN
@@ -4315,14 +3321,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: "Table \ref{tab:result_heter}"
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification on heterophilic dataset Penn94
+    protocol_note: Node classification accuracy on Penn94 test split
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -4354,8 +3360,8 @@ results:
     value_note: ''
     sort_value: 0.8298
     sort_std: 0.0063
-    global_rank: 31
-    paper_rank: 35
+    global_rank: 33
+    paper_rank: 37
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -4382,14 +3388,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: "Table \ref{tab:result_heter}"
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification on heterophilic dataset Penn94
+    protocol_note: Node classification accuracy on Penn94 test split
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -4422,8 +3428,8 @@ results:
     value_note: ''
     sort_value: 0.8292
     sort_std: 0.0059
-    global_rank: 32
-    paper_rank: 32
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4450,14 +3456,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: "Table \ref{tab:result_heter}"
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification on heterophilic dataset Penn94
+    protocol_note: Node classification accuracy on Penn94 test split
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -4489,8 +3495,8 @@ results:
     value_note: ''
     sort_value: 0.8269
     sort_std: 0.0022
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4525,7 +3531,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 34
+    global_rank: 36
     sort_value: 0.8268
     sort_std: 0.0032
     comparison_type: global_top
@@ -4550,14 +3556,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: "Table \ref{tab:result_heter}"
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification on heterophilic dataset Penn94
+    protocol_note: Node classification accuracy on Penn94 test split
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -4589,8 +3595,75 @@ results:
     value_note: ''
     sort_value: 0.8153
     sort_std: 0.0055
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 43
+    paper_rank: 43
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: H_2GCN
+    model_key: h_2gcn
+    model_plain: H_2GCN
+    value: 0.8131
+    std: 0.006
+    paper_value: 0.8131
+    paper_std: 0.006
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification accuracy on Penn94 test split
+    date: Mar 6, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-06'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-06'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8131
+    true_std: 0.006
+    value_gap_source_arxiv: '2403.03676'
+    value_gap_source_title: Simplified PCNet with Robustness
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8131
+    sort_std: 0.006
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4617,14 +3690,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: "Table \ref{tab:result_heter}"
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification on heterophilic dataset Penn94
+    protocol_note: Node classification accuracy on Penn94 test split
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -4656,10 +3729,10 @@ results:
     value_note: ''
     sort_value: 0.7534
     sort_std: 0.0064
-    global_rank: 56
-    paper_rank: 62
-    rank_delta: 6
-    rank_delta_abs: 6
+    global_rank: 60
+    paper_rank: 67
+    rank_delta: 7
+    rank_delta_abs: 7
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4684,14 +3757,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: "Table \ref{tab:result_heter}"
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification on heterophilic dataset Penn94
+    protocol_note: Node classification accuracy on Penn94 test split
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -4724,8 +3797,8 @@ results:
     value_note: ''
     sort_value: 0.7432
     sort_std: 0.0053
-    global_rank: 59
-    paper_rank: 59
+    global_rank: 64
+    paper_rank: 64
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4847,16 +3920,16 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ACM-GCN
-    model_key: acm-gcn
-    model_plain: ACM-GCN
-    value: 0.8784
-    std: 0.044
-    paper_value: 0.8784
-    paper_std: 0.044
+  - model: SPCNet-L
+    model_key: spcnet-l
+    model_plain: SPCNet-L
+    value: 0.9426
+    std: 0.0131
+    paper_value: 0.9426
+    paper_std: 0.0131
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
@@ -4864,56 +3937,122 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 3
+    table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: heterophilic methods
+    protocol_note: Polynomial-based method comparison on Texas.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.8784
-    at_pub_std: 0.044
-    at_pub_source_arxiv: '2211.11761'
-    at_pub_source_title: 'From Node Interaction to Hop Interaction: New Effective
-      and Scalable Graph Learning Paradigm'
-    at_pub_source_date_iso: '2022-11-21'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2026-03-10'
-    value_gap_source_date_label: '2026'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-06'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.9557
-    true_std: 0.036
-    value_gap_source_arxiv: '2603.09195'
-    value_gap_source_title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.07730000000000004
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.9426
+    true_std: 0.0131
+    value_gap_source_arxiv: '2403.03676'
+    value_gap_source_title: Simplified PCNet with Robustness
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.9557
-    sort_std: 0.036
-    global_rank: 5
-    paper_rank: 119
-    rank_delta: 114
-    rank_delta_abs: 114
-    rank_delta_direction: worse
-    has_value_gap: true
+    sort_value: 0.9426
+    sort_std: 0.0131
+    global_rank: 11
+    paper_rank: 11
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: SPCNet-D
+    model_key: spcnet-d
+    model_plain: SPCNet-D
+    value: 0.9393
+    std: 0.0128
+    paper_value: 0.9393
+    paper_std: 0.0128
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Polynomial-based method comparison on Texas.
+    date: Mar 6, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-06'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-06'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.9393
+    true_std: 0.0128
+    value_gap_source_arxiv: '2403.03676'
+    value_gap_source_title: Simplified PCNet with Robustness
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9393
+    sort_std: 0.0128
+    global_rank: 16
+    paper_rank: 16
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: EvenNet
     model_key: evennet
@@ -4932,14 +4071,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Polynomial-based method comparison on Texas.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -4971,8 +4110,8 @@ results:
     value_note: ''
     sort_value: 0.9377
     sort_std: 0.0173
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4999,14 +4138,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Polynomial-based method comparison on Texas.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -5038,8 +4177,8 @@ results:
     value_note: ''
     sort_value: 0.9348
     sort_std: 0.0168
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5066,14 +4205,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Polynomial-based method comparison on Texas.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -5106,8 +4245,8 @@ results:
     value_note: ''
     sort_value: 0.9344
     sort_std: 0.0213
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5134,14 +4273,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Polynomial-based method comparison on Texas.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -5173,10 +4312,10 @@ results:
     value_note: ''
     sort_value: 0.9328
     sort_std: 0.0148
-    global_rank: 26
+    global_rank: 28
     paper_rank: 41
-    rank_delta: 15
-    rank_delta_abs: 15
+    rank_delta: 13
+    rank_delta_abs: 13
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -5201,14 +4340,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Polynomial-based method comparison on Texas.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -5242,8 +4381,8 @@ results:
     value_note: ''
     sort_value: 0.9328
     sort_std: 0.0147
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5270,14 +4409,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Polynomial-based method comparison on Texas.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -5310,8 +4449,8 @@ results:
     value_note: ''
     sort_value: 0.9324
     sort_std: 0.0203
-    global_rank: 31
-    paper_rank: 31
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5338,14 +4477,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Polynomial-based method comparison on Texas.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -5405,14 +4544,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Polynomial-based method comparison on Texas.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -5445,10 +4584,10 @@ results:
     value_note: ''
     sort_value: 0.923
     sort_std: 0.007
-    global_rank: 47
-    paper_rank: 137
-    rank_delta: 90
-    rank_delta_abs: 90
+    global_rank: 45
+    paper_rank: 132
+    rank_delta: 87
+    rank_delta_abs: 87
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -5456,140 +4595,6 @@ results:
       method for enhancing graph neural networks'
     comparison_source_arxiv: '2401.14580'
     is_best: false
-    is_std_outlier: false
-  - model: GGCN
-    model_key: ggcn
-    model_plain: GGCN
-    value: 0.8486
-    std: 0.0455
-    paper_value: 0.8486
-    paper_std: 0.0455
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: heterophilic methods
-    date: Mar 6, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8486
-    at_pub_std: 0.0455
-    at_pub_source_arxiv: '2206.10991'
-    at_pub_source_title: Understanding convolution on graphs via energies
-    at_pub_source_date_iso: '2022-06-22'
-    at_pub_source_date_label: TMLR 2022
-    value_gap_source_date_iso: '2025-04-22'
-    value_gap_source_date_label: WWW 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.9213
-    true_std: 0.0305
-    value_gap_source_arxiv: '2505.20034'
-    value_gap_source_title: Graph Wave Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.07269999999999999
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9213
-    sort_std: 0.0305
-    global_rank: 52
-    paper_rank: 203
-    rank_delta: 151
-    rank_delta_abs: 151
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: H2GCN
-    model_key: h2gcn
-    model_plain: H2GCN
-    value: 0.8486
-    std: 0.0723
-    paper_value: 0.8486
-    paper_std: 0.0723
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: heterophilic methods
-    date: Mar 6, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.859
-    at_pub_std: 0.0353
-    at_pub_source_arxiv: '2307.09768'
-    at_pub_source_title: How Curvature Enhance the Adaptation Power of Framelet GCNs
-    at_pub_source_date_iso: '2023-07-19'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2024-11-26'
-    value_gap_source_date_label: ICML 2024
-    gap_vs_at_pub: 0.010399999999999965
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.9189
-    true_std: 0.0393
-    value_gap_source_arxiv: '2411.17296'
-    value_gap_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.07030000000000003
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9189
-    sort_std: 0.0393
-    global_rank: 54
-    paper_rank: 203
-    rank_delta: 149
-    rank_delta_abs: 149
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
     is_std_outlier: false
   - model: APPNP
     model_key: appnp
@@ -5608,14 +4613,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Polynomial-based method comparison on Texas.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -5647,8 +4652,8 @@ results:
     value_note: ''
     sort_value: 0.9131
     sort_std: 0.0197
-    global_rank: 63
-    paper_rank: 69
+    global_rank: 61
+    paper_rank: 67
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -5675,14 +4680,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Polynomial-based method comparison on Texas.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -5715,8 +4720,8 @@ results:
     value_note: ''
     sort_value: 0.9131
     sort_std: 0.0336
-    global_rank: 64
-    paper_rank: 64
+    global_rank: 62
+    paper_rank: 62
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5751,7 +4756,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 76
+    global_rank: 73
     sort_value: 0.9001
     sort_std: 0.023
     comparison_type: global_top
@@ -5776,14 +4781,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Polynomial-based method comparison on Texas.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -5816,145 +4821,10 @@ results:
     value_note: ''
     sort_value: 0.8918
     sort_std: 0.0443
-    global_rank: 95
-    paper_rank: 324
-    rank_delta: 229
-    rank_delta_abs: 229
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SPCNet-D
-    model_key: spcnet-d
-    model_plain: SPCNet-D
-    value: 0.8784
-    std: 0.0243
-    paper_value: 0.8784
-    paper_std: 0.0243
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: heterophilic methods
-    date: Mar 6, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-06'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8784
-    true_std: 0.0243
-    value_gap_source_arxiv: '2403.03676'
-    value_gap_source_title: Simplified PCNet with Robustness
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8784
-    sort_std: 0.0243
-    global_rank: 121
-    paper_rank: 121
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: WRGAT
-    model_key: wrgat
-    model_plain: WRGAT
-    value: 0.8362
-    std: 0.055
-    paper_value: 0.8362
-    paper_std: 0.055
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: heterophilic methods
-    date: Mar 6, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8362
-    at_pub_std: 0.055
-    at_pub_source_arxiv: '2211.11761'
-    at_pub_source_title: 'From Node Interaction to Hop Interaction: New Effective
-      and Scalable Graph Learning Paradigm'
-    at_pub_source_date_iso: '2022-11-21'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2024-06-01'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.8698
-    true_std: null
-    value_gap_source_arxiv: '2406.10863'
-    value_gap_source_title: Global-Local Graph Neural Networks for Node-Classification
-    value_gap_source_is_current_paper: false
-    value_gap: 0.03359999999999996
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8698
-    sort_std: null
-    global_rank: 137
-    paper_rank: 240
-    rank_delta: 103
-    rank_delta_abs: 103
+    global_rank: 91
+    paper_rank: 300
+    rank_delta: 209
+    rank_delta_abs: 209
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -5979,14 +4849,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Polynomial-based method comparison on Texas.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -6019,80 +4889,12 @@ results:
     value_note: ''
     sort_value: 0.8628
     sort_std: 0.0262
-    global_rank: 146
-    paper_rank: 146
+    global_rank: 139
+    paper_rank: 139
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GloGNN
-    model_key: glognn
-    model_plain: GloGNN
-    value: 0.8405
-    std: 0.049
-    paper_value: 0.8405
-    paper_std: 0.049
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: heterophilic methods
-    date: Mar 6, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8432
-    at_pub_std: null
-    at_pub_source_arxiv: '2205.07308'
-    at_pub_source_title: Finding Global Homophily in Graph Neural Networks When Meeting
-      Heterophily
-    at_pub_source_date_iso: '2022-05-15'
-    at_pub_source_date_label: ICML 2022
-    value_gap_source_date_iso: '2026-03-10'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.0026999999999999247
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.8524
-    true_std: 0.049
-    value_gap_source_arxiv: '2603.09195'
-    value_gap_source_title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.011900000000000022
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8524
-    sort_std: 0.049
-    global_rank: 190
-    paper_rank: 227
-    rank_delta: 37
-    rank_delta_abs: 37
-    rank_delta_direction: worse
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -6115,14 +4917,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Polynomial-based method comparison on Texas.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -6155,8 +4957,8 @@ results:
     value_note: ''
     sort_value: 0.8397
     sort_std: 0.0377
-    global_rank: 231
-    paper_rank: 231
+    global_rank: 216
+    paper_rank: 216
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6164,74 +4966,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.5216
-    std: 0.0663
-    paper_value: 0.5216
-    paper_std: 0.0663
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: heterophilic methods
-    date: Mar 6, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8
-    at_pub_std: 0.0311
-    at_pub_source_arxiv: '2310.11762'
-    at_pub_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
-    at_pub_source_date_iso: '2023-10-18'
-    at_pub_source_date_label: WWW 2023
-    value_gap_source_date_iso: '2025-06-17'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.2784000000000001
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8162
-    true_std: 0.0645
-    value_gap_source_arxiv: '2506.14291'
-    value_gap_source_title: 'Equivariance Everywhere All At Once: A Recipe for Graph
-      Foundation Models'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.2946000000000001
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8162
-    sort_std: 0.0645
-    global_rank: 288
-    paper_rank: 709
-    rank_delta: 421
-    rank_delta_abs: 421
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
-    comparison_source_arxiv: '2310.11762'
     is_best: false
     is_std_outlier: false
   - model: EGNN
@@ -6251,14 +4985,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Polynomial-based method comparison on Texas.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -6291,8 +5025,8 @@ results:
     value_note: ''
     sort_value: 0.8134
     sort_std: 0.0156
-    global_rank: 301
-    paper_rank: 301
+    global_rank: 278
+    paper_rank: 278
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6319,14 +5053,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: polynomial-based methods
+    protocol_note: Polynomial-based method comparison on Texas.
     date: Mar 6, 2024
     date_display: Mar 2024
     date_iso: '2024-03-06'
@@ -6358,214 +5092,12 @@ results:
     value_note: ''
     sort_value: 0.7933
     sort_std: 0.0447
-    global_rank: 348
-    paper_rank: 386
-    rank_delta: 38
-    rank_delta_abs: 38
+    global_rank: 323
+    paper_rank: 356
+    rank_delta: 33
+    rank_delta_abs: 33
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MixHop
-    model_key: mixhop
-    model_plain: MixHop
-    value: 0.7784
-    std: 0.0773
-    paper_value: 0.7784
-    paper_std: 0.0773
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: heterophilic methods
-    date: Mar 6, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.7784
-    at_pub_std: 0.0773
-    at_pub_source_arxiv: '2105.07634'
-    at_pub_source_title: Improving Graph Neural Networks with Simple Architecture
-      Design
-    at_pub_source_date_iso: '2021-05-17'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2026-05-20'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7784
-    true_std: 0.0773
-    value_gap_source_arxiv: '2605.21247'
-    value_gap_source_title: Graph Navier–Stokes Networks
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7784
-    sort_std: 0.0773
-    global_rank: 369
-    paper_rank: 369
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: LINKX
-    model_key: linkx
-    model_plain: LINKX
-    value: 0.746
-    std: 0.0837
-    paper_value: 0.746
-    paper_std: 0.0837
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: heterophilic methods
-    date: Mar 6, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.746
-    at_pub_std: 0.084
-    at_pub_source_arxiv: '2110.08128'
-    at_pub_source_title: Label-Wise Graph Convolutional Network for Heterophilic Graphs
-    at_pub_source_date_iso: '2021-10-15'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2025-04-22'
-    value_gap_source_date_label: WWW 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.746
-    true_std: 0.0837
-    value_gap_source_arxiv: '2505.20034'
-    value_gap_source_title: Graph Wave Networks
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.746
-    sort_std: 0.0837
-    global_rank: 434
-    paper_rank: 434
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SPCNet-L
-    model_key: spcnet-l
-    model_plain: SPCNet-L
-    value: 0.6761
-    std: 0.0742
-    paper_value: 0.6761
-    paper_std: 0.0742
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: semi-supervised node classification
-    date: Mar 6, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-06'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.6761
-    true_std: 0.0742
-    value_gap_source_arxiv: '2403.03676'
-    value_gap_source_title: Simplified PCNet with Robustness
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6761
-    sort_std: 0.0742
-    global_rank: 528
-    paper_rank: 528
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''

@@ -106,7 +106,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -175,7 +175,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 29
+    global_rank: 23
     sort_value: 0.826
     sort_std: 0.022
     comparison_type: global_top
@@ -208,7 +208,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 180
+    global_rank: 157
     sort_value: 0.792
     sort_std: 0.024
     comparison_type: global_top
@@ -273,8 +273,8 @@ results:
     value_note: ''
     sort_value: 0.752
     sort_std: null
-    global_rank: 298
-    paper_rank: 298
+    global_rank: 272
+    paper_rank: 272
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -364,11 +364,11 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Sum--MLP (GIN-0)
-    model_key: sum--mlp (gin-0)
-    model_plain: Sum--MLP (GIN-0)
-    value: 0.575
-    std: 0.015
+  - model: LAMP-Soft
+    model_key: lamp-soft
+    model_plain: LAMP-Soft
+    value: 0.5738
+    std: 0.0041
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -378,20 +378,21 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '1810.00826'
-    title: How Powerful are Graph Neural Networks?
-    date: Oct 1, 2018
-    date_display: Oct 2018
-    date_iso: '2018-10-01'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/weihua916/powerful-gnns
+    arxiv_id: '2410.10365'
+    title: 'SpeGCL: Self-supervised Graph Spectrum Contrastive Learning without Positive
+      Samples'
+    date: Oct 14, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-14'
+    venue: IEEE Transactions on Neural Networks and Learning Systems
+    codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.575
-    sort_std: 0.015
+    sort_value: 0.5738
+    sort_std: 0.0041
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -455,8 +456,8 @@ results:
     value_note: ''
     sort_value: 0.492
     sort_std: null
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -524,8 +525,8 @@ results:
     value_note: ''
     sort_value: 0.481
     sort_std: null
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -561,7 +562,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 31
+    global_rank: 26
     sort_value: 0.438
     sort_std: 0.032
     comparison_type: global_top

@@ -56,8 +56,8 @@ paper_type: method
 proposed_models:
 - EMPP (3-Mask)
 - EMPP (energy only)
-mrr: 0.0085
-adjusted_mrr: 0.0028
+mrr: 0.0087
+adjusted_mrr: 0.0029
 mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
@@ -65,7 +65,7 @@ benchmark_coverage:
 - benchmark: Quantum Chemistry
   benchmark_slug: quantum-chemistry
   evaluated: 1
-  total: 3
+  total: 1
 task_categories:
 - graph_regression
 experiment_scopes:
@@ -235,9 +235,9 @@ results:
     sort_value: 0.01
     sort_std: null
     global_rank: 22
-    paper_rank: 121
-    rank_delta: 99
-    rank_delta_abs: 99
+    paper_rank: 119
+    rank_delta: 97
+    rank_delta_abs: 97
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -305,9 +305,9 @@ results:
     sort_value: 0.02
     sort_std: null
     global_rank: 26
-    paper_rank: 118
-    rank_delta: 92
-    rank_delta_abs: 92
+    paper_rank: 116
+    rank_delta: 90
+    rank_delta_abs: 90
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -374,9 +374,9 @@ results:
     sort_value: 0.039
     sort_std: null
     global_rank: 35
-    paper_rank: 120
-    rank_delta: 85
-    rank_delta_abs: 85
+    paper_rank: 118
+    rank_delta: 83
+    rank_delta_abs: 83
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -443,9 +443,9 @@ results:
     sort_value: 0.05
     sort_std: null
     global_rank: 46
-    paper_rank: 121
-    rank_delta: 75
-    rank_delta_abs: 75
+    paper_rank: 119
+    rank_delta: 73
+    rank_delta_abs: 73
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -510,10 +510,10 @@ results:
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 65
-    paper_rank: 121
-    rank_delta: 56
-    rank_delta_abs: 56
+    global_rank: 64
+    paper_rank: 119
+    rank_delta: 55
+    rank_delta_abs: 55
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -578,8 +578,8 @@ results:
     value_note: ''
     sort_value: 1.5
     sort_std: null
-    global_rank: 117
-    paper_rank: 117
+    global_rank: 115
+    paper_rank: 115
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

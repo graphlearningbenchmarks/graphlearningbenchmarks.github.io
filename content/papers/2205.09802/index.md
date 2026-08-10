@@ -49,8 +49,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GLA
-mrr: 0.0158
-adjusted_mrr: 0.0105
+mrr: 0.0175
+adjusted_mrr: 0.0116
 mrr_dataset_count: 2
 benchmark_categories:
 - TU Dortmund
@@ -123,7 +123,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -192,7 +192,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 29
+    global_rank: 23
     sort_value: 0.826
     sort_std: 0.022
     comparison_type: global_top
@@ -258,8 +258,8 @@ results:
     value_note: ''
     sort_value: 0.8216
     sort_std: 0.0017
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -327,8 +327,8 @@ results:
     value_note: ''
     sort_value: 0.8188
     sort_std: 0.0023
-    global_rank: 45
-    paper_rank: 45
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -395,8 +395,8 @@ results:
     value_note: ''
     sort_value: 0.8154
     sort_std: 0.0014
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -436,16 +436,15 @@ results:
     date_iso: '2022-05-19'
     published_venue: NeurIPS 2022
     published_conference: NeurIPS 2022
-    at_pub_value: 0.7423
-    at_pub_std: 0.0021
-    at_pub_source_arxiv: '2106.05819'
-    at_pub_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
-      Learning
-    at_pub_source_date_iso: '2021-06-10'
-    at_pub_source_date_label: NeurIPS 2021
+    at_pub_value: 0.714
+    at_pub_std: 0.012
+    at_pub_source_arxiv: '2106.09645'
+    at_pub_source_title: Prototypical Graph Contrastive Learning
+    at_pub_source_date_iso: '2021-06-17'
+    at_pub_source_date_label: '2021'
     value_gap_source_date_iso: '2022-05-19'
     value_gap_source_date_label: NeurIPS 2022
-    gap_vs_at_pub: 0.0685
+    gap_vs_at_pub: 0.0968
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: true
@@ -464,16 +463,15 @@ results:
     value_note: ''
     sort_value: 0.8108
     sort_std: 0.0017
-    global_rank: 96
-    paper_rank: 96
+    global_rank: 81
+    paper_rank: 81
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
-      Learning
-    comparison_source_arxiv: '2106.05819'
+    comparison_source_title: Prototypical Graph Contrastive Learning
+    comparison_source_arxiv: '2106.09645'
     is_best: false
     is_std_outlier: false
   - model: Infomax
@@ -533,8 +531,8 @@ results:
     value_note: ''
     sort_value: 0.8104
     sort_std: 0.0012
-    global_rank: 97
-    paper_rank: 97
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -574,16 +572,16 @@ results:
     date_iso: '2022-05-19'
     published_venue: NeurIPS 2022
     published_conference: NeurIPS 2022
-    at_pub_value: 0.7509
-    at_pub_std: 0.0019
-    at_pub_source_arxiv: '2106.05819'
-    at_pub_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
-      Learning
-    at_pub_source_date_iso: '2021-06-10'
-    at_pub_source_date_label: NeurIPS 2021
+    at_pub_value: 0.563
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '2202.08333'
+    at_pub_source_title: Self-Supervised Representation Learning via Latent Graph
+      Prediction
+    at_pub_source_date_iso: '2022-02-16'
+    at_pub_source_date_label: ICML 2022
     value_gap_source_date_iso: '2022-05-19'
     value_gap_source_date_label: NeurIPS 2022
-    gap_vs_at_pub: 0.05689999999999995
+    gap_vs_at_pub: 0.24480000000000002
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: true
@@ -602,16 +600,16 @@ results:
     value_note: ''
     sort_value: 0.8078
     sort_std: 0.0012
-    global_rank: 111
-    paper_rank: 111
+    global_rank: 93
+    paper_rank: 93
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
-      Learning
-    comparison_source_arxiv: '2106.05819'
+    comparison_source_title: Self-Supervised Representation Learning via Latent Graph
+      Prediction
+    comparison_source_arxiv: '2202.08333'
     is_best: false
     is_std_outlier: false
   - model: MVGRL
@@ -670,10 +668,10 @@ results:
     value_note: ''
     sort_value: 0.8048
     sort_std: 0.0029
-    global_rank: 127
-    paper_rank: 265
-    rank_delta: 138
-    rank_delta_abs: 138
+    global_rank: 108
+    paper_rank: 238
+    rank_delta: 130
+    rank_delta_abs: 130
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -706,7 +704,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 180
+    global_rank: 157
     sort_value: 0.792
     sort_std: 0.024
     comparison_type: global_top
@@ -883,8 +881,8 @@ results:
     value_note: ''
     sort_value: 0.8324
     sort_std: 0.0014
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -920,7 +918,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 81
+    global_rank: 82
     sort_value: 0.8303
     sort_std: 0.0137
     comparison_type: global_top
@@ -985,8 +983,8 @@ results:
     value_note: ''
     sort_value: 0.8285
     sort_std: 0.0016
-    global_rank: 90
-    paper_rank: 90
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1232,16 +1230,16 @@ results:
     date_iso: '2022-05-19'
     published_venue: NeurIPS 2022
     published_conference: NeurIPS 2022
-    at_pub_value: 0.7436
-    at_pub_std: 0.0024
-    at_pub_source_arxiv: '2106.05819'
-    at_pub_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
-      Learning
-    at_pub_source_date_iso: '2021-06-10'
-    at_pub_source_date_label: NeurIPS 2021
+    at_pub_value: 0.733
+    at_pub_std: 0.006
+    at_pub_source_arxiv: '2202.08333'
+    at_pub_source_title: Self-Supervised Representation Learning via Latent Graph
+      Prediction
+    at_pub_source_date_iso: '2022-02-16'
+    at_pub_source_date_label: ICML 2022
     value_gap_source_date_iso: '2022-05-19'
     value_gap_source_date_label: NeurIPS 2022
-    gap_vs_at_pub: 0.054199999999999915
+    gap_vs_at_pub: 0.06479999999999997
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: true
@@ -1260,16 +1258,16 @@ results:
     value_note: ''
     sort_value: 0.7978
     sort_std: 0.0017
-    global_rank: 259
-    paper_rank: 259
+    global_rank: 258
+    paper_rank: 258
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
-      Learning
-    comparison_source_arxiv: '2106.05819'
+    comparison_source_title: Self-Supervised Representation Learning via Latent Graph
+      Prediction
+    comparison_source_arxiv: '2202.08333'
     is_best: false
     is_std_outlier: false
   - model: MVGRL
@@ -1329,10 +1327,10 @@ results:
     value_note: ''
     sort_value: 0.77
     sort_std: 0.008
-    global_rank: 397
-    paper_rank: 473
-    rank_delta: 76
-    rank_delta_abs: 76
+    global_rank: 394
+    paper_rank: 471
+    rank_delta: 77
+    rank_delta_abs: 77
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind

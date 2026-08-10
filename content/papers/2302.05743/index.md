@@ -59,7 +59,7 @@ benchmark_coverage:
 - benchmark: Quantum Chemistry
   benchmark_slug: quantum-chemistry
   evaluated: 1
-  total: 3
+  total: 1
 task_categories:
 - graph_regression
 experiment_scopes:
@@ -229,9 +229,9 @@ results:
     sort_value: 0.0009
     sort_std: null
     global_rank: 7
-    paper_rank: 100
-    rank_delta: 93
-    rank_delta_abs: 93
+    paper_rank: 98
+    rank_delta: 91
+    rank_delta_abs: 91
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -299,9 +299,9 @@ results:
     sort_value: 0.01
     sort_std: null
     global_rank: 22
-    paper_rank: 98
-    rank_delta: 76
-    rank_delta_abs: 76
+    paper_rank: 96
+    rank_delta: 74
+    rank_delta_abs: 74
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -340,7 +340,7 @@ results:
     date_iso: '2023-02-11'
     published_venue: NeurIPS 2023
     published_conference: NeurIPS 2023
-    at_pub_value: 0.217
+    at_pub_value: 0.085
     at_pub_std: null
     at_pub_source_arxiv: '2210.16518'
     at_pub_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural network
@@ -349,12 +349,12 @@ results:
     at_pub_source_date_label: '2022'
     value_gap_source_date_iso: '2024-02-07'
     value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.07169999999999999
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: true
+    gap_vs_at_pub: 0.060300000000000006
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: true
+    improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.0502
@@ -369,12 +369,12 @@ results:
     sort_value: 0.0502
     sort_std: null
     global_rank: 47
-    paper_rank: 94
-    rank_delta: 47
-    rank_delta_abs: 47
+    paper_rank: 92
+    rank_delta: 45
+    rank_delta_abs: 45
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: improved
+    comparison_type: behind
     comparison_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
       network with vector-scalar interactive message passing for molecules'
     comparison_source_arxiv: '2210.16518'
@@ -436,10 +436,10 @@ results:
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 65
-    paper_rank: 100
-    rank_delta: 35
-    rank_delta_abs: 35
+    global_rank: 64
+    paper_rank: 98
+    rank_delta: 34
+    rank_delta_abs: 34
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -503,8 +503,8 @@ results:
     value_note: ''
     sort_value: 0.124
     sort_std: null
-    global_rank: 88
-    paper_rank: 88
+    global_rank: 87
+    paper_rank: 87
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -570,8 +570,8 @@ results:
     value_note: ''
     sort_value: 0.1305
     sort_std: null
-    global_rank: 91
-    paper_rank: 91
+    global_rank: 90
+    paper_rank: 90
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -637,8 +637,8 @@ results:
     value_note: ''
     sort_value: 0.1342
     sort_std: null
-    global_rank: 92
-    paper_rank: 92
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -704,8 +704,8 @@ results:
     value_note: ''
     sort_value: 0.1466
     sort_std: null
-    global_rank: 96
-    paper_rank: 96
+    global_rank: 94
+    paper_rank: 94
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -771,8 +771,8 @@ results:
     value_note: ''
     sort_value: 0.182
     sort_std: null
-    global_rank: 99
-    paper_rank: 99
+    global_rank: 97
+    paper_rank: 97
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

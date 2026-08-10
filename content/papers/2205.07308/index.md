@@ -60,9 +60,9 @@ has_results: true
 paper_type: method
 proposed_models:
 - GloGNN
-mrr: 0.1289
-adjusted_mrr: 0.1289
-mrr_dataset_count: 11
+mrr: 0.0407
+adjusted_mrr: 0.0407
+mrr_dataset_count: 10
 benchmark_categories:
 - Heterophilic Graphs
 - LINKX Benchmarks
@@ -73,7 +73,7 @@ benchmark_coverage:
   total: 6
 - benchmark: LINKX Benchmarks
   benchmark_slug: linkx-benchmarks
-  evaluated: 2
+  evaluated: 1
   total: 6
 task_categories:
 - node_classification
@@ -139,7 +139,7 @@ results:
     venue: IEEE Transactions on Neural Networks and Learning Systems
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -208,7 +208,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 56
+    global_rank: 55
     sort_value: 0.4026
     sort_std: 0.0108
     comparison_type: global_top
@@ -273,10 +273,10 @@ results:
     value_note: ''
     sort_value: 0.3959
     sort_std: 0.0029
-    global_rank: 75
-    paper_rank: 147
-    rank_delta: 72
-    rank_delta_abs: 72
+    global_rank: 74
+    paper_rank: 140
+    rank_delta: 66
+    rank_delta_abs: 66
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -309,7 +309,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 88
+    global_rank: 87
     sort_value: 0.3899
     sort_std: 0.0085
     comparison_type: global_top
@@ -374,8 +374,8 @@ results:
     value_note: ''
     sort_value: 0.2473
     sort_std: null
-    global_rank: 499
-    paper_rank: 499
+    global_rank: 497
+    paper_rank: 497
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -521,7 +521,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 27
+    global_rank: 25
     sort_value: 0.9136
     sort_std: 0.007
     comparison_type: global_top
@@ -586,10 +586,10 @@ results:
     value_note: ''
     sort_value: 0.8595
     sort_std: 0.051
-    global_rank: 102
-    paper_rank: 154
-    rank_delta: 52
-    rank_delta_abs: 52
+    global_rank: 93
+    paper_rank: 143
+    rank_delta: 50
+    rank_delta_abs: 50
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -623,7 +623,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 177
+    global_rank: 165
     sort_value: 0.8269
     sort_std: null
     comparison_type: global_top
@@ -688,8 +688,8 @@ results:
     value_note: ''
     sort_value: 0.4838
     sort_std: null
-    global_rank: 594
-    paper_rank: 594
+    global_rank: 580
+    paper_rank: 580
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -800,7 +800,7 @@ results:
     venue: International Conference on Machine Learning
     codebase_url: https://github.com/Jinx-byebye/m2mgnn
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
@@ -903,7 +903,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 28
+    global_rank: 30
     sort_value: 0.8323
     sort_std: 0.002
     comparison_type: global_top
@@ -968,8 +968,8 @@ results:
     value_note: ''
     sort_value: 0.8225
     sort_std: null
-    global_rank: 38
-    paper_rank: 38
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1004,7 +1004,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 56
+    global_rank: 60
     sort_value: 0.7534
     sort_std: 0.0064
     comparison_type: global_top
@@ -1149,7 +1149,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 47
+    global_rank: 45
     sort_value: 0.923
     sort_std: 0.007
     comparison_type: global_top
@@ -1182,7 +1182,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 76
+    global_rank: 73
     sort_value: 0.9001
     sort_std: 0.023
     comparison_type: global_top
@@ -1246,10 +1246,10 @@ results:
     value_note: ''
     sort_value: 0.8524
     sort_std: 0.049
-    global_rank: 190
-    paper_rank: 223
-    rank_delta: 33
-    rank_delta_abs: 33
+    global_rank: 179
+    paper_rank: 208
+    rank_delta: 29
+    rank_delta_abs: 29
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1314,10 +1314,10 @@ results:
     value_note: ''
     sort_value: 0.7568
     sort_std: 0.0512
-    global_rank: 413
-    paper_rank: 496
-    rank_delta: 83
-    rank_delta_abs: 83
+    global_rank: 381
+    paper_rank: 460
+    rank_delta: 79
+    rank_delta_abs: 79
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1383,293 +1383,13 @@ results:
     value_note: ''
     sort_value: 0.5622
     sort_std: null
-    global_rank: 689
-    paper_rank: 689
+    global_rank: 652
+    paper_rank: 652
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  rank_metric: Accuracy
-  higher_is_better: true
-  experiment_scope: node-level
-  dataset_primary_metric: Accuracy
-  paper_metrics:
-  - Accuracy
-  metric: Accuracy
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
-- &id005
-  dataset: snap-patents
-  rows:
-  - model: GloGNN
-    model_key: glognn
-    model_plain: GloGNN
-    value: 0.8432
-    std: null
-    paper_value: 0.8432
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: 'Response to Reviewer #3 Q1'
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: May 15, 2022
-    date_display: May 2022
-    date_iso: '2022-05-15'
-    published_venue: ICML 2022
-    published_conference: ICML 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-05-15'
-    value_gap_source_date_label: ICML 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8432
-    true_std: null
-    value_gap_source_arxiv: '2205.07308'
-    value_gap_source_title: Finding Global Homophily in Graph Neural Networks When
-      Meeting Heterophily
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8432
-    sort_std: null
-    global_rank: 1
-    paper_rank: 1
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: FaberNet
-    model_key: fabernet
-    model_plain: FaberNet
-    value: 0.751
-    std: 0.0003
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2310.02232'
-    title: 'HoloNets: Spectral Convolutions do extend to Directed Graphs'
-    date: Oct 3, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-03'
-    venue: International Conference on Learning Representations
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.751
-    sort_std: 0.0003
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: LargeScaleNet
-    model_key: largescalenet
-    model_plain: LargeScaleNet
-    value: 0.7505
-    std: 0.0005
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2411.19392'
-    title: Scale-aware Message Passing For Graph Node Classification
-    date: Nov 28, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-28'
-    venue: null
-    codebase_url: https://github.com/Qin87/ScaleNet
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.7505
-    sort_std: 0.0005
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: H_A
-    model_key: h_a
-    model_plain: H_A
-    value: 0.5622
-    std: null
-    paper_value: 0.5622
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: 'Response to Reviewer #3 Q1'
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: May 15, 2022
-    date_display: May 2022
-    date_iso: '2022-05-15'
-    published_venue: ICML 2022
-    published_conference: ICML 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-05-15'
-    value_gap_source_date_label: ICML 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.5622
-    true_std: null
-    value_gap_source_arxiv: '2205.07308'
-    value_gap_source_title: Finding Global Homophily in Graph Neural Networks When
-      Meeting Heterophily
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.5622
-    sort_std: null
-    global_rank: 15
-    paper_rank: 15
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.5102
-    std: 0.0006
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.19392'
-    title: Scale-aware Message Passing For Graph Node Classification
-    date: Nov 28, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-28'
-    venue: null
-    codebase_url: https://github.com/Qin87/ScaleNet
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 18
-    sort_value: 0.5102
-    sort_std: 0.0006
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MLP
-    model_key: mlp
-    model_plain: MLP
-    value: 0.315
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2401.09125'
-    title: Understanding Heterophily for Graph Neural Networks
-    date: Jan 17, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-17'
-    venue: International Conference on Machine Learning
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 34
-    sort_value: 0.315
-    sort_std: null
-    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1692,7 +1412,6 @@ results_grouped:
 - benchmark: LINKX Benchmarks
   datasets:
   - *id004
-  - *id005
 datasets_by_scope:
 - scope: node-level
   label: Node-level
@@ -1711,8 +1430,6 @@ datasets_by_scope:
     datasets:
     - dataset: Penn94
       dataset_slug: penn94
-    - dataset: snap-patents
-      dataset_slug: snap-patents
 single_proposed_model: GloGNN
 main_figure: /figures/2205.07308/main_figure.jpegoptim.jpg
 ---

@@ -13,7 +13,7 @@ stats:
   avg_nodes: 11758.0
   avg_edges: 519000.0
   num_classes: 2
-result_count: 260
+result_count: 248
 best_model:
   model: Polynormer-r
   value: 0.8591
@@ -64,10 +64,10 @@ papers:
   title: 'Gumbel-MPNN: Graph Rewiring with Gumbel-Softmax'
   date_iso: '2025-08-24'
   venue: ''
-- arxiv_id: '2508.05070'
-  title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-  date_iso: '2025-08-07'
-  venue: ''
+- arxiv_id: '2506.19343'
+  title: Discrepancy-Aware Graph Mask Auto-Encoder
+  date_iso: '2025-06-24'
+  venue: KDD 2025
 - arxiv_id: '2506.15448'
   title: Semi-supervised Graph Anomaly Detection via Robust Homophily Learning
   date_iso: '2025-06-18'
@@ -170,12 +170,10 @@ variants:
   metrics:
   - ROC-AUC
   - AP
-  - AUC
   - Accuracy
   metric_display_names:
   - ROC-AUC
   - AP
-  - AUC
   - Accuracy
   show_all_metrics_desktop: false
   chart_default_log_scale: false
@@ -207,12 +205,10 @@ variants:
     - 0.8591
     - null
     - null
-    - 0.8591
     metric_stds:
     - 0.0074
     - null
     - null
-    - 0.0074
   - model: DC-GNN
     model_plain: DC-GNN
     is_baseline: false
@@ -239,10 +235,8 @@ variants:
     - 0.8588
     - null
     - null
-    - null
     metric_stds:
     - 0.0081
-    - null
     - null
     - null
   - model: Polynormer + Wideformer
@@ -271,10 +265,38 @@ variants:
     - 0.8533
     - null
     - null
-    - null
     metric_stds:
     - 0.0023
     - null
+    - null
+  - model: Polynormer + Entropy Reg
+    model_plain: Polynormer + Entropy Reg
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2510.21267'
+    title: Relieving the Over-Aggregating Effect in Graph Transformers
+    date: Oct 24, 2025
+    date_iso: '2025-10-24'
+    date_display: Oct 2025
+    codebase_url: https://github.com/sunjss/over-aggregating
+    published_conference: NeurIPS 2025
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2025
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.8521
+    - null
+    - null
+    metric_stds:
+    - 0.0033
     - null
     - null
   - model: Lie Unitary GCN
@@ -303,10 +325,8 @@ variants:
     - 0.8518
     - null
     - null
-    - null
     metric_stds:
     - 0.0043
-    - null
     - null
     - null
   - model: Lie UniGCN
@@ -335,10 +355,8 @@ variants:
     - 0.8518
     - null
     - null
-    - null
     metric_stds:
     - 0.0043
-    - null
     - null
     - null
   - model: Schrödinger
@@ -367,10 +385,8 @@ variants:
     - 0.8509
     - null
     - null
-    - null
     metric_stds:
     - 0.0017
-    - null
     - null
     - null
   - model: Polynormer
@@ -399,12 +415,10 @@ variants:
     - 0.8483
     - null
     - null
-    - 0.8483
     metric_stds:
     - 0.0072
     - null
     - null
-    - 0.0072
   - model: PD-GNN
     model_plain: PD-GNN
     is_baseline: true
@@ -431,10 +445,8 @@ variants:
     - 0.8483
     - null
     - null
-    - null
     metric_stds:
     - 0.004
-    - null
     - null
     - null
   - model: Unitary GCN
@@ -463,10 +475,8 @@ variants:
     - 0.8483
     - null
     - null
-    - null
     metric_stds:
     - 0.0068
-    - null
     - null
     - null
   - model: UniGCN
@@ -495,10 +505,8 @@ variants:
     - 0.8483
     - null
     - null
-    - null
     metric_stds:
     - 0.0068
-    - null
     - null
     - null
   - model: ECG-GCN
@@ -527,10 +535,8 @@ variants:
     - 0.8481
     - null
     - null
-    - null
     metric_stds:
     - 0.0025
-    - null
     - null
     - null
   - model: MLP-ECG-GCN
@@ -559,10 +565,8 @@ variants:
     - 0.8481
     - null
     - null
-    - null
     metric_stds:
     - 0.0025
-    - null
     - null
     - null
   - model: BuNN
@@ -591,10 +595,8 @@ variants:
     - 0.8478
     - null
     - null
-    - null
     metric_stds:
     - 0.008
-    - null
     - null
     - null
   - model: MLPBGRL-ECG-GCN
@@ -623,10 +625,8 @@ variants:
     - 0.8473
     - null
     - null
-    - null
     metric_stds:
     - 0.0023
-    - null
     - null
     - null
   - model: GraphGPS + Wideformer
@@ -655,10 +655,8 @@ variants:
     - 0.8467
     - null
     - null
-    - null
     metric_stds:
     - 0.0066
-    - null
     - null
     - null
   - model: GMN
@@ -687,10 +685,8 @@ variants:
     - 0.8452
     - null
     - null
-    - null
     metric_stds:
     - 0.0021
-    - null
     - null
     - null
   - model: GPS GAT+Performer
@@ -719,10 +715,8 @@ variants:
     - 0.8438
     - null
     - null
-    - null
     metric_stds:
     - 0.0091
-    - null
     - null
     - null
   - model: MLP->GNN-ECG-GCN
@@ -751,10 +745,8 @@ variants:
     - 0.8435
     - null
     - null
-    - null
     metric_stds:
     - 0.0031
-    - null
     - null
     - null
   - model: BGRL-ECG-GCN
@@ -783,10 +775,8 @@ variants:
     - 0.8425
     - null
     - null
-    - null
     metric_stds:
     - 0.0022
-    - null
     - null
     - null
   - model: ECG-GAT-sep
@@ -815,10 +805,8 @@ variants:
     - 0.8423
     - null
     - null
-    - null
     metric_stds:
     - 0.0025
-    - null
     - null
     - null
   - model: BGRL-ECG-GAT-sep
@@ -847,10 +835,38 @@ variants:
     - 0.8423
     - null
     - null
-    - null
     metric_stds:
     - 0.0025
     - null
+    - null
+  - model: GraphGPS+Entropy Reg
+    model_plain: GraphGPS+Entropy Reg
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2510.21267'
+    title: Relieving the Over-Aggregating Effect in Graph Transformers
+    date: Oct 24, 2025
+    date_iso: '2025-10-24'
+    date_display: Oct 2025
+    codebase_url: https://github.com/sunjss/over-aggregating
+    published_conference: NeurIPS 2025
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8423
+    - null
+    - null
+    metric_stds:
+    - 0.0051
     - null
     - null
   - model: MLPBGRL-GAT-sep
@@ -879,10 +895,8 @@ variants:
     - 0.8411
     - null
     - null
-    - null
     metric_stds:
     - 0.0023
-    - null
     - null
     - null
   - model: ECG-GT-sep
@@ -911,10 +925,8 @@ variants:
     - 0.84
     - null
     - null
-    - null
     metric_stds:
     - 0.0024
-    - null
     - null
     - null
   - model: MLPBGRL-GT-sep
@@ -943,10 +955,8 @@ variants:
     - 0.84
     - null
     - null
-    - null
     metric_stds:
     - 0.0024
-    - null
     - null
     - null
   - model: MLP-ECG-GAT-sep
@@ -975,10 +985,8 @@ variants:
     - 0.8391
     - null
     - null
-    - null
     metric_stds:
     - 0.0032
-    - null
     - null
     - null
   - model: GAT-sep
@@ -1007,10 +1015,8 @@ variants:
     - 0.8378
     - null
     - null
-    - null
     metric_stds:
     - 0.0043
-    - null
     - null
     - null
   - model: Exphormer+GAT
@@ -1039,10 +1045,8 @@ variants:
     - 0.8377
     - null
     - null
-    - null
     metric_stds:
     - 0.0078
-    - null
     - null
     - null
   - model: Exphormer
@@ -1071,10 +1075,8 @@ variants:
     - 0.8377
     - null
     - null
-    - null
     metric_stds:
     - 0.0078
-    - null
     - null
     - null
   - model: IBG-NN
@@ -1103,10 +1105,8 @@ variants:
     - 0.8376
     - null
     - null
-    - null
     metric_stds:
     - 0.0051
-    - null
     - null
     - null
   - model: MLP->GNN-ECG-GAT-sep
@@ -1135,10 +1135,8 @@ variants:
     - 0.8375
     - null
     - null
-    - null
     metric_stds:
     - 0.003
-    - null
     - null
     - null
   - model: ICG-NN
@@ -1166,11 +1164,9 @@ variants:
     metric_values:
     - 0.8373
     - null
-    - null
     - 0.8373
     metric_stds:
     - 0.0078
-    - null
     - null
     - 0.0078
   - model: GraphGPS
@@ -1199,10 +1195,8 @@ variants:
     - 0.8371
     - null
     - null
-    - null
     metric_stds:
     - 0.0048
-    - null
     - null
     - null
   - model: GPS
@@ -1231,10 +1225,8 @@ variants:
     - 0.8371
     - null
     - null
-    - null
     metric_stds:
     - 0.0048
-    - null
     - null
     - null
   - model: GAT
@@ -1263,10 +1255,8 @@ variants:
     - 0.837
     - null
     - null
-    - null
     metric_stds:
     - 0.0047
-    - null
     - null
     - null
   - model: GPS + Mamba
@@ -1295,10 +1285,8 @@ variants:
     - 0.837
     - null
     - null
-    - null
     metric_stds:
     - 0.0105
-    - null
     - null
     - null
   - model: MLP-ECG-GT-sep
@@ -1327,10 +1315,8 @@ variants:
     - 0.8365
     - null
     - null
-    - null
     metric_stds:
     - 0.0029
-    - null
     - null
     - null
   - model: GCN
@@ -1359,10 +1345,8 @@ variants:
     - 0.8364
     - null
     - null
-    - null
     metric_stds:
     - 0.0067
-    - null
     - null
     - null
   - model: DIFFormer
@@ -1391,10 +1375,8 @@ variants:
     - 0.8357
     - null
     - null
-    - null
     metric_stds:
     - 0.0068
-    - null
     - null
     - null
   - model: ICG_u-NN
@@ -1422,13 +1404,41 @@ variants:
     metric_values:
     - 0.8351
     - null
-    - null
     - 0.8351
     metric_stds:
     - 0.0052
     - null
-    - null
     - 0.0052
+  - model: DGMAE
+    model_plain: DGMAE
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2506.19343'
+    title: Discrepancy-Aware Graph Mask Auto-Encoder
+    date: Jun 24, 2025
+    date_iso: '2025-06-24'
+    date_display: Jun 2025
+    codebase_url: https://github.com/zhengziyu77/DGMAE
+    published_conference: KDD 2025
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8348
+    - null
+    - null
+    metric_stds:
+    - 0.0057
+    - null
+    - null
   - model: LLPE
     model_plain: LLPE
     is_baseline: false
@@ -1455,10 +1465,8 @@ variants:
     - 0.8346
     - null
     - null
-    - null
     metric_stds:
     - 0.0069
-    - null
     - null
     - null
   - model: GODM
@@ -1488,9 +1496,7 @@ variants:
     - 0.8346
     - null
     - null
-    - null
     metric_stds:
-    - null
     - null
     - null
     - null
@@ -1521,9 +1527,7 @@ variants:
     - 0.8342
     - null
     - null
-    - null
     metric_stds:
-    - null
     - null
     - null
     - null
@@ -1553,10 +1557,8 @@ variants:
     - 0.8341
     - null
     - null
-    - null
     metric_stds:
     - 0.0044
-    - null
     - null
     - null
   - model: SPEXPHORMER
@@ -1585,10 +1587,8 @@ variants:
     - 0.8334
     - null
     - null
-    - null
     metric_stds:
     - 0.0031
-    - null
     - null
     - null
   - model: SGFormer
@@ -1617,10 +1617,8 @@ variants:
     - 0.8333
     - null
     - null
-    - null
     metric_stds:
     - 0.0068
-    - null
     - null
     - null
   - model: AST
@@ -1649,10 +1647,8 @@ variants:
     - 0.8326
     - null
     - null
-    - null
     metric_stds:
     - 0.001
-    - null
     - null
     - null
   - model: Graphtransformer
@@ -1681,123 +1677,24 @@ variants:
     - 0.8323
     - null
     - null
-    - null
     metric_stds:
     - 0.0064
     - null
     - null
-    - null
-  - model: GT
-    model_plain: GT
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2405.15540'
-    title: Bundle Neural Networks for message diffusion on graphs
-    date: May 24, 2024
-    date_iso: '2024-05-24'
-    date_display: May 2024
-    codebase_url: https://github.com/jacobbamberger/BuNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8323
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0064
-    - null
-    - null
-    - null
-  - model: GOAT
-    model_plain: GOAT
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2402.08678'
-    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
-    date: Feb 13, 2024
-    date_iso: '2024-02-13'
-    date_display: Feb 2024
-    codebase_url: ''
-    published_conference: KDD 2024
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8311
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0104
-    - null
-    - null
-    - null
-  - model: BGRL-ECG-GT-sep
-    model_plain: BGRL-ECG-GT-sep
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2306.12943'
-    title: Evolving Computation Graphs
-    date: Jun 22, 2023
-    date_iso: '2023-06-22'
-    date_display: Jun 2023
-    codebase_url: ''
-    published_conference: ICML 2023
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2023
-    uses_external_data: true
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8297
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0026
-    - null
-    - null
-    - null
-  row_count: 260
+  row_count: 248
   rows_json: /data/datasets/tolokers/standard-split-rows.json
   chart_json: /data/datasets/tolokers/standard-split-chart.json
   arch_counts:
-    gnn: 155
-    hybrid: 35
-    graph_transformer: 29
+    gnn: 144
+    hybrid: 30
+    graph_transformer: 31
     llm: 10
     walk: 0
     traditional: 10
   metric_counts:
-  - 190
+  - 198
   - 13
-  - 27
-  - 34
+  - 39
   milestones: &id001
   - value: 0.8483
     std: 0.004
@@ -1820,19 +1717,19 @@ variants:
       arxiv_id: '2509.21489'
       title: 'GraphPFN: A Prior-Data Fitted Graph Foundation Model'
       date: '2025-09-25'
-    AUC:
-    - value: 0.8566
-      std: 0.0101
-      model: Tango_GPS
-      arxiv_id: '2508.05070'
-      title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-      date: '2025-08-07'
     Accuracy:
+    - value: 0.8373
+      std: 0.0078
+      model: ICG-NN
+      arxiv_id: '2405.20724'
+      title: on Large Graphs using Intersecting Communities
+      date: '2024-05-31'
     - value: 0.8591
-      std: 0.0074
-      model: Polynormer-r
-      arxiv_id: '2403.01232'
-      title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
-      date: '2024-03-02'
+      std: 0.0083
+      model: NT*
+      arxiv_id: '2604.08980'
+      title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware
+        Graph Learning'
+      date: '2026-04-10'
 ---
 

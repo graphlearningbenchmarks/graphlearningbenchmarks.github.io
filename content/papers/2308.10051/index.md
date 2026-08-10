@@ -150,7 +150,7 @@ results:
     venue: IEEE Transactions on Knowledge and Data Engineering
     codebase_url: https://github.com/YangLing0818/GraphOOD
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -184,7 +184,7 @@ results:
     venue: IEEE Transactions on Knowledge and Data Engineering
     codebase_url: https://github.com/YangLing0818/GraphOOD
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
@@ -285,9 +285,9 @@ results:
     sort_value: 0.8769
     sort_std: 0.004
     global_rank: 21
-    paper_rank: 333
-    rank_delta: 312
-    rank_delta_abs: 312
+    paper_rank: 337
+    rank_delta: 316
+    rank_delta_abs: 316
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -422,9 +422,9 @@ results:
     sort_value: 0.789
     sort_std: null
     global_rank: 85
-    paper_rank: 515
-    rank_delta: 430
-    rank_delta_abs: 430
+    paper_rank: 514
+    rank_delta: 429
+    rank_delta_abs: 429
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -490,8 +490,8 @@ results:
     value_note: ''
     sort_value: 0.7324
     sort_std: null
-    global_rank: 347
-    paper_rank: 347
+    global_rank: 351
+    paper_rank: 351
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -591,8 +591,8 @@ results:
     value_note: ''
     sort_value: 0.658
     sort_std: null
-    global_rank: 816
-    paper_rank: 816
+    global_rank: 824
+    paper_rank: 824
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -659,8 +659,8 @@ results:
     value_note: ''
     sort_value: 0.455
     sort_std: null
-    global_rank: 946
-    paper_rank: 946
+    global_rank: 959
+    paper_rank: 959
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

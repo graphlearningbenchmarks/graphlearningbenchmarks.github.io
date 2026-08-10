@@ -59,8 +59,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GBK-GNN
-mrr: 0.0073
-adjusted_mrr: 0.0073
+mrr: 0.0078
+adjusted_mrr: 0.0078
 mrr_dataset_count: 4
 benchmark_categories:
 - Classic
@@ -138,7 +138,7 @@ results:
     venue: IEEE Transactions on Knowledge and Data Engineering
     codebase_url: https://github.com/YangLing0818/GraphOOD
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -172,7 +172,7 @@ results:
     venue: IEEE Transactions on Knowledge and Data Engineering
     codebase_url: https://github.com/YangLing0818/GraphOOD
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
@@ -240,9 +240,9 @@ results:
     sort_value: 0.8774
     sort_std: 0.0041
     global_rank: 20
-    paper_rank: 150
-    rank_delta: 130
-    rank_delta_abs: 130
+    paper_rank: 152
+    rank_delta: 132
+    rank_delta_abs: 132
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -307,9 +307,9 @@ results:
     sort_value: 0.8769
     sort_std: 0.004
     global_rank: 21
-    paper_rank: 234
-    rank_delta: 213
-    rank_delta_abs: 213
+    paper_rank: 238
+    rank_delta: 217
+    rank_delta_abs: 217
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -374,9 +374,9 @@ results:
     sort_value: 0.808
     sort_std: 0.0026
     global_rank: 46
-    paper_rank: 534
-    rank_delta: 488
-    rank_delta_abs: 488
+    paper_rank: 533
+    rank_delta: 487
+    rank_delta_abs: 487
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -578,8 +578,8 @@ results:
     value_note: ''
     sort_value: 0.7802
     sort_std: 0.0115
-    global_rank: 107
-    paper_rank: 157
+    global_rank: 109
+    paper_rank: 159
     rank_delta: 50
     rank_delta_abs: 50
     rank_delta_direction: worse
@@ -646,10 +646,10 @@ results:
     value_note: ''
     sort_value: 0.7711
     sort_std: 0.0157
-    global_rank: 139
-    paper_rank: 954
-    rank_delta: 815
-    rank_delta_abs: 815
+    global_rank: 142
+    paper_rank: 967
+    rank_delta: 825
+    rank_delta_abs: 825
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -687,15 +687,15 @@ results:
     date_iso: '2021-10-29'
     published_venue: WWW 2021
     published_conference: WWW 2021
-    at_pub_value: 0.7639
-    at_pub_std: null
-    at_pub_source_arxiv: '2010.00238'
-    at_pub_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    at_pub_source_date_iso: '2020-10-01'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2020-10-01'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: 0.08310000000000006
+    at_pub_value: 0.725
+    at_pub_std: 0.008
+    at_pub_source_arxiv: '2108.12055'
+    at_pub_source_title: Towards Self-Explainable Graph Neural Network
+    at_pub_source_date_iso: '2021-08-26'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2023-10-18'
+    value_gap_source_date_label: WWW 2023
+    gap_vs_at_pub: 0.04420000000000002
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -703,25 +703,25 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.7639
-    true_std: null
-    value_gap_source_arxiv: '2010.00238'
-    value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
+    true_value: 0.7618
+    true_std: 0.0078
+    value_gap_source_arxiv: '2310.11762'
+    value_gap_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
     value_gap_source_is_current_paper: false
-    value_gap: 0.08310000000000006
+    value_gap: 0.08100000000000007
     has_value_note: false
     value_note: ''
-    sort_value: 0.7639
-    sort_std: null
-    global_rank: 155
-    paper_rank: 747
-    rank_delta: 592
-    rank_delta_abs: 592
+    sort_value: 0.7618
+    sort_std: 0.0078
+    global_rank: 165
+    paper_rank: 751
+    rank_delta: 586
+    rank_delta_abs: 586
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    comparison_source_arxiv: '2010.00238'
+    comparison_source_title: Towards Self-Explainable Graph Neural Network
+    comparison_source_arxiv: '2108.12055'
     is_best: false
     is_std_outlier: false
   - model: SAGE
@@ -749,7 +749,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 299
+    global_rank: 305
     sort_value: 0.7361
     sort_std: 0.019
     comparison_type: global_top
@@ -786,6 +786,74 @@ results:
     sort_value: 0.7289
     sort_std: 0.001
     comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: CPGNN
+    model_key: cpgnn
+    model_plain: CPGNN
+    value: 0.6941
+    std: 0.0045
+    paper_value: 0.6941
+    paper_std: 0.0045
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Oct 29, 2021
+    date_display: Oct 2021
+    date_iso: '2021-10-29'
+    published_venue: WWW 2021
+    published_conference: WWW 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-03-11'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.72
+    true_std: 0.005
+    value_gap_source_arxiv: '2303.06344'
+    value_gap_source_title: Graph Contrastive Learning under Heterophily via Graph
+      Filters
+    value_gap_source_is_current_paper: false
+    value_gap: 0.025899999999999923
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.72
+    sort_std: 0.005
+    global_rank: 515
+    paper_rank: 703
+    rank_delta: 188
+    rank_delta_abs: 188
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -858,74 +926,6 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: CPGNN
-    model_key: cpgnn
-    model_plain: CPGNN
-    value: 0.6941
-    std: 0.0045
-    paper_value: 0.6941
-    paper_std: 0.0045
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
-    date: Oct 29, 2021
-    date_display: Oct 2021
-    date_iso: '2021-10-29'
-    published_venue: WWW 2021
-    published_conference: WWW 2021
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-10-29'
-    value_gap_source_date_label: WWW 2021
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.6941
-    true_std: 0.0045
-    value_gap_source_arxiv: '2110.15777'
-    value_gap_source_title: 'GBK-GNN: Gated Bi-Kernel Graph Neural Networks for Modeling
-      Both Homophily and Heterophily'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6941
-    sort_std: 0.0045
-    global_rank: 701
-    paper_rank: 701
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
   rank_metric: Accuracy
   higher_is_better: true
   experiment_scope: node-level
@@ -938,79 +938,11 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: Exphormer
-    model_key: exphormer
-    model_plain: Exphormer
-    value: 0.9635
-    std: 0.0019
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    venue: The Web Conference
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9635
-    sort_std: 0.0019
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SGFormer
-    model_key: sgformer
-    model_plain: SGFormer
-    value: 0.9629
-    std: 0.0015
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    venue: The Web Conference
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.9629
-    sort_std: 0.0015
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Coral
-    model_key: coral
-    model_plain: Coral
-    value: 0.9574
-    std: 0.0039
+  - model: MATE
+    model_key: mate
+    model_plain: MATE
+    value: 0.946
+    std: 0.007
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -1020,25 +952,90 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    venue: The Web Conference
+    arxiv_id: '2407.20067'
+    title: 'xAI-Drop: Don''t Use What You Cannot Explain'
+    date: Jul 29, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-29'
+    venue: Learning on Graphs Conference
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.9574
-    sort_std: 0.0039
+    global_rank: 1
+    sort_value: 0.946
+    sort_std: 0.007
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
+    is_std_outlier: false
+  - model: GraphSAGE+CNA
+    model_key: graphsage+cna
+    model_plain: GraphSAGE+CNA
+    value: 0.9418
+    std: 0.0033
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.04064'
+    title: Graph Neural Networks Need Cluster-Normalize-Activate Modules
+    date: Dec 5, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-05'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/ml-research/cna_modules
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.9418
+    sort_std: 0.0033
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: DropAggr
+    model_key: dropaggr
+    model_plain: DropAggr
+    value: 0.938
+    std: 0.011
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2407.20067'
+    title: 'xAI-Drop: Don''t Use What You Cannot Explain'
+    date: Jul 29, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-29'
+    venue: Learning on Graphs Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.938
+    sort_std: 0.011
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
     is_std_outlier: false
   - model: GCN
     model_key: gcn
@@ -1097,10 +1094,10 @@ results:
     value_note: ''
     sort_value: 0.9004
     sort_std: null
-    global_rank: 42
-    paper_rank: 193
-    rank_delta: 151
-    rank_delta_abs: 151
+    global_rank: 31
+    paper_rank: 174
+    rank_delta: 143
+    rank_delta_abs: 143
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1134,7 +1131,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 75
+    global_rank: 61
     sort_value: 0.8911
     sort_std: 0.0012
     comparison_type: global_top
@@ -1178,8 +1175,8 @@ results:
     at_pub_source_title: Learned Low Precision Graph Neural Networks
     at_pub_source_date_iso: '2020-09-19'
     at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2026-05-24'
-    value_gap_source_date_label: ICML 2026
+    value_gap_source_date_iso: '2025-05-19'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: 0.04590000000000005
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1189,20 +1186,20 @@ results:
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.8897
-    true_std: null
-    value_gap_source_arxiv: '2605.24867'
-    value_gap_source_title: 'Clustering as Reasoning: A $k$-Means Interpretation of
-      Chain-of-Thought Graph Learning'
+    true_std: 0.0014
+    value_gap_source_arxiv: '2505.15845'
+    value_gap_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem
+      in Tokenized Graph Learning Models'
     value_gap_source_is_current_paper: false
     value_gap: 0.046600000000000086
     has_value_note: false
     value_note: ''
     sort_value: 0.8897
-    sort_std: null
-    global_rank: 81
-    paper_rank: 379
-    rank_delta: 298
-    rank_delta_abs: 298
+    sort_std: 0.0014
+    global_rank: 67
+    paper_rank: 331
+    rank_delta: 264
+    rank_delta_abs: 264
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1267,84 +1264,15 @@ results:
     value_note: ''
     sort_value: 0.8893
     sort_std: 0.0137
-    global_rank: 83
-    paper_rank: 193
-    rank_delta: 110
-    rank_delta_abs: 110
+    global_rank: 69
+    paper_rank: 174
+    rank_delta: 105
+    rank_delta_abs: 105
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Orthogonal Graph Neural Networks
     comparison_source_arxiv: '2109.11338'
-    is_best: false
-    is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.8777
-    std: 0.0183
-    paper_value: 0.8777
-    paper_std: 0.0183
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
-    date: Oct 29, 2021
-    date_display: Oct 2021
-    date_iso: '2021-10-29'
-    published_venue: WWW 2021
-    published_conference: WWW 2021
-    at_pub_value: 0.869
-    at_pub_std: 0.0104
-    at_pub_source_arxiv: '2105.07634'
-    at_pub_source_title: Improving Graph Neural Networks with Simple Architecture
-      Design
-    at_pub_source_date_iso: '2021-05-17'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2026-05-24'
-    value_gap_source_date_label: ICML 2026
-    gap_vs_at_pub: 0.008700000000000041
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: true
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8889
-    true_std: null
-    value_gap_source_arxiv: '2605.24867'
-    value_gap_source_title: 'Clustering as Reasoning: A $k$-Means Interpretation of
-      Chain-of-Thought Graph Learning'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.011199999999999988
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8889
-    sort_std: null
-    global_rank: 88
-    paper_rank: 164
-    rank_delta: 76
-    rank_delta_abs: 76
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: H2GCN
@@ -1404,10 +1332,10 @@ results:
     value_note: ''
     sort_value: 0.8882
     sort_std: 0.0011
-    global_rank: 91
-    paper_rank: 574
-    rank_delta: 483
-    rank_delta_abs: 483
+    global_rank: 76
+    paper_rank: 524
+    rank_delta: 448
+    rank_delta_abs: 448
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1472,12 +1400,81 @@ results:
     value_note: ''
     sort_value: 0.8869
     sort_std: 0.0042
-    global_rank: 101
-    paper_rank: 101
+    global_rank: 85
+    paper_rank: 85
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.8777
+    std: 0.0183
+    paper_value: 0.8777
+    paper_std: 0.0183
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
+    date: Oct 29, 2021
+    date_display: Oct 2021
+    date_iso: '2021-10-29'
+    published_venue: WWW 2021
+    published_conference: WWW 2021
+    at_pub_value: 0.869
+    at_pub_std: 0.0104
+    at_pub_source_arxiv: '2105.07634'
+    at_pub_source_title: Improving Graph Neural Networks with Simple Architecture
+      Design
+    at_pub_source_date_iso: '2021-05-17'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2021-10-29'
+    value_gap_source_date_label: WWW 2021
+    gap_vs_at_pub: 0.008700000000000041
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8777
+    true_std: 0.0183
+    value_gap_source_arxiv: '2110.15777'
+    value_gap_source_title: 'GBK-GNN: Gated Bi-Kernel Graph Neural Networks for Modeling
+      Both Homophily and Heterophily'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8777
+    sort_std: 0.0183
+    global_rank: 146
+    paper_rank: 146
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1540,10 +1537,10 @@ results:
     value_note: ''
     sort_value: 0.866
     sort_std: 0.0091
-    global_rank: 238
-    paper_rank: 669
-    rank_delta: 431
-    rank_delta_abs: 431
+    global_rank: 213
+    paper_rank: 618
+    rank_delta: 405
+    rank_delta_abs: 405
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1607,10 +1604,10 @@ results:
     value_note: ''
     sort_value: 0.854
     sort_std: 0.004
-    global_rank: 304
-    paper_rank: 402
-    rank_delta: 98
-    rank_delta_abs: 98
+    global_rank: 262
+    paper_rank: 351
+    rank_delta: 89
+    rank_delta_abs: 89
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1675,8 +1672,8 @@ results:
     value_note: ''
     sort_value: 0.794
     sort_std: 0.0139
-    global_rank: 810
-    paper_rank: 810
+    global_rank: 764
+    paper_rank: 764
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1711,7 +1708,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 853
+    global_rank: 806
     sort_value: 0.7768
     sort_std: null
     comparison_type: global_top
@@ -1776,8 +1773,8 @@ results:
     value_note: ''
     sort_value: 0.7464
     sort_std: 0.0063
-    global_rank: 903
-    paper_rank: 903
+    global_rank: 862
+    paper_rank: 862
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1923,7 +1920,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 27
+    global_rank: 25
     sort_value: 0.9136
     sort_std: 0.007
     comparison_type: global_top
@@ -1987,10 +1984,10 @@ results:
     value_note: ''
     sort_value: 0.8623
     sort_std: 0.0471
-    global_rank: 94
-    paper_rank: 352
-    rank_delta: 258
-    rank_delta_abs: 258
+    global_rank: 85
+    paper_rank: 341
+    rank_delta: 256
+    rank_delta_abs: 256
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2025,7 +2022,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 177
+    global_rank: 165
     sort_value: 0.8269
     sort_std: null
     comparison_type: global_top
@@ -2089,10 +2086,10 @@ results:
     value_note: ''
     sort_value: 0.8196
     sort_std: 0.0739
-    global_rank: 200
-    paper_rank: 343
-    rank_delta: 143
-    rank_delta_abs: 143
+    global_rank: 189
+    paper_rank: 333
+    rank_delta: 144
+    rank_delta_abs: 144
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2157,8 +2154,8 @@ results:
     value_note: ''
     sort_value: 0.7427
     sort_std: 0.0218
-    global_rank: 312
-    paper_rank: 312
+    global_rank: 302
+    paper_rank: 302
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2225,8 +2222,8 @@ results:
     value_note: ''
     sort_value: 0.7027
     sort_std: 0.0512
-    global_rank: 353
-    paper_rank: 353
+    global_rank: 342
+    paper_rank: 342
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2293,8 +2290,8 @@ results:
     value_note: ''
     sort_value: 0.6774
     sort_std: 0.0368
-    global_rank: 375
-    paper_rank: 375
+    global_rank: 364
+    paper_rank: 364
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2360,10 +2357,10 @@ results:
     value_note: ''
     sort_value: 0.6412
     sort_std: null
-    global_rank: 419
-    paper_rank: 528
-    rank_delta: 109
-    rank_delta_abs: 109
+    global_rank: 409
+    paper_rank: 516
+    rank_delta: 107
+    rank_delta_abs: 107
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2509,7 +2506,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 47
+    global_rank: 45
     sort_value: 0.923
     sort_std: 0.007
     comparison_type: global_top
@@ -2573,10 +2570,10 @@ results:
     value_note: ''
     sort_value: 0.9189
     sort_std: 0.0393
-    global_rank: 54
-    paper_rank: 465
-    rank_delta: 411
-    rank_delta_abs: 411
+    global_rank: 52
+    paper_rank: 429
+    rank_delta: 377
+    rank_delta_abs: 377
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2641,10 +2638,10 @@ results:
     value_note: ''
     sort_value: 0.9001
     sort_std: 0.023
-    global_rank: 76
-    paper_rank: 494
-    rank_delta: 418
-    rank_delta_abs: 418
+    global_rank: 73
+    paper_rank: 458
+    rank_delta: 385
+    rank_delta_abs: 385
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2678,7 +2675,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 224
+    global_rank: 209
     sort_value: 0.843
     sort_std: 0.055
     comparison_type: global_top
@@ -2743,10 +2740,10 @@ results:
     value_note: ''
     sort_value: 0.8162
     sort_std: 0.0645
-    global_rank: 288
-    paper_rank: 741
-    rank_delta: 453
-    rank_delta_abs: 453
+    global_rank: 266
+    paper_rank: 701
+    rank_delta: 435
+    rank_delta_abs: 435
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2810,8 +2807,8 @@ results:
     value_note: ''
     sort_value: 0.8108
     sort_std: 0.0488
-    global_rank: 309
-    paper_rank: 309
+    global_rank: 286
+    paper_rank: 286
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2877,8 +2874,8 @@ results:
     value_note: ''
     sort_value: 0.7568
     sort_std: 0.0512
-    global_rank: 413
-    paper_rank: 413
+    global_rank: 381
+    paper_rank: 381
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2945,10 +2942,10 @@ results:
     value_note: ''
     sort_value: 0.746
     sort_std: 0.008
-    global_rank: 435
-    paper_rank: 758
-    rank_delta: 323
-    rank_delta_abs: 323
+    global_rank: 400
+    paper_rank: 713
+    rank_delta: 313
+    rank_delta_abs: 313
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3013,8 +3010,8 @@ results:
     value_note: ''
     sort_value: 0.7419
     sort_std: 0.0522
-    global_rank: 446
-    paper_rank: 446
+    global_rank: 410
+    paper_rank: 410
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3080,8 +3077,8 @@ results:
     value_note: ''
     sort_value: 0.676
     sort_std: null
-    global_rank: 529
-    paper_rank: 529
+    global_rank: 493
+    paper_rank: 493
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

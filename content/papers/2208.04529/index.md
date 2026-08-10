@@ -60,7 +60,6 @@ mrr_dataset_count: 0
 benchmark_categories:
 - OGB
 - MoleculeNet
-- Quantum Chemistry
 benchmark_coverage:
 - benchmark: OGB
   benchmark_slug: ogb
@@ -70,13 +69,8 @@ benchmark_coverage:
   benchmark_slug: moleculenet
   evaluated: 5
   total: 9
-- benchmark: Quantum Chemistry
-  benchmark_slug: quantum-chemistry
-  evaluated: 1
-  total: 3
 task_categories:
 - graph_classification
-- graph_regression
 experiment_scopes:
 - graph-level
 results:
@@ -241,10 +235,10 @@ results:
     value_note: ''
     sort_value: 0.8646
     sort_std: 0.0081
-    global_rank: 41
-    paper_rank: 176
-    rank_delta: 135
-    rank_delta_abs: 135
+    global_rank: 43
+    paper_rank: 182
+    rank_delta: 139
+    rank_delta_abs: 139
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -309,10 +303,10 @@ results:
     value_note: ''
     sort_value: 0.854
     sort_std: 0.011
-    global_rank: 60
-    paper_rank: 147
-    rank_delta: 87
-    rank_delta_abs: 87
+    global_rank: 64
+    paper_rank: 153
+    rank_delta: 89
+    rank_delta_abs: 89
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -345,7 +339,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 78
+    global_rank: 82
     sort_value: 0.8451
     sort_std: null
     comparison_type: global_top
@@ -410,8 +404,8 @@ results:
     value_note: ''
     sort_value: 0.82
     sort_std: 0.055
-    global_rank: 126
-    paper_rank: 126
+    global_rank: 131
+    paper_rank: 131
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -478,8 +472,8 @@ results:
     value_note: ''
     sort_value: 0.819
     sort_std: 0.004
-    global_rank: 129
-    paper_rank: 129
+    global_rank: 134
+    paper_rank: 134
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -546,8 +540,8 @@ results:
     value_note: ''
     sort_value: 0.806
     sort_std: 0.026
-    global_rank: 163
-    paper_rank: 163
+    global_rank: 169
+    paper_rank: 169
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -614,8 +608,8 @@ results:
     value_note: ''
     sort_value: 0.797
     sort_std: 0.008
-    global_rank: 178
-    paper_rank: 178
+    global_rank: 184
+    paper_rank: 184
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -796,8 +790,8 @@ results:
     value_note: ''
     sort_value: 0.917
     sort_std: 0.031
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -864,8 +858,8 @@ results:
     value_note: ''
     sort_value: 0.9
     sort_std: 0.031
-    global_rank: 31
-    paper_rank: 31
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -932,8 +926,8 @@ results:
     value_note: ''
     sort_value: 0.8875
     sort_std: 0.0049
-    global_rank: 32
-    paper_rank: 41
+    global_rank: 34
+    paper_rank: 43
     rank_delta: 9
     rank_delta_abs: 9
     rank_delta_direction: worse
@@ -1002,8 +996,8 @@ results:
     value_note: ''
     sort_value: 0.881
     sort_std: 0.036
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1071,8 +1065,8 @@ results:
     value_note: ''
     sort_value: 0.87
     sort_std: 0.008
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 46
+    paper_rank: 46
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1105,10 +1099,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 55
+    global_rank: 57
     sort_value: 0.8304
     sort_std: 0.0038
     comparison_type: global_top
@@ -1173,8 +1167,8 @@ results:
     value_note: ''
     sort_value: 0.705
     sort_std: 0.011
-    global_rank: 127
-    paper_rank: 127
+    global_rank: 132
+    paper_rank: 132
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1357,9 +1351,9 @@ results:
     sort_value: 0.913
     sort_std: 0.017
     global_rank: 19
-    paper_rank: 218
-    rank_delta: 199
-    rank_delta_abs: 199
+    paper_rank: 222
+    rank_delta: 203
+    rank_delta_abs: 203
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1425,10 +1419,10 @@ results:
     value_note: ''
     sort_value: 0.881
     sort_std: 0.025
-    global_rank: 37
-    paper_rank: 243
-    rank_delta: 206
-    rank_delta_abs: 206
+    global_rank: 36
+    paper_rank: 247
+    rank_delta: 211
+    rank_delta_abs: 211
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1494,8 +1488,8 @@ results:
     value_note: ''
     sort_value: 0.807
     sort_std: 0.021
-    global_rank: 83
-    paper_rank: 83
+    global_rank: 84
+    paper_rank: 84
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1563,10 +1557,10 @@ results:
     value_note: ''
     sort_value: 0.7756
     sort_std: 0.0156
-    global_rank: 106
-    paper_rank: 242
-    rank_delta: 136
-    rank_delta_abs: 136
+    global_rank: 108
+    paper_rank: 246
+    rank_delta: 138
+    rank_delta_abs: 138
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1632,8 +1626,8 @@ results:
     value_note: ''
     sort_value: 0.655
     sort_std: 0.139
-    global_rank: 201
-    paper_rank: 201
+    global_rank: 205
+    paper_rank: 205
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1700,8 +1694,8 @@ results:
     value_note: ''
     sort_value: 0.612
     sort_std: 0.145
-    global_rank: 220
-    paper_rank: 220
+    global_rank: 224
+    paper_rank: 224
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1736,7 +1730,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 240
+    global_rank: 244
     sort_value: 0.558
     sort_std: 0.062
     comparison_type: global_top
@@ -1753,531 +1747,6 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id008
-  dataset: QM9
-  is_multi_metric: true
-  rows:
-  - model: Equiformer v2
-    model_key: equiformer v2
-    model_plain: Equiformer v2
-    metric_values:
-    - 0.01
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.23086'
-    title: Equivariant Spherical Transformer for Efficient Molecular Modeling
-    published_venue: ''
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    codebase_url: ''
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 1
-    is_best: true
-    sort_value: 0.01
-    sort_std: null
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: EQGAT
-    model_key: eqgat
-    model_plain: EQGAT
-    metric_values:
-    - 0.011
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2505.23086'
-    title: Equivariant Spherical Transformer for Efficient Molecular Modeling
-    published_venue: ''
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    codebase_url: ''
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 2
-    is_best: false
-    sort_value: 0.011
-    sort_std: null
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: Equiformer
-    model_key: equiformer
-    model_plain: Equiformer
-    metric_values:
-    - 0.011
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.23086'
-    title: Equivariant Spherical Transformer for Efficient Molecular Modeling
-    published_venue: ''
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    codebase_url: ''
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 3
-    is_best: false
-    sort_value: 0.011
-    sort_std: null
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: DimeNet++
-    model_key: dimenet++
-    model_plain: DimeNet++
-    metric_values:
-    - null
-    - 0.0286
-    - 0.0435
-    - 6.32
-    - 6.53
-    - 7.56
-    - 0.023
-    - 24.6
-    - 19.5
-    - 1.21
-    - 6.28
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.019
-    sort_std: 0.001
-    true_value: 0.019
-    true_std: 0.001
-    paper_value: 0.0286
-    paper_std: null
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 0.009600000000000001
-    value_gap_source_arxiv: '2401.17752'
-    value_gap_source_title: 'PF-GNN: Differentiable particle filtering based approximation
-      of universal graph representations'
-    value_note: ''
-    at_pub_value: 0.028
-    at_pub_std: null
-    at_pub_source_arxiv: '2110.01191'
-    at_pub_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous Molecular
-      Graphs'
-    at_pub_source_date_iso: '2021-10-04'
-    at_pub_source_date_label: AAAI 2021
-    value_gap_source_date_iso: '2024-01-31'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.0005999999999999998
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: ''
-    date: Aug 9, 2022
-    date_display: Aug 2022
-    date_iso: '2022-08-09'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: behind
-    comparison_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    comparison_source_arxiv: '2110.01191'
-    is_best: false
-    is_std_outlier: false
-    global_rank: 10
-  - model: SchNet
-    model_key: schnet
-    model_plain: SchNet
-    metric_values:
-    - null
-    - 0.033
-    - 0.235
-    - 14.0
-    - 14.0
-    - 14.0
-    - 0.033
-    - 41.0
-    - 34.0
-    - 1.7
-    - 19.0
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.033
-    sort_std: null
-    true_value: 0.033
-    true_std: null
-    paper_value: 0.033
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2505.23086'
-    value_gap_source_title: Equivariant Spherical Transformer for Efficient Molecular
-      Modeling
-    value_note: ''
-    at_pub_value: 0.033
-    at_pub_std: null
-    at_pub_source_arxiv: '2011.14115'
-    at_pub_source_title: Fast and Uncertainty-Aware Directional Message Passing for
-      Non-Equilibrium Molecules
-    at_pub_source_date_iso: '2020-11-28'
-    at_pub_source_date_label: NeurIPS 2020
-    value_gap_source_date_iso: '2025-05-29'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ''
-    date: Aug 9, 2022
-    date_display: Aug 2022
-    date_iso: '2022-08-09'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 23
-  - model: MCM+MXMNet
-    model_key: mcm+mxmnet
-    model_plain: MCM+MXMNet
-    metric_values:
-    - null
-    - 0.0375
-    - 0.0477
-    - 5.97
-    - 6.01
-    - 7.13
-    - 0.023
-    - 21.9
-    - 18.5
-    - 1.14
-    - 5.97
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    sort_value: 0.0375
-    sort_std: null
-    true_value: 0.0375
-    true_std: null
-    paper_value: 0.0375
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2208.04529'
-    value_gap_source_title: Motif-based Graph Representation Learning with Application
-      to Chemical Molecules
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-08-09'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ''
-    date: Aug 9, 2022
-    date_display: Aug 2022
-    date_iso: '2022-08-09'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 24
-  - model: MXMNet
-    model_key: mxmnet
-    model_plain: MXMNet
-    metric_values:
-    - null
-    - 0.0382
-    - 0.0482
-    - 6.1
-    - 6.21
-    - 7.3
-    - 0.0228
-    - 23.0
-    - 19.5
-    - 1.16
-    - 6.09
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.0382
-    sort_std: null
-    true_value: 0.0382
-    true_std: null
-    paper_value: 0.0382
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2208.04529'
-    value_gap_source_title: Motif-based Graph Representation Learning with Application
-      to Chemical Molecules
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-08-09'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ''
-    date: Aug 9, 2022
-    date_display: Aug 2022
-    date_iso: '2022-08-09'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 26
-  metrics:
-  - gap
-  - mu
-  - alpha
-  - U0
-  - H
-  - G
-  - Cv
-  - HOMO
-  - LUMO
-  - zpve
-  - U
-  primary_metric: gap
-  rank_metric: mu
-  higher_is_better: false
-  experiment_scope: graph-level
-  dataset_primary_metric: gap
-  paper_metrics:
-  - mu
-  - alpha
-  - U0
-  - H
-  - G
-  - Cv
-  - HOMO
-  - LUMO
-  - zpve
-  - U
-  metric: mu
-  uses_non_primary_metric: true
-  paper_has_primary_metric: false
 - &id007
   dataset: SIDER
   rows:
@@ -2441,9 +1910,9 @@ results:
     sort_value: 0.6403
     sort_std: 0.0104
     global_rank: 66
-    paper_rank: 121
-    rank_delta: 55
-    rank_delta_abs: 55
+    paper_rank: 120
+    rank_delta: 54
+    rank_delta_abs: 54
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -2509,8 +1978,8 @@ results:
     value_note: ''
     sort_value: 0.627
     sort_std: 0.028
-    global_rank: 94
-    paper_rank: 94
+    global_rank: 93
+    paper_rank: 93
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2577,8 +2046,8 @@ results:
     value_note: ''
     sort_value: 0.624
     sort_std: 0.024
-    global_rank: 101
-    paper_rank: 101
+    global_rank: 100
+    paper_rank: 100
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2645,8 +2114,8 @@ results:
     value_note: ''
     sort_value: 0.618
     sort_std: 0.008
-    global_rank: 117
-    paper_rank: 117
+    global_rank: 116
+    paper_rank: 116
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2714,8 +2183,8 @@ results:
     value_note: ''
     sort_value: 0.617
     sort_std: 0.018
-    global_rank: 119
-    paper_rank: 119
+    global_rank: 118
+    paper_rank: 118
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2783,8 +2252,8 @@ results:
     value_note: ''
     sort_value: 0.615
     sort_std: 0.025
-    global_rank: 127
-    paper_rank: 127
+    global_rank: 126
+    paper_rank: 126
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2817,10 +2286,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 222
+    global_rank: 223
     sort_value: 0.5752
     sort_std: 0.0006
     comparison_type: global_top
@@ -2995,10 +2464,10 @@ results:
     value_note: ''
     sort_value: 0.84
     sort_std: 0.004
-    global_rank: 16
-    paper_rank: 112
-    rank_delta: 96
-    rank_delta_abs: 96
+    global_rank: 14
+    paper_rank: 107
+    rank_delta: 93
+    rank_delta_abs: 93
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3064,10 +2533,10 @@ results:
     value_note: ''
     sort_value: 0.829
     sort_std: 0.0069
-    global_rank: 26
-    paper_rank: 113
-    rank_delta: 87
-    rank_delta_abs: 87
+    global_rank: 24
+    paper_rank: 108
+    rank_delta: 84
+    rank_delta_abs: 84
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3133,8 +2602,8 @@ results:
     value_note: ''
     sort_value: 0.802
     sort_std: 0.015
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 51
+    paper_rank: 51
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3201,8 +2670,8 @@ results:
     value_note: ''
     sort_value: 0.794
     sort_std: 0.015
-    global_rank: 83
-    paper_rank: 83
+    global_rank: 78
+    paper_rank: 78
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3235,10 +2704,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 141
+    global_rank: 135
     sort_value: 0.7744
     sort_std: 0.0038
     comparison_type: global_top
@@ -3303,8 +2772,8 @@ results:
     value_note: ''
     sort_value: 0.774
     sort_std: 0.006
-    global_rank: 144
-    paper_rank: 144
+    global_rank: 138
+    paper_rank: 138
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3371,8 +2840,8 @@ results:
     value_note: ''
     sort_value: 0.765
     sort_std: 0.003
-    global_rank: 176
-    paper_rank: 176
+    global_rank: 169
+    paper_rank: 169
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3519,7 +2988,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 10
+    global_rank: 12
     sort_value: 0.809
     sort_std: 0.016
     comparison_type: global_top
@@ -3584,9 +3053,9 @@ results:
     sort_value: 0.778
     sort_std: 0.0182
     global_rank: 120
-    paper_rank: 248
-    rank_delta: 128
-    rank_delta_abs: 128
+    paper_rank: 249
+    rank_delta: 129
+    rank_delta_abs: 129
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3651,8 +3120,8 @@ results:
     value_note: ''
     sort_value: 0.77
     sort_std: 0.012
-    global_rank: 168
-    paper_rank: 168
+    global_rank: 169
+    paper_rank: 169
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3687,7 +3156,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 171
+    global_rank: 172
     sort_value: 0.769
     sort_std: 0.0136
     comparison_type: global_top
@@ -3752,8 +3221,8 @@ results:
     value_note: ''
     sort_value: 0.763
     sort_std: 0.003
-    global_rank: 203
-    paper_rank: 203
+    global_rank: 204
+    paper_rank: 204
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3820,8 +3289,8 @@ results:
     value_note: ''
     sort_value: 0.757
     sort_std: 0.006
-    global_rank: 231
-    paper_rank: 231
+    global_rank: 232
+    paper_rank: 232
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4236,9 +3705,6 @@ results_grouped:
   - *id005
   - *id006
   - *id007
-- benchmark: Quantum Chemistry
-  datasets:
-  - *id008
 datasets_by_scope:
 - scope: graph-level
   label: Graph-level
@@ -4263,11 +3729,6 @@ datasets_by_scope:
       dataset_slug: clintox
     - dataset: SIDER
       dataset_slug: sider
-  - benchmark: Quantum Chemistry
-    benchmark_slug: quantum-chemistry
-    datasets:
-    - dataset: QM9
-      dataset_slug: qm9
 main_figure: /figures/2208.04529/main_figure.jpegoptim.jpg
 ---
 

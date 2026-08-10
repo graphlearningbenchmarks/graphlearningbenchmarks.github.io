@@ -50,8 +50,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - 3D-EMGP
-mrr: 0.0145
-adjusted_mrr: 0.0048
+mrr: 0.0147
+adjusted_mrr: 0.0049
 mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
@@ -59,7 +59,7 @@ benchmark_coverage:
 - benchmark: Quantum Chemistry
   benchmark_slug: quantum-chemistry
   evaluated: 1
-  total: 3
+  total: 1
 task_categories:
 - graph_regression
 experiment_scopes:
@@ -227,8 +227,8 @@ results:
     value_note: ''
     sort_value: 0.0876
     sort_std: null
-    global_rank: 69
-    paper_rank: 69
+    global_rank: 68
+    paper_rank: 68
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -295,8 +295,8 @@ results:
     value_note: ''
     sort_value: 0.0945
     sort_std: null
-    global_rank: 73
-    paper_rank: 73
+    global_rank: 72
+    paper_rank: 72
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -363,8 +363,8 @@ results:
     value_note: ''
     sort_value: 0.0953
     sort_std: null
-    global_rank: 74
-    paper_rank: 74
+    global_rank: 73
+    paper_rank: 73
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -431,8 +431,8 @@ results:
     value_note: ''
     sort_value: 0.0995
     sort_std: null
-    global_rank: 76
-    paper_rank: 76
+    global_rank: 75
+    paper_rank: 75
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -499,8 +499,8 @@ results:
     value_note: ''
     sort_value: 0.1033
     sort_std: null
-    global_rank: 77
-    paper_rank: 77
+    global_rank: 76
+    paper_rank: 76
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -567,8 +567,8 @@ results:
     value_note: ''
     sort_value: 0.105
     sort_std: null
-    global_rank: 78
-    paper_rank: 78
+    global_rank: 77
+    paper_rank: 77
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -635,8 +635,8 @@ results:
     value_note: ''
     sort_value: 0.1073
     sort_std: null
-    global_rank: 80
-    paper_rank: 80
+    global_rank: 79
+    paper_rank: 79
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -703,8 +703,8 @@ results:
     value_note: ''
     sort_value: 0.1089
     sort_std: null
-    global_rank: 81
-    paper_rank: 81
+    global_rank: 80
+    paper_rank: 80
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -771,8 +771,8 @@ results:
     value_note: ''
     sort_value: 0.112
     sort_std: null
-    global_rank: 82
-    paper_rank: 82
+    global_rank: 81
+    paper_rank: 81
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -839,8 +839,8 @@ results:
     value_note: ''
     sort_value: 0.1166
     sort_std: null
-    global_rank: 84
-    paper_rank: 84
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -907,8 +907,8 @@ results:
     value_note: ''
     sort_value: 0.1191
     sort_std: null
-    global_rank: 85
-    paper_rank: 85
+    global_rank: 84
+    paper_rank: 84
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -975,8 +975,8 @@ results:
     value_note: ''
     sort_value: 0.1192
     sort_std: null
-    global_rank: 86
-    paper_rank: 86
+    global_rank: 85
+    paper_rank: 85
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1043,8 +1043,8 @@ results:
     value_note: ''
     sort_value: 0.1296
     sort_std: null
-    global_rank: 89
-    paper_rank: 89
+    global_rank: 88
+    paper_rank: 88
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1111,8 +1111,8 @@ results:
     value_note: ''
     sort_value: 0.1463
     sort_std: null
-    global_rank: 95
-    paper_rank: 95
+    global_rank: 93
+    paper_rank: 93
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

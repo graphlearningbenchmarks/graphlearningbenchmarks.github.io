@@ -50,13 +50,13 @@ abstract: Heterogeneous graph convolutional networks have gained great popularit
   embedding baselines in terms of all evaluation metrics. The source code of our method
   is available at:.
 codebase_url: https://github.com/BUPT-GAMMA/OpenHGNN
-extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+extraction_model: google/gemma-4-26B-A4B-it
 has_results: true
 paper_type: method
 proposed_models:
 - MHGCN
-mrr: 0.0679
-adjusted_mrr: 0.0452
+mrr: 0.3214
+adjusted_mrr: 0.2143
 mrr_dataset_count: 2
 benchmark_categories:
 - Heterogeneous Graph Benchmarks
@@ -73,44 +73,11 @@ results:
 - &id001
   dataset: DBLP
   rows:
-  - model: HERec
-    model_key: herec
-    model_plain: HERec
-    value: 0.9993
-    std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: walk
-    architecture_label: Walk
-    architecture_title: Random-walk graph embedding
-    arxiv_id: '1912.10832'
-    title: An Attention-based Graph Neural Network for Heterogeneous Structural Learning
-    date: Dec 19, 2019
-    date_display: Dec 2019
-    date_iso: '2019-12-19'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: https://github.com/didi/hetsann
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9993
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: HetSANN
-    model_key: hetsann
-    model_plain: HetSANN
-    value: 0.9972
-    std: null
+  - model: LMSPS
+    model_key: lmsps
+    model_plain: LMSPS
+    value: 0.9566
+    std: 0.002
     metric: Micro-F1
     higher_is_better: true
     is_baseline: false
@@ -120,57 +87,90 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '1912.10832'
-    title: An Attention-based Graph Neural Network for Heterogeneous Structural Learning
-    date: Dec 19, 2019
-    date_display: Dec 2019
-    date_iso: '2019-12-19'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: https://github.com/didi/hetsann
+    arxiv_id: '2307.08430'
+    title: Long-range Meta-path Search on Large-scale Heterogeneous Graphs
+    date: Jul 17, 2023
+    date_display: Jul 2023
+    date_iso: '2023-07-17'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9566
+    sort_std: 0.002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: PSHGCN
+    model_key: pshgcn
+    model_plain: PSHGCN
+    value: 0.9561
+    std: 0.0012
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2305.19872'
+    title: Spectral Heterogeneous Graph Convolutions via Positive Noncommutative Polynomials
+    date: May 31, 2023
+    date_display: May 2023
+    date_iso: '2023-05-31'
+    venue: The Web Conference
+    codebase_url: https://github.com/ivam-he/PSHGCN
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.9972
-    sort_std: null
+    sort_value: 0.9561
+    sort_std: 0.0012
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
-  - model: DeepWalk
-    model_key: deepwalk
-    model_plain: DeepWalk
-    value: 0.9941
-    std: null
+  - model: RpHGNN
+    model_key: rphgnn
+    model_plain: RpHGNN
+    value: 0.9555
+    std: 0.0029
     metric: Micro-F1
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: walk
-    architecture_label: Walk
-    architecture_title: Random-walk graph embedding
-    arxiv_id: '1912.10832'
-    title: An Attention-based Graph Neural Network for Heterogeneous Structural Learning
-    date: Dec 19, 2019
-    date_display: Dec 2019
-    date_iso: '2019-12-19'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: https://github.com/didi/hetsann
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2310.14481'
+    title: Efficient Heterogeneous Graph Learning via Random Projection
+    date: Oct 23, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-23'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/CrawlScript/RpHGNN
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.9941
-    sort_std: null
+    sort_value: 0.9555
+    sort_std: 0.0029
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: MHGCN
     model_key: mhgcn
@@ -228,8 +228,8 @@ results:
     value_note: ''
     sort_value: 0.952
     sort_std: 0.0203
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -237,7 +237,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: NARS
     model_key: nars
@@ -295,10 +295,10 @@ results:
     value_note: ''
     sort_value: 0.9461
     sort_std: 0.0042
-    global_rank: 28
-    paper_rank: 140
-    rank_delta: 112
-    rank_delta_abs: 112
+    global_rank: 20
+    paper_rank: 136
+    rank_delta: 116
+    rank_delta_abs: 116
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -331,7 +331,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 29
+    global_rank: 21
     sort_value: 0.946
     sort_std: 0.0031
     comparison_type: global_top
@@ -397,17 +397,17 @@ results:
     value_note: ''
     sort_value: 0.9456
     sort_std: null
-    global_rank: 30
-    paper_rank: 90
-    rank_delta: 60
-    rank_delta_abs: 60
+    global_rank: 22
+    paper_rank: 83
+    rank_delta: 61
+    rank_delta_abs: 61
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Leveraging Meta-path Contexts for Classification in Heterogeneous
       Information Networks
     comparison_source_arxiv: '2012.10024'
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: GTN
     model_key: gtn
@@ -466,10 +466,10 @@ results:
     value_note: ''
     sort_value: 0.9417
     sort_std: 0.0026
-    global_rank: 41
-    paper_rank: 95
-    rank_delta: 54
-    rank_delta_abs: 54
+    global_rank: 32
+    paper_rank: 89
+    rank_delta: 57
+    rank_delta_abs: 57
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -535,10 +535,10 @@ results:
     value_note: ''
     sort_value: 0.9369
     sort_std: null
-    global_rank: 47
-    paper_rank: 132
-    rank_delta: 85
-    rank_delta_abs: 85
+    global_rank: 37
+    paper_rank: 127
+    rank_delta: 90
+    rank_delta_abs: 90
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -604,16 +604,16 @@ results:
     value_note: ''
     sort_value: 0.9331
     sort_std: null
-    global_rank: 54
-    paper_rank: 148
-    rank_delta: 94
-    rank_delta_abs: 94
+    global_rank: 44
+    paper_rank: 144
+    rank_delta: 100
+    rank_delta_abs: 100
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: Node2Vec
     model_key: node2vec
@@ -673,10 +673,10 @@ results:
     value_note: ''
     sort_value: 0.9282
     sort_std: null
-    global_rank: 62
-    paper_rank: 200
-    rank_delta: 138
-    rank_delta_abs: 138
+    global_rank: 52
+    paper_rank: 194
+    rank_delta: 142
+    rank_delta_abs: 142
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -721,33 +721,32 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-10-07'
-    value_gap_source_date_label: '2025'
+    value_gap_source_date_iso: '2022-08-12'
+    value_gap_source_date_label: KDD 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
+    insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.9253
-    true_std: null
-    value_gap_source_arxiv: '2510.05750'
-    value_gap_source_title: Are Heterogeneous Graph Neural Networks Truly Effective?
-      A Causal Perspective
-    value_gap_source_is_current_paper: false
-    value_gap: 0.023299999999999987
+    true_value: 0.902
+    true_std: 0.0396
+    value_gap_source_arxiv: '2208.06129'
+    value_gap_source_title: Multiplex Heterogeneous Graph Convolutional Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.9253
-    sort_std: null
-    global_rank: 68
-    paper_rank: 86
-    rank_delta: 18
-    rank_delta_abs: 18
-    rank_delta_direction: worse
-    has_value_gap: true
+    sort_value: 0.902
+    sort_std: 0.0396
+    global_rank: 78
+    paper_rank: 78
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -809,8 +808,8 @@ results:
     value_note: ''
     sort_value: 0.878
     sort_std: 0.0112
-    global_rank: 93
-    paper_rank: 93
+    global_rank: 86
+    paper_rank: 86
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -850,44 +849,41 @@ results:
     date_iso: '2022-08-12'
     published_venue: KDD 2022
     published_conference: KDD 2022
-    at_pub_value: 0.877
-    at_pub_std: null
-    at_pub_source_arxiv: '1912.10832'
-    at_pub_source_title: An Attention-based Graph Neural Network for Heterogeneous
-      Structural Learning
-    at_pub_source_date_iso: '2019-12-19'
-    at_pub_source_date_label: AAAI 2019
-    value_gap_source_date_iso: '2019-12-19'
-    value_gap_source_date_label: AAAI 2019
-    gap_vs_at_pub: 0.007000000000000006
-    worse_than_at_pub: true
+    at_pub_value: 0.6901
+    at_pub_std: 0.0148
+    at_pub_source_arxiv: '2206.12547'
+    at_pub_source_title: Geometry Contrastive Learning on Heterogeneous Graphs
+    at_pub_source_date_iso: '2022-06-25'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-08-12'
+    value_gap_source_date_label: KDD 2022
+    gap_vs_at_pub: 0.17989999999999995
+    worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: false
+    better_than_at_pub: true
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.877
-    true_std: null
-    value_gap_source_arxiv: '1912.10832'
-    value_gap_source_title: An Attention-based Graph Neural Network for Heterogeneous
-      Structural Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.007000000000000006
+    today_delta_significant: false
+    true_value: 0.87
+    true_std: 0.007
+    value_gap_source_arxiv: '2208.06129'
+    value_gap_source_title: Multiplex Heterogeneous Graph Convolutional Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.877
-    sort_std: null
-    global_rank: 94
-    paper_rank: 95
-    rank_delta: 1
-    rank_delta_abs: 1
-    rank_delta_direction: worse
+    sort_value: 0.87
+    sort_std: 0.007
+    global_rank: 89
+    paper_rank: 89
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: An Attention-based Graph Neural Network for Heterogeneous
-      Structural Learning
-    comparison_source_arxiv: '1912.10832'
+    comparison_type: improved
+    comparison_source_title: Geometry Contrastive Learning on Heterogeneous Graphs
+    comparison_source_arxiv: '2206.12547'
     is_best: false
     is_std_outlier: false
   - model: FAME
@@ -946,8 +942,8 @@ results:
     value_note: ''
     sort_value: 0.868
     sort_std: 0.0127
-    global_rank: 96
-    paper_rank: 96
+    global_rank: 90
+    paper_rank: 90
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1013,8 +1009,8 @@ results:
     value_note: ''
     sort_value: 0.83
     sort_std: 0.0201
-    global_rank: 125
-    paper_rank: 125
+    global_rank: 120
+    paper_rank: 120
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1050,7 +1046,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 185
+    global_rank: 179
     sort_value: 0.6447
     sort_std: 0.0136
     comparison_type: global_top
@@ -1115,8 +1111,8 @@ results:
     value_note: ''
     sort_value: 0.623
     sort_std: 0.0009
-    global_rank: 186
-    paper_rank: 186
+    global_rank: 180
+    paper_rank: 180
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1183,8 +1179,8 @@ results:
     value_note: ''
     sort_value: 0.384
     sort_std: 0.0109
-    global_rank: 198
-    paper_rank: 198
+    global_rank: 192
+    paper_rank: 192
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1250,8 +1246,8 @@ results:
     value_note: ''
     sort_value: 0.375
     sort_std: 0.0199
-    global_rank: 199
-    paper_rank: 199
+    global_rank: 193
+    paper_rank: 193
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1317,8 +1313,8 @@ results:
     value_note: ''
     sort_value: 0.372
     sort_std: 0.015
-    global_rank: 200
-    paper_rank: 200
+    global_rank: 194
+    paper_rank: 194
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1340,100 +1336,34 @@ results:
 - &id002
   dataset: IMDB
   rows:
-  - model: GAT BGNN(m)-SC
-    model_key: gat bgnn(m)-sc
-    model_plain: GAT BGNN(m)-SC
-    value: 0.8133
-    std: 0.0179
+  - model: ELLA
+    model_key: ella
+    model_plain: ELLA
+    value: 0.793
+    std: 0.001
     metric: Micro-F1
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-12'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: ''
-    uses_external_data: true
+    params_millions: 13000.0
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2511.17923'
+    title: Towards Efficient LLM-aware Heterogeneous Graph Learning
+    date: Nov 22, 2025
+    date_display: Nov 2025
+    date_iso: '2025-11-22'
+    venue: arXiv.org
+    codebase_url: https://github.com/l-wd/ELLA
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.8133
-    sort_std: 0.0179
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SAGE BAN
-    model_key: sage ban
-    model_plain: SAGE BAN
-    value: 0.8073
-    std: 0.002
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-12'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: ''
-    uses_external_data: true
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.8073
-    sort_std: 0.002
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GAT BGNN(m)-CS
-    model_key: gat bgnn(m)-cs
-    model_plain: GAT BGNN(m)-CS
-    value: 0.8033
-    std: 0.0094
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-12'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: ''
-    uses_external_data: true
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.8033
-    sort_std: 0.0094
+    sort_value: 0.793
+    sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1495,8 +1425,8 @@ results:
     value_note: ''
     sort_value: 0.782
     sort_std: 0.0138
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 2
+    paper_rank: 2
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1505,6 +1435,39 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: PSHGCN
+    model_key: pshgcn
+    model_plain: PSHGCN
+    value: 0.7446
+    std: 0.0032
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2305.19872'
+    title: Spectral Heterogeneous Graph Convolutions via Positive Noncommutative Polynomials
+    date: May 31, 2023
+    date_display: May 2023
+    date_iso: '2023-05-31'
+    venue: The Web Conference
+    codebase_url: https://github.com/ivam-he/PSHGCN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.7446
+    sort_std: 0.0032
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: GTN
     model_key: gtn
@@ -1563,10 +1526,10 @@ results:
     value_note: ''
     sort_value: 0.6827
     sort_std: 0.0065
-    global_rank: 43
-    paper_rank: 87
-    rank_delta: 44
-    rank_delta_abs: 44
+    global_rank: 13
+    paper_rank: 52
+    rank_delta: 39
+    rank_delta_abs: 39
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1599,7 +1562,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 45
+    global_rank: 15
     sort_value: 0.6813
     sort_std: 0.0083
     comparison_type: global_top
@@ -1664,10 +1627,10 @@ results:
     value_note: ''
     sort_value: 0.6782
     sort_std: 0.0154
-    global_rank: 48
-    paper_rank: 87
-    rank_delta: 39
-    rank_delta_abs: 39
+    global_rank: 18
+    paper_rank: 52
+    rank_delta: 34
+    rank_delta_abs: 34
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1732,85 +1695,15 @@ results:
     value_note: ''
     sort_value: 0.6769
     sort_std: 0.0064
-    global_rank: 49
-    paper_rank: 108
-    rank_delta: 59
-    rank_delta_abs: 59
+    global_rank: 19
+    paper_rank: 70
+    rank_delta: 51
+    rank_delta_abs: 51
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Heterogeneous Graph Benchmarks
     comparison_source_arxiv: '2112.14936'
-    is_best: false
-    is_std_outlier: false
-  - model: R-GCN
-    model_key: r-gcn
-    model_plain: R-GCN
-    value: 0.572
-    std: 0.0145
-    paper_value: 0.572
-    paper_std: 0.0145
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Node classification on IMDB
-    date: Aug 12, 2022
-    date_display: Aug 2022
-    date_iso: '2022-08-12'
-    published_venue: KDD 2022
-    published_conference: KDD 2022
-    at_pub_value: 0.6713
-    at_pub_std: null
-    at_pub_source_arxiv: '1912.10832'
-    at_pub_source_title: An Attention-based Graph Neural Network for Heterogeneous
-      Structural Learning
-    at_pub_source_date_iso: '2019-12-19'
-    at_pub_source_date_label: AAAI 2019
-    value_gap_source_date_iso: '2019-12-19'
-    value_gap_source_date_label: AAAI 2019
-    gap_vs_at_pub: 0.09930000000000005
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.6713
-    true_std: null
-    value_gap_source_arxiv: '1912.10832'
-    value_gap_source_title: An Attention-based Graph Neural Network for Heterogeneous
-      Structural Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.09930000000000005
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6713
-    sort_std: null
-    global_rank: 56
-    paper_rank: 105
-    rank_delta: 49
-    rank_delta_abs: 49
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: An Attention-based Graph Neural Network for Heterogeneous
-      Structural Learning
-    comparison_source_arxiv: '1912.10832'
     is_best: false
     is_std_outlier: false
   - model: NARS
@@ -1869,10 +1762,10 @@ results:
     value_note: ''
     sort_value: 0.6618
     sort_std: 0.007
-    global_rank: 63
-    paper_rank: 105
-    rank_delta: 42
-    rank_delta_abs: 42
+    global_rank: 32
+    paper_rank: 67
+    rank_delta: 35
+    rank_delta_abs: 35
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1936,10 +1829,10 @@ results:
     value_note: ''
     sort_value: 0.648
     sort_std: null
-    global_rank: 71
-    paper_rank: 118
-    rank_delta: 47
-    rank_delta_abs: 47
+    global_rank: 37
+    paper_rank: 79
+    rank_delta: 42
+    rank_delta_abs: 42
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2003,8 +1896,8 @@ results:
     value_note: ''
     sort_value: 0.64
     sort_std: 0.0013
-    global_rank: 76
-    paper_rank: 76
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2070,8 +1963,8 @@ results:
     value_note: ''
     sort_value: 0.638
     sort_std: 0.003
-    global_rank: 78
-    paper_rank: 78
+    global_rank: 44
+    paper_rank: 44
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2079,6 +1972,73 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: R-GCN
+    model_key: r-gcn
+    model_plain: R-GCN
+    value: 0.572
+    std: 0.0145
+    paper_value: 0.572
+    paper_std: 0.0145
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on IMDB
+    date: Aug 12, 2022
+    date_display: Aug 2022
+    date_iso: '2022-08-12'
+    published_venue: KDD 2022
+    published_conference: KDD 2022
+    at_pub_value: 0.6214
+    at_pub_std: 0.0066
+    at_pub_source_arxiv: '2206.12547'
+    at_pub_source_title: Geometry Contrastive Learning on Heterogeneous Graphs
+    at_pub_source_date_iso: '2022-06-25'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-06-25'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.0494
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.6214
+    true_std: 0.0066
+    value_gap_source_arxiv: '2206.12547'
+    value_gap_source_title: Geometry Contrastive Learning on Heterogeneous Graphs
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0494
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6214
+    sort_std: 0.0066
+    global_rank: 51
+    paper_rank: 67
+    rank_delta: 16
+    rank_delta_abs: 16
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Geometry Contrastive Learning on Heterogeneous Graphs
+    comparison_source_arxiv: '2206.12547'
     is_best: false
     is_std_outlier: false
   - model: FAME
@@ -2137,8 +2097,8 @@ results:
     value_note: ''
     sort_value: 0.594
     sort_std: 0.0143
-    global_rank: 99
-    paper_rank: 99
+    global_rank: 61
+    paper_rank: 61
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2204,8 +2164,8 @@ results:
     value_note: ''
     sort_value: 0.584
     sort_std: 0.0021
-    global_rank: 103
-    paper_rank: 103
+    global_rank: 65
+    paper_rank: 65
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2271,8 +2231,8 @@ results:
     value_note: ''
     sort_value: 0.563
     sort_std: 0.0133
-    global_rank: 111
-    paper_rank: 111
+    global_rank: 73
+    paper_rank: 73
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2307,7 +2267,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 117
+    global_rank: 78
     sort_value: 0.5514
     sort_std: null
     comparison_type: global_top
@@ -2371,10 +2331,10 @@ results:
     value_note: ''
     sort_value: 0.5476
     sort_std: 0.0063
-    global_rank: 118
-    paper_rank: 147
-    rank_delta: 29
-    rank_delta_abs: 29
+    global_rank: 79
+    paper_rank: 107
+    rank_delta: 28
+    rank_delta_abs: 28
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2438,8 +2398,8 @@ results:
     value_note: ''
     sort_value: 0.392
     sort_std: 0.0185
-    global_rank: 146
-    paper_rank: 146
+    global_rank: 106
+    paper_rank: 106
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2505,8 +2465,8 @@ results:
     value_note: ''
     sort_value: 0.382
     sort_std: 0.068
-    global_rank: 148
-    paper_rank: 148
+    global_rank: 108
+    paper_rank: 108
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2572,8 +2532,8 @@ results:
     value_note: ''
     sort_value: 0.381
     sort_std: 0.014
-    global_rank: 149
-    paper_rank: 149
+    global_rank: 109
+    paper_rank: 109
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2639,8 +2599,8 @@ results:
     value_note: ''
     sort_value: 0.333
     sort_std: 0.0005
-    global_rank: 153
-    paper_rank: 153
+    global_rank: 113
+    paper_rank: 113
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

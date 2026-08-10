@@ -54,8 +54,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - CNNs
-mrr: 0.1375
-adjusted_mrr: 0.0917
+mrr: 0.1385
+adjusted_mrr: 0.0923
 mrr_dataset_count: 2
 benchmark_categories:
 - Classic
@@ -87,9 +87,9 @@ results:
 - &id003
   dataset: MNIST
   rows:
-  - model: Schrödinger GNN
-    model_key: schrödinger gnn
-    model_plain: Schrödinger GNN
+  - model: Schrödinger
+    model_key: schrödinger
+    model_plain: Schrödinger
     value: 0.9913
     std: 0.0004
     metric: Accuracy
@@ -1037,8 +1037,8 @@ results:
     value_note: ''
     sort_value: 0.8687
     sort_std: 0.0001
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1104,10 +1104,10 @@ results:
     value_note: ''
     sort_value: 0.86508
     sort_std: 0.00085
-    global_rank: 68
-    paper_rank: 94
-    rank_delta: 26
-    rank_delta_abs: 26
+    global_rank: 66
+    paper_rank: 91
+    rank_delta: 25
+    rank_delta_abs: 25
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1140,7 +1140,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 91
+    global_rank: 88
     sort_value: 0.85614
     sort_std: 0.00032
     comparison_type: global_top
@@ -1173,7 +1173,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 131
+    global_rank: 127
     sort_value: 0.50519
     sort_std: 0.0
     comparison_type: global_top
@@ -1732,7 +1732,7 @@ results:
     venue: arXiv.org
     codebase_url: https://github.com/ocx-lab/FloydNet
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -1832,8 +1832,8 @@ results:
     value_note: ''
     sort_value: 0.029
     sort_std: 0.001
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1868,7 +1868,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 74
+    global_rank: 71
     sort_value: 0.088
     sort_std: 0.002
     comparison_type: global_top
@@ -2155,10 +2155,11 @@ results:
     published_conference: ''
     at_pub_value: 0.7976
     at_pub_std: 0.0072
-    at_pub_source_arxiv: '2202.03036'
-    at_pub_source_title: Structure-Aware Transformer for Graph Representation Learning
-    at_pub_source_date_iso: '2022-02-07'
-    at_pub_source_date_label: ICML 2022
+    at_pub_source_arxiv: '2305.06102'
+    at_pub_source_title: Towards Better Graph Representation Learning with Parameterized
+      Decomposition & Filtering
+    at_pub_source_date_iso: '2023-05-10'
+    at_pub_source_date_label: ICML 2023
     value_gap_source_date_iso: '2024-07-03'
     value_gap_source_date_label: '2024'
     gap_vs_at_pub: null

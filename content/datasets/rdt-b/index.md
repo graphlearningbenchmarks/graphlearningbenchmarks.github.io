@@ -12,7 +12,7 @@ stats:
   avg_nodes: 429.63
   avg_edges: 497.75
   num_classes: 2
-result_count: 102
+result_count: 108
 best_model:
   model: OEPG
   value: 0.963
@@ -541,6 +541,32 @@ variants:
     - 0.924
     metric_stds:
     - 0.021
+  - model: Sum--MLP (GIN-0)
+    model_plain: Sum--MLP (GIN-0)
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1810.00826'
+    title: How Powerful are Graph Neural Networks?
+    date: Oct 1, 2018
+    date_iso: '2018-10-01'
+    date_display: Oct 2018
+    codebase_url: https://github.com/weihua916/powerful-gnns
+    published_conference: ICLR 2018
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2018
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.924
+    metric_stds:
+    - 0.025
   - model: AD-GCL-OPT
     model_plain: AD-GCL-OPT
     is_baseline: true
@@ -1114,6 +1140,32 @@ variants:
     - 0.9007
     metric_stds:
     - 0.0085
+  - model: Sum--1-Layer
+    model_plain: Sum--1-Layer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1810.00826'
+    title: How Powerful are Graph Neural Networks?
+    date: Oct 1, 2018
+    date_iso: '2018-10-01'
+    date_display: Oct 2018
+    codebase_url: https://github.com/weihua916/powerful-gnns
+    published_conference: ICLR 2018
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2018
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9
+    metric_stds:
+    - 0.027
   - model: GPA
     model_plain: GPA
     is_baseline: false
@@ -1255,16 +1307,16 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2106.07594'
-    title: Graph Contrastive Learning Automated
+    arxiv_id: '2106.05819'
+    title: Adversarial Graph Augmentation to Improve Graph Contrastive Learning
     date: Jun 10, 2021
     date_iso: '2021-06-10'
     date_display: Jun 2021
-    codebase_url: ''
-    published_conference: ICML 2021
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2021
+    codebase_url: https://github.com/susheels/adgcl
+    published_conference: NeurIPS 2021
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2021
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -1387,16 +1439,16 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2209.06560'
-    title: Graph Contrastive Learning with Personalized Augmentation
-    date: Sep 14, 2022
-    date_iso: '2022-09-14'
-    date_display: Sep 2022
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
+    arxiv_id: '2106.05819'
+    title: Adversarial Graph Augmentation to Improve Graph Contrastive Learning
+    date: Jun 10, 2021
+    date_iso: '2021-06-10'
+    date_display: Jun 2021
+    codebase_url: https://github.com/susheels/adgcl
+    published_conference: NeurIPS 2021
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2021
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -1404,74 +1456,22 @@ variants:
     - 0.8879
     metric_stds:
     - 0.0065
-  - model: InfoGraph
-    model_plain: InfoGraph
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2209.06560'
-    title: Graph Contrastive Learning with Personalized Augmentation
-    date: Sep 14, 2022
-    date_iso: '2022-09-14'
-    date_display: Sep 2022
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8866
-    metric_stds:
-    - 0.0095
-  - model: GraphTrans
-    model_plain: GraphTrans
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2406.00403'
-    title: Dual-perspective Cross Contrastive Learning in Graph Transformers
-    date: Jun 1, 2024
-    date_iso: '2024-06-01'
-    date_display: Jun 2024
-    codebase_url: https://github.com/Celin-Yao/DC-GCL
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8858
-    metric_stds:
-    - 0.013
-  row_count: 102
+  row_count: 108
   rows_json: /data/datasets/rdt-b/10-fold-cv-rows.json
   chart_json: /data/datasets/rdt-b/10-fold-cv-chart.json
   arch_counts:
-    gnn: 69
+    gnn: 74
     hybrid: 17
     graph_transformer: 0
     llm: 0
     walk: 4
-    traditional: 12
+    traditional: 13
   metric_counts:
-  - 102
+  - 108
   milestones: &id001
-  - value: 0.81
-    std: 0.031
-    model: WL subtree
+  - value: 0.924
+    std: 0.025
+    model: Sum--MLP (GIN-0)
     arxiv_id: '1810.00826'
     title: How Powerful are Graph Neural Networks?
     date: '2018-10-01'

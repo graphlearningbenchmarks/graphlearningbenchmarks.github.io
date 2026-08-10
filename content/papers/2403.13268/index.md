@@ -224,7 +224,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 38
+    global_rank: 39
     sort_value: 0.6644
     sort_std: 0.0017
     comparison_type: global_top
@@ -290,12 +290,81 @@ results:
     value_note: ''
     sort_value: 0.631
     sort_std: null
-    global_rank: 79
-    paper_rank: 79
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: APPNP
+    model_key: appnp
+    model_plain: APPNP
+    value: 0.609
+    std: null
+    paper_value: 0.609
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to ogbn-papers100m (score=80)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on ogbn-papers100m as per dataset
+      statistics.
+    date: Mar 19, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-19'
+    published_venue: ICML 2024
+    published_conference: ICML 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-05-20'
+    value_gap_source_date_label: KDD 2025
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.6288
+    true_std: 0.001
+    value_gap_source_arxiv: '2505.14033'
+    value_gap_source_title: 'Partition-wise Graph Filtering: A Unified Perspective
+      Through the Lens of Graph Coarsening'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.01980000000000004
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6288
+    sort_std: 0.001
+    global_rank: 85
+    paper_rank: 91
+    rank_delta: 6
+    rank_delta_abs: 6
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -359,77 +428,8 @@ results:
     value_note: ''
     sort_value: 0.628
     sort_std: null
-    global_rank: 81
-    paper_rank: 81
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: APPNP
-    model_key: appnp
-    model_plain: APPNP
-    value: 0.609
-    std: null
-    paper_value: 0.609
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to ogbn-papers100m (score=80)'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard node classification task on ogbn-papers100m as per dataset
-      statistics.
-    date: Mar 19, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-19'
-    published_venue: ICML 2024
-    published_conference: ICML 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-19'
-    value_gap_source_date_label: ICML 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.609
-    true_std: null
-    value_gap_source_arxiv: '2403.13268'
-    value_gap_source_title: 'Unifews: You Need Fewer Operations for Efficient Graph
-      Neural Networks'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.609
-    sort_std: null
-    global_rank: 87
-    paper_rank: 87
+    global_rank: 86
+    paper_rank: 86
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -497,8 +497,8 @@ results:
     value_note: ''
     sort_value: 0.537
     sort_std: null
-    global_rank: 90
-    paper_rank: 90
+    global_rank: 94
+    paper_rank: 94
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -534,7 +534,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 98
+    global_rank: 102
     sort_value: 0.496
     sort_std: 0.003
     comparison_type: global_top
@@ -749,10 +749,10 @@ results:
     value_note: ''
     sort_value: 0.8634
     sort_std: null
-    global_rank: 32
-    paper_rank: 402
-    rank_delta: 370
-    rank_delta_abs: 370
+    global_rank: 29
+    paper_rank: 368
+    rank_delta: 339
+    rank_delta_abs: 339
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -820,10 +820,10 @@ results:
     value_note: ''
     sort_value: 0.822
     sort_std: 0.009
-    global_rank: 107
-    paper_rank: 383
-    rank_delta: 276
-    rank_delta_abs: 276
+    global_rank: 93
+    paper_rank: 351
+    rank_delta: 258
+    rank_delta_abs: 258
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -890,8 +890,8 @@ results:
     value_note: ''
     sort_value: 0.694
     sort_std: null
-    global_rank: 382
-    paper_rank: 382
+    global_rank: 350
+    paper_rank: 350
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -926,7 +926,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 394
+    global_rank: 361
     sort_value: 0.6605
     sort_std: 0.002
     comparison_type: global_top
@@ -992,8 +992,8 @@ results:
     value_note: ''
     sort_value: 0.65
     sort_std: null
-    global_rank: 401
-    paper_rank: 401
+    global_rank: 367
+    paper_rank: 367
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1061,8 +1061,8 @@ results:
     value_note: ''
     sort_value: 0.637
     sort_std: null
-    global_rank: 409
-    paper_rank: 409
+    global_rank: 374
+    paper_rank: 374
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

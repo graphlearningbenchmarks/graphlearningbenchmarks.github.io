@@ -42,8 +42,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - MPNNs
-mrr: 0.125
-adjusted_mrr: 0.0417
+mrr: 0.1
+adjusted_mrr: 0.0333
 mrr_dataset_count: 1
 benchmark_categories:
 - OGB
@@ -128,34 +128,34 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: UniMol
-    model_key: unimol
-    model_plain: UniMol
-    value: 0.0693
+  - model: TGT-At (+RDKit)
+    model_key: tgt-at (+rdkit)
+    model_plain: TGT-At (+RDKit)
+    value: 0.0683
     std: null
     metric: MAE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: 77.0
+    params_millions: 203.0
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    arxiv_id: '2603.00568'
-    title: Enhancing Molecular Property Predictions by Learning from Bond Modelling
-      and Interactions
-    date: Feb 28, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-28'
-    venue: Accepted to ICLR 2026
-    codebase_url: ''
-    uses_external_data: false
+    arxiv_id: '2402.04538'
+    title: 'Triplet Interaction Improves Graph Transformers: Accurate Molecular Graph
+      Learning with Triplet Graph Transformers'
+    date: Feb 7, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-07'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/shamim-hussain/tgt
+    uses_external_data: true
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.0693
+    sort_value: 0.0683
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
@@ -219,8 +219,8 @@ results:
     value_note: ''
     sort_value: 0.078
     sort_std: null
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -287,8 +287,8 @@ results:
     value_note: ''
     sort_value: 0.08
     sort_std: null
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -355,8 +355,8 @@ results:
     value_note: ''
     sort_value: 0.0862
     sort_std: null
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 28
+    paper_rank: 28
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -423,8 +423,8 @@ results:
     value_note: ''
     sort_value: 0.0864
     sort_std: null
-    global_rank: 27
-    paper_rank: 30
+    global_rank: 31
+    paper_rank: 34
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -491,8 +491,8 @@ results:
     value_note: ''
     sort_value: 0.0882
     sort_std: null
-    global_rank: 32
-    paper_rank: 32
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -559,8 +559,8 @@ results:
     value_note: ''
     sort_value: 0.093
     sort_std: null
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -627,8 +627,8 @@ results:
     value_note: ''
     sort_value: 0.107
     sort_std: null
-    global_rank: 53
-    paper_rank: 53
+    global_rank: 57
+    paper_rank: 57
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -695,8 +695,8 @@ results:
     value_note: ''
     sort_value: 0.1195
     sort_std: null
-    global_rank: 62
-    paper_rank: 64
+    global_rank: 66
+    paper_rank: 68
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -731,7 +731,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 63
+    global_rank: 67
     sort_value: 0.1195
     sort_std: null
     comparison_type: global_top
@@ -796,8 +796,8 @@ results:
     value_note: ''
     sort_value: 0.138
     sort_std: null
-    global_rank: 74
-    paper_rank: 74
+    global_rank: 78
+    paper_rank: 78
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

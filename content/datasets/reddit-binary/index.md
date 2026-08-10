@@ -1401,25 +1401,12 @@ variants:
   metric_counts:
   - 55
   milestones: &id001
-  - value: 0.8872
-    std: 0.0153
-    model: AD-GCL
-    arxiv_id: '2210.00643'
-    title: Spectral Augmentation for Self-Supervised Learning on Graphs
-    date: '2022-10-02'
-  - value: 0.8973
-    std: 0.0037
-    model: GIN-m (trained)
-    arxiv_id: '2306.03698'
-    title: Fine-grained Expressivity of Graph Neural Networks
-    date: '2023-06-06'
-  - value: 0.91
-    std: 0.02
-    model: bnpool
-    arxiv_id: '2512.12642'
-    title: 'Torch Geometric Pool: the Pytorch library for pooling in Graph Neural
-      Networks'
-    date: '2025-12-14'
+  - value: 0.924
+    std: 0.025
+    model: GIN-0
+    arxiv_id: '2006.05582'
+    title: Contrastive Multi-View Representation Learning on Graphs
+    date: '2020-06-01'
   milestones_by_metric:
     Accuracy: *id001
 ---

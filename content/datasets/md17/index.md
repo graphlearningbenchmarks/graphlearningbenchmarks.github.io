@@ -9,7 +9,7 @@ primary_metric: MAE
 higher_is_better: false
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.MD17.html
 stats: null
-result_count: 280
+result_count: 275
 best_model:
   model: QHNet
   value: 1.036e-05
@@ -2615,18 +2615,18 @@ variants:
     - null
     - null
     - null
-  row_count: 280
+  row_count: 275
   rows_json: /data/datasets/md17/standard-split-rows.json
   chart_json: /data/datasets/md17/standard-split-chart.json
   arch_counts:
-    gnn: 214
+    gnn: 209
     hybrid: 43
     graph_transformer: 1
     llm: 1
     walk: 0
     traditional: 17
   metric_counts:
-  - 238
+  - 233
   - 13
   - 13
   - 10
@@ -2644,13 +2644,13 @@ variants:
     arxiv_id: '1712.06113'
     title: SchNet -- a deep learning architecture for molecules and materials
     date: '2017-12-17'
-  - value: 0.039
+  - value: 0.02
     std: null
-    model: ViSNet
-    arxiv_id: '2210.16518'
-    title: 'ViSNet: an equivariant geometry-enhanced graph neural network with vector-scalar
-      interactive message passing for molecules'
-    date: '2022-10-29'
+    model: GDML
+    arxiv_id: '1902.08408'
+    title: 'PhysNet: A Neural Network for Predicting Energies, Forces, Dipole Moments
+      and Partial Charges'
+    date: '2019-02-22'
   - value: 8.312e-05
     std: null
     model: QHNet
@@ -2674,6 +2674,12 @@ variants:
       title: Clifford Group Equivariant Simplicial Message Passing Networks
       date: '2024-02-15'
     E:
+    - value: 2.3
+      std: null
+      model: BOTNet
+      arxiv_id: '2205.06643'
+      title: The design space of E(3)-equivariant atom-centred interatomic potentials
+      date: '2022-05-13'
     - value: 0.4
       std: null
       model: MACE
@@ -2681,8 +2687,21 @@ variants:
       title: 'MACE: Higher Order Equivariant Message Passing Neural Networks for Fast
         and Accurate Force Fields'
       date: '2022-06-15'
-    Energy: []
+    Energy:
+    - value: 0.244
+      std: null
+      model: SphereNet
+      arxiv_id: '2306.09375'
+      title: Symmetry-Informed Geometric Representation for Molecules, Proteins, and
+        Crystalline Materials
+      date: '2023-06-15'
     F:
+    - value: 8.2
+      std: null
+      model: NequIP
+      arxiv_id: '2205.06643'
+      title: The design space of E(3)-equivariant atom-centred interatomic potentials
+      date: '2022-05-13'
     - value: 0.3
       std: null
       model: MACE
@@ -2705,6 +2724,13 @@ variants:
       title: 'Forces are not Enough: Benchmark and Critical Evaluation for Machine
         Learning Force Fields with Molecular Simulations'
       date: '2022-10-13'
+    - value: 0.286
+      std: null
+      model: Equiformer
+      arxiv_id: '2306.09375'
+      title: Symmetry-Informed Geometric Representation for Molecules, Proteins, and
+        Crystalline Materials
+      date: '2023-06-15'
     H:
     - value: 1.073e-05
       std: null

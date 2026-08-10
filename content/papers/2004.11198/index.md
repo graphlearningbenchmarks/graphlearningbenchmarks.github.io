@@ -56,8 +56,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - SIGN
-mrr: 0.0378
-adjusted_mrr: 0.0378
+mrr: 0.038
+adjusted_mrr: 0.038
 mrr_dataset_count: 4
 benchmark_categories:
 - Classic
@@ -276,17 +276,17 @@ results:
     date_iso: '2020-04-23'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.515
-    at_pub_std: 0.006
-    at_pub_source_arxiv: '1907.04931'
-    at_pub_source_title: 'GraphSAINT: mpling Based ductive Learning Me hod'
-    at_pub_source_date_iso: '2019-07-10'
-    at_pub_source_date_label: ICLR 2019
+    at_pub_value: 0.808
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '1901.01343'
+    at_pub_source_title: Graph Neural Networks With Convolutional ARMA Filters
+    at_pub_source_date_iso: '2019-01-05'
+    at_pub_source_date_label: '2019'
     value_gap_source_date_iso: '2022-02-04'
     value_gap_source_date_label: ICML 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
+    gap_vs_at_pub: 0.29300000000000004
+    worse_than_at_pub: true
+    surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
@@ -303,14 +303,14 @@ results:
     sort_value: 0.985
     sort_std: null
     global_rank: 21
-    paper_rank: 166
-    rank_delta: 145
-    rank_delta_abs: 145
+    paper_rank: 174
+    rank_delta: 153
+    rank_delta_abs: 153
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    comparison_type: behind
+    comparison_source_title: Graph Neural Networks With Convolutional ARMA Filters
+    comparison_source_arxiv: '1901.01343'
     is_best: true
     is_std_outlier: false
   - model: SIGN
@@ -506,9 +506,9 @@ results:
     sort_value: 0.963
     sort_std: 0.01
     global_rank: 70
-    paper_rank: 92
-    rank_delta: 22
-    rank_delta_abs: 22
+    paper_rank: 94
+    rank_delta: 24
+    rank_delta_abs: 24
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -546,16 +546,15 @@ results:
     date_iso: '2020-04-23'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.688
+    at_pub_value: 0.768
     at_pub_std: null
-    at_pub_source_arxiv: '2003.13606'
-    at_pub_source_title: 'L$^2$-GCN: Layer-Wise and Learned Efficient Training of
-      Graph Convolutional Networks'
-    at_pub_source_date_iso: '2020-03-30'
-    at_pub_source_date_label: '2020'
+    at_pub_source_arxiv: '1710.10903'
+    at_pub_source_title: Graph Attention Networks
+    at_pub_source_date_iso: '2017-10-30'
+    at_pub_source_date_label: ICLR 2017
     value_gap_source_date_iso: '2022-01-31'
     value_gap_source_date_label: TMLR 2022
-    gap_vs_at_pub: 0.050999999999999934
+    gap_vs_at_pub: 0.131
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -575,15 +574,14 @@ results:
     sort_value: 0.958
     sort_std: 0.001
     global_rank: 78
-    paper_rank: 148
-    rank_delta: 70
-    rank_delta_abs: 70
+    paper_rank: 156
+    rank_delta: 78
+    rank_delta_abs: 78
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'L$^2$-GCN: Layer-Wise and Learned Efficient Training
-      of Graph Convolutional Networks'
-    comparison_source_arxiv: '2003.13606'
+    comparison_source_title: Graph Attention Networks
+    comparison_source_arxiv: '1710.10903'
     is_best: false
     is_std_outlier: false
   - model: GIN
@@ -611,7 +609,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 92
+    global_rank: 93
     sort_value: 0.911
     sort_std: 0.002
     comparison_type: global_top
@@ -676,8 +674,8 @@ results:
     value_note: ''
     sort_value: 0.875
     sort_std: 0.004
-    global_rank: 95
-    paper_rank: 95
+    global_rank: 97
+    paper_rank: 97
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -744,8 +742,8 @@ results:
     value_note: ''
     sort_value: 0.687
     sort_std: 0.012
-    global_rank: 134
-    paper_rank: 134
+    global_rank: 142
+    paper_rank: 142
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -812,13 +810,46 @@ results:
     value_note: ''
     sort_value: 0.637
     sort_std: 0.006
-    global_rank: 149
-    paper_rank: 167
+    global_rank: 157
+    paper_rank: 175
     rank_delta: 18
     rank_delta_abs: 18
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.462
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2407.00494'
+    title: Graph Neural Networks Gone Hogwild
+    date: Jun 29, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-29'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 183
+    sort_value: 0.462
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -995,9 +1026,9 @@ results:
     sort_value: 0.97
     sort_std: null
     global_rank: 5
-    paper_rank: 18
-    rank_delta: 13
-    rank_delta_abs: 13
+    paper_rank: 17
+    rank_delta: 12
+    rank_delta_abs: 12
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1131,10 +1162,10 @@ results:
     value_note: ''
     sort_value: 0.966
     sort_std: null
-    global_rank: 19
-    paper_rank: 70
-    rank_delta: 51
-    rank_delta_abs: 51
+    global_rank: 18
+    paper_rank: 67
+    rank_delta: 49
+    rank_delta_abs: 49
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1200,8 +1231,8 @@ results:
     value_note: ''
     sort_value: 0.964
     sort_std: 0.001
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 32
+    paper_rank: 32
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1268,10 +1299,10 @@ results:
     value_note: ''
     sort_value: 0.964
     sort_std: 0.001
-    global_rank: 29
-    paper_rank: 52
-    rank_delta: 23
-    rank_delta_abs: 23
+    global_rank: 28
+    paper_rank: 50
+    rank_delta: 22
+    rank_delta_abs: 22
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1335,10 +1366,10 @@ results:
     value_note: ''
     sort_value: 0.964
     sort_std: 0.001
-    global_rank: 28
-    paper_rank: 89
-    rank_delta: 61
-    rank_delta_abs: 61
+    global_rank: 27
+    paper_rank: 86
+    rank_delta: 59
+    rank_delta_abs: 59
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1403,8 +1434,8 @@ results:
     value_note: ''
     sort_value: 0.957
     sort_std: 0.0
-    global_rank: 59
-    paper_rank: 64
+    global_rank: 56
+    paper_rank: 61
     rank_delta: 5
     rank_delta_abs: 5
     rank_delta_direction: worse
@@ -1470,10 +1501,10 @@ results:
     value_note: ''
     sort_value: 0.953
     sort_std: 0.001
-    global_rank: 71
-    paper_rank: 128
-    rank_delta: 57
-    rank_delta_abs: 57
+    global_rank: 68
+    paper_rank: 122
+    rank_delta: 54
+    rank_delta_abs: 54
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1539,8 +1570,8 @@ results:
     value_note: ''
     sort_value: 0.937
     sort_std: null
-    global_rank: 118
-    paper_rank: 141
+    global_rank: 112
+    paper_rank: 135
     rank_delta: 23
     rank_delta_abs: 23
     rank_delta_direction: worse
@@ -1554,8 +1585,8 @@ results:
   - model: MLP
     model_key: mlp
     model_plain: MLP
-    value: 0.7435
-    std: 0.0016
+    value: 0.7216
+    std: 0.0015
     metric: F1
     higher_is_better: true
     is_baseline: true
@@ -1565,21 +1596,20 @@ results:
     architecture_type: other_traditional
     architecture_label: Trad
     architecture_title: Traditional / classical method
-    arxiv_id: '2512.14908'
-    title: 'ATLAS: Adaptive Topology-based Learning at Scale for Homophilic and Heterophilic
-      Graphs'
-    date: Dec 16, 2025
-    date_display: Dec 2025
-    date_iso: '2025-12-16'
-    venue: arXiv.org
-    codebase_url: https://github.com/atlaspaper16/ATLAS
+    arxiv_id: '2405.20445'
+    title: Fully-inductive Node Classification on Arbitrary Graphs
+    date: May 30, 2024
+    date_display: May 2024
+    date_iso: '2024-05-30'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/DeepGraphLearning/GraphAny
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 165
-    sort_value: 0.7435
-    sort_std: 0.0016
+    global_rank: 162
+    sort_value: 0.7216
+    sort_std: 0.0015
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1722,7 +1752,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 38
+    global_rank: 39
     sort_value: 0.6644
     sort_std: 0.0017
     comparison_type: global_top
@@ -1787,10 +1817,10 @@ results:
     value_note: ''
     sort_value: 0.6636
     sort_std: 0.0005
-    global_rank: 41
-    paper_rank: 61
-    rank_delta: 20
-    rank_delta_abs: 20
+    global_rank: 42
+    paper_rank: 65
+    rank_delta: 23
+    rank_delta_abs: 23
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1854,8 +1884,8 @@ results:
     value_note: ''
     sort_value: 0.6329
     sort_std: 0.0019
-    global_rank: 78
-    paper_rank: 78
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1922,8 +1952,8 @@ results:
     value_note: ''
     sort_value: 0.581
     sort_std: 0.0
-    global_rank: 89
-    paper_rank: 89
+    global_rank: 93
+    paper_rank: 93
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1990,8 +2020,8 @@ results:
     value_note: ''
     sort_value: 0.496
     sort_std: 0.003
-    global_rank: 98
-    paper_rank: 99
+    global_rank: 102
+    paper_rank: 103
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -2206,10 +2236,10 @@ results:
     value_note: ''
     sort_value: 0.8383
     sort_std: 0.0014
-    global_rank: 71
-    paper_rank: 212
-    rank_delta: 141
-    rank_delta_abs: 141
+    global_rank: 64
+    paper_rank: 186
+    rank_delta: 122
+    rank_delta_abs: 122
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2274,10 +2304,10 @@ results:
     value_note: ''
     sort_value: 0.831
     sort_std: 0.008
-    global_rank: 87
-    paper_rank: 259
-    rank_delta: 172
-    rank_delta_abs: 172
+    global_rank: 77
+    paper_rank: 232
+    rank_delta: 155
+    rank_delta_abs: 155
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2342,8 +2372,8 @@ results:
     value_note: ''
     sort_value: 0.7897
     sort_std: 0.0033
-    global_rank: 219
-    paper_rank: 219
+    global_rank: 193
+    paper_rank: 193
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2409,8 +2439,8 @@ results:
     value_note: ''
     sort_value: 0.7487
     sort_std: 0.0025
-    global_rank: 313
-    paper_rank: 313
+    global_rank: 285
+    paper_rank: 285
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2477,8 +2507,8 @@ results:
     value_note: ''
     sort_value: 0.725
     sort_std: 0.001
-    global_rank: 352
-    paper_rank: 352
+    global_rank: 322
+    paper_rank: 322
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2544,10 +2574,10 @@ results:
     value_note: ''
     sort_value: 0.6605
     sort_std: 0.002
-    global_rank: 394
-    paper_rank: 415
-    rank_delta: 21
-    rank_delta_abs: 21
+    global_rank: 361
+    paper_rank: 380
+    rank_delta: 19
+    rank_delta_abs: 19
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null

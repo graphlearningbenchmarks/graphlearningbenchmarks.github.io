@@ -76,8 +76,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GDeR
-mrr: 0.0116
-adjusted_mrr: 0.0077
+mrr: 0.0112
+adjusted_mrr: 0.0075
 mrr_dataset_count: 2
 benchmark_categories:
 - MoleculeNet
@@ -218,10 +218,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 41
+    global_rank: 43
     sort_value: 0.8646
     sort_std: 0.0081
     comparison_type: global_top
@@ -286,8 +286,8 @@ results:
     value_note: ''
     sort_value: 0.827
     sort_std: null
-    global_rank: 110
-    paper_rank: 110
+    global_rank: 115
+    paper_rank: 115
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -354,8 +354,8 @@ results:
     value_note: ''
     sort_value: 0.8196
     sort_std: null
-    global_rank: 128
-    paper_rank: 128
+    global_rank: 133
+    paper_rank: 133
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -502,10 +502,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 32
+    global_rank: 34
     sort_value: 0.8875
     sort_std: 0.0049
     comparison_type: global_top
@@ -570,8 +570,8 @@ results:
     value_note: ''
     sort_value: 0.7399
     sort_std: null
-    global_rank: 71
-    paper_rank: 71
+    global_rank: 73
+    paper_rank: 73
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -638,8 +638,8 @@ results:
     value_note: ''
     sort_value: 0.7204
     sort_std: null
-    global_rank: 98
-    paper_rank: 98
+    global_rank: 99
+    paper_rank: 99
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

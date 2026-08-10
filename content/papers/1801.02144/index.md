@@ -86,7 +86,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -521,8 +521,8 @@ results:
     value_note: ''
     sort_value: 0.8794
     sort_std: 0.0161
-    global_rank: 351
-    paper_rank: 351
+    global_rank: 352
+    paper_rank: 352
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -557,7 +557,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 429
+    global_rank: 430
     sort_value: 0.866
     sort_std: 0.0495
     comparison_type: global_top
@@ -621,8 +621,8 @@ results:
     value_note: ''
     sort_value: 0.858
     sort_std: 0.002
-    global_rank: 455
-    paper_rank: 471
+    global_rank: 456
+    paper_rank: 472
     rank_delta: 16
     rank_delta_abs: 16
     rank_delta_direction: worse
@@ -688,8 +688,8 @@ results:
     value_note: ''
     sort_value: 0.8294
     sort_std: 0.0233
-    global_rank: 579
-    paper_rank: 579
+    global_rank: 580
+    paper_rank: 580
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -755,8 +755,8 @@ results:
     value_note: ''
     sort_value: 0.8244
     sort_std: 0.0129
-    global_rank: 606
-    paper_rank: 606
+    global_rank: 607
+    paper_rank: 607
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -822,8 +822,8 @@ results:
     value_note: ''
     sort_value: 0.8033
     sort_std: 0.0135
-    global_rank: 678
-    paper_rank: 678
+    global_rank: 677
+    paper_rank: 677
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1105,7 +1105,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 81
+    global_rank: 82
     sort_value: 0.8303
     sort_std: 0.0137
     comparison_type: global_top
@@ -1236,8 +1236,8 @@ results:
     value_note: ''
     sort_value: 0.7634
     sort_std: 0.0168
-    global_rank: 423
-    paper_rank: 423
+    global_rank: 420
+    paper_rank: 420
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1303,8 +1303,8 @@ results:
     value_note: ''
     sort_value: 0.7627
     sort_std: 0.0413
-    global_rank: 426
-    paper_rank: 426
+    global_rank: 423
+    paper_rank: 423
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1372,10 +1372,10 @@ results:
     value_note: ''
     sort_value: 0.745
     sort_std: 0.003
-    global_rank: 470
-    paper_rank: 495
-    rank_delta: 25
-    rank_delta_abs: 25
+    global_rank: 468
+    paper_rank: 492
+    rank_delta: 24
+    rank_delta_abs: 24
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1442,10 +1442,10 @@ results:
     value_note: ''
     sort_value: 0.66
     sort_std: null
-    global_rank: 578
-    paper_rank: 606
-    rank_delta: 28
-    rank_delta_abs: 28
+    global_rank: 574
+    paper_rank: 600
+    rank_delta: 26
+    rank_delta_abs: 26
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1510,8 +1510,8 @@ results:
     value_note: ''
     sort_value: 0.6221
     sort_std: 0.0472
-    global_rank: 607
-    paper_rank: 607
+    global_rank: 601
+    paper_rank: 601
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

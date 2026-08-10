@@ -189,39 +189,6 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SAGE
-    model_key: sage
-    model_plain: SAGE
-    value: 0.937
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2112.08331'
-    title: Model Stealing Attacks Against Inductive Graph Neural Networks
-    date: Dec 15, 2021
-    date_display: Dec 2021
-    date_iso: '2021-12-15'
-    venue: IEEE Symposium on Security and Privacy
-    codebase_url: https://github.com/xinleihe/GNNStealing
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 16
-    sort_value: 0.937
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
   - model: HG-SCM
     model_key: hg-scm
     model_plain: HG-SCM
@@ -279,8 +246,8 @@ results:
     value_note: ''
     sort_value: 0.9356
     sort_std: 0.0032
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 16
+    paper_rank: 16
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -347,8 +314,8 @@ results:
     value_note: ''
     sort_value: 0.9351
     sort_std: 0.0045
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -415,13 +382,47 @@ results:
     value_note: ''
     sort_value: 0.9335
     sort_std: 0.0045
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.9233
+    std: 0.0038
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.11025'
+    title: 'SignGT: Signed Attention-based Graph Transformer for Graph Representation
+      Learning'
+    date: Oct 17, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-17'
+    venue: Knowledge and Information Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 40
+    sort_value: 0.9233
+    sort_std: 0.0038
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -482,8 +483,8 @@ results:
     value_note: ''
     sort_value: 0.922
     sort_std: 0.002
-    global_rank: 43
-    paper_rank: 52
+    global_rank: 41
+    paper_rank: 50
     rank_delta: 9
     rank_delta_abs: 9
     rank_delta_direction: worse
@@ -549,8 +550,8 @@ results:
     value_note: ''
     sort_value: 0.919
     sort_std: 0.003
-    global_rank: 44
-    paper_rank: 51
+    global_rank: 42
+    paper_rank: 49
     rank_delta: 7
     rank_delta_abs: 7
     rank_delta_direction: worse
@@ -617,8 +618,8 @@ results:
     value_note: ''
     sort_value: 0.9175
     sort_std: 0.0035
-    global_rank: 46
-    paper_rank: 47
+    global_rank: 44
+    paper_rank: 45
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -685,8 +686,8 @@ results:
     value_note: ''
     sort_value: 0.912
     sort_std: 0.0071
-    global_rank: 49
-    paper_rank: 49
+    global_rank: 47
+    paper_rank: 47
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -753,8 +754,8 @@ results:
     value_note: ''
     sort_value: 0.9077
     sort_std: 0.0065
-    global_rank: 53
-    paper_rank: 53
+    global_rank: 51
+    paper_rank: 51
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -821,8 +822,8 @@ results:
     value_note: ''
     sort_value: 0.9032
     sort_std: 0.0154
-    global_rank: 55
-    paper_rank: 55
+    global_rank: 53
+    paper_rank: 53
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -889,8 +890,8 @@ results:
     value_note: ''
     sort_value: 0.8991
     sort_std: 0.0037
-    global_rank: 56
-    paper_rank: 56
+    global_rank: 54
+    paper_rank: 54
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -957,8 +958,8 @@ results:
     value_note: ''
     sort_value: 0.8505
     sort_std: 0.0025
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 68
+    paper_rank: 68
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

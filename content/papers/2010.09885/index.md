@@ -41,7 +41,7 @@ has_results: true
 paper_type: method
 proposed_models:
 - ChemBERTa 10M
-mrr: 0.0036
+mrr: 0.0035
 adjusted_mrr: 0.0012
 mrr_dataset_count: 1
 benchmark_categories:
@@ -218,10 +218,10 @@ results:
     value_note: ''
     sort_value: 0.913
     sort_std: 0.026
-    global_rank: 25
-    paper_rank: 120
-    rank_delta: 95
-    rank_delta_abs: 95
+    global_rank: 26
+    paper_rank: 122
+    rank_delta: 96
+    rank_delta_abs: 96
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -252,15 +252,83 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 32
+    global_rank: 34
     sort_value: 0.8875
     sort_std: 0.0049
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SVM
+    model_key: svm
+    model_plain: SVM
+    value: 0.702
+    std: null
+    paper_value: 0.702
+    paper_std: null
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: svm_kernel
+    architecture_label: SVM
+    architecture_title: SVM / kernel method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: Chemprop
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 80/10/10 scaffold split using DeepChem
+    date: Oct 19, 2020
+    date_display: Oct 2020
+    date_iso: '2020-10-19'
+    published_venue: NeurIPS 2020
+    published_conference: NeurIPS 2020
+    at_pub_value: 0.723
+    at_pub_std: 0.0
+    at_pub_source_arxiv: '2002.08264'
+    at_pub_source_title: Molecule Attention Transformer
+    at_pub_source_date_iso: '2020-02-19'
+    at_pub_source_date_label: NeurIPS 2020
+    value_gap_source_date_iso: '2021-06-17'
+    value_gap_source_date_label: '2021'
+    gap_vs_at_pub: 0.02100000000000002
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.729
+    true_std: null
+    value_gap_source_arxiv: '2106.09553'
+    value_gap_source_title: How Much Structural Information Large Scale Molecular
+      Language Representations Can Capture?
+    value_gap_source_is_current_paper: false
+    value_gap: 0.027000000000000024
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.729
+    sort_std: null
+    global_rank: 84
+    paper_rank: 141
+    rank_delta: 57
+    rank_delta_abs: 57
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Molecule Attention Transformer
+    comparison_source_arxiv: '2002.08264'
     is_best: false
     is_std_outlier: false
   - model: rf
@@ -319,77 +387,10 @@ results:
     value_note: ''
     sort_value: 0.725
     sort_std: 0.006
-    global_rank: 88
-    paper_rank: 195
-    rank_delta: 107
-    rank_delta_abs: 107
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Molecule Attention Transformer
-    comparison_source_arxiv: '2002.08264'
-    is_best: false
-    is_std_outlier: false
-  - model: SVM
-    model_key: svm
-    model_plain: SVM
-    value: 0.702
-    std: null
-    paper_value: 0.702
-    paper_std: null
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: svm_kernel
-    architecture_label: SVM
-    architecture_title: SVM / kernel method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: Chemprop
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: 80/10/10 scaffold split using DeepChem
-    date: Oct 19, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-19'
-    published_venue: NeurIPS 2020
-    published_conference: NeurIPS 2020
-    at_pub_value: 0.723
-    at_pub_std: 0.0
-    at_pub_source_arxiv: '2002.08264'
-    at_pub_source_title: Molecule Attention Transformer
-    at_pub_source_date_iso: '2020-02-19'
-    at_pub_source_date_label: NeurIPS 2020
-    value_gap_source_date_iso: '2020-02-19'
-    value_gap_source_date_label: NeurIPS 2020
-    gap_vs_at_pub: 0.02100000000000002
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.723
-    true_std: 0.0
-    value_gap_source_arxiv: '2002.08264'
-    value_gap_source_title: Molecule Attention Transformer
-    value_gap_source_is_current_paper: false
-    value_gap: 0.02100000000000002
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.723
-    sort_std: 0.0
-    global_rank: 94
-    paper_rank: 136
-    rank_delta: 42
-    rank_delta_abs: 42
+    global_rank: 91
+    paper_rank: 199
+    rank_delta: 108
+    rank_delta_abs: 108
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -454,8 +455,8 @@ results:
     value_note: ''
     sort_value: 0.643
     sort_std: null
-    global_rank: 277
-    paper_rank: 277
+    global_rank: 283
+    paper_rank: 283
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

@@ -56,7 +56,7 @@ abstract: Graph neural networks (GNNs) leverage message passing mechanisms to le
   exhibits strong flexibility but also significantly enhances the performance of various
   spectral GNNs across diverse graph tasks.
 codebase_url: https://github.com/YueAWu/Hyperbolic-GNN
-extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+extraction_model: google/gemma-4-26B-A4B-it
 has_results: true
 paper_type: method
 proposed_models:
@@ -67,9 +67,10 @@ proposed_models:
 - Hyperbolic-Bern
 - Hyperbolic-Jacobi
 - Hyperbolic-ChebII
-mrr: 0.0254
-adjusted_mrr: 0.0254
-mrr_dataset_count: 5
+- Hyperbolic-PDE GNN
+mrr: 0.0221
+adjusted_mrr: 0.0221
+mrr_dataset_count: 4
 benchmark_categories:
 - Classic
 - Heterophilic Graphs
@@ -80,14 +81,14 @@ benchmark_coverage:
   total: 12
 - benchmark: Heterophilic Graphs
   benchmark_slug: heterophilic-graphs
-  evaluated: 3
+  evaluated: 2
   total: 6
 task_categories:
 - node_classification
 experiment_scopes:
 - node-level
 results:
-- &id005
+- &id004
   dataset: Actor
   rows:
   - model: NodeFormer
@@ -146,7 +147,7 @@ results:
     venue: IEEE Transactions on Neural Networks and Learning Systems
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -207,14 +208,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data splits on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% split on 10 runs.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -259,31 +260,31 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: MP
-    model_key: mp
-    model_plain: MP
+  - model: Hyperbolic-PDE GNN
+    model_key: hyperbolic-pde gnn
+    model_plain: Hyperbolic-PDE GNN
     value: 0.4203
     std: 0.0159
     paper_value: 0.4203
     paper_std: 0.0159
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 1
+    table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data splits on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% split on 10 runs.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -344,14 +345,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data splits on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% split on 10 runs.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -413,14 +414,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data splits on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% split on 10 runs.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -480,14 +481,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data splits on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% split on 10 runs.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -549,14 +550,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data splits on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% split on 10 runs.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -617,14 +618,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data splits on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% split on 10 runs.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -637,8 +638,8 @@ results:
       Bases
     at_pub_source_date_iso: '2023-02-24'
     at_pub_source_date_label: ICML 2023
-    value_gap_source_date_iso: '2025-12-16'
-    value_gap_source_date_label: '2025'
+    value_gap_source_date_iso: '2025-05-29'
+    value_gap_source_date_label: ICML 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -649,10 +650,10 @@ results:
     today_delta_significant: false
     true_value: 0.4117
     true_std: 0.0064
-    value_gap_source_arxiv: '2512.14908'
-    value_gap_source_title: 'ATLAS: Adaptive Topology-based Learning at Scale for
-      Homophilic and Heterophilic Graphs'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.23014'
+    value_gap_source_title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in
+      the Perspective of A System of Hyperbolic Partial Differential Equations'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -686,14 +687,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data splits on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% split on 10 runs.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -727,8 +728,8 @@ results:
     value_note: ''
     sort_value: 0.4084
     sort_std: 0.0121
-    global_rank: 46
-    paper_rank: 46
+    global_rank: 47
+    paper_rank: 47
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -755,14 +756,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data splits on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% split on 10 runs.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -823,14 +824,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data splits on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% split on 10 runs.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -891,14 +892,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data splits on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% split on 10 runs.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -942,74 +943,6 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Hyperbolic-ChebII
-    model_key: hyperbolic-chebii
-    model_plain: Hyperbolic-ChebII
-    value: 0.4058
-    std: 0.0116
-    paper_value: 0.4058
-    paper_std: 0.0116
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 60%/20%/20% data splits on 10 runs
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    published_venue: ICML 2025
-    published_conference: ICML 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-05-29'
-    value_gap_source_date_label: ICML 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.4058
-    true_std: 0.0116
-    value_gap_source_arxiv: '2505.23014'
-    value_gap_source_title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in
-      the Perspective of A System of Hyperbolic Partial Differential Equations'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.4058
-    sort_std: 0.0116
-    global_rank: 52
-    paper_rank: 52
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
   - model: EvenNet
     model_key: evennet
     model_plain: EvenNet
@@ -1027,14 +960,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data splits on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% split on 10 runs.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -1066,8 +999,8 @@ results:
     value_note: ''
     sort_value: 0.4048
     sort_std: 0.0062
-    global_rank: 53
-    paper_rank: 55
+    global_rank: 52
+    paper_rank: 54
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -1094,14 +1027,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data splits on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% split on 10 runs.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -1133,8 +1066,8 @@ results:
     value_note: ''
     sort_value: 0.4046
     sort_std: 0.0064
-    global_rank: 55
-    paper_rank: 72
+    global_rank: 54
+    paper_rank: 71
     rank_delta: 17
     rank_delta_abs: 17
     rank_delta_direction: worse
@@ -1169,7 +1102,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 56
+    global_rank: 55
     sort_value: 0.4026
     sort_std: 0.0108
     comparison_type: global_top
@@ -1194,14 +1127,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data splits on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% split on 10 runs.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -1262,14 +1195,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data splits on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% split on 10 runs.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -1330,14 +1263,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data splits on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% split on 10 runs.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -1381,74 +1314,6 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Hyperbolic-Jacobi
-    model_key: hyperbolic-jacobi
-    model_plain: Hyperbolic-Jacobi
-    value: 0.3973
-    std: 0.0084
-    paper_value: 0.3973
-    paper_std: 0.0084
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 60%/20%/20% data splits on 10 runs
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    published_venue: ICML 2025
-    published_conference: ICML 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-05-29'
-    value_gap_source_date_label: ICML 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.3973
-    true_std: 0.0084
-    value_gap_source_arxiv: '2505.23014'
-    value_gap_source_title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in
-      the Perspective of A System of Hyperbolic Partial Differential Equations'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.3973
-    sort_std: 0.0084
-    global_rank: 71
-    paper_rank: 71
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
   - model: GraphSAGE
     model_key: graphsage
     model_plain: GraphSAGE
@@ -1474,7 +1339,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 88
+    global_rank: 87
     sort_value: 0.3899
     sort_std: 0.0085
     comparison_type: global_top
@@ -1499,14 +1364,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data splits on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% split on 10 runs.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -1538,10 +1403,10 @@ results:
     value_note: ''
     sort_value: 0.3802
     sort_std: 0.0023
-    global_rank: 112
-    paper_rank: 141
-    rank_delta: 29
-    rank_delta_abs: 29
+    global_rank: 108
+    paper_rank: 134
+    rank_delta: 26
+    rank_delta_abs: 26
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1566,14 +1431,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data splits on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% split on 10 runs.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -1607,8 +1472,8 @@ results:
     value_note: ''
     sort_value: 0.3767
     sort_std: 0.0054
-    global_rank: 139
-    paper_rank: 139
+    global_rank: 133
+    paper_rank: 133
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1635,14 +1500,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data splits on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% split on 10 runs.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -1675,10 +1540,10 @@ results:
     value_note: ''
     sort_value: 0.369
     sort_std: null
-    global_rank: 173
-    paper_rank: 342
-    rank_delta: 169
-    rank_delta_abs: 169
+    global_rank: 166
+    paper_rank: 336
+    rank_delta: 170
+    rank_delta_abs: 170
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1704,29 +1569,29 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data splits on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% split on 10 runs.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
     published_venue: ICML 2025
     published_conference: ICML 2025
-    at_pub_value: 0.361
-    at_pub_std: 0.0155
-    at_pub_source_arxiv: '2405.12474'
-    at_pub_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph Neural
-      Networks: Heterophily, Over-smoothing, and Over-squashing'
-    at_pub_source_date_iso: '2024-05-21'
-    at_pub_source_date_label: ICML 2024
-    value_gap_source_date_iso: '2024-05-21'
-    value_gap_source_date_label: ICML 2024
-    gap_vs_at_pub: 0.07289999999999996
+    at_pub_value: 0.349
+    at_pub_std: 0.007
+    at_pub_source_arxiv: '2206.02386'
+    at_pub_source_title: Restructuring Graphs for Higher Homophily via Adaptive Spectral
+      Clustering
+    at_pub_source_date_iso: '2022-06-06'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2022-06-06'
+    value_gap_source_date_label: AAAI 2022
+    gap_vs_at_pub: 0.060899999999999954
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -1734,27 +1599,27 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.361
-    true_std: 0.0155
-    value_gap_source_arxiv: '2405.12474'
-    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
-      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    true_value: 0.349
+    true_std: 0.007
+    value_gap_source_arxiv: '2206.02386'
+    value_gap_source_title: Restructuring Graphs for Higher Homophily via Adaptive
+      Spectral Clustering
     value_gap_source_is_current_paper: false
-    value_gap: 0.07289999999999996
+    value_gap: 0.060899999999999954
     has_value_note: false
     value_note: ''
-    sort_value: 0.361
-    sort_std: 0.0155
-    global_rank: 222
-    paper_rank: 439
-    rank_delta: 217
-    rank_delta_abs: 217
+    sort_value: 0.349
+    sort_std: 0.007
+    global_rank: 282
+    paper_rank: 435
+    rank_delta: 153
+    rank_delta_abs: 153
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
-      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
-    comparison_source_arxiv: '2405.12474'
+    comparison_source_title: Restructuring Graphs for Higher Homophily via Adaptive
+      Spectral Clustering
+    comparison_source_arxiv: '2206.02386'
     is_best: false
     is_std_outlier: false
   rank_metric: Accuracy
@@ -1922,14 +1787,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on 60%/20%/20% data split
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -1962,8 +1827,8 @@ results:
     value_note: ''
     sort_value: 0.9106
     sort_std: 0.0064
-    global_rank: 74
-    paper_rank: 74
+    global_rank: 72
+    paper_rank: 72
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1990,14 +1855,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on 60%/20%/20% data split
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -2031,10 +1896,10 @@ results:
     value_note: ''
     sort_value: 0.9093
     sort_std: 0.0018
-    global_rank: 88
-    paper_rank: 376
-    rank_delta: 288
-    rank_delta_abs: 288
+    global_rank: 86
+    paper_rank: 347
+    rank_delta: 261
+    rank_delta_abs: 261
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2060,14 +1925,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on 60%/20%/20% data split
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -2100,8 +1965,8 @@ results:
     value_note: ''
     sort_value: 0.9039
     sort_std: 0.0029
-    global_rank: 112
-    paper_rank: 112
+    global_rank: 108
+    paper_rank: 108
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2128,14 +1993,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on 60%/20%/20% data split
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -2169,10 +2034,10 @@ results:
     value_note: ''
     sort_value: 0.9022
     sort_std: 0.0021
-    global_rank: 117
-    paper_rank: 258
-    rank_delta: 141
-    rank_delta_abs: 141
+    global_rank: 113
+    paper_rank: 242
+    rank_delta: 129
+    rank_delta_abs: 129
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2198,14 +2063,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on 60%/20%/20% data split
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -2238,8 +2103,8 @@ results:
     value_note: ''
     sort_value: 0.8988
     sort_std: 0.0109
-    global_rank: 148
-    paper_rank: 148
+    global_rank: 145
+    paper_rank: 145
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2266,14 +2131,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on 60%/20%/20% data split
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -2306,8 +2171,8 @@ results:
     value_note: ''
     sort_value: 0.8982
     sort_std: 0.0068
-    global_rank: 154
-    paper_rank: 154
+    global_rank: 150
+    paper_rank: 150
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2334,14 +2199,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on 60%/20%/20% data split
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -2374,8 +2239,8 @@ results:
     value_note: ''
     sort_value: 0.8916
     sort_std: 0.0078
-    global_rank: 198
-    paper_rank: 198
+    global_rank: 188
+    paper_rank: 188
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2402,14 +2267,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on 60%/20%/20% data split
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -2442,8 +2307,8 @@ results:
     value_note: ''
     sort_value: 0.8869
     sort_std: 0.0079
-    global_rank: 231
-    paper_rank: 231
+    global_rank: 217
+    paper_rank: 217
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2470,14 +2335,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on 60%/20%/20% data split
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -2510,8 +2375,8 @@ results:
     value_note: ''
     sort_value: 0.8861
     sort_std: 0.0093
-    global_rank: 237
-    paper_rank: 237
+    global_rank: 223
+    paper_rank: 223
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2538,14 +2403,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on 60%/20%/20% data split
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -2577,10 +2442,10 @@ results:
     value_note: ''
     sort_value: 0.8861
     sort_std: 0.0041
-    global_rank: 236
-    paper_rank: 294
-    rank_delta: 58
-    rank_delta_abs: 58
+    global_rank: 222
+    paper_rank: 271
+    rank_delta: 49
+    rank_delta_abs: 49
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2605,14 +2470,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on 60%/20%/20% data split
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -2645,8 +2510,8 @@ results:
     value_note: ''
     sort_value: 0.8821
     sort_std: 0.005
-    global_rank: 257
-    paper_rank: 257
+    global_rank: 241
+    paper_rank: 241
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2673,14 +2538,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on 60%/20%/20% data split
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -2713,8 +2578,8 @@ results:
     value_note: ''
     sort_value: 0.8796
     sort_std: 0.0112
-    global_rank: 273
-    paper_rank: 273
+    global_rank: 254
+    paper_rank: 254
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2741,14 +2606,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on 60%/20%/20% data split
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -2780,10 +2645,10 @@ results:
     value_note: ''
     sort_value: 0.8782
     sort_std: 0.0072
-    global_rank: 280
-    paper_rank: 301
-    rank_delta: 21
-    rank_delta_abs: 21
+    global_rank: 259
+    paper_rank: 278
+    rank_delta: 19
+    rank_delta_abs: 19
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2808,14 +2673,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on 60%/20%/20% data split
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -2849,10 +2714,10 @@ results:
     value_note: ''
     sort_value: 0.8763
     sort_std: 0.0048
-    global_rank: 295
-    paper_rank: 331
-    rank_delta: 36
-    rank_delta_abs: 36
+    global_rank: 272
+    paper_rank: 302
+    rank_delta: 30
+    rank_delta_abs: 30
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2887,7 +2752,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 394
+    global_rank: 365
     sort_value: 0.8463
     sort_std: null
     comparison_type: global_top
@@ -2907,73 +2772,6 @@ results:
 - &id001
   dataset: Amazon-Photo
   rows:
-  - model: MSH-GNN
-    model_key: msh-gnn
-    model_plain: MSH-GNN
-    value: 0.9766
-    std: 0.005
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.15015'
-    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
-    date: May 21, 2025
-    date_display: May 2025
-    date_iso: '2025-05-21'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9766
-    sort_std: 0.005
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GeoMancer
-    model_key: geomancer
-    model_plain: GeoMancer
-    value: 0.9705
-    std: 0.0013
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2510.04522'
-    title: 'Toward a Unified Geometry Understanding: Riemannian Diffusion Framework
-      for Graph Generation and Prediction'
-    date: Oct 6, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-06'
-    venue: Accepted by NeurIPS 2025
-    codebase_url: https://github.com/RingBDStack/GeoMancer
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.9705
-    sort_std: 0.0013
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
   - model: GraphTARIF
     model_key: graphtarif
     model_plain: GraphTARIF
@@ -3000,13 +2798,81 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 1
     sort_value: 0.9703
     sort_std: 0.0019
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.9669
+    std: 0.0014
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.20248'
+    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
+      Classification'
+    date: May 18, 2026
+    date_display: May 2026
+    date_iso: '2026-05-18'
+    venue: null
+    codebase_url: https://github.com/transductive-sharpening/tunedGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.9669
+    sort_std: 0.0014
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DAM-GT
+    model_key: dam-gt
+    model_plain: DAM-GT
+    value: 0.9666
+    std: 0.0013
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2505.17660'
+    title: 'DAM-GT: Dual Positional Encoding-Based Attention Masking Graph Transformer
+      for Node Classification'
+    date: May 23, 2025
+    date_display: May 2025
+    date_iso: '2025-05-23'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9666
+    sort_std: 0.0013
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: SAGE
     model_key: sage
@@ -3034,7 +2900,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 13
+    global_rank: 8
     sort_value: 0.9643
     sort_std: 0.0027
     comparison_type: global_top
@@ -3059,14 +2925,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on Photo dataset using 60%/20%/20% split.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -3099,8 +2965,8 @@ results:
     value_note: ''
     sort_value: 0.9588
     sort_std: 0.0058
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3127,14 +2993,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on Photo dataset using 60%/20%/20% split.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -3168,10 +3034,10 @@ results:
     value_note: ''
     sort_value: 0.9573
     sort_std: 0.0012
-    global_rank: 27
-    paper_rank: 540
-    rank_delta: 513
-    rank_delta_abs: 513
+    global_rank: 23
+    paper_rank: 532
+    rank_delta: 509
+    rank_delta_abs: 509
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3197,14 +3063,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on Photo dataset using 60%/20%/20% split.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -3237,8 +3103,8 @@ results:
     value_note: ''
     sort_value: 0.9543
     sort_std: 0.0023
-    global_rank: 51
-    paper_rank: 51
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3265,14 +3131,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on Photo dataset using 60%/20%/20% split.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -3306,10 +3172,10 @@ results:
     value_note: ''
     sort_value: 0.9511
     sort_std: 0.0009
-    global_rank: 72
-    paper_rank: 168
-    rank_delta: 96
-    rank_delta_abs: 96
+    global_rank: 62
+    paper_rank: 159
+    rank_delta: 97
+    rank_delta_abs: 97
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3335,14 +3201,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on Photo dataset using 60%/20%/20% split.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -3375,8 +3241,8 @@ results:
     value_note: ''
     sort_value: 0.9483
     sort_std: 0.0044
-    global_rank: 96
-    paper_rank: 96
+    global_rank: 86
+    paper_rank: 86
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3403,14 +3269,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on Photo dataset using 60%/20%/20% split.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -3443,8 +3309,8 @@ results:
     value_note: ''
     sort_value: 0.9472
     sort_std: 0.0075
-    global_rank: 99
-    paper_rank: 99
+    global_rank: 89
+    paper_rank: 89
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3471,14 +3337,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on Photo dataset using 60%/20%/20% split.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -3512,10 +3378,10 @@ results:
     value_note: ''
     sort_value: 0.946
     sort_std: 0.003
-    global_rank: 104
-    paper_rank: 148
-    rank_delta: 44
-    rank_delta_abs: 44
+    global_rank: 94
+    paper_rank: 139
+    rank_delta: 45
+    rank_delta_abs: 45
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3541,14 +3407,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on Photo dataset using 60%/20%/20% split.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -3581,8 +3447,8 @@ results:
     value_note: ''
     sort_value: 0.9453
     sort_std: 0.0075
-    global_rank: 106
-    paper_rank: 106
+    global_rank: 96
+    paper_rank: 96
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3609,14 +3475,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on Photo dataset using 60%/20%/20% split.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -3649,8 +3515,8 @@ results:
     value_note: ''
     sort_value: 0.9453
     sort_std: 0.0046
-    global_rank: 107
-    paper_rank: 107
+    global_rank: 97
+    paper_rank: 97
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3677,14 +3543,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on Photo dataset using 60%/20%/20% split.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -3717,8 +3583,8 @@ results:
     value_note: ''
     sort_value: 0.9449
     sort_std: 0.0063
-    global_rank: 111
-    paper_rank: 111
+    global_rank: 101
+    paper_rank: 101
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3745,14 +3611,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on Photo dataset using 60%/20%/20% split.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -3785,8 +3651,8 @@ results:
     value_note: ''
     sort_value: 0.9424
     sort_std: 0.0087
-    global_rank: 126
-    paper_rank: 126
+    global_rank: 116
+    paper_rank: 116
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3813,14 +3679,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on Photo dataset using 60%/20%/20% split.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -3853,8 +3719,8 @@ results:
     value_note: ''
     sort_value: 0.9409
     sort_std: 0.0058
-    global_rank: 133
-    paper_rank: 133
+    global_rank: 123
+    paper_rank: 123
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3881,14 +3747,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on Photo dataset using 60%/20%/20% split.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -3921,8 +3787,8 @@ results:
     value_note: ''
     sort_value: 0.9377
     sort_std: 0.0032
-    global_rank: 154
-    paper_rank: 154
+    global_rank: 145
+    paper_rank: 145
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3949,14 +3815,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split
+    protocol_note: Accuracy on Photo dataset using 60%/20%/20% split.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -3988,8 +3854,8 @@ results:
     value_note: ''
     sort_value: 0.9368
     sort_std: 0.0028
-    global_rank: 162
-    paper_rank: 164
+    global_rank: 153
+    paper_rank: 155
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -4024,1140 +3890,10 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 434
+    global_rank: 426
     sort_value: 0.9128
     sort_std: 0.0063
     comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  rank_metric: Accuracy
-  higher_is_better: true
-  experiment_scope: node-level
-  dataset_primary_metric: Accuracy
-  paper_metrics:
-  - Accuracy
-  metric: Accuracy
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
-- &id004
-  dataset: Cornell
-  rows:
-  - model: P^2GNN
-    model_key: p^2gnn
-    model_plain: P^2GNN
-    value: 0.9541
-    std: 0.0272
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2603.09195'
-    title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
-    date: Mar 10, 2026
-    date_display: Mar 2026
-    date_iso: '2026-03-10'
-    venue: arXiv.org
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9541
-    sort_std: 0.0272
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: ACM-GCN
-    model_key: acm-gcn
-    model_plain: ACM-GCN
-    value: 0.948
-    std: 0.038
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2504.19785'
-    title: Heterophily-informed Message Passing
-    date: Apr 28, 2025
-    date_display: Apr 2025
-    date_iso: '2025-04-28'
-    venue: Trans. Mach. Learn. Res.
-    codebase_url: https://github.com/AaltoML/heterophily-imp
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.948
-    sort_std: 0.038
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: RF-GCN
-    model_key: rf-gcn
-    model_plain: RF-GCN
-    value: 0.9429
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2504.13426'
-    title: Simplifying Graph Convolutional Networks with Redundancy-Free Neighbors
-    date: Apr 18, 2025
-    date_display: Apr 2025
-    date_iso: '2025-04-18'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9429
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: JacobiConv
-    model_key: jacobiconv
-    model_plain: JacobiConv
-    value: 0.9295
-    std: 0.0246
-    paper_value: 0.9295
-    paper_std: 0.0246
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    published_venue: ICML 2025
-    published_conference: ICML 2025
-    at_pub_value: 0.9295
-    at_pub_std: 0.0246
-    at_pub_source_arxiv: '2303.13750'
-    at_pub_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
-    at_pub_source_date_iso: '2023-03-24'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2025-05-29'
-    value_gap_source_date_label: ICML 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.9295
-    true_std: 0.0246
-    value_gap_source_arxiv: '2505.23014'
-    value_gap_source_title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in
-      the Perspective of A System of Hyperbolic Partial Differential Equations'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9295
-    sort_std: 0.0246
-    global_rank: 10
-    paper_rank: 10
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GPR-GNN
-    model_key: gpr-gnn
-    model_plain: GPR-GNN
-    value: 0.9137
-    std: 0.0181
-    paper_value: 0.9137
-    paper_std: 0.0181
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    published_venue: ICML 2025
-    published_conference: ICML 2025
-    at_pub_value: 0.9279
-    at_pub_std: 0.0312
-    at_pub_source_arxiv: '2302.03228'
-    at_pub_source_title: Heterophily-Aware Graph Attention Network
-    at_pub_source_date_iso: '2023-02-07'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-02-07'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.01419999999999999
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.9279
-    true_std: 0.0312
-    value_gap_source_arxiv: '2302.03228'
-    value_gap_source_title: Heterophily-Aware Graph Attention Network
-    value_gap_source_is_current_paper: false
-    value_gap: 0.01419999999999999
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9279
-    sort_std: 0.0312
-    global_rank: 11
-    paper_rank: 26
-    rank_delta: 15
-    rank_delta_abs: 15
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Hyperbolic-GPR
-    model_key: hyperbolic-gpr
-    model_plain: Hyperbolic-GPR
-    value: 0.9277
-    std: 0.0336
-    paper_value: 0.9277
-    paper_std: 0.0336
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    published_venue: ICML 2025
-    published_conference: ICML 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-05-29'
-    value_gap_source_date_label: ICML 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.9277
-    true_std: 0.0336
-    value_gap_source_arxiv: '2505.23014'
-    value_gap_source_title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in
-      the Perspective of A System of Hyperbolic Partial Differential Equations'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9277
-    sort_std: 0.0336
-    global_rank: 12
-    paper_rank: 12
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: ChebNetII
-    model_key: chebnetii
-    model_plain: ChebNetII
-    value: 0.923
-    std: 0.0148
-    paper_value: 0.923
-    paper_std: 0.0148
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    published_venue: ICML 2025
-    published_conference: ICML 2025
-    at_pub_value: 0.923
-    at_pub_std: 0.0148
-    at_pub_source_arxiv: '2202.03580'
-    at_pub_source_title: Convolutional Neural Networks on Graphs with Chebyshev Approximation,
-      Revisited
-    at_pub_source_date_iso: '2022-02-04'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2025-05-29'
-    value_gap_source_date_label: ICML 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.923
-    true_std: 0.0148
-    value_gap_source_arxiv: '2505.23014'
-    value_gap_source_title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in
-      the Perspective of A System of Hyperbolic Partial Differential Equations'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.923
-    sort_std: 0.0148
-    global_rank: 17
-    paper_rank: 17
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: BernNet
-    model_key: bernnet
-    model_plain: BernNet
-    value: 0.9213
-    std: 0.0164
-    paper_value: 0.9213
-    paper_std: 0.0164
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    published_venue: ICML 2025
-    published_conference: ICML 2025
-    at_pub_value: 0.9213
-    at_pub_std: 0.0164
-    at_pub_source_arxiv: '2202.03580'
-    at_pub_source_title: Convolutional Neural Networks on Graphs with Chebyshev Approximation,
-      Revisited
-    at_pub_source_date_iso: '2022-02-04'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2026-03-10'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.9213
-    true_std: 0.0164
-    value_gap_source_arxiv: '2603.09195'
-    value_gap_source_title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9213
-    sort_std: 0.0164
-    global_rank: 18
-    paper_rank: 18
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: APPNP
-    model_key: appnp
-    model_plain: APPNP
-    value: 0.9181
-    std: 0.0196
-    paper_value: 0.9181
-    paper_std: 0.0196
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    published_venue: ICML 2025
-    published_conference: ICML 2025
-    at_pub_value: 0.9181
-    at_pub_std: 0.0196
-    at_pub_source_arxiv: '2303.13750'
-    at_pub_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
-    at_pub_source_date_iso: '2023-03-24'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2025-05-29'
-    value_gap_source_date_label: ICML 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.9181
-    true_std: 0.0196
-    value_gap_source_arxiv: '2505.23014'
-    value_gap_source_title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in
-      the Perspective of A System of Hyperbolic Partial Differential Equations'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9181
-    sort_std: 0.0196
-    global_rank: 23
-    paper_rank: 23
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: MLP
-    model_key: mlp
-    model_plain: MLP
-    value: 0.9136
-    std: 0.007
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2212.03654'
-    title: Node-oriented Spectral Filtering for Graph Neural Networks
-    date: Dec 7, 2022
-    date_display: Dec 2022
-    date_iso: '2022-12-07'
-    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 27
-    sort_value: 0.9136
-    sort_std: 0.007
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Hyperbolic-SGC
-    model_key: hyperbolic-sgc
-    model_plain: Hyperbolic-SGC
-    value: 0.9128
-    std: 0.0255
-    paper_value: 0.9128
-    paper_std: 0.0255
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    published_venue: ICML 2025
-    published_conference: ICML 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-05-29'
-    value_gap_source_date_label: ICML 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.9128
-    true_std: 0.0255
-    value_gap_source_arxiv: '2505.23014'
-    value_gap_source_title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in
-      the Perspective of A System of Hyperbolic Partial Differential Equations'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9128
-    sort_std: 0.0255
-    global_rank: 29
-    paper_rank: 29
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Hyperbolic-Cheb
-    model_key: hyperbolic-cheb
-    model_plain: Hyperbolic-Cheb
-    value: 0.9106
-    std: 0.0446
-    paper_value: 0.9106
-    paper_std: 0.0446
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    published_venue: ICML 2025
-    published_conference: ICML 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-05-29'
-    value_gap_source_date_label: ICML 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.9106
-    true_std: 0.0446
-    value_gap_source_arxiv: '2505.23014'
-    value_gap_source_title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in
-      the Perspective of A System of Hyperbolic Partial Differential Equations'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9106
-    sort_std: 0.0446
-    global_rank: 30
-    paper_rank: 30
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Hyperbolic-ChebII
-    model_key: hyperbolic-chebii
-    model_plain: Hyperbolic-ChebII
-    value: 0.9106
-    std: 0.0386
-    paper_value: 0.9106
-    paper_std: 0.0386
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    published_venue: ICML 2025
-    published_conference: ICML 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-05-29'
-    value_gap_source_date_label: ICML 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.9106
-    true_std: 0.0386
-    value_gap_source_arxiv: '2505.23014'
-    value_gap_source_title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in
-      the Perspective of A System of Hyperbolic Partial Differential Equations'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9106
-    sort_std: 0.0386
-    global_rank: 31
-    paper_rank: 31
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Hyperbolic-Jacobi
-    model_key: hyperbolic-jacobi
-    model_plain: Hyperbolic-Jacobi
-    value: 0.9064
-    std: 0.0513
-    paper_value: 0.9064
-    paper_std: 0.0513
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    published_venue: ICML 2025
-    published_conference: ICML 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-05-29'
-    value_gap_source_date_label: ICML 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.9064
-    true_std: 0.0513
-    value_gap_source_arxiv: '2505.23014'
-    value_gap_source_title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in
-      the Perspective of A System of Hyperbolic Partial Differential Equations'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9064
-    sort_std: 0.0513
-    global_rank: 32
-    paper_rank: 32
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Hyperbolic-Bern
-    model_key: hyperbolic-bern
-    model_plain: Hyperbolic-Bern
-    value: 0.8979
-    std: 0.0345
-    paper_value: 0.8979
-    paper_std: 0.0345
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    published_venue: ICML 2025
-    published_conference: ICML 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-05-29'
-    value_gap_source_date_label: ICML 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8979
-    true_std: 0.0345
-    value_gap_source_arxiv: '2505.23014'
-    value_gap_source_title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in
-      the Perspective of A System of Hyperbolic Partial Differential Equations'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8979
-    sort_std: 0.0345
-    global_rank: 36
-    paper_rank: 36
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Hyperbolic-APPNP
-    model_key: hyperbolic-appnp
-    model_plain: Hyperbolic-APPNP
-    value: 0.8745
-    std: 0.0381
-    paper_value: 0.8745
-    paper_std: 0.0381
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    published_venue: ICML 2025
-    published_conference: ICML 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-05-29'
-    value_gap_source_date_label: ICML 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8745
-    true_std: 0.0381
-    value_gap_source_arxiv: '2505.23014'
-    value_gap_source_title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in
-      the Perspective of A System of Hyperbolic Partial Differential Equations'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8745
-    sort_std: 0.0381
-    global_rank: 66
-    paper_rank: 66
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: ChebNet
-    model_key: chebnet
-    model_plain: ChebNet
-    value: 0.8393
-    std: 0.0213
-    paper_value: 0.8393
-    paper_std: 0.0213
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    published_venue: ICML 2025
-    published_conference: ICML 2025
-    at_pub_value: 0.8533
-    at_pub_std: 0.0104
-    at_pub_source_arxiv: '2212.03654'
-    at_pub_source_title: Node-oriented Spectral Filtering for Graph Neural Networks
-    at_pub_source_date_iso: '2022-12-07'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-12-07'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: 0.013999999999999901
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.8533
-    true_std: 0.0104
-    value_gap_source_arxiv: '2212.03654'
-    value_gap_source_title: Node-oriented Spectral Filtering for Graph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.013999999999999901
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8533
-    sort_std: 0.0104
-    global_rank: 115
-    paper_rank: 149
-    rank_delta: 34
-    rank_delta_abs: 34
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SAGE
-    model_key: sage
-    model_plain: SAGE
-    value: 0.8269
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.19762'
-    title: 'Language Models as Messengers: Enhancing Message Passing in Heterophilic
-      Graph Learning'
-    date: May 26, 2025
-    date_display: May 2025
-    date_iso: '2025-05-26'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 177
-    sort_value: 0.8269
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SGC
-    model_key: sgc
-    model_plain: SGC
-    value: 0.7262
-    std: 0.0992
-    paper_value: 0.7262
-    paper_std: 0.0992
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    published_venue: ICML 2025
-    published_conference: ICML 2025
-    at_pub_value: 0.735
-    at_pub_std: 0.043
-    at_pub_source_arxiv: '2206.02386'
-    at_pub_source_title: Restructuring Graphs for Higher Homophily via Adaptive Spectral
-      Clustering
-    at_pub_source_date_iso: '2022-06-06'
-    at_pub_source_date_label: AAAI 2022
-    value_gap_source_date_iso: '2022-06-06'
-    value_gap_source_date_label: AAAI 2022
-    gap_vs_at_pub: 0.00880000000000003
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.735
-    true_std: 0.043
-    value_gap_source_arxiv: '2206.02386'
-    value_gap_source_title: Restructuring Graphs for Higher Homophily via Adaptive
-      Spectral Clustering
-    value_gap_source_is_current_paper: false
-    value_gap: 0.00880000000000003
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.735
-    sort_std: 0.043
-    global_rank: 318
-    paper_rank: 326
-    rank_delta: 8
-    rank_delta_abs: 8
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -5291,14 +4027,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% data splits on 10 runs for Texas node classification.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -5331,8 +4067,8 @@ results:
     value_note: ''
     sort_value: 0.9393
     sort_std: 0.0205
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5359,14 +4095,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% data splits on 10 runs for Texas node classification.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -5399,8 +4135,8 @@ results:
     value_note: ''
     sort_value: 0.9361
     sort_std: 0.0261
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5427,14 +4163,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% data splits on 10 runs for Texas node classification.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -5467,8 +4203,8 @@ results:
     value_note: ''
     sort_value: 0.9344
     sort_std: 0.0213
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5495,14 +4231,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% data splits on 10 runs for Texas node classification.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -5535,8 +4271,8 @@ results:
     value_note: ''
     sort_value: 0.933
     sort_std: 0.0332
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5563,14 +4299,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% data splits on 10 runs for Texas node classification.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -5603,8 +4339,8 @@ results:
     value_note: ''
     sort_value: 0.9328
     sort_std: 0.0358
-    global_rank: 29
-    paper_rank: 29
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5631,14 +4367,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% data splits on 10 runs for Texas node classification.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -5670,10 +4406,10 @@ results:
     value_note: ''
     sort_value: 0.9328
     sort_std: 0.0148
-    global_rank: 26
-    paper_rank: 33
-    rank_delta: 7
-    rank_delta_abs: 7
+    global_rank: 28
+    paper_rank: 34
+    rank_delta: 6
+    rank_delta_abs: 6
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -5698,14 +4434,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% data splits on 10 runs for Texas node classification.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -5739,8 +4475,8 @@ results:
     value_note: ''
     sort_value: 0.9328
     sort_std: 0.0147
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5767,14 +4503,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% data splits on 10 runs for Texas node classification.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -5807,8 +4543,8 @@ results:
     value_note: ''
     sort_value: 0.9311
     sort_std: 0.0129
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5835,14 +4571,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% data splits on 10 runs for Texas node classification.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -5912,7 +4648,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 47
+    global_rank: 45
     sort_value: 0.923
     sort_std: 0.007
     comparison_type: global_top
@@ -5937,14 +4673,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% data splits on 10 runs for Texas node classification.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -5977,8 +4713,8 @@ results:
     value_note: ''
     sort_value: 0.9197
     sort_std: 0.0419
-    global_rank: 53
-    paper_rank: 53
+    global_rank: 51
+    paper_rank: 51
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6005,14 +4741,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% data splits on 10 runs for Texas node classification.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -6045,8 +4781,8 @@ results:
     value_note: ''
     sort_value: 0.9131
     sort_std: 0.0346
-    global_rank: 65
-    paper_rank: 65
+    global_rank: 63
+    paper_rank: 63
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6073,14 +4809,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% data splits on 10 runs for Texas node classification.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -6112,8 +4848,8 @@ results:
     value_note: ''
     sort_value: 0.9131
     sort_std: 0.0197
-    global_rank: 63
-    paper_rank: 67
+    global_rank: 61
+    paper_rank: 65
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -6148,7 +4884,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 76
+    global_rank: 73
     sort_value: 0.9001
     sort_std: 0.023
     comparison_type: global_top
@@ -6173,14 +4909,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% data splits on 10 runs for Texas node classification.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -6213,8 +4949,8 @@ results:
     value_note: ''
     sort_value: 0.8628
     sort_std: 0.0262
-    global_rank: 146
-    paper_rank: 146
+    global_rank: 139
+    paper_rank: 139
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6241,14 +4977,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 60%/20%/20% data split on 10 runs
+    protocol_note: Accuracy on 60%/20%/20% data splits on 10 runs for Texas node classification.
     date: May 29, 2025
     date_display: May 2025
     date_iso: '2025-05-29'
@@ -6282,8 +5018,8 @@ results:
     value_note: ''
     sort_value: 0.8131
     sort_std: 0.033
-    global_rank: 302
-    paper_rank: 302
+    global_rank: 279
+    paper_rank: 279
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6311,7 +5047,6 @@ results_grouped:
   datasets:
   - *id003
   - *id004
-  - *id005
 datasets_by_scope:
 - scope: node-level
   label: Node-level
@@ -6328,8 +5063,6 @@ datasets_by_scope:
     datasets:
     - dataset: Texas
       dataset_slug: texas
-    - dataset: Cornell
-      dataset_slug: cornell
     - dataset: Actor
       dataset_slug: actor
 main_figure: /figures/2505.23014/main_figure.jpegoptim.jpg

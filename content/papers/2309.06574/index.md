@@ -43,8 +43,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - CFG
-mrr: 0.5
-adjusted_mrr: 0.1667
+mrr: 1.0
+adjusted_mrr: 0.3333
 mrr_dataset_count: 1
 benchmark_categories:
 - OGB
@@ -61,39 +61,6 @@ results:
 - &id001
   dataset: ogbl-citation2
   rows:
-  - model: MPLP
-    model_key: mplp
-    model_plain: MPLP
-    value: 0.9072
-    std: 0.0012
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.03845'
-    title: Reconsidering the Performance of GAE in Link Prediction
-    date: Nov 6, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-06'
-    venue: International Conference on Information and Knowledge Management
-    codebase_url: https://github.com/GraphPKU/Refined-GAE
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9072
-    sort_std: 0.0012
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
   - model: CFG
     model_key: cfg
     model_plain: CFG
@@ -151,8 +118,8 @@ results:
     value_note: ''
     sort_value: 0.8997
     sort_std: 0.0015
-    global_rank: 2
-    paper_rank: 2
+    global_rank: 1
+    paper_rank: 1
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -160,7 +127,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: SIEG
     model_key: sieg
@@ -219,8 +186,8 @@ results:
     value_note: ''
     sort_value: 0.8987
     sort_std: 0.0018
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 2
+    paper_rank: 2
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -228,7 +195,40 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
+    is_std_outlier: false
+  - model: LPFormer
+    model_key: lpformer
+    model_plain: LPFormer
+    value: 0.8981
+    std: 0.0013
+    metric: MRR
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2310.11009'
+    title: 'LPFormer: An Adaptive Graph Transformer for Link Prediction'
+    date: Oct 17, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-17'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/HarryShomer/LPFormer
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.8981
+    sort_std: 0.0013
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
     is_std_outlier: false
   - model: SUREL
     model_key: surel
@@ -262,11 +262,11 @@ results:
     published_conference: ''
     at_pub_value: 0.8974
     at_pub_std: 0.0018
-    at_pub_source_arxiv: '2202.13538'
-    at_pub_source_title: Algorithm and System Co-design for Efficient Subgraph-based
-      Graph Representation Learning
-    at_pub_source_date_iso: '2022-02-28'
-    at_pub_source_date_label: '2022'
+    at_pub_source_arxiv: '2303.03379'
+    at_pub_source_title: 'SUREL+: Moving from Walks to Sets for Scalable Subgraph-based
+      Graph Representation Learning'
+    at_pub_source_date_iso: '2023-03-06'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2023-10-14'
     value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.009099999999999997
@@ -288,17 +288,17 @@ results:
     value_note: ''
     sort_value: 0.8974
     sort_std: 0.0018
-    global_rank: 5
-    paper_rank: 7
+    global_rank: 4
+    paper_rank: 6
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Algorithm and System Co-design for Efficient Subgraph-based
-      Graph Representation Learning
-    comparison_source_arxiv: '2202.13538'
-    is_best: false
+    comparison_source_title: 'SUREL+: Moving from Walks to Sets for Scalable Subgraph-based
+      Graph Representation Learning'
+    comparison_source_arxiv: '2303.03379'
+    is_best: true
     is_std_outlier: false
   - model: NGNN + SEAL
     model_key: ngnn + seal
@@ -357,8 +357,8 @@ results:
     value_note: ''
     sort_value: 0.8891
     sort_std: 0.0022
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 6
+    paper_rank: 6
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -425,8 +425,8 @@ results:
     value_note: ''
     sort_value: 0.8814
     sort_std: 0.0008
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -473,8 +473,8 @@ results:
       for Multi-Node Representation Learning'
     at_pub_source_date_iso: '2020-10-30'
     at_pub_source_date_label: NeurIPS 2020
-    value_gap_source_date_iso: '2024-11-06'
-    value_gap_source_date_label: '2024'
+    value_gap_source_date_iso: '2023-10-17'
+    value_gap_source_date_label: KDD 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -485,16 +485,16 @@ results:
     today_delta_significant: false
     true_value: 0.8767
     true_std: 0.0032
-    value_gap_source_arxiv: '2411.03845'
-    value_gap_source_title: Reconsidering the Performance of GAE in Link Prediction
+    value_gap_source_arxiv: '2310.11009'
+    value_gap_source_title: 'LPFormer: An Adaptive Graph Transformer for Link Prediction'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8767
     sort_std: 0.0032
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -530,7 +530,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 17
+    global_rank: 14
     sort_value: 0.8705
     sort_std: 0.0004
     comparison_type: global_top
@@ -595,8 +595,8 @@ results:
     value_note: ''
     sort_value: 0.8549
     sort_std: 0.0029
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -663,8 +663,8 @@ results:
     value_note: ''
     sort_value: 0.8492
     sort_std: 0.0029
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -700,7 +700,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 78
+    global_rank: 72
     sort_value: 0.3917
     sort_std: 0.0044
     comparison_type: global_top

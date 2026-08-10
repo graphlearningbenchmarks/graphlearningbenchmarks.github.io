@@ -132,558 +132,12 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: UniMol
-    model_key: unimol
-    model_plain: UniMol
-    value: 0.0693
-    std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 77.0
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2603.00568'
-    title: Enhancing Molecular Property Predictions by Learning from Bond Modelling
-      and Interactions
-    date: Feb 28, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-28'
-    venue: Accepted to ICLR 2026
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.0693
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Transformer-M
-    model_key: transformer-m
-    model_plain: Transformer-M
-    value: 78.2
-    std: null
-    paper_value: 78.2
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 69.0
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: luo2022one
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 7, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-07'
-    published_venue: ICML 2024
-    published_conference: ICML 2024
-    at_pub_value: 0.0787
-    at_pub_std: null
-    at_pub_source_arxiv: '2210.01765'
-    at_pub_source_title: One Transformer Can Understand Both 2D & 3D Molecular Data
-    at_pub_source_date_iso: '2022-10-04'
-    at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2026-02-28'
-    value_gap_source_date_label: ICLR 2026
-    gap_vs_at_pub: 78.1213
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.0772
-    true_std: null
-    value_gap_source_arxiv: '2603.00568'
-    value_gap_source_title: Enhancing Molecular Property Predictions by Learning from
-      Bond Modelling and Interactions
-    value_gap_source_is_current_paper: false
-    value_gap: 78.1228
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.0772
-    sort_std: null
-    global_rank: 4
-    paper_rank: 86
-    rank_delta: 82
-    rank_delta_abs: 82
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: One Transformer Can Understand Both 2D & 3D Molecular
-      Data
-    comparison_source_arxiv: '2210.01765'
-    is_best: false
-    is_std_outlier: false
-  - model: GPS
-    model_key: gps
-    model_plain: GPS
-    value: 72.0
-    std: null
-    paper_value: 72.0
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 44.3
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: masters2022gps++
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 7, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-07'
-    published_venue: ICML 2024
-    published_conference: ICML 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-02-28'
-    value_gap_source_date_label: ICLR 2026
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.0778
-    true_std: null
-    value_gap_source_arxiv: '2603.00568'
-    value_gap_source_title: Enhancing Molecular Property Predictions by Learning from
-      Bond Modelling and Interactions
-    value_gap_source_is_current_paper: false
-    value_gap: 71.9222
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.0778
-    sort_std: null
-    global_rank: 5
-    paper_rank: 86
-    rank_delta: 81
-    rank_delta_abs: 81
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: EGT
-    model_key: egt
-    model_plain: EGT
-    value: 86.2
-    std: null
-    paper_value: 86.2
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 89.3
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: hussain2022global
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 7, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-07'
-    published_venue: ICML 2024
-    published_conference: ICML 2024
-    at_pub_value: 0.0862
-    at_pub_std: null
-    at_pub_source_arxiv: '2208.05863'
-    at_pub_source_title: 'GEM-2: Next Generation Molecular Property Prediction Network
-      by Modeling Full-range Many-body Interactions'
-    at_pub_source_date_iso: '2022-08-11'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-08-11'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: 86.1138
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.0862
-    true_std: null
-    value_gap_source_arxiv: '2208.05863'
-    value_gap_source_title: 'GEM-2: Next Generation Molecular Property Prediction
-      Network by Modeling Full-range Many-body Interactions'
-    value_gap_source_is_current_paper: false
-    value_gap: 86.1138
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.0862
-    sort_std: null
-    global_rank: 26
-    paper_rank: 87
-    rank_delta: 61
-    rank_delta_abs: 61
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'GEM-2: Next Generation Molecular Property Prediction
-      Network by Modeling Full-range Many-body Interactions'
-    comparison_source_arxiv: '2208.05863'
-    is_best: false
-    is_std_outlier: false
-  - model: GRPE
-    model_key: grpe
-    model_plain: GRPE
-    value: 87.6
-    std: null
-    paper_value: 87.6
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 118.3
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: park2022grpe
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 7, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-07'
-    published_venue: ICML 2024
-    published_conference: ICML 2024
-    at_pub_value: 0.089
-    at_pub_std: null
-    at_pub_source_arxiv: '2205.12454'
-    at_pub_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
-    at_pub_source_date_iso: '2022-05-25'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2023-03-02'
-    value_gap_source_date_label: ICLR 2023
-    gap_vs_at_pub: 87.511
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.089
-    true_std: null
-    value_gap_source_arxiv: '2303.01028'
-    value_gap_source_title: 'Specformer: Spectral Graph Neural Networks Meet Transformers'
-    value_gap_source_is_current_paper: false
-    value_gap: 87.511
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.089
-    sort_std: null
-    global_rank: 35
-    paper_rank: 88
-    rank_delta: 53
-    rank_delta_abs: 53
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
-    comparison_source_arxiv: '2205.12454'
-    is_best: false
-    is_std_outlier: false
-  - model: TokenGT
-    model_key: tokengt
-    model_plain: TokenGT
-    value: 91.9
-    std: null
-    paper_value: 91.9
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 48.5
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: kim2022pure
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 7, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-07'
-    published_venue: ICML 2024
-    published_conference: ICML 2024
-    at_pub_value: 0.091
-    at_pub_std: null
-    at_pub_source_arxiv: '2210.01765'
-    at_pub_source_title: One Transformer Can Understand Both 2D & 3D Molecular Data
-    at_pub_source_date_iso: '2022-10-04'
-    at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2026-02-28'
-    value_gap_source_date_label: ICLR 2026
-    gap_vs_at_pub: 91.80900000000001
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.091
-    true_std: null
-    value_gap_source_arxiv: '2603.00568'
-    value_gap_source_title: Enhancing Molecular Property Predictions by Learning from
-      Bond Modelling and Interactions
-    value_gap_source_is_current_paper: false
-    value_gap: 91.80900000000001
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.091
-    sort_std: null
-    global_rank: 40
-    paper_rank: 88
-    rank_delta: 48
-    rank_delta_abs: 48
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: One Transformer Can Understand Both 2D & 3D Molecular
-      Data
-    comparison_source_arxiv: '2210.01765'
-    is_best: false
-    is_std_outlier: false
-  - model: GIN-VN
-    model_key: gin-vn
-    model_plain: GIN-VN
-    value: 108.4
-    std: null
-    paper_value: 108.4
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 6.7
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: xu2018powerful; gilmer2017neural
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 7, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-07'
-    published_venue: ICML 2024
-    published_conference: ICML 2024
-    at_pub_value: 0.1083
-    at_pub_std: null
-    at_pub_source_arxiv: '2207.02505'
-    at_pub_source_title: Pure Transformers are Powerful Graph Learners
-    at_pub_source_date_iso: '2022-07-06'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2026-02-28'
-    value_gap_source_date_label: ICLR 2026
-    gap_vs_at_pub: 108.2917
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.1083
-    true_std: null
-    value_gap_source_arxiv: '2603.00568'
-    value_gap_source_title: Enhancing Molecular Property Predictions by Learning from
-      Bond Modelling and Interactions
-    value_gap_source_is_current_paper: false
-    value_gap: 108.2917
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.1083
-    sort_std: null
-    global_rank: 55
-    paper_rank: 88
-    rank_delta: 33
-    rank_delta_abs: 33
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Pure Transformers are Powerful Graph Learners
-    comparison_source_arxiv: '2207.02505'
-    is_best: false
-    is_std_outlier: false
-  - model: GCN-VN
-    model_key: gcn-vn
-    model_plain: GCN-VN
-    value: 115.2
-    std: null
-    paper_value: 115.2
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 4.9
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: kipf2016semi; gilmer2017neural
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 7, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-07'
-    published_venue: ICML 2024
-    published_conference: ICML 2024
-    at_pub_value: 0.1152
-    at_pub_std: null
-    at_pub_source_arxiv: '2201.12787'
-    at_pub_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
-    at_pub_source_date_iso: '2022-01-30'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2023-05-19'
-    value_gap_source_date_label: IJCAI 2023
-    gap_vs_at_pub: 115.0848
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.1152
-    true_std: null
-    value_gap_source_arxiv: '2305.11424'
-    value_gap_source_title: IJCAI--23 Formatting Instructions
-    value_gap_source_is_current_paper: false
-    value_gap: 115.0848
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.1152
-    sort_std: null
-    global_rank: 57
-    paper_rank: 88
-    rank_delta: 31
-    rank_delta_abs: 31
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
-    comparison_source_arxiv: '2201.12787'
-    is_best: false
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.1195
-    std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 3.8
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2603.00568'
-    title: Enhancing Molecular Property Predictions by Learning from Bond Modelling
-      and Interactions
-    date: Feb 28, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-28'
-    venue: Accepted to ICLR 2026
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 62
-    sort_value: 0.1195
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
   - model: TGT-At (+RDKit)
     model_key: tgt-at (+rdkit)
     model_plain: TGT-At (+RDKit)
-    value: 68.3
+    value: 0.0683
     std: null
-    paper_value: 68.3
+    paper_value: 0.0683
     paper_std: null
     metric: MAE
     higher_is_better: false
@@ -724,7 +178,7 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 68.3
+    true_value: 0.0683
     true_std: null
     value_gap_source_arxiv: '2402.04538'
     value_gap_source_title: 'Triplet Interaction Improves Graph Transformers: Accurate
@@ -733,10 +187,10 @@ results:
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 68.3
+    sort_value: 0.0683
     sort_std: null
-    global_rank: 85
-    paper_rank: 85
+    global_rank: 3
+    paper_rank: 3
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -749,9 +203,9 @@ results:
   - model: Uni-Mol+ (+RDKit)
     model_key: uni-mol+ (+rdkit)
     model_plain: Uni-Mol+ (+RDKit)
-    value: 70.5
+    value: 0.0705
     std: null
-    paper_value: 70.5
+    paper_value: 0.0705
     paper_std: null
     metric: MAE
     higher_is_better: false
@@ -792,7 +246,7 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 70.5
+    true_value: 0.0705
     true_std: null
     value_gap_source_arxiv: '2402.04538'
     value_gap_source_title: 'Triplet Interaction Improves Graph Transformers: Accurate
@@ -801,10 +255,10 @@ results:
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 70.5
+    sort_value: 0.0705
     sort_std: null
-    global_rank: 86
-    paper_rank: 86
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -814,12 +268,149 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: GPS
+    model_key: gps
+    model_plain: GPS
+    value: 0.072
+    std: null
+    paper_value: 0.072
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 44.3
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: masters2022gps++
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 7, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-07'
+    published_venue: ICML 2024
+    published_conference: ICML 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.072
+    true_std: null
+    value_gap_source_arxiv: '2402.04538'
+    value_gap_source_title: 'Triplet Interaction Improves Graph Transformers: Accurate
+      Molecular Graph Learning with Triplet Graph Transformers'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.072
+    sort_std: null
+    global_rank: 6
+    paper_rank: 6
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Transformer-M
+    model_key: transformer-m
+    model_plain: Transformer-M
+    value: 0.0782
+    std: null
+    paper_value: 0.0782
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 69.0
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: luo2022one
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 7, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-07'
+    published_venue: ICML 2024
+    published_conference: ICML 2024
+    at_pub_value: 0.0787
+    at_pub_std: null
+    at_pub_source_arxiv: '2210.01765'
+    at_pub_source_title: One Transformer Can Understand Both 2D & 3D Molecular Data
+    at_pub_source_date_iso: '2022-10-04'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: ICLR 2026
+    gap_vs_at_pub: 0.0005000000000000004
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: true
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.0772
+    true_std: null
+    value_gap_source_arxiv: '2603.00568'
+    value_gap_source_title: Enhancing Molecular Property Predictions by Learning from
+      Bond Modelling and Interactions
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0010000000000000009
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.0772
+    sort_std: null
+    global_rank: 7
+    paper_rank: 8
+    rank_delta: 1
+    rank_delta_abs: 1
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: One Transformer Can Understand Both 2D & 3D Molecular
+      Data
+    comparison_source_arxiv: '2210.01765'
+    is_best: false
+    is_std_outlier: false
   - model: GEM-2 (+RDKit)
     model_key: gem-2 (+rdkit)
     model_plain: GEM-2 (+RDKit)
-    value: 80.6
+    value: 0.08059999999999999
     std: null
-    paper_value: 80.6
+    paper_value: 0.08059999999999999
     paper_std: null
     metric: MAE
     higher_is_better: false
@@ -860,7 +451,7 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 80.6
+    true_value: 0.08059999999999999
     true_std: null
     value_gap_source_arxiv: '2402.04538'
     value_gap_source_title: 'Triplet Interaction Improves Graph Transformers: Accurate
@@ -869,10 +460,10 @@ results:
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 80.6
+    sort_value: 0.08059999999999999
     sort_std: null
-    global_rank: 87
-    paper_rank: 87
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -885,9 +476,9 @@ results:
   - model: GraphGPS
     model_key: graphgps
     model_plain: GraphGPS
-    value: 86.2
+    value: 0.0862
     std: null
-    paper_value: 86.2
+    paper_value: 0.0862
     paper_std: null
     metric: MAE
     higher_is_better: false
@@ -928,7 +519,7 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 86.2
+    true_value: 0.0862
     true_std: null
     value_gap_source_arxiv: '2402.04538'
     value_gap_source_title: 'Triplet Interaction Improves Graph Transformers: Accurate
@@ -937,15 +528,391 @@ results:
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 86.2
+    sort_value: 0.0862
     sort_std: null
-    global_rank: 88
-    paper_rank: 88
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: EGT
+    model_key: egt
+    model_plain: EGT
+    value: 0.0862
+    std: null
+    paper_value: 0.0862
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 89.3
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: hussain2022global
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 7, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-07'
+    published_venue: ICML 2024
+    published_conference: ICML 2024
+    at_pub_value: 0.0862
+    at_pub_std: null
+    at_pub_source_arxiv: '2208.05863'
+    at_pub_source_title: 'GEM-2: Next Generation Molecular Property Prediction Network
+      by Modeling Full-range Many-body Interactions'
+    at_pub_source_date_iso: '2022-08-11'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.0862
+    true_std: null
+    value_gap_source_arxiv: '2402.04538'
+    value_gap_source_title: 'Triplet Interaction Improves Graph Transformers: Accurate
+      Molecular Graph Learning with Triplet Graph Transformers'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.0862
+    sort_std: null
+    global_rank: 29
+    paper_rank: 29
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GRPE
+    model_key: grpe
+    model_plain: GRPE
+    value: 0.0876
+    std: null
+    paper_value: 0.0876
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 118.3
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: park2022grpe
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 7, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-07'
+    published_venue: ICML 2024
+    published_conference: ICML 2024
+    at_pub_value: 0.089
+    at_pub_std: null
+    at_pub_source_arxiv: '2205.12454'
+    at_pub_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
+    at_pub_source_date_iso: '2022-05-25'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: 0.0013999999999999985
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.0876
+    true_std: null
+    value_gap_source_arxiv: '2402.04538'
+    value_gap_source_title: 'Triplet Interaction Improves Graph Transformers: Accurate
+      Molecular Graph Learning with Triplet Graph Transformers'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.0876
+    sort_std: null
+    global_rank: 35
+    paper_rank: 35
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
+    comparison_source_arxiv: '2205.12454'
+    is_best: false
+    is_std_outlier: false
+  - model: TokenGT
+    model_key: tokengt
+    model_plain: TokenGT
+    value: 0.09190000000000001
+    std: null
+    paper_value: 0.09190000000000001
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 48.5
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: kim2022pure
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 7, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-07'
+    published_venue: ICML 2024
+    published_conference: ICML 2024
+    at_pub_value: 0.091
+    at_pub_std: null
+    at_pub_source_arxiv: '2210.01765'
+    at_pub_source_title: One Transformer Can Understand Both 2D & 3D Molecular Data
+    at_pub_source_date_iso: '2022-10-04'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: ICLR 2026
+    gap_vs_at_pub: 0.0009000000000000119
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.091
+    true_std: null
+    value_gap_source_arxiv: '2603.00568'
+    value_gap_source_title: Enhancing Molecular Property Predictions by Learning from
+      Bond Modelling and Interactions
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0009000000000000119
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.091
+    sort_std: null
+    global_rank: 44
+    paper_rank: 47
+    rank_delta: 3
+    rank_delta_abs: 3
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: One Transformer Can Understand Both 2D & 3D Molecular
+      Data
+    comparison_source_arxiv: '2210.01765'
+    is_best: false
+    is_std_outlier: false
+  - model: GIN-VN
+    model_key: gin-vn
+    model_plain: GIN-VN
+    value: 0.10840000000000001
+    std: null
+    paper_value: 0.10840000000000001
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 6.7
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: xu2018powerful; gilmer2017neural
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 7, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-07'
+    published_venue: ICML 2024
+    published_conference: ICML 2024
+    at_pub_value: 0.1083
+    at_pub_std: null
+    at_pub_source_arxiv: '2207.02505'
+    at_pub_source_title: Pure Transformers are Powerful Graph Learners
+    at_pub_source_date_iso: '2022-07-06'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: ICLR 2026
+    gap_vs_at_pub: 0.00010000000000001674
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.1083
+    true_std: null
+    value_gap_source_arxiv: '2603.00568'
+    value_gap_source_title: Enhancing Molecular Property Predictions by Learning from
+      Bond Modelling and Interactions
+    value_gap_source_is_current_paper: false
+    value_gap: 0.00010000000000001674
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1083
+    sort_std: null
+    global_rank: 59
+    paper_rank: 60
+    rank_delta: 1
+    rank_delta_abs: 1
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Pure Transformers are Powerful Graph Learners
+    comparison_source_arxiv: '2207.02505'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN-VN
+    model_key: gcn-vn
+    model_plain: GCN-VN
+    value: 0.1152
+    std: null
+    paper_value: 0.1152
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 4.9
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: kipf2016semi; gilmer2017neural
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 7, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-07'
+    published_venue: ICML 2024
+    published_conference: ICML 2024
+    at_pub_value: 0.1152
+    at_pub_std: null
+    at_pub_source_arxiv: '2201.12787'
+    at_pub_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
+    at_pub_source_date_iso: '2022-01-30'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1152
+    true_std: null
+    value_gap_source_arxiv: '2402.04538'
+    value_gap_source_title: 'Triplet Interaction Improves Graph Transformers: Accurate
+      Molecular Graph Learning with Triplet Graph Transformers'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1152
+    sort_std: null
+    global_rank: 61
+    paper_rank: 61
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.1195
+    std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 3.8
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2603.00568'
+    title: Enhancing Molecular Property Predictions by Learning from Bond Modelling
+      and Interactions
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    venue: Accepted to ICLR 2026
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 66
+    sort_value: 0.1195
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

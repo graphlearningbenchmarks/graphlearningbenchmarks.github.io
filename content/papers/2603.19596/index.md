@@ -47,8 +47,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - CO-EVOLVE
-mrr: 0.0179
-adjusted_mrr: 0.0119
+mrr: 0.0196
+adjusted_mrr: 0.0131
 mrr_dataset_count: 2
 benchmark_categories:
 - Classic
@@ -192,7 +192,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 19
+    global_rank: 18
     sort_value: 0.966
     sort_std: null
     comparison_type: global_top
@@ -256,10 +256,10 @@ results:
     value_note: ''
     sort_value: 0.96
     sort_std: 0.001
-    global_rank: 48
-    paper_rank: 198
-    rank_delta: 150
-    rank_delta_abs: 150
+    global_rank: 46
+    paper_rank: 178
+    rank_delta: 132
+    rank_delta_abs: 132
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -323,10 +323,10 @@ results:
     value_note: ''
     sort_value: 0.953
     sort_std: 0.001
-    global_rank: 71
-    paper_rank: 198
-    rank_delta: 127
-    rank_delta_abs: 127
+    global_rank: 68
+    paper_rank: 178
+    rank_delta: 110
+    rank_delta_abs: 110
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -337,8 +337,8 @@ results:
   - model: MLP
     model_key: mlp
     model_plain: MLP
-    value: 0.7435
-    std: 0.0016
+    value: 0.7216
+    std: 0.0015
     metric: F1
     higher_is_better: true
     is_baseline: true
@@ -348,21 +348,20 @@ results:
     architecture_type: other_traditional
     architecture_label: Trad
     architecture_title: Traditional / classical method
-    arxiv_id: '2512.14908'
-    title: 'ATLAS: Adaptive Topology-based Learning at Scale for Homophilic and Heterophilic
-      Graphs'
-    date: Dec 16, 2025
-    date_display: Dec 2025
-    date_iso: '2025-12-16'
-    venue: arXiv.org
-    codebase_url: https://github.com/atlaspaper16/ATLAS
+    arxiv_id: '2405.20445'
+    title: Fully-inductive Node Classification on Arbitrary Graphs
+    date: May 30, 2024
+    date_display: May 2024
+    date_iso: '2024-05-30'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/DeepGraphLearning/GraphAny
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 165
-    sort_value: 0.7435
-    sort_std: 0.0016
+    global_rank: 162
+    sort_value: 0.7216
+    sort_std: 0.0015
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -398,44 +397,42 @@ results:
     date_iso: '2026-03-20'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.6718
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2407.07457'
-    at_pub_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
-      Language Models'
-    at_pub_source_date_iso: '2024-07-10'
-    at_pub_source_date_label: NeurIPS 2024
-    value_gap_source_date_iso: '2024-07-10'
-    value_gap_source_date_label: NeurIPS 2024
-    gap_vs_at_pub: 0.053199999999999914
-    worse_than_at_pub: true
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-03-20'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.6718
+    today_delta_significant: false
+    true_value: 0.6186
     true_std: null
-    value_gap_source_arxiv: '2407.07457'
-    value_gap_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
-      Language Models'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.053199999999999914
+    value_gap_source_arxiv: '2603.19596'
+    value_gap_source_title: 'CO-EVOLVE: Bidirectional Co-Evolution of Graph Structure
+      and Semantics for Heterophilous Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.6718
+    sort_value: 0.6186
     sort_std: null
-    global_rank: 173
-    paper_rank: 179
-    rank_delta: 6
-    rank_delta_abs: 6
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
-      Language Models'
-    comparison_source_arxiv: '2407.07457'
+    global_rank: 167
+    paper_rank: 167
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: CO-EVOLVE
@@ -495,8 +492,8 @@ results:
     value_note: ''
     sort_value: 0.6084
     sort_std: null
-    global_rank: 182
-    paper_rank: 182
+    global_rank: 168
+    paper_rank: 168
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -536,44 +533,42 @@ results:
     date_iso: '2026-03-20'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.605
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2407.07457'
-    at_pub_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
-      Language Models'
-    at_pub_source_date_iso: '2024-07-10'
-    at_pub_source_date_label: NeurIPS 2024
-    value_gap_source_date_iso: '2024-07-10'
-    value_gap_source_date_label: NeurIPS 2024
-    gap_vs_at_pub: 0.01319999999999999
-    worse_than_at_pub: true
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-03-20'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.605
+    today_delta_significant: false
+    true_value: 0.5918
     true_std: null
-    value_gap_source_arxiv: '2407.07457'
-    value_gap_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
-      Language Models'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.01319999999999999
+    value_gap_source_arxiv: '2603.19596'
+    value_gap_source_title: 'CO-EVOLVE: Bidirectional Co-Evolution of Graph Structure
+      and Semantics for Heterophilous Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.605
+    sort_value: 0.5918
     sort_std: null
-    global_rank: 183
-    paper_rank: 186
-    rank_delta: 3
-    rank_delta_abs: 3
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
-      Language Models'
-    comparison_source_arxiv: '2407.07457'
+    global_rank: 170
+    paper_rank: 170
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: FLAG
@@ -633,8 +628,8 @@ results:
     value_note: ''
     sort_value: 0.5809
     sort_std: null
-    global_rank: 191
-    paper_rank: 191
+    global_rank: 174
+    paper_rank: 174
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -701,8 +696,8 @@ results:
     value_note: ''
     sort_value: 0.5802
     sort_std: null
-    global_rank: 192
-    paper_rank: 192
+    global_rank: 175
+    paper_rank: 175
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -742,44 +737,42 @@ results:
     date_iso: '2026-03-20'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.5785
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2407.07457'
-    at_pub_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
-      Language Models'
-    at_pub_source_date_iso: '2024-07-10'
-    at_pub_source_date_label: NeurIPS 2024
-    value_gap_source_date_iso: '2024-07-10'
-    value_gap_source_date_label: NeurIPS 2024
-    gap_vs_at_pub: 0.01319999999999999
-    worse_than_at_pub: true
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-03-20'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.5785
+    today_delta_significant: false
+    true_value: 0.5653
     true_std: null
-    value_gap_source_arxiv: '2407.07457'
-    value_gap_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
-      Language Models'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.01319999999999999
+    value_gap_source_arxiv: '2603.19596'
+    value_gap_source_title: 'CO-EVOLVE: Bidirectional Co-Evolution of Graph Structure
+      and Semantics for Heterophilous Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.5785
+    sort_value: 0.5653
     sort_std: null
-    global_rank: 193
-    paper_rank: 196
-    rank_delta: 3
-    rank_delta_abs: 3
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
-      Language Models'
-    comparison_source_arxiv: '2407.07457'
+    global_rank: 176
+    paper_rank: 176
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: RoBERTa
@@ -812,44 +805,42 @@ results:
     date_iso: '2026-03-20'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.571
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2407.07457'
-    at_pub_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
-      Language Models'
-    at_pub_source_date_iso: '2024-07-10'
-    at_pub_source_date_label: NeurIPS 2024
-    value_gap_source_date_iso: '2024-07-10'
-    value_gap_source_date_label: NeurIPS 2024
-    gap_vs_at_pub: 0.01319999999999999
-    worse_than_at_pub: true
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-03-20'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.571
+    today_delta_significant: false
+    true_value: 0.5578
     true_std: null
-    value_gap_source_arxiv: '2407.07457'
-    value_gap_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
-      Language Models'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.01319999999999999
+    value_gap_source_arxiv: '2603.19596'
+    value_gap_source_title: 'CO-EVOLVE: Bidirectional Co-Evolution of Graph Structure
+      and Semantics for Heterophilous Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.571
+    sort_value: 0.5578
     sort_std: null
-    global_rank: 195
-    paper_rank: 196
-    rank_delta: 1
-    rank_delta_abs: 1
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
-      Language Models'
-    comparison_source_arxiv: '2407.07457'
+    global_rank: 177
+    paper_rank: 177
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: Sent-BERT
@@ -882,44 +873,42 @@ results:
     date_iso: '2026-03-20'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.5709
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2407.07457'
-    at_pub_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
-      Language Models'
-    at_pub_source_date_iso: '2024-07-10'
-    at_pub_source_date_label: NeurIPS 2024
-    value_gap_source_date_iso: '2024-07-10'
-    value_gap_source_date_label: NeurIPS 2024
-    gap_vs_at_pub: 0.01319999999999999
-    worse_than_at_pub: true
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-03-20'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.5709
+    today_delta_significant: false
+    true_value: 0.5577
     true_std: null
-    value_gap_source_arxiv: '2407.07457'
-    value_gap_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
-      Language Models'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.01319999999999999
+    value_gap_source_arxiv: '2603.19596'
+    value_gap_source_title: 'CO-EVOLVE: Bidirectional Co-Evolution of Graph Structure
+      and Semantics for Heterophilous Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.5709
+    sort_value: 0.5577
     sort_std: null
-    global_rank: 196
-    paper_rank: 196
+    global_rank: 178
+    paper_rank: 178
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
-      Language Models'
-    comparison_source_arxiv: '2407.07457'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: InstructGLM
@@ -952,44 +941,42 @@ results:
     date_iso: '2026-03-20'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.5324
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2407.07457'
-    at_pub_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
-      Language Models'
-    at_pub_source_date_iso: '2024-07-10'
-    at_pub_source_date_label: NeurIPS 2024
-    value_gap_source_date_iso: '2024-07-10'
-    value_gap_source_date_label: NeurIPS 2024
-    gap_vs_at_pub: 0.01319999999999999
-    worse_than_at_pub: true
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-03-20'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.5324
+    today_delta_significant: false
+    true_value: 0.5192
     true_std: null
-    value_gap_source_arxiv: '2407.07457'
-    value_gap_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
-      Language Models'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.01319999999999999
+    value_gap_source_arxiv: '2603.19596'
+    value_gap_source_title: 'CO-EVOLVE: Bidirectional Co-Evolution of Graph Structure
+      and Semantics for Heterophilous Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.5324
+    sort_value: 0.5192
     sort_std: null
-    global_rank: 198
-    paper_rank: 199
-    rank_delta: 1
-    rank_delta_abs: 1
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
-      Language Models'
-    comparison_source_arxiv: '2407.07457'
+    global_rank: 179
+    paper_rank: 179
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   rank_metric: F1
@@ -1063,9 +1050,9 @@ results:
     sort_value: 0.9302
     sort_std: 0.0011
     global_rank: 1
-    paper_rank: 226
-    rank_delta: 225
-    rank_delta_abs: 225
+    paper_rank: 216
+    rank_delta: 215
+    rank_delta_abs: 215
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1234,8 +1221,8 @@ results:
     value_note: ''
     sort_value: 0.8535
     sort_std: null
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1303,10 +1290,10 @@ results:
     value_note: ''
     sort_value: 0.8533
     sort_std: null
-    global_rank: 34
-    paper_rank: 219
-    rank_delta: 185
-    rank_delta_abs: 185
+    global_rank: 31
+    paper_rank: 211
+    rank_delta: 180
+    rank_delta_abs: 180
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1345,19 +1332,18 @@ results:
     date_iso: '2026-03-20'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.8233
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2407.07457'
-    at_pub_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
-      Language Models'
-    at_pub_source_date_iso: '2024-07-10'
-    at_pub_source_date_label: NeurIPS 2024
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-03-20'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.021100000000000008
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -1373,16 +1359,15 @@ results:
     value_note: ''
     sort_value: 0.8444
     sort_std: null
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 36
+    paper_rank: 36
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
-      Language Models'
-    comparison_source_arxiv: '2407.07457'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: FLAG
@@ -1442,8 +1427,8 @@ results:
     value_note: ''
     sort_value: 0.8304
     sort_std: null
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 53
+    paper_rank: 53
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1483,19 +1468,18 @@ results:
     date_iso: '2026-03-20'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.8081
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2407.07457'
-    at_pub_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
-      Language Models'
-    at_pub_source_date_iso: '2024-07-10'
-    at_pub_source_date_label: NeurIPS 2024
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-03-20'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.012399999999999967
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -1511,16 +1495,15 @@ results:
     value_note: ''
     sort_value: 0.8205
     sort_std: null
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 61
+    paper_rank: 61
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
-      Language Models'
-    comparison_source_arxiv: '2407.07457'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: LLaGA
@@ -1581,10 +1564,10 @@ results:
     value_note: ''
     sort_value: 0.8074
     sort_std: null
-    global_rank: 85
-    paper_rank: 274
-    rank_delta: 189
-    rank_delta_abs: 189
+    global_rank: 79
+    paper_rank: 263
+    rank_delta: 184
+    rank_delta_abs: 184
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1625,11 +1608,11 @@ results:
     published_conference: ''
     at_pub_value: 0.4825
     at_pub_std: null
-    at_pub_source_arxiv: '2407.09709'
-    at_pub_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph Language
-      Modeling'
-    at_pub_source_date_iso: '2024-07-12'
-    at_pub_source_date_label: ICLR 2024
+    at_pub_source_arxiv: '2603.02938'
+    at_pub_source_title: 'Beyond One-Size-Fits-All: Adaptive Subgraph Denoising for
+      Zero-Shot Graph Learning with Large Language Models'
+    at_pub_source_date_iso: '2026-03-03'
+    at_pub_source_date_label: '2026'
     value_gap_source_date_iso: '2026-03-20'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.3057
@@ -1651,16 +1634,16 @@ results:
     value_note: ''
     sort_value: 0.7882
     sort_std: null
-    global_rank: 150
-    paper_rank: 150
+    global_rank: 147
+    paper_rank: 147
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph
-      Language Modeling'
-    comparison_source_arxiv: '2407.09709'
+    comparison_source_title: 'Beyond One-Size-Fits-All: Adaptive Subgraph Denoising
+      for Zero-Shot Graph Learning with Large Language Models'
+    comparison_source_arxiv: '2603.02938'
     is_best: false
     is_std_outlier: false
   - model: RoBERTa
@@ -1693,19 +1676,18 @@ results:
     date_iso: '2026-03-20'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.5908
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2502.11836'
-    at_pub_source_title: 'Model Generalization on Text Attribute Graphs: Principles
-      with Large Language Models'
-    at_pub_source_date_iso: '2025-02-17'
-    at_pub_source_date_label: '2025'
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-03-20'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.15690000000000004
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -1721,16 +1703,15 @@ results:
     value_note: ''
     sort_value: 0.7477
     sort_std: null
-    global_rank: 245
-    paper_rank: 245
+    global_rank: 236
+    paper_rank: 236
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'Model Generalization on Text Attribute Graphs: Principles
-      with Large Language Models'
-    comparison_source_arxiv: '2502.11836'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: MLP
@@ -1758,7 +1739,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 246
+    global_rank: 237
     sort_value: 0.7469
     sort_std: 0.0085
     comparison_type: global_top
@@ -1796,19 +1777,18 @@ results:
     date_iso: '2026-03-20'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.4573
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2407.07457'
-    at_pub_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
-      Language Models'
-    at_pub_source_date_iso: '2024-07-10'
-    at_pub_source_date_label: NeurIPS 2024
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-03-20'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.2867
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -1824,16 +1804,15 @@ results:
     value_note: ''
     sort_value: 0.744
     sort_std: null
-    global_rank: 248
-    paper_rank: 248
+    global_rank: 239
+    paper_rank: 239
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
-      Language Models'
-    comparison_source_arxiv: '2407.07457'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: Sent-BERT
@@ -1893,8 +1872,8 @@ results:
     value_note: ''
     sort_value: 0.742
     sort_std: null
-    global_rank: 252
-    paper_rank: 252
+    global_rank: 243
+    paper_rank: 243
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

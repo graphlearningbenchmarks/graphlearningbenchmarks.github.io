@@ -48,13 +48,13 @@ abstract: Subgraph-based graph representation learning (SGRL) has recently emerg
   comparable or even better prediction performance; compared to other SGRL baselines,
   SUREL+ achieves $ $20$ $ speedups and significantly improves the prediction accuracy.
 codebase_url: 'https://github.com/Graph-COM/SUREL_Plus{https:'
-extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+extraction_model: google/gemma-4-31B-it
 has_results: true
 paper_type: method
 proposed_models:
 - SUREL
-mrr: 0.15
-adjusted_mrr: 0.1
+mrr: 0.1458
+adjusted_mrr: 0.0972
 mrr_dataset_count: 2
 benchmark_categories:
 - OGB
@@ -71,39 +71,6 @@ results:
 - &id002
   dataset: ogbl-citation2
   rows:
-  - model: MPLP
-    model_key: mplp
-    model_plain: MPLP
-    value: 0.9072
-    std: 0.0012
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.03845'
-    title: Reconsidering the Performance of GAE in Link Prediction
-    date: Nov 6, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-06'
-    venue: International Conference on Information and Knowledge Management
-    codebase_url: https://github.com/GraphPKU/Refined-GAE
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9072
-    sort_std: 0.0012
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
   - model: CFG
     model_key: cfg
     model_plain: CFG
@@ -129,13 +96,13 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: Each node is a paper with 128-dimensional word2vec features
     is_global_top: true
-    global_rank: 2
+    global_rank: 1
     sort_value: 0.8997
     sort_std: 0.0015
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: SIEG
     model_key: sieg
@@ -162,13 +129,46 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: Each node is a paper with 128-dimensional word2vec features
     is_global_top: true
-    global_rank: 3
+    global_rank: 2
     sort_value: 0.8987
     sort_std: 0.0018
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
+    is_std_outlier: false
+  - model: LPFormer
+    model_key: lpformer
+    model_plain: LPFormer
+    value: 0.8981
+    std: 0.0013
+    metric: MRR
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2310.11009'
+    title: 'LPFormer: An Adaptive Graph Transformer for Link Prediction'
+    date: Oct 17, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-17'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/HarryShomer/LPFormer
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.8981
+    sort_std: 0.0013
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
     is_std_outlier: false
   - model: SUREL
     model_key: surel
@@ -187,26 +187,25 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
+    variant_inference_reason: 'dataset: fuzzy match to ogbl-citation2 (score=78)'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Standard link prediction task on ogbl-citation2
+    protocol_note: MRR on ogbl-citation2 standard split for link prediction
     date: Mar 6, 2023
     date_display: Mar 2023
     date_iso: '2023-03-06'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.8974
-    at_pub_std: 0.0018
-    at_pub_source_arxiv: '2202.13538'
-    at_pub_source_title: Algorithm and System Co-design for Efficient Subgraph-based
-      Graph Representation Learning
-    at_pub_source_date_iso: '2022-02-28'
-    at_pub_source_date_label: '2022'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2023-10-14'
     value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
@@ -228,8 +227,8 @@ results:
     value_note: ''
     sort_value: 0.8974
     sort_std: 0.0018
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 4
+    paper_rank: 4
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -237,7 +236,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: SEAL
     model_key: seal
@@ -256,14 +255,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
+    variant_inference_reason: 'dataset: fuzzy match to ogbl-citation2 (score=78)'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Standard link prediction task on ogbl-citation2
+    protocol_note: MRR on ogbl-citation2 standard split for link prediction
     date: Mar 6, 2023
     date_display: Mar 2023
     date_iso: '2023-03-06'
@@ -276,8 +275,8 @@ results:
       for Multi-Node Representation Learning'
     at_pub_source_date_iso: '2020-10-30'
     at_pub_source_date_label: NeurIPS 2020
-    value_gap_source_date_iso: '2024-11-06'
-    value_gap_source_date_label: '2024'
+    value_gap_source_date_iso: '2023-10-17'
+    value_gap_source_date_label: KDD 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -288,16 +287,16 @@ results:
     today_delta_significant: false
     true_value: 0.8767
     true_std: 0.0032
-    value_gap_source_arxiv: '2411.03845'
-    value_gap_source_title: Reconsidering the Performance of GAE in Link Prediction
+    value_gap_source_arxiv: '2310.11009'
+    value_gap_source_title: 'LPFormer: An Adaptive Graph Transformer for Link Prediction'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8767
     sort_std: 0.0032
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -324,14 +323,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
+    variant_inference_reason: 'dataset: fuzzy match to ogbl-citation2 (score=78)'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Standard link prediction task on ogbl-citation2
+    protocol_note: MRR on ogbl-citation2 standard split for link prediction
     date: Mar 6, 2023
     date_display: Mar 2023
     date_iso: '2023-03-06'
@@ -365,8 +364,8 @@ results:
     value_note: ''
     sort_value: 0.8705
     sort_std: 0.0004
-    global_rank: 17
-    paper_rank: 26
+    global_rank: 14
+    paper_rank: 23
     rank_delta: 9
     rank_delta_abs: 9
     rank_delta_direction: worse
@@ -393,14 +392,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
+    variant_inference_reason: 'dataset: fuzzy match to ogbl-citation2 (score=78)'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Standard link prediction task on ogbl-citation2
+    protocol_note: MRR on ogbl-citation2 standard split for link prediction
     date: Mar 6, 2023
     date_display: Mar 2023
     date_iso: '2023-03-06'
@@ -433,8 +432,8 @@ results:
     value_note: ''
     sort_value: 0.8696
     sort_std: 0.0028
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -470,7 +469,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 33
+    global_rank: 28
     sort_value: 0.8367
     sort_std: 0.0007
     comparison_type: global_top
@@ -495,14 +494,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
+    variant_inference_reason: 'dataset: fuzzy match to ogbl-citation2 (score=78)'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Standard link prediction task on ogbl-citation2
+    protocol_note: MRR on ogbl-citation2 standard split for link prediction
     date: Mar 6, 2023
     date_display: Mar 2023
     date_iso: '2023-03-06'
@@ -535,8 +534,8 @@ results:
     value_note: ''
     sort_value: 0.7985
     sort_std: 0.004
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 44
+    paper_rank: 44
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -572,7 +571,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 78
+    global_rank: 72
     sort_value: 0.3917
     sort_std: 0.0044
     comparison_type: global_top
@@ -590,80 +589,48 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 - &id001
-  dataset: ogbl-ppa
+  dataset: ogbl-collab
   rows:
-  - model: Optimized GAE
-    model_key: optimized gae
-    model_plain: Optimized GAE
-    value: 0.7841
-    std: 0.0083
-    metric: Hits@100
+  - model: PROXI
+    model_key: proxi
+    model_plain: PROXI
+    value: 0.765
+    std: 0.0027
+    metric: Hits@50
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.03845'
-    title: Reconsidering the Performance of GAE in Link Prediction
-    date: Nov 6, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-06'
-    venue: International Conference on Information and Knowledge Management
-    codebase_url: https://github.com/GraphPKU/Refined-GAE
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2410.01802'
+    title: 'PROXI: Challenging the GNNs for Link Prediction'
+    date: Oct 2, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-02'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/workrep20232/PROXI
     uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: combines all relevant proximity information about node
+      pairs... structural proximity... and domain proximity
     is_global_top: true
     global_rank: 1
-    sort_value: 0.7841
-    sort_std: 0.0083
+    sort_value: 0.765
+    sort_std: 0.0027
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MPLP
-    model_key: mplp
-    model_plain: MPLP
-    value: 0.6524
-    std: 0.015
-    metric: Hits@100
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.03845'
-    title: Reconsidering the Performance of GAE in Link Prediction
-    date: Nov 6, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-06'
-    venue: International Conference on Information and Knowledge Management
-    codebase_url: https://github.com/GraphPKU/Refined-GAE
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.6524
-    sort_std: 0.015
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
   - model: OGB Leader
     model_key: ogb leader
     model_plain: OGB Leader
-    value: 0.6524
-    std: 0.015
-    metric: Hits@100
+    value: 0.7129
+    std: 0.0018
+    metric: Hits@50
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -680,13 +647,183 @@ results:
     venue: Trans. Mach. Learn. Res.
     codebase_url: https://github.com/workrep20232/PROXI
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.7129
+    sort_std: 0.0018
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIDN
+    model_key: gidn
+    model_plain: GIDN
+    value: 0.7096
+    std: 0.0055
+    metric: Hits@50
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.01301'
+    title: 'GIDN: A Lightweight Graph Inception Diffusion Network for High-efficient
+      Link Prediction'
+    date: Oct 4, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-04'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.6524
-    sort_std: 0.015
+    sort_value: 0.7096
+    sort_std: 0.0055
     comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.4475
+    std: 0.0107
+    paper_value: 0.4475
+    paper_std: 0.0107
+    metric: Hits@50
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: link_prediction
+    protocol_decision: standard
+    protocol_note: Hits@50 on ogbl-collab standard split
+    date: Mar 6, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-06'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.48956
+    at_pub_std: 0.01143
+    at_pub_source_arxiv: '2003.00982'
+    at_pub_source_title: GNNBenchmark
+    at_pub_source_date_iso: '2023-01-01'
+    at_pub_source_date_label: JMLR 2023
+    value_gap_source_date_iso: '2024-09-26'
+    value_gap_source_date_label: NeurIPS 2024
+    gap_vs_at_pub: 0.042059999999999986
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.6621
+    true_std: 0.0033
+    value_gap_source_arxiv: '2409.17475'
+    value_gap_source_title: On the Impact of Feature Heterophily on Link Prediction
+      with Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.2146
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6621
+    sort_std: 0.0033
+    global_rank: 10
+    paper_rank: 88
+    rank_delta: 78
+    rank_delta_abs: 78
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: GNNBenchmark
+    comparison_source_arxiv: '2003.00982'
+    is_best: false
+    is_std_outlier: false
+  - model: SEAL
+    model_key: seal
+    model_plain: SEAL
+    value: 0.6364
+    std: 0.0071
+    paper_value: 0.6364
+    paper_std: 0.0071
+    metric: Hits@50
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: link_prediction
+    protocol_decision: standard
+    protocol_note: Hits@50 on ogbl-collab standard split
+    date: Mar 6, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-06'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.6474
+    at_pub_std: 0.0043
+    at_pub_source_arxiv: '2010.16103'
+    at_pub_source_title: 'Labeling Trick: A Theory of Using Graph Neural Networks
+      for Multi-Node Representation Learning'
+    at_pub_source_date_iso: '2020-10-30'
+    at_pub_source_date_label: NeurIPS 2020
+    value_gap_source_date_iso: '2023-10-17'
+    value_gap_source_date_label: KDD 2023
+    gap_vs_at_pub: 0.01100000000000001
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: true
+    true_value: 0.6474
+    true_std: 0.0043
+    value_gap_source_arxiv: '2310.11009'
+    value_gap_source_title: 'LPFormer: An Adaptive Graph Transformer for Link Prediction'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.01100000000000001
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6474
+    sort_std: 0.0043
+    global_rank: 20
+    paper_rank: 25
+    rank_delta: 5
+    rank_delta_abs: 5
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -694,11 +831,11 @@ results:
   - model: SUREL
     model_key: surel
     model_plain: SUREL
-    value: 0.5432
-    std: 0.0044
-    paper_value: 0.5432
-    paper_std: 0.0044
-    metric: Hits@100
+    value: 0.641
+    std: 0.0106
+    paper_value: 0.641
+    paper_std: 0.0106
+    metric: Hits@50
     higher_is_better: true
     is_baseline: false
     is_overridden: false
@@ -708,218 +845,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 1
+    table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Standard link prediction task on ogbl-ppa
-    date: Mar 6, 2023
-    date_display: Mar 2023
-    date_iso: '2023-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.5323
-    at_pub_std: 0.0103
-    at_pub_source_arxiv: '2202.13538'
-    at_pub_source_title: Algorithm and System Co-design for Efficient Subgraph-based
-      Graph Representation Learning
-    at_pub_source_date_iso: '2022-02-28'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2023-10-14'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.01090000000000002
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: true
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.5432
-    true_std: 0.0044
-    value_gap_source_arxiv: '2310.09516'
-    value_gap_source_title: Efficient Link Prediction via GNN Layers Induced by Negative
-      Sampling
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.5432
-    sort_std: 0.0044
-    global_rank: 10
-    paper_rank: 10
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SAGE
-    model_key: sage
-    model_plain: SAGE
-    value: 0.5013
-    std: 0.0055
-    metric: Hits@100
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2303.00170'
-    title: Asymmetric Learning for Graph Neural Network based Link Prediction
-    date: Mar 1, 2023
-    date_display: Mar 2023
-    date_iso: '2023-03-01'
-    venue: ACM Transactions on Knowledge Discovery from Data
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 16
-    sort_value: 0.5013
-    sort_std: 0.0055
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SEAL
-    model_key: seal
-    model_plain: SEAL
-    value: 0.488
-    std: 0.0316
-    paper_value: 0.488
-    paper_std: 0.0316
-    metric: Hits@100
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: link_prediction
-    protocol_decision: standard
-    protocol_note: Standard link prediction task on ogbl-ppa
-    date: Mar 6, 2023
-    date_display: Mar 2023
-    date_iso: '2023-03-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.488
-    at_pub_std: 0.0316
-    at_pub_source_arxiv: '2010.16103'
-    at_pub_source_title: 'Labeling Trick: A Theory of Using Graph Neural Networks
-      for Multi-Node Representation Learning'
-    at_pub_source_date_iso: '2020-10-30'
-    at_pub_source_date_label: NeurIPS 2020
-    value_gap_source_date_iso: '2025-02-04'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.488
-    true_std: 0.0316
-    value_gap_source_arxiv: '2502.02479'
-    value_gap_source_title: Using Random Noise Equivariantly to Boost Graph Neural
-      Networks Universally
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.488
-    sort_std: 0.0316
-    global_rank: 22
-    paper_rank: 22
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MLP
-    model_key: mlp
-    model_plain: MLP
-    value: 0.46
-    std: 0.0
-    metric: Hits@100
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2310.09516'
-    title: Efficient Link Prediction via GNN Layers Induced by Negative Sampling
-    date: Oct 14, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-14'
-    venue: IEEE Transactions on Knowledge and Data Engineering
-    codebase_url: https://github.com/yxzwang/SubmissionverOfYinYanGNN
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 26
-    sort_value: 0.46
-    sort_std: 0.0
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GDGNN
-    model_key: gdgnn
-    model_plain: GDGNN
-    value: 0.4592
-    std: 0.0214
-    paper_value: 0.4592
-    paper_std: 0.0214
-    metric: Hits@100
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: link_prediction
-    protocol_decision: standard
-    protocol_note: Standard link prediction task on ogbl-ppa
+    protocol_note: Hits@50 on ogbl-collab standard split
     date: Mar 6, 2023
     date_display: Mar 2023
     date_iso: '2023-03-06'
@@ -941,8 +874,8 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.4592
-    true_std: 0.0214
+    true_value: 0.641
+    true_std: 0.0106
     value_gap_source_arxiv: '2310.09516'
     value_gap_source_title: Efficient Link Prediction via GNN Layers Induced by Negative
       Sampling
@@ -950,10 +883,10 @@ results:
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.4592
-    sort_std: 0.0214
-    global_rank: 29
-    paper_rank: 29
+    sort_value: 0.641
+    sort_std: 0.0106
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -963,14 +896,47 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.1867
-    std: 0.0132
-    paper_value: 0.1867
-    paper_std: 0.0132
-    metric: Hits@100
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.5944
+    std: 0.0137
+    metric: Hits@50
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2410.01802'
+    title: 'PROXI: Challenging the GNNs for Link Prediction'
+    date: Oct 2, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-02'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/workrep20232/PROXI
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 27
+    sort_value: 0.5944
+    sort_std: 0.0137
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GDGNN
+    model_key: gdgnn
+    model_plain: GDGNN
+    value: 0.5474
+    std: 0.0048
+    paper_value: 0.5474
+    paper_std: 0.0048
+    metric: Hits@50
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -980,51 +946,52 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 1
+    table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Standard link prediction task on ogbl-ppa
+    protocol_note: Hits@50 on ogbl-collab standard split
     date: Mar 6, 2023
     date_display: Mar 2023
     date_iso: '2023-03-06'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.187
-    at_pub_std: 0.013
-    at_pub_source_arxiv: '2006.07846'
-    at_pub_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
-    at_pub_source_date_iso: '2020-06-14'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2024-06-24'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.0002999999999999947
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-10-14'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
     worse_than_at_pub: false
-    surpassed_since_pub: true
+    surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.3084
-    true_std: 0.0178
-    value_gap_source_arxiv: '2406.16687'
-    value_gap_source_title: Link Prediction with Untrained Message Passing Layers
+    today_delta_significant: false
+    true_value: 0.5474
+    true_std: 0.0048
+    value_gap_source_arxiv: '2310.09516'
+    value_gap_source_title: Efficient Link Prediction via GNN Layers Induced by Negative
+      Sampling
     value_gap_source_is_current_paper: false
-    value_gap: 0.1217
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.3084
-    sort_std: 0.0178
-    global_rank: 49
-    paper_rank: 63
-    rank_delta: 14
-    rank_delta_abs: 14
-    rank_delta_direction: worse
-    has_value_gap: true
+    sort_value: 0.5474
+    sort_std: 0.0048
+    global_rank: 35
+    paper_rank: 35
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1033,11 +1000,11 @@ results:
   - model: GraphSAINT
     model_key: graphsaint
     model_plain: GraphSAINT
-    value: 0.0383
-    std: 0.0133
-    paper_value: 0.0383
-    paper_std: 0.0133
-    metric: Hits@100
+    value: 0.5312
+    std: 0.0052
+    paper_value: 0.5312
+    paper_std: 0.0052
+    metric: Hits@50
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -1047,26 +1014,25 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 1
+    table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Standard link prediction task on ogbl-ppa
+    protocol_note: Hits@50 on ogbl-collab standard split
     date: Mar 6, 2023
     date_display: Mar 2023
     date_iso: '2023-03-06'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.0383
-    at_pub_std: 0.0133
-    at_pub_source_arxiv: '2202.13538'
-    at_pub_source_title: Algorithm and System Co-design for Efficient Subgraph-based
-      Graph Representation Learning
-    at_pub_source_date_iso: '2022-02-28'
-    at_pub_source_date_label: '2022'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2023-03-06'
     value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
@@ -1077,8 +1043,8 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.0383
-    true_std: 0.0133
+    true_value: 0.5312
+    true_std: 0.0052
     value_gap_source_arxiv: '2303.03379'
     value_gap_source_title: 'SUREL+: Moving from Walks to Sets for Scalable Subgraph-based
       Graph Representation Learning'
@@ -1086,10 +1052,10 @@ results:
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.0383
-    sort_std: 0.0133
-    global_rank: 77
-    paper_rank: 77
+    sort_value: 0.5312
+    sort_std: 0.0052
+    global_rank: 46
+    paper_rank: 46
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1099,13 +1065,47 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  rank_metric: Hits@100
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.4438
+    std: 0.0347
+    metric: Hits@50
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2504.06193'
+    title: 'Weak Models Can be Good Teachers: A Case Study on Link Prediction with
+      MLPs'
+    date: Apr 8, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-08'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 91
+    sort_value: 0.4438
+    sort_std: 0.0347
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Hits@50
   higher_is_better: true
   experiment_scope: edge-level
-  dataset_primary_metric: Hits@100
+  dataset_primary_metric: Hits@50
   paper_metrics:
-  - Hits@100
-  metric: Hits@100
+  - Hits@50
+  metric: Hits@50
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
@@ -1120,8 +1120,8 @@ datasets_by_scope:
   - benchmark: OGB
     benchmark_slug: ogb
     datasets:
-    - dataset: ogbl-ppa
-      dataset_slug: ogbl-ppa
+    - dataset: ogbl-collab
+      dataset_slug: ogbl-collab
     - dataset: ogbl-citation2
       dataset_slug: ogbl-citation2
 single_proposed_model: SUREL

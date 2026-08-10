@@ -57,7 +57,7 @@ benchmark_coverage:
 - benchmark: Quantum Chemistry
   benchmark_slug: quantum-chemistry
   evaluated: 1
-  total: 3
+  total: 1
 task_categories:
 - graph_regression
 experiment_scopes:
@@ -408,16 +408,16 @@ results:
     date_iso: '2024-07-02'
     published_venue: ICLR 2024
     published_conference: ICLR 2024
-    at_pub_value: 0.055
+    at_pub_value: 2.4
     at_pub_std: null
-    at_pub_source_arxiv: '2210.16518'
-    at_pub_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural network
-      with vector-scalar interactive message passing for molecules'
-    at_pub_source_date_iso: '2022-10-29'
-    at_pub_source_date_label: '2022'
+    at_pub_source_arxiv: '2310.02970'
+    at_pub_source_title: Fast, Expressive SE$(n)$ Equivariant Networks through Weight-Sharing
+      in Position-Orientation Space
+    at_pub_source_date_iso: '2023-10-04'
+    at_pub_source_date_label: ICLR 2023
     value_gap_source_date_iso: '2024-07-02'
     value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.053
+    gap_vs_at_pub: 2.398
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: true
@@ -443,9 +443,9 @@ results:
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
-    comparison_source_arxiv: '2210.16518'
+    comparison_source_title: Fast, Expressive SE$(n)$ Equivariant Networks through
+      Weight-Sharing in Position-Orientation Space
+    comparison_source_arxiv: '2310.02970'
     is_best: false
     is_std_outlier: false
   - model: Allegro
@@ -577,9 +577,9 @@ results:
     sort_value: 0.01
     sort_std: null
     global_rank: 22
-    paper_rank: 98
-    rank_delta: 76
-    rank_delta_abs: 76
+    paper_rank: 96
+    rank_delta: 74
+    rank_delta_abs: 74
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -715,9 +715,9 @@ results:
     sort_value: 0.039
     sort_std: null
     global_rank: 36
-    paper_rank: 84
-    rank_delta: 48
-    rank_delta_abs: 48
+    paper_rank: 83
+    rank_delta: 47
+    rank_delta_abs: 47
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -785,9 +785,9 @@ results:
     sort_value: 0.05
     sort_std: null
     global_rank: 46
-    paper_rank: 109
-    rank_delta: 63
-    rank_delta_abs: 63
+    paper_rank: 107
+    rank_delta: 61
+    rank_delta_abs: 61
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -855,9 +855,9 @@ results:
     sort_value: 0.0502
     sort_std: null
     global_rank: 47
-    paper_rank: 91
-    rank_delta: 44
-    rank_delta_abs: 44
+    paper_rank: 90
+    rank_delta: 43
+    rank_delta_abs: 43
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -924,9 +924,9 @@ results:
     sort_value: 0.052
     sort_std: null
     global_rank: 54
-    paper_rank: 87
-    rank_delta: 33
-    rank_delta_abs: 33
+    paper_rank: 86
+    rank_delta: 32
+    rank_delta_abs: 32
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -994,9 +994,9 @@ results:
     sort_value: 0.052
     sort_std: null
     global_rank: 53
-    paper_rank: 92
-    rank_delta: 39
-    rank_delta_abs: 39
+    paper_rank: 91
+    rank_delta: 38
+    rank_delta_abs: 38
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1061,10 +1061,10 @@ results:
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 65
-    paper_rank: 100
-    rank_delta: 35
-    rank_delta_abs: 35
+    global_rank: 64
+    paper_rank: 98
+    rank_delta: 34
+    rank_delta_abs: 34
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1129,8 +1129,8 @@ results:
     value_note: ''
     sort_value: 0.151
     sort_std: null
-    global_rank: 97
-    paper_rank: 97
+    global_rank: 95
+    paper_rank: 95
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

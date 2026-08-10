@@ -44,7 +44,7 @@ paper_type: method
 proposed_models:
 - OpenGraph
 mrr: 0.0016
-adjusted_mrr: 0.0011
+adjusted_mrr: 0.001
 mrr_dataset_count: 2
 benchmark_categories:
 - Classic
@@ -65,7 +65,7 @@ experiment_scopes:
 - edge-level
 - node-level
 results:
-- &id001
+- &id002
   dataset: CiteSeer
   is_multi_metric: true
   rows:
@@ -423,27 +423,27 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.7639
-    sort_std: null
-    true_value: 0.7639
-    true_std: null
+    sort_value: 0.7618
+    sort_std: 0.0078
+    true_value: 0.7618
+    true_std: 0.0078
     paper_value: 0.282
     paper_std: null
     has_value_gap: true
     has_value_note: false
-    value_gap: 0.48190000000000005
-    value_gap_source_arxiv: '2010.00238'
-    value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
+    value_gap: 0.47980000000000006
+    value_gap_source_arxiv: '2310.11762'
+    value_gap_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
     value_note: ''
-    at_pub_value: 0.7639
-    at_pub_std: null
-    at_pub_source_arxiv: '2010.00238'
-    at_pub_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    at_pub_source_date_iso: '2020-10-01'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2020-10-01'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: 0.48190000000000005
+    at_pub_value: 0.7618
+    at_pub_std: 0.0078
+    at_pub_source_arxiv: '2310.11762'
+    at_pub_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    at_pub_source_date_iso: '2023-10-18'
+    at_pub_source_date_label: WWW 2023
+    value_gap_source_date_iso: '2023-10-18'
+    value_gap_source_date_label: WWW 2023
+    gap_vs_at_pub: 0.47980000000000006
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -462,11 +462,11 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     comparison_type: behind
-    comparison_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    comparison_source_arxiv: '2010.00238'
+    comparison_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    comparison_source_arxiv: '2310.11762'
     is_best: false
     is_std_outlier: false
-    global_rank: 155
+    global_rank: 165
   - model: MLP
     model_key: mlp
     model_plain: MLP
@@ -589,7 +589,7 @@ results:
     comparison_source_arxiv: '2207.11996'
     is_best: false
     is_std_outlier: false
-    global_rank: 445
+    global_rank: 446
   - model: OpenGraph
     model_key: opengraph
     model_plain: OpenGraph
@@ -709,7 +709,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: true
-    global_rank: 926
+    global_rank: 941
   - model: GPF
     model_key: gpf
     model_plain: GPF
@@ -770,7 +770,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 940
+    global_rank: 953
   - model: MF
     model_key: mf
     model_plain: MF
@@ -830,7 +830,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 980
+    global_rank: 989
   metrics:
   - Accuracy
   - F1
@@ -845,7 +845,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id001
   dataset: PubMed
   is_multi_metric: true
   rows:
@@ -889,46 +889,6 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: SAGN
-    model_key: sagn
-    model_plain: SAGN
-    metric_values:
-    - 0.9517
-    - null
-    metric_stds:
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2605.24867'
-    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
-      Graph Learning'
-    published_venue: ''
-    date: May 24, 2026
-    date_display: May 2026
-    date_iso: '2026-05-24'
-    codebase_url: https://github.com/Uncnbb/KCoT
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 2
-    is_best: true
-    sort_value: 0.9517
-    sort_std: null
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
   - model: MixHop (LO)
     model_key: mixhop (lo)
     model_plain: MixHop (LO)
@@ -955,7 +915,7 @@ results:
     codebase_url: https://github.com/QiaoYRan/LOGIN
     uses_external_data: false
     is_global_top: true
-    global_rank: 3
+    global_rank: 2
     is_best: true
     sort_value: 0.9513
     sort_std: 0.0038
@@ -969,14 +929,14 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
+  - model: GraphSAGE (LO)
+    model_key: graphsage (lo)
+    model_plain: GraphSAGE (LO)
     metric_values:
-    - 0.9487
+    - 0.9511
     - null
     metric_stds:
-    - null
+    - 0.0036
     - null
     is_baseline: true
     is_overridden: false
@@ -985,20 +945,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2605.24867'
-    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
-      Graph Learning'
+    arxiv_id: '2405.13902'
+    title: 'LOGIN: A Large Language Model Consulted Graph Neural Network Training
+      Framework'
     published_venue: ''
-    date: May 24, 2026
-    date_display: May 2026
-    date_iso: '2026-05-24'
-    codebase_url: https://github.com/Uncnbb/KCoT
+    date: May 22, 2024
+    date_display: May 2024
+    date_iso: '2024-05-22'
+    codebase_url: https://github.com/QiaoYRan/LOGIN
     uses_external_data: false
     is_global_top: true
-    global_rank: 9
-    is_best: false
-    sort_value: 0.9487
-    sort_std: null
+    global_rank: 3
+    is_best: true
+    sort_value: 0.9511
+    sort_std: 0.0036
     has_value_gap: false
     has_value_note: false
     paper_rank: null
@@ -1026,17 +986,17 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     sort_value: 0.9296
-    sort_std: null
+    sort_std: 0.0015
     true_value: 0.9296
-    true_std: null
+    true_std: 0.0015
     paper_value: 0.427
     paper_std: null
     has_value_gap: true
     has_value_note: false
     value_gap: 0.5025999999999999
-    value_gap_source_arxiv: '2605.24867'
-    value_gap_source_title: 'Clustering as Reasoning: A $k$-Means Interpretation of
-      Chain-of-Thought Graph Learning'
+    value_gap_source_arxiv: '2505.15845'
+    value_gap_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem
+      in Tokenized Graph Learning Models'
     value_note: ''
     at_pub_value: 0.897
     at_pub_std: null
@@ -1044,8 +1004,8 @@ results:
     at_pub_source_title: Tackling Over-Smoothing for General Graph Convolutional Networks
     at_pub_source_date_iso: '2020-08-22'
     at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2026-05-24'
-    value_gap_source_date_label: ICML 2026
+    value_gap_source_date_iso: '2025-05-19'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: 0.47000000000000003
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1070,7 +1030,7 @@ results:
     comparison_source_arxiv: '2008.09864'
     is_best: false
     is_std_outlier: false
-    global_rank: 21
+    global_rank: 19
   - model: GAT
     model_key: gat
     model_plain: GAT
@@ -1088,17 +1048,17 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     sort_value: 0.9233
-    sort_std: null
+    sort_std: 0.0018
     true_value: 0.9233
-    true_std: null
+    true_std: 0.0018
     paper_value: 0.472
     paper_std: null
     has_value_gap: true
     has_value_note: false
     value_gap: 0.45130000000000003
-    value_gap_source_arxiv: '2605.24867'
-    value_gap_source_title: 'Clustering as Reasoning: A $k$-Means Interpretation of
-      Chain-of-Thought Graph Learning'
+    value_gap_source_arxiv: '2505.15845'
+    value_gap_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem
+      in Tokenized Graph Learning Models'
     value_note: ''
     at_pub_value: 0.897
     at_pub_std: null
@@ -1106,8 +1066,8 @@ results:
     at_pub_source_title: Tackling Over-Smoothing for General Graph Convolutional Networks
     at_pub_source_date_iso: '2020-08-22'
     at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2026-05-24'
-    value_gap_source_date_label: ICML 2026
+    value_gap_source_date_iso: '2025-05-19'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: 0.42500000000000004
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1133,14 +1093,14 @@ results:
     is_best: false
     is_std_outlier: false
     global_rank: 23
-  - model: GraphCL
-    model_key: graphcl
-    model_plain: GraphCL
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
     metric_values:
-    - 0.407
-    - 0.413
-    metric_stds:
+    - 0.8881
     - null
+    metric_stds:
+    - 0.0015
     - null
     is_baseline: true
     is_overridden: false
@@ -1149,52 +1109,30 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.9039
-    sort_std: null
-    true_value: 0.9039
-    true_std: null
-    paper_value: 0.407
-    paper_std: null
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 0.49690000000000006
-    value_gap_source_arxiv: '2603.01385'
-    value_gap_source_title: Toward Graph-Tokenizing Large Language Models with Reconstructive
-      Graph Instruction Tuning
-    value_note: ''
-    at_pub_value: 0.8196
-    at_pub_std: 0.0073
-    at_pub_source_arxiv: '2206.03601'
-    at_pub_source_title: Decoupled Self-supervised Learning for Non-Homophilou Graphs
-    at_pub_source_date_iso: '2022-06-07'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2026-03-02'
-    value_gap_source_date_label: WWW 2026
-    gap_vs_at_pub: 0.4126
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    arxiv_id: ''
-    title: ''
+    arxiv_id: '2506.07168'
+    title: Efficient Text-Attributed Graph Learning through Selective Annotation and
+      Graph Alignment
     published_venue: ''
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
+    date: Jun 8, 2025
+    date_display: Jun 2025
+    date_iso: '2025-06-08'
     codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: behind
-    comparison_source_title: Decoupled Self-supervised Learning for Non-Homophilou
-      Graphs
-    comparison_source_arxiv: '2206.03601'
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 134
     is_best: false
+    sort_value: 0.8881
+    sort_std: 0.0015
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_std_outlier: false
-    global_rank: 64
   - model: GIN
     model_key: gin
     model_plain: GIN
@@ -1257,7 +1195,7 @@ results:
     comparison_source_arxiv: '2308.10737'
     is_best: false
     is_std_outlier: false
-    global_rank: 176
+    global_rank: 181
   - model: DGI
     model_key: dgi
     model_plain: DGI
@@ -1320,7 +1258,7 @@ results:
     comparison_source_arxiv: '2203.12265'
     is_best: false
     is_std_outlier: false
-    global_rank: 226
+    global_rank: 235
   - model: MLP
     model_key: mlp
     model_plain: MLP
@@ -1380,7 +1318,69 @@ results:
     comparison_source_arxiv: '2310.00183'
     is_best: false
     is_std_outlier: false
-    global_rank: 233
+    global_rank: 243
+  - model: GraphCL
+    model_key: graphcl
+    model_plain: GraphCL
+    metric_values:
+    - 0.407
+    - 0.413
+    metric_stds:
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    sort_value: 0.8196
+    sort_std: 0.0073
+    true_value: 0.8196
+    true_std: 0.0073
+    paper_value: 0.407
+    paper_std: null
+    has_value_gap: true
+    has_value_note: false
+    value_gap: 0.4126
+    value_gap_source_arxiv: '2206.03601'
+    value_gap_source_title: Decoupled Self-supervised Learning for Non-Homophilou
+      Graphs
+    value_note: ''
+    at_pub_value: 0.8196
+    at_pub_std: 0.0073
+    at_pub_source_arxiv: '2206.03601'
+    at_pub_source_title: Decoupled Self-supervised Learning for Non-Homophilou Graphs
+    at_pub_source_date_iso: '2022-06-07'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-06-07'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.4126
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    arxiv_id: ''
+    title: ''
+    published_venue: ''
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    comparison_type: behind
+    comparison_source_title: Decoupled Self-supervised Learning for Non-Homophilou
+      Graphs
+    comparison_source_arxiv: '2206.03601'
+    is_best: false
+    is_std_outlier: false
+    global_rank: 376
   - model: OpenGraph
     model_key: opengraph
     model_plain: OpenGraph
@@ -1440,7 +1440,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 882
+    global_rank: 933
   - model: GPF
     model_key: gpf
     model_plain: GPF
@@ -1500,7 +1500,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: true
-    global_rank: 905
+    global_rank: 957
   - model: GPrompt
     model_key: gprompt
     model_plain: GPrompt
@@ -1560,7 +1560,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 915
+    global_rank: 961
   - model: MF
     model_key: mf
     model_plain: MF
@@ -1620,7 +1620,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 932
+    global_rank: 975
   metrics:
   - Accuracy
   - F1
@@ -2332,10 +2332,10 @@ datasets_by_scope:
   - benchmark: Classic
     benchmark_slug: classic
     datasets:
-    - dataset: CiteSeer
-      dataset_slug: citeseer
     - dataset: PubMed
       dataset_slug: pubmed
+    - dataset: CiteSeer
+      dataset_slug: citeseer
 - scope: edge-level
   label: Edge-level
   benchmarks:

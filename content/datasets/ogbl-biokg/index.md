@@ -399,12 +399,32 @@ variants:
   metric_counts:
   - 12
   milestones: &id001
-  - value: 0.8309
-    std: 0.0008
-    model: AutoSF
-    arxiv_id: '2209.08271'
-    title: 'TripleRE: Knowledge Graph Embeddings via Tripled Relation Vectors'
-    date: '2022-09-17'
+  - value: 0.8095
+    std: 0.0007
+    model: ComplEx
+    arxiv_id: '2005.00687'
+    title: OGB
+    date: '2020-05-02'
+  - value: 0.8164
+    std: 0.0005
+    model: PairRE
+    arxiv_id: '2011.03798'
+    title: 'PairRE: Knowledge Graph Embeddings via Paired Relation Vectors'
+    date: '2020-11-07'
+  - value: 0.8317
+    std: null
+    model: NBFnet
+    arxiv_id: '2106.06935'
+    title: 'Neural Bellman-Ford Networks: A General Graph Neural Network Framework
+      for Link Prediction'
+    date: '2021-06-13'
+  - value: 0.836
+    std: null
+    model: PairRE+LRE
+    arxiv_id: '2204.13957'
+    title: 'PIE: a Parameter and Inference Efficient Solution for Large Scale Knowledge
+      Graph Embedding Reasoning'
+    date: '2022-04-29'
   milestones_by_metric:
     MRR: *id001
 ---

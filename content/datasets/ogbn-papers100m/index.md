@@ -12,7 +12,7 @@ stats:
   avg_nodes: 1615685872.0
   avg_edges: null
   num_classes: 172
-result_count: 137
+result_count: 141
 best_model:
   model: SGC
   value: 0.791
@@ -24,6 +24,11 @@ papers:
   title: 'Coden: Efficient Temporal Graph Neural Networks for Continuous Prediction'
   date_iso: '2026-02-13'
   venue: ''
+- arxiv_id: '2505.14033'
+  title: 'Partition-wise Graph Filtering: A Unified Perspective Through the Lens of
+    Graph Coarsening'
+  date_iso: '2025-05-20'
+  venue: KDD 2025
 - arxiv_id: '2504.13266'
   title: 'Graph Learning at Scale: Characterizing and Optimizing Pre-Propagation GNNs'
   date_iso: '2025-04-17'
@@ -32,10 +37,6 @@ papers:
   title: Accurate and Scalable Graph Neural Networks via Message Invariance
   date_iso: '2025-02-27'
   venue: ICLR 2025
-- arxiv_id: '2502.00806'
-  title: 'UniGraph2: Learning a Unified Embedding Space to Bind Multimodal Graphs'
-  date_iso: '2025-02-02'
-  venue: WWW 2025
 - arxiv_id: '2412.19106'
   title: 'ERGNN: Spectral Graph Neural Network With Explicitly-Optimized Rational
     Graph Filters'
@@ -357,6 +358,35 @@ variants:
     metric_stds:
     - 0.0047
     - null
+  - model: CPF
+    model_plain: CPF
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.14033'
+    title: 'Partition-wise Graph Filtering: A Unified Perspective Through the Lens
+      of Graph Coarsening'
+    date: May 20, 2025
+    date_iso: '2025-05-20'
+    date_display: May 2025
+    codebase_url: https://github.com/vasile-paskardlgm/CPF
+    published_conference: KDD 2025
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6887
+    - null
+    metric_stds:
+    - 0.003
+    - null
   - model: TFGNN
     model_plain: TFGNN
     is_baseline: false
@@ -609,34 +639,6 @@ variants:
     - null
     metric_stds:
     - 0.0015
-    - null
-  - model: UniGraph2
-    model_plain: UniGraph2
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2502.00806'
-    title: 'UniGraph2: Learning a Unified Embedding Space to Bind Multimodal Graphs'
-    date: Feb 2, 2025
-    date_iso: '2025-02-02'
-    date_display: Feb 2025
-    codebase_url: https://github.com/yf-he/UniGraph2
-    published_conference: WWW 2025
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2025
-    uses_external_data: true
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.6795
-    - null
-    metric_stds:
-    - 0.0011
     - null
   - model: UniGraph
     model_plain: UniGraph
@@ -1233,6 +1235,35 @@ variants:
     metric_stds:
     - 0.0025
     - null
+  - model: NIGCN
+    model_plain: NIGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.14033'
+    title: 'Partition-wise Graph Filtering: A Unified Perspective Through the Lens
+      of Graph Coarsening'
+    date: May 20, 2025
+    date_iso: '2025-05-20'
+    date_display: May 2025
+    codebase_url: https://github.com/vasile-paskardlgm/CPF
+    published_conference: KDD 2025
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6657
+    - null
+    metric_stds:
+    - 0.002
+    - null
   - model: Supervised SGC
     model_plain: Supervised SGC
     is_baseline: true
@@ -1578,47 +1609,18 @@ variants:
     metric_stds:
     - 0.0013
     - null
-  - model: GPRGNN
-    model_plain: GPRGNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2404.15354'
-    title: 'Polynomial Selection in Spectral Graph Neural Networks: An Error-Sum of
-      Function Slices Approach'
-    date: Apr 15, 2024
-    date_iso: '2024-04-15'
-    date_display: Apr 2024
-    codebase_url: https://github.com/vasile-paskardlgm/TFGNN
-    published_conference: WWW 2024
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.6613
-    - null
-    metric_stds:
-    - 0.002
-    - null
-  row_count: 137
+  row_count: 141
   rows_json: /data/datasets/ogbn-papers100m/standard-split-rows.json
   chart_json: /data/datasets/ogbn-papers100m/standard-split-chart.json
   arch_counts:
-    gnn: 96
-    hybrid: 18
-    graph_transformer: 5
+    gnn: 100
+    hybrid: 19
+    graph_transformer: 4
     llm: 3
     walk: 2
     traditional: 12
   metric_counts:
-  - 131
+  - 135
   - 6
   milestones: &id001
   - value: 0.6511

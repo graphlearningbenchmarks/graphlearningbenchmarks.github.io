@@ -220,12 +220,12 @@ results:
     date_iso: '2023-10-22'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.9538
+    at_pub_std: 0.0094
+    at_pub_source_arxiv: '2012.15024'
+    at_pub_source_title: Adaptive Graph Diffusion Networks
+    at_pub_source_date_iso: '2020-12-30'
+    at_pub_source_date_label: '2020'
     value_gap_source_date_iso: '2023-10-22'
     value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
@@ -313,8 +313,8 @@ results:
     value_note: ''
     sort_value: 0.9284
     sort_std: 0.0047
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 4
+    paper_rank: 4
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -380,8 +380,8 @@ results:
     value_note: ''
     sort_value: 0.9088
     sort_std: 0.0313
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -447,8 +447,8 @@ results:
     value_note: ''
     sort_value: 0.8781
     sort_std: 0.0474
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -483,7 +483,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 22
+    global_rank: 20
     sort_value: 0.6719
     sort_std: 0.0118
     comparison_type: global_top
@@ -547,10 +547,10 @@ results:
     value_note: ''
     sort_value: 0.6476
     sort_std: 0.0145
-    global_rank: 26
-    paper_rank: 56
-    rank_delta: 30
-    rank_delta_abs: 30
+    global_rank: 24
+    paper_rank: 53
+    rank_delta: 29
+    rank_delta_abs: 29
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -614,8 +614,8 @@ results:
     value_note: ''
     sort_value: 0.6056
     sort_std: 0.0869
-    global_rank: 31
-    paper_rank: 31
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -681,8 +681,8 @@ results:
     value_note: ''
     sort_value: 0.539
     sort_std: 0.0474
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

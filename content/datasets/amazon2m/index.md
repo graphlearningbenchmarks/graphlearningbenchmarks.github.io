@@ -15,24 +15,19 @@ stats:
   avg_nodes: 2000000.0
   avg_edges: 61000000.0
   num_classes: null
-result_count: 283
+result_count: 248
 best_model:
-  model: GAT
-  value: 0.953
+  model: MA-GCL
+  value: 0.8883
   metric: Accuracy
-  arxiv_id: '2112.08331'
-  paper_title: Model Stealing Attacks Against Inductive Graph Neural Networks
+  arxiv_id: '2212.07035'
+  paper_title: 'MA-GCL: Model Augmentation Tricks for Graph Contrastive Learning'
 papers:
 - arxiv_id: '2605.11749'
   title: Learning Feature Encoder with Synthetic Anomalies for Weakly Supervised Graph
     Anomaly Detection
   date_iso: '2026-04-01'
   venue: ''
-- arxiv_id: '2602.19622'
-  title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with Graph
-    Token Attention'
-  date_iso: '2026-02-23'
-  venue: WWW 2026
 - arxiv_id: '2510.22451'
   title: 'GraphTOP: Graph Topology-Oriented Prompting for Graph Neural Networks'
   date_iso: '2025-10-25'
@@ -59,15 +54,6 @@ papers:
   title: 'DAM-GT: Dual Positional Encoding-Based Attention Masking Graph Transformer
     for Node Classification'
   date_iso: '2025-05-23'
-  venue: ''
-- arxiv_id: '2505.14033'
-  title: 'Partition-wise Graph Filtering: A Unified Perspective Through the Lens of
-    Graph Coarsening'
-  date_iso: '2025-05-20'
-  venue: KDD 2025
-- arxiv_id: '2412.21151'
-  title: 'PyG-SSL: A Graph Self-Supervised Learning Toolkit'
-  date_iso: '2024-12-30'
   venue: ''
 - arxiv_id: '2412.19106'
   title: 'ERGNN: Spectral Graph Neural Network With Explicitly-Optimized Rational
@@ -135,10 +121,6 @@ papers:
   title: 'GAP: Differentially Private Graph Neural Networks with Aggregation Perturbation'
   date_iso: '2022-03-02'
   venue: ''
-- arxiv_id: '2112.08331'
-  title: Model Stealing Attacks Against Inductive Graph Neural Networks
-  date_iso: '2021-12-15'
-  venue: ''
 - arxiv_id: '2104.07477'
   title: Lorentzian Graph Convolutional Networks
   date_iso: '2021-04-15'
@@ -196,448 +178,6 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
-  - model: GAT
-    model_plain: GAT
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2112.08331'
-    title: Model Stealing Attacks Against Inductive Graph Neural Networks
-    date: Dec 15, 2021
-    date_iso: '2021-12-15'
-    date_display: Dec 2021
-    codebase_url: https://github.com/xinleihe/GNNStealing
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.953
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: SAGE
-    model_plain: SAGE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2112.08331'
-    title: Model Stealing Attacks Against Inductive Graph Neural Networks
-    date: Dec 15, 2021
-    date_iso: '2021-12-15'
-    date_display: Dec 2021
-    codebase_url: https://github.com/xinleihe/GNNStealing
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.937
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: AFGRL
-    model_plain: AFGRL
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2412.21151'
-    title: 'PyG-SSL: A Graph Self-Supervised Learning Toolkit'
-    date: Dec 30, 2024
-    date_iso: '2024-12-30'
-    date_display: Dec 2024
-    codebase_url: https://github.com/iDEA-iSAIL-Lab-UIUC/pyg-ssl
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.932
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.003
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: BGRL
-    model_plain: BGRL
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2412.21151'
-    title: 'PyG-SSL: A Graph Self-Supervised Learning Toolkit'
-    date: Dec 30, 2024
-    date_iso: '2024-12-30'
-    date_display: Dec 2024
-    codebase_url: https://github.com/iDEA-iSAIL-Lab-UIUC/pyg-ssl
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.932
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.003
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: SUGRL
-    model_plain: SUGRL
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2412.21151'
-    title: 'PyG-SSL: A Graph Self-Supervised Learning Toolkit'
-    date: Dec 30, 2024
-    date_iso: '2024-12-30'
-    date_display: Dec 2024
-    codebase_url: https://github.com/iDEA-iSAIL-Lab-UIUC/pyg-ssl
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.932
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.002
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: ReGCL
-    model_plain: ReGCL
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2412.21151'
-    title: 'PyG-SSL: A Graph Self-Supervised Learning Toolkit'
-    date: Dec 30, 2024
-    date_iso: '2024-12-30'
-    date_display: Dec 2024
-    codebase_url: https://github.com/iDEA-iSAIL-Lab-UIUC/pyg-ssl
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.926
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.003
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: GCA
-    model_plain: GCA
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2412.21151'
-    title: 'PyG-SSL: A Graph Self-Supervised Learning Toolkit'
-    date: Dec 30, 2024
-    date_iso: '2024-12-30'
-    date_display: Dec 2024
-    codebase_url: https://github.com/iDEA-iSAIL-Lab-UIUC/pyg-ssl
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.925
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.001
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: DGI
-    model_plain: DGI
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2412.21151'
-    title: 'PyG-SSL: A Graph Self-Supervised Learning Toolkit'
-    date: Dec 30, 2024
-    date_iso: '2024-12-30'
-    date_display: Dec 2024
-    codebase_url: https://github.com/iDEA-iSAIL-Lab-UIUC/pyg-ssl
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.923
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.007
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: VecFormer
-    model_plain: VecFormer
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_iso: '2026-02-23'
-    date_display: Feb 2026
-    codebase_url: ''
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8972
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0004
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: SGFormer
-    model_plain: SGFormer
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_iso: '2026-02-23'
-    date_display: Feb 2026
-    codebase_url: ''
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8909
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.001
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: MA-GCL
     model_plain: MA-GCL
     is_baseline: false
@@ -658,7 +198,7 @@ variants:
     published_conference_slug: aaai
     published_venue: AAAI 2022
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.8883
@@ -702,7 +242,7 @@ variants:
     published_conference_slug: aaai
     published_venue: AAAI 2022
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.8842
@@ -790,7 +330,7 @@ variants:
     published_conference_slug: aaai
     published_venue: AAAI 2022
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.8823
@@ -849,51 +389,6 @@ variants:
     - null
     metric_stds:
     - 0.003
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: NodeFormer
-    model_plain: NodeFormer
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_iso: '2026-02-23'
-    date_display: Feb 2026
-    codebase_url: ''
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8785
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0024
     - null
     - null
     - null
@@ -1167,95 +662,6 @@ variants:
     - null
     - null
     - null
-  - model: GIN
-    model_plain: GIN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2112.08331'
-    title: Model Stealing Attacks Against Inductive Graph Neural Networks
-    date: Dec 15, 2021
-    date_iso: '2021-12-15'
-    date_display: Dec 2021
-    codebase_url: https://github.com/xinleihe/GNNStealing
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.856
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: GAT-NSampler
-    model_plain: GAT-NSampler
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_iso: '2026-02-23'
-    date_display: Feb 2026
-    codebase_url: ''
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8517
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0032
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: DGI
     model_plain: DGI
     is_baseline: true
@@ -1300,96 +706,6 @@ variants:
     - null
     - null
     - null
-  - model: GCN
-    model_plain: GCN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_iso: '2026-02-23'
-    date_display: Feb 2026
-    codebase_url: ''
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.839
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.001
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: GCN-NSampler
-    model_plain: GCN-NSampler
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_iso: '2026-02-23'
-    date_display: Feb 2026
-    codebase_url: ''
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8384
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0042
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: GAP-EDP
     model_plain: GAP-EDP
     is_baseline: true
@@ -1425,140 +741,6 @@ variants:
     - null
     metric_stds:
     - 0.0026
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: GraphCL
-    model_plain: GraphCL
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2412.21151'
-    title: 'PyG-SSL: A Graph Self-Supervised Learning Toolkit'
-    date: Dec 30, 2024
-    date_iso: '2024-12-30'
-    date_display: Dec 2024
-    codebase_url: https://github.com/iDEA-iSAIL-Lab-UIUC/pyg-ssl
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.817
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.009
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: SGC
-    model_plain: SGC
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_iso: '2026-02-23'
-    date_display: Feb 2026
-    codebase_url: ''
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8121
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0012
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: SIGN
-    model_plain: SIGN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_iso: '2026-02-23'
-    date_display: Feb 2026
-    codebase_url: ''
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8098
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0031
     - null
     - null
     - null
@@ -2408,18 +1590,816 @@ variants:
     - null
     - null
     - null
-  row_count: 283
+  - model: GBP
+    model_plain: GBP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2203.06389'
+    title: 'GRAND+: Scalable Graph Random Neural Networks'
+    date: Mar 12, 2022
+    date_iso: '2022-03-12'
+    date_display: Mar 2022
+    codebase_url: https://github.com/THUDM/GRAND-plus
+    published_conference: WWW 2022
+    published_conference_short: WWW
+    published_conference_slug: www
+    published_venue: WWW 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.701
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.009
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: SAGE-EDP
+    model_plain: SAGE-EDP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2203.00949'
+    title: 'GAP: Differentially Private Graph Neural Networks with Aggregation Perturbation'
+    date: Mar 2, 2022
+    date_iso: '2022-03-02'
+    date_display: Mar 2022
+    codebase_url: https://github.com/sisaman/GAP
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.683
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0099
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: PPRGo
+    model_plain: PPRGo
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2203.06389'
+    title: 'GRAND+: Scalable Graph Random Neural Networks'
+    date: Mar 12, 2022
+    date_iso: '2022-03-12'
+    date_display: Mar 2022
+    codebase_url: https://github.com/THUDM/GRAND-plus
+    published_conference: WWW 2022
+    published_conference_short: WWW
+    published_conference_slug: www
+    published_venue: WWW 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.676
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.005
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: PPRGo
+    model_plain: PPRGo
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2305.12677'
+    title: Tokenized Graph Transformer with Neighborhood Augmentation for Node Classification
+      in Large Graphs
+    date: May 22, 2023
+    date_iso: '2023-05-22'
+    date_display: May 2023
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6612
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0059
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: Polynormer
+    model_plain: Polynormer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2410.02158'
+    title: 'SCNode: Spatial and Contextual Coordinates for Graph Representation Learning'
+    date: Oct 3, 2024
+    date_iso: '2024-10-03'
+    date_display: Oct 2024
+    codebase_url: https://github.com/joshem163/SCNode
+    published_conference: TMLR 2024
+    published_conference_short: TMLR
+    published_conference_slug: tmlr
+    published_venue: TMLR 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.5481
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0049
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: ERGNN
+    model_plain: ERGNN
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.19106'
+    title: 'ERGNN: Spectral Graph Neural Network With Explicitly-Optimized Rational
+      Graph Filters'
+    date: Dec 26, 2024
+    date_iso: '2024-12-26'
+    date_display: Dec 2024
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.5369
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0054
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: FSGNN
+    model_plain: FSGNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2410.02158'
+    title: 'SCNode: Spatial and Contextual Coordinates for Graph Representation Learning'
+    date: Oct 3, 2024
+    date_iso: '2024-10-03'
+    date_display: Oct 2024
+    codebase_url: https://github.com/joshem163/SCNode
+    published_conference: TMLR 2024
+    published_conference_short: TMLR
+    published_conference_slug: tmlr
+    published_venue: TMLR 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.5274
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0083
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: SCNode
+    model_plain: SCNode
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2410.02158'
+    title: 'SCNode: Spatial and Contextual Coordinates for Graph Representation Learning'
+    date: Oct 3, 2024
+    date_iso: '2024-10-03'
+    date_display: Oct 2024
+    codebase_url: https://github.com/joshem163/SCNode
+    published_conference: TMLR 2024
+    published_conference_short: TMLR
+    published_conference_slug: tmlr
+    published_venue: TMLR 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.5257
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0042
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: CWN
+    model_plain: CWN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.06642'
+    title: 'TopoBench: A Framework for Benchmarking Topological Deep Learning'
+    date: Jun 9, 2024
+    date_iso: '2024-06-09'
+    date_display: Jun 2024
+    codebase_url: https://github.com/geometric-intelligence/topobench
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.519
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0015
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: AST
+    model_plain: AST
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2406.06642'
+    title: 'TopoBench: A Framework for Benchmarking Topological Deep Learning'
+    date: Jun 9, 2024
+    date_iso: '2024-06-09'
+    date_display: Jun 2024
+    codebase_url: https://github.com/geometric-intelligence/topobench
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.505
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0027
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: CCCN
+    model_plain: CCCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.06642'
+    title: 'TopoBench: A Framework for Benchmarking Topological Deep Learning'
+    date: Jun 9, 2024
+    date_iso: '2024-06-09'
+    date_display: Jun 2024
+    codebase_url: https://github.com/geometric-intelligence/topobench
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.5025999999999999
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0017000000000000001
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: GAT
+    model_plain: GAT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.06642'
+    title: 'TopoBench: A Framework for Benchmarking Topological Deep Learning'
+    date: Jun 9, 2024
+    date_iso: '2024-06-09'
+    date_display: Jun 2024
+    codebase_url: https://github.com/geometric-intelligence/topobench
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.5017
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0059
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: GloGNN
+    model_plain: GloGNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.19106'
+    title: 'ERGNN: Spectral Graph Neural Network With Explicitly-Optimized Rational
+      Graph Filters'
+    date: Dec 26, 2024
+    date_iso: '2024-12-26'
+    date_display: Dec 2024
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.4988
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0044
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: GCN
+    model_plain: GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.06642'
+    title: 'TopoBench: A Framework for Benchmarking Topological Deep Learning'
+    date: Jun 9, 2024
+    date_iso: '2024-06-09'
+    date_display: Jun 2024
+    codebase_url: https://github.com/geometric-intelligence/topobench
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.49560000000000004
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0055000000000000005
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: GPRGNN
+    model_plain: GPRGNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.19106'
+    title: 'ERGNN: Spectral Graph Neural Network With Explicitly-Optimized Rational
+      Graph Filters'
+    date: Dec 26, 2024
+    date_iso: '2024-12-26'
+    date_display: Dec 2024
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.4956
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0047
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: OptBasis
+    model_plain: OptBasis
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.19106'
+    title: 'ERGNN: Spectral Graph Neural Network With Explicitly-Optimized Rational
+      Graph Filters'
+    date: Dec 26, 2024
+    date_iso: '2024-12-26'
+    date_display: Dec 2024
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.4948
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0036
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: ChebNetII
+    model_plain: ChebNetII
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.19106'
+    title: 'ERGNN: Spectral Graph Neural Network With Explicitly-Optimized Rational
+      Graph Filters'
+    date: Dec 26, 2024
+    date_iso: '2024-12-26'
+    date_display: Dec 2024
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.4943
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0041
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: GIN
+    model_plain: GIN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.06642'
+    title: 'TopoBench: A Framework for Benchmarking Topological Deep Learning'
+    date: Jun 9, 2024
+    date_iso: '2024-06-09'
+    date_display: Jun 2024
+    codebase_url: https://github.com/geometric-intelligence/topobench
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.4916
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0102
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  row_count: 248
   rows_json: /data/datasets/amazon2m/standard-split-rows.json
   chart_json: /data/datasets/amazon2m/standard-split-chart.json
   arch_counts:
-    gnn: 217
-    hybrid: 19
-    graph_transformer: 16
+    gnn: 189
+    hybrid: 16
+    graph_transformer: 13
     llm: 5
     walk: 4
-    traditional: 17
+    traditional: 16
   metric_counts:
-  - 144
+  - 109
   - 35
   - 25
   - 26
@@ -2430,12 +2410,18 @@ variants:
   - 14
   - 3
   milestones: &id001
-  - value: 0.953
-    std: null
-    model: GAT
-    arxiv_id: '2112.08331'
-    title: Model Stealing Attacks Against Inductive Graph Neural Networks
-    date: '2021-12-15'
+  - value: 0.838
+    std: 0.0026
+    model: GAP-EDP
+    arxiv_id: '2203.00949'
+    title: 'GAP: Differentially Private Graph Neural Networks with Aggregation Perturbation'
+    date: '2022-03-02'
+  - value: 0.8883
+    std: 0.003
+    model: MA-GCL
+    arxiv_id: '2212.07035'
+    title: 'MA-GCL: Model Augmentation Tricks for Graph Contrastive Learning'
+    date: '2022-12-14'
   milestones_by_metric:
     Accuracy: *id001
     AUC:
@@ -2446,6 +2432,12 @@ variants:
       title: Enhancing Graph Neural Network-based Fraud Detectors against Camouflaged
         Fraudsters
       date: '2020-08-19'
+    - value: 0.964
+      std: 0.011
+      model: LGCN
+      arxiv_id: '2104.07477'
+      title: Lorentzian Graph Convolutional Networks
+      date: '2021-04-15'
     - value: 0.9757
       std: 0.0012
       model: GFD
@@ -2488,7 +2480,13 @@ variants:
       arxiv_id: '2205.15508'
       title: Rethinking Graph Neural Networks for Anomaly Detection
       date: '2022-05-31'
-    F1-micro: []
+    F1-micro:
+    - value: 0.815
+      std: 0.001
+      model: GraphSAINT-RW
+      arxiv_id: '1907.04931'
+      title: 'GraphSAINT: mpling Based ductive Learning Me hod'
+      date: '2019-07-10'
     Fidelity:
     - value: 0.945
       std: 0.015

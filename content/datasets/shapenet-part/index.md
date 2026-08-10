@@ -774,6 +774,13 @@ variants:
     title: Adaptive Canonicalization with Application to Invariant Anisotropic Geometric
       Networks
     date: '2025-09-29'
+  - value: 0.8268
+    std: 0.0064
+    model: GPS + k-MIP
+    arxiv_id: '2604.03815'
+    title: k-Maximum Inner Product Attention for Graph Transformers and the Expressive
+      Power of GraphGPS
+    date: '2026-04-04'
   milestones_by_metric:
     F1: *id001
     mIoU:

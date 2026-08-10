@@ -64,8 +64,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - VQ-GNN
-mrr: 0.0154
-adjusted_mrr: 0.0103
+mrr: 0.0151
+adjusted_mrr: 0.0101
 mrr_dataset_count: 2
 benchmark_categories:
 - Classic
@@ -246,9 +246,9 @@ results:
     sort_value: 0.994
     sort_std: null
     global_rank: 10
-    paper_rank: 92
-    rank_delta: 82
-    rank_delta_abs: 82
+    paper_rank: 93
+    rank_delta: 83
+    rank_delta_abs: 83
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -416,8 +416,8 @@ results:
     value_note: ''
     sort_value: 0.9737
     sort_std: 0.0033
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -485,8 +485,8 @@ results:
     value_note: ''
     sort_value: 0.9722
     sort_std: 0.0035
-    global_rank: 60
-    paper_rank: 60
+    global_rank: 61
+    paper_rank: 61
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -565,6 +565,39 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.462
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2407.00494'
+    title: Graph Neural Networks Gone Hogwild
+    date: Jun 29, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-29'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 183
+    sort_value: 0.462
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   rank_metric: F1
   higher_is_better: true
   experiment_scope: node-level
@@ -599,8 +632,9 @@ results:
     venue: Trans. Mach. Learn. Res.
     codebase_url: https://github.com/workrep20232/PROXI
     uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: combines all relevant proximity information about node
+      pairs... structural proximity... and domain proximity
     is_global_top: true
     global_rank: 1
     sort_value: 0.765
@@ -632,7 +666,7 @@ results:
     venue: Trans. Mach. Learn. Res.
     codebase_url: https://github.com/workrep20232/PROXI
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -768,8 +802,8 @@ results:
     value_note: ''
     sort_value: 0.481
     sort_std: 0.0081
-    global_rank: 77
-    paper_rank: 77
+    global_rank: 79
+    paper_rank: 79
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -836,8 +870,8 @@ results:
     value_note: ''
     sort_value: 0.4776
     sort_std: 0.0041
-    global_rank: 78
-    paper_rank: 78
+    global_rank: 80
+    paper_rank: 80
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -904,8 +938,8 @@ results:
     value_note: ''
     sort_value: 0.4673
     sort_std: 0.0164
-    global_rank: 81
-    paper_rank: 81
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -941,78 +975,10 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 88
+    global_rank: 91
     sort_value: 0.4438
     sort_std: 0.0347
     comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Cluster-GCN
-    model_key: cluster-gcn
-    model_plain: Cluster-GCN
-    value: 0.4068
-    std: 0.0096
-    paper_value: 0.4068
-    paper_std: 0.0096
-    metric: Hits@50
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: link_prediction
-    protocol_decision: standard
-    protocol_note: Transductive link prediction task
-    date: Oct 27, 2021
-    date_display: Oct 2021
-    date_iso: '2021-10-27'
-    published_venue: NeurIPS 2021
-    published_conference: NeurIPS 2021
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-28'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.4402
-    true_std: 0.0137
-    value_gap_source_arxiv: '2202.13538'
-    value_gap_source_title: Algorithm and System Co-design for Efficient Subgraph-based
-      Graph Representation Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.033399999999999985
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.4402
-    sort_std: 0.0137
-    global_rank: 90
-    paper_rank: 94
-    rank_delta: 4
-    rank_delta_abs: 4
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1074,8 +1040,76 @@ results:
     value_note: ''
     sort_value: 0.4368
     sort_std: 0.0169
-    global_rank: 91
-    paper_rank: 91
+    global_rank: 93
+    paper_rank: 93
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Cluster-GCN
+    model_key: cluster-gcn
+    model_plain: Cluster-GCN
+    value: 0.4068
+    std: 0.0096
+    paper_value: 0.4068
+    paper_std: 0.0096
+    metric: Hits@50
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: link_prediction
+    protocol_decision: standard
+    protocol_note: Transductive link prediction task
+    date: Oct 27, 2021
+    date_display: Oct 2021
+    date_iso: '2021-10-27'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2021-10-27'
+    value_gap_source_date_label: NeurIPS 2021
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4068
+    true_std: 0.0096
+    value_gap_source_arxiv: '2110.14363'
+    value_gap_source_title: 'VQ-GNN: A Universal Framework to Scale-up Graph Neural
+      Networks using Vector Quantization'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4068
+    sort_std: 0.0096
+    global_rank: 97
+    paper_rank: 97
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

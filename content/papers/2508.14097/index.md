@@ -44,8 +44,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - uAGNN
-mrr: 0.051
-adjusted_mrr: 0.051
+mrr: 0.0533
+adjusted_mrr: 0.0533
 mrr_dataset_count: 4
 benchmark_categories:
 - Heterophilic Graphs
@@ -264,8 +264,8 @@ results:
     has_value_gap: true
     has_value_note: false
     value_gap: 0.35869999999999996
-    value_gap_source_arxiv: '2308.08963'
-    value_gap_source_title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
+    value_gap_source_arxiv: '2307.14613'
+    value_gap_source_title: Self-Contrastive Graph Diffusion Network
     value_note: ''
     at_pub_value: 0.6987
     at_pub_std: 0.0054
@@ -273,7 +273,7 @@ results:
     at_pub_source_title: Simple Contrastive Graph Clustering
     at_pub_source_date_iso: '2022-05-11'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2023-08-17'
+    value_gap_source_date_iso: '2023-07-27'
     value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.35869999999999996
     worse_than_at_pub: true
@@ -298,7 +298,7 @@ results:
     comparison_source_arxiv: '2205.07865'
     is_best: false
     is_std_outlier: false
-    global_rank: 28
+    global_rank: 27
   - model: DMoN
     model_key: dmon
     model_plain: DMoN
@@ -361,7 +361,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 34
+    global_rank: 32
   - model: SUBLIME
     model_key: sublime
     model_plain: SUBLIME
@@ -426,7 +426,7 @@ results:
     comparison_source_arxiv: '2212.03559'
     is_best: false
     is_std_outlier: false
-    global_rank: 39
+    global_rank: 37
   - model: MVGRL
     model_key: mvgrl
     model_plain: MVGRL
@@ -491,7 +491,7 @@ results:
     comparison_source_arxiv: '2212.08665'
     is_best: false
     is_std_outlier: false
-    global_rank: 42
+    global_rank: 40
   - model: VGAER
     model_key: vgaer
     model_plain: VGAER
@@ -554,7 +554,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 43
+    global_rank: 41
   - model: GRACE
     model_key: grace
     model_plain: GRACE
@@ -617,7 +617,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 51
+    global_rank: 49
   - model: uAGNN
     model_key: uagnn
     model_plain: uAGNN
@@ -680,7 +680,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 53
+    global_rank: 51
   - model: BGRL
     model_key: bgrl
     model_plain: BGRL
@@ -743,7 +743,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 52
+    global_rank: 50
   - model: DGI
     model_key: dgi
     model_plain: DGI
@@ -806,7 +806,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 55
+    global_rank: 53
   metrics:
   - F1
   - NMI
@@ -827,47 +827,6 @@ results:
   dataset: BAT
   is_multi_metric: true
   rows:
-  - model: CONVERT
-    model_key: convert
-    model_plain: CONVERT
-    metric_values:
-    - 0.7777
-    - null
-    - null
-    metric_stds:
-    - 0.0148
-    - null
-    - null
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2308.08963'
-    title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
-    published_venue: ''
-    date: Aug 17, 2023
-    date_display: Aug 2023
-    date_iso: '2023-08-17'
-    codebase_url: https://github.com/xihongyang1999/CONVERT
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 1
-    is_best: true
-    sort_value: 0.7777
-    sort_std: 0.0148
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
   - model: GraphLearner
     model_key: graphlearner
     model_plain: GraphLearner
@@ -895,8 +854,8 @@ results:
     codebase_url: https://github.com/xihongyang1999/GraphLearner
     uses_external_data: false
     is_global_top: true
-    global_rank: 2
-    is_best: false
+    global_rank: 1
+    is_best: true
     sort_value: 0.754
     sort_std: 0.0088
     has_value_gap: false
@@ -936,10 +895,51 @@ results:
     codebase_url: ''
     uses_external_data: false
     is_global_top: true
-    global_rank: 3
-    is_best: false
+    global_rank: 2
+    is_best: true
     sort_value: 0.7449
     sort_std: 0.0026
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: SCGC
+    model_key: scgc
+    model_plain: SCGC
+    metric_values:
+    - 0.7222
+    - null
+    - null
+    metric_stds:
+    - 0.0097
+    - null
+    - null
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2205.07865'
+    title: Simple Contrastive Graph Clustering
+    published_venue: ''
+    date: May 11, 2022
+    date_display: May 2022
+    date_iso: '2022-05-11'
+    codebase_url: ''
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 3
+    is_best: false
+    sort_value: 0.7222
+    sort_std: 0.0097
     has_value_gap: false
     has_value_note: false
     paper_rank: null
@@ -1011,7 +1011,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 8
+    global_rank: 7
   - model: DAEGC
     model_key: daegc
     model_plain: DAEGC
@@ -1073,7 +1073,7 @@ results:
     comparison_source_arxiv: '2205.07865'
     is_best: false
     is_std_outlier: false
-    global_rank: 9
+    global_rank: 8
   - model: uAGNN
     model_key: uagnn
     model_plain: uAGNN
@@ -1136,7 +1136,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 13
+    global_rank: 12
   - model: GRACE
     model_key: grace
     model_plain: GRACE
@@ -1199,7 +1199,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 15
+    global_rank: 14
   - model: BGRL
     model_key: bgrl
     model_plain: BGRL
@@ -1262,7 +1262,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 17
+    global_rank: 16
   - model: DGI
     model_key: dgi
     model_plain: DGI
@@ -1325,7 +1325,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 24
+    global_rank: 23
   - model: SUBLIME
     model_key: sublime
     model_plain: SUBLIME
@@ -1353,8 +1353,9 @@ results:
     has_value_gap: true
     has_value_note: false
     value_gap: 0.08000000000000002
-    value_gap_source_arxiv: '2308.08963'
-    value_gap_source_title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
+    value_gap_source_arxiv: '2212.03559'
+    value_gap_source_title: 'GraphLearner: Graph Node Clustering with Fully Learnable
+      Augmentation'
     value_note: ''
     at_pub_value: 0.44
     at_pub_std: 0.0062
@@ -1363,8 +1364,8 @@ results:
       Augmentation'
     at_pub_source_date_iso: '2022-12-07'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2023-08-17'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2022-12-07'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: 0.08000000000000002
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1389,7 +1390,7 @@ results:
     comparison_source_arxiv: '2212.03559'
     is_best: false
     is_std_outlier: false
-    global_rank: 23
+    global_rank: 22
   - model: DMoN
     model_key: dmon
     model_plain: DMoN
@@ -1452,7 +1453,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 28
+    global_rank: 26
   - model: VGAER
     model_key: vgaer
     model_plain: VGAER
@@ -1515,7 +1516,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 29
+    global_rank: 27
   metrics:
   - F1
   - NMI
@@ -3347,7 +3348,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 21
+    global_rank: 20
   - model: uAGNN
     model_key: uagnn
     model_plain: uAGNN
@@ -3410,7 +3411,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 24
+    global_rank: 23
   - model: MVGRL
     model_key: mvgrl
     model_plain: MVGRL
@@ -3474,7 +3475,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 23
+    global_rank: 22
   - model: DGI
     model_key: dgi
     model_plain: DGI
@@ -3537,7 +3538,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 26
+    global_rank: 25
   - model: SUBLIME
     model_key: sublime
     model_plain: SUBLIME
@@ -3602,7 +3603,7 @@ results:
     comparison_source_arxiv: '2212.03559'
     is_best: false
     is_std_outlier: false
-    global_rank: 28
+    global_rank: 27
   - model: DMoN
     model_key: dmon
     model_plain: DMoN
@@ -3665,7 +3666,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 29
+    global_rank: 28
   - model: VGAER
     model_key: vgaer
     model_plain: VGAER
@@ -3728,7 +3729,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 31
+    global_rank: 30
   - model: BGRL
     model_key: bgrl
     model_plain: BGRL
@@ -3791,7 +3792,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 34
+    global_rank: 32
   metrics:
   - F1
   - NMI

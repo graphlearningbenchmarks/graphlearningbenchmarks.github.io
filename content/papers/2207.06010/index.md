@@ -286,8 +286,8 @@ results:
     value_note: ''
     sort_value: 0.8743
     sort_std: 0.0163
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -354,8 +354,8 @@ results:
     value_note: ''
     sort_value: 0.8732
     sort_std: 0.0167
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -421,8 +421,8 @@ results:
     value_note: ''
     sort_value: 0.8716
     sort_std: 0.0166
-    global_rank: 26
-    paper_rank: 26
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -488,8 +488,8 @@ results:
     value_note: ''
     sort_value: 0.8698
     sort_std: 0.0126
-    global_rank: 31
-    paper_rank: 31
+    global_rank: 32
+    paper_rank: 32
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -555,8 +555,8 @@ results:
     value_note: ''
     sort_value: 0.8691
     sort_std: 0.0186
-    global_rank: 32
-    paper_rank: 32
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -622,8 +622,8 @@ results:
     value_note: ''
     sort_value: 0.869
     sort_std: 0.0204
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -689,8 +689,8 @@ results:
     value_note: ''
     sort_value: 0.8667
     sort_std: 0.024
-    global_rank: 38
-    paper_rank: 38
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -723,10 +723,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 41
+    global_rank: 43
     sort_value: 0.8646
     sort_std: 0.0081
     comparison_type: global_top
@@ -904,8 +904,8 @@ results:
     value_note: ''
     sort_value: 0.9343
     sort_std: 0.025
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -971,8 +971,8 @@ results:
     value_note: ''
     sort_value: 0.9268
     sort_std: 0.0119
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1038,8 +1038,8 @@ results:
     value_note: ''
     sort_value: 0.9263
     sort_std: 0.0119
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1105,8 +1105,8 @@ results:
     value_note: ''
     sort_value: 0.9231
     sort_std: 0.0158
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1172,8 +1172,8 @@ results:
     value_note: ''
     sort_value: 0.9227
     sort_std: 0.0157
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 16
+    paper_rank: 16
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1239,8 +1239,8 @@ results:
     value_note: ''
     sort_value: 0.9224
     sort_std: 0.0276
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1307,8 +1307,8 @@ results:
     value_note: ''
     sort_value: 0.9223
     sort_std: 0.0307
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1375,8 +1375,8 @@ results:
     value_note: ''
     sort_value: 0.9165
     sort_std: 0.0211
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1409,10 +1409,10 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 32
+    global_rank: 34
     sort_value: 0.8875
     sort_std: 0.0049
     comparison_type: global_top
@@ -1625,8 +1625,8 @@ results:
     value_note: ''
     sort_value: 0.897
     sort_std: 0.0093
-    global_rank: 29
-    paper_rank: 29
+    global_rank: 28
+    paper_rank: 28
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2176,7 +2176,7 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 66
@@ -2243,8 +2243,8 @@ results:
     value_note: ''
     sort_value: 0.6284
     sort_std: 0.0046
-    global_rank: 90
-    paper_rank: 90
+    global_rank: 89
+    paper_rank: 89
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2311,8 +2311,8 @@ results:
     value_note: ''
     sort_value: 0.623
     sort_std: 0.0114
-    global_rank: 103
-    paper_rank: 103
+    global_rank: 102
+    paper_rank: 102
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2459,7 +2459,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 16
+    global_rank: 14
     sort_value: 0.84
     sort_std: 0.004
     comparison_type: global_top
@@ -2523,8 +2523,8 @@ results:
     value_note: ''
     sort_value: 0.8193
     sort_std: 0.0179
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2590,8 +2590,8 @@ results:
     value_note: ''
     sort_value: 0.8171
     sort_std: 0.0179
-    global_rank: 38
-    paper_rank: 38
+    global_rank: 36
+    paper_rank: 36
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2657,8 +2657,8 @@ results:
     value_note: ''
     sort_value: 0.8113
     sort_std: 0.0239
-    global_rank: 42
-    paper_rank: 42
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2724,8 +2724,8 @@ results:
     value_note: ''
     sort_value: 0.7957
     sort_std: 0.0203
-    global_rank: 78
-    paper_rank: 78
+    global_rank: 73
+    paper_rank: 73
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2791,8 +2791,8 @@ results:
     value_note: ''
     sort_value: 0.7922
     sort_std: 0.0238
-    global_rank: 89
-    paper_rank: 89
+    global_rank: 84
+    paper_rank: 84
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2859,8 +2859,8 @@ results:
     value_note: ''
     sort_value: 0.792
     sort_std: 0.0199
-    global_rank: 91
-    paper_rank: 91
+    global_rank: 86
+    paper_rank: 86
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2927,8 +2927,8 @@ results:
     value_note: ''
     sort_value: 0.7905
     sort_std: 0.0251
-    global_rank: 95
-    paper_rank: 95
+    global_rank: 90
+    paper_rank: 90
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2994,8 +2994,8 @@ results:
     value_note: ''
     sort_value: 0.7845
     sort_std: 0.0244
-    global_rank: 112
-    paper_rank: 112
+    global_rank: 107
+    paper_rank: 107
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

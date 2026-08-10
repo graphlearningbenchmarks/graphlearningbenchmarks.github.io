@@ -8,13 +8,14 @@ primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Amazon.html
 stats: null
-result_count: 948
+result_count: 871
 best_model:
-  model: MSH-GNN
-  value: 0.9766
+  model: GraphTARIF
+  value: 0.9703
   metric: Accuracy
-  arxiv_id: '2505.15015'
-  paper_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
+  arxiv_id: '2510.10631'
+  paper_title: 'GraphTARIF: Linear Graph Transformer with Augmented Rank and Improved
+    Focus'
 papers:
 - arxiv_id: '2605.21247'
   title: Graph Navier–Stokes Networks
@@ -24,10 +25,6 @@ papers:
   title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
     Classification'
   date_iso: '2026-05-18'
-  venue: ''
-- arxiv_id: '2605.07357'
-  title: 'GraphReAct: Reasoning and Acting for Multi-step Graph Inference'
-  date_iso: '2026-05-08'
   venue: ''
 - arxiv_id: '2605.06814'
   title: 'From Model to Data (M2D): Shifting Complexity from GNNs to Graphs for Transparent
@@ -43,10 +40,6 @@ papers:
     Synthetic Graph Priors
   date_iso: '2026-04-21'
   venue: ICLR 2026
-- arxiv_id: '2604.11257'
-  title: Unified Graph Prompt Learning via Low-Rank Graph Message Prompting
-  date_iso: '2026-04-13'
-  venue: ''
 - arxiv_id: '2603.26178'
   title: 'Geometric Evolution Graph Convolutional Networks: Enhancing Graph Representation
     Learning via Ricci Flow'
@@ -56,6 +49,11 @@ papers:
   title: 'GIST: Gauge-Invariant Spectral Transformers for Scalable Graph Neural Operators'
   date_iso: '2026-03-17'
   venue: ''
+- arxiv_id: '2602.19622'
+  title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with Graph
+    Token Attention'
+  date_iso: '2026-02-23'
+  venue: WWW 2026
 - arxiv_id: '2602.15634'
   title: 'Beyond ReLU: Bifurcation, Oversmoothing, and Topological Priors'
   date_iso: '2026-02-17'
@@ -69,11 +67,6 @@ papers:
   title: 'SPGCL: Simple yet Powerful Graph Contrastive Learning via SVD-Guided Structural
     Perturbation'
   date_iso: '2026-01-20'
-  venue: ''
-- arxiv_id: '2601.02662'
-  title: 'When Prompting Meets Spiking: Graph Sparse Prompting via Spiking Graph Prompt
-    Learning'
-  date_iso: '2026-01-06'
   venue: ''
 - arxiv_id: '2512.24062'
   title: Energy-Balanced Hyperspherical Graph Representation Learning via Structural
@@ -97,24 +90,10 @@ papers:
     Clustering
   date_iso: '2025-11-25'
   venue: ''
-- arxiv_id: '2510.21267'
-  title: Relieving the Over-Aggregating Effect in Graph Transformers
-  date_iso: '2025-10-24'
-  venue: NeurIPS 2025
-- arxiv_id: '2510.16885'
-  title: 'UniGTE: Unified Graph–Text Encoding for Zero-Shot Generalization across
-    Graph Tasks and Domains'
-  date_iso: '2025-10-19'
-  venue: NeurIPS 2025
 - arxiv_id: '2510.10631'
   title: 'GraphTARIF: Linear Graph Transformer with Augmented Rank and Improved Focus'
   date_iso: '2025-10-12'
   venue: WWW 2025
-- arxiv_id: '2510.04522'
-  title: 'Toward a Unified Geometry Understanding: Riemannian Diffusion Framework
-    for Graph Generation and Prediction'
-  date_iso: '2025-10-06'
-  venue: NeurIPS 2025
 - arxiv_id: '2507.14484'
   title: 'ReDiSC: A Reparameterized Masked Diffusion Model for Scalable Node Classification
     with Structured Predictions'
@@ -130,6 +109,10 @@ papers:
     Contrastive Learning'
   date_iso: '2025-06-25'
   venue: ''
+- arxiv_id: '2506.19343'
+  title: Discrepancy-Aware Graph Mask Auto-Encoder
+  date_iso: '2025-06-24'
+  venue: KDD 2025
 - arxiv_id: '2506.15448'
   title: Semi-supervised Graph Anomaly Detection via Robust Homophily Learning
   date_iso: '2025-06-18'
@@ -155,10 +138,6 @@ papers:
   title: 'DAM-GT: Dual Positional Encoding-Based Attention Masking Graph Transformer
     for Node Classification'
   date_iso: '2025-05-23'
-  venue: ''
-- arxiv_id: '2505.15015'
-  title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
-  date_iso: '2025-05-21'
   venue: ''
 - arxiv_id: '2505.15845'
   title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
@@ -207,10 +186,6 @@ papers:
   title: 'GCoT: Chain-of-Thought Prompt Learning for Graphs'
   date_iso: '2025-02-12'
   venue: KDD 2025
-- arxiv_id: '2502.00806'
-  title: 'UniGraph2: Learning a Unified Embedding Space to Bind Multimodal Graphs'
-  date_iso: '2025-02-02'
-  venue: WWW 2025
 - arxiv_id: '2501.19089'
   title: Resolving Oversmoothing with Opinion Dissensus
   date_iso: '2025-01-31'
@@ -219,6 +194,10 @@ papers:
   title: 'GraphICL: Unlocking Graph Learning Potential in LLMs through Structured
     Prompt Design'
   date_iso: '2025-01-27'
+  venue: ''
+- arxiv_id: '2412.21151'
+  title: 'PyG-SSL: A Graph Self-Supervised Learning Toolkit'
+  date_iso: '2024-12-30'
   venue: ''
 - arxiv_id: '2412.19211'
   title: 'Large Language Models Meet Graph Neural Networks: A Perspective of Graph
@@ -335,10 +314,6 @@ papers:
   title: A General Graph Spectral Wavelet Convolution via Chebyshev Order Decomposition
   date_iso: '2024-05-22'
   venue: ICML 2024
-- arxiv_id: '2404.19288'
-  title: Training-free Graph Neural Networks and the Power of Labels as Features
-  date_iso: '2024-04-30'
-  venue: TMLR 2024
 - arxiv_id: '2404.17099'
   title: Unleashing the Potential of Fractional Calculus in Graph Neural Networks
     with FROND
@@ -471,11 +446,6 @@ papers:
   title: Union Subgraph Neural Networks
   date_iso: '2023-05-25'
   venue: AAAI 2023
-- arxiv_id: '2305.12677'
-  title: Tokenized Graph Transformer with Neighborhood Augmentation for Node Classification
-    in Large Graphs
-  date_iso: '2023-05-22'
-  venue: ''
 - arxiv_id: '2305.06142'
   title: Feature Expansion for Graph Neural Networks
   date_iso: '2023-05-10'
@@ -528,10 +498,6 @@ papers:
     Discriminating'
   date_iso: '2022-11-25'
   venue: AAAI 2022
-- arxiv_id: '2210.09789'
-  title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph Networks'
-  date_iso: '2022-10-18'
-  venue: ICLR 2022
 - arxiv_id: '2210.08792'
   title: Unifying Graph Contrastive Learning with Flexible Contextual Scopes
   date_iso: '2022-10-17'
@@ -653,10 +619,6 @@ papers:
   title: Elastic Graph Neural Networks
   date_iso: '2021-07-05'
   venue: ICML 2021
-- arxiv_id: '2106.05470'
-  title: Automated Self-Supervised Learning for Graphs
-  date_iso: '2021-06-10'
-  venue: ICLR 2021
 - arxiv_id: '2105.05682'
   title: Multi-Scale Contrastive Siamese Networks for Self-Supervised Graph Representation
     Learning
@@ -748,91 +710,6 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
-  - model: MSH-GNN
-    model_plain: MSH-GNN
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.15015'
-    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
-    date: May 21, 2025
-    date_iso: '2025-05-21'
-    date_display: May 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.9766
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.005
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: GeoMancer
-    model_plain: GeoMancer
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2510.04522'
-    title: 'Toward a Unified Geometry Understanding: Riemannian Diffusion Framework
-      for Graph Generation and Prediction'
-    date: Oct 6, 2025
-    date_iso: '2025-10-06'
-    date_display: Oct 2025
-    codebase_url: https://github.com/RingBDStack/GeoMancer
-    published_conference: NeurIPS 2025
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2025
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.9705
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0013
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: GraphTARIF
     model_plain: GraphTARIF
     is_baseline: false
@@ -854,7 +731,7 @@ variants:
     published_conference_slug: www
     published_venue: WWW 2025
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.9703
@@ -868,49 +745,6 @@ variants:
     - null
     metric_stds:
     - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: LGD
-    model_plain: LGD
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2510.04522'
-    title: 'Toward a Unified Geometry Understanding: Riemannian Diffusion Framework
-      for Graph Generation and Prediction'
-    date: Oct 6, 2025
-    date_iso: '2025-10-06'
-    date_display: Oct 2025
-    codebase_url: https://github.com/RingBDStack/GeoMancer
-    published_conference: NeurIPS 2025
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2025
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9694
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0014
     - null
     - null
     - null
@@ -997,92 +831,6 @@ variants:
     - null
     metric_stds:
     - 0.0013
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: NAGphormer
-    model_plain: NAGphormer
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2305.12677'
-    title: Tokenized Graph Transformer with Neighborhood Augmentation for Node Classification
-      in Large Graphs
-    date: May 22, 2023
-    date_iso: '2023-05-22'
-    date_display: May 2023
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: true
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9661
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0021
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: +NrAug
-    model_plain: +NrAug
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2305.12677'
-    title: Tokenized Graph Transformer with Neighborhood Augmentation for Node Classification
-      in Large Graphs
-    date: May 22, 2023
-    date_iso: '2023-05-22'
-    date_display: May 2023
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: true
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9661
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
     - null
     - null
     - null
@@ -1305,92 +1053,6 @@ variants:
     - null
     - null
     - null
-  - model: +LNA
-    model_plain: +LNA
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2305.12677'
-    title: Tokenized Graph Transformer with Neighborhood Augmentation for Node Classification
-      in Large Graphs
-    date: May 22, 2023
-    date_iso: '2023-05-22'
-    date_display: May 2023
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: true
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9636
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: +GNA
-    model_plain: +GNA
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2305.12677'
-    title: Tokenized Graph Transformer with Neighborhood Augmentation for Node Classification
-      in Large Graphs
-    date: May 22, 2023
-    date_iso: '2023-05-22'
-    date_display: May 2023
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: true
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9636
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: GCN
     model_plain: GCN
     is_baseline: true
@@ -1604,6 +1266,90 @@ variants:
     - null
     - null
     - null
+  - model: Polynormer-v1
+    model_plain: Polynormer-v1
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2403.01232'
+    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
+    date: Mar 2, 2024
+    date_iso: '2024-03-02'
+    date_display: Mar 2024
+    codebase_url: https://github.com/cornell-zhang/Polynormer
+    published_conference: ICLR 2024
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9611
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0023
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: Polynormer-v2
+    model_plain: Polynormer-v2
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2403.01232'
+    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
+    date: Mar 2, 2024
+    date_iso: '2024-03-02'
+    date_display: Mar 2024
+    codebase_url: https://github.com/cornell-zhang/Polynormer
+    published_conference: ICLR 2024
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9609
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.003
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
   - model: NAGphormer-LGTL
     model_plain: NAGphormer-LGTL
     is_baseline: false
@@ -1732,6 +1478,49 @@ variants:
     - null
     - null
     - null
+  - model: VecFormer
+    model_plain: VecFormer
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2602.19622'
+    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
+      Graph Token Attention'
+    date: Feb 23, 2026
+    date_iso: '2026-02-23'
+    date_display: Feb 2026
+    codebase_url: ''
+    published_conference: WWW 2026
+    published_conference_short: WWW
+    published_conference_slug: www
+    published_venue: WWW 2026
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9584
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0041
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
   - model: VCR-Graphormer-LGTL
     model_plain: VCR-Graphormer-LGTL
     is_baseline: false
@@ -1851,48 +1640,6 @@ variants:
     - null
     metric_stds:
     - 0.0059
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: N^2
-    model_plain: N^2
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.15015'
-    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
-    date: May 21, 2025
-    date_iso: '2025-05-21'
-    date_display: May 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9575
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0034
     - null
     - null
     - null
@@ -2197,90 +1944,6 @@ variants:
     - null
     - null
     - null
-  - model: SGFormer + Wideformer
-    model_plain: SGFormer + Wideformer
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2510.21267'
-    title: Relieving the Over-Aggregating Effect in Graph Transformers
-    date: Oct 24, 2025
-    date_iso: '2025-10-24'
-    date_display: Oct 2025
-    codebase_url: https://github.com/sunjss/over-aggregating
-    published_conference: NeurIPS 2025
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2025
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9564
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0057
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: Polynormer + Wideformer
-    model_plain: Polynormer + Wideformer
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2510.21267'
-    title: Relieving the Over-Aggregating Effect in Graph Transformers
-    date: Oct 24, 2025
-    date_iso: '2025-10-24'
-    date_display: Oct 2025
-    codebase_url: https://github.com/sunjss/over-aggregating
-    published_conference: NeurIPS 2025
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2025
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9564
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0036
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: GIST
     model_plain: GIST
     is_baseline: false
@@ -2536,48 +2199,6 @@ variants:
     - null
     - null
     - null
-  - model: GraphGPS + Wideformer
-    model_plain: GraphGPS + Wideformer
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2510.21267'
-    title: Relieving the Over-Aggregating Effect in Graph Transformers
-    date: Oct 24, 2025
-    date_iso: '2025-10-24'
-    date_display: Oct 2025
-    codebase_url: https://github.com/sunjss/over-aggregating
-    published_conference: NeurIPS 2025
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2025
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9555
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0074
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: VCR-Graphormer
     model_plain: VCR-Graphormer
     is_baseline: true
@@ -2655,90 +2276,6 @@ variants:
     - null
     metric_stds:
     - 0.0052
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: Polynormer + Entropy Reg
-    model_plain: Polynormer + Entropy Reg
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2510.21267'
-    title: Relieving the Over-Aggregating Effect in Graph Transformers
-    date: Oct 24, 2025
-    date_iso: '2025-10-24'
-    date_display: Oct 2025
-    codebase_url: https://github.com/sunjss/over-aggregating
-    published_conference: NeurIPS 2025
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2025
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9552
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0044
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: SGFormer + Entropy Reg
-    model_plain: SGFormer + Entropy Reg
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2510.21267'
-    title: Relieving the Over-Aggregating Effect in Graph Transformers
-    date: Oct 24, 2025
-    date_iso: '2025-10-24'
-    date_display: Oct 2025
-    codebase_url: https://github.com/sunjss/over-aggregating
-    published_conference: NeurIPS 2025
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2025
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9551
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0049
     - null
     - null
     - null
@@ -2875,18 +2412,440 @@ variants:
     - null
     - null
     - null
-  row_count: 948
+  - model: H2GCN
+    model_plain: H2GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2306.02285'
+    title: Clarify Confused Nodes via Separated Learning
+    date: Jun 4, 2023
+    date_iso: '2023-06-04'
+    date_display: Jun 2023
+    codebase_url: https://github.com/GISec-Team/NCGNN
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9548
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0043
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: FE-GNN
+    model_plain: FE-GNN
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2305.06142'
+    title: Feature Expansion for Graph Neural Networks
+    date: May 10, 2023
+    date_iso: '2023-05-10'
+    date_display: May 2023
+    codebase_url: https://github.com/sajqavril/Feature-Extension-Graph-Neural-Networks
+    published_conference: ICML 2023
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9545
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0015
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: Polynormer
+    model_plain: Polynormer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2602.19622'
+    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
+      Graph Token Attention'
+    date: Feb 23, 2026
+    date_iso: '2026-02-23'
+    date_display: Feb 2026
+    codebase_url: ''
+    published_conference: WWW 2026
+    published_conference_short: WWW
+    published_conference_slug: www
+    published_venue: WWW 2026
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9544
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0024
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: JacobiConv
+    model_plain: JacobiConv
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2303.13750'
+    title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
+    date: Mar 24, 2023
+    date_iso: '2023-03-24'
+    date_display: Mar 2023
+    codebase_url: https://github.com/TaoLbr1993/LON-GNN
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9543
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0023
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: GNSN
+    model_plain: GNSN
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2605.21247'
+    title: Graph Navier–Stokes Networks
+    date: May 20, 2026
+    date_iso: '2026-05-20'
+    date_display: May 2026
+    codebase_url: https://github.com/Duckbluee/Graph-Navier-Stokes-Networks
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9543
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0126
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: SGT
+    model_plain: SGT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2405.13806'
+    title: A General Graph Spectral Wavelet Convolution via Chebyshev Order Decomposition
+    date: May 22, 2024
+    date_iso: '2024-05-22'
+    date_display: May 2024
+    codebase_url: https://github.com/liun-online/WaveGC
+    published_conference: ICML 2024
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9537
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0044
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: Exphormer
+    model_plain: Exphormer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2403.01232'
+    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
+    date: Mar 2, 2024
+    date_iso: '2024-03-02'
+    date_display: Mar 2024
+    codebase_url: https://github.com/cornell-zhang/Polynormer
+    published_conference: ICLR 2024
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9535
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0022
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: GAT+GPL
+    model_plain: GAT+GPL
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2407.11361'
+    title: 'Graph Structure Prompt Learning: A Novel Methodology to Improve Performance
+      of Graph Neural Networks'
+    date: Jul 16, 2024
+    date_iso: '2024-07-16'
+    date_display: Jul 2024
+    codebase_url: https://github.com/PreckLi/graph_prompt_learning
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9535
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0014
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: HiGCN
+    model_plain: HiGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2411.17296'
+    title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    date: Nov 26, 2024
+    date_iso: '2024-11-26'
+    date_display: Nov 2024
+    codebase_url: https://github.com/GGA23/GrokFormer
+    published_conference: ICML 2024
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9533
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0037
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: ADC
+    model_plain: ADC
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2505.20034'
+    title: Graph Wave Networks
+    date: Apr 22, 2025
+    date_iso: '2025-04-22'
+    date_display: Apr 2025
+    codebase_url: https://github.com/YueAWu/Graph-Wave-Networks
+    published_conference: WWW 2025
+    published_conference_short: WWW
+    published_conference_slug: www
+    published_venue: WWW 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9533
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0027
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  row_count: 871
   rows_json: /data/datasets/amazon-photo/standard-split-rows.json
   chart_json: /data/datasets/amazon-photo/standard-split-chart.json
   arch_counts:
-    gnn: 618
-    hybrid: 140
-    graph_transformer: 54
-    llm: 25
+    gnn: 586
+    hybrid: 126
+    graph_transformer: 48
+    llm: 17
     walk: 16
-    traditional: 65
+    traditional: 50
   metric_counts:
-  - 884
+  - 807
   - 4
   - 12
   - 12
@@ -2896,6 +2855,13 @@ variants:
   - 1
   - 6
   milestones: &id001
+  - value: 0.915
+    std: 0.005
+    model: acc
+    arxiv_id: '1909.03211'
+    title: Measuring and Relieving the Over-smoothing Problem for Graph Neural Networks
+      from the Topological View
+    date: '2019-09-07'
   - value: 0.928
     std: 0.002
     model: SpGAT-Cheby-MAX
@@ -2920,44 +2886,57 @@ variants:
     arxiv_id: '2107.11789'
     title: 'ROD: Reception-aware Online Distillation for Sparse Graphs'
     date: '2021-07-25'
+  - value: 0.9322
+    std: 0.0028
+    model: AFGRL
+    arxiv_id: '2112.02472'
+    title: Augmentation-Free Self-Supervised Learning on Graphs
+    date: '2021-12-05'
   - value: 0.941
     std: 0.004
     model: LG2AR + GRU
     arxiv_id: '2201.09830'
     title: Learning Graph Augmentations to Learn Graph Representations
     date: '2022-01-24'
-  - value: 0.951
-    std: 0.004
-    model: OEPG
-    arxiv_id: '2205.15746'
-    title: Omni-Granular Ego-Semantic Propagation for Self-Supervised Graph Representation
-      Learning
-    date: '2022-05-31'
-  - value: 0.9543
-    std: 0.0023
-    model: JacobiConv
-    arxiv_id: '2303.13750'
-    title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
-    date: '2023-03-24'
-  - value: 0.9545
-    std: 0.0015
-    model: FE-GNN
-    arxiv_id: '2305.06142'
-    title: Feature Expansion for Graph Neural Networks
-    date: '2023-05-10'
-  - value: 0.9661
-    std: 0.0021
-    model: NAGphormer
-    arxiv_id: '2305.12677'
-    title: Tokenized Graph Transformer with Neighborhood Augmentation for Node Classification
-      in Large Graphs
-    date: '2023-05-22'
-  - value: 0.9766
-    std: 0.005
-    model: MSH-GNN
-    arxiv_id: '2505.15015'
-    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
-    date: '2025-05-21'
+  - value: 0.956
+    std: 0.001
+    model: GIRL
+    arxiv_id: '2201.12843'
+    title: Graph Representation Learning via Aggregation Enhancement
+    date: '2022-01-30'
+  - value: 0.9564
+    std: 0.0027
+    model: STAGNN
+    arxiv_id: '2310.05296'
+    title: Tailoring Self-Attention for Graph via Rooted Subtrees
+    date: '2023-10-08'
+  - value: 0.9568
+    std: 0.0036
+    model: SignGT
+    arxiv_id: '2310.11025'
+    title: 'SignGT: Signed Attention-based Graph Transformer for Graph Representation
+      Learning'
+    date: '2023-10-17'
+  - value: 0.9646
+    std: 0.0026
+    model: Polynormer-r
+    arxiv_id: '2403.01232'
+    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
+    date: '2024-03-02'
+  - value: 0.9666
+    std: 0.0013
+    model: DAM-GT
+    arxiv_id: '2505.17660'
+    title: 'DAM-GT: Dual Positional Encoding-Based Attention Masking Graph Transformer
+      for Node Classification'
+    date: '2025-05-23'
+  - value: 0.9703
+    std: null
+    model: GraphTARIF
+    arxiv_id: '2510.10631'
+    title: 'GraphTARIF: Linear Graph Transformer with Augmented Rank and Improved
+      Focus'
+    date: '2025-10-12'
   milestones_by_metric:
     Accuracy: *id001
     ACC:
@@ -2988,7 +2967,14 @@ variants:
       arxiv_id: '2110.14863'
       title: Graph Communal Contrastive Learning
       date: '2021-10-28'
-    Normalized AUAC: []
+    Normalized AUAC:
+    - value: 0.6903
+      std: 0.023
+      model: GCNII
+      arxiv_id: '2412.07188'
+      title: 'Graph Neural Networks Are More Than Filters: Revisiting and Benchmarking
+        from A Spectral Perspective'
+      date: '2024-12-10'
     ROC-AUC:
     - value: 0.955
       std: 0.004
@@ -2996,7 +2982,14 @@ variants:
       arxiv_id: '2504.19785'
       title: Heterophily-informed Message Passing
       date: '2025-04-28'
-    Recall: []
+    Recall:
+    - value: 0.786
+      std: 0.0015
+      model: PATTON
+      arxiv_id: '2412.19211'
+      title: 'Large Language Models Meet Graph Neural Networks: A Perspective of Graph
+        Mining'
+      date: '2024-12-26'
     Weighted-F1:
     - value: 0.897
       std: 0.01

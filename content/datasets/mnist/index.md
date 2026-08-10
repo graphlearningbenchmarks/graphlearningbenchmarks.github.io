@@ -9,9 +9,9 @@ primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.GNNBenchmarkDataset.html
 stats: null
-result_count: 175
+result_count: 179
 best_model:
-  model: Schrödinger GNN
+  model: Schrödinger
   value: 0.9913
   metric: Accuracy
   arxiv_id: '2605.13383'
@@ -44,6 +44,10 @@ papers:
   title: Plain Transformers Can be Powerful Graph Learners
   date_iso: '2025-04-17'
   venue: ''
+- arxiv_id: '2503.19666'
+  title: 'Towards Efficient Training of Graph Neural Networks: A Multiscale Approach'
+  date_iso: '2025-03-25'
+  venue: TMLR 2025
 - arxiv_id: '2411.12732'
   title: Benchmarking Positional Encodings for GNNs and Graph Transformers
   date_iso: '2024-11-19'
@@ -175,8 +179,8 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
-  - model: Schrödinger GNN
-    model_plain: Schrödinger GNN
+  - model: Schrödinger
+    model_plain: Schrödinger
     is_baseline: false
     is_overridden: false
     override_reason: ''
@@ -1324,8 +1328,8 @@ variants:
     - 0.982
     metric_stds:
     - 0.0005
-  - model: Tango_GPS
-    model_plain: Tango_GPS
+  - model: TANGO-GPS
+    model_plain: TANGO-GPS
     is_baseline: false
     is_overridden: false
     override_reason: ''
@@ -1480,7 +1484,7 @@ variants:
     - 0.98164
     metric_stds:
     - 0.00054
-  row_count: 175
+  row_count: 179
   rows_json: /data/datasets/mnist/standard-split-rows.json
   chart_json: /data/datasets/mnist/standard-split-chart.json
   arch_counts:
@@ -1489,9 +1493,9 @@ variants:
     graph_transformer: 20
     llm: 0
     walk: 0
-    traditional: 5
+    traditional: 8
   metric_counts:
-  - 175
+  - 179
   milestones: &id001
   - value: 0.9709
     std: 0.0001
@@ -1520,7 +1524,7 @@ variants:
     date: '2022-02-04'
   - value: 0.9913
     std: 0.0004
-    model: Schrödinger GNN
+    model: Schrödinger
     arxiv_id: '2605.13383'
     title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
     date: '2026-05-13'

@@ -133,34 +133,34 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: UniMol
-    model_key: unimol
-    model_plain: UniMol
-    value: 0.0693
+  - model: TGT-At (+RDKit)
+    model_key: tgt-at (+rdkit)
+    model_plain: TGT-At (+RDKit)
+    value: 0.0683
     std: null
     metric: MAE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: 77.0
+    params_millions: 203.0
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    arxiv_id: '2603.00568'
-    title: Enhancing Molecular Property Predictions by Learning from Bond Modelling
-      and Interactions
-    date: Feb 28, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-28'
-    venue: Accepted to ICLR 2026
-    codebase_url: ''
-    uses_external_data: false
+    arxiv_id: '2402.04538'
+    title: 'Triplet Interaction Improves Graph Transformers: Accurate Molecular Graph
+      Learning with Triplet Graph Transformers'
+    date: Feb 7, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-07'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/shamim-hussain/tgt
+    uses_external_data: true
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.0693
+    sort_value: 0.0683
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
@@ -224,8 +224,8 @@ results:
     value_note: ''
     sort_value: 0.0858
     sort_std: null
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -272,8 +272,8 @@ results:
       by Modeling Full-range Many-body Interactions'
     at_pub_source_date_iso: '2022-08-11'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-08-11'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.0007000000000000062
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -284,19 +284,19 @@ results:
     today_delta_significant: true
     true_value: 0.0862
     true_std: null
-    value_gap_source_arxiv: '2208.05863'
-    value_gap_source_title: 'GEM-2: Next Generation Molecular Property Prediction
-      Network by Modeling Full-range Many-body Interactions'
+    value_gap_source_arxiv: '2402.04538'
+    value_gap_source_title: 'Triplet Interaction Improves Graph Transformers: Accurate
+      Molecular Graph Learning with Triplet Graph Transformers'
     value_gap_source_is_current_paper: false
     value_gap: 0.0007000000000000062
     has_value_note: false
     value_note: ''
     sort_value: 0.0862
     sort_std: null
-    global_rank: 26
-    paper_rank: 29
-    rank_delta: 3
-    rank_delta_abs: 3
+    global_rank: 29
+    paper_rank: 33
+    rank_delta: 4
+    rank_delta_abs: 4
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -362,8 +362,8 @@ results:
     value_note: ''
     sort_value: 0.0864
     sort_std: null
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -409,32 +409,33 @@ results:
     at_pub_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
     at_pub_source_date_iso: '2022-05-25'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2023-03-02'
-    value_gap_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
-    surpassed_since_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.089
+    today_delta_significant: true
+    true_value: 0.0876
     true_std: null
-    value_gap_source_arxiv: '2303.01028'
-    value_gap_source_title: 'Specformer: Spectral Graph Neural Networks Meet Transformers'
-    value_gap_source_is_current_paper: true
-    value_gap: null
+    value_gap_source_arxiv: '2402.04538'
+    value_gap_source_title: 'Triplet Interaction Improves Graph Transformers: Accurate
+      Molecular Graph Learning with Triplet Graph Transformers'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0013999999999999985
     has_value_note: false
     value_note: ''
-    sort_value: 0.089
+    sort_value: 0.0876
     sort_std: null
     global_rank: 35
-    paper_rank: 35
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
+    paper_rank: 38
+    rank_delta: 3
+    rank_delta_abs: 3
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -496,8 +497,8 @@ results:
     value_note: ''
     sort_value: 0.0916
     sort_std: null
-    global_rank: 43
-    paper_rank: 43
+    global_rank: 47
+    paper_rank: 47
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -563,8 +564,8 @@ results:
     value_note: ''
     sort_value: 0.0938
     sort_std: null
-    global_rank: 47
-    paper_rank: 47
+    global_rank: 51
+    paper_rank: 51
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -631,8 +632,8 @@ results:
     value_note: ''
     sort_value: 0.1083
     sort_std: null
-    global_rank: 55
-    paper_rank: 55
+    global_rank: 59
+    paper_rank: 59
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -678,8 +679,8 @@ results:
     at_pub_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
     at_pub_source_date_iso: '2022-01-30'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2023-05-19'
-    value_gap_source_date_label: IJCAI 2023
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.00010000000000000286
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -690,16 +691,17 @@ results:
     today_delta_significant: true
     true_value: 0.1152
     true_std: null
-    value_gap_source_arxiv: '2305.11424'
-    value_gap_source_title: IJCAI--23 Formatting Instructions
+    value_gap_source_arxiv: '2402.04538'
+    value_gap_source_title: 'Triplet Interaction Improves Graph Transformers: Accurate
+      Molecular Graph Learning with Triplet Graph Transformers'
     value_gap_source_is_current_paper: false
     value_gap: 0.00010000000000000286
     has_value_note: false
     value_note: ''
     sort_value: 0.1152
     sort_std: null
-    global_rank: 57
-    paper_rank: 58
+    global_rank: 61
+    paper_rank: 62
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -766,8 +768,8 @@ results:
     value_note: ''
     sort_value: 0.1195
     sort_std: null
-    global_rank: 63
-    paper_rank: 73
+    global_rank: 67
+    paper_rank: 77
     rank_delta: 10
     rank_delta_abs: 10
     rank_delta_direction: worse
@@ -834,8 +836,8 @@ results:
     value_note: ''
     sort_value: 0.1195
     sort_std: null
-    global_rank: 62
-    paper_rank: 62
+    global_rank: 66
+    paper_rank: 66
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

@@ -226,9 +226,9 @@ results:
     sort_value: 0.994
     sort_std: null
     global_rank: 10
-    paper_rank: 94
-    rank_delta: 84
-    rank_delta_abs: 84
+    paper_rank: 96
+    rank_delta: 86
+    rank_delta_abs: 86
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -462,8 +462,8 @@ results:
     value_note: ''
     sort_value: 0.696
     sort_std: 0.004
-    global_rank: 128
-    paper_rank: 128
+    global_rank: 136
+    paper_rank: 136
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -530,8 +530,8 @@ results:
     value_note: ''
     sort_value: 0.687
     sort_std: 0.012
-    global_rank: 134
-    paper_rank: 160
+    global_rank: 142
+    paper_rank: 168
     rank_delta: 26
     rank_delta_abs: 26
     rank_delta_direction: worse
@@ -599,8 +599,8 @@ results:
     value_note: ''
     sort_value: 0.637
     sort_std: 0.006
-    global_rank: 149
-    paper_rank: 169
+    global_rank: 157
+    paper_rank: 177
     rank_delta: 20
     rank_delta_abs: 20
     rank_delta_direction: worse
@@ -668,13 +668,46 @@ results:
     value_note: ''
     sort_value: 0.574
     sort_std: 0.003
-    global_rank: 164
-    paper_rank: 164
+    global_rank: 172
+    paper_rank: 172
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.462
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2407.00494'
+    title: Graph Neural Networks Gone Hogwild
+    date: Jun 29, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-29'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 183
+    sort_value: 0.462
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -851,10 +884,10 @@ results:
     value_note: ''
     sort_value: 0.966
     sort_std: null
-    global_rank: 22
-    paper_rank: 64
-    rank_delta: 42
-    rank_delta_abs: 42
+    global_rank: 21
+    paper_rank: 61
+    rank_delta: 40
+    rank_delta_abs: 40
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -920,8 +953,8 @@ results:
     value_note: ''
     sort_value: 0.966
     sort_std: 0.001
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -988,8 +1021,8 @@ results:
     value_note: ''
     sort_value: 0.966
     sort_std: 0.001
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1024,7 +1057,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 19
+    global_rank: 18
     sort_value: 0.966
     sort_std: null
     comparison_type: global_top
@@ -1089,10 +1122,10 @@ results:
     value_note: ''
     sort_value: 0.964
     sort_std: 0.001
-    global_rank: 29
-    paper_rank: 158
-    rank_delta: 129
-    rank_delta_abs: 129
+    global_rank: 28
+    paper_rank: 152
+    rank_delta: 124
+    rank_delta_abs: 124
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1157,8 +1190,8 @@ results:
     value_note: ''
     sort_value: 0.96
     sort_std: 0.002
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1226,8 +1259,8 @@ results:
     value_note: ''
     sort_value: 0.937
     sort_std: null
-    global_rank: 118
-    paper_rank: 161
+    global_rank: 112
+    paper_rank: 155
     rank_delta: 43
     rank_delta_abs: 43
     rank_delta_direction: worse
@@ -1295,8 +1328,8 @@ results:
     value_note: ''
     sort_value: 0.932
     sort_std: 0.001
-    global_rank: 132
-    paper_rank: 132
+    global_rank: 126
+    paper_rank: 126
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1309,8 +1342,8 @@ results:
   - model: MLP
     model_key: mlp
     model_plain: MLP
-    value: 0.7435
-    std: 0.0016
+    value: 0.7216
+    std: 0.0015
     metric: F1
     higher_is_better: true
     is_baseline: true
@@ -1320,21 +1353,20 @@ results:
     architecture_type: other_traditional
     architecture_label: Trad
     architecture_title: Traditional / classical method
-    arxiv_id: '2512.14908'
-    title: 'ATLAS: Adaptive Topology-based Learning at Scale for Homophilic and Heterophilic
-      Graphs'
-    date: Dec 16, 2025
-    date_display: Dec 2025
-    date_iso: '2025-12-16'
-    venue: arXiv.org
-    codebase_url: https://github.com/atlaspaper16/ATLAS
+    arxiv_id: '2405.20445'
+    title: Fully-inductive Node Classification on Arbitrary Graphs
+    date: May 30, 2024
+    date_display: May 2024
+    date_iso: '2024-05-30'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/DeepGraphLearning/GraphAny
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 165
-    sort_value: 0.7435
-    sort_std: 0.0016
+    global_rank: 162
+    sort_value: 0.7216
+    sort_std: 0.0015
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''

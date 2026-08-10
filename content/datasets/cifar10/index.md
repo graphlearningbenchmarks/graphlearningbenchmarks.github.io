@@ -12,7 +12,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 10
-result_count: 162
+result_count: 160
 best_model:
   model: RandAlign
   value: 0.7942
@@ -30,10 +30,6 @@ papers:
   title: A Hierarchical Quantized Tokenization Framework for Task-Adaptive Graph Representation
     Learning
   date_iso: '2025-10-14'
-  venue: ''
-- arxiv_id: '2508.05070'
-  title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-  date_iso: '2025-08-07'
   venue: ''
 - arxiv_id: '2504.12588'
   title: Plain Transformers Can be Powerful Graph Learners
@@ -473,32 +469,6 @@ variants:
     - 0.76127
     metric_stds:
     - 0.00402
-  - model: Tango_GPS
-    model_plain: Tango_GPS
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_iso: '2025-08-07'
-    date_display: Aug 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.75783
-    metric_stds:
-    - 0.00261
   - model: GMN
     model_plain: GMN
     is_baseline: true
@@ -1465,18 +1435,44 @@ variants:
     - 0.72298
     metric_stds:
     - 0.00356
-  row_count: 162
+  - model: GIN-AK+
+    model_plain: GIN-AK+
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2110.03753'
+    title: 'From Stars to Subgraphs: Uplifting Any GNN with Local Structure Awareness'
+    date: Oct 7, 2021
+    date_iso: '2021-10-07'
+    date_display: Oct 2021
+    codebase_url: https://github.com/LingxiaoShawn/GNNAsKernel
+    published_conference: ICLR 2021
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7219
+    metric_stds:
+    - 0.0013
+  row_count: 160
   rows_json: /data/datasets/cifar10/standard-split-rows.json
   chart_json: /data/datasets/cifar10/standard-split-chart.json
   arch_counts:
     gnn: 88
-    hybrid: 43
+    hybrid: 41
     graph_transformer: 19
     llm: 0
     walk: 0
     traditional: 8
   metric_counts:
-  - 162
+  - 160
   milestones: &id001
   - value: 0.7348
     std: 0.0029
@@ -1490,6 +1486,12 @@ variants:
     arxiv_id: '2110.03753'
     title: 'From Stars to Subgraphs: Uplifting Any GNN with Local Structure Awareness'
     date: '2021-10-07'
+  - value: 0.76468
+    std: 0.00881
+    model: GRIT
+    arxiv_id: '2310.20519'
+    title: Enhancing Graph Neural Networks with Quantum Computed Encodings
+    date: '2023-10-31'
   - value: 0.76853
     std: 0.00185
     model: GRED

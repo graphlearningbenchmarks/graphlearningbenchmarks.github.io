@@ -792,12 +792,13 @@ variants:
     arxiv_id: '2003.00982'
     title: GNNBenchmark
     date: '2023-01-01'
-  - value: 0.863
+  - value: 0.871
     std: 0.001
-    model: GIG-GatedGCN
-    arxiv_id: '2407.00696'
-    title: Graph in Graph Neural Network
-    date: '2024-06-30'
+    model: TGT-Agx4
+    arxiv_id: '2402.04538'
+    title: 'Triplet Interaction Improves Graph Transformers: Accurate Molecular Graph
+      Learning with Triplet Graph Transformers'
+    date: '2024-02-07'
   milestones_by_metric:
     F1: *id001
 ---

@@ -69,26 +69,21 @@ abstract: 'Effective molecular representation learning is of great importance to
   in both regression and classification tasks. For example, the experimental results
   show an overall improvement of $8.8\'
 codebase_url: https://github.com/PaddlePaddle/PaddleHelix
-extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+extraction_model: google/gemma-4-26B-A4B-it
 has_results: true
 paper_type: method
 proposed_models:
 - ChemRL-GEM
-mrr: 0.0236
-adjusted_mrr: 0.0236
-mrr_dataset_count: 5
+mrr: 0.0348
+adjusted_mrr: 0.0348
+mrr_dataset_count: 3
 benchmark_categories:
 - MoleculeNet
-- Quantum Chemistry
 benchmark_coverage:
 - benchmark: MoleculeNet
   benchmark_slug: moleculenet
   evaluated: 8
   total: 9
-- benchmark: Quantum Chemistry
-  benchmark_slug: quantum-chemistry
-  evaluated: 1
-  total: 3
 task_categories:
 - graph_classification
 - graph_regression
@@ -199,74 +194,6 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: D-MPNN
-    model_key: d-mpnn
-    model_plain: D-MPNN
-    value: 0.809
-    std: 0.006
-    paper_value: 0.809
-    paper_std: 0.006
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: doi:10.1021/acs.jcim.9b00237
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Scaffold split
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.865
-    at_pub_std: 0.013
-    at_pub_source_arxiv: '2006.04804'
-    at_pub_source_title: Optimal Transport Graph Neural Networks
-    at_pub_source_date_iso: '2020-06-08'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2023-12-12'
-    value_gap_source_date_label: NeurIPS 2023
-    gap_vs_at_pub: 0.05599999999999994
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.878
-    true_std: 0.032
-    value_gap_source_arxiv: '2312.07633'
-    value_gap_source_title: SE(3)-Invariant Multiparameter Persistent Homology for
-      Chiral-Sensitive Molecular Property Prediction
-    value_gap_source_is_current_paper: false
-    value_gap: 0.06899999999999995
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.878
-    sort_std: 0.032
-    global_rank: 19
-    paper_rank: 157
-    rank_delta: 138
-    rank_delta_abs: 138
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Optimal Transport Graph Neural Networks
-    comparison_source_arxiv: '2006.04804'
-    is_best: false
-    is_std_outlier: false
   - model: GIN
     model_key: gin
     model_plain: GIN
@@ -290,350 +217,13 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 41
+    global_rank: 43
     sort_value: 0.8646
     sort_std: 0.0081
     comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AttentiveFP
-    model_key: attentivefp
-    model_plain: AttentiveFP
-    value: 0.784
-    std: 0.022
-    paper_value: 0.784
-    paper_std: 0.022
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: doi:10.1021/acs.jmedchem.9b00959
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Scaffold split
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-18'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.863
-    true_std: 0.015
-    value_gap_source_arxiv: '2202.09346'
-    value_gap_source_title: Improving Molecular Contrastive Learning via Faulty Negative
-      Mitigation and Decomposed Fragment Contrast
-    value_gap_source_is_current_paper: false
-    value_gap: 0.07899999999999996
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.863
-    sort_std: 0.015
-    global_rank: 43
-    paper_rank: 207
-    rank_delta: 164
-    rank_delta_abs: 164
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GROVER_large
-    model_key: grover_large
-    model_plain: GROVER_large
-    value: 0.81
-    std: 0.014
-    paper_value: 0.81
-    paper_std: 0.014
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: DBLP:conf/nips/RongBXX0HH20
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Scaffold split
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-10-04'
-    value_gap_source_date_label: AAAI 2021
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.858
-    true_std: null
-    value_gap_source_arxiv: '2110.01191'
-    value_gap_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.04799999999999993
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.858
-    sort_std: null
-    global_rank: 54
-    paper_rank: 151
-    rank_delta: 97
-    rank_delta_abs: 97
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: PretrainGNN
-    model_key: pretraingnn
-    model_plain: PretrainGNN
-    value: 0.845
-    std: 0.007
-    paper_value: 0.845
-    paper_std: 0.007
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: DBLP:conf/iclr/HuLGZLPL20
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Scaffold split
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-05-07'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.845
-    true_std: 0.007
-    value_gap_source_arxiv: '2605.06462'
-    value_gap_source_title: Invariant-Based Diagnostics for Graph Benchmarks
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.845
-    sort_std: 0.007
-    global_rank: 79
-    paper_rank: 79
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GROVER_base
-    model_key: grover_base
-    model_plain: GROVER_base
-    value: 0.826
-    std: 0.007
-    paper_value: 0.826
-    paper_std: 0.007
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: DBLP:conf/nips/RongBXX0HH20
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Scaffold split
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-05-07'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.826
-    true_std: 0.007
-    value_gap_source_arxiv: '2605.06462'
-    value_gap_source_title: Invariant-Based Diagnostics for Graph Benchmarks
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.826
-    sort_std: 0.007
-    global_rank: 112
-    paper_rank: 112
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: N-Gram_XGB
-    model_key: n-gram_xgb
-    model_plain: N-Gram_XGB
-    value: 0.791
-    std: 0.013
-    paper_value: 0.791
-    paper_std: 0.013
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: boosting
-    architecture_label: Boost
-    architecture_title: Boosting ensemble
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: DBLP:conf/nips/LiuDL19
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Scaffold split
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-05-07'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.791
-    true_std: 0.013
-    value_gap_source_arxiv: '2605.06462'
-    value_gap_source_title: Invariant-Based Diagnostics for Graph Benchmarks
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.791
-    sort_std: 0.013
-    global_rank: 195
-    paper_rank: 195
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -655,14 +245,14 @@ results:
     architecture_label: RF
     architecture_title: Random forest
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: DBLP:conf/nips/LiuDL19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: ROC-AUC on BACE using scaffold split
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -694,8 +284,8 @@ results:
     value_note: ''
     sort_value: 0.779
     sort_std: 0.015
-    global_rank: 213
-    paper_rank: 213
+    global_rank: 219
+    paper_rank: 219
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -819,211 +409,6 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: D-MPNN
-    model_key: d-mpnn
-    model_plain: D-MPNN
-    value: 0.71
-    std: 0.003
-    paper_value: 0.71
-    paper_std: 0.003
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: doi:10.1021/acs.jcim.9b00237
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Scaffold split
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.708
-    at_pub_std: null
-    at_pub_source_arxiv: '2010.09885'
-    at_pub_source_title: 'ChemBERTa: Large-Scale Self-Supervised Pretraining for Molecular
-      Property Prediction'
-    at_pub_source_date_iso: '2020-10-19'
-    at_pub_source_date_label: NeurIPS 2020
-    value_gap_source_date_iso: '2023-12-12'
-    value_gap_source_date_label: NeurIPS 2023
-    gap_vs_at_pub: 0.0020000000000000018
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: true
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.913
-    true_std: 0.026
-    value_gap_source_arxiv: '2312.07633'
-    value_gap_source_title: SE(3)-Invariant Multiparameter Persistent Homology for
-      Chiral-Sensitive Molecular Property Prediction
-    value_gap_source_is_current_paper: false
-    value_gap: 0.20300000000000007
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.913
-    sort_std: 0.026
-    global_rank: 25
-    paper_rank: 118
-    rank_delta: 93
-    rank_delta_abs: 93
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GROVER_large
-    model_key: grover_large
-    model_plain: GROVER_large
-    value: 0.695
-    std: 0.001
-    paper_value: 0.695
-    paper_std: 0.001
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: DBLP:conf/nips/RongBXX0HH20
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Scaffold split
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-10-04'
-    value_gap_source_date_label: AAAI 2021
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.911
-    true_std: null
-    value_gap_source_arxiv: '2110.01191'
-    value_gap_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.21600000000000008
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.911
-    sort_std: null
-    global_rank: 28
-    paper_rank: 163
-    rank_delta: 135
-    rank_delta_abs: 135
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AttentiveFP
-    model_key: attentivefp
-    model_plain: AttentiveFP
-    value: 0.643
-    std: 0.018
-    paper_value: 0.643
-    paper_std: 0.018
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: doi:10.1021/acs.jmedchem.9b00959
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Scaffold split
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-18'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.908
-    true_std: 0.05
-    value_gap_source_arxiv: '2202.09346'
-    value_gap_source_title: Improving Molecular Contrastive Learning via Faulty Negative
-      Mitigation and Decomposed Fragment Contrast
-    value_gap_source_is_current_paper: false
-    value_gap: 0.265
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.908
-    sort_std: 0.05
-    global_rank: 29
-    paper_rank: 275
-    rank_delta: 246
-    rank_delta_abs: 246
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
   - model: GIN
     model_key: gin
     model_plain: GIN
@@ -1047,148 +432,13 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 32
+    global_rank: 34
     sort_value: 0.8875
     sort_std: 0.0049
     comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: ChemRL-GEM
-    model_key: chemrl-gem
-    model_plain: ChemRL-GEM
-    value: 0.724
-    std: 0.004
-    paper_value: 0.724
-    paper_std: 0.004
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Scaffold split
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-06-11'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.724
-    true_std: 0.004
-    value_gap_source_arxiv: '2106.06130'
-    value_gap_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.724
-    sort_std: 0.004
-    global_rank: 91
-    paper_rank: 91
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GROVER_base
-    model_key: grover_base
-    model_plain: GROVER_base
-    value: 0.7
-    std: 0.001
-    paper_value: 0.7
-    paper_std: 0.001
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: DBLP:conf/nips/RongBXX0HH20
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Scaffold split
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-05-07'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7
-    true_std: 0.001
-    value_gap_source_arxiv: '2605.06462'
-    value_gap_source_title: Invariant-Based Diagnostics for Graph Benchmarks
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7
-    sort_std: 0.001
-    global_rank: 148
-    paper_rank: 148
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1210,14 +460,14 @@ results:
     architecture_label: RF
     architecture_title: Random forest
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: DBLP:conf/nips/LiuDL19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: BBBP classification task using scaffold split
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -1249,142 +499,8 @@ results:
     value_note: ''
     sort_value: 0.697
     sort_std: 0.006
-    global_rank: 156
-    paper_rank: 156
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: N-Gram_XGB
-    model_key: n-gram_xgb
-    model_plain: N-Gram_XGB
-    value: 0.691
-    std: 0.008
-    paper_value: 0.691
-    paper_std: 0.008
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: boosting
-    architecture_label: Boost
-    architecture_title: Boosting ensemble
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: DBLP:conf/nips/LiuDL19
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Scaffold split
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-05-07'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.691
-    true_std: 0.008
-    value_gap_source_arxiv: '2605.06462'
-    value_gap_source_title: Invariant-Based Diagnostics for Graph Benchmarks
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.691
-    sort_std: 0.008
-    global_rank: 172
-    paper_rank: 172
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: PretrainGNN
-    model_key: pretraingnn
-    model_plain: PretrainGNN
-    value: 0.687
-    std: 0.013
-    paper_value: 0.687
-    paper_std: 0.013
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: DBLP:conf/iclr/HuLGZLPL20
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Scaffold split
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-05-07'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.687
-    true_std: 0.013
-    value_gap_source_arxiv: '2605.06462'
-    value_gap_source_title: Invariant-Based Diagnostics for Graph Benchmarks
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.687
-    sort_std: 0.013
-    global_rank: 183
-    paper_rank: 183
+    global_rank: 159
+    paper_rank: 159
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1559,15 +675,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: doi:10.1021/acs.jcim.9b00237
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Scaffold split (implied by context of molecular property benchmarks
-      and standard ClinTox usage)
+    protocol_note: ROC-AUC on ClinTox using scaffold split
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -1628,15 +743,14 @@ results:
     architecture_label: Boost
     architecture_title: Boosting ensemble
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: DBLP:conf/nips/LiuDL19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Scaffold split (implied by context of molecular property benchmarks
-      and standard ClinTox usage)
+    protocol_note: ROC-AUC on ClinTox using scaffold split
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -1669,8 +783,8 @@ results:
     value_note: ''
     sort_value: 0.875
     sort_std: 0.027
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1697,15 +811,14 @@ results:
     architecture_label: RF
     architecture_title: Random forest
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: DBLP:conf/nips/LiuDL19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Scaffold split (implied by context of molecular property benchmarks
-      and standard ClinTox usage)
+    protocol_note: ROC-AUC on ClinTox using scaffold split
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -1738,8 +851,8 @@ results:
     value_note: ''
     sort_value: 0.775
     sort_std: 0.04
-    global_rank: 107
-    paper_rank: 107
+    global_rank: 109
+    paper_rank: 109
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1761,103 +874,100 @@ results:
 - &id007
   dataset: ESOL
   rows:
-  - model: 10% ZINC + 10% PubChem
-    model_key: 10% zinc + 10% pubchem
-    model_plain: 10% ZINC + 10% PubChem
-    value: 0.2775
-    std: null
+  - model: Graphormer-SPIS
+    model_key: graphormer-spis
+    model_plain: Graphormer-SPIS
+    value: 0.484
+    std: 0.005
     metric: RMSE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2305.13987'
+    title: On Structural Expressive Power of Graph Transformers
+    date: May 23, 2023
+    date_display: May 2023
+    date_iso: '2023-05-23'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.2775
-    sort_std: null
+    sort_value: 0.484
+    sort_std: 0.005
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAT
-    model_key: mat
-    model_plain: MAT
-    value: 0.278
-    std: 0.02
+  - model: Graphormer-SPD
+    model_key: graphormer-spd
+    model_plain: Graphormer-SPD
+    value: 0.492
+    std: 0.004
     metric: RMSE
     higher_is_better: false
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    arxiv_id: '2002.08264'
-    title: Molecule Attention Transformer
-    date: Feb 19, 2020
-    date_display: Feb 2020
-    date_iso: '2020-02-19'
-    venue: Graph Representation Learning workshop and Machine Learning and the Physical
-      Sciences workshop at NeurIPS 2019
-    codebase_url: https://github.com/gmum/MAT
-    uses_external_data: true
-    input_feature_source: null
+    arxiv_id: '2305.13987'
+    title: On Structural Expressive Power of Graph Transformers
+    date: May 23, 2023
+    date_display: May 2023
+    date_iso: '2023-05-23'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
+    uses_external_data: false
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.278
-    sort_std: 0.02
+    sort_value: 0.492
+    sort_std: 0.004
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MoLFormer-XL
-    model_key: molformer-xl
-    model_plain: MoLFormer-XL
-    value: 0.2787
-    std: null
+  - model: conan-FGW
+    model_key: conan-fgw
+    model_plain: conan-FGW
+    value: 0.514
+    std: 0.019
     metric: RMSE
     higher_is_better: false
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2402.01975'
+    title: Structure-Aware E(3)-Invariant Molecular Conformer Aggregation Networks
+    date: Feb 3, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-03'
+    venue: International Conference on Machine Learning
+    codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.2787
-    sort_std: null
+    sort_value: 0.514
+    sort_std: 0.019
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1880,14 +990,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: DBLP:journals/corr/abs-1710-10903
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on ESOL test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -1919,10 +1029,10 @@ results:
     value_note: ''
     sort_value: 0.552
     sort_std: 0.007
-    global_rank: 11
-    paper_rank: 141
-    rank_delta: 130
-    rank_delta_abs: 130
+    global_rank: 5
+    paper_rank: 136
+    rank_delta: 131
+    rank_delta_abs: 131
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1947,14 +1057,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: DBLP:journals/corr/KipfW16
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on ESOL test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -1986,10 +1096,10 @@ results:
     value_note: ''
     sort_value: 0.564
     sort_std: 0.015
-    global_rank: 13
-    paper_rank: 121
-    rank_delta: 108
-    rank_delta_abs: 108
+    global_rank: 7
+    paper_rank: 116
+    rank_delta: 109
+    rank_delta_abs: 109
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2014,14 +1124,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: doi:10.1021/acs.jmedchem.9b00959
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on ESOL test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -2054,8 +1164,8 @@ results:
     value_note: ''
     sort_value: 0.578
     sort_std: null
-    global_rank: 16
-    paper_rank: 69
+    global_rank: 10
+    paper_rank: 63
     rank_delta: 53
     rank_delta_abs: 53
     rank_delta_direction: worse
@@ -2090,7 +1200,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 24
+    global_rank: 18
     sort_value: 0.601
     sort_std: 0.008
     comparison_type: global_top
@@ -2115,14 +1225,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: DBLP:conf/iclr/XuHLJ19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on ESOL test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -2154,10 +1264,10 @@ results:
     value_note: ''
     sort_value: 0.626
     sort_std: 0.017
-    global_rank: 30
-    paper_rank: 98
-    rank_delta: 68
-    rank_delta_abs: 68
+    global_rank: 25
+    paper_rank: 92
+    rank_delta: 67
+    rank_delta_abs: 67
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2182,14 +1292,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: doi:10.1021/acs.jcim.9b00237
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on ESOL test set (scaffold split implied by context of molecular
+      benchmarks)
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -2221,10 +1332,10 @@ results:
     value_note: ''
     sort_value: 0.635
     sort_std: 0.027
-    global_rank: 32
-    paper_rank: 97
-    rank_delta: 65
-    rank_delta_abs: 65
+    global_rank: 27
+    paper_rank: 91
+    rank_delta: 64
+    rank_delta_abs: 64
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2249,14 +1360,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: mixed
+    feature_source_evidence: Uses geometry-level self-supervised learning tasks for
+      pre-training
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on ESOL test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -2289,8 +1401,8 @@ results:
     value_note: ''
     sort_value: 0.798
     sort_std: 0.029
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 44
+    paper_rank: 44
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2317,14 +1429,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: mixed
+    feature_source_evidence: Pre-training with Geometry+Graph tasks
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on ESOL test set (Geometry+Graph pre-training)
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -2357,8 +1469,8 @@ results:
     value_note: ''
     sort_value: 0.798
     sort_std: 0.029
-    global_rank: 51
-    paper_rank: 51
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2385,14 +1497,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: mixed
+    feature_source_evidence: Pre-training with Graph-level tasks
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on ESOL test set (Graph pre-training)
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -2425,8 +1537,8 @@ results:
     value_note: ''
     sort_value: 0.815
     sort_std: 0.025
-    global_rank: 52
-    paper_rank: 52
+    global_rank: 46
+    paper_rank: 46
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2453,14 +1565,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: mixed
+    feature_source_evidence: Pre-training with Geometry-level tasks
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on ESOL test set (Geometry pre-training)
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -2493,8 +1605,8 @@ results:
     value_note: ''
     sort_value: 0.825
     sort_std: 0.017
-    global_rank: 57
-    paper_rank: 57
+    global_rank: 51
+    paper_rank: 51
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2521,14 +1633,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: w/o pre-train variant in Table 3
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on ESOL test set (w/o pre-train)
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -2561,8 +1673,8 @@ results:
     value_note: ''
     sort_value: 0.832
     sort_std: 0.01
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2589,14 +1701,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: mixed
+    feature_source_evidence: Pre-training with Context+Graph tasks
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on ESOL test set (Context+Graph pre-training)
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -2629,8 +1741,8 @@ results:
     value_note: ''
     sort_value: 0.837
     sort_std: 0.027
-    global_rank: 65
-    paper_rank: 65
+    global_rank: 59
+    paper_rank: 59
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2657,14 +1769,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: DBLP:conf/nips/RongBXX0HH20
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on ESOL test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -2697,8 +1809,8 @@ results:
     value_note: ''
     sort_value: 0.895
     sort_std: 0.017
-    global_rank: 72
-    paper_rank: 72
+    global_rank: 66
+    paper_rank: 66
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2725,14 +1837,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: DBLP:conf/nips/RongBXX0HH20
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on ESOL test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -2765,8 +1877,8 @@ results:
     value_note: ''
     sort_value: 0.983
     sort_std: 0.09
-    global_rank: 88
-    paper_rank: 88
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2793,14 +1905,14 @@ results:
     architecture_label: RF
     architecture_title: Random forest
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: DBLP:conf/nips/LiuDL19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on ESOL test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -2833,8 +1945,8 @@ results:
     value_note: ''
     sort_value: 1.074
     sort_std: 0.107
-    global_rank: 101
-    paper_rank: 101
+    global_rank: 95
+    paper_rank: 95
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2861,14 +1973,14 @@ results:
     architecture_label: Boost
     architecture_title: Boosting ensemble
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: DBLP:conf/nips/LiuDL19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on ESOL test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -2901,8 +2013,8 @@ results:
     value_note: ''
     sort_value: 1.083
     sort_std: 0.082
-    global_rank: 102
-    paper_rank: 102
+    global_rank: 96
+    paper_rank: 96
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2929,14 +2041,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: Pre-training mentioned in table/prose
     table_ref: Table 1
     source_ref: DBLP:conf/iclr/HuLGZLPL20
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on ESOL test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -2969,76 +2081,8 @@ results:
     value_note: ''
     sort_value: 1.1
     sort_std: 0.006
-    global_rank: 107
-    paper_rank: 107
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GTransformer
-    model_key: gtransformer
-    model_plain: GTransformer
-    value: 2.298
-    std: 0.118
-    paper_value: 2.298
-    paper_std: 0.118
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: DBLP:conf/nips/RongBXX0HH20
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Scaffold split
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-06-11'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 2.298
-    true_std: 0.118
-    value_gap_source_arxiv: '2106.06130'
-    value_gap_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 2.298
-    sort_std: 0.118
-    global_rank: 153
-    paper_rank: 153
+    global_rank: 101
+    paper_rank: 101
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3060,10 +2104,79 @@ results:
 - &id008
   dataset: FreeSolv
   rows:
-  - model: 10% ZINC + 10% PubChem
-    model_key: 10% zinc + 10% pubchem
-    model_plain: 10% ZINC + 10% PubChem
-    value: 0.205
+  - model: SE(3)-I MPPH
+    model_key: se(3)-i mpph
+    model_plain: SE(3)-I MPPH
+    value: 0.354
+    std: 0.053
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2312.07633'
+    title: SE(3)-Invariant Multiparameter Persistent Homology for Chiral-Sensitive
+      Molecular Property Prediction
+    date: Dec 12, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-12'
+    venue: NeurIPS 2023 AI for Science Workshop
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: integrating SE(3)-invariance into Vietoris-Rips persistent
+      homology
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.354
+    sort_std: 0.053
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: ECFP-4 + RF
+    model_key: ecfp-4 + rf
+    model_plain: ECFP-4 + RF
+    value: 0.56
+    std: 0.066
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: random_forest
+    architecture_label: RF
+    architecture_title: Random forest
+    arxiv_id: '2312.07633'
+    title: SE(3)-Invariant Multiparameter Persistent Homology for Chiral-Sensitive
+      Molecular Property Prediction
+    date: Dec 12, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-12'
+    venue: NeurIPS 2023 AI for Science Workshop
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: trained on ECFP-4 fingerprints
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.56
+    sort_std: 0.066
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GPSE + GPS
+    model_key: gpse + gps
+    model_plain: GPSE + GPS
+    value: 0.682
     std: null
     metric: RMSE
     higher_is_better: false
@@ -3071,91 +2184,22 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.205
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: MoLFormer-XL
-    model_key: molformer-xl
-    model_plain: MoLFormer-XL
-    value: 0.2308
-    std: null
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.2308
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MoLFormer-Base
-    model_key: molformer-base
-    model_plain: MoLFormer-Base
-    value: 0.2596
-    std: null
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-17'
-    venue: Nature Machine Intelligence
-    codebase_url: https://github.com/IBM/molformer
-    uses_external_data: false
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2307.07107'
+    title: Graph Positional and Structural Encoder
+    date: Jul 14, 2023
+    date_display: Jul 2023
+    date_iso: '2023-07-14'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/G-Taxonomy-Workgroup/GPSE
+    uses_external_data: true
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.2596
+    sort_value: 0.682
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
@@ -3179,14 +2223,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: doi:10.1021/acs.jcim.9b00237
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on FreeSolv test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -3219,8 +2263,8 @@ results:
     value_note: ''
     sort_value: 1.01
     sort_std: 0.064
-    global_rank: 16
-    paper_rank: 58
+    global_rank: 12
+    paper_rank: 54
     rank_delta: 42
     rank_delta_abs: 42
     rank_delta_direction: worse
@@ -3247,14 +2291,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: doi:10.1021/acs.jmedchem.9b00959
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on FreeSolv test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -3287,8 +2331,8 @@ results:
     value_note: ''
     sort_value: 1.034
     sort_std: null
-    global_rank: 17
-    paper_rank: 58
+    global_rank: 13
+    paper_rank: 54
     rank_delta: 41
     rank_delta_abs: 41
     rank_delta_direction: worse
@@ -3315,14 +2359,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: mixed
+    feature_source_evidence: Pre-training using Geometry tasks
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split (ablation variant of GeoGNN)
+    protocol_note: RMSE on FreeSolv test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -3355,8 +2399,8 @@ results:
     value_note: ''
     sort_value: 1.701
     sort_std: 0.147
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3383,14 +2427,15 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: The paper describes GeoGNN as the base architecture used
+      for pre-training.
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on FreeSolv test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -3423,8 +2468,8 @@ results:
     value_note: ''
     sort_value: 1.857
     sort_std: 0.071
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3451,14 +2496,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: mixed
+    feature_source_evidence: Pre-training using Geometry and Graph tasks
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split (ablation variant of GeoGNN)
+    protocol_note: RMSE on FreeSolv test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -3491,8 +2536,8 @@ results:
     value_note: ''
     sort_value: 1.876
     sort_std: 0.094
-    global_rank: 47
-    paper_rank: 47
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3519,14 +2564,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: mixed
+    feature_source_evidence: Uses geometry-level self-supervised learning tasks for
+      pre-training
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on FreeSolv test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -3559,8 +2605,8 @@ results:
     value_note: ''
     sort_value: 1.877
     sort_std: 0.094
-    global_rank: 49
-    paper_rank: 49
+    global_rank: 44
+    paper_rank: 44
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3587,14 +2633,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: mixed
+    feature_source_evidence: Pre-training using Graph tasks
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split (ablation variant of GeoGNN)
+    protocol_note: RMSE on FreeSolv test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -3627,8 +2673,8 @@ results:
     value_note: ''
     sort_value: 1.95
     sort_std: 0.069
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3655,14 +2701,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: mixed
+    feature_source_evidence: Pre-training using Context and Graph tasks
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split (ablation variant of GeoGNN)
+    protocol_note: RMSE on FreeSolv test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -3695,8 +2741,8 @@ results:
     value_note: ''
     sort_value: 1.982
     sort_std: 0.098
-    global_rank: 52
-    paper_rank: 52
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3723,14 +2769,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: DBLP:conf/nips/RongBXX0HH20
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on FreeSolv test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -3763,8 +2809,8 @@ results:
     value_note: ''
     sort_value: 2.176
     sort_std: 0.052
-    global_rank: 62
-    paper_rank: 62
+    global_rank: 58
+    paper_rank: 58
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3791,14 +2837,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: DBLP:conf/nips/RongBXX0HH20
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on FreeSolv test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -3831,8 +2877,8 @@ results:
     value_note: ''
     sort_value: 2.272
     sort_std: 0.051
-    global_rank: 69
-    paper_rank: 69
+    global_rank: 65
+    paper_rank: 65
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3859,14 +2905,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: DBLP:conf/iclr/XuHLJ19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on FreeSolv test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -3899,8 +2945,8 @@ results:
     value_note: ''
     sort_value: 2.346
     sort_std: 0.122
-    global_rank: 73
-    paper_rank: 73
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3927,14 +2973,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: DBLP:journals/corr/KipfW16
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on FreeSolv test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -3967,8 +3013,8 @@ results:
     value_note: ''
     sort_value: 2.618
     sort_std: 0.298
-    global_rank: 81
-    paper_rank: 105
+    global_rank: 77
+    paper_rank: 101
     rank_delta: 24
     rank_delta_abs: 24
     rank_delta_direction: worse
@@ -3995,14 +3041,14 @@ results:
     architecture_label: RF
     architecture_title: Random forest
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: DBLP:conf/nips/LiuDL19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on FreeSolv test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -4035,8 +3081,8 @@ results:
     value_note: ''
     sort_value: 2.688
     sort_std: 0.085
-    global_rank: 84
-    paper_rank: 84
+    global_rank: 80
+    paper_rank: 80
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4063,14 +3109,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: Pre-training mentioned in context of PretrainGNN
     table_ref: Table 1
     source_ref: DBLP:conf/iclr/HuLGZLPL20
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on FreeSolv test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -4103,8 +3149,8 @@ results:
     value_note: ''
     sort_value: 2.764
     sort_std: 0.002
-    global_rank: 89
-    paper_rank: 89
+    global_rank: 85
+    paper_rank: 85
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4131,14 +3177,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: DBLP:journals/corr/abs-1710-10903
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on FreeSolv test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -4171,8 +3217,8 @@ results:
     value_note: ''
     sort_value: 2.942
     sort_std: 0.591
-    global_rank: 99
-    paper_rank: 112
+    global_rank: 95
+    paper_rank: 108
     rank_delta: 13
     rank_delta_abs: 13
     rank_delta_direction: worse
@@ -4199,14 +3245,14 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: DBLP:conf/nips/RongBXX0HH20
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on FreeSolv test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -4239,8 +3285,8 @@ results:
     value_note: ''
     sort_value: 4.48
     sort_std: 0.155
-    global_rank: 123
-    paper_rank: 123
+    global_rank: 119
+    paper_rank: 119
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4267,14 +3313,14 @@ results:
     architecture_label: Boost
     architecture_title: Boosting ensemble
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: DBLP:conf/nips/LiuDL19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: RMSE on FreeSolv test set
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -4307,8 +3353,8 @@ results:
     value_note: ''
     sort_value: 5.061
     sort_std: 0.744
-    global_rank: 127
-    paper_rank: 127
+    global_rank: 123
+    paper_rank: 123
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4327,1174 +3373,6 @@ results:
   metric: RMSE
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id009
-  dataset: QM7b
-  rows:
-  - model: Geometry
-    model_key: geometry
-    model_plain: Geometry
-    value: 58.2
-    std: 0.5
-    paper_value: 58.2
-    paper_std: 0.5
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Regression task on QM7 dataset (pre-training strategy)
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-06-11'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 58.2
-    true_std: 0.5
-    value_gap_source_arxiv: '2106.06130'
-    value_gap_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 58.2
-    sort_std: 0.5
-    global_rank: 1
-    paper_rank: 1
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: ChemRL-GEM
-    model_key: chemrl-gem
-    model_plain: ChemRL-GEM
-    value: 58.9
-    std: 0.8
-    paper_value: 58.9
-    paper_std: 0.8
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Regression task on QM7 dataset
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-06-11'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 58.9
-    true_std: 0.8
-    value_gap_source_arxiv: '2106.06130'
-    value_gap_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 58.9
-    sort_std: 0.8
-    global_rank: 2
-    paper_rank: 2
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Geometry+Graph
-    model_key: geometry+graph
-    model_plain: Geometry+Graph
-    value: 58.9
-    std: 0.8
-    paper_value: 58.9
-    paper_std: 0.8
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Regression task on QM7 dataset (pre-training strategy)
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-06-11'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 58.9
-    true_std: 0.8
-    value_gap_source_arxiv: '2106.06130'
-    value_gap_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 58.9
-    sort_std: 0.8
-    global_rank: 3
-    paper_rank: 3
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GeoGNN
-    model_key: geognn
-    model_plain: GeoGNN
-    value: 59.0
-    std: 3.4
-    paper_value: 59.0
-    paper_std: 3.4
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Regression task on QM7 dataset
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-06-11'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 59.0
-    true_std: 3.4
-    value_gap_source_arxiv: '2106.06130'
-    value_gap_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 59.0
-    sort_std: 3.4
-    global_rank: 4
-    paper_rank: 4
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Graph
-    model_key: graph
-    model_plain: Graph
-    value: 63.1
-    std: 2.8
-    paper_value: 63.1
-    paper_std: 2.8
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Regression task on QM7 dataset (pre-training strategy)
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-06-11'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 63.1
-    true_std: 2.8
-    value_gap_source_arxiv: '2106.06130'
-    value_gap_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 63.1
-    sort_std: 2.8
-    global_rank: 5
-    paper_rank: 5
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AttentiveFP
-    model_key: attentivefp
-    model_plain: AttentiveFP
-    value: 72.0
-    std: 2.7
-    paper_value: 72.0
-    paper_std: 2.7
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: doi:10.1021/acs.jmedchem.9b00959
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Regression task on QM7 dataset
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-06-11'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 72.0
-    true_std: 2.7
-    value_gap_source_arxiv: '2106.06130'
-    value_gap_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 72.0
-    sort_std: 2.7
-    global_rank: 6
-    paper_rank: 6
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Context+Graph
-    model_key: context+graph
-    model_plain: Context+Graph
-    value: 72.1
-    std: 2.3
-    paper_value: 72.1
-    paper_std: 2.3
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Regression task on QM7 dataset (pre-training strategy)
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-06-11'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 72.1
-    true_std: 2.3
-    value_gap_source_arxiv: '2106.06130'
-    value_gap_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 72.1
-    sort_std: 2.3
-    global_rank: 7
-    paper_rank: 7
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: N-Gram_XGB
-    model_key: n-gram_xgb
-    model_plain: N-Gram_XGB
-    value: 81.9
-    std: 1.9
-    paper_value: 81.9
-    paper_std: 1.9
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: boosting
-    architecture_label: Boost
-    architecture_title: Boosting ensemble
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: DBLP:conf/nips/LiuDL19
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Regression task on QM7 dataset
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-06-11'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 81.9
-    true_std: 1.9
-    value_gap_source_arxiv: '2106.06130'
-    value_gap_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 81.9
-    sort_std: 1.9
-    global_rank: 8
-    paper_rank: 8
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GROVER_large
-    model_key: grover_large
-    model_plain: GROVER_large
-    value: 92.0
-    std: 0.9
-    paper_value: 92.0
-    paper_std: 0.9
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: DBLP:conf/nips/RongBXX0HH20
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Regression task on QM7 dataset
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-06-11'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 92.0
-    true_std: 0.9
-    value_gap_source_arxiv: '2106.06130'
-    value_gap_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 92.0
-    sort_std: 0.9
-    global_rank: 9
-    paper_rank: 9
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: N-Gram_RF
-    model_key: n-gram_rf
-    model_plain: N-Gram_RF
-    value: 92.8
-    std: 4.0
-    paper_value: 92.8
-    paper_std: 4.0
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: random_forest
-    architecture_label: RF
-    architecture_title: Random forest
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: DBLP:conf/nips/LiuDL19
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Regression task on QM7 dataset
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-06-11'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 92.8
-    true_std: 4.0
-    value_gap_source_arxiv: '2106.06130'
-    value_gap_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 92.8
-    sort_std: 4.0
-    global_rank: 10
-    paper_rank: 10
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GROVER_base
-    model_key: grover_base
-    model_plain: GROVER_base
-    value: 94.5
-    std: 3.8
-    paper_value: 94.5
-    paper_std: 3.8
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: DBLP:conf/nips/RongBXX0HH20
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Regression task on QM7 dataset
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-06-11'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 94.5
-    true_std: 3.8
-    value_gap_source_arxiv: '2106.06130'
-    value_gap_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 94.5
-    sort_std: 3.8
-    global_rank: 11
-    paper_rank: 11
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 100.0
-    std: 3.8
-    paper_value: 100.0
-    paper_std: 3.8
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: DBLP:journals/corr/KipfW16
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Regression task on QM7 dataset
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-06-11'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 100.0
-    true_std: 3.8
-    value_gap_source_arxiv: '2106.06130'
-    value_gap_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 100.0
-    sort_std: 3.8
-    global_rank: 12
-    paper_rank: 12
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 103.0
-    std: 4.4
-    paper_value: 103.0
-    paper_std: 4.4
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: DBLP:journals/corr/abs-1710-10903
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Regression task on QM7 dataset
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-06-11'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 103.0
-    true_std: 4.4
-    value_gap_source_arxiv: '2106.06130'
-    value_gap_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 103.0
-    sort_std: 4.4
-    global_rank: 13
-    paper_rank: 13
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: D-MPNN
-    model_key: d-mpnn
-    model_plain: D-MPNN
-    value: 103.5
-    std: 8.6
-    paper_value: 103.5
-    paper_std: 8.6
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: doi:10.1021/acs.jcim.9b00237
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Regression task on QM7 dataset
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-06-11'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 103.5
-    true_std: 8.6
-    value_gap_source_arxiv: '2106.06130'
-    value_gap_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 103.5
-    sort_std: 8.6
-    global_rank: 14
-    paper_rank: 14
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 110.3
-    std: 7.2
-    paper_value: 110.3
-    paper_std: 7.2
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: DBLP:conf/iclr/XuHLJ19
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Regression task on QM7 dataset
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-06-11'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 110.3
-    true_std: 7.2
-    value_gap_source_arxiv: '2106.06130'
-    value_gap_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 110.3
-    sort_std: 7.2
-    global_rank: 15
-    paper_rank: 15
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: PretrainGNN
-    model_key: pretraingnn
-    model_plain: PretrainGNN
-    value: 113.2
-    std: 0.6
-    paper_value: 113.2
-    paper_std: 0.6
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: DBLP:conf/iclr/HuLGZLPL20
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Regression task on QM7 dataset
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-06-11'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 113.2
-    true_std: 0.6
-    value_gap_source_arxiv: '2106.06130'
-    value_gap_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 113.2
-    sort_std: 0.6
-    global_rank: 16
-    paper_rank: 16
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GTransformer
-    model_key: gtransformer
-    model_plain: GTransformer
-    value: 161.3
-    std: 7.1
-    paper_value: 161.3
-    paper_std: 7.1
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: DBLP:conf/nips/RongBXX0HH20
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Regression task on QM7 dataset
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-06-11'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 161.3
-    true_std: 7.1
-    value_gap_source_arxiv: '2106.06130'
-    value_gap_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 161.3
-    sort_std: 7.1
-    global_rank: 17
-    paper_rank: 17
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  rank_metric: RMSE
-  higher_is_better: false
-  experiment_scope: graph-level
-  dataset_primary_metric: MAE
-  paper_metrics:
-  - RMSE
-  metric: RMSE
-  uses_non_primary_metric: true
-  paper_has_primary_metric: false
 - &id005
   dataset: SIDER
   rows:
@@ -5617,14 +3495,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: Self-supervised pre-training on geometry-level tasks
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: ROC-AUC on SIDER with scaffold split
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -5685,14 +3563,14 @@ results:
     architecture_label: RF
     architecture_title: Random forest
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: DBLP:conf/nips/LiuDL19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: ROC-AUC on SIDER with scaffold split
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -5753,14 +3631,14 @@ results:
     architecture_label: Boost
     architecture_title: Boosting ensemble
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: DBLP:conf/nips/LiuDL19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: ROC-AUC on SIDER with scaffold split
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -5827,7 +3705,7 @@ results:
     venue: AAAI Conference on Artificial Intelligence
     codebase_url: https://github.com/NSLab-CUK/S-CGIB
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 66
@@ -5855,14 +3733,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: Pre-training mentioned in Preliminaries
     table_ref: Table 1
     source_ref: DBLP:conf/iclr/HuLGZLPL20
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: ROC-AUC on SIDER with scaffold split
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -5895,8 +3773,8 @@ results:
     value_note: ''
     sort_value: 0.627
     sort_std: 0.008
-    global_rank: 93
-    paper_rank: 93
+    global_rank: 92
+    paper_rank: 92
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5923,14 +3801,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: doi:10.1021/acs.jmedchem.9b00959
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: ROC-AUC on SIDER with scaffold split
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -5963,8 +3841,8 @@ results:
     value_note: ''
     sort_value: 0.606
     sort_std: 0.032
-    global_rank: 158
-    paper_rank: 158
+    global_rank: 160
+    paper_rank: 160
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6110,350 +3988,10 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 16
+    global_rank: 14
     sort_value: 0.84
     sort_std: 0.004
     comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AttentiveFP
-    model_key: attentivefp
-    model_plain: AttentiveFP
-    value: 0.761
-    std: 0.005
-    paper_value: 0.761
-    paper_std: 0.005
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: doi:10.1021/acs.jmedchem.9b00959
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Scaffold split
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-09-24'
-    value_gap_source_date_label: AAAI 2021
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.835
-    true_std: null
-    value_gap_source_arxiv: '2109.11730'
-    value_gap_source_title: 'GeomGCL: Geometric Graph Contrastive Learning for Molecular
-      Property Prediction'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.07399999999999995
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.835
-    sort_std: null
-    global_rank: 20
-    paper_rank: 183
-    rank_delta: 163
-    rank_delta_abs: 163
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: D-MPNN
-    model_key: d-mpnn
-    model_plain: D-MPNN
-    value: 0.759
-    std: 0.007
-    paper_value: 0.759
-    paper_std: 0.007
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: doi:10.1021/acs.jcim.9b00237
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Scaffold split
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-18'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.789
-    true_std: 0.013
-    value_gap_source_arxiv: '2202.09346'
-    value_gap_source_title: Improving Molecular Contrastive Learning via Faulty Negative
-      Mitigation and Decomposed Fragment Contrast
-    value_gap_source_is_current_paper: false
-    value_gap: 0.030000000000000027
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.789
-    sort_std: 0.013
-    global_rank: 98
-    paper_rank: 187
-    rank_delta: 89
-    rank_delta_abs: 89
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: ChemRL-GEM
-    model_key: chemrl-gem
-    model_plain: ChemRL-GEM
-    value: 0.781
-    std: 0.001
-    paper_value: 0.781
-    paper_std: 0.001
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Scaffold split
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-06-11'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.781
-    true_std: 0.001
-    value_gap_source_arxiv: '2106.06130'
-    value_gap_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.781
-    sort_std: 0.001
-    global_rank: 125
-    paper_rank: 125
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: PretrainGNN
-    model_key: pretraingnn
-    model_plain: PretrainGNN
-    value: 0.781
-    std: 0.006
-    paper_value: 0.781
-    paper_std: 0.006
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: DBLP:conf/iclr/HuLGZLPL20
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Scaffold split
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-04-17'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.781
-    true_std: 0.006
-    value_gap_source_arxiv: '2604.16586'
-    value_gap_source_title: A Systematic Survey and Benchmark of Deep Learning for
-      Molecular Property Prediction in the Foundation Model Era
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.781
-    sort_std: 0.006
-    global_rank: 124
-    paper_rank: 124
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: N-Gram_XGB
-    model_key: n-gram_xgb
-    model_plain: N-Gram_XGB
-    value: 0.758
-    std: 0.009
-    paper_value: 0.758
-    paper_std: 0.009
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: boosting
-    architecture_label: Boost
-    architecture_title: Boosting ensemble
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: DBLP:conf/nips/LiuDL19
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Scaffold split
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-06-11'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.758
-    true_std: 0.009
-    value_gap_source_arxiv: '2106.06130'
-    value_gap_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.758
-    sort_std: 0.009
-    global_rank: 195
-    paper_rank: 195
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -6475,14 +4013,14 @@ results:
     architecture_label: RF
     architecture_title: Random forest
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: DBLP:conf/nips/LiuDL19
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: Tox21 classification task using scaffold split
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -6515,144 +4053,8 @@ results:
     value_note: ''
     sort_value: 0.743
     sort_std: 0.004
-    global_rank: 256
-    paper_rank: 256
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GROVER_base
-    model_key: grover_base
-    model_plain: GROVER_base
-    value: 0.743
-    std: 0.001
-    paper_value: 0.743
-    paper_std: 0.001
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: DBLP:conf/nips/RongBXX0HH20
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Scaffold split
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-06-11'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.743
-    true_std: 0.001
-    value_gap_source_arxiv: '2106.06130'
-    value_gap_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.743
-    sort_std: 0.001
-    global_rank: 260
-    paper_rank: 260
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GROVER_large
-    model_key: grover_large
-    model_plain: GROVER_large
-    value: 0.735
-    std: 0.001
-    paper_value: 0.735
-    paper_std: 0.001
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: DBLP:conf/nips/RongBXX0HH20
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Scaffold split
-    date: Jun 11, 2021
-    date_display: Jun 2021
-    date_iso: '2021-06-11'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-06-11'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.735
-    true_std: 0.001
-    value_gap_source_arxiv: '2106.06130'
-    value_gap_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.735
-    sort_std: 0.001
-    global_rank: 278
-    paper_rank: 278
+    global_rank: 250
+    paper_rank: 250
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6792,14 +4194,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Scaffold split
+    protocol_note: ROC-AUC on ToxCast using scaffold split
     date: Jun 11, 2021
     date_display: Jun 2021
     date_iso: '2021-06-11'
@@ -6833,9 +4235,9 @@ results:
     sort_value: 0.743
     sort_std: null
     global_rank: 12
-    paper_rank: 141
-    rank_delta: 129
-    rank_delta_abs: 129
+    paper_rank: 143
+    rank_delta: 131
+    rank_delta_abs: 131
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -6896,9 +4298,6 @@ results_grouped:
   - *id006
   - *id007
   - *id008
-- benchmark: Quantum Chemistry
-  datasets:
-  - *id009
 datasets_by_scope:
 - scope: graph-level
   label: Graph-level
@@ -6922,11 +4321,6 @@ datasets_by_scope:
       dataset_slug: esol
     - dataset: FreeSolv
       dataset_slug: freesolv
-  - benchmark: Quantum Chemistry
-    benchmark_slug: quantum-chemistry
-    datasets:
-    - dataset: QM7b
-      dataset_slug: qm7b
 single_proposed_model: ChemRL-GEM
 main_figure: /figures/2106.06130/main_figure.jpegoptim.jpg
 ---

@@ -40,13 +40,13 @@ abstract: Over the past decade, Graph Neural Networks (GNNs) have transformed gr
   corroborate the previously mentioned theoretical observations and imply that there
   exists ample room for enhancement in current GNN models to reach their potential.
 codebase_url: https://github.com/workrep20232/PROXI
-extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+extraction_model: google/gemma-4-26B-A4B-it
 has_results: true
 paper_type: method
 proposed_models:
 - PROXI
-mrr: 0.5417
-adjusted_mrr: 0.3611
+mrr: 0.55
+adjusted_mrr: 0.3667
 mrr_dataset_count: 2
 benchmark_categories:
 - OGB
@@ -80,14 +80,15 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: combines all relevant proximity information about node
+      pairs... structural proximity... and domain proximity
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Standard OGB split for link prediction
+    protocol_note: Hits@50 on the standard ogbl-collab link prediction task and split.
     date: Oct 2, 2024
     date_display: Oct 2024
     date_iso: '2024-10-02'
@@ -147,14 +148,14 @@ results:
     architecture_label: null
     architecture_title: ''
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: OGB Leaderboard
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Standard OGB split for link prediction
+    protocol_note: Hits@50 on the standard ogbl-collab link prediction task and split.
     date: Oct 2, 2024
     date_display: Oct 2024
     date_iso: '2024-10-02'
@@ -248,14 +249,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: wang2023neural
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Standard OGB split for link prediction
+    protocol_note: Hits@50 on the standard ogbl-collab link prediction task and split.
     date: Oct 2, 2024
     date_display: Oct 2024
     date_iso: '2024-10-02'
@@ -288,9 +289,9 @@ results:
     sort_value: 0.6661
     sort_std: 0.0071
     global_rank: 9
-    paper_rank: 14
-    rank_delta: 5
-    rank_delta_abs: 5
+    paper_rank: 13
+    rank_delta: 4
+    rank_delta_abs: 4
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -315,14 +316,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: kipf2016semi
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Standard OGB split for link prediction
+    protocol_note: Hits@50 on the standard ogbl-collab link prediction task and split.
     date: Oct 2, 2024
     date_display: Oct 2024
     date_iso: '2024-10-02'
@@ -385,14 +386,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: yun2021neo
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Standard OGB split for link prediction
+    protocol_note: Hits@50 on the standard ogbl-collab link prediction task and split.
     date: Oct 2, 2024
     date_display: Oct 2024
     date_iso: '2024-10-02'
@@ -454,14 +455,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: chamberlain2022graph
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Standard OGB split for link prediction
+    protocol_note: Hits@50 on the standard ogbl-collab link prediction task and split.
     date: Oct 2, 2024
     date_display: Oct 2024
     date_iso: '2024-10-02'
@@ -474,8 +475,8 @@ results:
       Sampling
     at_pub_source_date_iso: '2023-10-14'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2024-11-06'
-    value_gap_source_date_label: '2024'
+    value_gap_source_date_iso: '2023-10-17'
+    value_gap_source_date_label: KDD 2023
     gap_vs_at_pub: 0.013499999999999956
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -486,16 +487,16 @@ results:
     today_delta_significant: true
     true_value: 0.6594
     true_std: 0.0058
-    value_gap_source_arxiv: '2411.03845'
-    value_gap_source_title: Reconsidering the Performance of GAE in Link Prediction
+    value_gap_source_arxiv: '2310.11009'
+    value_gap_source_title: 'LPFormer: An Adaptive Graph Transformer for Link Prediction'
     value_gap_source_is_current_paper: false
     value_gap: 0.013499999999999956
     has_value_note: false
     value_note: ''
     sort_value: 0.6594
     sort_std: 0.0058
-    global_rank: 15
-    paper_rank: 21
+    global_rank: 14
+    paper_rank: 20
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -523,14 +524,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: wang2023neural
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Standard OGB split for link prediction
+    protocol_note: Hits@50 on the standard ogbl-collab link prediction task and split.
     date: Oct 2, 2024
     date_display: Oct 2024
     date_iso: '2024-10-02'
@@ -542,8 +543,8 @@ results:
     at_pub_source_title: 'LPFormer: An Adaptive Graph Transformer for Link Prediction'
     at_pub_source_date_iso: '2023-10-17'
     at_pub_source_date_label: KDD 2023
-    value_gap_source_date_iso: '2024-11-06'
-    value_gap_source_date_label: '2024'
+    value_gap_source_date_iso: '2023-10-17'
+    value_gap_source_date_label: KDD 2023
     gap_vs_at_pub: 0.009000000000000008
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -554,16 +555,16 @@ results:
     today_delta_significant: true
     true_value: 0.6476
     true_std: 0.0087
-    value_gap_source_arxiv: '2411.03845'
-    value_gap_source_title: Reconsidering the Performance of GAE in Link Prediction
+    value_gap_source_arxiv: '2310.11009'
+    value_gap_source_title: 'LPFormer: An Adaptive Graph Transformer for Link Prediction'
     value_gap_source_is_current_paper: false
     value_gap: 0.009000000000000008
     has_value_note: false
     value_note: ''
     sort_value: 0.6476
     sort_std: 0.0087
-    global_rank: 20
-    paper_rank: 26
+    global_rank: 19
+    paper_rank: 25
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -590,14 +591,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: zhang2018link
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Standard OGB split for link prediction
+    protocol_note: Hits@50 on the standard ogbl-collab link prediction task and split.
     date: Oct 2, 2024
     date_display: Oct 2024
     date_iso: '2024-10-02'
@@ -610,8 +611,8 @@ results:
       for Multi-Node Representation Learning'
     at_pub_source_date_iso: '2020-10-30'
     at_pub_source_date_label: NeurIPS 2020
-    value_gap_source_date_iso: '2024-11-06'
-    value_gap_source_date_label: '2024'
+    value_gap_source_date_iso: '2023-10-17'
+    value_gap_source_date_label: KDD 2023
     gap_vs_at_pub: 0.013699999999999934
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -622,16 +623,16 @@ results:
     today_delta_significant: true
     true_value: 0.6474
     true_std: 0.0043
-    value_gap_source_arxiv: '2411.03845'
-    value_gap_source_title: Reconsidering the Performance of GAE in Link Prediction
+    value_gap_source_arxiv: '2310.11009'
+    value_gap_source_title: 'LPFormer: An Adaptive Graph Transformer for Link Prediction'
     value_gap_source_is_current_paper: false
     value_gap: 0.013699999999999934
     has_value_note: false
     value_note: ''
     sort_value: 0.6474
     sort_std: 0.0043
-    global_rank: 21
-    paper_rank: 26
+    global_rank: 20
+    paper_rank: 25
     rank_delta: 5
     rank_delta_abs: 5
     rank_delta_direction: worse
@@ -659,14 +660,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: hamilton2017inductive
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Standard OGB split for link prediction
+    protocol_note: Hits@50 on the standard ogbl-collab link prediction task and split.
     date: Oct 2, 2024
     date_display: Oct 2024
     date_iso: '2024-10-02'
@@ -698,8 +699,8 @@ results:
     value_note: ''
     sort_value: 0.5944
     sort_std: 0.0137
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -726,14 +727,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: velivckovic2017graph
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Standard OGB split for link prediction
+    protocol_note: Hits@50 on the standard ogbl-collab link prediction task and split.
     date: Oct 2, 2024
     date_display: Oct 2024
     date_iso: '2024-10-02'
@@ -803,7 +804,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 38
+    global_rank: 39
     sort_value: 0.5463
     sort_std: 0.0112
     comparison_type: global_top
@@ -828,14 +829,14 @@ results:
     architecture_label: Walk
     architecture_title: Random-walk graph embedding
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: grover2016node2vec
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Standard OGB split for link prediction
+    protocol_note: Hits@50 on the standard ogbl-collab link prediction task and split.
     date: Oct 2, 2024
     date_display: Oct 2024
     date_iso: '2024-10-02'
@@ -867,8 +868,8 @@ results:
     value_note: ''
     sort_value: 0.4906
     sort_std: 0.0104
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 72
+    paper_rank: 72
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -904,7 +905,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 88
+    global_rank: 91
     sort_value: 0.4438
     sort_std: 0.0347
     comparison_type: global_top
@@ -929,14 +930,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: menon2011link
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Standard OGB split for link prediction
+    protocol_note: Hits@50 on the standard ogbl-collab link prediction task and split.
     date: Oct 2, 2024
     date_display: Oct 2024
     date_iso: '2024-10-02'
@@ -968,8 +969,8 @@ results:
     value_note: ''
     sort_value: 0.4181
     sort_std: 0.0167
-    global_rank: 93
-    paper_rank: 93
+    global_rank: 95
+    paper_rank: 95
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -991,39 +992,6 @@ results:
 - &id002
   dataset: ogbl-ppa
   rows:
-  - model: Optimized GAE
-    model_key: optimized gae
-    model_plain: Optimized GAE
-    value: 0.7841
-    std: 0.0083
-    metric: Hits@100
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.03845'
-    title: Reconsidering the Performance of GAE in Link Prediction
-    date: Nov 6, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-06'
-    venue: International Conference on Information and Knowledge Management
-    codebase_url: https://github.com/GraphPKU/Refined-GAE
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.7841
-    sort_std: 0.0083
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
   - model: OGB Leader
     model_key: ogb leader
     model_plain: OGB Leader
@@ -1041,14 +1009,14 @@ results:
     architecture_label: null
     architecture_title: ''
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: li2023evaluating
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: OGB official split for ogbl-ppa
+    protocol_note: Hits@100 on ogbl-ppa test split
     date: Oct 2, 2024
     date_display: Oct 2024
     date_iso: '2024-10-02'
@@ -1080,8 +1048,8 @@ results:
     value_note: ''
     sort_value: 0.6524
     sort_std: 0.015
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 1
+    paper_rank: 1
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1089,40 +1057,73 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
-  - model: MPLP
-    model_key: mplp
-    model_plain: MPLP
-    value: 0.6524
-    std: 0.015
+  - model: PRB
+    model_key: prb
+    model_plain: PRB
+    value: 0.6347
+    std: 0.0175
     metric: Hits@100
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.03845'
-    title: Reconsidering the Performance of GAE in Link Prediction
-    date: Nov 6, 2024
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2411.01410'
+    title: PageRank Bandits for Link Prediction
+    date: Nov 3, 2024
     date_display: Nov 2024
-    date_iso: '2024-11-06'
-    venue: International Conference on Information and Knowledge Management
-    codebase_url: https://github.com/GraphPKU/Refined-GAE
+    date_iso: '2024-11-03'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/jiaruzouu/PRB
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.6524
-    sort_std: 0.015
+    sort_value: 0.6347
+    sort_std: 0.0175
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
+    is_std_outlier: false
+  - model: LPFormer
+    model_key: lpformer
+    model_plain: LPFormer
+    value: 0.6332
+    std: 0.0063
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2310.11009'
+    title: 'LPFormer: An Adaptive Graph Transformer for Link Prediction'
+    date: Oct 17, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-17'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/HarryShomer/LPFormer
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.6332
+    sort_std: 0.0063
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
     is_std_outlier: false
   - model: NCNC
     model_key: ncnc
@@ -1141,14 +1142,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: wang2023neural
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: OGB official split for ogbl-ppa
+    protocol_note: Hits@100 on ogbl-ppa test split
     date: Oct 2, 2024
     date_display: Oct 2024
     date_iso: '2024-10-02'
@@ -1180,8 +1181,8 @@ results:
     value_note: ''
     sort_value: 0.6264
     sort_std: 0.0079
-    global_rank: 6
-    paper_rank: 7
+    global_rank: 4
+    paper_rank: 5
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -1208,14 +1209,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: wang2023neural
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: OGB official split for ogbl-ppa
+    protocol_note: Hits@100 on ogbl-ppa test split
     date: Oct 2, 2024
     date_display: Oct 2024
     date_iso: '2024-10-02'
@@ -1247,8 +1248,8 @@ results:
     value_note: ''
     sort_value: 0.6263
     sort_std: 0.0115
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1256,7 +1257,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: PROXI
     model_key: proxi
@@ -1275,14 +1276,15 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: combines all relevant proximity information about node
+      pairs... structural proximity... and domain proximity
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: OGB official split for ogbl-ppa
+    protocol_note: Hits@100 on ogbl-ppa test split
     date: Oct 2, 2024
     date_display: Oct 2024
     date_iso: '2024-10-02'
@@ -1314,8 +1316,8 @@ results:
     value_note: ''
     sort_value: 0.5036
     sort_std: 0.0076
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1342,14 +1344,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: hamilton2017inductive
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: OGB official split for ogbl-ppa
+    protocol_note: Hits@100 on ogbl-ppa test split
     date: Oct 2, 2024
     date_display: Oct 2024
     date_iso: '2024-10-02'
@@ -1382,10 +1384,10 @@ results:
     value_note: ''
     sort_value: 0.5013
     sort_std: 0.0055
-    global_rank: 16
-    paper_rank: 36
-    rank_delta: 20
-    rank_delta_abs: 20
+    global_rank: 14
+    paper_rank: 32
+    rank_delta: 18
+    rank_delta_abs: 18
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1411,14 +1413,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: chamberlain2022graph
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: OGB official split for ogbl-ppa
+    protocol_note: Hits@100 on ogbl-ppa test split
     date: Oct 2, 2024
     date_display: Oct 2024
     date_iso: '2024-10-02'
@@ -1451,10 +1453,10 @@ results:
     value_note: ''
     sort_value: 0.4985
     sort_std: 0.002
-    global_rank: 17
-    paper_rank: 24
-    rank_delta: 7
-    rank_delta_abs: 7
+    global_rank: 15
+    paper_rank: 21
+    rank_delta: 6
+    rank_delta_abs: 6
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1480,14 +1482,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: yun2021neo
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: OGB official split for ogbl-ppa
+    protocol_note: Hits@100 on ogbl-ppa test split
     date: Oct 2, 2024
     date_display: Oct 2024
     date_iso: '2024-10-02'
@@ -1521,8 +1523,8 @@ results:
     value_note: ''
     sort_value: 0.4913
     sort_std: 0.006
-    global_rank: 21
-    paper_rank: 22
+    global_rank: 18
+    paper_rank: 19
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -1549,14 +1551,14 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: zhang2018link
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: OGB official split for ogbl-ppa
+    protocol_note: Hits@100 on ogbl-ppa test split
     date: Oct 2, 2024
     date_display: Oct 2024
     date_iso: '2024-10-02'
@@ -1590,8 +1592,8 @@ results:
     value_note: ''
     sort_value: 0.488
     sort_std: 0.0316
-    global_rank: 22
-    paper_rank: 23
+    global_rank: 19
+    paper_rank: 20
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -1626,7 +1628,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 26
+    global_rank: 23
     sort_value: 0.46
     sort_std: 0.0
     comparison_type: global_top
@@ -1651,14 +1653,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: menon2011link
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: OGB official split for ogbl-ppa
+    protocol_note: Hits@100 on ogbl-ppa test split
     date: Oct 2, 2024
     date_display: Oct 2024
     date_iso: '2024-10-02'
@@ -1690,8 +1692,8 @@ results:
     value_note: ''
     sort_value: 0.323
     sort_std: 0.009
-    global_rank: 46
-    paper_rank: 52
+    global_rank: 42
+    paper_rank: 48
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -1718,14 +1720,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: kipf2016semi
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: OGB official split for ogbl-ppa
+    protocol_note: Hits@100 on ogbl-ppa test split
     date: Oct 2, 2024
     date_display: Oct 2024
     date_iso: '2024-10-02'
@@ -1757,8 +1759,8 @@ results:
     value_note: ''
     sort_value: 0.3084
     sort_std: 0.0178
-    global_rank: 49
-    paper_rank: 49
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1785,14 +1787,14 @@ results:
     architecture_label: Walk
     architecture_title: Random-walk graph embedding
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: grover2016node2vec
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: OGB official split for ogbl-ppa
+    protocol_note: Hits@100 on ogbl-ppa test split
     date: Oct 2, 2024
     date_display: Oct 2024
     date_iso: '2024-10-02'
@@ -1824,8 +1826,8 @@ results:
     value_note: ''
     sort_value: 0.2624
     sort_std: 0.0096
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 54
+    paper_rank: 54
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1860,7 +1862,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 68
+    global_rank: 63
     sort_value: 0.1655
     sort_std: 0.024
     comparison_type: global_top

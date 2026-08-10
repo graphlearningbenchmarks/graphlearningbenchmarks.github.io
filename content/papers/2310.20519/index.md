@@ -63,7 +63,6 @@ mrr_dataset_count: 0
 benchmark_categories:
 - Classic
 - OGB
-- Quantum Chemistry
 - GNNBenchmark
 benchmark_coverage:
 - benchmark: Classic
@@ -74,10 +73,6 @@ benchmark_coverage:
   benchmark_slug: ogb
   evaluated: 1
   total: 16
-- benchmark: Quantum Chemistry
-  benchmark_slug: quantum-chemistry
-  evaluated: 1
-  total: 3
 - benchmark: GNNBenchmark
   benchmark_slug: gnnbenchmark
   evaluated: 4
@@ -90,7 +85,7 @@ experiment_scopes:
 - graph-level
 - node-level
 results:
-- &id005
+- &id004
   dataset: CIFAR10
   rows:
   - model: RandAlign
@@ -455,8 +450,8 @@ results:
     value_note: ''
     sort_value: 0.7284
     sort_std: 0.0042
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -523,8 +518,8 @@ results:
     value_note: ''
     sort_value: 0.7239
     sort_std: 0.0038
-    global_rank: 44
-    paper_rank: 50
+    global_rank: 43
+    paper_rank: 49
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -591,8 +586,8 @@ results:
     value_note: ''
     sort_value: 0.72356
     sort_std: 0.00323
-    global_rank: 46
-    paper_rank: 49
+    global_rank: 45
+    paper_rank: 48
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -658,10 +653,10 @@ results:
     value_note: ''
     sort_value: 0.7133
     sort_std: 0.0039
-    global_rank: 62
-    paper_rank: 92
-    rank_delta: 30
-    rank_delta_abs: 30
+    global_rank: 61
+    paper_rank: 90
+    rank_delta: 29
+    rank_delta_abs: 29
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -726,8 +721,8 @@ results:
     value_note: ''
     sort_value: 0.68702
     sort_std: 0.00409
-    global_rank: 83
-    paper_rank: 83
+    global_rank: 81
+    paper_rank: 81
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -762,7 +757,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 95
+    global_rank: 93
     sort_value: 0.6731
     sort_std: 0.0031
     comparison_type: global_top
@@ -796,7 +791,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 97
+    global_rank: 95
     sort_value: 0.669
     sort_std: 0.002
     comparison_type: global_top
@@ -860,8 +855,8 @@ results:
     value_note: ''
     sort_value: 0.6611
     sort_std: 0.0098
-    global_rank: 106
-    paper_rank: 118
+    global_rank: 104
+    paper_rank: 116
     rank_delta: 12
     rank_delta_abs: 12
     rank_delta_direction: worse
@@ -929,8 +924,8 @@ results:
     value_note: ''
     sort_value: 0.651
     sort_std: 0.005
-    global_rank: 115
-    paper_rank: 135
+    global_rank: 113
+    paper_rank: 133
     rank_delta: 20
     rank_delta_abs: 20
     rank_delta_direction: worse
@@ -999,8 +994,8 @@ results:
     value_note: ''
     sort_value: 0.5839
     sort_std: 0.0073
-    global_rank: 130
-    paper_rank: 134
+    global_rank: 128
+    paper_rank: 132
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -1036,7 +1031,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 132
+    global_rank: 130
     sort_value: 0.5634
     sort_std: 0.00181
     comparison_type: global_top
@@ -1053,7 +1048,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id006
+- &id005
   dataset: CLUSTER
   rows:
   - model: GRPE-Small
@@ -1089,9 +1084,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Tango_GPS
-    model_key: tango_gps
-    model_plain: Tango_GPS
+  - model: TANGO-GPS
+    model_key: tango-gps
+    model_plain: TANGO-GPS
     value: 0.80113
     std: 0.00138
     metric: Accuracy
@@ -1720,8 +1715,8 @@ results:
     value_note: ''
     sort_value: 0.70587
     sort_std: 0.00447
-    global_rank: 72
-    paper_rank: 72
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1788,8 +1783,8 @@ results:
     value_note: ''
     sort_value: 0.69026
     sort_std: 0.01372
-    global_rank: 74
-    paper_rank: 75
+    global_rank: 73
+    paper_rank: 74
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -1831,10 +1826,10 @@ results:
     published_conference: ''
     at_pub_value: 0.64716
     at_pub_std: 0.01553
-    at_pub_source_arxiv: '2201.12787'
-    at_pub_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
-    at_pub_source_date_iso: '2022-01-30'
-    at_pub_source_date_label: '2022'
+    at_pub_source_arxiv: '2201.09332'
+    at_pub_source_title: How Expressive are Transformers in Spectral Domain for Graphs?
+    at_pub_source_date_iso: '2022-01-23'
+    at_pub_source_date_label: TMLR 2022
     value_gap_source_date_iso: '2026-05-07'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -1856,8 +1851,8 @@ results:
     value_note: ''
     sort_value: 0.64716
     sort_std: 0.01553
-    global_rank: 85
-    paper_rank: 85
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1892,7 +1887,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 87
+    global_rank: 83
     sort_value: 0.63884
     sort_std: 0.0011
     comparison_type: global_top
@@ -1925,7 +1920,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 126
+    global_rank: 120
     sort_value: 0.20973
     sort_std: 4.0e-05
     comparison_type: global_top
@@ -1942,12 +1937,12 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id003
   dataset: MNIST
   rows:
-  - model: Schrödinger GNN
-    model_key: schrödinger gnn
-    model_plain: Schrödinger GNN
+  - model: Schrödinger
+    model_key: schrödinger
+    model_plain: Schrödinger
     value: 0.9913
     std: 0.0004
     metric: Accuracy
@@ -2732,7 +2727,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id007
+- &id006
   dataset: PATTERN
   rows:
   - model: DeepGraph (48)
@@ -3029,8 +3024,8 @@ results:
     value_note: ''
     sort_value: 0.8685
     sort_std: 0.00057
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3097,8 +3092,8 @@ results:
     value_note: ''
     sort_value: 0.86848
     sort_std: 0.037
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3165,8 +3160,8 @@ results:
     value_note: ''
     sort_value: 0.86821
     sort_std: 0.0002
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3233,8 +3228,8 @@ results:
     value_note: ''
     sort_value: 0.86685
     sort_std: 0.059
-    global_rank: 52
-    paper_rank: 52
+    global_rank: 51
+    paper_rank: 51
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3301,8 +3296,8 @@ results:
     value_note: ''
     sort_value: 0.8668
     sort_std: 0.00034
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 53
+    paper_rank: 53
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3344,10 +3339,10 @@ results:
     published_conference: ''
     at_pub_value: 0.86581
     at_pub_std: 0.00037
-    at_pub_source_arxiv: '2202.03036'
-    at_pub_source_title: Structure-Aware Transformer for Graph Representation Learning
-    at_pub_source_date_iso: '2022-02-07'
-    at_pub_source_date_label: ICML 2022
+    at_pub_source_arxiv: '2205.12454'
+    at_pub_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
+    at_pub_source_date_iso: '2022-05-25'
+    at_pub_source_date_label: NeurIPS 2022
     value_gap_source_date_iso: '2026-05-07'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -3369,8 +3364,8 @@ results:
     value_note: ''
     sort_value: 0.86581
     sort_std: 0.00037
-    global_rank: 60
-    paper_rank: 60
+    global_rank: 58
+    paper_rank: 58
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3436,10 +3431,10 @@ results:
     value_note: ''
     sort_value: 0.86508
     sort_std: 0.00085
-    global_rank: 68
-    paper_rank: 95
-    rank_delta: 27
-    rank_delta_abs: 27
+    global_rank: 66
+    paper_rank: 92
+    rank_delta: 26
+    rank_delta_abs: 26
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3504,10 +3499,10 @@ results:
     value_note: ''
     sort_value: 0.85614
     sort_std: 0.00032
-    global_rank: 91
-    paper_rank: 123
-    rank_delta: 32
-    rank_delta_abs: 32
+    global_rank: 88
+    paper_rank: 119
+    rank_delta: 31
+    rank_delta_abs: 31
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3571,8 +3566,8 @@ results:
     value_note: ''
     sort_value: 0.8559
     sort_std: 0.0001
-    global_rank: 92
-    paper_rank: 98
+    global_rank: 89
+    paper_rank: 95
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -3639,8 +3634,8 @@ results:
     value_note: ''
     sort_value: 0.78271
     sort_std: 0.00186
-    global_rank: 113
-    paper_rank: 113
+    global_rank: 109
+    paper_rank: 109
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3675,7 +3670,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 130
+    global_rank: 126
     sort_value: 0.5052
     sort_std: 0.0
     comparison_type: global_top
@@ -3708,7 +3703,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 131
+    global_rank: 127
     sort_value: 0.50519
     sort_std: 0.0
     comparison_type: global_top
@@ -3796,34 +3791,34 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: UniMol
-    model_key: unimol
-    model_plain: UniMol
-    value: 0.0693
+  - model: TGT-At (+RDKit)
+    model_key: tgt-at (+rdkit)
+    model_plain: TGT-At (+RDKit)
+    value: 0.0683
     std: null
     metric: MAE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: 77.0
+    params_millions: 203.0
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    arxiv_id: '2603.00568'
-    title: Enhancing Molecular Property Predictions by Learning from Bond Modelling
-      and Interactions
-    date: Feb 28, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-28'
-    venue: Accepted to ICLR 2026
-    codebase_url: ''
-    uses_external_data: false
+    arxiv_id: '2402.04538'
+    title: 'Triplet Interaction Improves Graph Transformers: Accurate Molecular Graph
+      Learning with Triplet Graph Transformers'
+    date: Feb 7, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-07'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/shamim-hussain/tgt
+    uses_external_data: true
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.0693
+    sort_value: 0.0683
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
@@ -3887,8 +3882,8 @@ results:
     value_note: ''
     sort_value: 0.0838
     sort_std: null
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3955,8 +3950,8 @@ results:
     value_note: ''
     sort_value: 0.0842
     sort_std: null
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4023,8 +4018,8 @@ results:
     value_note: ''
     sort_value: 0.0858
     sort_std: null
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4091,8 +4086,8 @@ results:
     value_note: ''
     sort_value: 0.0864
     sort_std: null
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4159,8 +4154,8 @@ results:
     value_note: ''
     sort_value: 0.0947
     sort_std: null
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 54
+    paper_rank: 54
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4227,8 +4222,8 @@ results:
     value_note: ''
     sort_value: 0.1195
     sort_std: null
-    global_rank: 62
-    paper_rank: 62
+    global_rank: 66
+    paper_rank: 66
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4295,8 +4290,8 @@ results:
     value_note: ''
     sort_value: 0.1195
     sort_std: null
-    global_rank: 63
-    paper_rank: 63
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4304,1102 +4299,6 @@ results:
     comparison_type: improved
     comparison_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
     comparison_source_arxiv: '2205.12454'
-    is_best: false
-    is_std_outlier: false
-  rank_metric: MAE
-  higher_is_better: false
-  experiment_scope: graph-level
-  dataset_primary_metric: MAE
-  paper_metrics:
-  - MAE
-  metric: MAE
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
-- &id003
-  dataset: QM7b
-  rows:
-  - model: DTNN
-    model_key: dtnn
-    model_plain: DTNN
-    value: 0.074
-    std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '1703.00564'
-    title: MoleculeNet
-    date: Mar 2, 2017
-    date_display: Mar 2017
-    date_iso: '2017-03-02'
-    venue: Chemical Science
-    codebase_url: https://github.com/deepchem/deepchem
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.074
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Multitask(CM)
-    model_key: multitask(cm)
-    model_plain: Multitask(CM)
-    value: 0.086
-    std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '1703.00564'
-    title: MoleculeNet
-    date: Mar 2, 2017
-    date_display: Mar 2017
-    date_iso: '2017-03-02'
-    venue: Chemical Science
-    codebase_url: https://github.com/deepchem/deepchem
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.086
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: KRR(CM)
-    model_key: krr(cm)
-    model_plain: KRR(CM)
-    value: 0.098
-    std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '1703.00564'
-    title: MoleculeNet
-    date: Mar 2, 2017
-    date_display: Mar 2017
-    date_iso: '2017-03-02'
-    venue: Chemical Science
-    codebase_url: https://github.com/deepchem/deepchem
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.098
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GPS (4, 2, 128) LE
-    model_key: gps (4, 2, 128) le
-    model_plain: GPS (4, 2, 128) LE
-    value: 14.03
-    std: null
-    paper_value: 14.03
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 31, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-31'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-10-31'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 14.03
-    true_std: null
-    value_gap_source_arxiv: '2310.20519'
-    value_gap_source_title: Enhancing Graph Neural Networks with Quantum Computed
-      Encodings
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 14.03
-    sort_std: null
-    global_rank: 6
-    paper_rank: 6
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SAGE LE+RW
-    model_key: sage le+rw
-    model_plain: SAGE LE+RW
-    value: 14.13
-    std: null
-    paper_value: 14.13
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 31, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-31'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-10-31'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 14.13
-    true_std: null
-    value_gap_source_arxiv: '2310.20519'
-    value_gap_source_title: Enhancing Graph Neural Networks with Quantum Computed
-      Encodings
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 14.13
-    sort_std: null
-    global_rank: 7
-    paper_rank: 7
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GPS LE+RW
-    model_key: gps le+rw
-    model_plain: GPS LE+RW
-    value: 14.66
-    std: null
-    paper_value: 14.66
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 31, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-31'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-10-31'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 14.66
-    true_std: null
-    value_gap_source_arxiv: '2310.20519'
-    value_gap_source_title: Enhancing Graph Neural Networks with Quantum Computed
-      Encodings
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 14.66
-    sort_std: null
-    global_rank: 8
-    paper_rank: 8
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GPS LE
-    model_key: gps le
-    model_plain: GPS LE
-    value: 14.68
-    std: null
-    paper_value: 14.68
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 31, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-31'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-10-31'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 14.68
-    true_std: null
-    value_gap_source_arxiv: '2310.20519'
-    value_gap_source_title: Enhancing Graph Neural Networks with Quantum Computed
-      Encodings
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 14.68
-    sort_std: null
-    global_rank: 9
-    paper_rank: 9
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SAGE RW
-    model_key: sage rw
-    model_plain: SAGE RW
-    value: 14.97
-    std: null
-    paper_value: 14.97
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 31, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-31'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-10-31'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 14.97
-    true_std: null
-    value_gap_source_arxiv: '2310.20519'
-    value_gap_source_title: Enhancing Graph Neural Networks with Quantum Computed
-      Encodings
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 14.97
-    sort_std: null
-    global_rank: 10
-    paper_rank: 10
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GPS (4, 2, 128) Q
-    model_key: gps (4, 2, 128) q
-    model_plain: GPS (4, 2, 128) Q
-    value: 15.36
-    std: null
-    paper_value: 15.36
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 31, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-31'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-10-31'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 15.36
-    true_std: null
-    value_gap_source_arxiv: '2310.20519'
-    value_gap_source_title: Enhancing Graph Neural Networks with Quantum Computed
-      Encodings
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 15.36
-    sort_std: null
-    global_rank: 11
-    paper_rank: 11
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SAGE Q
-    model_key: sage q
-    model_plain: SAGE Q
-    value: 15.85
-    std: null
-    paper_value: 15.85
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 31, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-31'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-10-31'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 15.85
-    true_std: null
-    value_gap_source_arxiv: '2310.20519'
-    value_gap_source_title: Enhancing Graph Neural Networks with Quantum Computed
-      Encodings
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 15.85
-    sort_std: null
-    global_rank: 12
-    paper_rank: 12
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GPS Q
-    model_key: gps q
-    model_plain: GPS Q
-    value: 16.15
-    std: null
-    paper_value: 16.15
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 31, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-31'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-10-31'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 16.15
-    true_std: null
-    value_gap_source_arxiv: '2310.20519'
-    value_gap_source_title: Enhancing Graph Neural Networks with Quantum Computed
-      Encodings
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 16.15
-    sort_std: null
-    global_rank: 13
-    paper_rank: 13
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GPS RW
-    model_key: gps rw
-    model_plain: GPS RW
-    value: 16.18
-    std: null
-    paper_value: 16.18
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 31, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-31'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-10-31'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 16.18
-    true_std: null
-    value_gap_source_arxiv: '2310.20519'
-    value_gap_source_title: Enhancing Graph Neural Networks with Quantum Computed
-      Encodings
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 16.18
-    sort_std: null
-    global_rank: 14
-    paper_rank: 14
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GPS (4, 2, 128) RW
-    model_key: gps (4, 2, 128) rw
-    model_plain: GPS (4, 2, 128) RW
-    value: 16.45
-    std: null
-    paper_value: 16.45
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 31, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-31'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-10-31'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 16.45
-    true_std: null
-    value_gap_source_arxiv: '2310.20519'
-    value_gap_source_title: Enhancing Graph Neural Networks with Quantum Computed
-      Encodings
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 16.45
-    sort_std: null
-    global_rank: 15
-    paper_rank: 15
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GPS No PE
-    model_key: gps no pe
-    model_plain: GPS No PE
-    value: 32.23
-    std: null
-    paper_value: 32.23
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 31, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-31'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-10-31'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 32.23
-    true_std: null
-    value_gap_source_arxiv: '2310.20519'
-    value_gap_source_title: Enhancing Graph Neural Networks with Quantum Computed
-      Encodings
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 32.23
-    sort_std: null
-    global_rank: 17
-    paper_rank: 17
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GPS (4, 2, 128) No PE
-    model_key: gps (4, 2, 128) no pe
-    model_plain: GPS (4, 2, 128) No PE
-    value: 34.97
-    std: null
-    paper_value: 34.97
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 31, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-31'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-10-31'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 34.97
-    true_std: null
-    value_gap_source_arxiv: '2310.20519'
-    value_gap_source_title: Enhancing Graph Neural Networks with Quantum Computed
-      Encodings
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 34.97
-    sort_std: null
-    global_rank: 19
-    paper_rank: 19
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SAGE LE
-    model_key: sage le
-    model_plain: SAGE LE
-    value: 36.62
-    std: null
-    paper_value: 36.62
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 31, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-31'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-10-31'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 36.62
-    true_std: null
-    value_gap_source_arxiv: '2310.20519'
-    value_gap_source_title: Enhancing Graph Neural Networks with Quantum Computed
-      Encodings
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 36.62
-    sort_std: null
-    global_rank: 20
-    paper_rank: 20
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SAGE No PE
-    model_key: sage no pe
-    model_plain: SAGE No PE
-    value: 60.45
-    std: null
-    paper_value: 60.45
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 31, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-31'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-10-31'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 60.45
-    true_std: null
-    value_gap_source_arxiv: '2310.20519'
-    value_gap_source_title: Enhancing Graph Neural Networks with Quantum Computed
-      Encodings
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 60.45
-    sort_std: null
-    global_rank: 31
-    paper_rank: 31
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 122.9
-    std: 2.2
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2502.12638'
-    title: 'NExT-Mol: 3D Diffusion Meets 1D Language Modeling for 3D Molecule Generation'
-    date: Feb 18, 2025
-    date_display: Feb 2025
-    date_iso: '2025-02-18'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/acharkq/NExT-Mol
-    uses_external_data: false
-    input_feature_source: unknown
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 60
-    sort_value: 122.9
-    sort_std: 2.2
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   rank_metric: MAE
@@ -5469,7 +4368,7 @@ results:
     venue: arXiv.org
     codebase_url: https://github.com/ocx-lab/FloydNet
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -5706,8 +4605,8 @@ results:
     value_note: ''
     sort_value: 0.024
     sort_std: 0.003
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5774,8 +4673,8 @@ results:
     value_note: ''
     sort_value: 0.025
     sort_std: 0.003
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5815,20 +4714,20 @@ results:
     date_iso: '2023-10-31'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.0309
-    at_pub_std: 0.0031
-    at_pub_source_arxiv: '2305.15747'
-    at_pub_source_title: Union Subgraph Neural Networks
-    at_pub_source_date_iso: '2023-05-25'
-    at_pub_source_date_label: AAAI 2023
+    at_pub_value: 0.122
+    at_pub_std: 0.006
+    at_pub_source_arxiv: '2201.09332'
+    at_pub_source_title: How Expressive are Transformers in Spectral Domain for Graphs?
+    at_pub_source_date_iso: '2022-01-23'
+    at_pub_source_date_label: TMLR 2022
     value_gap_source_date_iso: '2026-01-27'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.021099999999999997
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
+    gap_vs_at_pub: 0.07
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: true
     insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
+    improvement_surpassed_since_pub: true
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.025
@@ -5841,15 +4740,16 @@ results:
     value_note: ''
     sort_value: 0.025
     sort_std: null
-    global_rank: 25
-    paper_rank: 62
-    rank_delta: 37
-    rank_delta_abs: 37
+    global_rank: 24
+    paper_rank: 59
+    rank_delta: 35
+    rank_delta_abs: 35
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Union Subgraph Neural Networks
-    comparison_source_arxiv: '2305.15747'
+    comparison_type: improved
+    comparison_source_title: How Expressive are Transformers in Spectral Domain for
+      Graphs?
+    comparison_source_arxiv: '2201.09332'
     is_best: false
     is_std_outlier: false
   - model: Graphormer-GD
@@ -5909,8 +4809,8 @@ results:
     value_note: ''
     sort_value: 0.025
     sort_std: 0.004
-    global_rank: 26
-    paper_rank: 26
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5976,8 +4876,8 @@ results:
     value_note: ''
     sort_value: 0.028
     sort_std: 0.002
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6044,8 +4944,8 @@ results:
     value_note: ''
     sort_value: 0.088
     sort_std: 0.002
-    global_rank: 74
-    paper_rank: 74
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6112,8 +5012,8 @@ results:
     value_note: ''
     sort_value: 0.111
     sort_std: 0.002
-    global_rank: 82
-    paper_rank: 82
+    global_rank: 79
+    paper_rank: 79
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6154,19 +5054,19 @@ results:
     date_iso: '2023-10-31'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.1152
-    at_pub_std: 0.001
-    at_pub_source_arxiv: '2305.15747'
-    at_pub_source_title: Union Subgraph Neural Networks
-    at_pub_source_date_iso: '2023-05-25'
-    at_pub_source_date_label: AAAI 2023
+    at_pub_value: 0.367
+    at_pub_std: 0.011
+    at_pub_source_arxiv: '2201.09332'
+    at_pub_source_title: How Expressive are Transformers in Spectral Domain for Graphs?
+    at_pub_source_date_iso: '2022-01-23'
+    at_pub_source_date_label: TMLR 2022
     value_gap_source_date_iso: '2024-06-09'
     value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.0021999999999999936
+    gap_vs_at_pub: 0.254
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: true
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
@@ -6181,15 +5081,16 @@ results:
     value_note: ''
     sort_value: 0.113
     sort_std: 0.002
-    global_rank: 83
-    paper_rank: 83
+    global_rank: 80
+    paper_rank: 80
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    comparison_type: improved
+    comparison_source_title: How Expressive are Transformers in Spectral Domain for
+      Graphs?
+    comparison_source_arxiv: '2201.09332'
     is_best: false
     is_std_outlier: false
   - model: GraphSAGE
@@ -6222,41 +5123,44 @@ results:
     date_iso: '2023-10-31'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.1205
-    at_pub_std: 0.0034
-    at_pub_source_arxiv: '2305.15747'
-    at_pub_source_title: Union Subgraph Neural Networks
-    at_pub_source_date_iso: '2023-05-25'
-    at_pub_source_date_label: AAAI 2023
-    value_gap_source_date_iso: '2023-05-25'
-    value_gap_source_date_label: AAAI 2023
-    gap_vs_at_pub: 0.005500000000000005
+    at_pub_value: 0.475
+    at_pub_std: 0.007
+    at_pub_source_arxiv: '2109.12872'
+    at_pub_source_title: 'Meta-Aggregator: Learning to Aggregate for 1-bit Graph Neural
+      Networks'
+    at_pub_source_date_iso: '2021-09-27'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2023-10-31'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.349
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: false
+    better_than_at_pub: true
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.1205
-    true_std: 0.0034
-    value_gap_source_arxiv: '2305.15747'
-    value_gap_source_title: Union Subgraph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.005500000000000005
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.126
+    true_std: 0.003
+    value_gap_source_arxiv: '2310.20519'
+    value_gap_source_title: Enhancing Graph Neural Networks with Quantum Computed
+      Encodings
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.1205
-    sort_std: 0.0034
-    global_rank: 85
-    paper_rank: 85
+    sort_value: 0.126
+    sort_std: 0.003
+    global_rank: 81
+    paper_rank: 81
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    comparison_type: improved
+    comparison_source_title: 'Meta-Aggregator: Learning to Aggregate for 1-bit Graph
+      Neural Networks'
+    comparison_source_arxiv: '2109.12872'
     is_best: false
     is_std_outlier: false
   rank_metric: MAE
@@ -6275,15 +5179,12 @@ results_grouped:
 - benchmark: OGB
   datasets:
   - *id002
-- benchmark: Quantum Chemistry
-  datasets:
-  - *id003
 - benchmark: GNNBenchmark
   datasets:
+  - *id003
   - *id004
   - *id005
   - *id006
-  - *id007
 datasets_by_scope:
 - scope: node-level
   label: Node-level
@@ -6308,11 +5209,6 @@ datasets_by_scope:
     datasets:
     - dataset: PCQM4Mv2
       dataset_slug: pcqm4mv2
-  - benchmark: Quantum Chemistry
-    benchmark_slug: quantum-chemistry
-    datasets:
-    - dataset: QM7b
-      dataset_slug: qm7b
   - benchmark: GNNBenchmark
     benchmark_slug: gnnbenchmark
     datasets:

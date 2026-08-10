@@ -48,8 +48,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - DHGNN
-mrr: 0.1526
-adjusted_mrr: 0.1526
+mrr: 0.1537
+adjusted_mrr: 0.1537
 mrr_dataset_count: 3
 benchmark_categories:
 - Heterophilic Graphs
@@ -197,9 +197,9 @@ results:
     sort_value: 0.856
     sort_std: null
     global_rank: 3
-    paper_rank: 252
-    rank_delta: 249
-    rank_delta_abs: 249
+    paper_rank: 269
+    rank_delta: 266
+    rank_delta_abs: 266
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -266,9 +266,9 @@ results:
     sort_value: 0.8048
     sort_std: 0.0146
     global_rank: 7
-    paper_rank: 13
-    rank_delta: 6
-    rank_delta_abs: 6
+    paper_rank: 15
+    rank_delta: 8
+    rank_delta_abs: 8
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -399,8 +399,8 @@ results:
     value_note: ''
     sort_value: 0.7979
     sort_std: 0.0104
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 14
+    paper_rank: 14
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -467,8 +467,8 @@ results:
     value_note: ''
     sort_value: 0.7827
     sort_std: 0.0128
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -535,8 +535,8 @@ results:
     value_note: ''
     sort_value: 0.7476
     sort_std: 0.022
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -603,8 +603,8 @@ results:
     value_note: ''
     sort_value: 0.714
     sort_std: 0.0238
-    global_rank: 53
-    paper_rank: 53
+    global_rank: 57
+    paper_rank: 57
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -671,10 +671,10 @@ results:
     value_note: ''
     sort_value: 0.7133
     sort_std: 0.0242
-    global_rank: 56
-    paper_rank: 174
-    rank_delta: 118
-    rank_delta_abs: 118
+    global_rank: 60
+    paper_rank: 185
+    rank_delta: 125
+    rank_delta_abs: 125
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -739,10 +739,10 @@ results:
     value_note: ''
     sort_value: 0.7033
     sort_std: null
-    global_rank: 64
-    paper_rank: 117
-    rank_delta: 53
-    rank_delta_abs: 53
+    global_rank: 69
+    paper_rank: 123
+    rank_delta: 54
+    rank_delta_abs: 54
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -807,8 +807,8 @@ results:
     value_note: ''
     sort_value: 0.6842
     sort_std: 0.0132
-    global_rank: 82
-    paper_rank: 82
+    global_rank: 87
+    paper_rank: 87
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -874,10 +874,10 @@ results:
     value_note: ''
     sort_value: 0.6748
     sort_std: 0.004
-    global_rank: 91
-    paper_rank: 133
-    rank_delta: 42
-    rank_delta_abs: 42
+    global_rank: 97
+    paper_rank: 140
+    rank_delta: 43
+    rank_delta_abs: 43
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -885,11 +885,11 @@ results:
     comparison_source_arxiv: '2205.11172'
     is_best: false
     is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.6215
-    std: 0.0042
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.634
+    std: 0.03
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -899,20 +899,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2210.03930'
-    title: Hierarchical Graph Transformer with Adaptive Node Sampling
-    date: Oct 8, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-08'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/zaixizhang/ANS-GT
+    arxiv_id: '2411.19392'
+    title: Scale-aware Message Passing For Graph Node Classification
+    date: Nov 28, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-28'
+    venue: null
+    codebase_url: https://github.com/Qin87/ScaleNet
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 138
-    sort_value: 0.6215
-    sort_std: 0.0042
+    global_rank: 136
+    sort_value: 0.634
+    sort_std: 0.03
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -974,10 +974,10 @@ results:
     value_note: ''
     sort_value: 0.603
     sort_std: 0.0231
-    global_rank: 156
-    paper_rank: 162
-    rank_delta: 6
-    rank_delta_abs: 6
+    global_rank: 164
+    paper_rank: 172
+    rank_delta: 8
+    rank_delta_abs: 8
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1015,20 +1015,19 @@ results:
     date_iso: '2025-05-28'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.445
-    at_pub_std: 0.011
-    at_pub_source_arxiv: '2312.04111'
-    at_pub_source_title: Breaking the Entanglement of Homophily and Heterophily in
-      Semi-supervised Node Classification
-    at_pub_source_date_iso: '2023-12-07'
-    at_pub_source_date_label: '2023'
+    at_pub_value: 0.582
+    at_pub_std: 0.029
+    at_pub_source_arxiv: '2411.19392'
+    at_pub_source_title: Scale-aware Message Passing For Graph Node Classification
+    at_pub_source_date_iso: '2024-11-28'
+    at_pub_source_date_label: '2024'
     value_gap_source_date_iso: '2025-05-28'
     value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.13820000000000005
+    gap_vs_at_pub: 0.0012000000000000899
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
@@ -1042,16 +1041,15 @@ results:
     value_note: ''
     sort_value: 0.5832
     sort_std: 0.0287
-    global_rank: 173
-    paper_rank: 173
+    global_rank: 184
+    paper_rank: 184
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Breaking the Entanglement of Homophily and Heterophily
-      in Semi-supervised Node Classification
-    comparison_source_arxiv: '2312.04111'
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: MLP
@@ -1110,10 +1108,10 @@ results:
     value_note: ''
     sort_value: 0.5429
     sort_std: null
-    global_rank: 195
-    paper_rank: 246
-    rank_delta: 51
-    rank_delta_abs: 51
+    global_rank: 208
+    paper_rank: 264
+    rank_delta: 56
+    rank_delta_abs: 56
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1177,8 +1175,8 @@ results:
     value_note: ''
     sort_value: 0.5224
     sort_std: 0.0365
-    global_rank: 203
-    paper_rank: 203
+    global_rank: 219
+    paper_rank: 219
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1200,40 +1198,6 @@ results:
 - &id003
   dataset: Roman-empire
   rows:
-  - model: Dir-NT
-    model_key: dir-nt
-    model_plain: Dir-NT
-    value: 0.9477
-    std: 0.0031
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2604.08980'
-    title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware Graph
-      Learning'
-    date: Apr 10, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-10'
-    venue: arXiv.org
-    codebase_url: https://github.com/cf020031308/MoNT
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9477
-    sort_std: 0.0031
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
   - model: Dir-Poly
     model_key: dir-poly
     model_plain: Dir-Poly
@@ -1260,7 +1224,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 1
     sort_value: 0.9451
     sort_std: 0.0022
     comparison_type: global_top
@@ -1293,9 +1257,42 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 2
     sort_value: 0.9387
     sort_std: 0.0041
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: LargeScaleNet
+    model_key: largescalenet
+    model_plain: LargeScaleNet
+    value: 0.9358
+    std: 0.0024
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2411.19392'
+    title: Scale-aware Message Passing For Graph Node Classification
+    date: Nov 28, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-28'
+    venue: null
+    codebase_url: https://github.com/Qin87/ScaleNet
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9358
+    sort_std: 0.0024
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1357,8 +1354,8 @@ results:
     value_note: ''
     sort_value: 0.9176
     sort_std: 0.0027
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1405,8 +1402,8 @@ results:
       Time'
     at_pub_source_date_iso: '2024-03-02'
     at_pub_source_date_label: ICLR 2024
-    value_gap_source_date_iso: '2026-04-10'
-    value_gap_source_date_label: '2026'
+    value_gap_source_date_iso: '2025-05-28'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1417,17 +1414,16 @@ results:
     today_delta_significant: false
     true_value: 0.9123
     true_std: 0.0032
-    value_gap_source_arxiv: '2604.08980'
-    value_gap_source_title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware
-      Graph Learning'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.22362'
+    value_gap_source_title: Directed Homophily-Aware Graph Neural Network
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9123
     sort_std: 0.0032
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1462,7 +1458,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 29
+    global_rank: 24
     sort_value: 0.9106
     sort_std: 0.0027
     comparison_type: global_top
@@ -1526,8 +1522,8 @@ results:
     value_note: ''
     sort_value: 0.8905
     sort_std: 0.0053
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 36
+    paper_rank: 36
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1535,73 +1531,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.7116
-    std: 0.0063
-    paper_value: 0.7116
-    paper_std: 0.0063
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard node classification task on Roman-Empire dataset
-    date: May 28, 2025
-    date_display: May 2025
-    date_iso: '2025-05-28'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8102
-    at_pub_std: 0.0046
-    at_pub_source_arxiv: '2305.16780'
-    at_pub_source_title: Graph Neural Convection-Diffusion with Heterophily
-    at_pub_source_date_iso: '2023-05-26'
-    at_pub_source_date_label: IJCAI 2023
-    value_gap_source_date_iso: '2025-10-24'
-    value_gap_source_date_label: NeurIPS 2025
-    gap_vs_at_pub: 0.09860000000000002
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8875
-    true_std: 0.0041
-    value_gap_source_arxiv: '2510.21267'
-    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
-    value_gap_source_is_current_paper: false
-    value_gap: 0.17589999999999995
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8875
-    sort_std: 0.0041
-    global_rank: 45
-    paper_rank: 138
-    rank_delta: 93
-    rank_delta_abs: 93
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Graph Neural Convection-Diffusion with Heterophily
-    comparison_source_arxiv: '2305.16780'
     is_best: false
     is_std_outlier: false
   - model: MagNet
@@ -1660,8 +1589,8 @@ results:
     value_note: ''
     sort_value: 0.8807
     sort_std: 0.0027
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1727,8 +1656,8 @@ results:
     value_note: ''
     sort_value: 0.8272
     sort_std: 0.0082
-    global_rank: 85
-    paper_rank: 126
+    global_rank: 75
+    paper_rank: 116
     rank_delta: 41
     rank_delta_abs: 41
     rank_delta_direction: worse
@@ -1795,8 +1724,8 @@ results:
     value_note: ''
     sort_value: 0.8216
     sort_std: 0.0078
-    global_rank: 89
-    paper_rank: 89
+    global_rank: 78
+    paper_rank: 78
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1804,6 +1733,73 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.7116
+    std: 0.0063
+    paper_value: 0.7116
+    paper_std: 0.0063
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Roman-Empire dataset
+    date: May 28, 2025
+    date_display: May 2025
+    date_iso: '2025-05-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.8102
+    at_pub_std: 0.0046
+    at_pub_source_arxiv: '2305.16780'
+    at_pub_source_title: Graph Neural Convection-Diffusion with Heterophily
+    at_pub_source_date_iso: '2023-05-26'
+    at_pub_source_date_label: IJCAI 2023
+    value_gap_source_date_iso: '2025-08-24'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.09860000000000002
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8145
+    true_std: 0.0009
+    value_gap_source_arxiv: '2508.17531'
+    value_gap_source_title: 'Gumbel-MPNN: Graph Rewiring with Gumbel-Softmax'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.10289999999999999
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8145
+    sort_std: 0.0009
+    global_rank: 82
+    paper_rank: 128
+    rank_delta: 46
+    rank_delta_abs: 46
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Graph Neural Convection-Diffusion with Heterophily
+    comparison_source_arxiv: '2305.16780'
     is_best: false
     is_std_outlier: false
   - model: FSGNN
@@ -1863,8 +1859,8 @@ results:
     value_note: ''
     sort_value: 0.7992
     sort_std: 0.0056
-    global_rank: 100
-    paper_rank: 100
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1930,8 +1926,8 @@ results:
     value_note: ''
     sort_value: 0.7344
     sort_std: 0.003
-    global_rank: 127
-    paper_rank: 160
+    global_rank: 117
+    paper_rank: 150
     rank_delta: 33
     rank_delta_abs: 33
     rank_delta_direction: worse
@@ -1998,8 +1994,8 @@ results:
     value_note: ''
     sort_value: 0.7189
     sort_std: 0.0061
-    global_rank: 130
-    paper_rank: 141
+    global_rank: 120
+    paper_rank: 131
     rank_delta: 11
     rank_delta_abs: 11
     rank_delta_direction: worse
@@ -2066,8 +2062,8 @@ results:
     value_note: ''
     sort_value: 0.6809
     sort_std: 0.0029
-    global_rank: 146
-    paper_rank: 180
+    global_rank: 136
+    paper_rank: 170
     rank_delta: 34
     rank_delta_abs: 34
     rank_delta_direction: worse
@@ -2133,8 +2129,8 @@ results:
     value_note: ''
     sort_value: 0.6739
     sort_std: 0.003
-    global_rank: 148
-    paper_rank: 184
+    global_rank: 138
+    paper_rank: 174
     rank_delta: 36
     rank_delta_abs: 36
     rank_delta_direction: worse
@@ -2200,8 +2196,8 @@ results:
     value_note: ''
     sort_value: 0.6665
     sort_std: 0.0047
-    global_rank: 151
-    paper_rank: 157
+    global_rank: 141
+    paper_rank: 147
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -2268,8 +2264,8 @@ results:
     value_note: ''
     sort_value: 0.6481
     sort_std: 0.008
-    global_rank: 161
-    paper_rank: 217
+    global_rank: 151
+    paper_rank: 207
     rank_delta: 56
     rank_delta_abs: 56
     rank_delta_direction: worse
@@ -2335,8 +2331,8 @@ results:
     value_note: ''
     sort_value: 0.5271
     sort_std: 0.0032
-    global_rank: 199
-    paper_rank: 199
+    global_rank: 189
+    paper_rank: 189
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2491,6 +2487,73 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
+  - model: Dir-GNN
+    model_key: dir-gnn
+    model_plain: Dir-GNN
+    value: 0.7531
+    std: 0.0192
+    paper_value: 0.7531
+    paper_std: 0.0192
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Geom-GCN 10 fixed splits
+    date: May 28, 2025
+    date_display: May 2025
+    date_iso: '2025-05-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.756
+    at_pub_std: 0.019
+    at_pub_source_arxiv: '2411.19392'
+    at_pub_source_title: Scale-aware Message Passing For Graph Node Classification
+    at_pub_source_date_iso: '2024-11-28'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2024-11-28'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.0029000000000000137
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.756
+    true_std: 0.019
+    value_gap_source_arxiv: '2411.19392'
+    value_gap_source_title: Scale-aware Message Passing For Graph Node Classification
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0029000000000000137
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.756
+    sort_std: 0.019
+    global_rank: 7
+    paper_rank: 8
+    rank_delta: 1
+    rank_delta_abs: 1
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
   - model: NDDGNN
     model_key: nddgnn
     model_plain: NDDGNN
@@ -2547,75 +2610,8 @@ results:
     value_note: ''
     sort_value: 0.7538
     sort_std: 0.0195
-    global_rank: 5
-    paper_rank: 5
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Dir-GNN
-    model_key: dir-gnn
-    model_plain: Dir-GNN
-    value: 0.7531
-    std: 0.0192
-    paper_value: 0.7531
-    paper_std: 0.0192
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Geom-GCN 10 fixed splits
-    date: May 28, 2025
-    date_display: May 2025
-    date_iso: '2025-05-28'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.7531
-    at_pub_std: 0.0192
-    at_pub_source_arxiv: '2412.04064'
-    at_pub_source_title: Graph Neural Networks Need Cluster-Normalize-Activate Modules
-    at_pub_source_date_iso: '2024-12-05'
-    at_pub_source_date_label: NeurIPS 2024
-    value_gap_source_date_iso: '2025-05-28'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7531
-    true_std: 0.0192
-    value_gap_source_arxiv: '2505.22362'
-    value_gap_source_title: Directed Homophily-Aware Graph Neural Network
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7531
-    sort_std: 0.0192
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2683,8 +2679,8 @@ results:
     value_note: ''
     sort_value: 0.7416
     sort_std: null
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2751,8 +2747,8 @@ results:
     value_note: ''
     sort_value: 0.7121
     sort_std: 0.0184
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2820,8 +2816,8 @@ results:
     value_note: ''
     sort_value: 0.674
     sort_std: 0.0221
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2888,8 +2884,8 @@ results:
     value_note: ''
     sort_value: 0.6426
     sort_std: 0.0238
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2957,10 +2953,10 @@ results:
     value_note: ''
     sort_value: 0.619
     sort_std: 0.014
-    global_rank: 41
-    paper_rank: 200
-    rank_delta: 159
-    rank_delta_abs: 159
+    global_rank: 42
+    paper_rank: 207
+    rank_delta: 165
+    rank_delta_abs: 165
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3026,8 +3022,8 @@ results:
     value_note: ''
     sort_value: 0.6181
     sort_std: 0.018
-    global_rank: 42
-    paper_rank: 42
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3093,10 +3089,10 @@ results:
     value_note: ''
     sort_value: 0.6067
     sort_std: null
-    global_rank: 49
-    paper_rank: 86
-    rank_delta: 37
-    rank_delta_abs: 37
+    global_rank: 51
+    paper_rank: 90
+    rank_delta: 39
+    rank_delta_abs: 39
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3162,10 +3158,10 @@ results:
     value_note: ''
     sort_value: 0.563
     sort_std: 0.022
-    global_rank: 73
-    paper_rank: 188
-    rank_delta: 115
-    rank_delta_abs: 115
+    global_rank: 77
+    paper_rank: 195
+    rank_delta: 118
+    rank_delta_abs: 118
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3204,15 +3200,15 @@ results:
     date_iso: '2025-05-28'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.5056
-    at_pub_std: 0.0151
-    at_pub_source_arxiv: '2106.06134'
-    at_pub_source_title: Is Homophily a Necessity for Graph Neural Networks?
-    at_pub_source_date_iso: '2021-06-11'
-    at_pub_source_date_label: ICLR 2021
+    at_pub_value: 0.5015
+    at_pub_std: 0.0192
+    at_pub_source_arxiv: '2303.13750'
+    at_pub_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
+    at_pub_source_date_iso: '2023-03-24'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2025-05-28'
     value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.037899999999999934
+    gap_vs_at_pub: 0.04200000000000004
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: true
@@ -3230,22 +3226,22 @@ results:
     value_note: ''
     sort_value: 0.5435
     sort_std: 0.0087
-    global_rank: 82
-    paper_rank: 82
+    global_rank: 86
+    paper_rank: 86
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: Is Homophily a Necessity for Graph Neural Networks?
-    comparison_source_arxiv: '2106.06134'
+    comparison_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
+    comparison_source_arxiv: '2303.13750'
     is_best: false
     is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.4378
-    std: 0.019
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.446
+    std: 0.013
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -3255,21 +3251,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2407.19420'
-    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
-      Over-Smoothing in Node Classification Tasks'
-    date: Jul 28, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-28'
-    venue: arXiv.org
-    codebase_url: ''
+    arxiv_id: '2411.19392'
+    title: Scale-aware Message Passing For Graph Node Classification
+    date: Nov 28, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-28'
+    venue: null
+    codebase_url: https://github.com/Qin87/ScaleNet
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 140
-    sort_value: 0.4378
-    sort_std: 0.019
+    global_rank: 137
+    sort_value: 0.446
+    sort_std: 0.013
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3333,10 +3328,10 @@ results:
     value_note: ''
     sort_value: 0.427
     sort_std: 0.015
-    global_rank: 149
-    paper_rank: 188
-    rank_delta: 39
-    rank_delta_abs: 39
+    global_rank: 155
+    paper_rank: 195
+    rank_delta: 40
+    rank_delta_abs: 40
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3402,10 +3397,10 @@ results:
     value_note: ''
     sort_value: 0.393
     sort_std: 0.0079
-    global_rank: 188
-    paper_rank: 248
-    rank_delta: 60
-    rank_delta_abs: 60
+    global_rank: 194
+    paper_rank: 259
+    rank_delta: 65
+    rank_delta_abs: 65
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3469,8 +3464,8 @@ results:
     value_note: ''
     sort_value: 0.3774
     sort_std: 0.0154
-    global_rank: 206
-    paper_rank: 206
+    global_rank: 213
+    paper_rank: 213
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

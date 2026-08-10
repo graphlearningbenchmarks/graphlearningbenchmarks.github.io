@@ -52,8 +52,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - LLMs
-mrr: 0.0458
-adjusted_mrr: 0.0306
+mrr: 0.0543
+adjusted_mrr: 0.0362
 mrr_dataset_count: 2
 benchmark_categories:
 - Classic
@@ -136,7 +136,7 @@ results:
     venue: IEEE Transactions on Neural Networks and Learning Systems
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -205,7 +205,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 56
+    global_rank: 55
     sort_value: 0.4026
     sort_std: 0.0108
     comparison_type: global_top
@@ -238,7 +238,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 88
+    global_rank: 87
     sort_value: 0.3899
     sort_std: 0.0085
     comparison_type: global_top
@@ -303,8 +303,8 @@ results:
     value_note: ''
     sort_value: 0.379
     sort_std: 0.016
-    global_rank: 120
-    paper_rank: 120
+    global_rank: 115
+    paper_rank: 115
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -371,8 +371,8 @@ results:
     value_note: ''
     sort_value: 0.377
     sort_std: 0.027
-    global_rank: 133
-    paper_rank: 133
+    global_rank: 127
+    paper_rank: 127
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -439,8 +439,8 @@ results:
     value_note: ''
     sort_value: 0.368
     sort_std: 0.015
-    global_rank: 185
-    paper_rank: 185
+    global_rank: 177
+    paper_rank: 177
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -508,8 +508,8 @@ results:
     value_note: ''
     sort_value: 0.368
     sort_std: 0.029
-    global_rank: 184
-    paper_rank: 184
+    global_rank: 176
+    paper_rank: 176
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -578,8 +578,8 @@ results:
     value_note: ''
     sort_value: 0.367
     sort_std: 0.018
-    global_rank: 189
-    paper_rank: 189
+    global_rank: 181
+    paper_rank: 181
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -647,8 +647,8 @@ results:
     value_note: ''
     sort_value: 0.367
     sort_std: 0.021
-    global_rank: 190
-    paper_rank: 190
+    global_rank: 182
+    paper_rank: 182
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -859,8 +859,8 @@ results:
     value_note: ''
     sort_value: 0.972
     sort_std: 0.034
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 62
+    paper_rank: 62
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -934,6 +934,39 @@ results:
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.462
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2407.00494'
+    title: Graph Neural Networks Gone Hogwild
+    date: Jun 29, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-29'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 183
+    sort_value: 0.462
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1144,10 +1177,10 @@ results:
     value_note: ''
     sort_value: 0.882
     sort_std: 0.0005
-    global_rank: 12
-    paper_rank: 59
-    rank_delta: 47
-    rank_delta_abs: 47
+    global_rank: 10
+    paper_rank: 55
+    rank_delta: 45
+    rank_delta_abs: 45
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1214,8 +1247,8 @@ results:
     value_note: ''
     sort_value: 0.8234
     sort_std: 0.0036
-    global_rank: 103
-    paper_rank: 103
+    global_rank: 89
+    paper_rank: 89
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1283,8 +1316,8 @@ results:
     value_note: ''
     sort_value: 0.744
     sort_std: 0.0023
-    global_rank: 325
-    paper_rank: 325
+    global_rank: 297
+    paper_rank: 297
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1319,7 +1352,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 394
+    global_rank: 361
     sort_value: 0.6605
     sort_std: 0.002
     comparison_type: global_top
@@ -1384,8 +1417,8 @@ results:
     value_note: ''
     sort_value: 0.5694
     sort_std: 0.0045
-    global_rank: 424
-    paper_rank: 424
+    global_rank: 389
+    paper_rank: 389
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1452,8 +1485,8 @@ results:
     value_note: ''
     sort_value: 0.5523
     sort_std: 0.0032
-    global_rank: 427
-    paper_rank: 427
+    global_rank: 392
+    paper_rank: 392
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

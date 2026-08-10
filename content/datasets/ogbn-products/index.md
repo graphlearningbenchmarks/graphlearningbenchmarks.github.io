@@ -12,7 +12,7 @@ stats:
   avg_nodes: 61859140.0
   avg_edges: null
   num_classes: 47
-result_count: 598
+result_count: 546
 best_model:
   model: Jacobi
   value: 0.8968
@@ -26,11 +26,6 @@ papers:
     Graph Learning'
   date_iso: '2026-05-24'
   venue: ICML 2026
-- arxiv_id: '2602.17071'
-  title: 'AdvSynGNN: Structure-Adaptive Graph Neural Nets via Adversarial Synthesis
-    and Self-Corrective Propagation'
-  date_iso: '2026-02-19'
-  venue: ''
 - arxiv_id: '2512.14908'
   title: 'ATLAS: Adaptive Topology-based Learning at Scale for Homophilic and Heterophilic
     Graphs'
@@ -61,11 +56,6 @@ papers:
   title: 'ReDiSC: A Reparameterized Masked Diffusion Model for Scalable Node Classification
     with Structured Predictions'
   date_iso: '2025-07-19'
-  venue: ''
-- arxiv_id: '2506.08298'
-  title: 'H$ $GFM: Towards unifying Homogeneity and Heterogeneity on Text-Attributed
-    Graphs'
-  date_iso: '2025-06-10'
   venue: ''
 - arxiv_id: '2506.07168'
   title: Efficient Text-Attributed Graph Learning through Selective Annotation and
@@ -99,10 +89,6 @@ papers:
     GNNs
   date_iso: '2025-02-17'
   venue: NeurIPS 2025
-- arxiv_id: '2502.00806'
-  title: 'UniGraph2: Learning a Unified Embedding Space to Bind Multimodal Graphs'
-  date_iso: '2025-02-02'
-  venue: WWW 2025
 - arxiv_id: '2501.15755'
   title: 'GraphICL: Unlocking Graph Learning Potential in LLMs through Structured
     Prompt Design'
@@ -125,10 +111,6 @@ papers:
   title: How to Make LMs Strong Node Classifiers?
   date_iso: '2024-10-03'
   venue: ''
-- arxiv_id: '2408.13471'
-  title: Disentangled Generative Graph Representation Learning
-  date_iso: '2024-08-24'
-  venue: ''
 - arxiv_id: '2408.08685'
   title: Can Large Language Models Improve the Adversarial Robustness of Graph Neural
     Networks?
@@ -139,10 +121,6 @@ papers:
     Passing in Graph Neural Networks'
   date_iso: '2024-07-20'
   venue: ''
-- arxiv_id: '2407.09709'
-  title: 'GOFA: A Generative One-For-All Model for Joint Graph Language Modeling'
-  date_iso: '2024-07-12'
-  venue: ICLR 2024
 - arxiv_id: '2406.12052'
   title: 'UniGLM: Training One Unified Language Model for Text-Attributed Graph Embedding'
   date_iso: '2024-06-17'
@@ -168,11 +146,6 @@ papers:
     with FROND
   date_iso: '2024-04-26'
   venue: ICLR 2024
-- arxiv_id: '2404.15354'
-  title: 'Polynomial Selection in Spectral Graph Neural Networks: An Error-Sum of
-    Function Slices Approach'
-  date_iso: '2024-04-15'
-  venue: WWW 2024
 - arxiv_id: '2403.14951'
   title: Simple Graph Condensation
   date_iso: '2024-03-22'
@@ -185,10 +158,6 @@ papers:
   title: 'CDC: A Simple Framework for Complex Data Clustering'
   date_iso: '2024-03-06'
   venue: ''
-- arxiv_id: '2403.01232'
-  title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
-  date_iso: '2024-03-02'
-  venue: ICLR 2024
 - arxiv_id: '2402.15270'
   title: Smoothed Graph Contrastive Learning via Seamless Proximity Integration
   date_iso: '2024-02-23'
@@ -599,43 +568,6 @@ variants:
     - null
     - null
     - null
-  - model: AdvSynGNN
-    model_plain: AdvSynGNN
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2602.17071'
-    title: 'AdvSynGNN: Structure-Adaptive Graph Neural Nets via Adversarial Synthesis
-      and Self-Corrective Propagation'
-    date: Feb 19, 2026
-    date_iso: '2026-02-19'
-    date_display: Feb 2026
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8931
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0013
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: OGNN
     model_plain: OGNN
     is_baseline: true
@@ -772,42 +704,6 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8859
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: GOFA-F
-    model_plain: GOFA-F
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2407.09709'
-    title: 'GOFA: A Generative One-For-All Model for Joint Graph Language Modeling'
-    date: Jul 12, 2024
-    date_iso: '2024-07-12'
-    date_display: Jul 2024
-    codebase_url: https://github.com/JiaruiFeng/GOFA
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8834
     - null
     - null
     - null
@@ -1217,42 +1113,6 @@ variants:
     - null
     metric_stds:
     - 0.0004
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: GOFA-T
-    model_plain: GOFA-T
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2407.09709'
-    title: 'GOFA: A Generative One-For-All Model for Joint Graph Language Modeling'
-    date: Jul 12, 2024
-    date_iso: '2024-07-12'
-    date_display: Jul 2024
-    codebase_url: https://github.com/JiaruiFeng/GOFA
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8713
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
     - null
     - null
     - null
@@ -2276,19 +2136,127 @@ variants:
     - null
     - null
     - null
-  row_count: 598
+  - model: GLEM-LM
+    model_plain: GLEM-LM
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    arxiv_id: '2210.14709'
+    title: Learning on Large-scale Text-attributed Graphs via Variational Inference
+    date: Oct 2022
+    date_iso: 2022-10
+    date_display: Oct 2022
+    codebase_url: https://github.com/AndyJZhao/GLEM
+    published_conference: ICLR 2022
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8483
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0004
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: PaSca-V3
+    model_plain: PaSca-V3
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2203.00638'
+    title: 'PaSca: a Graph Neural Architecture Search System under the Scalable Paradigm'
+    date: Mar 1, 2022
+    date_iso: '2022-03-01'
+    date_display: Mar 2022
+    codebase_url: ''
+    published_conference: WWW 2022
+    published_conference_short: WWW
+    published_conference_slug: www
+    published_venue: WWW 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.848
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.007
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: ShaDow+ATP
+    model_plain: ShaDow+ATP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2402.06128'
+    title: Rethinking Node-wise Propagation for Large-scale Graph Learning
+    date: Feb 9, 2024
+    date_iso: '2024-02-09'
+    date_display: Feb 2024
+    codebase_url: ''
+    published_conference: WWW 2024
+    published_conference_short: WWW
+    published_conference_slug: www
+    published_venue: WWW 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.848
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.002
+    - null
+    - null
+    - null
+    - null
+    - null
+  row_count: 546
   rows_json: /data/datasets/ogbn-products/standard-split-rows.json
   chart_json: /data/datasets/ogbn-products/standard-split-chart.json
   arch_counts:
-    gnn: 332
-    hybrid: 87
-    graph_transformer: 30
-    llm: 53
+    gnn: 308
+    hybrid: 78
+    graph_transformer: 20
+    llm: 45
     walk: 3
-    traditional: 71
+    traditional: 70
   metric_counts:
-  - 552
-  - 11
+  - 505
+  - 6
   - 12
   - 12
   - 6
@@ -2320,6 +2288,12 @@ variants:
     arxiv_id: '2101.11525'
     title: Calibrating and Improving Graph Contrastive Learning
     date: '2021-01-27'
+  - value: 0.868
+    std: 0.0007
+    model: SCR
+    arxiv_id: '2112.04319'
+    title: 'SCR: Training Graph Neural Networks with Consistency Regularization'
+    date: '2021-12-08'
   - value: 0.8736
     std: 0.0007
     model: SAGN
@@ -2333,29 +2307,29 @@ variants:
     title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking and
       Rethinking'
     date: '2022-10-14'
-  - value: 0.8834
+  - value: 0.882
+    std: 0.0005
+    model: LLMs
+    arxiv_id: '2412.16441'
+    title: 'Towards Graph Foundation Models: Learning Generalities Across Graphs via
+      Task-Trees'
+    date: '2024-12-21'
+  - value: 0.8968
     std: null
-    model: GOFA-F
-    arxiv_id: '2407.09709'
-    title: 'GOFA: A Generative One-For-All Model for Joint Graph Language Modeling'
-    date: '2024-07-12'
-  - value: 0.8931
-    std: 0.0013
-    model: AdvSynGNN
-    arxiv_id: '2602.17071'
-    title: 'AdvSynGNN: Structure-Adaptive Graph Neural Nets via Adversarial Synthesis
-      and Self-Corrective Propagation'
-    date: '2026-02-19'
+    model: Jacobi
+    arxiv_id: '2505.19762'
+    title: 'Language Models as Messengers: Enhancing Message Passing in Heterophilic
+      Graph Learning'
+    date: '2025-05-26'
   milestones_by_metric:
     Accuracy: *id001
     ACC:
-    - value: 0.8677
-      std: 0.0101
-      model: H^2GFM
-      arxiv_id: '2506.08298'
-      title: 'H$ $GFM: Towards unifying Homogeneity and Heterogeneity on Text-Attributed
-        Graphs'
-      date: '2025-06-10'
+    - value: 0.402
+      std: null
+      model: S^3GC
+      arxiv_id: '2403.03670'
+      title: 'CDC: A Simple Framework for Complex Data Clustering'
+      date: '2024-03-06'
     AP:
     - value: 0.959
       std: 0.001

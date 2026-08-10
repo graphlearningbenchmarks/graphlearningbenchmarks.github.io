@@ -1661,7 +1661,7 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-08-17'
+    value_gap_source_date_iso: '2023-07-27'
     value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
@@ -1673,18 +1673,18 @@ results:
     today_delta_significant: true
     true_value: 0.6987
     true_std: 0.0054
-    value_gap_source_arxiv: '2308.08963'
-    value_gap_source_title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
+    value_gap_source_arxiv: '2307.14613'
+    value_gap_source_title: Self-Contrastive Graph Diffusion Network
     value_gap_source_is_current_paper: false
     value_gap: 0.07819999999999994
     has_value_note: false
     value_note: ''
     sort_value: 0.6987
     sort_std: 0.0054
-    global_rank: 28
-    paper_rank: 42
-    rank_delta: 14
-    rank_delta_abs: 14
+    global_rank: 27
+    paper_rank: 40
+    rank_delta: 13
+    rank_delta_abs: 13
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1748,8 +1748,8 @@ results:
     value_note: ''
     sort_value: 0.686
     sort_std: null
-    global_rank: 30
-    paper_rank: 44
+    global_rank: 28
+    paper_rank: 42
     rank_delta: 14
     rank_delta_abs: 14
     rank_delta_direction: worse
@@ -1815,8 +1815,8 @@ results:
     value_note: ''
     sort_value: 0.6808
     sort_std: 0.0176
-    global_rank: 31
-    paper_rank: 42
+    global_rank: 29
+    paper_rank: 40
     rank_delta: 11
     rank_delta_abs: 11
     rank_delta_direction: worse
@@ -1882,8 +1882,8 @@ results:
     value_note: ''
     sort_value: 0.6805
     sort_std: 0.0181
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1949,8 +1949,8 @@ results:
     value_note: ''
     sort_value: 0.6574
     sort_std: 0.0134
-    global_rank: 38
-    paper_rank: 38
+    global_rank: 36
+    paper_rank: 36
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2016,8 +2016,8 @@ results:
     value_note: ''
     sort_value: 0.6483
     sort_std: 0.0059
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2084,8 +2084,8 @@ results:
     value_note: ''
     sort_value: 0.6283
     sort_std: 0.0159
-    global_rank: 42
-    paper_rank: 54
+    global_rank: 40
+    paper_rank: 52
     rank_delta: 12
     rank_delta_abs: 12
     rank_delta_direction: worse
@@ -2151,8 +2151,8 @@ results:
     value_note: ''
     sort_value: 0.6031
     sort_std: 0.0062
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2218,8 +2218,8 @@ results:
     value_note: ''
     sort_value: 0.5859
     sort_std: 0.0006
-    global_rank: 45
-    paper_rank: 45
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2285,8 +2285,8 @@ results:
     value_note: ''
     sort_value: 0.5816
     sort_std: 0.0056
-    global_rank: 46
-    paper_rank: 46
+    global_rank: 44
+    paper_rank: 44
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2352,8 +2352,8 @@ results:
     value_note: ''
     sort_value: 0.5441
     sort_std: 0.0042
-    global_rank: 47
-    paper_rank: 47
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2419,8 +2419,8 @@ results:
     value_note: ''
     sort_value: 0.5143
     sort_std: 0.0035
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2486,8 +2486,8 @@ results:
     value_note: ''
     sort_value: 0.3192
     sort_std: 0.0027
-    global_rank: 56
-    paper_rank: 56
+    global_rank: 54
+    paper_rank: 54
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

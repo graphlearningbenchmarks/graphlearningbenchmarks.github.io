@@ -52,8 +52,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - SCARA
-mrr: 0.007
-adjusted_mrr: 0.0023
+mrr: 0.0073
+adjusted_mrr: 0.0024
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -235,9 +235,9 @@ results:
     sort_value: 0.97
     sort_std: null
     global_rank: 5
-    paper_rank: 203
-    rank_delta: 198
-    rank_delta_abs: 198
+    paper_rank: 183
+    rank_delta: 178
+    rank_delta_abs: 178
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -270,7 +270,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 19
+    global_rank: 18
     sort_value: 0.966
     sort_std: null
     comparison_type: global_top
@@ -336,10 +336,10 @@ results:
     value_note: ''
     sort_value: 0.937
     sort_std: null
-    global_rank: 119
-    paper_rank: 203
-    rank_delta: 84
-    rank_delta_abs: 84
+    global_rank: 113
+    paper_rank: 183
+    rank_delta: 70
+    rank_delta_abs: 70
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -405,10 +405,10 @@ results:
     value_note: ''
     sort_value: 0.9229
     sort_std: 0.005
-    global_rank: 143
-    paper_rank: 200
-    rank_delta: 57
-    rank_delta_abs: 57
+    global_rank: 137
+    paper_rank: 180
+    rank_delta: 43
+    rank_delta_abs: 43
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -472,10 +472,10 @@ results:
     value_note: ''
     sort_value: 0.7609
     sort_std: 0.0175
-    global_rank: 164
-    paper_rank: 200
-    rank_delta: 36
-    rank_delta_abs: 36
+    global_rank: 158
+    paper_rank: 180
+    rank_delta: 22
+    rank_delta_abs: 22
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -486,8 +486,8 @@ results:
   - model: MLP
     model_key: mlp
     model_plain: MLP
-    value: 0.7435
-    std: 0.0016
+    value: 0.7216
+    std: 0.0015
     metric: F1
     higher_is_better: true
     is_baseline: true
@@ -497,21 +497,20 @@ results:
     architecture_type: other_traditional
     architecture_label: Trad
     architecture_title: Traditional / classical method
-    arxiv_id: '2512.14908'
-    title: 'ATLAS: Adaptive Topology-based Learning at Scale for Homophilic and Heterophilic
-      Graphs'
-    date: Dec 16, 2025
-    date_display: Dec 2025
-    date_iso: '2025-12-16'
-    venue: arXiv.org
-    codebase_url: https://github.com/atlaspaper16/ATLAS
+    arxiv_id: '2405.20445'
+    title: Fully-inductive Node Classification on Arbitrary Graphs
+    date: May 30, 2024
+    date_display: May 2024
+    date_iso: '2024-05-30'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/DeepGraphLearning/GraphAny
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 165
-    sort_value: 0.7435
-    sort_std: 0.0016
+    global_rank: 162
+    sort_value: 0.7216
+    sort_std: 0.0015
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -574,8 +573,8 @@ results:
     value_note: ''
     sort_value: 0.38
     sort_std: 0.002
-    global_rank: 201
-    paper_rank: 201
+    global_rank: 181
+    paper_rank: 181
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

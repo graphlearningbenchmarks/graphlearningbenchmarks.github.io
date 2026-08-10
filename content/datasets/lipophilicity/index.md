@@ -8,14 +8,13 @@ primary_metric: RMSE
 higher_is_better: false
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.MoleculeNet.html
 stats: null
-result_count: 129
+result_count: 123
 best_model:
-  model: MoLFormer-XL
-  value: 0.5289
+  model: MemGNN
+  value: 0.556
   metric: RMSE
-  arxiv_id: '2106.09553'
-  paper_title: How Much Structural Information Large Scale Molecular Language Representations
-    Can Capture?
+  arxiv_id: '2002.09518'
+  paper_title: Memory-Based Graph Networks
 papers:
 - arxiv_id: '2602.20344'
   title: Hierarchical Molecular Representation Learning via Fragment-Based Self-Supervised
@@ -64,11 +63,6 @@ papers:
   title: 'GeomGCL: Geometric Graph Contrastive Learning for Molecular Property Prediction'
   date_iso: '2021-09-24'
   venue: AAAI 2021
-- arxiv_id: '2106.09553'
-  title: How Much Structural Information Large Scale Molecular Language Representations
-    Can Capture?
-  date_iso: '2021-06-17'
-  venue: ''
 - arxiv_id: '2006.04804'
   title: Optimal Transport Graph Neural Networks
   date_iso: '2020-06-08'
@@ -102,114 +96,6 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
-  - model: MoLFormer-XL
-    model_plain: MoLFormer-XL
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_iso: '2021-06-17'
-    date_display: Jun 2021
-    codebase_url: https://github.com/IBM/molformer
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: true
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.5289
-    metric_stds:
-    - null
-  - model: 10% ZINC + 10% PubChem
-    model_plain: 10% ZINC + 10% PubChem
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_iso: '2021-06-17'
-    date_display: Jun 2021
-    codebase_url: https://github.com/IBM/molformer
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: true
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.5331
-    metric_stds:
-    - null
-  - model: GeomGCL
-    model_plain: GeomGCL
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_iso: '2021-06-17'
-    date_display: Jun 2021
-    codebase_url: https://github.com/IBM/molformer
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: true
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.541
-    metric_stds:
-    - null
-  - model: 100% ZINC
-    model_plain: 100% ZINC
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_iso: '2021-06-17'
-    date_display: Jun 2021
-    codebase_url: https://github.com/IBM/molformer
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: true
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.544
-    metric_stds:
-    - null
   - model: MemGNN
     model_plain: MemGNN
     is_baseline: true
@@ -230,7 +116,7 @@ variants:
     published_conference_slug: iclr
     published_venue: ICLR 2020
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.556
@@ -256,7 +142,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.58
@@ -288,33 +174,6 @@ variants:
     - 0.604
     metric_stds:
     - 0.014
-  - model: DimeNet++
-    model_plain: DimeNet++
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_iso: '2021-06-17'
-    date_display: Jun 2021
-    codebase_url: https://github.com/IBM/molformer
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.614
-    metric_stds:
-    - null
   - model: ProtoW-Dot
     model_plain: ProtoW-Dot
     is_baseline: true
@@ -393,33 +252,6 @@ variants:
     - 0.646
     metric_stds:
     - 0.041
-  - model: MoLFormer-Base
-    model_plain: MoLFormer-Base
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_iso: '2021-06-17'
-    date_display: Jun 2021
-    codebase_url: https://github.com/IBM/molformer
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: true
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.6492
-    metric_stds:
-    - null
   - model: GCN
     model_plain: GCN
     is_baseline: true
@@ -498,33 +330,6 @@ variants:
     - 0.658
     metric_stds:
     - 0.019
-  - model: GEM
-    model_plain: GEM
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2106.09553'
-    title: How Much Structural Information Large Scale Molecular Language Representations
-      Can Capture?
-    date: Jun 17, 2021
-    date_iso: '2021-06-17'
-    date_display: Jun 2021
-    codebase_url: https://github.com/IBM/molformer
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: true
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.66
-    metric_stds:
-    - null
   - model: GeomGCL
     model_plain: GeomGCL
     is_baseline: false
@@ -1415,19 +1220,209 @@ variants:
     - 0.753
     metric_stds:
     - null
-  row_count: 129
+  - model: GCN
+    model_plain: GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.16401'
+    title: Graph Neural Networks with a Distribution of Parametrized Graphs
+    date: Oct 25, 2023
+    date_iso: '2023-10-25'
+    date_display: Oct 2023
+    codebase_url: https://github.com/ICT-GIMLab/SeHGNN
+    published_conference: ICML 2023
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.76
+    metric_stds:
+    - 0.009
+  - model: CoMPT
+    model_plain: CoMPT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2109.11730'
+    title: 'GeomGCL: Geometric Graph Contrastive Learning for Molecular Property Prediction'
+    date: Sep 24, 2021
+    date_iso: '2021-09-24'
+    date_display: Sep 2021
+    codebase_url: ''
+    published_conference: AAAI 2021
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.761
+    metric_stds:
+    - null
+  - model: S-CGIB
+    model_plain: S-CGIB
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2412.15589'
+    title: Pre-training Graph Neural Networks on Molecules by Using Subgraph-Conditioned
+      Graph Information Bottleneck
+    date: Dec 20, 2024
+    date_iso: '2024-12-20'
+    date_display: Dec 2024
+    codebase_url: https://github.com/NSLab-CUK/S-CGIB
+    published_conference: AAAI 2024
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.762
+    metric_stds:
+    - 0.042
+  - model: AttentiveFP
+    model_plain: AttentiveFP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.16401'
+    title: Graph Neural Networks with a Distribution of Parametrized Graphs
+    date: Oct 25, 2023
+    date_iso: '2023-10-25'
+    date_display: Oct 2023
+    codebase_url: https://github.com/ICT-GIMLab/SeHGNN
+    published_conference: ICML 2023
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.762
+    metric_stds:
+    - 0.022
+  - model: GCN + JK max
+    model_plain: GCN + JK max
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2211.03666'
+    title: Application of Graph Neural Networks and graph descriptors for graph classification
+    date: Nov 7, 2022
+    date_iso: '2022-11-07'
+    date_display: Nov 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.763
+    metric_stds:
+    - null
+  - model: SimSGT
+    model_plain: SimSGT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.15589'
+    title: Pre-training Graph Neural Networks on Molecules by Using Subgraph-Conditioned
+      Graph Information Bottleneck
+    date: Dec 20, 2024
+    date_iso: '2024-12-20'
+    date_display: Dec 2024
+    codebase_url: https://github.com/NSLab-CUK/S-CGIB
+    published_conference: AAAI 2024
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.771
+    metric_stds:
+    - 0.041
+  - model: MoAMa
+    model_plain: MoAMa
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2309.04589'
+    title: Motif-aware Attribute Masking for Molecular Graph Pre-training
+    date: Sep 8, 2023
+    date_iso: '2023-09-08'
+    date_display: Sep 2023
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.772
+    metric_stds:
+    - 0.03
+  row_count: 123
   rows_json: /data/datasets/lipophilicity/scaffold-split-rows.json
   chart_json: /data/datasets/lipophilicity/scaffold-split-chart.json
   arch_counts:
-    gnn: 75
+    gnn: 73
     hybrid: 30
-    graph_transformer: 4
+    graph_transformer: 2
     llm: 0
     walk: 0
-    traditional: 20
+    traditional: 18
   metric_counts:
-  - 129
+  - 123
   milestones: &id001
+  - value: 0.655
+    std: 0.036
+    model: GC
+    arxiv_id: '1703.00564'
+    title: MoleculeNet
+    date: '2017-03-02'
   - value: 0.556
     std: 0.023
     model: MemGNN

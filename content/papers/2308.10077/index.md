@@ -32,13 +32,13 @@ abstract: Learning node-level representations of heterophilic graphs is crucial 
   Our approach outperforms baselines on synthetic and real structural datasets, surpassing
   the best baseline by $16.06\
 codebase_url: ''
-extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+extraction_model: google/gemma-4-26B-A4B-it
 has_results: true
 paper_type: method
 proposed_models:
 - mechanism (shared)
 - mechanism (dedicated)
-mrr: 0.0044
+mrr: 0.0045
 adjusted_mrr: 0.0015
 mrr_dataset_count: 1
 benchmark_categories:
@@ -117,7 +117,7 @@ results:
     venue: IEEE Transactions on Neural Networks and Learning Systems
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -186,7 +186,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 56
+    global_rank: 55
     sort_value: 0.4026
     sort_std: 0.0108
     comparison_type: global_top
@@ -219,7 +219,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 88
+    global_rank: 87
     sort_value: 0.3899
     sort_std: 0.0085
     comparison_type: global_top
@@ -284,8 +284,8 @@ results:
     value_note: ''
     sort_value: 0.3601
     sort_std: 0.0068
-    global_rank: 226
-    paper_rank: 226
+    global_rank: 220
+    paper_rank: 220
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -352,10 +352,10 @@ results:
     value_note: ''
     sort_value: 0.3464
     sort_std: 0.002
-    global_rank: 299
-    paper_rank: 385
-    rank_delta: 86
-    rank_delta_abs: 86
+    global_rank: 294
+    paper_rank: 379
+    rank_delta: 85
+    rank_delta_abs: 85
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -421,10 +421,10 @@ results:
     value_note: ''
     sort_value: 0.3209
     sort_std: 0.0118
-    global_rank: 359
-    paper_rank: 553
-    rank_delta: 194
-    rank_delta_abs: 194
+    global_rank: 353
+    paper_rank: 551
+    rank_delta: 198
+    rank_delta_abs: 198
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -490,10 +490,10 @@ results:
     value_note: ''
     sort_value: 0.3157
     sort_std: 0.0075
-    global_rank: 369
-    paper_rank: 475
-    rank_delta: 106
-    rank_delta_abs: 106
+    global_rank: 363
+    paper_rank: 473
+    rank_delta: 110
+    rank_delta_abs: 110
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -559,10 +559,10 @@ results:
     value_note: ''
     sort_value: 0.3151
     sort_std: 0.0154
-    global_rank: 370
-    paper_rank: 446
-    rank_delta: 76
-    rank_delta_abs: 76
+    global_rank: 364
+    paper_rank: 442
+    rank_delta: 78
+    rank_delta_abs: 78
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -606,8 +606,8 @@ results:
     at_pub_source_title: 'MUSE: Multi-View Contrastive Learning for Heterophilic Graphs'
     at_pub_source_date_iso: '2023-07-29'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-08-19'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-06-24'
+    value_gap_source_date_label: KDD 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -618,17 +618,16 @@ results:
     today_delta_significant: false
     true_value: 0.3017
     true_std: 0.0017
-    value_gap_source_arxiv: '2308.10077'
-    value_gap_source_title: Contrastive Learning for Non-Local Graphs with Multi-Resolution
-      Structural Views
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2506.19343'
+    value_gap_source_title: Discrepancy-Aware Graph Mask Auto-Encoder
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.3017
     sort_std: 0.0017
-    global_rank: 409
-    paper_rank: 409
+    global_rank: 404
+    paper_rank: 404
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -695,8 +694,8 @@ results:
     value_note: ''
     sort_value: 0.2897
     sort_std: 0.0117
-    global_rank: 438
-    paper_rank: 438
+    global_rank: 434
+    paper_rank: 434
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -764,8 +763,8 @@ results:
     value_note: ''
     sort_value: 0.2863
     sort_std: 0.0105
-    global_rank: 447
-    paper_rank: 447
+    global_rank: 443
+    paper_rank: 443
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -833,10 +832,10 @@ results:
     value_note: ''
     sort_value: 0.2828
     sort_std: 0.0127
-    global_rank: 454
-    paper_rank: 504
-    rank_delta: 50
-    rank_delta_abs: 50
+    global_rank: 451
+    paper_rank: 502
+    rank_delta: 51
+    rank_delta_abs: 51
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -902,8 +901,8 @@ results:
     value_note: ''
     sort_value: 0.2729
     sort_std: 0.0309
-    global_rank: 470
-    paper_rank: 470
+    global_rank: 467
+    paper_rank: 467
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -971,8 +970,8 @@ results:
     value_note: ''
     sort_value: 0.255
     sort_std: 0.0028
-    global_rank: 483
-    paper_rank: 506
+    global_rank: 481
+    paper_rank: 504
     rank_delta: 23
     rank_delta_abs: 23
     rank_delta_direction: worse
@@ -1039,8 +1038,8 @@ results:
     value_note: ''
     sort_value: 0.2542
     sort_std: 0.0055
-    global_rank: 488
-    paper_rank: 488
+    global_rank: 486
+    paper_rank: 486
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1107,8 +1106,8 @@ results:
     value_note: ''
     sort_value: 0.2513
     sort_std: 0.0079
-    global_rank: 494
-    paper_rank: 494
+    global_rank: 492
+    paper_rank: 492
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1254,7 +1253,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 27
+    global_rank: 25
     sort_value: 0.9136
     sort_std: 0.007
     comparison_type: global_top
@@ -1288,7 +1287,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 177
+    global_rank: 165
     sort_value: 0.8269
     sort_std: null
     comparison_type: global_top
@@ -1353,8 +1352,8 @@ results:
     value_note: ''
     sort_value: 0.747
     sort_std: 0.0756
-    global_rank: 303
-    paper_rank: 303
+    global_rank: 293
+    paper_rank: 293
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1422,10 +1421,10 @@ results:
     value_note: ''
     sort_value: 0.7082
     sort_std: 0.0271
-    global_rank: 344
-    paper_rank: 609
-    rank_delta: 265
-    rank_delta_abs: 265
+    global_rank: 334
+    paper_rank: 596
+    rank_delta: 262
+    rank_delta_abs: 262
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1492,10 +1491,10 @@ results:
     value_note: ''
     sort_value: 0.643
     sort_std: 0.0543
-    global_rank: 417
-    paper_rank: 540
-    rank_delta: 123
-    rank_delta_abs: 123
+    global_rank: 407
+    paper_rank: 528
+    rank_delta: 121
+    rank_delta_abs: 121
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1560,10 +1559,10 @@ results:
     value_note: ''
     sort_value: 0.6309
     sort_std: 0.0987
-    global_rank: 432
-    paper_rank: 615
-    rank_delta: 183
-    rank_delta_abs: 183
+    global_rank: 422
+    paper_rank: 600
+    rank_delta: 178
+    rank_delta_abs: 178
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1629,10 +1628,10 @@ results:
     value_note: ''
     sort_value: 0.5919
     sort_std: 0.0409
-    global_rank: 466
-    paper_rank: 583
-    rank_delta: 117
-    rank_delta_abs: 117
+    global_rank: 455
+    paper_rank: 570
+    rank_delta: 115
+    rank_delta_abs: 115
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1676,8 +1675,8 @@ results:
     at_pub_source_title: 'MUSE: Multi-View Contrastive Learning for Heterophilic Graphs'
     at_pub_source_date_iso: '2023-07-29'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-08-19'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-06-24'
+    value_gap_source_date_label: KDD 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1688,17 +1687,16 @@ results:
     today_delta_significant: false
     true_value: 0.5864
     true_std: 0.0561
-    value_gap_source_arxiv: '2308.10077'
-    value_gap_source_title: Contrastive Learning for Non-Local Graphs with Multi-Resolution
-      Structural Views
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2506.19343'
+    value_gap_source_title: Discrepancy-Aware Graph Mask Auto-Encoder
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.5864
     sort_std: 0.0561
-    global_rank: 473
-    paper_rank: 473
+    global_rank: 462
+    paper_rank: 462
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1764,10 +1762,10 @@ results:
     value_note: ''
     sort_value: 0.4867
     sort_std: 0.2784
-    global_rank: 589
-    paper_rank: 642
-    rank_delta: 53
-    rank_delta_abs: 53
+    global_rank: 576
+    paper_rank: 625
+    rank_delta: 49
+    rank_delta_abs: 49
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1832,10 +1830,10 @@ results:
     value_note: ''
     sort_value: 0.4722
     sort_std: 0.045
-    global_rank: 602
-    paper_rank: 617
-    rank_delta: 15
-    rank_delta_abs: 15
+    global_rank: 588
+    paper_rank: 602
+    rank_delta: 14
+    rank_delta_abs: 14
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1900,8 +1898,8 @@ results:
     value_note: ''
     sort_value: 0.4596
     sort_std: 0.022
-    global_rank: 613
-    paper_rank: 613
+    global_rank: 600
+    paper_rank: 600
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1969,10 +1967,10 @@ results:
     value_note: ''
     sort_value: 0.4294
     sort_std: 0.0746
-    global_rank: 633
-    paper_rank: 646
-    rank_delta: 13
-    rank_delta_abs: 13
+    global_rank: 618
+    paper_rank: 629
+    rank_delta: 11
+    rank_delta_abs: 11
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2037,8 +2035,8 @@ results:
     value_note: ''
     sort_value: 0.4108
     sort_std: 0.0485
-    global_rank: 644
-    paper_rank: 644
+    global_rank: 627
+    paper_rank: 627
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2105,10 +2103,10 @@ results:
     value_note: ''
     sort_value: 0.3022
     sort_std: 0.0587
-    global_rank: 669
-    paper_rank: 684
-    rank_delta: 15
-    rank_delta_abs: 15
+    global_rank: 647
+    paper_rank: 652
+    rank_delta: 5
+    rank_delta_abs: 5
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2173,8 +2171,8 @@ results:
     value_note: ''
     sort_value: 0.2567
     sort_std: 0.1178
-    global_rank: 674
-    paper_rank: 674
+    global_rank: 651
+    paper_rank: 651
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2218,7 +2216,7 @@ results:
     venue: Proceedings of the ACM Web Conference 2026
     codebase_url: https://github.com/Mingzhang21/HealHGNN
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -2251,7 +2249,7 @@ results:
     venue: Proceedings of the ACM Web Conference 2026
     codebase_url: https://github.com/Mingzhang21/HealHGNN
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -3329,7 +3327,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 47
+    global_rank: 45
     sort_value: 0.923
     sort_std: 0.007
     comparison_type: global_top
@@ -3362,7 +3360,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 76
+    global_rank: 73
     sort_value: 0.9001
     sort_std: 0.023
     comparison_type: global_top
@@ -3428,10 +3426,10 @@ results:
     value_note: ''
     sort_value: 0.8148
     sort_std: 0.0279
-    global_rank: 294
-    paper_rank: 709
-    rank_delta: 415
-    rank_delta_abs: 415
+    global_rank: 271
+    paper_rank: 670
+    rank_delta: 399
+    rank_delta_abs: 399
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3497,10 +3495,10 @@ results:
     value_note: ''
     sort_value: 0.7301
     sort_std: 0.0552
-    global_rank: 464
-    paper_rank: 685
-    rank_delta: 221
-    rank_delta_abs: 221
+    global_rank: 428
+    paper_rank: 648
+    rank_delta: 220
+    rank_delta_abs: 220
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3565,8 +3563,8 @@ results:
     value_note: ''
     sort_value: 0.7289
     sort_std: 0.066
-    global_rank: 470
-    paper_rank: 470
+    global_rank: 435
+    paper_rank: 435
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3612,8 +3610,8 @@ results:
     at_pub_source_title: 'MUSE: Multi-View Contrastive Learning for Heterophilic Graphs'
     at_pub_source_date_iso: '2023-07-29'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-08-19'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-06-24'
+    value_gap_source_date_label: KDD 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3624,17 +3622,16 @@ results:
     today_delta_significant: false
     true_value: 0.6962
     true_std: 0.0666
-    value_gap_source_arxiv: '2308.10077'
-    value_gap_source_title: Contrastive Learning for Non-Local Graphs with Multi-Resolution
-      Structural Views
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2506.19343'
+    value_gap_source_title: Discrepancy-Aware Graph Mask Auto-Encoder
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.6962
     sort_std: 0.0666
-    global_rank: 507
-    paper_rank: 507
+    global_rank: 471
+    paper_rank: 471
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3702,10 +3699,10 @@ results:
     value_note: ''
     sort_value: 0.592
     sort_std: 0.0426
-    global_rank: 648
-    paper_rank: 743
-    rank_delta: 95
-    rank_delta_abs: 95
+    global_rank: 611
+    paper_rank: 703
+    rank_delta: 92
+    rank_delta_abs: 92
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3770,8 +3767,8 @@ results:
     value_note: ''
     sort_value: 0.5909
     sort_std: 0.1626
-    global_rank: 652
-    paper_rank: 656
+    global_rank: 615
+    paper_rank: 619
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -3838,10 +3835,10 @@ results:
     value_note: ''
     sort_value: 0.4931
     sort_std: 0.0322
-    global_rank: 719
-    paper_rank: 728
-    rank_delta: 9
-    rank_delta_abs: 9
+    global_rank: 680
+    paper_rank: 688
+    rank_delta: 8
+    rank_delta_abs: 8
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3906,10 +3903,10 @@ results:
     value_note: ''
     sort_value: 0.4867
     sort_std: 0.0437
-    global_rank: 722
-    paper_rank: 732
-    rank_delta: 10
-    rank_delta_abs: 10
+    global_rank: 683
+    paper_rank: 692
+    rank_delta: 9
+    rank_delta_abs: 9
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3974,8 +3971,8 @@ results:
     value_note: ''
     sort_value: 0.4864
     sort_std: 0.0292
-    global_rank: 723
-    paper_rank: 723
+    global_rank: 684
+    paper_rank: 684
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4041,8 +4038,8 @@ results:
     value_note: ''
     sort_value: 0.47
     sort_std: 0.2928
-    global_rank: 729
-    paper_rank: 741
+    global_rank: 689
+    paper_rank: 701
     rank_delta: 12
     rank_delta_abs: 12
     rank_delta_direction: worse
@@ -4109,8 +4106,8 @@ results:
     value_note: ''
     sort_value: 0.4324
     sort_std: 0.0538
-    global_rank: 738
-    paper_rank: 738
+    global_rank: 698
+    paper_rank: 698
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4177,8 +4174,8 @@ results:
     value_note: ''
     sort_value: 0.4256
     sort_std: 0.0713
-    global_rank: 740
-    paper_rank: 740
+    global_rank: 700
+    paper_rank: 700
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4245,8 +4242,8 @@ results:
     value_note: ''
     sort_value: 0.3745
     sort_std: 0.0709
-    global_rank: 750
-    paper_rank: 750
+    global_rank: 709
+    paper_rank: 709
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

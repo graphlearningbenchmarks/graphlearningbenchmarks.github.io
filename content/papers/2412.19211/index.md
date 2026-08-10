@@ -70,85 +70,6 @@ results:
   dataset: Amazon-Photo
   is_multi_metric: true
   rows:
-  - model: MSH-GNN
-    model_key: msh-gnn
-    model_plain: MSH-GNN
-    metric_values:
-    - 0.9766
-    - null
-    metric_stds:
-    - 0.005
-    - null
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.15015'
-    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
-    published_venue: ''
-    date: May 21, 2025
-    date_display: May 2025
-    date_iso: '2025-05-21'
-    codebase_url: ''
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 1
-    is_best: true
-    sort_value: 0.9766
-    sort_std: 0.005
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: GeoMancer
-    model_key: geomancer
-    model_plain: GeoMancer
-    metric_values:
-    - 0.9705
-    - null
-    metric_stds:
-    - 0.0013
-    - null
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2510.04522'
-    title: 'Toward a Unified Geometry Understanding: Riemannian Diffusion Framework
-      for Graph Generation and Prediction'
-    published_venue: ''
-    date: Oct 6, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-06'
-    codebase_url: https://github.com/RingBDStack/GeoMancer
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 2
-    is_best: true
-    sort_value: 0.9705
-    sort_std: 0.0013
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
   - model: GraphTARIF
     model_key: graphtarif
     model_plain: GraphTARIF
@@ -175,10 +96,90 @@ results:
     codebase_url: https://github.com/transductive-sharpening/tunedGNN
     uses_external_data: false
     is_global_top: true
-    global_rank: 3
+    global_rank: 1
     is_best: true
     sort_value: 0.9703
     sort_std: 0.0019
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    metric_values:
+    - 0.9669
+    - null
+    metric_stds:
+    - 0.0014
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.20248'
+    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
+      Classification'
+    published_venue: ''
+    date: May 18, 2026
+    date_display: May 2026
+    date_iso: '2026-05-18'
+    codebase_url: https://github.com/transductive-sharpening/tunedGNN
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 2
+    is_best: false
+    sort_value: 0.9669
+    sort_std: 0.0014
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: DAM-GT
+    model_key: dam-gt
+    model_plain: DAM-GT
+    metric_values:
+    - 0.9666
+    - null
+    metric_stds:
+    - 0.0013
+    - null
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2505.17660'
+    title: 'DAM-GT: Dual Positional Encoding-Based Attention Masking Graph Transformer
+      for Node Classification'
+    published_venue: ''
+    date: May 23, 2025
+    date_display: May 2025
+    date_iso: '2025-05-23'
+    codebase_url: ''
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 3
+    is_best: false
+    sort_value: 0.9666
+    sort_std: 0.0013
     has_value_gap: false
     has_value_note: false
     paper_rank: null
@@ -215,7 +216,7 @@ results:
     codebase_url: https://github.com/transductive-sharpening/tunedGNN
     uses_external_data: false
     is_global_top: true
-    global_rank: 13
+    global_rank: 8
     is_best: false
     sort_value: 0.9643
     sort_std: 0.0027
@@ -254,7 +255,7 @@ results:
     codebase_url: https://github.com/GISec-Team/NCGNN
     uses_external_data: false
     is_global_top: true
-    global_rank: 434
+    global_rank: 426
     is_best: false
     sort_value: 0.9128
     sort_std: 0.0063
@@ -330,7 +331,7 @@ results:
     comparison_source_arxiv: '2406.12052'
     is_best: false
     is_std_outlier: false
-    global_rank: 597
+    global_rank: 587
   metrics:
   - Accuracy
   - Recall

@@ -49,8 +49,8 @@ proposed_models:
 - spectral greedy graph coresets (SGGC)
 - Full Graph
 - Full Graph (Oracle)
-mrr: 0.0085
-adjusted_mrr: 0.0028
+mrr: 0.0096
+adjusted_mrr: 0.0032
 mrr_dataset_count: 1
 benchmark_categories:
 - LRGB
@@ -67,39 +67,6 @@ results:
 - &id001
   dataset: PascalVOC-SP
   rows:
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.78
-    std: 0.31
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-19'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.78
-    sort_std: 0.31
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: true
   - model: NeuralWalker
     model_key: neuralwalker
     model_plain: NeuralWalker
@@ -125,7 +92,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 1
     sort_value: 0.4912
     sort_std: 0.0042
     comparison_type: global_top
@@ -159,9 +126,76 @@ results:
     feature_source_evidence: utilize relative random walk probabilities (RRWP) as
       our demonstrating example of graph PE
     is_global_top: true
-    global_rank: 3
+    global_rank: 2
     sort_value: 0.4641
     sort_std: 0.0033
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: CRaWl
+    model_key: crawl
+    model_plain: CRaWl
+    value: 0.4588
+    std: 0.0079
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: true
+    override_reason: Table 1 reports 45.88 +/- 0.79 percent; normalize both values
+      to fractions.
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2411.12732'
+    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
+    date: Nov 19, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-19'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.4588
+    sort_std: 0.0079
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    value: 0.388
+    std: 0.004
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2504.12588'
+    title: Plain Transformers Can be Powerful Graph Learners
+    date: Apr 17, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-17'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: unknown
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 44
+    sort_value: 0.388
+    sort_std: 0.004
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -223,8 +257,8 @@ results:
     value_note: ''
     sort_value: 0.263
     sort_std: 0.006
-    global_rank: 89
-    paper_rank: 89
+    global_rank: 80
+    paper_rank: 80
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -234,11 +268,11 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.1265
-    std: 0.0076
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.238
+    std: 0.016
     metric: F1
     higher_is_better: true
     is_baseline: true
@@ -248,20 +282,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2402.08678'
-    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
-    date: Feb 13, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-13'
-    venue: Knowledge Discovery and Data Mining
+    arxiv_id: '2410.05593'
+    title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+    date: Oct 8, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-08'
+    venue: International Conference on Learning Representations
     codebase_url: ''
     uses_external_data: false
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 114
-    sort_value: 0.1265
-    sort_std: 0.0076
+    global_rank: 86
+    sort_value: 0.238
+    sort_std: 0.016
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -292,7 +326,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 115
+    global_rank: 101
     sort_value: 0.114
     sort_std: 0.023
     comparison_type: global_top
@@ -356,8 +390,8 @@ results:
     value_note: ''
     sort_value: 0.08
     sort_std: 0.008
-    global_rank: 118
-    paper_rank: 118
+    global_rank: 104
+    paper_rank: 104
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -423,8 +457,8 @@ results:
     value_note: ''
     sort_value: 0.073
     sort_std: 0.018
-    global_rank: 119
-    paper_rank: 119
+    global_rank: 105
+    paper_rank: 105
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -490,8 +524,8 @@ results:
     value_note: ''
     sort_value: 0.068
     sort_std: 0.009
-    global_rank: 120
-    paper_rank: 120
+    global_rank: 106
+    paper_rank: 106
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -557,8 +591,8 @@ results:
     value_note: ''
     sort_value: 0.062
     sort_std: 0.016
-    global_rank: 121
-    paper_rank: 121
+    global_rank: 107
+    paper_rank: 107
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -624,8 +658,8 @@ results:
     value_note: ''
     sort_value: 0.051
     sort_std: 0.004
-    global_rank: 122
-    paper_rank: 122
+    global_rank: 108
+    paper_rank: 108
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

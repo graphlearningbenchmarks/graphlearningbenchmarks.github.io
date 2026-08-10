@@ -12,7 +12,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 5
-result_count: 1003
+result_count: 931
 best_model:
   model: P^2GNN
   value: 0.9672
@@ -47,10 +47,6 @@ papers:
   title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
   date_iso: '2026-03-10'
   venue: ''
-- arxiv_id: '2603.00618'
-  title: Multi-domain Riemannian Graph Gluing for Building Graph Foundation Models
-  date_iso: '2026-02-28'
-  venue: ICLR 2026
 - arxiv_id: '2602.15634'
   title: 'Beyond ReLU: Bifurcation, Oversmoothing, and Topological Priors'
   date_iso: '2026-02-17'
@@ -66,11 +62,6 @@ papers:
 - arxiv_id: '2601.18917'
   title: 'GraIP: A Benchmarking Framework For Neural Graph Inverse Problems'
   date_iso: '2026-01-26'
-  venue: ''
-- arxiv_id: '2601.02662'
-  title: 'When Prompting Meets Spiking: Graph Sparse Prompting via Spiking Graph Prompt
-    Learning'
-  date_iso: '2026-01-06'
   venue: ''
 - arxiv_id: '2601.02451'
   title: 'mHC-GNN: Manifold-Constrained Hyper-Connections for Graph Neural Networks'
@@ -145,6 +136,10 @@ papers:
   title: Non-Dissipative Graph Propagation for Non-Local Community Detection
   date_iso: '2025-06-30'
   venue: ''
+- arxiv_id: '2506.19343'
+  title: Discrepancy-Aware Graph Mask Auto-Encoder
+  date_iso: '2025-06-24'
+  venue: KDD 2025
 - arxiv_id: '2506.16110'
   title: Mitigating Over-Squashing in Graph Neural Networks by Spectrum-Preserving
     Sparsification
@@ -177,11 +172,6 @@ papers:
   title: Learn Beneficial Noise as Graph Augmentation
   date_iso: '2025-05-25'
   venue: ICML 2025
-- arxiv_id: '2505.17599'
-  title: Dynamic Bundling with Large Language Models for Zero-Shot Inference on Text-Attributed
-    Graphs
-  date_iso: '2025-05-23'
-  venue: NeurIPS 2025
 - arxiv_id: '2505.15845'
   title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
     Learning Models'
@@ -219,11 +209,6 @@ papers:
   title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
   date_iso: '2025-03-03'
   venue: KDD 2025
-- arxiv_id: '2502.11836'
-  title: 'Model Generalization on Text Attribute Graphs: Principles with Large Language
-    Models'
-  date_iso: '2025-02-17'
-  venue: ''
 - arxiv_id: '2502.11394'
   title: A Signed Graph Approach to Understanding and Mitigating Oversmoothing in
     GNNs
@@ -287,11 +272,6 @@ papers:
   title: Joint Graph Rewiring and Feature Denoising via Spectral Resonance
   date_iso: '2024-08-13'
   venue: ICLR 2024
-- arxiv_id: '2407.19420'
-  title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate Over-Smoothing
-    in Node Classification Tasks'
-  date_iso: '2024-07-28'
-  venue: ''
 - arxiv_id: '2407.11907'
   title: 'GraphFM: A generalist graph transformer that learns transferable representations
     across diverse domains'
@@ -530,10 +510,6 @@ papers:
     Finding Untrained GNNs Tickets'
   date_iso: '2022-11-28'
   venue: LoG 2022
-- arxiv_id: '2211.15779'
-  title: Revisiting Over-smoothing and Over-squashing using Ollivier's Ricci Curvature
-  date_iso: '2022-11-28'
-  venue: ICML 2022
 - arxiv_id: '2211.16199'
   title: Latent Graph Inference using Product Manifolds
   date_iso: '2022-11-26'
@@ -559,10 +535,6 @@ papers:
 - arxiv_id: '2210.08122'
   title: 'Old can be Gold: Better Gradient Flow can Make Vanilla-GCNs Great Again'
   date_iso: '2022-10-14'
-  venue: NeurIPS 2022
-- arxiv_id: '2210.03930'
-  title: Hierarchical Graph Transformer with Adaptive Node Sampling
-  date_iso: '2022-10-08'
   venue: NeurIPS 2022
 - arxiv_id: '2210.00513'
   title: Gradient Gating for Deep Multi-Rate Learning on Graphs
@@ -652,10 +624,6 @@ papers:
     Perspective'
   date_iso: '2021-12-29'
   venue: WWW 2021
-- arxiv_id: '2112.13507'
-  title: Block Modeling-Guided Graph Convolutional Neural Networks
-  date_iso: '2021-12-27'
-  venue: AAAI 2021
 - arxiv_id: '2112.03499'
   title: A Piece-wise Polynomial Filtering Approach for Graph Neural Networks
   date_iso: '2021-12-07'
@@ -686,6 +654,10 @@ papers:
     Benchmark Study'
   date_iso: '2021-08-24'
   venue: ''
+- arxiv_id: '2106.06134'
+  title: Is Homophily a Necessity for Graph Neural Networks?
+  date_iso: '2021-06-11'
+  venue: ICLR 2021
 - arxiv_id: '2105.07634'
   title: Improving Graph Neural Networks with Simple Architecture Design
   date_iso: '2021-05-17'
@@ -1002,6 +974,32 @@ variants:
     - 0.9459
     metric_stds:
     - 0.0525
+  - model: SPCNet-L
+    model_plain: SPCNet-L
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2403.03676'
+    title: Simplified PCNet with Robustness
+    date: Mar 6, 2024
+    date_iso: '2024-03-06'
+    date_display: Mar 2024
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.9426
+    metric_stds:
+    - 0.0131
   - model: general Bayesian inference strategy + GCNII
     model_plain: general Bayesian inference strategy + GCNII
     is_baseline: false
@@ -1107,6 +1105,32 @@ variants:
     - 0.9393
     metric_stds:
     - 0.0205
+  - model: SPCNet-D
+    model_plain: SPCNet-D
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2403.03676'
+    title: Simplified PCNet with Robustness
+    date: Mar 6, 2024
+    date_iso: '2024-03-06'
+    date_display: Mar 2024
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9393
+    metric_stds:
+    - 0.0128
   - model: QW
     model_plain: QW
     is_baseline: false
@@ -1528,32 +1552,6 @@ variants:
     - 0.9324
     metric_stds:
     - 0.0203
-  - model: ANS-GT
-    model_plain: ANS-GT
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2210.03930'
-    title: Hierarchical Graph Transformer with Adaptive Node Sampling
-    date: Oct 8, 2022
-    date_iso: '2022-10-08'
-    date_display: Oct 2022
-    codebase_url: https://github.com/zaixizhang/ANS-GT
-    published_conference: NeurIPS 2022
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9324
-    metric_stds:
-    - 0.0185
   - model: GPRGNN+FoSR
     model_plain: GPRGNN+FoSR
     is_baseline: true
@@ -1607,33 +1605,6 @@ variants:
     - 0.9311
     metric_stds:
     - 0.0129
-  - model: Gemini-2.5-flash
-    model_plain: Gemini-2.5-flash
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2505.17599'
-    title: Dynamic Bundling with Large Language Models for Zero-Shot Inference on
-      Text-Attributed Graphs
-    date: May 23, 2025
-    date_iso: '2025-05-23'
-    date_display: May 2025
-    codebase_url: ''
-    published_conference: NeurIPS 2025
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2025
-    uses_external_data: true
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9305
-    metric_stds:
-    - null
   - model: BMGCN
     model_plain: BMGCN
     is_baseline: true
@@ -1706,6 +1677,32 @@ variants:
     published_conference_short: TMLR
     published_conference_slug: tmlr
     published_venue: TMLR 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9292
+    metric_stds:
+    - 0.0061
+  - model: GPRGNN
+    model_plain: GPRGNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2212.03654'
+    title: Node-oriented Spectral Filtering for Graph Neural Networks
+    date: Dec 7, 2022
+    date_iso: '2022-12-07'
+    date_display: Dec 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -1817,60 +1814,6 @@ variants:
     - 0.926
     metric_stds:
     - 0.034
-  - model: GPT-4o
-    model_plain: GPT-4o
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    arxiv_id: '2505.17599'
-    title: Dynamic Bundling with Large Language Models for Zero-Shot Inference on
-      Text-Attributed Graphs
-    date: May 23, 2025
-    date_iso: '2025-05-23'
-    date_display: May 2025
-    codebase_url: ''
-    published_conference: NeurIPS 2025
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2025
-    uses_external_data: true
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9251
-    metric_stds:
-    - null
-  - model: DENSE
-    model_plain: DENSE
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2505.17599'
-    title: Dynamic Bundling with Large Language Models for Zero-Shot Inference on
-      Text-Attributed Graphs
-    date: May 23, 2025
-    date_iso: '2025-05-23'
-    date_display: May 2025
-    codebase_url: ''
-    published_conference: NeurIPS 2025
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2025
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9251
-    metric_stds:
-    - null
   - model: SGFormer
     model_plain: SGFormer
     is_baseline: true
@@ -2054,18 +1997,45 @@ variants:
     - 0.9214
     metric_stds:
     - 0.0546
-  row_count: 1003
+  - model: Hyperbolic-Jacobi
+    model_plain: Hyperbolic-Jacobi
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.23014'
+    title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in the Perspective
+      of A System of Hyperbolic Partial Differential Equations'
+    date: May 29, 2025
+    date_iso: '2025-05-29'
+    date_display: May 2025
+    codebase_url: https://github.com/YueAWu/Hyperbolic-GNN
+    published_conference: ICML 2025
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2025
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.9197
+    metric_stds:
+    - 0.0419
+  row_count: 931
   rows_json: /data/datasets/texas/standard-split-rows.json
   chart_json: /data/datasets/texas/standard-split-chart.json
   arch_counts:
-    gnn: 666
-    hybrid: 169
-    graph_transformer: 40
-    llm: 12
+    gnn: 635
+    hybrid: 158
+    graph_transformer: 35
+    llm: 2
     walk: 6
-    traditional: 71
+    traditional: 60
   metric_counts:
-  - 933
+  - 861
   milestones: &id001
   - value: 0.6757
     std: null
@@ -2091,6 +2061,12 @@ variants:
     arxiv_id: '2111.06748'
     title: Simplifying approach to Node Classification in Graph Neural Networks
     date: '2021-11-12'
+  - value: 0.8973
+    std: 0.049
+    model: PP-GNN
+    arxiv_id: '2112.03499'
+    title: A Piece-wise Polynomial Filtering Approach for Graph Neural Networks
+    date: '2021-12-07'
   - value: 0.9328
     std: 0.0147
     model: ChebNetII
@@ -2103,6 +2079,12 @@ variants:
     arxiv_id: '2212.03654'
     title: Node-oriented Spectral Filtering for Graph Neural Networks
     date: '2022-12-07'
+  - value: 0.9426
+    std: 0.0131
+    model: SPCNet-L
+    arxiv_id: '2403.03676'
+    title: Simplified PCNet with Robustness
+    date: '2024-03-06'
   - value: 0.9583
     std: 0.0419
     model: GPF-plus

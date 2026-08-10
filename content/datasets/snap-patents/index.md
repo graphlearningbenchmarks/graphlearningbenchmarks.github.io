@@ -12,13 +12,13 @@ stats:
   avg_nodes: 2745480.0
   avg_edges: 12800500.0
   num_classes: 5
-result_count: 43
+result_count: 41
 best_model:
-  model: GloGNN
-  value: 0.8432
+  model: FaberNet
+  value: 0.751
   metric: Accuracy
-  arxiv_id: '2205.07308'
-  paper_title: Finding Global Homophily in Graph Neural Networks When Meeting Heterophily
+  arxiv_id: '2310.02232'
+  paper_title: 'HoloNets: Spectral Convolutions do extend to Directed Graphs'
 papers:
 - arxiv_id: '2411.19392'
   title: Scale-aware Message Passing For Graph Node Classification
@@ -48,10 +48,6 @@ papers:
   title: Gradient Gating for Deep Multi-Rate Learning on Graphs
   date_iso: '2022-10-02'
   venue: ICLR 2022
-- arxiv_id: '2205.07308'
-  title: Finding Global Homophily in Graph Neural Networks When Meeting Heterophily
-  date_iso: '2022-05-15'
-  venue: ICML 2022
 - arxiv_id: '2005.14612'
   title: Non-Local Graph Neural Networks
   date_iso: '2020-05-29'
@@ -77,32 +73,6 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
-  - model: GloGNN
-    model_plain: GloGNN
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2205.07308'
-    title: Finding Global Homophily in Graph Neural Networks When Meeting Heterophily
-    date: May 15, 2022
-    date_iso: '2022-05-15'
-    date_display: May 2022
-    codebase_url: ''
-    published_conference: ICML 2022
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2022
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.8432
-    metric_stds:
-    - null
   - model: FaberNet
     model_plain: FaberNet
     is_baseline: true
@@ -123,7 +93,7 @@ variants:
     published_conference_slug: iclr
     published_venue: ICLR 2023
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.751
@@ -149,7 +119,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.7505
@@ -493,32 +463,6 @@ variants:
     - 0.6011
     metric_stds:
     - 0.0005
-  - model: H_A
-    model_plain: H_A
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2205.07308'
-    title: Finding Global Homophily in Graph Neural Networks When Meeting Heterophily
-    date: May 15, 2022
-    date_iso: '2022-05-15'
-    date_display: May 2022
-    codebase_url: ''
-    published_conference: ICML 2022
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.5622
-    metric_stds:
-    - null
   - model: ACM-GCN
     model_plain: ACM-GCN
     is_baseline: true
@@ -1195,18 +1139,18 @@ variants:
     - 0.3069
     metric_stds:
     - 0.00014
-  row_count: 43
+  row_count: 41
   rows_json: ''
   chart_json: /data/datasets/snap-patents/standard-split-chart.json
   arch_counts:
-    gnn: 25
+    gnn: 23
     hybrid: 12
     graph_transformer: 2
     llm: 0
     walk: 0
     traditional: 2
   metric_counts:
-  - 43
+  - 41
   milestones: &id001
   - value: 0.508
     std: 0.004

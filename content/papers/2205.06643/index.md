@@ -81,7 +81,7 @@ benchmark_coverage:
 - benchmark: Quantum Chemistry
   benchmark_slug: quantum-chemistry
   evaluated: 1
-  total: 3
+  total: 1
 task_categories:
 - graph_regression
 experiment_scopes:
@@ -406,7 +406,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 123
+    global_rank: 122
   - model: FCHL
     model_key: fchl
     model_plain: FCHL
@@ -469,7 +469,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 99
+    global_rank: 97
   - model: PaiNN
     model_key: painn
     model_plain: PaiNN
@@ -595,7 +595,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 62
+    global_rank: 61
   - model: NewtonNet
     model_key: newtonnet
     model_plain: NewtonNet
@@ -658,7 +658,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 64
+    global_rank: 63
   - model: DimeNet++
     model_key: dimenet++
     model_plain: DimeNet++
@@ -721,7 +721,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 65
+    global_rank: 64
   - model: SchNet
     model_key: schnet
     model_plain: SchNet
@@ -847,7 +847,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 126
+    global_rank: 125
   - model: ANI
     model_key: ani
     model_plain: ANI
@@ -910,7 +910,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 126
+    global_rank: 125
   - model: GAP
     model_key: gap
     model_plain: GAP
@@ -973,7 +973,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 127
+    global_rank: 126
   metrics:
   - MAE
   - E

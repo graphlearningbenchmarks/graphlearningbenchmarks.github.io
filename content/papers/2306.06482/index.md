@@ -49,7 +49,7 @@ benchmark_coverage:
 - benchmark: Quantum Chemistry
   benchmark_slug: quantum-chemistry
   evaluated: 1
-  total: 3
+  total: 1
 task_categories:
 - graph_regression
 experiment_scopes:
@@ -328,21 +328,21 @@ results:
     date_iso: '2023-06-10'
     published_venue: NeurIPS 2023
     published_conference: NeurIPS 2023
-    at_pub_value: 0.053
+    at_pub_value: 2.3
     at_pub_std: null
-    at_pub_source_arxiv: '2210.16518'
-    at_pub_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural network
-      with vector-scalar interactive message passing for molecules'
-    at_pub_source_date_iso: '2022-10-29'
-    at_pub_source_date_label: '2022'
+    at_pub_source_arxiv: '2304.04757'
+    at_pub_source_title: A new perspective on building efficient and expressive 3D
+      equivariant graph neural networks
+    at_pub_source_date_iso: '2023-04-07'
+    at_pub_source_date_label: NeurIPS 2023
     value_gap_source_date_iso: '2024-07-02'
     value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.14700000000000002
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
+    gap_vs_at_pub: 2.0999999999999996
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: true
     insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
+    improvement_surpassed_since_pub: true
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.0046
@@ -357,15 +357,15 @@ results:
     sort_value: 0.0046
     sort_std: null
     global_rank: 14
-    paper_rank: 100
-    rank_delta: 86
-    rank_delta_abs: 86
+    paper_rank: 98
+    rank_delta: 84
+    rank_delta_abs: 84
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
-    comparison_source_arxiv: '2210.16518'
+    comparison_type: improved
+    comparison_source_title: A new perspective on building efficient and expressive
+      3D equivariant graph neural networks
+    comparison_source_arxiv: '2304.04757'
     is_best: false
     is_std_outlier: false
   - model: TensorNet 2L (770k)
@@ -534,21 +534,21 @@ results:
     date_iso: '2023-06-10'
     published_venue: NeurIPS 2023
     published_conference: NeurIPS 2023
-    at_pub_value: 0.0507
+    at_pub_value: 2.2
     at_pub_std: null
-    at_pub_source_arxiv: '2210.16518'
-    at_pub_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural network
-      with vector-scalar interactive message passing for molecules'
-    at_pub_source_date_iso: '2022-10-29'
-    at_pub_source_date_label: '2022'
+    at_pub_source_arxiv: '2304.04757'
+    at_pub_source_title: A new perspective on building efficient and expressive 3D
+      equivariant graph neural networks
+    at_pub_source_date_iso: '2023-04-07'
+    at_pub_source_date_label: NeurIPS 2023
     value_gap_source_date_iso: '2024-02-07'
     value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.3493
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
+    gap_vs_at_pub: 1.8000000000000003
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: true
     insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
+    improvement_surpassed_since_pub: true
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.0507
@@ -563,15 +563,15 @@ results:
     sort_value: 0.0507
     sort_std: null
     global_rank: 48
-    paper_rank: 111
-    rank_delta: 63
-    rank_delta_abs: 63
+    paper_rank: 109
+    rank_delta: 61
+    rank_delta_abs: 61
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
-    comparison_source_arxiv: '2210.16518'
+    comparison_type: improved
+    comparison_source_title: A new perspective on building efficient and expressive
+      3D equivariant graph neural networks
+    comparison_source_arxiv: '2304.04757'
     is_best: false
     is_std_outlier: false
   rank_metric: MAE

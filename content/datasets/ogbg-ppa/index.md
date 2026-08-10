@@ -12,7 +12,7 @@ stats:
   avg_nodes: 243.4
   avg_edges: 2266.1
   num_classes: 37
-result_count: 53
+result_count: 47
 best_model:
   model: A-NLSF
   value: 0.8149
@@ -56,11 +56,6 @@ papers:
   title: On the Connection Between MPNN and Graph Transformer
   date_iso: '2023-01-27'
   venue: ICML 2023
-- arxiv_id: '2211.14568'
-  title: 'BeGin: Extensive Benchmark Scenarios and An Easy-to-use Framework for Graph
-    Continual Learning'
-  date_iso: '2022-11-26'
-  venue: ''
 - arxiv_id: '2211.06605'
   title: Comprehensive Analysis of Over-smoothing in Graph Neural Networks from Markov
     Chains Perspective
@@ -106,10 +101,8 @@ variants:
     num_classes: 37
   metrics:
   - Accuracy
-  - FWT
   metric_display_names:
   - Accuracy
-  - FWT
   show_all_metrics_desktop: false
   chart_default_log_scale: false
   chart_hidden_models: []
@@ -139,10 +132,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8149
-    - null
     metric_stds:
     - 0.0067
-    - null
   - model: differential encoding
     model_plain: differential encoding
     is_baseline: false
@@ -167,10 +158,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8096
-    - null
     metric_stds:
     - 0.0029
-    - null
   - model: MPNN + VN + NoPE
     model_plain: MPNN + VN + NoPE
     is_baseline: false
@@ -195,10 +184,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8055
-    - null
     metric_stds:
     - 0.0038
-    - null
   - model: CNNs
     model_plain: CNNs
     is_baseline: false
@@ -223,9 +210,7 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8017
-    - null
     metric_stds:
-    - null
     - null
   - model: GPS
     model_plain: GPS
@@ -251,19 +236,17 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8015
-    - null
     metric_stds:
     - 0.0033
-    - null
-  - model: GSO
-    model_plain: GSO
+  - model: PDF
+    model_plain: PDF
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: 0.5
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
     arxiv_id: '2305.06102'
     title: Towards Better Graph Representation Learning with Parameterized Decomposition
       & Filtering
@@ -280,10 +263,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.801
-    - null
     metric_stds:
     - 0.0052
-    - null
   - model: GECO
     model_plain: GECO
     is_baseline: false
@@ -308,10 +289,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7982
-    - null
     metric_stds:
     - 0.0042
-    - null
   - model: ExpC
     model_plain: ExpC
     is_baseline: true
@@ -321,25 +300,24 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2202.03036'
-    title: Structure-Aware Transformer for Graph Representation Learning
-    date: Feb 7, 2022
-    date_iso: '2022-02-07'
-    date_display: Feb 2022
-    codebase_url: https://github.com/BorgwardtLab/SAT
-    published_conference: ICML 2022
+    arxiv_id: '2305.06102'
+    title: Towards Better Graph Representation Learning with Parameterized Decomposition
+      & Filtering
+    date: May 10, 2023
+    date_iso: '2023-05-10'
+    date_display: May 2023
+    codebase_url: https://github.com/qslim/PDF
+    published_conference: ICML 2023
     published_conference_short: ICML
     published_conference_slug: icml
-    published_venue: ICML 2022
+    published_venue: ICML 2023
     uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
     - 0.7976
-    - null
     metric_stds:
     - 0.0072
-    - null
   - model: regularization term
     model_plain: regularization term
     is_baseline: false
@@ -365,10 +343,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.78
-    - null
     metric_stds:
     - 0.0037
-    - null
   - model: DeeperGCN+FLAG
     model_plain: DeeperGCN+FLAG
     is_baseline: true
@@ -393,10 +369,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7752
-    - null
     metric_stds:
     - 0.0069
-    - null
   - model: OAP+GatedGCN
     model_plain: OAP+GatedGCN
     is_baseline: true
@@ -422,10 +396,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7745
-    - null
     metric_stds:
     - 0.0098
-    - null
   - model: GEN
     model_plain: GEN
     is_baseline: true
@@ -451,10 +423,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7712
-    - null
     metric_stds:
     - 0.0071
-    - null
   - model: DeeperGCN
     model_plain: DeeperGCN
     is_baseline: true
@@ -479,10 +449,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7712
-    - null
     metric_stds:
     - 0.0071
-    - null
   - model: DeeperG
     model_plain: DeeperG
     is_baseline: true
@@ -508,10 +476,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7712
-    - null
     metric_stds:
     - 0.0071
-    - null
   - model: PHC-GNN
     model_plain: PHC-GNN
     is_baseline: true
@@ -536,9 +502,7 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7561
-    - null
     metric_stds:
-    - null
     - null
   - model: GatedGCN
     model_plain: GatedGCN
@@ -565,10 +529,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7531
-    - null
     metric_stds:
     - 0.0083
-    - null
   - model: SAT
     model_plain: SAT
     is_baseline: true
@@ -594,10 +556,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7522
-    - null
     metric_stds:
     - 0.0056
-    - null
   - model: KS-SAT
     model_plain: KS-SAT
     is_baseline: true
@@ -623,10 +583,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7522
-    - null
     metric_stds:
     - 0.0056
-    - null
   - model: K-Subtree SAT
     model_plain: K-Subtree SAT
     is_baseline: true
@@ -636,25 +594,23 @@ variants:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    arxiv_id: '2202.03036'
-    title: Structure-Aware Transformer for Graph Representation Learning
-    date: Feb 7, 2022
-    date_iso: '2022-02-07'
-    date_display: Feb 2022
-    codebase_url: https://github.com/BorgwardtLab/SAT
-    published_conference: ICML 2022
+    arxiv_id: '2301.11956'
+    title: On the Connection Between MPNN and Graph Transformer
+    date: Jan 27, 2023
+    date_iso: '2023-01-27'
+    date_display: Jan 2023
+    codebase_url: https://github.com/Chen-Cai-OSU/MPNN-GT-Connection
+    published_conference: ICML 2023
     published_conference_short: ICML
     published_conference_slug: icml
-    published_venue: ICML 2022
+    published_venue: ICML 2023
     uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
     - 0.7522
-    - null
     metric_stds:
     - 0.0056
-    - null
   - model: k-subtree SAT-PNA
     model_plain: k-subtree SAT-PNA
     is_baseline: true
@@ -679,10 +635,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7522
-    - null
     metric_stds:
     - 0.0056
-    - null
   - model: k-subtree SAT-GCN
     model_plain: k-subtree SAT-GCN
     is_baseline: true
@@ -707,10 +661,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7483
-    - null
     metric_stds:
     - 0.0048
-    - null
   - model: k-subtree SAT-GIN
     model_plain: k-subtree SAT-GIN
     is_baseline: true
@@ -735,10 +687,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7306
-    - null
     metric_stds:
     - 0.0076
-    - null
   - model: GIN+VN+Flag
     model_plain: GIN+VN+Flag
     is_baseline: true
@@ -763,10 +713,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7245
-    - null
     metric_stds:
     - 0.0114
-    - null
   - model: AgentNet
     model_plain: AgentNet
     is_baseline: false
@@ -791,10 +739,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7233
-    - null
     metric_stds:
     - 0.0062
-    - null
   - model: JK
     model_plain: JK
     is_baseline: true
@@ -820,10 +766,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7198
-    - null
     metric_stds:
     - 0.0013
-    - null
   - model: NC-GNN
     model_plain: NC-GNN
     is_baseline: true
@@ -848,10 +792,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7194
-    - null
     metric_stds:
     - 0.0043
-    - null
   - model: naive
     model_plain: naive
     is_baseline: true
@@ -877,10 +819,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7184
-    - null
     metric_stds:
     - 0.0011
-    - null
   - model: MLAP
     model_plain: MLAP
     is_baseline: false
@@ -906,10 +846,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7183
-    - null
     metric_stds:
     - 0.0012
-    - null
   - model: StructPosGSSL-FA
     model_plain: StructPosGSSL-FA
     is_baseline: false
@@ -935,10 +873,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.709
-    - null
     metric_stds:
     - 0.0186
-    - null
   - model: StructPosGSSL-SA
     model_plain: StructPosGSSL-SA
     is_baseline: false
@@ -964,10 +900,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7081
-    - null
     metric_stds:
     - 0.0145
-    - null
   - model: GraphSNN
     model_plain: GraphSNN
     is_baseline: true
@@ -992,10 +926,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7066
-    - null
     metric_stds:
     - 0.0165
-    - null
   - model: GIN + 3-cycle count feature
     model_plain: GIN + 3-cycle count feature
     is_baseline: true
@@ -1020,10 +952,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7058
-    - null
     metric_stds:
     - 0.0064
-    - null
   - model: GIN+VN
     model_plain: GIN+VN
     is_baseline: true
@@ -1048,10 +978,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7037
-    - null
     metric_stds:
     - 0.0107
-    - null
   - model: GIN+virtual node
     model_plain: GIN+virtual node
     is_baseline: true
@@ -1076,10 +1004,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7037
-    - null
     metric_stds:
     - 0.0107
-    - null
   - model: GIN-Virtual Node
     model_plain: GIN-Virtual Node
     is_baseline: true
@@ -1104,10 +1030,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7037
-    - null
     metric_stds:
     - 0.0107
-    - null
   - model: GIN + EGP
     model_plain: GIN + EGP
     is_baseline: true
@@ -1132,10 +1056,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7027
-    - null
     metric_stds:
     - 0.0159
-    - null
   - model: CRaWl
     model_plain: CRaWl
     is_baseline: true
@@ -1160,10 +1082,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7025
-    - null
     metric_stds:
     - 0.0052
-    - null
   - model: GIN + Master Node
     model_plain: GIN + Master Node
     is_baseline: true
@@ -1188,10 +1108,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.6916
-    - null
     metric_stds:
     - 0.0154
-    - null
   - model: GIN
     model_plain: GIN
     is_baseline: true
@@ -1216,10 +1134,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.6892
-    - null
     metric_stds:
     - 0.01
-    - null
   - model: GCN+virtual node
     model_plain: GCN+virtual node
     is_baseline: true
@@ -1244,10 +1160,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.6857
-    - null
     metric_stds:
     - 0.0061
-    - null
   - model: GCN-Virtual Node
     model_plain: GCN-Virtual Node
     is_baseline: true
@@ -1272,10 +1186,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.6857
-    - null
     metric_stds:
     - 0.0061
-    - null
   - model: GCN
     model_plain: GCN
     is_baseline: true
@@ -1300,10 +1212,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.6839
-    - null
     metric_stds:
     - 0.0084
-    - null
   - model: S4
     model_plain: S4
     is_baseline: true
@@ -1329,9 +1239,7 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.6701
-    - null
     metric_stds:
-    - null
     - null
   - model: S1
     model_plain: S1
@@ -1358,9 +1266,7 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.6524
-    - null
     metric_stds:
-    - null
     - null
   - model: Transformer
     model_plain: Transformer
@@ -1386,10 +1292,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.6454
-    - null
     metric_stds:
     - 0.0033
-    - null
   - model: S2
     model_plain: S2
     is_baseline: true
@@ -1415,9 +1319,7 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.6375
-    - null
     metric_stds:
-    - null
     - null
   - model: S3
     model_plain: S3
@@ -1444,110 +1346,20 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.5324
-    - null
     metric_stds:
     - null
-    - null
-  - model: Bare
-    model_plain: Bare
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2211.14568'
-    title: 'BeGin: Extensive Benchmark Scenarios and An Easy-to-use Framework for
-      Graph Continual Learning'
-    date: Nov 26, 2022
-    date_iso: '2022-11-26'
-    date_display: Nov 2022
-    codebase_url: https://github.com/ShinhwanKang/BeGin
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 15.7
-    metric_stds:
-    - null
-    - 1.3
-  - model: LwF
-    model_plain: LwF
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2211.14568'
-    title: 'BeGin: Extensive Benchmark Scenarios and An Easy-to-use Framework for
-      Graph Continual Learning'
-    date: Nov 26, 2022
-    date_iso: '2022-11-26'
-    date_display: Nov 2022
-    codebase_url: https://github.com/ShinhwanKang/BeGin
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 19.7
-    metric_stds:
-    - null
-    - 1.5
-  - model: EWC
-    model_plain: EWC
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2211.14568'
-    title: 'BeGin: Extensive Benchmark Scenarios and An Easy-to-use Framework for
-      Graph Continual Learning'
-    date: Nov 26, 2022
-    date_iso: '2022-11-26'
-    date_display: Nov 2022
-    codebase_url: https://github.com/ShinhwanKang/BeGin
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 11.5
-    metric_stds:
-    - null
-    - 1.7
-  row_count: 53
-  rows_json: /data/datasets/ogbg-ppa/standard-split-rows.json
+  row_count: 47
+  rows_json: ''
   chart_json: /data/datasets/ogbg-ppa/standard-split-chart.json
   arch_counts:
-    gnn: 32
-    hybrid: 10
-    graph_transformer: 4
+    gnn: 28
+    hybrid: 9
+    graph_transformer: 5
     llm: 0
     walk: 0
-    traditional: 5
+    traditional: 3
   metric_counts:
   - 47
-  - 6
   milestones: &id001
   - value: 0.7198
     std: 0.0013
@@ -1562,12 +1374,13 @@ variants:
     arxiv_id: '2103.16584'
     title: Parameterized Hypercomplex Graph Neural Networks for Graph Classification
     date: '2021-03-30'
-  - value: 0.7976
-    std: 0.0072
-    model: ExpC
-    arxiv_id: '2202.03036'
-    title: Structure-Aware Transformer for Graph Representation Learning
-    date: '2022-02-07'
+  - value: 0.78
+    std: 0.0037
+    model: regularization term
+    arxiv_id: '2211.06605'
+    title: Comprehensive Analysis of Over-smoothing in Graph Neural Networks from
+      Markov Chains Perspective
+    date: '2022-11-12'
   - value: 0.8055
     std: 0.0038
     model: MPNN + VN + NoPE
@@ -1589,13 +1402,5 @@ variants:
     date: '2025-09-29'
   milestones_by_metric:
     Accuracy: *id001
-    FWT:
-    - value: 19.7
-      std: 1.5
-      model: LwF
-      arxiv_id: '2211.14568'
-      title: 'BeGin: Extensive Benchmark Scenarios and An Easy-to-use Framework for
-        Graph Continual Learning'
-      date: '2022-11-26'
 ---
 

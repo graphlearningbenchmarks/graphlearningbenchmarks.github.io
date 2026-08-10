@@ -9,7 +9,7 @@ primary_metric: MAE
 higher_is_better: false
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.AQSOL.html
 stats: null
-result_count: 40
+result_count: 34
 best_model:
   model: Ours(100K)
   value: 0.92
@@ -26,11 +26,6 @@ papers:
   title: GNNBenchmark
   date_iso: '2023-01-01'
   venue: JMLR 2023
-- arxiv_id: '2211.14568'
-  title: 'BeGin: Extensive Benchmark Scenarios and An Easy-to-use Framework for Graph
-    Continual Learning'
-  date_iso: '2022-11-26'
-  venue: ''
 - arxiv_id: '2201.12674'
   title: Rewiring with Positional Encodings for Graph Neural Networks
   date_iso: '2022-01-29'
@@ -50,10 +45,8 @@ variants:
     num_classes: null
   metrics:
   - MAE
-  - FWT
   metric_display_names:
   - MAE
-  - FWT
   show_all_metrics_desktop: false
   chart_default_log_scale: false
   chart_hidden_models: []
@@ -82,10 +75,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.92
-    - null
     metric_stds:
     - 0.009
-    - null
   - model: GatedGCN-PE/E(500K)
     model_plain: GatedGCN-PE/E(500K)
     is_baseline: true
@@ -110,10 +101,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.996
-    - null
     metric_stds:
     - 0.008
-    - null
   - model: GatedGCN-E-PE
     model_plain: GatedGCN-E-PE
     is_baseline: true
@@ -138,10 +127,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.996
-    - null
     metric_stds:
     - 0.008
-    - null
   - model: 3WLGNN-E
     model_plain: 3WLGNN-E
     is_baseline: true
@@ -166,10 +153,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.042
-    - null
     metric_stds:
     - 0.064
-    - null
   - model: GAPE + RWPE
     model_plain: GAPE + RWPE
     is_baseline: true
@@ -195,10 +180,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.069
-    - null
     metric_stds:
     - 0.009
-    - null
   - model: PNA(100K)
     model_plain: PNA(100K)
     is_baseline: true
@@ -223,10 +206,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.083
-    - null
     metric_stds:
     - 0.011
-    - null
   - model: GAPE
     model_plain: GAPE
     is_baseline: true
@@ -252,10 +233,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.085
-    - null
     metric_stds:
     - 0.009
-    - null
   - model: 3WLGNN
     model_plain: 3WLGNN
     is_baseline: true
@@ -280,10 +259,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.108
-    - null
     metric_stds:
     - 0.036
-    - null
   - model: GraphTransformer(500K)
     model_plain: GraphTransformer(500K)
     is_baseline: true
@@ -308,10 +285,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.11
-    - null
     metric_stds:
     - 0.01
-    - null
   - model: RWPE
     model_plain: RWPE
     is_baseline: true
@@ -337,10 +312,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.12
-    - null
     metric_stds:
     - 0.004
-    - null
   - model: R-LAP
     model_plain: R-LAP
     is_baseline: true
@@ -366,10 +339,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.23
-    - null
     metric_stds:
     - 0.007
-    - null
   - model: GAT
     model_plain: GAT
     is_baseline: true
@@ -395,10 +366,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.24
-    - null
     metric_stds:
     - 0.011
-    - null
   - model: SignNet
     model_plain: SignNet
     is_baseline: true
@@ -424,10 +393,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.26
-    - null
     metric_stds:
     - 0.006
-    - null
   - model: ABS-LAP
     model_plain: ABS-LAP
     is_baseline: true
@@ -453,10 +420,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.27
-    - null
     metric_stds:
     - 0.009
-    - null
   - model: GCN
     model_plain: GCN
     is_baseline: true
@@ -482,10 +447,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.28
-    - null
     metric_stds:
     - 0.011
-    - null
   - model: GatedGCN(100K)
     model_plain: GatedGCN(100K)
     is_baseline: true
@@ -510,10 +473,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.295
-    - null
     metric_stds:
     - 0.016
-    - null
   - model: GatedGCN-E
     model_plain: GatedGCN-E
     is_baseline: true
@@ -538,10 +499,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.295
-    - null
     metric_stds:
     - 0.016
-    - null
   - model: LAP
     model_plain: LAP
     is_baseline: true
@@ -567,10 +526,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.31
-    - null
     metric_stds:
     - 0.006
-    - null
   - model: LaplacianPE
     model_plain: LaplacianPE
     is_baseline: true
@@ -596,10 +553,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.31
-    - null
     metric_stds:
     - 0.039
-    - null
   - model: GCN
     model_plain: GCN
     is_baseline: true
@@ -624,10 +579,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.333
-    - null
     metric_stds:
     - 0.013
-    - null
   - model: GatedGCN
     model_plain: GatedGCN
     is_baseline: true
@@ -652,10 +605,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.352
-    - null
     metric_stds:
     - 0.034
-    - null
   - model: MoNet(100K)
     model_plain: MoNet(100K)
     is_baseline: true
@@ -680,10 +631,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.395
-    - null
     metric_stds:
     - 0.027
-    - null
   - model: MoNet
     model_plain: MoNet
     is_baseline: true
@@ -708,10 +657,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.395
-    - null
     metric_stds:
     - 0.027
-    - null
   - model: GraphSAGE
     model_plain: GraphSAGE
     is_baseline: true
@@ -736,10 +683,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.402
-    - null
     metric_stds:
     - 0.013
-    - null
   - model: GAT
     model_plain: GAT
     is_baseline: true
@@ -764,10 +709,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.403
-    - null
     metric_stds:
     - 0.008
-    - null
   - model: GraphSage(100K)
     model_plain: GraphSage(100K)
     is_baseline: true
@@ -792,10 +735,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.431
-    - null
     metric_stds:
     - 0.01
-    - null
   - model: GAT(100K)
     model_plain: GAT(100K)
     is_baseline: true
@@ -820,10 +761,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.441
-    - null
     metric_stds:
     - 0.023
-    - null
   - model: vanilla GCN
     model_plain: vanilla GCN
     is_baseline: true
@@ -848,10 +787,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.458
-    - null
     metric_stds:
     - 0.011
-    - null
   - model: None
     model_plain: None
     is_baseline: true
@@ -877,10 +814,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.71
-    - null
     metric_stds:
     - 0.05
-    - null
   - model: MLP
     model_plain: MLP
     is_baseline: true
@@ -905,10 +840,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.744
-    - null
     metric_stds:
     - 0.016
-    - null
   - model: GIN(100K)
     model_plain: GIN(100K)
     is_baseline: true
@@ -933,10 +866,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.894
-    - null
     metric_stds:
     - 0.024
-    - null
   - model: GIN
     model_plain: GIN
     is_baseline: true
@@ -961,10 +892,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - 1.894
-    - null
     metric_stds:
     - 0.024
-    - null
   - model: RingGNN-E
     model_plain: RingGNN-E
     is_baseline: true
@@ -989,10 +918,8 @@ variants:
     is_std_outlier: true
     metric_values:
     - 3.769
-    - null
     metric_stds:
     - 1.012
-    - null
   - model: RingGNN
     model_plain: RingGNN
     is_baseline: true
@@ -1017,197 +944,20 @@ variants:
     is_std_outlier: true
     metric_values:
     - 20.264
-    - null
     metric_stds:
     - 7.549
-    - null
-  - model: Bare
-    model_plain: Bare
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2211.14568'
-    title: 'BeGin: Extensive Benchmark Scenarios and An Easy-to-use Framework for
-      Graph Continual Learning'
-    date: Nov 26, 2022
-    date_iso: '2022-11-26'
-    date_display: Nov 2022
-    codebase_url: https://github.com/ShinhwanKang/BeGin
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 1.605
-    metric_stds:
-    - null
-    - 0.244
-  - model: LwF
-    model_plain: LwF
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2211.14568'
-    title: 'BeGin: Extensive Benchmark Scenarios and An Easy-to-use Framework for
-      Graph Continual Learning'
-    date: Nov 26, 2022
-    date_iso: '2022-11-26'
-    date_display: Nov 2022
-    codebase_url: https://github.com/ShinhwanKang/BeGin
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 1.605
-    metric_stds:
-    - null
-    - 0.244
-  - model: EWC
-    model_plain: EWC
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2211.14568'
-    title: 'BeGin: Extensive Benchmark Scenarios and An Easy-to-use Framework for
-      Graph Continual Learning'
-    date: Nov 26, 2022
-    date_iso: '2022-11-26'
-    date_display: Nov 2022
-    codebase_url: https://github.com/ShinhwanKang/BeGin
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 1.563
-    metric_stds:
-    - null
-    - 0.292
-  - model: MAS
-    model_plain: MAS
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2211.14568'
-    title: 'BeGin: Extensive Benchmark Scenarios and An Easy-to-use Framework for
-      Graph Continual Learning'
-    date: Nov 26, 2022
-    date_iso: '2022-11-26'
-    date_display: Nov 2022
-    codebase_url: https://github.com/ShinhwanKang/BeGin
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 1.562
-    metric_stds:
-    - null
-    - 0.305
-  - model: GEM
-    model_plain: GEM
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2211.14568'
-    title: 'BeGin: Extensive Benchmark Scenarios and An Easy-to-use Framework for
-      Graph Continual Learning'
-    date: Nov 26, 2022
-    date_iso: '2022-11-26'
-    date_display: Nov 2022
-    codebase_url: https://github.com/ShinhwanKang/BeGin
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 1.63
-    metric_stds:
-    - null
-    - 0.2
-  - model: TWP
-    model_plain: TWP
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2211.14568'
-    title: 'BeGin: Extensive Benchmark Scenarios and An Easy-to-use Framework for
-      Graph Continual Learning'
-    date: Nov 26, 2022
-    date_iso: '2022-11-26'
-    date_display: Nov 2022
-    codebase_url: https://github.com/ShinhwanKang/BeGin
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 1.589
-    metric_stds:
-    - null
-    - 0.276
-  row_count: 40
+  row_count: 34
   rows_json: ''
   chart_json: /data/datasets/aqsol/standard-split-chart.json
   arch_counts:
-    gnn: 30
+    gnn: 26
     hybrid: 3
     graph_transformer: 1
     llm: 0
     walk: 0
-    traditional: 3
+    traditional: 1
   metric_counts:
   - 34
-  - 6
   milestones: &id001
   - value: 0.92
     std: 0.009
@@ -1217,13 +967,5 @@ variants:
     date: '2022-01-29'
   milestones_by_metric:
     MAE: *id001
-    FWT:
-    - value: 1.63
-      std: 0.2
-      model: GEM
-      arxiv_id: '2211.14568'
-      title: 'BeGin: Extensive Benchmark Scenarios and An Easy-to-use Framework for
-        Graph Continual Learning'
-      date: '2022-11-26'
 ---
 

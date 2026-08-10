@@ -9,9 +9,9 @@ primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.HeterophilousGraphDataset.html
 stats: null
-result_count: 292
+result_count: 279
 best_model:
-  model: H2GCN + UniGAP
+  model: UniGAP
   value: 0.6375
   metric: Accuracy
   arxiv_id: '2407.19420'
@@ -28,25 +28,10 @@ papers:
     Classification'
   date_iso: '2026-05-18'
   venue: ''
-- arxiv_id: '2604.19028'
-  title: Learning Posterior Predictive Distributions for Node Classification from
-    Synthetic Graph Priors
-  date_iso: '2026-04-21'
-  venue: ICLR 2026
-- arxiv_id: '2604.08980'
-  title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware Graph
-    Learning'
-  date_iso: '2026-04-10'
-  venue: ''
 - arxiv_id: '2603.26178'
   title: 'Geometric Evolution Graph Convolutional Networks: Enhancing Graph Representation
     Learning via Ricci Flow'
   date_iso: '2026-03-27'
-  venue: ''
-- arxiv_id: '2512.14908'
-  title: 'ATLAS: Adaptive Topology-based Learning at Scale for Homophilic and Heterophilic
-    Graphs'
-  date_iso: '2025-12-16'
   venue: ''
 - arxiv_id: '2512.12642'
   title: 'Torch Geometric Pool: the Pytorch library for pooling in Graph Neural Networks'
@@ -73,15 +58,15 @@ papers:
     Homophily and Heterophily'
   date_iso: '2025-08-15'
   venue: ''
-- arxiv_id: '2508.05070'
-  title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-  date_iso: '2025-08-07'
-  venue: ''
 - arxiv_id: '2507.14484'
   title: 'ReDiSC: A Reparameterized Masked Diffusion Model for Scalable Node Classification
     with Structured Predictions'
   date_iso: '2025-07-19'
   venue: ''
+- arxiv_id: '2506.19343'
+  title: Discrepancy-Aware Graph Mask Auto-Encoder
+  date_iso: '2025-06-24'
+  venue: KDD 2025
 - arxiv_id: '2505.04808'
   title: Piecewise Constant Spectral Graph Neural Network
   date_iso: '2025-05-07'
@@ -214,15 +199,15 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
-  - model: H2GCN + UniGAP
-    model_plain: H2GCN + UniGAP
+  - model: UniGAP
+    model_plain: UniGAP
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
     arxiv_id: '2407.19420'
     title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
       Over-Smoothing in Node Classification Tasks'
@@ -244,72 +229,6 @@ variants:
     - null
     metric_stds:
     - 0.011
-    - null
-    - null
-    - null
-  - model: GraphSAGE + UniGAP
-    model_plain: GraphSAGE + UniGAP
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2407.19420'
-    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
-      Over-Smoothing in Node Classification Tasks'
-    date: Jul 28, 2024
-    date_iso: '2024-07-28'
-    date_display: Jul 2024
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.6283
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.009
-    - null
-    - null
-    - null
-  - model: GCN + UniGAP
-    model_plain: GCN + UniGAP
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.19420'
-    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
-      Over-Smoothing in Node Classification Tasks'
-    date: Jul 28, 2024
-    date_iso: '2024-07-28'
-    date_display: Jul 2024
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.5976
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.008
     - null
     - null
     - null
@@ -839,6 +758,38 @@ variants:
     - null
     - null
     - null
+  - model: Polynormer +ENACT
+    model_plain: Polynormer +ENACT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2510.21267'
+    title: Relieving the Over-Aggregating Effect in Graph Transformers
+    date: Oct 24, 2025
+    date_iso: '2025-10-24'
+    date_display: Oct 2025
+    codebase_url: https://github.com/sunjss/over-aggregating
+    published_conference: NeurIPS 2025
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.5494
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
   - model: Polynormer-r
     model_plain: Polynormer-r
     is_baseline: false
@@ -936,8 +887,8 @@ variants:
     - null
     - null
     - null
-  - model: NT
-    model_plain: NT
+  - model: Polynormer-v1
+    model_plain: Polynormer-v1
     is_baseline: false
     is_overridden: false
     override_reason: ''
@@ -945,59 +896,58 @@ variants:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    arxiv_id: '2604.08980'
-    title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware Graph
-      Learning'
-    date: Apr 10, 2026
-    date_iso: '2026-04-10'
-    date_display: Apr 2026
-    codebase_url: https://github.com/cf020031308/MoNT
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
+    arxiv_id: '2403.01232'
+    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
+    date: Mar 2, 2024
+    date_iso: '2024-03-02'
+    date_display: Mar 2024
+    codebase_url: https://github.com/cornell-zhang/Polynormer
+    published_conference: ICLR 2024
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2024
     uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
-    - 0.5425
+    - 0.5446
     - null
     - null
     - null
     metric_stds:
-    - 0.005
+    - 0.004
     - null
     - null
     - null
-  - model: Co-GNN(μ,μ)
-    model_plain: Co-GNN(μ,μ)
-    is_baseline: true
+  - model: Polynormer-v2
+    model_plain: Polynormer-v2
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_iso: '2025-08-07'
-    date_display: Aug 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2403.01232'
+    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
+    date: Mar 2, 2024
+    date_iso: '2024-03-02'
+    date_display: Mar 2024
+    codebase_url: https://github.com/cornell-zhang/Polynormer
+    published_conference: ICLR 2024
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2024
     uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
-    - 0.5417
+    - 0.5441
     - null
     - null
     - null
     metric_stds:
-    - 0.0037
+    - 0.0035
     - null
     - null
     - null
@@ -1129,38 +1079,6 @@ variants:
     - null
     metric_stds:
     - 0.0061
-    - null
-    - null
-    - null
-  - model: Tango_GPS
-    model_plain: Tango_GPS
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_iso: '2025-08-07'
-    date_display: Aug 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.5383
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0032
     - null
     - null
     - null
@@ -1582,6 +1500,38 @@ variants:
     - null
     - null
     - null
+  - model: SGFormer +ENACT
+    model_plain: SGFormer +ENACT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2510.21267'
+    title: Relieving the Over-Aggregating Effect in Graph Transformers
+    date: Oct 24, 2025
+    date_iso: '2025-10-24'
+    date_display: Oct 2025
+    codebase_url: https://github.com/sunjss/over-aggregating
+    published_conference: NeurIPS 2025
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.5332
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
   - model: ECG-GT-sep
     model_plain: ECG-GT-sep
     is_baseline: true
@@ -1675,39 +1625,6 @@ variants:
     - null
     metric_stds:
     - 0.0046
-    - null
-    - null
-    - null
-  - model: ATLAS
-    model_plain: ATLAS
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2512.14908'
-    title: 'ATLAS: Adaptive Topology-based Learning at Scale for Homophilic and Heterophilic
-      Graphs'
-    date: Dec 16, 2025
-    date_iso: '2025-12-16'
-    date_display: Dec 2025
-    codebase_url: https://github.com/atlaspaper16/ATLAS
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.5317
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0081
     - null
     - null
     - null
@@ -1839,18 +1756,83 @@ variants:
     - null
     - null
     - null
-  row_count: 292
+  - model: ACM-GCN
+    model_plain: ACM-GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.07082'
+    title: 'Graph Neural Networks for Graphs with Heterophily: A Survey'
+    date: Feb 14, 2022
+    date_iso: '2022-02-14'
+    date_display: Feb 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.5294
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0023
+    - null
+    - null
+    - null
+  - model: GEGCN
+    model_plain: GEGCN
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2603.26178'
+    title: 'Geometric Evolution Graph Convolutional Networks: Enhancing Graph Representation
+      Learning via Ricci Flow'
+    date: Mar 27, 2026
+    date_iso: '2026-03-27'
+    date_display: Mar 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.5277
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0073
+    - null
+    - null
+    - null
+  row_count: 279
   rows_json: /data/datasets/amazon-ratings/standard-split-rows.json
   chart_json: /data/datasets/amazon-ratings/standard-split-chart.json
   arch_counts:
-    gnn: 161
-    hybrid: 46
-    graph_transformer: 33
+    gnn: 156
+    hybrid: 36
+    graph_transformer: 34
     llm: 10
     walk: 2
-    traditional: 16
+    traditional: 15
   metric_counts:
-  - 284
+  - 271
   - 8
   - 13
   - 13
@@ -1887,7 +1869,7 @@ variants:
     date: '2024-07-01'
   - value: 0.6375
     std: 0.011
-    model: H2GCN + UniGAP
+    model: UniGAP
     arxiv_id: '2407.19420'
     title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
       Over-Smoothing in Node Classification Tasks'

@@ -12,7 +12,7 @@ stats:
   avg_nodes: 74.5
   avg_edges: 2457.8
   num_classes: 2
-result_count: 561
+result_count: 520
 best_model:
   model: WL-MLP
   value: 0.9792
@@ -20,11 +20,6 @@ best_model:
   arxiv_id: '2202.10156'
   paper_title: 1-WL Expressiveness Is (Almost) All You Need
 papers:
-- arxiv_id: '2602.04244'
-  title: 'GraphVec: Cross-Domain Graph Vectorization for Graph-Level Representation
-    Learning'
-  date_iso: '2026-02-04'
-  venue: ''
 - arxiv_id: '2512.13235'
   title: 'CORE: Contrastive Masked Feature Reconstruction on Graphs'
   date_iso: '2025-12-15'
@@ -169,6 +164,11 @@ papers:
   title: Unifying Graph Contrastive Learning via Graph Message Augmentation
   date_iso: '2024-01-08'
   venue: ''
+- arxiv_id: '2311.01038'
+  title: 'Better with Less: A Data-Active Perspective on Pre-Training Graph Neural
+    Networks'
+  date_iso: '2023-11-02'
+  venue: NeurIPS 2023
 - arxiv_id: '2310.15523'
   title: Generative and Contrastive Paradigms Are Complementary for Graph Self-Supervised
     Learning
@@ -216,10 +216,6 @@ papers:
   title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing in GNNs'
   date_iso: '2022-10-21'
   venue: ICLR 2022
-- arxiv_id: '2210.05920'
-  title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-  date_iso: '2022-10-12'
-  venue: AAAI 2022
 - arxiv_id: '2210.00643'
   title: Spectral Augmentation for Self-Supervised Learning on Graphs
   date_iso: '2022-10-02'
@@ -430,11 +426,15 @@ variants:
   metrics:
   - Accuracy
   - AUROC
+  - F1
   - equivalence classes
+  - ing Accuracy
   metric_display_names:
   - Accuracy
   - AUROC
+  - F1
   - equivalence classes
+  - ing Accuracy
   show_all_metrics_desktop: false
   chart_default_log_scale: false
   chart_hidden_models: []
@@ -465,7 +465,11 @@ variants:
     - 0.9792
     - null
     - null
+    - null
+    - null
     metric_stds:
+    - null
+    - null
     - null
     - null
     - null
@@ -495,8 +499,12 @@ variants:
     - 0.964
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.007
+    - null
+    - null
     - null
     - null
   - model: CoCN
@@ -525,8 +533,12 @@ variants:
     - 0.8722
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0013
+    - null
+    - null
     - null
     - null
   - model: N^2
@@ -555,8 +567,12 @@ variants:
     - 0.867
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.016
+    - null
+    - null
     - null
     - null
   - model: CoCN vanilla
@@ -585,8 +601,12 @@ variants:
     - 0.8615
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.001
+    - null
+    - null
     - null
     - null
   - model: graph2vec
@@ -615,7 +635,11 @@ variants:
     - 0.8558
     - null
     - null
+    - null
+    - null
     metric_stds:
+    - null
+    - null
     - null
     - null
     - null
@@ -645,8 +669,12 @@ variants:
     - 0.855
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.012
+    - null
+    - null
     - null
     - null
   - model: OEPG
@@ -676,8 +704,12 @@ variants:
     - 0.847
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.007
+    - null
+    - null
     - null
     - null
   - model: CORE (GraphMAE2 + CORE)
@@ -706,8 +738,12 @@ variants:
     - 0.843
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.001
+    - null
+    - null
     - null
     - null
   - model: GraphMAE2
@@ -736,8 +772,12 @@ variants:
     - 0.841
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.003
+    - null
+    - null
     - null
     - null
   - model: PXGL-GNN
@@ -766,8 +806,12 @@ variants:
     - 0.8396
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0159
+    - null
+    - null
     - null
     - null
   - model: DiGGR
@@ -796,8 +840,12 @@ variants:
     - 0.8376
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.037
+    - null
+    - null
     - null
     - null
   - model: GNTK
@@ -826,8 +874,12 @@ variants:
     - 0.836
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.01
+    - null
+    - null
     - null
     - null
   - model: SE2P-C3
@@ -856,38 +908,12 @@ variants:
     - 0.835
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.017
     - null
     - null
-  - model: GCN BGNN(m)-TS
-    model_plain: GCN BGNN(m)-TS
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_iso: '2022-10-12'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: AAAI 2022
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.834
-    - null
-    - null
-    metric_stds:
-    - 0.0015
     - null
     - null
   - model: SE2P-C2
@@ -916,38 +942,12 @@ variants:
     - 0.833
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.021
     - null
     - null
-  - model: SAGE BGNN(m)-CT
-    model_plain: SAGE BGNN(m)-CT
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_iso: '2022-10-12'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: AAAI 2022
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.833
-    - null
-    - null
-    metric_stds:
-    - 0.0023
     - null
     - null
   - model: Attention
@@ -976,8 +976,12 @@ variants:
     - 0.8322
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.003
+    - null
+    - null
     - null
     - null
   - model: ECL-GSR
@@ -1006,8 +1010,12 @@ variants:
     - 0.83
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0143
+    - null
+    - null
     - null
     - null
   - model: EGG
@@ -1036,8 +1044,12 @@ variants:
     - 0.8294
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0106
+    - null
+    - null
     - null
     - null
   - model: GraphAug
@@ -1066,38 +1078,12 @@ variants:
     - 0.829
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.002
     - null
     - null
-  - model: GCN BGNN(m)-ST
-    model_plain: GCN BGNN(m)-ST
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_iso: '2022-10-12'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: AAAI 2022
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8287
-    - null
-    - null
-    metric_stds:
-    - 0.0009
     - null
     - null
   - model: SE2P-C4
@@ -1126,38 +1112,12 @@ variants:
     - 0.828
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.021
     - null
     - null
-  - model: SAGE BGNN(m)-TC
-    model_plain: SAGE BGNN(m)-TC
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_iso: '2022-10-12'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: AAAI 2022
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.828
-    - null
-    - null
-    metric_stds:
-    - 0.0028
     - null
     - null
   - model: SAN
@@ -1186,38 +1146,12 @@ variants:
     - 0.8273
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0192
     - null
     - null
-  - model: GCN BGNN
-    model_plain: GCN BGNN
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_iso: '2022-10-12'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: AAAI 2022
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8273
-    - null
-    - null
-    metric_stds:
-    - 0.0034
     - null
     - null
   - model: GraphMAE
@@ -1246,38 +1180,12 @@ variants:
     - 0.827
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.01
     - null
     - null
-  - model: SAGE BGNN
-    model_plain: SAGE BGNN
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_iso: '2022-10-12'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: AAAI 2022
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8267
-    - null
-    - null
-    metric_stds:
-    - 0.0057
     - null
     - null
   - model: Empowering GNNs
@@ -1306,8 +1214,12 @@ variants:
     - 0.825
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.012
+    - null
+    - null
     - null
     - null
   - model: LaplaceGNN
@@ -1337,8 +1249,12 @@ variants:
     - 0.8241
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0042
+    - null
+    - null
     - null
     - null
   - model: SignGT
@@ -1368,8 +1284,12 @@ variants:
     - 0.824
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0014
+    - null
+    - null
     - null
     - null
   - model: lrGAE 6
@@ -1398,8 +1318,12 @@ variants:
     - 0.823
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.007
+    - null
+    - null
     - null
     - null
   - model: lrGAE 7
@@ -1428,38 +1352,12 @@ variants:
     - 0.823
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.004
     - null
     - null
-  - model: Ensemble
-    model_plain: Ensemble
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_iso: '2022-10-12'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: AAAI 2022
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8227
-    - null
-    - null
-    metric_stds:
-    - 0.0009
     - null
     - null
   - model: lrGAE 8
@@ -1488,8 +1386,12 @@ variants:
     - 0.822
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.002
+    - null
+    - null
     - null
     - null
   - model: S2GAE
@@ -1518,8 +1420,12 @@ variants:
     - 0.822
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.004
+    - null
+    - null
     - null
     - null
   - model: att-Pooling-NLSFs
@@ -1548,8 +1454,12 @@ variants:
     - 0.8219
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.013
+    - null
+    - null
     - null
     - null
   - model: JOAOv2
@@ -1578,8 +1488,12 @@ variants:
     - 0.8216
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0017
+    - null
+    - null
     - null
     - null
   - model: DiffPool
@@ -1608,8 +1522,12 @@ variants:
     - 0.8213
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0043
+    - null
+    - null
     - null
     - null
   - model: DiffPool-Det
@@ -1638,7 +1556,11 @@ variants:
     - 0.8213
     - null
     - null
+    - null
+    - null
     metric_stds:
+    - null
+    - null
     - null
     - null
     - null
@@ -1668,8 +1590,12 @@ variants:
     - 0.82
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.005
+    - null
+    - null
     - null
     - null
   - model: CTAug-JOAO
@@ -1698,8 +1624,12 @@ variants:
     - 0.819
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0053
+    - null
+    - null
     - null
     - null
   - model: SimGRACE
@@ -1728,68 +1658,12 @@ variants:
     - 0.8188
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0023
     - null
     - null
-  - model: SAGE BAN
-    model_plain: SAGE BAN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_iso: '2022-10-12'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: AAAI 2022
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.818
-    - null
-    - null
-    metric_stds:
-    - 0.002
-    - null
-    - null
-  - model: GAT BGNN(m)-CS
-    model_plain: GAT BGNN(m)-CS
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.05920'
-    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
-    date: Oct 12, 2022
-    date_iso: '2022-10-12'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: AAAI 2022
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.818
-    - null
-    - null
-    metric_stds:
-    - 0.0009
     - null
     - null
   - model: Graphormer
@@ -1819,8 +1693,12 @@ variants:
     - 0.818
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0224
+    - null
+    - null
     - null
     - null
   - model: WGDN
@@ -1849,8 +1727,12 @@ variants:
     - 0.8176
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0024
+    - null
+    - null
     - null
     - null
   - model: SEP-G ICE
@@ -1879,8 +1761,12 @@ variants:
     - 0.8176
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0081
+    - null
+    - null
     - null
     - null
   - model: SAGPool
@@ -1909,8 +1795,12 @@ variants:
     - 0.8176
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0157
+    - null
+    - null
     - null
     - null
   - model: CTAug-GraphCL
@@ -1939,24 +1829,337 @@ variants:
     - 0.8172
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0026
     - null
     - null
-  row_count: 561
+    - null
+    - null
+  - model: GraphMAE2
+    model_plain: GraphMAE2
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2410.10241'
+    title: Revisiting Graph Autoencoders as Implicit Contrastive Learners
+    date: Oct 14, 2024
+    date_iso: '2024-10-14'
+    date_display: Oct 2024
+    codebase_url: https://github.com/EdisonLeeeee/lrGAE
+    published_conference: KDD 2024
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.817
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.008
+    - null
+    - null
+    - null
+    - null
+  - model: GCKM
+    model_plain: GCKM
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2504.13426'
+    title: Simplifying Graph Convolutional Networks with Redundancy-Free Neighbors
+    date: Apr 18, 2025
+    date_iso: '2025-04-18'
+    date_display: Apr 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.817
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.015
+    - null
+    - null
+    - null
+    - null
+  - model: Teacher (100% training data)
+    model_plain: Teacher (100% training data)
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2105.07519'
+    title: Graph-Free Knowledge Distillation for Graph Neural Networks
+    date: May 16, 2021
+    date_iso: '2021-05-16'
+    date_display: May 2021
+    codebase_url: https://github.com/Xiang-Deng-DL/GFKD
+    published_conference: IJCAI 2021
+    published_conference_short: IJCAI
+    published_conference_slug: ijcai
+    published_venue: IJCAI 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.817
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: UGMAE
+    model_plain: UGMAE
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2402.08023'
+    title: 'UGMAE: A Unified Framework for Graph Masked Autoencoders'
+    date: Feb 12, 2024
+    date_iso: '2024-02-12'
+    date_display: Feb 2024
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8166
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0012
+    - null
+    - null
+    - null
+    - null
+  - model: Uniform PerturbEdge
+    model_plain: Uniform PerturbEdge
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.13248'
+    title: Automated Data Augmentations for Graph Classification
+    date: Feb 26, 2022
+    date_iso: '2022-02-26'
+    date_display: Feb 2022
+    codebase_url: ''
+    published_conference: ICLR 2022
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.816
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.003
+    - null
+    - null
+    - null
+    - null
+  - model: GLA
+    model_plain: GLA
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2205.09802'
+    title: Label-invariant Augmentation for Semi-Supervised Graph Classification
+    date: May 19, 2022
+    date_iso: '2022-05-19'
+    date_display: May 2022
+    codebase_url: ''
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8154
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0014
+    - null
+    - null
+    - null
+    - null
+  - model: BGRL
+    model_plain: BGRL
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2410.10241'
+    title: Revisiting Graph Autoencoders as Implicit Contrastive Learners
+    date: Oct 14, 2024
+    date_iso: '2024-10-14'
+    date_display: Oct 2024
+    codebase_url: https://github.com/EdisonLeeeee/lrGAE
+    published_conference: KDD 2024
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.815
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.007
+    - null
+    - null
+    - null
+    - null
+  - model: WL-PM
+    model_plain: WL-PM
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: svm_kernel
+    architecture_label: SVM
+    architecture_title: SVM / kernel method
+    arxiv_id: '2502.16233'
+    title: Graph Self-Supervised Learning with Learnable Structural and Positional
+      Encodings
+    date: Feb 22, 2025
+    date_iso: '2025-02-22'
+    date_display: Feb 2025
+    codebase_url: https://github.com/wokas36/StructPosGSSL
+    published_conference: WWW 2025
+    published_conference_short: WWW
+    published_conference_slug: www
+    published_venue: WWW 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.815
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.005
+    - null
+    - null
+    - null
+    - null
+  - model: Uniform MaskNF
+    model_plain: Uniform MaskNF
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.13248'
+    title: Automated Data Augmentations for Graph Classification
+    date: Feb 26, 2022
+    date_iso: '2022-02-26'
+    date_display: Feb 2022
+    codebase_url: ''
+    published_conference: ICLR 2022
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.815
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.002
+    - null
+    - null
+    - null
+    - null
+  row_count: 520
   rows_json: /data/datasets/collab/10-fold-cv-rows.json
   chart_json: /data/datasets/collab/10-fold-cv-chart.json
   arch_counts:
-    gnn: 358
-    hybrid: 90
+    gnn: 326
+    hybrid: 83
     graph_transformer: 13
-    llm: 3
+    llm: 1
     walk: 14
-    traditional: 76
+    traditional: 75
   metric_counts:
-  - 528
+  - 485
   - 31
   - 2
+  - 2
+  - 1
   milestones: &id001
   - value: 0.807
     std: 0.001
@@ -1998,6 +2201,28 @@ variants:
       title: 'Unifying Unsupervised Graph-Level Anomaly Detection and Out-of-Distribution
         Detection: A Benchmark'
       date: '2024-06-21'
-    equivalence classes: []
+    F1:
+    - value: 0.8123
+      std: 0.0086
+      model: APT (Mole-BERT)
+      arxiv_id: '2311.01038'
+      title: 'Better with Less: A Data-Active Perspective on Pre-Training Graph Neural
+        Networks'
+      date: '2023-11-02'
+    equivalence classes:
+    - value: 294.0
+      std: null
+      model: GNN
+      arxiv_id: '2010.15116'
+      title: On Graph Neural Networks versus Graph-Augmented MLPs
+      date: '2020-10-28'
+    ing Accuracy:
+    - value: 0.799
+      std: null
+      model: GRDL
+      arxiv_id: '2408.11370'
+      title: 'Graph Classification via Reference Distribution Learning: Theory and
+        Practice'
+      date: '2024-08-21'
 ---
 

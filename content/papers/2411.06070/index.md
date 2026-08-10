@@ -54,7 +54,7 @@ paper_type: method
 proposed_models:
 - GFT
 mrr: 0.0301
-adjusted_mrr: 0.0201
+adjusted_mrr: 0.02
 mrr_dataset_count: 2
 benchmark_categories:
 - Knowledge Graphs
@@ -297,10 +297,10 @@ results:
     value_note: ''
     sort_value: 0.8552
     sort_std: 0.0012
-    global_rank: 19
-    paper_rank: 31
-    rank_delta: 12
-    rank_delta_abs: 12
+    global_rank: 18
+    paper_rank: 29
+    rank_delta: 11
+    rank_delta_abs: 11
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -364,8 +364,8 @@ results:
     value_note: ''
     sort_value: 0.8436
     sort_std: null
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -432,10 +432,10 @@ results:
     value_note: ''
     sort_value: 0.8433
     sort_std: 0.002
-    global_rank: 21
-    paper_rank: 33
-    rank_delta: 12
-    rank_delta_abs: 12
+    global_rank: 20
+    paper_rank: 31
+    rank_delta: 11
+    rank_delta_abs: 11
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -469,7 +469,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 27
+    global_rank: 25
     sort_value: 0.8298
     sort_std: 0.0022
     comparison_type: global_top
@@ -534,10 +534,10 @@ results:
     value_note: ''
     sort_value: 0.8227
     sort_std: 0.0018
-    global_rank: 29
-    paper_rank: 41
-    rank_delta: 12
-    rank_delta_abs: 12
+    global_rank: 27
+    paper_rank: 35
+    rank_delta: 8
+    rank_delta_abs: 8
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -602,10 +602,10 @@ results:
     value_note: ''
     sort_value: 0.8124
     sort_std: 0.0055
-    global_rank: 30
-    paper_rank: 40
-    rank_delta: 10
-    rank_delta_abs: 10
+    global_rank: 28
+    paper_rank: 35
+    rank_delta: 7
+    rank_delta_abs: 7
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -669,8 +669,8 @@ results:
     value_note: ''
     sort_value: 0.7899
     sort_std: null
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -736,8 +736,8 @@ results:
     value_note: ''
     sort_value: 0.7575
     sort_std: null
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 32
+    paper_rank: 32
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -803,8 +803,8 @@ results:
     value_note: ''
     sort_value: 0.7544
     sort_std: null
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

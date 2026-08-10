@@ -47,8 +47,8 @@ proposed_models:
 - STAG
 - STAG + Linear Probing
 - STAG + Prompt Tuning*
-mrr: 0.0072
-adjusted_mrr: 0.0072
+mrr: 0.0077
+adjusted_mrr: 0.0077
 mrr_dataset_count: 3
 benchmark_categories:
 - Classic
@@ -205,7 +205,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 27
+    global_rank: 25
     sort_value: 0.8298
     sort_std: 0.0022
     comparison_type: global_top
@@ -270,10 +270,10 @@ results:
     value_note: ''
     sort_value: 0.8
     sort_std: null
-    global_rank: 32
-    paper_rank: 125
-    rank_delta: 93
-    rank_delta_abs: 93
+    global_rank: 30
+    paper_rank: 117
+    rank_delta: 87
+    rank_delta_abs: 87
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -338,8 +338,8 @@ results:
     value_note: ''
     sort_value: 0.583
     sort_std: null
-    global_rank: 49
-    paper_rank: 49
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -406,8 +406,8 @@ results:
     value_note: ''
     sort_value: 0.4175
     sort_std: null
-    global_rank: 123
-    paper_rank: 123
+    global_rank: 115
+    paper_rank: 115
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -488,9 +488,9 @@ results:
     sort_value: 0.9302
     sort_std: 0.0011
     global_rank: 1
-    paper_rank: 281
-    rank_delta: 280
-    rank_delta_abs: 280
+    paper_rank: 267
+    rank_delta: 266
+    rank_delta_abs: 266
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -660,10 +660,10 @@ results:
     value_note: ''
     sort_value: 0.8533
     sort_std: null
-    global_rank: 34
-    paper_rank: 183
-    rank_delta: 149
-    rank_delta_abs: 149
+    global_rank: 31
+    paper_rank: 177
+    rank_delta: 146
+    rank_delta_abs: 146
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -728,8 +728,8 @@ results:
     value_note: ''
     sort_value: 0.8405
     sort_std: 0.0578
-    global_rank: 46
-    paper_rank: 46
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -796,8 +796,8 @@ results:
     value_note: ''
     sort_value: 0.8355
     sort_std: 0.0594
-    global_rank: 52
-    paper_rank: 52
+    global_rank: 47
+    paper_rank: 47
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -864,8 +864,8 @@ results:
     value_note: ''
     sort_value: 0.8095
     sort_std: 0.0496
-    global_rank: 82
-    paper_rank: 82
+    global_rank: 76
+    paper_rank: 76
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -932,8 +932,8 @@ results:
     value_note: ''
     sort_value: 0.799
     sort_std: 0.0769
-    global_rank: 108
-    paper_rank: 108
+    global_rank: 102
+    paper_rank: 102
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1000,8 +1000,8 @@ results:
     value_note: ''
     sort_value: 0.798
     sort_std: 0.073
-    global_rank: 112
-    paper_rank: 112
+    global_rank: 107
+    paper_rank: 107
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1068,8 +1068,8 @@ results:
     value_note: ''
     sort_value: 0.792
     sort_std: 0.0841
-    global_rank: 128
-    paper_rank: 128
+    global_rank: 125
+    paper_rank: 125
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1109,19 +1109,18 @@ results:
     date_iso: '2025-07-20'
     published_venue: KDD 2025
     published_conference: KDD 2025
-    at_pub_value: 0.5877
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2407.09709'
-    at_pub_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph Language
-      Modeling'
-    at_pub_source_date_iso: '2024-07-12'
-    at_pub_source_date_label: ICLR 2024
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2025-07-20'
     value_gap_source_date_label: KDD 2025
-    gap_vs_at_pub: 0.20230000000000004
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -1137,16 +1136,15 @@ results:
     value_note: ''
     sort_value: 0.79
     sort_std: 0.0796
-    global_rank: 140
-    paper_rank: 140
+    global_rank: 137
+    paper_rank: 137
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph
-      Language Modeling'
-    comparison_source_arxiv: '2407.09709'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: DGI
@@ -1207,8 +1205,8 @@ results:
     value_note: ''
     sort_value: 0.7865
     sort_std: 0.069
-    global_rank: 156
-    paper_rank: 156
+    global_rank: 152
+    paper_rank: 152
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1276,10 +1274,10 @@ results:
     value_note: ''
     sort_value: 0.7855
     sort_std: 0.0037
-    global_rank: 163
-    paper_rank: 346
-    rank_delta: 183
-    rank_delta_abs: 183
+    global_rank: 158
+    paper_rank: 317
+    rank_delta: 159
+    rank_delta_abs: 159
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1345,8 +1343,8 @@ results:
     value_note: ''
     sort_value: 0.7805
     sort_std: 0.0747
-    global_rank: 181
-    paper_rank: 181
+    global_rank: 175
+    paper_rank: 175
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1413,8 +1411,8 @@ results:
     value_note: ''
     sort_value: 0.7715
     sort_std: 0.0692
-    global_rank: 213
-    paper_rank: 213
+    global_rank: 206
+    paper_rank: 206
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1449,7 +1447,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 246
+    global_rank: 237
     sort_value: 0.7469
     sort_std: 0.0085
     comparison_type: global_top
@@ -1514,8 +1512,8 @@ results:
     value_note: ''
     sort_value: 0.734
     sort_std: 0.0819
-    global_rank: 255
-    paper_rank: 255
+    global_rank: 246
+    paper_rank: 246
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1555,19 +1553,18 @@ results:
     date_iso: '2025-07-20'
     published_venue: KDD 2025
     published_conference: KDD 2025
-    at_pub_value: 0.3192
-    at_pub_std: 0.0015
-    at_pub_source_arxiv: '2410.10329'
-    at_pub_source_title: 'GraphCLIP: Enhancing Transferability in Graph Foundation
-      Models for Text-Attributed Graphs'
-    at_pub_source_date_iso: '2024-10-14'
-    at_pub_source_date_label: WWW 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2025-07-20'
     value_gap_source_date_label: KDD 2025
-    gap_vs_at_pub: 0.37979999999999997
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -1583,16 +1580,15 @@ results:
     value_note: ''
     sort_value: 0.699
     sort_std: 0.1052
-    global_rank: 286
-    paper_rank: 286
+    global_rank: 270
+    paper_rank: 270
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'GraphCLIP: Enhancing Transferability in Graph Foundation
-      Models for Text-Attributed Graphs'
-    comparison_source_arxiv: '2410.10329'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: PRODIGY
@@ -1652,8 +1648,8 @@ results:
     value_note: ''
     sort_value: 0.4325
     sort_std: 0.0691
-    global_rank: 348
-    paper_rank: 348
+    global_rank: 318
+    paper_rank: 318
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1720,8 +1716,8 @@ results:
     value_note: ''
     sort_value: 0.29
     sort_std: 0.0808
-    global_rank: 351
-    paper_rank: 351
+    global_rank: 319
+    paper_rank: 319
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1937,10 +1933,10 @@ results:
     value_note: ''
     sort_value: 0.8868
     sort_std: null
-    global_rank: 7
-    paper_rank: 163
-    rank_delta: 156
-    rank_delta_abs: 156
+    global_rank: 6
+    paper_rank: 141
+    rank_delta: 135
+    rank_delta_abs: 135
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2007,10 +2003,10 @@ results:
     value_note: ''
     sort_value: 0.8829
     sort_std: null
-    global_rank: 11
-    paper_rank: 115
-    rank_delta: 104
-    rank_delta_abs: 104
+    global_rank: 9
+    paper_rank: 100
+    rank_delta: 91
+    rank_delta_abs: 91
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2075,8 +2071,8 @@ results:
     value_note: ''
     sort_value: 0.8758
     sort_std: 0.0548
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2144,10 +2140,10 @@ results:
     value_note: ''
     sort_value: 0.8623
     sort_std: 0.0007
-    global_rank: 35
-    paper_rank: 419
-    rank_delta: 384
-    rank_delta_abs: 384
+    global_rank: 32
+    paper_rank: 384
+    rank_delta: 352
+    rank_delta_abs: 352
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2213,8 +2209,8 @@ results:
     value_note: ''
     sort_value: 0.8403
     sort_std: 0.0554
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 62
+    paper_rank: 62
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2281,8 +2277,8 @@ results:
     value_note: ''
     sort_value: 0.8394
     sort_std: 0.0678
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 63
+    paper_rank: 63
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2322,37 +2318,39 @@ results:
     date_iso: '2025-07-20'
     published_venue: KDD 2025
     published_conference: KDD 2025
-    at_pub_value: 0.8159
-    at_pub_std: 0.02
-    at_pub_source_arxiv: '2408.13471'
-    at_pub_source_title: Disentangled Generative Graph Representation Learning
-    at_pub_source_date_iso: '2024-08-24'
+    at_pub_value: 0.7432
+    at_pub_std: 0.005
+    at_pub_source_arxiv: '2402.15270'
+    at_pub_source_title: Smoothed Graph Contrastive Learning via Seamless Proximity
+      Integration
+    at_pub_source_date_iso: '2024-02-23'
     at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2024-08-24'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.005099999999999993
+    value_gap_source_date_iso: '2025-07-20'
+    value_gap_source_date_label: KDD 2025
+    gap_vs_at_pub: 0.0676
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
-    insignificant_improvement_at_pub: false
+    insignificant_improvement_at_pub: true
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
+    insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.8159
-    true_std: 0.02
-    value_gap_source_arxiv: '2408.13471'
-    value_gap_source_title: Disentangled Generative Graph Representation Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.005099999999999993
+    true_value: 0.8108
+    true_std: 0.08
+    value_gap_source_arxiv: '2507.19526'
+    value_gap_source_title: Quantizing Text-attributed Graphs for Semantic-Structural
+      Integration
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.8159
-    sort_std: 0.02
-    global_rank: 122
-    paper_rank: 142
-    rank_delta: 20
-    rank_delta_abs: 20
-    rank_delta_direction: worse
+    sort_value: 0.8108
+    sort_std: 0.08
+    global_rank: 123
+    paper_rank: 123
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -2416,8 +2414,8 @@ results:
     value_note: ''
     sort_value: 0.7975
     sort_std: 0.0933
-    global_rank: 180
-    paper_rank: 180
+    global_rank: 155
+    paper_rank: 155
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2484,8 +2482,8 @@ results:
     value_note: ''
     sort_value: 0.7753
     sort_std: 0.0716
-    global_rank: 261
-    paper_rank: 261
+    global_rank: 234
+    paper_rank: 234
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2552,8 +2550,8 @@ results:
     value_note: ''
     sort_value: 0.7552
     sort_std: 0.101
-    global_rank: 294
-    paper_rank: 294
+    global_rank: 267
+    paper_rank: 267
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2588,7 +2586,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 394
+    global_rank: 361
     sort_value: 0.6605
     sort_std: 0.002
     comparison_type: global_top
@@ -2653,8 +2651,8 @@ results:
     value_note: ''
     sort_value: 0.6584
     sort_std: 0.0996
-    global_rank: 395
-    paper_rank: 395
+    global_rank: 362
+    paper_rank: 362
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2721,8 +2719,8 @@ results:
     value_note: ''
     sort_value: 0.622
     sort_std: 0.0729
-    global_rank: 411
-    paper_rank: 411
+    global_rank: 376
+    paper_rank: 376
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2789,8 +2787,8 @@ results:
     value_note: ''
     sort_value: 0.5518
     sort_std: 0.1189
-    global_rank: 428
-    paper_rank: 428
+    global_rank: 393
+    paper_rank: 393
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

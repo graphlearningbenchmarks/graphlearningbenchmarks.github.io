@@ -48,33 +48,27 @@ has_results: true
 paper_type: method
 proposed_models:
 - ESC-GNN
-mrr: 0.0312
-adjusted_mrr: 0.0208
+mrr: 0.0333
+adjusted_mrr: 0.0222
 mrr_dataset_count: 2
 benchmark_categories:
 - OGB
-- Quantum Chemistry
 - GNNBenchmark
 benchmark_coverage:
 - benchmark: OGB
   benchmark_slug: ogb
   evaluated: 1
   total: 16
-- benchmark: Quantum Chemistry
-  benchmark_slug: quantum-chemistry
-  evaluated: 1
-  total: 3
 - benchmark: GNNBenchmark
   benchmark_slug: gnnbenchmark
   evaluated: 1
   total: 6
 task_categories:
 - graph_classification
-- graph_regression
 experiment_scopes:
 - graph-level
 results:
-- &id003
+- &id002
   dataset: CSL
   rows:
   - model: ESC-GNN
@@ -133,8 +127,8 @@ results:
     value_note: ''
     sort_value: 1.0
     sort_std: null
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -201,8 +195,8 @@ results:
     value_note: ''
     sort_value: 1.0
     sort_std: null
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -400,8 +394,8 @@ results:
     value_note: ''
     sort_value: 0.957
     sort_std: null
-    global_rank: 52
-    paper_rank: 52
+    global_rank: 50
+    paper_rank: 50
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -468,8 +462,8 @@ results:
     value_note: ''
     sort_value: 0.1
     sort_std: null
-    global_rank: 85
-    paper_rank: 85
+    global_rank: 80
+    paper_rank: 80
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -488,608 +482,6 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
-  dataset: QM9
-  is_multi_metric: true
-  rows:
-  - model: Equiformer v2
-    model_key: equiformer v2
-    model_plain: Equiformer v2
-    metric_values:
-    - 0.01
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.23086'
-    title: Equivariant Spherical Transformer for Efficient Molecular Modeling
-    published_venue: ''
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    codebase_url: ''
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 1
-    is_best: true
-    sort_value: 0.01
-    sort_std: null
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: EQGAT
-    model_key: eqgat
-    model_plain: EQGAT
-    metric_values:
-    - 0.011
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2505.23086'
-    title: Equivariant Spherical Transformer for Efficient Molecular Modeling
-    published_venue: ''
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    codebase_url: ''
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 2
-    is_best: false
-    sort_value: 0.011
-    sort_std: null
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: Equiformer
-    model_key: equiformer
-    model_plain: Equiformer
-    metric_values:
-    - 0.011
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.23086'
-    title: Equivariant Spherical Transformer for Efficient Molecular Modeling
-    published_venue: ''
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    codebase_url: ''
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 3
-    is_best: false
-    sort_value: 0.011
-    sort_std: null
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: 1-2-3-GNN
-    model_key: 1-2-3-gnn
-    model_plain: 1-2-3-GNN
-    metric_values:
-    - null
-    - 0.476
-    - 0.27
-    - 0.0427
-    - 0.0419
-    - 0.0469
-    - 0.0944
-    - 0.00337
-    - 0.00351
-    - 0.00019
-    - 0.111
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.062
-    sort_std: 0.001
-    true_value: 0.062
-    true_std: 0.001
-    paper_value: 0.476
-    paper_std: null
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 0.414
-    value_gap_source_arxiv: '2401.17752'
-    value_gap_source_title: 'PF-GNN: Differentiable particle filtering based approximation
-      of universal graph representations'
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-01-31'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: KDD 2023
-    date: Mar 19, 2023
-    date_display: Mar 2023
-    date_iso: '2023-03-19'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 35
-  - model: ESC-GNN
-    model_key: esc-gnn
-    model_plain: ESC-GNN
-    metric_values:
-    - null
-    - 0.231
-    - 0.265
-    - 0.645
-    - 0.427
-    - 0.384
-    - 0.105
-    - 0.00221
-    - 0.00204
-    - 0.00033
-    - 0.38
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.231
-    sort_std: null
-    true_value: 0.231
-    true_std: null
-    paper_value: 0.231
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2303.10576'
-    value_gap_source_title: An Efficient Subgraph GNN with Provable Substructure Counting
-      Power
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-03-19'
-    value_gap_source_date_label: KDD 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: KDD 2023
-    date: Mar 19, 2023
-    date_display: Mar 2023
-    date_iso: '2023-03-19'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 43
-  - model: NGNN
-    model_key: ngnn
-    model_plain: NGNN
-    metric_values:
-    - null
-    - 0.428
-    - 0.29
-    - 0.295
-    - 0.305
-    - 0.489
-    - 0.174
-    - 0.00265
-    - 0.00297
-    - 0.0002
-    - 0.361
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.428
-    sort_std: null
-    true_value: 0.428
-    true_std: null
-    paper_value: 0.428
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2310.19142'
-    value_gap_source_title: 'MAG-GNN: Reinforcement Learning Boosted Graph Neural
-      Network'
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-10-29'
-    value_gap_source_date_label: NeurIPS 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: KDD 2023
-    date: Mar 19, 2023
-    date_display: Mar 2023
-    date_iso: '2023-03-19'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 67
-  - model: I^2-GNN
-    model_key: i^2-gnn
-    model_plain: I^2-GNN
-    metric_values:
-    - null
-    - 0.428
-    - 0.23
-    - 0.211
-    - 0.269
-    - 0.261
-    - 0.073
-    - 0.00261
-    - 0.00267
-    - 0.00014
-    - 0.206
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.428
-    sort_std: null
-    true_value: 0.428
-    true_std: null
-    paper_value: 0.428
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2310.19142'
-    value_gap_source_title: 'MAG-GNN: Reinforcement Learning Boosted Graph Neural
-      Network'
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-10-29'
-    value_gap_source_date_label: NeurIPS 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: KDD 2023
-    date: Mar 19, 2023
-    date_display: Mar 2023
-    date_iso: '2023-03-19'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 68
-  - model: 1-GNN
-    model_key: 1-gnn
-    model_plain: 1-GNN
-    metric_values:
-    - null
-    - 0.493
-    - 0.78
-    - 2.32
-    - 2.23
-    - 1.94
-    - 0.27
-    - 0.00321
-    - 0.00355
-    - 0.00124
-    - 2.08
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.493
-    sort_std: null
-    true_value: 0.493
-    true_std: null
-    paper_value: 0.493
-    paper_std: null
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2303.10576'
-    value_gap_source_title: An Efficient Subgraph GNN with Provable Substructure Counting
-      Power
-    value_note: ''
-    at_pub_value: 0.493
-    at_pub_std: null
-    at_pub_source_arxiv: '2111.06283'
-    at_pub_source_title: 'DropGNN: Random Dropouts Increase the Expressiveness of
-      Graph Neural Networks'
-    at_pub_source_date_iso: '2021-11-11'
-    at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2023-03-19'
-    value_gap_source_date_label: KDD 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: KDD 2023
-    date: Mar 19, 2023
-    date_display: Mar 2023
-    date_iso: '2023-03-19'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 75
-  metrics:
-  - gap
-  - mu
-  - alpha
-  - U0
-  - H
-  - G
-  - Cv
-  - HOMO
-  - LUMO
-  - zpve
-  - U
-  primary_metric: gap
-  rank_metric: mu
-  higher_is_better: false
-  experiment_scope: graph-level
-  dataset_primary_metric: gap
-  paper_metrics:
-  - mu
-  - alpha
-  - U0
-  - H
-  - G
-  - Cv
-  - HOMO
-  - LUMO
-  - zpve
-  - U
-  metric: mu
-  uses_non_primary_metric: true
-  paper_has_primary_metric: false
 - &id001
   dataset: ogbg-molhiv
   rows:
@@ -1251,8 +643,8 @@ results:
     value_note: ''
     sort_value: 0.8094
     sort_std: 0.006
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1287,7 +679,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 10
+    global_rank: 12
     sort_value: 0.809
     sort_std: 0.016
     comparison_type: global_top
@@ -1352,8 +744,8 @@ results:
     value_note: ''
     sort_value: 0.8039
     sort_std: 0.009
-    global_rank: 21
-    paper_rank: 111
+    global_rank: 22
+    paper_rank: 112
     rank_delta: 90
     rank_delta_abs: 90
     rank_delta_direction: worse
@@ -1628,8 +1020,8 @@ results:
     value_note: ''
     sort_value: 0.7921
     sort_std: 0.0084
-    global_rank: 59
-    paper_rank: 59
+    global_rank: 60
+    paper_rank: 60
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1697,8 +1089,8 @@ results:
     value_note: ''
     sort_value: 0.7905
     sort_std: 0.0132
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1765,8 +1157,8 @@ results:
     value_note: ''
     sort_value: 0.7868
     sort_std: 0.0093
-    global_rank: 80
-    paper_rank: 80
+    global_rank: 81
+    paper_rank: 81
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1833,8 +1225,8 @@ results:
     value_note: ''
     sort_value: 0.7849
     sort_std: 0.0101
-    global_rank: 89
-    paper_rank: 89
+    global_rank: 90
+    paper_rank: 90
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1901,8 +1293,8 @@ results:
     value_note: ''
     sort_value: 0.7834
     sort_std: 0.0186
-    global_rank: 93
-    paper_rank: 93
+    global_rank: 94
+    paper_rank: 94
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1969,8 +1361,8 @@ results:
     value_note: ''
     sort_value: 0.7801
     sort_std: 0.0104
-    global_rank: 110
-    paper_rank: 110
+    global_rank: 111
+    paper_rank: 111
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2037,9 +1429,9 @@ results:
     sort_value: 0.778
     sort_std: 0.0182
     global_rank: 120
-    paper_rank: 162
-    rank_delta: 42
-    rank_delta_abs: 42
+    paper_rank: 163
+    rank_delta: 43
+    rank_delta_abs: 43
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2104,8 +1496,8 @@ results:
     value_note: ''
     sort_value: 0.774
     sort_std: 0.0177
-    global_rank: 143
-    paper_rank: 143
+    global_rank: 144
+    paper_rank: 144
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2140,7 +1532,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 171
+    global_rank: 172
     sort_value: 0.769
     sort_std: 0.0136
     comparison_type: global_top
@@ -2205,8 +1597,8 @@ results:
     value_note: ''
     sort_value: 0.7678
     sort_std: 0.0166
-    global_rank: 179
-    paper_rank: 179
+    global_rank: 180
+    paper_rank: 180
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2229,12 +1621,9 @@ results_grouped:
 - benchmark: OGB
   datasets:
   - *id001
-- benchmark: Quantum Chemistry
-  datasets:
-  - *id002
 - benchmark: GNNBenchmark
   datasets:
-  - *id003
+  - *id002
 datasets_by_scope:
 - scope: graph-level
   label: Graph-level
@@ -2244,11 +1633,6 @@ datasets_by_scope:
     datasets:
     - dataset: ogbg-molhiv
       dataset_slug: ogbg-molhiv
-  - benchmark: Quantum Chemistry
-    benchmark_slug: quantum-chemistry
-    datasets:
-    - dataset: QM9
-      dataset_slug: qm9
   - benchmark: GNNBenchmark
     benchmark_slug: gnnbenchmark
     datasets:

@@ -52,8 +52,8 @@ proposed_models:
 - GraphMAE
 - LaGraph
 - Graph-JEPA
-mrr: 0.0035
-adjusted_mrr: 0.0023
+mrr: 0.0034
+adjusted_mrr: 0.0022
 mrr_dataset_count: 2
 benchmark_categories:
 - TU Dortmund
@@ -92,7 +92,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -441,20 +441,19 @@ results:
     date_iso: '2023-09-27'
     published_venue: TMLR 2023
     published_conference: TMLR 2023
-    at_pub_value: 0.8862
-    at_pub_std: 0.0127
-    at_pub_source_arxiv: '2106.05819'
-    at_pub_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
-      Learning
-    at_pub_source_date_iso: '2021-06-10'
-    at_pub_source_date_label: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2023-09-27'
     value_gap_source_date_label: TMLR 2023
-    gap_vs_at_pub: 0.010800000000000032
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
-    insignificant_improvement_at_pub: true
+    insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
@@ -469,12 +468,12 @@ results:
     value_note: ''
     sort_value: 0.897
     sort_std: 0.0103
-    global_rank: 230
-    paper_rank: 230
+    global_rank: 235
+    paper_rank: 235
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -539,9 +538,9 @@ results:
     sort_value: 0.894
     sort_std: 0.01
     global_rank: 259
-    paper_rank: 783
-    rank_delta: 524
-    rank_delta_abs: 524
+    paper_rank: 790
+    rank_delta: 531
+    rank_delta_abs: 531
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -609,9 +608,9 @@ results:
     sort_value: 0.893
     sort_std: 0.0514
     global_rank: 273
-    paper_rank: 369
-    rank_delta: 96
-    rank_delta_abs: 96
+    paper_rank: 370
+    rank_delta: 97
+    rank_delta_abs: 97
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -678,9 +677,9 @@ results:
     sort_value: 0.893
     sort_std: 0.011
     global_rank: 274
-    paper_rank: 345
-    rank_delta: 71
-    rank_delta_abs: 71
+    paper_rank: 346
+    rank_delta: 72
+    rank_delta_abs: 72
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -747,9 +746,9 @@ results:
     sort_value: 0.8927
     sort_std: 0.0153
     global_rank: 282
-    paper_rank: 342
-    rank_delta: 60
-    rank_delta_abs: 60
+    paper_rank: 343
+    rank_delta: 61
+    rank_delta_abs: 61
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -788,13 +787,12 @@ results:
     date_iso: '2023-09-27'
     published_venue: TMLR 2023
     published_conference: TMLR 2023
-    at_pub_value: 0.8925
-    at_pub_std: 0.0145
-    at_pub_source_arxiv: '2106.05819'
-    at_pub_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
-      Learning
-    at_pub_source_date_iso: '2021-06-10'
-    at_pub_source_date_label: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2023-09-27'
     value_gap_source_date_label: TMLR 2023
     gap_vs_at_pub: null
@@ -884,8 +882,8 @@ results:
     value_note: ''
     sort_value: 0.8829
     sort_std: 0.0131
-    global_rank: 341
-    paper_rank: 341
+    global_rank: 342
+    paper_rank: 342
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -920,7 +918,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 429
+    global_rank: 430
     sort_value: 0.866
     sort_std: 0.0495
     comparison_type: global_top
@@ -940,6 +938,72 @@ results:
 - &id002
   dataset: PROTEINS
   rows:
+  - model: MSH-GNN
+    model_key: msh-gnn
+    model_plain: MSH-GNN
+    value: 0.941
+    std: 0.033
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.15015'
+    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
+    date: May 21, 2025
+    date_display: May 2025
+    date_iso: '2025-05-21'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.941
+    sort_std: 0.033
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GRDL
+    model_key: grdl
+    model_plain: GRDL
+    value: 0.826
+    std: 0.012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2408.11370'
+    title: 'Graph Classification via Reference Distribution Learning: Theory and Practice'
+    date: Aug 21, 2024
+    date_display: Aug 2024
+    date_iso: '2024-08-21'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.826
+    sort_std: 0.012
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: GMN
     model_key: gmn
     model_plain: GMN
@@ -965,81 +1029,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 3
     sort_value: 0.8225
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: CI-GNN
-    model_key: ci-gnn
-    model_plain: CI-GNN
-    value: 0.82
-    std: 0.02
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2301.01642'
-    title: 'CI-GNN: A Granger Causality-Inspired Graph Neural Network for Interpretable
-      Brain Network-Based Psychiatric Diagnosis'
-    date: Jan 4, 2023
-    date_display: Jan 2023
-    date_iso: '2023-01-04'
-    venue: Neural Networks
-    codebase_url: https://github.com/ZKZ-Brain/CI-GNN
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.82
-    sort_std: 0.02
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: DiffPool+GPL
-    model_key: diffpool+gpl
-    model_plain: DiffPool+GPL
-    value: 0.8196
-    std: 0.0286
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.11361'
-    title: 'Graph Structure Prompt Learning: A Novel Methodology to Improve Performance
-      of Graph Neural Networks'
-    date: Jul 16, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-16'
-    venue: Applied intelligence (Boston)
-    codebase_url: https://github.com/PreckLi/graph_prompt_learning
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.8196
-    sort_std: 0.0286
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: GIN
     model_key: gin
@@ -1067,13 +1063,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 27
+    global_rank: 38
     sort_value: 0.788
     sort_std: 0.041
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: S2GAE
     model_key: s2gae
@@ -1132,8 +1128,8 @@ results:
     value_note: ''
     sort_value: 0.7647
     sort_std: 0.0112
-    global_rank: 111
-    paper_rank: 126
+    global_rank: 131
+    paper_rank: 146
     rank_delta: 15
     rank_delta_abs: 15
     rank_delta_direction: worse
@@ -1168,7 +1164,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 153
+    global_rank: 170
     sort_value: 0.76
     sort_std: 0.032
     comparison_type: global_top
@@ -1233,8 +1229,8 @@ results:
     value_note: ''
     sort_value: 0.7568
     sort_std: 0.0378
-    global_rank: 188
-    paper_rank: 188
+    global_rank: 204
+    paper_rank: 204
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1301,8 +1297,8 @@ results:
     value_note: ''
     sort_value: 0.753
     sort_std: 0.005
-    global_rank: 224
-    paper_rank: 224
+    global_rank: 243
+    paper_rank: 243
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1369,8 +1365,8 @@ results:
     value_note: ''
     sort_value: 0.752
     sort_std: 0.004
-    global_rank: 239
-    paper_rank: 239
+    global_rank: 258
+    paper_rank: 258
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1378,6 +1374,146 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: AD-GCL-FIX
+    model_key: ad-gcl-fix
+    model_plain: AD-GCL-FIX
+    value: 0.7359
+    std: 0.0065
+    paper_value: 0.7359
+    paper_std: 0.0065
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: suresh2021adversarial
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Sep 27, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-27'
+    published_venue: TMLR 2023
+    published_conference: TMLR 2023
+    at_pub_value: 0.7504
+    at_pub_std: 0.0048
+    at_pub_source_arxiv: '2106.05819'
+    at_pub_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
+      Learning
+    at_pub_source_date_iso: '2021-06-10'
+    at_pub_source_date_label: NeurIPS 2021
+    value_gap_source_date_iso: '2021-06-10'
+    value_gap_source_date_label: NeurIPS 2021
+    gap_vs_at_pub: 0.014499999999999957
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7504
+    true_std: 0.0048
+    value_gap_source_arxiv: '2106.05819'
+    value_gap_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
+      Learning
+    value_gap_source_is_current_paper: false
+    value_gap: 0.014499999999999957
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7504
+    sort_std: 0.0048
+    global_rank: 270
+    paper_rank: 376
+    rank_delta: 106
+    rank_delta_abs: 106
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
+      Learning
+    comparison_source_arxiv: '2106.05819'
+    is_best: false
+    is_std_outlier: false
+  - model: AD-GCL-OPT
+    model_key: ad-gcl-opt
+    model_plain: AD-GCL-OPT
+    value: 0.7381
+    std: 0.0046
+    paper_value: 0.7381
+    paper_std: 0.0046
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: suresh2021adversarial
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Sep 27, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-27'
+    published_venue: TMLR 2023
+    published_conference: TMLR 2023
+    at_pub_value: 0.7504
+    at_pub_std: 0.0048
+    at_pub_source_arxiv: '2106.05819'
+    at_pub_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
+      Learning
+    at_pub_source_date_iso: '2021-06-10'
+    at_pub_source_date_label: NeurIPS 2021
+    value_gap_source_date_iso: '2021-06-10'
+    value_gap_source_date_label: NeurIPS 2021
+    gap_vs_at_pub: 0.012299999999999978
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7504
+    true_std: 0.0048
+    value_gap_source_arxiv: '2106.05819'
+    value_gap_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
+      Learning
+    value_gap_source_is_current_paper: false
+    value_gap: 0.012299999999999978
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7504
+    sort_std: 0.0048
+    global_rank: 271
+    paper_rank: 361
+    rank_delta: 90
+    rank_delta_abs: 90
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
+      Learning
+    comparison_source_arxiv: '2106.05819'
     is_best: false
     is_std_outlier: false
   - model: GraphCL
@@ -1436,10 +1572,10 @@ results:
     value_note: ''
     sort_value: 0.7489
     sort_std: 0.0065
-    global_rank: 275
-    paper_rank: 382
-    rank_delta: 107
-    rank_delta_abs: 107
+    global_rank: 295
+    paper_rank: 413
+    rank_delta: 118
+    rank_delta_abs: 118
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1479,11 +1615,11 @@ results:
     published_conference: TMLR 2023
     at_pub_value: 0.7444
     at_pub_std: 0.0031
-    at_pub_source_arxiv: '2202.03104'
-    at_pub_source_title: 'SimGRACE: A Simple Framework for Graph Contrastive Learning
-      without Data Augmentation'
-    at_pub_source_date_iso: '2022-02-07'
-    at_pub_source_date_label: WWW 2022
+    at_pub_source_arxiv: '2106.05819'
+    at_pub_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
+      Learning
+    at_pub_source_date_iso: '2021-06-10'
+    at_pub_source_date_label: NeurIPS 2021
     value_gap_source_date_iso: '2025-11-09'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: 0.01869999999999994
@@ -1505,152 +1641,16 @@ results:
     value_note: ''
     sort_value: 0.7444
     sort_std: 0.004
-    global_rank: 306
-    paper_rank: 392
-    rank_delta: 86
-    rank_delta_abs: 86
+    global_rank: 328
+    paper_rank: 426
+    rank_delta: 98
+    rank_delta_abs: 98
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'SimGRACE: A Simple Framework for Graph Contrastive Learning
-      without Data Augmentation'
-    comparison_source_arxiv: '2202.03104'
-    is_best: false
-    is_std_outlier: false
-  - model: AD-GCL-OPT
-    model_key: ad-gcl-opt
-    model_plain: AD-GCL-OPT
-    value: 0.7381
-    std: 0.0046
-    paper_value: 0.7381
-    paper_std: 0.0046
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: suresh2021adversarial
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: 10-fold CV
-    date: Sep 27, 2023
-    date_display: Sep 2023
-    date_iso: '2023-09-27'
-    published_venue: TMLR 2023
-    published_conference: TMLR 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-09-27'
-    value_gap_source_date_label: TMLR 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7381
-    true_std: 0.0046
-    value_gap_source_arxiv: '2309.16014'
-    value_gap_source_title: Graph-level Representation Learning with Joint-Embedding
-      Predictive Architectures
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7381
-    sort_std: 0.0046
-    global_rank: 336
-    paper_rank: 336
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AD-GCL-FIX
-    model_key: ad-gcl-fix
-    model_plain: AD-GCL-FIX
-    value: 0.7359
-    std: 0.0065
-    paper_value: 0.7359
-    paper_std: 0.0065
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: suresh2021adversarial
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: 10-fold CV
-    date: Sep 27, 2023
-    date_display: Sep 2023
-    date_iso: '2023-09-27'
-    published_venue: TMLR 2023
-    published_conference: TMLR 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-09-27'
-    value_gap_source_date_label: TMLR 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7359
-    true_std: 0.0065
-    value_gap_source_arxiv: '2309.16014'
-    value_gap_source_title: Graph-level Representation Learning with Joint-Embedding
-      Predictive Architectures
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7359
-    sort_std: 0.0065
-    global_rank: 349
-    paper_rank: 349
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    comparison_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
+      Learning
+    comparison_source_arxiv: '2106.05819'
     is_best: false
     is_std_outlier: false
   - model: F-GIN
@@ -1710,8 +1710,8 @@ results:
     value_note: ''
     sort_value: 0.7239
     sort_std: 0.0276
-    global_rank: 400
-    paper_rank: 400
+    global_rank: 437
+    paper_rank: 437
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1778,8 +1778,8 @@ results:
     value_note: ''
     sort_value: 0.7099
     sort_std: 0.0386
-    global_rank: 440
-    paper_rank: 440
+    global_rank: 488
+    paper_rank: 488
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

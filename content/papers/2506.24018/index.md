@@ -68,42 +68,9 @@ task_categories:
 experiment_scopes:
 - edge-level
 results:
-- &id002
+- &id003
   dataset: ogbl-citation2
   rows:
-  - model: MPLP
-    model_key: mplp
-    model_plain: MPLP
-    value: 0.9072
-    std: 0.0012
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.03845'
-    title: Reconsidering the Performance of GAE in Link Prediction
-    date: Nov 6, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-06'
-    venue: International Conference on Information and Knowledge Management
-    codebase_url: https://github.com/GraphPKU/Refined-GAE
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9072
-    sort_std: 0.0012
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
   - model: CFG
     model_key: cfg
     model_plain: CFG
@@ -129,13 +96,13 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: Each node is a paper with 128-dimensional word2vec features
     is_global_top: true
-    global_rank: 2
+    global_rank: 1
     sort_value: 0.8997
     sort_std: 0.0015
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: SIEG
     model_key: sieg
@@ -162,13 +129,46 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: Each node is a paper with 128-dimensional word2vec features
     is_global_top: true
-    global_rank: 3
+    global_rank: 2
     sort_value: 0.8987
     sort_std: 0.0018
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
+    is_std_outlier: false
+  - model: LPFormer
+    model_key: lpformer
+    model_plain: LPFormer
+    value: 0.8981
+    std: 0.0013
+    metric: MRR
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2310.11009'
+    title: 'LPFormer: An Adaptive Graph Transformer for Link Prediction'
+    date: Oct 17, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-17'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/HarryShomer/LPFormer
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.8981
+    sort_std: 0.0013
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
     is_std_outlier: false
   - model: NCNC
     model_key: ncnc
@@ -202,11 +202,10 @@ results:
     published_conference: NeurIPS 2025
     at_pub_value: 0.8912
     at_pub_std: 0.004
-    at_pub_source_arxiv: '2309.00976'
-    at_pub_source_title: Pure Message Passing Can Estimate Common Neighbor for Link
-      Prediction
-    at_pub_source_date_iso: '2023-09-02'
-    at_pub_source_date_label: NeurIPS 2023
+    at_pub_source_arxiv: '2310.11009'
+    at_pub_source_title: 'LPFormer: An Adaptive Graph Transformer for Link Prediction'
+    at_pub_source_date_iso: '2023-10-17'
+    at_pub_source_date_label: KDD 2023
     value_gap_source_date_iso: '2023-10-17'
     value_gap_source_date_label: KDD 2023
     gap_vs_at_pub: 0.6951
@@ -227,16 +226,15 @@ results:
     value_note: ''
     sort_value: 0.8912
     sort_std: 0.004
-    global_rank: 6
-    paper_rank: 83
-    rank_delta: 77
-    rank_delta_abs: 77
+    global_rank: 5
+    paper_rank: 77
+    rank_delta: 72
+    rank_delta_abs: 72
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Pure Message Passing Can Estimate Common Neighbor for
-      Link Prediction
-    comparison_source_arxiv: '2309.00976'
+    comparison_source_title: 'LPFormer: An Adaptive Graph Transformer for Link Prediction'
+    comparison_source_arxiv: '2310.11009'
     is_best: false
     is_std_outlier: false
   - model: NCN
@@ -295,10 +293,10 @@ results:
     value_note: ''
     sort_value: 0.8809
     sort_std: 0.0006
-    global_rank: 11
-    paper_rank: 79
-    rank_delta: 68
-    rank_delta_abs: 68
+    global_rank: 9
+    paper_rank: 73
+    rank_delta: 64
+    rank_delta_abs: 64
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -343,8 +341,8 @@ results:
       for Multi-Node Representation Learning'
     at_pub_source_date_iso: '2020-10-30'
     at_pub_source_date_label: NeurIPS 2020
-    value_gap_source_date_iso: '2024-11-06'
-    value_gap_source_date_label: '2024'
+    value_gap_source_date_iso: '2023-10-17'
+    value_gap_source_date_label: KDD 2023
     gap_vs_at_pub: 0.6707000000000001
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -355,18 +353,18 @@ results:
     today_delta_significant: true
     true_value: 0.8767
     true_std: 0.0032
-    value_gap_source_arxiv: '2411.03845'
-    value_gap_source_title: Reconsidering the Performance of GAE in Link Prediction
+    value_gap_source_arxiv: '2310.11009'
+    value_gap_source_title: 'LPFormer: An Adaptive Graph Transformer for Link Prediction'
     value_gap_source_is_current_paper: false
     value_gap: 0.6707000000000001
     has_value_note: false
     value_note: ''
     sort_value: 0.8767
     sort_std: 0.0032
-    global_rank: 12
-    paper_rank: 82
-    rank_delta: 70
-    rank_delta_abs: 70
+    global_rank: 10
+    paper_rank: 76
+    rank_delta: 66
+    rank_delta_abs: 66
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -411,8 +409,8 @@ results:
     at_pub_source_title: Graph Neural Networks for Link Prediction with Subgraph Sketching
     at_pub_source_date_iso: '2022-09-30'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2024-11-06'
-    value_gap_source_date_label: '2024'
+    value_gap_source_date_iso: '2023-10-17'
+    value_gap_source_date_label: KDD 2023
     gap_vs_at_pub: 0.6839000000000001
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -423,18 +421,18 @@ results:
     today_delta_significant: true
     true_value: 0.8756
     true_std: 0.0011
-    value_gap_source_arxiv: '2411.03845'
-    value_gap_source_title: Reconsidering the Performance of GAE in Link Prediction
+    value_gap_source_arxiv: '2310.11009'
+    value_gap_source_title: 'LPFormer: An Adaptive Graph Transformer for Link Prediction'
     value_gap_source_is_current_paper: false
     value_gap: 0.6839000000000001
     has_value_note: false
     value_note: ''
     sort_value: 0.8756
     sort_std: 0.0011
-    global_rank: 13
-    paper_rank: 83
-    rank_delta: 70
-    rank_delta_abs: 70
+    global_rank: 11
+    paper_rank: 77
+    rank_delta: 66
+    rank_delta_abs: 66
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -480,8 +478,8 @@ results:
       for Link Prediction'
     at_pub_source_date_iso: '2022-06-09'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2024-11-06'
-    value_gap_source_date_label: '2024'
+    value_gap_source_date_iso: '2023-10-17'
+    value_gap_source_date_label: KDD 2023
     gap_vs_at_pub: 0.7114
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -492,18 +490,18 @@ results:
     today_delta_significant: true
     true_value: 0.8726
     true_std: 0.0084
-    value_gap_source_arxiv: '2411.03845'
-    value_gap_source_title: Reconsidering the Performance of GAE in Link Prediction
+    value_gap_source_arxiv: '2310.11009'
+    value_gap_source_title: 'LPFormer: An Adaptive Graph Transformer for Link Prediction'
     value_gap_source_is_current_paper: false
     value_gap: 0.7114
     has_value_note: false
     value_note: ''
     sort_value: 0.8726
     sort_std: 0.0084
-    global_rank: 16
-    paper_rank: 83
-    rank_delta: 67
-    rank_delta_abs: 67
+    global_rank: 13
+    paper_rank: 77
+    rank_delta: 64
+    rank_delta_abs: 64
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -570,10 +568,10 @@ results:
     value_note: ''
     sort_value: 0.8705
     sort_std: 0.0004
-    global_rank: 17
-    paper_rank: 83
-    rank_delta: 66
-    rank_delta_abs: 66
+    global_rank: 14
+    paper_rank: 77
+    rank_delta: 63
+    rank_delta_abs: 63
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -640,10 +638,10 @@ results:
     value_note: ''
     sort_value: 0.8367
     sort_std: 0.0007
-    global_rank: 33
-    paper_rank: 79
-    rank_delta: 46
-    rank_delta_abs: 46
+    global_rank: 28
+    paper_rank: 73
+    rank_delta: 45
+    rank_delta_abs: 45
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -677,7 +675,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 38
+    global_rank: 33
     sort_value: 0.8264
     sort_std: 0.0001
     comparison_type: global_top
@@ -711,7 +709,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 78
+    global_rank: 72
     sort_value: 0.3917
     sort_std: 0.0044
     comparison_type: global_top
@@ -1284,7 +1282,7 @@ results:
   metric: MRR
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id003
+- &id002
   dataset: ogbl-ddi
   rows:
   - model: GCN
@@ -1855,10 +1853,10 @@ datasets_by_scope:
     datasets:
     - dataset: ogbl-collab
       dataset_slug: ogbl-collab
-    - dataset: ogbl-citation2
-      dataset_slug: ogbl-citation2
     - dataset: ogbl-ddi
       dataset_slug: ogbl-ddi
+    - dataset: ogbl-citation2
+      dataset_slug: ogbl-citation2
 main_figure: /figures/2506.24018/main_figure.jpegoptim.jpg
 ---
 

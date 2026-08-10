@@ -78,9 +78,9 @@ results:
 - &id002
   dataset: D&D
   rows:
-  - model: GC-GNN (GraphSAGE)
-    model_key: gc-gnn (graphsage)
-    model_plain: GC-GNN (GraphSAGE)
+  - model: GC-GNN (GCN)
+    model_key: gc-gnn (gcn)
+    model_plain: GC-GNN (GCN)
     value: 0.921
     std: 0.081
     metric: Accuracy
@@ -101,8 +101,9 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: The paper describes GC-GNN as enhancing GNNs with graph
+      canonization positional encodings.
     is_global_top: true
     global_rank: 1
     sort_value: 0.921
@@ -782,7 +783,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -948,8 +949,8 @@ results:
     value_note: ''
     sort_value: 0.872
     sort_std: 0.014
-    global_rank: 404
-    paper_rank: 404
+    global_rank: 405
+    paper_rank: 405
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1015,8 +1016,8 @@ results:
     value_note: ''
     sort_value: 0.872
     sort_std: 0.026
-    global_rank: 405
-    paper_rank: 405
+    global_rank: 406
+    paper_rank: 406
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1051,7 +1052,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 429
+    global_rank: 430
     sort_value: 0.866
     sort_std: 0.0495
     comparison_type: global_top
@@ -1115,8 +1116,8 @@ results:
     value_note: ''
     sort_value: 0.856
     sort_std: 0.02
-    global_rank: 467
-    paper_rank: 467
+    global_rank: 468
+    paper_rank: 468
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1182,8 +1183,8 @@ results:
     value_note: ''
     sort_value: 0.847
     sort_std: 0.034
-    global_rank: 496
-    paper_rank: 496
+    global_rank: 497
+    paper_rank: 497
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1249,8 +1250,8 @@ results:
     value_note: ''
     sort_value: 0.847
     sort_std: 0.034
-    global_rank: 497
-    paper_rank: 497
+    global_rank: 498
+    paper_rank: 498
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1450,8 +1451,8 @@ results:
     value_note: ''
     sort_value: 0.745
     sort_std: 0.016
-    global_rank: 787
-    paper_rank: 787
+    global_rank: 794
+    paper_rank: 794
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

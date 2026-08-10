@@ -65,8 +65,8 @@ paper_type: method
 proposed_models:
 - GraphSAGE
 - weakly supervised graph anomaly detection method
-mrr: 0.0208
-adjusted_mrr: 0.0069
+mrr: 0.0244
+adjusted_mrr: 0.0081
 mrr_dataset_count: 1
 benchmark_categories:
 - Heterophily Benchmark
@@ -1092,9 +1092,9 @@ results:
 - &id001
   dataset: Questions
   rows:
-  - model: GraphSAGE + UniGAP
-    model_key: graphsage + unigap
-    model_plain: GraphSAGE + UniGAP
+  - model: UniGAP
+    model_key: unigap
+    model_plain: UniGAP
     value: 0.8421
     std: 0.008
     metric: ROC-AUC
@@ -1103,9 +1103,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
     arxiv_id: '2407.19420'
     title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
       Over-Smoothing in Node Classification Tasks'
@@ -1115,7 +1115,7 @@ results:
     venue: arXiv.org
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -1126,14 +1126,14 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: H2GCN + UniGAP
-    model_key: h2gcn + unigap
-    model_plain: H2GCN + UniGAP
-    value: 0.8359
+  - model: H2GCN + AdaEdge
+    model_key: h2gcn + adaedge
+    model_plain: H2GCN + AdaEdge
+    value: 0.8134
     std: 0.007
     metric: ROC-AUC
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
@@ -1149,25 +1149,25 @@ results:
     venue: arXiv.org
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.8359
+    sort_value: 0.8134
     sort_std: 0.007
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: GCN + UniGAP
-    model_key: gcn + unigap
-    model_plain: GCN + UniGAP
-    value: 0.8273
-    std: 0.009
+  - model: GCN +AdaEdge
+    model_key: gcn +adaedge
+    model_plain: GCN +AdaEdge
+    value: 0.8085
+    std: 0.008
     metric: ROC-AUC
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
@@ -1183,16 +1183,16 @@ results:
     venue: arXiv.org
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.8273
-    sort_std: 0.009
+    sort_value: 0.8085
+    sort_std: 0.008
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: GCN
     model_key: gcn
@@ -1253,10 +1253,10 @@ results:
     value_note: ''
     sort_value: 0.7902
     sort_std: 0.006
-    global_rank: 17
-    paper_rank: 178
-    rank_delta: 161
-    rank_delta_abs: 161
+    global_rank: 12
+    paper_rank: 160
+    rank_delta: 148
+    rank_delta_abs: 148
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1323,10 +1323,10 @@ results:
     value_note: ''
     sort_value: 0.7743
     sort_std: 0.012
-    global_rank: 40
-    paper_rank: 151
-    rank_delta: 111
-    rank_delta_abs: 111
+    global_rank: 33
+    paper_rank: 132
+    rank_delta: 99
+    rank_delta_abs: 99
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1393,10 +1393,10 @@ results:
     value_note: ''
     sort_value: 0.7721
     sort_std: 0.013
-    global_rank: 48
-    paper_rank: 177
-    rank_delta: 129
-    rank_delta_abs: 129
+    global_rank: 41
+    paper_rank: 159
+    rank_delta: 118
+    rank_delta_abs: 118
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1426,11 +1426,11 @@ results:
     date_iso: '2026-05-13'
     venue: null
     codebase_url: ''
-    uses_external_data: false
-    input_feature_source: unknown
+    uses_external_data: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 59
+    global_rank: 51
     sort_value: 0.7644
     sort_std: 0.0062
     comparison_type: global_top
@@ -1495,10 +1495,10 @@ results:
     value_note: ''
     sort_value: 0.7082
     sort_std: 0.001
-    global_rank: 104
-    paper_rank: 150
-    rank_delta: 46
-    rank_delta_abs: 46
+    global_rank: 91
+    paper_rank: 131
+    rank_delta: 40
+    rank_delta_abs: 40
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1565,10 +1565,10 @@ results:
     value_note: ''
     sort_value: 0.6996
     sort_std: null
-    global_rank: 116
-    paper_rank: 147
-    rank_delta: 31
-    rank_delta_abs: 31
+    global_rank: 100
+    paper_rank: 128
+    rank_delta: 28
+    rank_delta_abs: 28
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1636,10 +1636,10 @@ results:
     value_note: ''
     sort_value: 0.6947
     sort_std: null
-    global_rank: 122
-    paper_rank: 150
-    rank_delta: 28
-    rank_delta_abs: 28
+    global_rank: 105
+    paper_rank: 131
+    rank_delta: 26
+    rank_delta_abs: 26
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1707,10 +1707,10 @@ results:
     value_note: ''
     sort_value: 0.6838
     sort_std: null
-    global_rank: 126
-    paper_rank: 157
-    rank_delta: 31
-    rank_delta_abs: 31
+    global_rank: 109
+    paper_rank: 138
+    rank_delta: 29
+    rank_delta_abs: 29
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1778,10 +1778,10 @@ results:
     value_note: ''
     sort_value: 0.6824
     sort_std: null
-    global_rank: 127
-    paper_rank: 151
-    rank_delta: 24
-    rank_delta_abs: 24
+    global_rank: 110
+    paper_rank: 132
+    rank_delta: 22
+    rank_delta_abs: 22
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1849,10 +1849,10 @@ results:
     value_note: ''
     sort_value: 0.6776
     sort_std: null
-    global_rank: 132
-    paper_rank: 155
-    rank_delta: 23
-    rank_delta_abs: 23
+    global_rank: 114
+    paper_rank: 136
+    rank_delta: 22
+    rank_delta_abs: 22
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1919,8 +1919,8 @@ results:
     value_note: ''
     sort_value: 0.657
     sort_std: 0.02
-    global_rank: 137
-    paper_rank: 137
+    global_rank: 120
+    paper_rank: 120
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1989,8 +1989,8 @@ results:
     value_note: ''
     sort_value: 0.638
     sort_std: 0.06
-    global_rank: 146
-    paper_rank: 146
+    global_rank: 127
+    paper_rank: 127
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2059,8 +2059,8 @@ results:
     value_note: ''
     sort_value: 0.606
     sort_std: 0.01
-    global_rank: 151
-    paper_rank: 151
+    global_rank: 132
+    paper_rank: 132
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2128,8 +2128,8 @@ results:
     value_note: ''
     sort_value: 0.595
     sort_std: 0.06
-    global_rank: 153
-    paper_rank: 153
+    global_rank: 134
+    paper_rank: 134
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2197,8 +2197,8 @@ results:
     value_note: ''
     sort_value: 0.565
     sort_std: 0.01
-    global_rank: 160
-    paper_rank: 160
+    global_rank: 141
+    paper_rank: 141
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

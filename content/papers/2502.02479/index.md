@@ -35,8 +35,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - ENGNN
-mrr: 0.0335
-adjusted_mrr: 0.0335
+mrr: 0.0373
+adjusted_mrr: 0.0373
 mrr_dataset_count: 3
 benchmark_categories:
 - Classic
@@ -115,7 +115,7 @@ results:
     venue: arXiv.org
     codebase_url: https://github.com/ocx-lab/FloydNet
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -352,8 +352,8 @@ results:
     value_note: ''
     sort_value: 0.024
     sort_std: 0.003
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -420,8 +420,8 @@ results:
     value_note: ''
     sort_value: 0.025
     sort_std: 0.003
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -488,8 +488,8 @@ results:
     value_note: ''
     sort_value: 0.029
     sort_std: 0.003
-    global_rank: 38
-    paper_rank: 38
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -557,8 +557,8 @@ results:
     value_note: ''
     sort_value: 0.029
     sort_std: 0.001
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -624,8 +624,8 @@ results:
     value_note: ''
     sort_value: 0.03
     sort_std: null
-    global_rank: 41
-    paper_rank: 59
+    global_rank: 38
+    paper_rank: 56
     rank_delta: 18
     rank_delta_abs: 18
     rank_delta_direction: worse
@@ -692,8 +692,8 @@ results:
     value_note: ''
     sort_value: 0.044
     sort_std: 0.002
-    global_rank: 57
-    paper_rank: 57
+    global_rank: 54
+    paper_rank: 54
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -760,8 +760,8 @@ results:
     value_note: ''
     sort_value: 0.051
     sort_std: 0.004
-    global_rank: 62
-    paper_rank: 62
+    global_rank: 59
+    paper_rank: 59
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -828,8 +828,8 @@ results:
     value_note: ''
     sort_value: 0.088
     sort_std: 0.002
-    global_rank: 74
-    paper_rank: 74
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -864,7 +864,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 83
+    global_rank: 80
     sort_value: 0.113
     sort_std: 0.002
     comparison_type: global_top
@@ -881,7 +881,7 @@ results:
   metric: MAE
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id002
   dataset: ogbl-ddi
   rows:
   - model: ELGNN
@@ -1041,8 +1041,8 @@ results:
     value_note: ''
     sort_value: 0.7851
     sort_std: 0.0136
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 16
+    paper_rank: 16
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1109,8 +1109,8 @@ results:
     value_note: ''
     sort_value: 0.7761
     sort_std: 0.045
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1176,8 +1176,8 @@ results:
     value_note: ''
     sort_value: 0.6719
     sort_std: 0.0118
-    global_rank: 22
-    paper_rank: 39
+    global_rank: 20
+    paper_rank: 37
     rank_delta: 17
     rank_delta_abs: 17
     rank_delta_direction: worse
@@ -1243,10 +1243,10 @@ results:
     value_note: ''
     sort_value: 0.6476
     sort_std: 0.0145
-    global_rank: 26
-    paper_rank: 56
-    rank_delta: 30
-    rank_delta_abs: 30
+    global_rank: 24
+    paper_rank: 53
+    rank_delta: 29
+    rank_delta_abs: 29
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1312,8 +1312,8 @@ results:
     value_note: ''
     sort_value: 0.6357
     sort_std: 0.0352
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1348,7 +1348,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 40
+    global_rank: 38
     sort_value: 0.539
     sort_std: 0.0474
     comparison_type: global_top
@@ -1412,8 +1412,8 @@ results:
     value_note: ''
     sort_value: 0.4974
     sort_std: 0.0239
-    global_rank: 46
-    paper_rank: 62
+    global_rank: 43
+    paper_rank: 59
     rank_delta: 16
     rank_delta_abs: 16
     rank_delta_direction: worse
@@ -1479,8 +1479,8 @@ results:
     value_note: ''
     sort_value: 0.4401
     sort_std: null
-    global_rank: 50
-    paper_rank: 65
+    global_rank: 47
+    paper_rank: 62
     rank_delta: 15
     rank_delta_abs: 15
     rank_delta_direction: worse
@@ -1546,8 +1546,8 @@ results:
     value_note: ''
     sort_value: 0.3975
     sort_std: null
-    global_rank: 53
-    paper_rank: 78
+    global_rank: 50
+    paper_rank: 75
     rank_delta: 25
     rank_delta_abs: 25
     rank_delta_direction: worse
@@ -1613,8 +1613,8 @@ results:
     value_note: ''
     sort_value: 0.3869
     sort_std: null
-    global_rank: 54
-    paper_rank: 81
+    global_rank: 51
+    paper_rank: 78
     rank_delta: 27
     rank_delta_abs: 27
     rank_delta_direction: worse
@@ -1654,16 +1654,16 @@ results:
     date_iso: '2025-02-04'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.9443
-    at_pub_std: 0.0057
-    at_pub_source_arxiv: '2411.03845'
-    at_pub_source_title: Reconsidering the Performance of GAE in Link Prediction
-    at_pub_source_date_iso: '2024-11-06'
-    at_pub_source_date_label: '2024'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2025-02-04'
     value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.6967000000000001
-    worse_than_at_pub: true
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
@@ -1681,15 +1681,15 @@ results:
     value_note: ''
     sort_value: 0.2476
     sort_std: 0.1529
-    global_rank: 69
-    paper_rank: 69
+    global_rank: 66
+    paper_rank: 66
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Reconsidering the Performance of GAE in Link Prediction
-    comparison_source_arxiv: '2411.03845'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: NMPNN
@@ -1749,8 +1749,8 @@ results:
     value_note: ''
     sort_value: 0.2308
     sort_std: 0.0589
-    global_rank: 72
-    paper_rank: 72
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1817,8 +1817,8 @@ results:
     value_note: ''
     sort_value: 0.04
     sort_std: 0.0058
-    global_rank: 97
-    paper_rank: 97
+    global_rank: 94
+    paper_rank: 94
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1837,75 +1837,9 @@ results:
   metric: Hits@20
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id003
   dataset: ogbl-ppa
   rows:
-  - model: Optimized GAE
-    model_key: optimized gae
-    model_plain: Optimized GAE
-    value: 0.7841
-    std: 0.0083
-    metric: Hits@100
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.03845'
-    title: Reconsidering the Performance of GAE in Link Prediction
-    date: Nov 6, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-06'
-    venue: International Conference on Information and Knowledge Management
-    codebase_url: https://github.com/GraphPKU/Refined-GAE
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.7841
-    sort_std: 0.0083
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: MPLP
-    model_key: mplp
-    model_plain: MPLP
-    value: 0.6524
-    std: 0.015
-    metric: Hits@100
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.03845'
-    title: Reconsidering the Performance of GAE in Link Prediction
-    date: Nov 6, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-06'
-    venue: International Conference on Information and Knowledge Management
-    codebase_url: https://github.com/GraphPKU/Refined-GAE
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.6524
-    sort_std: 0.015
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
   - model: OGB Leader
     model_key: ogb leader
     model_plain: OGB Leader
@@ -1928,16 +1862,82 @@ results:
     venue: Trans. Mach. Learn. Res.
     codebase_url: https://github.com/workrep20232/PROXI
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 1
     sort_value: 0.6524
     sort_std: 0.015
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
+    is_std_outlier: false
+  - model: PRB
+    model_key: prb
+    model_plain: PRB
+    value: 0.6347
+    std: 0.0175
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2411.01410'
+    title: PageRank Bandits for Link Prediction
+    date: Nov 3, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-03'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/jiaruzouu/PRB
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.6347
+    sort_std: 0.0175
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: LPFormer
+    model_key: lpformer
+    model_plain: LPFormer
+    value: 0.6332
+    std: 0.0063
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2310.11009'
+    title: 'LPFormer: An Adaptive Graph Transformer for Link Prediction'
+    date: Oct 17, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-17'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/HarryShomer/LPFormer
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.6332
+    sort_std: 0.0063
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
     is_std_outlier: false
   - model: RA
     model_key: ra
@@ -1995,10 +1995,10 @@ results:
     value_note: ''
     sort_value: 0.5324
     sort_std: 0.0
-    global_rank: 11
-    paper_rank: 19
-    rank_delta: 8
-    rank_delta_abs: 8
+    global_rank: 9
+    paper_rank: 16
+    rank_delta: 7
+    rank_delta_abs: 7
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2063,10 +2063,10 @@ results:
     value_note: ''
     sort_value: 0.5013
     sort_std: 0.0055
-    global_rank: 16
-    paper_rank: 67
-    rank_delta: 51
-    rank_delta_abs: 51
+    global_rank: 14
+    paper_rank: 62
+    rank_delta: 48
+    rank_delta_abs: 48
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2132,8 +2132,8 @@ results:
     value_note: ''
     sort_value: 0.4985
     sort_std: 0.002
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2201,8 +2201,8 @@ results:
     value_note: ''
     sort_value: 0.4913
     sort_std: 0.006
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2270,8 +2270,8 @@ results:
     value_note: ''
     sort_value: 0.488
     sort_std: 0.0316
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2306,7 +2306,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 26
+    global_rank: 23
     sort_value: 0.46
     sort_std: 0.0
     comparison_type: global_top
@@ -2371,8 +2371,8 @@ results:
     value_note: ''
     sort_value: 0.4497
     sort_std: 0.0074
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2439,8 +2439,8 @@ results:
     value_note: ''
     sort_value: 0.399
     sort_std: 0.0552
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2508,8 +2508,8 @@ results:
     value_note: ''
     sort_value: 0.3245
     sort_std: 0.0
-    global_rank: 43
-    paper_rank: 43
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2575,8 +2575,8 @@ results:
     value_note: ''
     sort_value: 0.3084
     sort_std: 0.0178
-    global_rank: 49
-    paper_rank: 63
+    global_rank: 45
+    paper_rank: 59
     rank_delta: 14
     rank_delta_abs: 14
     rank_delta_direction: worse
@@ -2643,8 +2643,8 @@ results:
     value_note: ''
     sort_value: 0.2765
     sort_std: 0.0
-    global_rank: 53
-    paper_rank: 53
+    global_rank: 49
+    paper_rank: 49
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2679,7 +2679,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 68
+    global_rank: 63
     sort_value: 0.1655
     sort_std: 0.024
     comparison_type: global_top
@@ -2744,8 +2744,8 @@ results:
     value_note: ''
     sort_value: 0.0562
     sort_std: 0.0252
-    global_rank: 75
-    paper_rank: 75
+    global_rank: 70
+    paper_rank: 70
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2787,10 +2787,10 @@ datasets_by_scope:
   - benchmark: OGB
     benchmark_slug: ogb
     datasets:
-    - dataset: ogbl-ppa
-      dataset_slug: ogbl-ppa
     - dataset: ogbl-ddi
       dataset_slug: ogbl-ddi
+    - dataset: ogbl-ppa
+      dataset_slug: ogbl-ppa
 single_proposed_model: ENGNN
 main_figure: /figures/2502.02479/main_figure.jpegoptim.jpg
 ---

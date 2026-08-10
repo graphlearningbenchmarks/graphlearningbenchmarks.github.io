@@ -613,6 +613,12 @@ variants:
   metric_counts:
   - 21
   milestones: &id001
+  - value: 0.9169
+    std: 0.0019
+    model: UniGCNII
+    arxiv_id: '2106.13264'
+    title: Hypergraph Benchmarks
+    date: '2021-06-24'
   - value: 0.9198
     std: 0.0018
     model: AllSetTransformer

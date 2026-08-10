@@ -255,15 +255,15 @@ results:
     date_iso: '2021-04-01'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.757
+    at_pub_value: 0.808
     at_pub_std: 0.001
-    at_pub_source_arxiv: '2103.00959'
-    at_pub_source_title: 'CogDL: A Comprehensive Library for Graph Deep Learning'
-    at_pub_source_date_iso: '2021-03-01'
-    at_pub_source_date_label: WWW 2021
+    at_pub_source_arxiv: '1901.01343'
+    at_pub_source_title: Graph Neural Networks With Convolutional ARMA Filters
+    at_pub_source_date_iso: '2019-01-05'
+    at_pub_source_date_label: '2019'
     value_gap_source_date_iso: '2022-02-04'
     value_gap_source_date_label: ICML 2022
-    gap_vs_at_pub: 0.10699999999999998
+    gap_vs_at_pub: 0.15800000000000003
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -282,14 +282,14 @@ results:
     sort_value: 0.985
     sort_std: null
     global_rank: 21
-    paper_rank: 140
-    rank_delta: 119
-    rank_delta_abs: 119
+    paper_rank: 148
+    rank_delta: 127
+    rank_delta_abs: 127
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'CogDL: A Comprehensive Library for Graph Deep Learning'
-    comparison_source_arxiv: '2103.00959'
+    comparison_source_title: Graph Neural Networks With Convolutional ARMA Filters
+    comparison_source_arxiv: '1901.01343'
     is_best: false
     is_std_outlier: false
   - model: GeniePath
@@ -350,9 +350,9 @@ results:
     sort_value: 0.985
     sort_std: null
     global_rank: 22
-    paper_rank: 120
-    rank_delta: 98
-    rank_delta_abs: 98
+    paper_rank: 128
+    rank_delta: 106
+    rank_delta_abs: 106
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -417,8 +417,8 @@ results:
     value_note: ''
     sort_value: 0.9749
     sort_std: 0.0
-    global_rank: 53
-    paper_rank: 53
+    global_rank: 54
+    paper_rank: 54
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -460,11 +460,10 @@ results:
     published_conference: ''
     at_pub_value: 0.973
     at_pub_std: 0.002
-    at_pub_source_arxiv: '1803.07294'
-    at_pub_source_title: 'GaAN: Gated Attention Networks for Learning on Large and
-      Spatiotemporal Graphs'
-    at_pub_source_date_iso: '2018-03-20'
-    at_pub_source_date_label: '2018'
+    at_pub_source_arxiv: '1710.10903'
+    at_pub_source_title: Graph Attention Networks
+    at_pub_source_date_iso: '2017-10-30'
+    at_pub_source_date_label: ICLR 2017
     value_gap_source_date_iso: '2023-01-28'
     value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.03159999999999996
@@ -486,16 +485,15 @@ results:
     value_note: ''
     sort_value: 0.9732
     sort_std: 0.0032
-    global_rank: 55
+    global_rank: 56
     paper_rank: 85
-    rank_delta: 30
-    rank_delta_abs: 30
+    rank_delta: 29
+    rank_delta_abs: 29
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'GaAN: Gated Attention Networks for Learning on Large
-      and Spatiotemporal Graphs'
-    comparison_source_arxiv: '1803.07294'
+    comparison_source_title: Graph Attention Networks
+    comparison_source_arxiv: '1710.10903'
     is_best: false
     is_std_outlier: false
   - model: GeniePath-JK
@@ -662,16 +660,15 @@ results:
     date_iso: '2021-04-01'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.688
+    at_pub_value: 0.768
     at_pub_std: null
-    at_pub_source_arxiv: '2003.13606'
-    at_pub_source_title: 'L$^2$-GCN: Layer-Wise and Learned Efficient Training of
-      Graph Convolutional Networks'
-    at_pub_source_date_iso: '2020-03-30'
-    at_pub_source_date_label: '2020'
+    at_pub_source_arxiv: '1710.10903'
+    at_pub_source_title: Graph Attention Networks
+    at_pub_source_date_iso: '2017-10-30'
+    at_pub_source_date_label: ICLR 2017
     value_gap_source_date_iso: '2022-01-31'
     value_gap_source_date_label: TMLR 2022
-    gap_vs_at_pub: 0.03759999999999997
+    gap_vs_at_pub: 0.11760000000000004
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -691,15 +688,14 @@ results:
     sort_value: 0.958
     sort_std: 0.001
     global_rank: 78
-    paper_rank: 140
-    rank_delta: 62
-    rank_delta_abs: 62
+    paper_rank: 148
+    rank_delta: 70
+    rank_delta_abs: 70
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'L$^2$-GCN: Layer-Wise and Learned Efficient Training
-      of Graph Convolutional Networks'
-    comparison_source_arxiv: '2003.13606'
+    comparison_source_title: Graph Attention Networks
+    comparison_source_arxiv: '1710.10903'
     is_best: false
     is_std_outlier: false
   - model: Random
@@ -866,15 +862,15 @@ results:
     date_iso: '2021-04-01'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.571
-    at_pub_std: 0.008
-    at_pub_source_arxiv: '2009.03717'
-    at_pub_source_title: Hierarchical message-passing graph neural networks
-    at_pub_source_date_iso: '2020-09-08'
-    at_pub_source_date_label: '2020'
+    at_pub_value: 0.781
+    at_pub_std: 0.026
+    at_pub_source_arxiv: '1901.01343'
+    at_pub_source_title: Graph Neural Networks With Convolutional ARMA Filters
+    at_pub_source_date_iso: '2019-01-05'
+    at_pub_source_date_label: '2019'
     value_gap_source_date_iso: '2022-01-31'
     value_gap_source_date_label: TMLR 2022
-    gap_vs_at_pub: 0.3014
+    gap_vs_at_pub: 0.09139999999999993
     worse_than_at_pub: false
     surpassed_since_pub: true
     better_than_at_pub: true
@@ -893,15 +889,15 @@ results:
     value_note: ''
     sort_value: 0.911
     sort_std: 0.002
-    global_rank: 92
-    paper_rank: 95
-    rank_delta: 3
-    rank_delta_abs: 3
+    global_rank: 93
+    paper_rank: 97
+    rank_delta: 4
+    rank_delta_abs: 4
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: Hierarchical message-passing graph neural networks
-    comparison_source_arxiv: '2009.03717'
+    comparison_source_title: Graph Neural Networks With Convolutional ARMA Filters
+    comparison_source_arxiv: '1901.01343'
     is_best: false
     is_std_outlier: false
   - model: GCN-JK
@@ -960,8 +956,8 @@ results:
     value_note: ''
     sort_value: 0.8078
     sort_std: 0.0
-    global_rank: 99
-    paper_rank: 99
+    global_rank: 103
+    paper_rank: 103
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1027,8 +1023,8 @@ results:
     value_note: ''
     sort_value: 0.8019
     sort_std: 0.0
-    global_rank: 102
-    paper_rank: 102
+    global_rank: 106
+    paper_rank: 106
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1094,8 +1090,8 @@ results:
     value_note: ''
     sort_value: 0.772
     sort_std: 0.002
-    global_rank: 104
-    paper_rank: 104
+    global_rank: 108
+    paper_rank: 108
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1131,8 +1127,41 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 131
+    global_rank: 139
     sort_value: 0.6928
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.462
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2407.00494'
+    title: Graph Neural Networks Gone Hogwild
+    date: Jun 29, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-29'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 183
+    sort_value: 0.462
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''

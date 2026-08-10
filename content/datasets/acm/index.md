@@ -12,30 +12,18 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 3
-result_count: 398
+result_count: 359
 best_model:
-  model: HetGNN
-  value: 0.979
+  model: LMSPS
+  value: 0.9469
   metric: Micro-F1
-  arxiv_id: '2510.05750'
-  paper_title: Are Heterogeneous Graph Neural Networks Truly Effective? A Causal Perspective
+  arxiv_id: '2307.08430'
+  paper_title: Long-range Meta-path Search on Large-scale Heterogeneous Graphs
 papers:
-- arxiv_id: '2602.07573'
-  title: Graph Domain Adaptation via Homophily-Agnostic Reconstructing Structure
-  date_iso: '2026-02-07'
-  venue: AAAI 2026
 - arxiv_id: '2511.17923'
   title: Towards Efficient LLM-aware Heterogeneous Graph Learning
   date_iso: '2025-11-22'
   venue: ''
-- arxiv_id: '2510.05750'
-  title: Are Heterogeneous Graph Neural Networks Truly Effective? A Causal Perspective
-  date_iso: '2025-10-07'
-  venue: ''
-- arxiv_id: '2505.20089'
-  title: Homophily Enhanced Graph Domain Adaptation
-  date_iso: '2025-05-26'
-  venue: ICML 2025
 - arxiv_id: '2504.13426'
   title: Simplifying Graph Convolutional Networks with Redundancy-Free Neighbors
   date_iso: '2025-04-18'
@@ -159,10 +147,6 @@ papers:
   title: Improved Dual Correlation Reduction Network
   date_iso: '2022-02-25'
   venue: ''
-- arxiv_id: '2112.08331'
-  title: Model Stealing Attacks Against Inductive Graph Neural Networks
-  date_iso: '2021-12-15'
-  venue: ''
 - arxiv_id: '2110.11842'
   title: Multi-view Contrastive Graph Clustering
   date_iso: '2021-10-22'
@@ -234,94 +218,6 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
-  - model: HetGNN
-    model_plain: HetGNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2510.05750'
-    title: Are Heterogeneous Graph Neural Networks Truly Effective? A Causal Perspective
-    date: Oct 7, 2025
-    date_iso: '2025-10-07'
-    date_display: Oct 2025
-    codebase_url: https://github.com/YXNTU/CausalHGNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.979
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: ComCH
-    model_plain: ComCH
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2510.05750'
-    title: Are Heterogeneous Graph Neural Networks Truly Effective? A Causal Perspective
-    date: Oct 7, 2025
-    date_iso: '2025-10-07'
-    date_display: Oct 2025
-    codebase_url: https://github.com/YXNTU/CausalHGNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.947
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: LMSPS
     model_plain: LMSPS
     is_baseline: false
@@ -342,7 +238,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2023
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.9469
@@ -386,7 +282,7 @@ variants:
     published_conference_slug: www
     published_venue: WWW 2023
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.9427
@@ -474,7 +370,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.9404
@@ -489,50 +385,6 @@ variants:
     - null
     metric_stds:
     - 0.0059
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: RGCN
-    model_plain: RGCN
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2510.05750'
-    title: Are Heterogeneous Graph Neural Networks Truly Effective? A Causal Perspective
-    date: Oct 7, 2025
-    date_iso: '2025-10-07'
-    date_display: Oct 2025
-    codebase_url: https://github.com/YXNTU/CausalHGNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9402
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
     - null
     - null
     - null
@@ -562,7 +414,7 @@ variants:
     published_conference_slug: aaai
     published_venue: AAAI 2022
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.9398
@@ -606,7 +458,7 @@ variants:
     published_conference_slug: aaai
     published_venue: AAAI 2022
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.9387
@@ -782,7 +634,7 @@ variants:
     published_conference_slug: aaai
     published_venue: AAAI 2022
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.938
@@ -797,94 +649,6 @@ variants:
     - null
     metric_stds:
     - 0.0064
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: MHGCN
-    model_plain: MHGCN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2510.05750'
-    title: Are Heterogeneous Graph Neural Networks Truly Effective? A Causal Perspective
-    date: Oct 7, 2025
-    date_iso: '2025-10-07'
-    date_display: Oct 2025
-    codebase_url: https://github.com/YXNTU/CausalHGNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9375
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: PHGT
-    model_plain: PHGT
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2510.05750'
-    title: Are Heterogeneous Graph Neural Networks Truly Effective? A Causal Perspective
-    date: Oct 7, 2025
-    date_iso: '2025-10-07'
-    date_display: Oct 2025
-    codebase_url: https://github.com/YXNTU/CausalHGNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9372
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
     - null
     - null
     - null
@@ -938,50 +702,6 @@ variants:
     - null
     - null
     - null
-  - model: MAGNN
-    model_plain: MAGNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2510.05750'
-    title: Are Heterogeneous Graph Neural Networks Truly Effective? A Causal Perspective
-    date: Oct 7, 2025
-    date_iso: '2025-10-07'
-    date_display: Oct 2025
-    codebase_url: https://github.com/YXNTU/CausalHGNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9361
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: Variant#2
     model_plain: Variant#2
     is_baseline: true
@@ -1017,50 +737,6 @@ variants:
     - null
     metric_stds:
     - 0.0044
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: HGSL
-    model_plain: HGSL
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2510.05750'
-    title: Are Heterogeneous Graph Neural Networks Truly Effective? A Causal Perspective
-    date: Oct 7, 2025
-    date_iso: '2025-10-07'
-    date_display: Oct 2025
-    codebase_url: https://github.com/YXNTU/CausalHGNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9337
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
     - null
     - null
     - null
@@ -1371,50 +1047,6 @@ variants:
     - null
     metric_stds:
     - 0.0021
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: HOAE
-    model_plain: HOAE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2510.05750'
-    title: Are Heterogeneous Graph Neural Networks Truly Effective? A Causal Perspective
-    date: Oct 7, 2025
-    date_iso: '2025-10-07'
-    date_display: Oct 2025
-    codebase_url: https://github.com/YXNTU/CausalHGNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9303
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
     - null
     - null
     - null
@@ -2441,22 +2073,380 @@ variants:
     - null
     - null
     - null
-  row_count: 398
+  - model: LDS
+    model_plain: LDS
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2409.17386'
+    title: 'Beyond Redundancy: Information-aware Unsupervised Multiplex Graph Structure
+      Learning'
+    date: Sep 25, 2024
+    date_iso: '2024-09-25'
+    date_display: Sep 2024
+    codebase_url: https://github.com/zxlearningdeep/InfoMGF
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: true
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9205
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0026
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: MHGCN
+    model_plain: MHGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2305.19872'
+    title: Spectral Heterogeneous Graph Convolutions via Positive Noncommutative Polynomials
+    date: May 31, 2023
+    date_iso: '2023-05-31'
+    date_display: May 2023
+    codebase_url: https://github.com/ivam-he/PSHGCN
+    published_conference: WWW 2023
+    published_conference_short: WWW
+    published_conference_slug: www
+    published_venue: WWW 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9197
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0068
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: HDMI + HetGPT
+    model_plain: HDMI + HetGPT
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.15318'
+    title: 'HetGPT: Harnessing the Power of Prompt Tuning in Pre-Trained Heterogeneous
+      Graph Neural Networks'
+    date: Oct 23, 2023
+    date_iso: '2023-10-23'
+    date_display: Oct 2023
+    codebase_url: ''
+    published_conference: WWW 2023
+    published_conference_short: WWW
+    published_conference_slug: www
+    published_venue: WWW 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9194
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0033
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: IDGL
+    model_plain: IDGL
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2409.17386'
+    title: 'Beyond Redundancy: Information-aware Unsupervised Multiplex Graph Structure
+      Learning'
+    date: Sep 25, 2024
+    date_iso: '2024-09-25'
+    date_display: Sep 2024
+    codebase_url: https://github.com/zxlearningdeep/InfoMGF
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: true
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9163
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0124
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: BTGF
+    model_plain: BTGF
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2409.17386'
+    title: 'Beyond Redundancy: Information-aware Unsupervised Multiplex Graph Structure
+      Learning'
+    date: Sep 25, 2024
+    date_iso: '2024-09-25'
+    date_display: Sep 2024
+    codebase_url: https://github.com/zxlearningdeep/InfoMGF
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9162
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0011
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: MCGC
+    model_plain: MCGC
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2110.11842'
+    title: Multi-view Contrastive Graph Clustering
+    date: Oct 22, 2021
+    date_iso: '2021-10-22'
+    date_display: Oct 2021
+    codebase_url: https://github.com/Panern/MCGC
+    published_conference: NeurIPS 2021
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9155
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: HAN
+    model_plain: HAN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2409.17386'
+    title: 'Beyond Redundancy: Information-aware Unsupervised Multiplex Graph Structure
+      Learning'
+    date: Sep 25, 2024
+    date_iso: '2024-09-25'
+    date_display: Sep 2024
+    codebase_url: https://github.com/zxlearningdeep/InfoMGF
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9147
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0022
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: GAT
+    model_plain: GAT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2409.17386'
+    title: 'Beyond Redundancy: Information-aware Unsupervised Multiplex Graph Structure
+      Learning'
+    date: Sep 25, 2024
+    date_iso: '2024-09-25'
+    date_display: Sep 2024
+    codebase_url: https://github.com/zxlearningdeep/InfoMGF
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9146
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0062
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  row_count: 359
   rows_json: /data/datasets/acm/standard-split-rows.json
   chart_json: /data/datasets/acm/standard-split-chart.json
   arch_counts:
-    gnn: 271
+    gnn: 234
     hybrid: 62
     graph_transformer: 18
     llm: 1
     walk: 17
-    traditional: 25
+    traditional: 23
   metric_counts:
-  - 184
+  - 160
   - 25
   - 1
   - 8
-  - 113
+  - 98
   - 61
   - 11
   - 4
@@ -2493,12 +2483,6 @@ variants:
     arxiv_id: '2307.08430'
     title: Long-range Meta-path Search on Large-scale Heterogeneous Graphs
     date: '2023-07-17'
-  - value: 0.979
-    std: null
-    model: HetGNN
-    arxiv_id: '2510.05750'
-    title: Are Heterogeneous Graph Neural Networks Truly Effective? A Causal Perspective
-    date: '2025-10-07'
   milestones_by_metric:
     Micro-F1: *id001
     ACC:
@@ -2529,12 +2513,12 @@ variants:
       arxiv_id: '2011.09679'
       title: Scalable Graph Neural Networks for Heterogeneous Graphs
       date: '2020-11-19'
-    - value: 0.937
-      std: null
-      model: SAGE
-      arxiv_id: '2112.08331'
-      title: Model Stealing Attacks Against Inductive Graph Neural Networks
-      date: '2021-12-15'
+    - value: 0.9323
+      std: 0.0034
+      model: GANN
+      arxiv_id: '2303.07778'
+      title: 'GANN: Graph Alignment Neural Network for Semi-Supervised Learning'
+      date: '2023-03-14'
     - value: 0.9545
       std: 0.0049
       model: SignGT
@@ -2549,13 +2533,12 @@ variants:
       arxiv_id: '2007.02265'
       title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
       date: '2020-07-05'
-    - value: 0.9274
-      std: 0.0004
-      model: SynC SSL
-      arxiv_id: '2406.15797'
-      title: 'SynC: Synergistic Boosting of Structure and Representation for Deep
-        Graph Clustering'
-      date: '2024-06-22'
+    - value: 0.9398
+      std: null
+      model: SPGRL
+      arxiv_id: '2209.00793'
+      title: Structure-Preserving Graph Representation Learning
+      date: '2022-09-02'
     F1-micro:
     - value: 0.775
       std: null

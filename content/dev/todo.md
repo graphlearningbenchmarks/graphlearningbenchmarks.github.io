@@ -5,22 +5,22 @@ type: dev
 
 ## Todo Papers (priority queue)
 
-**Total:** 3326 entries
+**Total:** 3328 entries
 
 | arXiv | imp | seen_count | status | title |
 |---|---:|---:|---|---
 | 1706.03762 | yes | 634 | rejected | Attention is All you Need |
-| 1412.6980 | yes | 630 | done | Adam: A Method for Stochastic Optimization |
-| 1806.03536 | yes | 486 | done | Representation Learning on Graphs with Jumping Knowledge Networks |
+| 1412.6980 | yes | 631 | done | Adam: A Method for Stochastic Optimization |
+| 1806.03536 | yes | 488 | done | Representation Learning on Graphs with Jumping Knowledge Networks |
 | 1312.6203 | yes | 484 | done | Spectral Networks and Locally Connected Networks on Graphs |
 | 1812.08434 | yes | 472 | done | Graph Neural Networks: A Review of Methods and Applications |
 | 1912.01703 | yes | 337 | rejected | PyTorch: An Imperative Style, High-Performance Deep Learning Library |
 | 1810.04805 | yes | 312 | rejected | BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding |
-| 1512.03385 | yes | 264 | rejected | Deep Residual Learning for Image Recognition |
+| 1512.03385 | yes | 265 | rejected | Deep Residual Learning for Image Recognition |
 | 1806.01261 | yes | 264 | done | Relational inductive biases, deep learning, and graph networks |
 | 2106.03893 | yes | 262 | done | Rethinking Graph Transformers with Spectral Attention |
 | 2002.05709 | yes | 258 | rejected | A Simple Framework for Contrastive Learning of Visual Representations |
-| 2004.05718 | yes | 236 | done | Principal Neighbourhood Aggregation for Graph Nets |
+| 2004.05718 | yes | 237 | done | Principal Neighbourhood Aggregation for Graph Nets |
 | 1611.08097 | yes | 235 | done | Geometric Deep Learning: Going beyond Euclidean data |
 | 2011.02260 | yes | 203 | done | Graph Neural Networks in Recommender Systems: A Survey |
 | 1807.03748 | yes | 197 | rejected | Representation Learning with Contrastive Predictive Coding |
@@ -28,8 +28,8 @@ type: dev
 | 1610.02415 | yes | 189 | done | Automatic Chemical Design Using a Data-Driven Continuous Representation of Molecules |
 | 1709.05584 | yes | 189 | done | Representation Learning on Graphs: Methods and Applications |
 | 1806.02473 | yes | 183 | done | Graph Convolutional Policy Network for Goal-Directed Molecular Graph Generation |
+| 2005.14165 | yes | 178 | rejected | Language Models are Few-Shot Learners |
 | 2103.09430 | yes | 178 | done | OGB-LSC: A Large-Scale Challenge for Machine Learning on Graphs |
-| 2005.14165 | yes | 177 | rejected | Language Models are Few-Shot Learners |
 | 1711.07553 | yes | 173 | done | Residual Gated Graph ConvNets |
 | 1911.05722 | yes | 161 | rejected | Momentum Contrast for Unsupervised Visual Representation Learning |
 | 1310.4546 | yes | 159 | rejected | Distributed Representations of Words and Phrases and their Compositionality |
@@ -55,14 +55,14 @@ type: dev
 | 2305.17589 | yes | 134 | done | Graph Inductive Biases in Transformers without Message Passing |
 | 1607.06450 | yes | 130 | rejected | Layer Normalization |
 | 2111.14522 | yes | 129 | done | Understanding over-squashing and bottlenecks on graphs via curvature |
-| 2006.07739 | yes | 127 | done | DeeperGCN: All You Need to Train Deeper GCNs |
+| 2006.07739 | yes | 128 | done | DeeperGCN: All You Need to Train Deeper GCNs |
 | 2006.10503 | yes | 127 | done | SE(3)-Transformers: 3D Roto-Translation Equivariant Attention Networks |
 | 2208.09481 | yes | 126 | done | Graph neural networks for materials science and chemistry |
 | 2403.00485 | yes | 124 | done | A survey of geometric graph neural networks: data structures, models and applications |
 | 2002.06157 | yes | 123 | rejected | Generalization and Representational Limits of Graph Neural Networks |
 | 2006.11239 | yes | 123 | rejected | Denoising Diffusion Probabilistic Models |
 | 2006.07733 | yes | 122 | rejected | Bootstrap Your Own Latent: A New Approach to Self-Supervised Learning |
-| 2101.10320 | yes | 121 | done | Identity-aware Graph Neural Networks |
+| 2101.10320 | yes | 122 | done | Identity-aware Graph Neural Networks |
 | 2112.09992 | yes | 121 | done | Weisfeiler and Leman go Machine Learning: The Story so far |
 | 2203.17003 | yes | 120 | rejected | Equivariant Diffusion for Molecule Generation in 3D |
 | 1805.09076 | yes | 117 | done | Constrained Graph Variational Autoencoders for Molecule Design |
@@ -376,6 +376,7 @@ type: dev
 | 2406.18854 | yes | 38 | done | What Is Missing In Homophily? Disentangling Graph Homophily For Graph Neural Networks |
 | 1206.6483 | yes | 37 | done | Subgraph Matching Kernels for Attributed Graphs |
 | 1606.08415 | yes | 37 | rejected | Gaussian Error Linear Units (GELUs) |
+| 1608.06993 | yes | 37 | rejected | Densely Connected Convolutional Networks |
 | 2103.00111 | yes | 37 | done | Graph Self-Supervised Learning: A Survey |
 | 2107.13586 | yes | 37 | rejected | Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing |
 | 2202.05146 | yes | 37 | rejected | EquiBind: Geometric Deep Learning for Drug Binding Structure Prediction |
@@ -388,12 +389,12 @@ type: dev
 | 1502.01852 | yes | 36 | rejected | Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification |
 | 1602.01585 | yes | 36 | rejected | Ups and Downs: Modeling the Visual Evolution of Fashion Trends with One-Class Collaborative Filtering |
 | 1602.04938 | yes | 36 | rejected | “Why Should I Trust You?”: Explaining the Predictions of Any Classifier |
-| 1608.06993 | yes | 36 | rejected | Densely Connected Convolutional Networks |
 | 1906.00910 | yes | 36 | rejected | Learning Representations by Maximizing Mutual Information Across Views |
 | 1907.13625 | yes | 36 | rejected | On Mutual Information Maximization for Representation Learning |
 | 2005.06149 | yes | 36 | done | DeepRobust: A PyTorch Library for Adversarial Attacks and Defenses |
 | 2103.03036 | yes | 36 | done | A Survey on Graph Structure Learning: Progress and Opportunities |
 | 2103.14030 | yes | 36 | rejected | Swin Transformer: Hierarchical Vision Transformer using Shifted Windows |
+| 2204.04661 | yes | 36 | rejected | Expressiveness and Approximation Properties of Graph Neural Networks |
 | 2206.02796 | yes | 36 | done | Mixed Graph Contrastive Network for Semi-Supervised Node Classification |
 | 2302.00219 | yes | 36 | done | Knowledge Distillation on Graphs: A Survey |
 | 2305.16102 | yes | 36 | rejected | Demystifying Oversmoothing in Attention-Based Graph Neural Networks |
@@ -407,7 +408,6 @@ type: dev
 | 1906.12269 | yes | 35 | done | Certifiable Robustness and Robust Training for Graph Convolutional Networks |
 | 2105.06339 | yes | 35 | done | Graph Learning based Recommender Systems: A Review |
 | 2112.14772 | yes | 35 | done | Deep Graph Clustering via Dual Correlation Reduction |
-| 2204.04661 | yes | 35 | rejected | Expressiveness and Approximation Properties of Graph Neural Networks |
 | 2206.10071 | yes | 35 | done | BOND: Benchmarking Unsupervised Outlier Node Detection on Static Attributed Graphs |
 | 2302.06114 | yes | 35 | done | A Comprehensive Survey on Graph Summarization With Graph Neural Networks |
 | 2305.13656 | yes | 35 | done | Link Prediction without Graph Neural Networks |
@@ -424,7 +424,7 @@ type: dev
 | 2203.15935 | yes | 34 | done | Graph Neural Networks in IoT: A Survey |
 | 2206.12411 | yes | 34 | done | Sample Efficiency Matters: A Benchmark for Practical Molecular Optimization |
 | 2304.10031 | yes | 34 | done | Architectures of Topological Deep Learning: A Survey on Topological Neural Networks |
-| 2308.08963 | yes | 34 | pending | CONVERT: Contrastive Graph Clustering with Reliable Augmentation |
+| 2308.08963 | yes | 34 | done | CONVERT: Contrastive Graph Clustering with Reliable Augmentation |
 | 2402.00447 | yes | 34 | done | A Survey of Data-Efficient Graph Learning |
 | 2402.16374 | yes | 34 | done | Graph Learning under Distribution Shifts: A Comprehensive Survey on Domain Adaptation, Out-of-distribution, and Continual Learning |
 | 2405.04245 | yes | 34 | done | Exploring Correlations of Self-Supervised Tasks for Graphs |
@@ -508,13 +508,13 @@ type: dev
 | 2510.22599 | yes | 31 | done | A roadmap for curvature-based geometric data analysis and learning |
 | 2605.19050 | yes | 31 | done | Generative Pseudo-Force Fields for Molecular Generation |
 | 2502.09365 | yes | 30 | done | Simple Path Structural Encoding for Graph Transformers |
-| 2310.07430 | yes | 30 | pending | Non-backtracking Graph Neural Networks |
+| 2310.07430 | yes | 30 | done | Non-backtracking Graph Neural Networks |
 
 ### Semantic Scholar crawl summary
 
 The standalone S2 crawl page was removed to keep the development surface smaller. These counts retain the only high-signal summary from that page.
 
-**DB papers total:** 2740
-**Crawled:** 3075
+**DB papers total:** 2741
+**Crawled:** 3077
 **Uncrawled:** 0
 **Hit crawl limits:** 18

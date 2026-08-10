@@ -76,7 +76,7 @@ abstract: Graph Self-Supervised Learning (SSL) has emerged as a pivotal area of 
   graph datasets, facilitating the reproduction of results. The GitHub repository
   of the library is.
 codebase_url: https://github.com/iDEA-iSAIL-Lab-UIUC/pyg-ssl
-extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+extraction_model: google/gemma-4-31B-it
 has_results: true
 paper_type: dataset
 proposed_models: []
@@ -86,20 +86,15 @@ mrr_dataset_count: 0
 benchmark_categories:
 - Classic
 - TU Dortmund
-- Other Graph Benchmarks
 benchmark_coverage:
 - benchmark: Classic
   benchmark_slug: classic
-  evaluated: 2
+  evaluated: 3
   total: 12
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
   evaluated: 1
   total: 11
-- benchmark: Other Graph Benchmarks
-  benchmark_slug: other-graph-benchmarks
-  evaluated: 1
-  total: 5
 task_categories:
 - graph_classification
 - node_classification
@@ -107,47 +102,48 @@ experiment_scopes:
 - graph-level
 - node-level
 results:
-- &id004
-  dataset: Amazon2M
+- &id001
+  dataset: Amazon-Photo
   rows:
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.953
-    std: null
+  - model: GraphTARIF
+    model_key: graphtarif
+    model_plain: GraphTARIF
+    value: 0.9703
+    std: 0.0019
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2112.08331'
-    title: Model Stealing Attacks Against Inductive Graph Neural Networks
-    date: Dec 15, 2021
-    date_display: Dec 2021
-    date_iso: '2021-12-15'
-    venue: IEEE Symposium on Security and Privacy
-    codebase_url: https://github.com/xinleihe/GNNStealing
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2605.20248'
+    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
+      Classification'
+    date: May 18, 2026
+    date_display: May 2026
+    date_iso: '2026-05-18'
+    venue: null
+    codebase_url: https://github.com/transductive-sharpening/tunedGNN
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.953
-    sort_std: null
+    sort_value: 0.9703
+    sort_std: 0.0019
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SAGE
-    model_key: sage
-    model_plain: SAGE
-    value: 0.937
-    std: null
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.9669
+    std: 0.0014
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -157,20 +153,89 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2112.08331'
-    title: Model Stealing Attacks Against Inductive Graph Neural Networks
-    date: Dec 15, 2021
-    date_display: Dec 2021
-    date_iso: '2021-12-15'
-    venue: IEEE Symposium on Security and Privacy
-    codebase_url: https://github.com/xinleihe/GNNStealing
+    arxiv_id: '2605.20248'
+    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
+      Classification'
+    date: May 18, 2026
+    date_display: May 2026
+    date_iso: '2026-05-18'
+    venue: null
+    codebase_url: https://github.com/transductive-sharpening/tunedGNN
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.937
-    sort_std: null
+    sort_value: 0.9669
+    sort_std: 0.0014
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DAM-GT
+    model_key: dam-gt
+    model_plain: DAM-GT
+    value: 0.9666
+    std: 0.0013
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2505.17660'
+    title: 'DAM-GT: Dual Positional Encoding-Based Attention Masking Graph Transformer
+      for Node Classification'
+    date: May 23, 2025
+    date_display: May 2025
+    date_iso: '2025-05-23'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9666
+    sort_std: 0.0013
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.9643
+    std: 0.0027
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.20248'
+    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
+      Classification'
+    date: May 18, 2026
+    date_display: May 2026
+    date_iso: '2026-05-18'
+    venue: null
+    codebase_url: https://github.com/transductive-sharpening/tunedGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 8
+    sort_value: 0.9643
+    sort_std: 0.0027
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -193,52 +258,54 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: Reported
-    variant_inference_reason: 'dataset: fuzzy match to amazon2m (score=86)'
+    table_ref: Table 3
+    source_ref: original paper
+    variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on Amazon dataset reported in original
-      research paper.
+    protocol_note: Node classification on Amazon dataset using standard split, Accuracy
+      metric.
     date: Dec 30, 2024
     date_display: Dec 2024
     date_iso: '2024-12-30'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-12-30'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
+    at_pub_value: 0.9361
+    at_pub_std: 0.002
+    at_pub_source_arxiv: '2206.12933'
+    at_pub_source_title: Wiener Graph Deconvolutional Network Improves Graph Self-Supervised
+      Learning
+    at_pub_source_date_iso: '2022-06-26'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2022-06-26'
+    value_gap_source_date_label: AAAI 2022
+    gap_vs_at_pub: 0.0040999999999999925
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.932
-    true_std: 0.003
-    value_gap_source_arxiv: '2412.21151'
-    value_gap_source_title: 'PyG-SSL: A Graph Self-Supervised Learning Toolkit'
-    value_gap_source_is_current_paper: true
-    value_gap: null
+    insignificant_value_gap: true
+    today_delta_significant: true
+    true_value: 0.9361
+    true_std: 0.002
+    value_gap_source_arxiv: '2206.12933'
+    value_gap_source_title: Wiener Graph Deconvolutional Network Improves Graph Self-Supervised
+      Learning
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0040999999999999925
     has_value_note: false
     value_note: ''
-    sort_value: 0.932
-    sort_std: 0.003
-    global_rank: 4
-    paper_rank: 4
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
+    sort_value: 0.9361
+    sort_std: 0.002
+    global_rank: 156
+    paper_rank: 216
+    rank_delta: 60
+    rank_delta_abs: 60
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -261,57 +328,128 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: Reported
-    variant_inference_reason: 'dataset: fuzzy match to amazon2m (score=86)'
+    table_ref: Table 3
+    source_ref: original paper
+    variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on Amazon dataset reported in original
-      research paper.
+    protocol_note: Node classification on Amazon dataset using standard split, Accuracy
+      metric.
     date: Dec 30, 2024
     date_display: Dec 2024
     date_iso: '2024-12-30'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.8823
-    at_pub_std: 0.003
-    at_pub_source_arxiv: '2212.07035'
-    at_pub_source_title: 'MA-GCL: Model Augmentation Tricks for Graph Contrastive
-      Learning'
-    at_pub_source_date_iso: '2022-12-14'
+    at_pub_value: 0.9337
+    at_pub_std: 0.0021
+    at_pub_source_arxiv: '2206.12933'
+    at_pub_source_title: Wiener Graph Deconvolutional Network Improves Graph Self-Supervised
+      Learning
+    at_pub_source_date_iso: '2022-06-26'
     at_pub_source_date_label: AAAI 2022
-    value_gap_source_date_iso: '2024-12-30'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.04970000000000008
+    value_gap_source_date_iso: '2022-06-26'
+    value_gap_source_date_label: AAAI 2022
+    gap_vs_at_pub: 0.0016999999999999238
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.9337
+    true_std: 0.0021
+    value_gap_source_arxiv: '2206.12933'
+    value_gap_source_title: Wiener Graph Deconvolutional Network Improves Graph Self-Supervised
+      Learning
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0016999999999999238
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9337
+    sort_std: 0.0021
+    global_rank: 198
+    paper_rank: 216
+    rank_delta: 18
+    rank_delta_abs: 18
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCA
+    model_key: gca
+    model_plain: GCA
+    value: 0.925
+    std: 0.001
+    paper_value: 0.925
+    paper_std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: original paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Amazon dataset using standard split, Accuracy
+      metric.
+    date: Dec 30, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-30'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.932
+    at_pub_std: 0.003
+    at_pub_source_arxiv: '2210.08792'
+    at_pub_source_title: Unifying Graph Contrastive Learning with Flexible Contextual
+      Scopes
+    at_pub_source_date_iso: '2022-10-17'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-03-03'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: 0.007000000000000006
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
+    today_delta_significant: true
     true_value: 0.932
-    true_std: 0.003
-    value_gap_source_arxiv: '2412.21151'
-    value_gap_source_title: 'PyG-SSL: A Graph Self-Supervised Learning Toolkit'
-    value_gap_source_is_current_paper: true
-    value_gap: null
+    true_std: 0.006
+    value_gap_source_arxiv: '2403.01400'
+    value_gap_source_title: Decoupling Weighing and Selecting for Integrating Multiple
+      Graph Pre-training Tasks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.007000000000000006
     has_value_note: false
     value_note: ''
     sort_value: 0.932
-    sort_std: 0.003
-    global_rank: 3
-    paper_rank: 3
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    sort_std: 0.006
+    global_rank: 217
+    paper_rank: 310
+    rank_delta: 93
+    rank_delta_abs: 93
+    rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'MA-GCL: Model Augmentation Tricks for Graph Contrastive
-      Learning'
-    comparison_source_arxiv: '2212.07035'
+    comparison_type: behind
+    comparison_source_title: Unifying Graph Contrastive Learning with Flexible Contextual
+      Scopes
+    comparison_source_arxiv: '2210.08792'
     is_best: false
     is_std_outlier: false
   - model: SUGRL
@@ -331,26 +469,26 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: Reported
-    variant_inference_reason: 'dataset: fuzzy match to amazon2m (score=86)'
+    table_ref: Table 3
+    source_ref: original paper
+    variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on Amazon dataset reported in original
-      research paper.
+    protocol_note: Node classification on Amazon dataset using standard split, Accuracy
+      metric.
     date: Dec 30, 2024
     date_display: Dec 2024
     date_iso: '2024-12-30'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.932
+    at_pub_std: 0.004
+    at_pub_source_arxiv: '2306.02117'
+    at_pub_source_title: 'Oversmoothing: A Nightmare for Graph Contrastive Learning?'
+    at_pub_source_date_iso: '2023-06-03'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2024-12-30'
     value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
@@ -371,8 +509,8 @@ results:
     value_note: ''
     sort_value: 0.932
     sort_std: 0.002
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 220
+    paper_rank: 220
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -380,6 +518,148 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MVGRL
+    model_key: mvgrl
+    model_plain: MVGRL
+    value: 0.865
+    std: 0.012
+    paper_value: 0.865
+    paper_std: 0.012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Amazon dataset using standard split, Accuracy
+      metric.
+    date: Dec 30, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-30'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.931
+    at_pub_std: 0.004
+    at_pub_source_arxiv: '2403.01400'
+    at_pub_source_title: Decoupling Weighing and Selecting for Integrating Multiple
+      Graph Pre-training Tasks
+    at_pub_source_date_iso: '2024-03-03'
+    at_pub_source_date_label: ICLR 2024
+    value_gap_source_date_iso: '2024-03-03'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: 0.06600000000000006
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.931
+    true_std: 0.004
+    value_gap_source_arxiv: '2403.01400'
+    value_gap_source_title: Decoupling Weighing and Selecting for Integrating Multiple
+      Graph Pre-training Tasks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.06600000000000006
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.931
+    sort_std: 0.004
+    global_rank: 232
+    paper_rank: 550
+    rank_delta: 318
+    rank_delta_abs: 318
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Decoupling Weighing and Selecting for Integrating Multiple
+      Graph Pre-training Tasks
+    comparison_source_arxiv: '2403.01400'
+    is_best: false
+    is_std_outlier: false
+  - model: DGI
+    model_key: dgi
+    model_plain: DGI
+    value: 0.923
+    std: 0.007
+    paper_value: 0.923
+    paper_std: 0.007
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Amazon dataset using standard split, Accuracy
+      metric.
+    date: Dec 30, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-30'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.9309
+    at_pub_std: 0.0008
+    at_pub_source_arxiv: '2407.19944'
+    at_pub_source_title: Noise-Resilient Unsupervised Graph Representation Learning
+      via Multi-Hop Feature Quality Estimation
+    at_pub_source_date_iso: '2024-07-29'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2024-07-29'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.007899999999999907
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9309
+    true_std: 0.0008
+    value_gap_source_arxiv: '2407.19944'
+    value_gap_source_title: Noise-Resilient Unsupervised Graph Representation Learning
+      via Multi-Hop Feature Quality Estimation
+    value_gap_source_is_current_paper: false
+    value_gap: 0.007899999999999907
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9309
+    sort_std: 0.0008
+    global_rank: 239
+    paper_rank: 340
+    rank_delta: 101
+    rank_delta_abs: 101
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Noise-Resilient Unsupervised Graph Representation Learning
+      via Multi-Hop Feature Quality Estimation
+    comparison_source_arxiv: '2407.19944'
     is_best: false
     is_std_outlier: false
   - model: ReGCL
@@ -399,15 +679,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: Reported
-    variant_inference_reason: 'dataset: fuzzy match to amazon2m (score=86)'
+    table_ref: Table 3
+    source_ref: original paper
+    variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on Amazon dataset reported in original
-      research paper.
+    protocol_note: Node classification on Amazon dataset using standard split, Accuracy
+      metric.
     date: Dec 30, 2024
     date_display: Dec 2024
     date_iso: '2024-12-30'
@@ -439,254 +719,13 @@ results:
     value_note: ''
     sort_value: 0.926
     sort_std: 0.003
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 303
+    paper_rank: 303
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCA
-    model_key: gca
-    model_plain: GCA
-    value: 0.925
-    std: 0.001
-    paper_value: 0.925
-    paper_std: 0.001
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: Reported
-    variant_inference_reason: 'dataset: fuzzy match to amazon2m (score=86)'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Node classification task on Amazon dataset reported in original
-      research paper.
-    date: Dec 30, 2024
-    date_display: Dec 2024
-    date_iso: '2024-12-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8785
-    at_pub_std: 0.003
-    at_pub_source_arxiv: '2212.07035'
-    at_pub_source_title: 'MA-GCL: Model Augmentation Tricks for Graph Contrastive
-      Learning'
-    at_pub_source_date_iso: '2022-12-14'
-    at_pub_source_date_label: AAAI 2022
-    value_gap_source_date_iso: '2024-12-30'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.0465000000000001
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.925
-    true_std: 0.001
-    value_gap_source_arxiv: '2412.21151'
-    value_gap_source_title: 'PyG-SSL: A Graph Self-Supervised Learning Toolkit'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.925
-    sort_std: 0.001
-    global_rank: 7
-    paper_rank: 7
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'MA-GCL: Model Augmentation Tricks for Graph Contrastive
-      Learning'
-    comparison_source_arxiv: '2212.07035'
-    is_best: false
-    is_std_outlier: false
-  - model: DGI
-    model_key: dgi
-    model_plain: DGI
-    value: 0.923
-    std: 0.007
-    paper_value: 0.923
-    paper_std: 0.007
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to amazon2m (score=86)'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Node classification task on Amazon dataset using PyG-SSL implementation.
-    date: Dec 30, 2024
-    date_display: Dec 2024
-    date_iso: '2024-12-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8395
-    at_pub_std: 0.005
-    at_pub_source_arxiv: '2212.07035'
-    at_pub_source_title: 'MA-GCL: Model Augmentation Tricks for Graph Contrastive
-      Learning'
-    at_pub_source_date_iso: '2022-12-14'
-    at_pub_source_date_label: AAAI 2022
-    value_gap_source_date_iso: '2024-12-30'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.08350000000000002
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.923
-    true_std: 0.007
-    value_gap_source_arxiv: '2412.21151'
-    value_gap_source_title: 'PyG-SSL: A Graph Self-Supervised Learning Toolkit'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.923
-    sort_std: 0.007
-    global_rank: 8
-    paper_rank: 8
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'MA-GCL: Model Augmentation Tricks for Graph Contrastive
-      Learning'
-    comparison_source_arxiv: '2212.07035'
-    is_best: false
-    is_std_outlier: false
-  - model: MVGRL
-    model_key: mvgrl
-    model_plain: MVGRL
-    value: 0.865
-    std: 0.012
-    paper_value: 0.865
-    paper_std: 0.012
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to amazon2m (score=86)'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Node classification task on Amazon dataset using PyG-SSL implementation.
-    date: Dec 30, 2024
-    date_display: Dec 2024
-    date_iso: '2024-12-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8752
-    at_pub_std: 0.001
-    at_pub_source_arxiv: '2212.07035'
-    at_pub_source_title: 'MA-GCL: Model Augmentation Tricks for Graph Contrastive
-      Learning'
-    at_pub_source_date_iso: '2022-12-14'
-    at_pub_source_date_label: AAAI 2022
-    value_gap_source_date_iso: '2022-12-14'
-    value_gap_source_date_label: AAAI 2022
-    gap_vs_at_pub: 0.010199999999999987
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.8752
-    true_std: 0.001
-    value_gap_source_arxiv: '2212.07035'
-    value_gap_source_title: 'MA-GCL: Model Augmentation Tricks for Graph Contrastive
-      Learning'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.010199999999999987
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8752
-    sort_std: 0.001
-    global_rank: 16
-    paper_rank: 18
-    rank_delta: 2
-    rank_delta_abs: 2
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.8651
-    std: 0.005
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2212.07035'
-    title: 'MA-GCL: Model Augmentation Tricks for Graph Contrastive Learning'
-    date: Dec 14, 2022
-    date_display: Dec 2022
-    date_iso: '2022-12-14'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: https://github.com/GXM1141/MA-GCL
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 18
-    sort_value: 0.8651
-    sort_std: 0.005
-    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -708,61 +747,64 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 2
+    table_ref: Table 3
     source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to amazon2m (score=86)'
+    variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on Amazon dataset using PyG-SSL implementation.
+    protocol_note: Node classification on Amazon dataset using standard split, Accuracy
+      metric.
     date: Dec 30, 2024
     date_display: Dec 2024
     date_iso: '2024-12-30'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-12-30'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
+    at_pub_value: 0.795
+    at_pub_std: 0.004
+    at_pub_source_arxiv: '2206.01535'
+    at_pub_source_title: 'Rethinking and Scaling Up Graph Contrastive Learning: An
+      Extremely Efficient Approach with Group Discrimination'
+    at_pub_source_date_iso: '2022-06-03'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2025-06-06'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.02199999999999991
     worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: true
     insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
+    improvement_surpassed_since_pub: true
     insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.817
-    true_std: 0.009
-    value_gap_source_arxiv: '2412.21151'
-    value_gap_source_title: 'PyG-SSL: A Graph Self-Supervised Learning Toolkit'
-    value_gap_source_is_current_paper: true
-    value_gap: null
+    today_delta_significant: true
+    true_value: 0.9222
+    true_std: 0.0042
+    value_gap_source_arxiv: '2506.06212'
+    value_gap_source_title: Model-Driven Graph Contrastive Learning
+    value_gap_source_is_current_paper: false
+    value_gap: 0.10520000000000007
     has_value_note: false
     value_note: ''
-    sort_value: 0.817
-    sort_std: 0.009
-    global_rank: 24
-    paper_rank: 24
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    sort_value: 0.9222
+    sort_std: 0.0042
+    global_rank: 352
+    paper_rank: 578
+    rank_delta: 226
+    rank_delta_abs: 226
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: 'Rethinking and Scaling Up Graph Contrastive Learning:
+      An Extremely Efficient Approach with Group Discrimination'
+    comparison_source_arxiv: '2206.01535'
     is_best: false
     is_std_outlier: false
   - model: MLP
     model_key: mlp
     model_plain: MLP
-    value: 0.6346
-    std: 0.001
+    value: 0.9128
+    std: 0.0063
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -772,21 +814,20 @@ results:
     architecture_type: other_traditional
     architecture_label: Trad
     architecture_title: Traditional / classical method
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    venue: The Web Conference
-    codebase_url: ''
+    arxiv_id: '2306.02285'
+    title: Clarify Confused Nodes via Separated Learning
+    date: Jun 4, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-04'
+    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
+    codebase_url: https://github.com/GISec-Team/NCGNN
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 44
-    sort_value: 0.6346
-    sort_std: 0.001
+    global_rank: 426
+    sort_value: 0.9128
+    sort_std: 0.0063
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -801,7 +842,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id003
   dataset: Coauthor-CS
   rows:
   - model: DoG
@@ -928,7 +969,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 7
+    global_rank: 6
     sort_value: 0.9593
     sort_std: 0.0025
     comparison_type: global_top
@@ -953,14 +994,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: Reported
     variant_inference_reason: 'dataset: fuzzy match to coauthor-cs (score=84)'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on Coauthor dataset
+    protocol_note: Node classification on Coauthor dataset, reported accuracy
     date: Dec 30, 2024
     date_display: Dec 2024
     date_iso: '2024-12-30'
@@ -992,8 +1033,8 @@ results:
     value_note: ''
     sort_value: 0.937
     sort_std: 0.003
-    global_rank: 48
-    paper_rank: 48
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1020,14 +1061,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: fuzzy match to coauthor-cs (score=84)'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on Coauthor dataset
+    protocol_note: Node classification on Coauthor dataset, PyG-SSL implementation
+      accuracy
     date: Dec 30, 2024
     date_display: Dec 2024
     date_iso: '2024-12-30'
@@ -1060,8 +1102,8 @@ results:
     value_note: ''
     sort_value: 0.935
     sort_std: 0.003
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 47
+    paper_rank: 47
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1089,14 +1131,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: Reported
     variant_inference_reason: 'dataset: fuzzy match to coauthor-cs (score=84)'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on Coauthor dataset
+    protocol_note: Node classification on Coauthor dataset, reported accuracy
     date: Dec 30, 2024
     date_display: Dec 2024
     date_iso: '2024-12-30'
@@ -1130,8 +1172,8 @@ results:
     value_note: ''
     sort_value: 0.9332
     sort_std: 0.0012
-    global_rank: 68
-    paper_rank: 80
+    global_rank: 57
+    paper_rank: 69
     rank_delta: 12
     rank_delta_abs: 12
     rank_delta_direction: worse
@@ -1159,14 +1201,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: Reported
     variant_inference_reason: 'dataset: fuzzy match to coauthor-cs (score=84)'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on Coauthor dataset
+    protocol_note: Node classification on Coauthor dataset, reported accuracy
     date: Dec 30, 2024
     date_display: Dec 2024
     date_iso: '2024-12-30'
@@ -1198,8 +1240,8 @@ results:
     value_note: ''
     sort_value: 0.9331
     sort_std: 0.0013
-    global_rank: 70
-    paper_rank: 71
+    global_rank: 59
+    paper_rank: 60
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -1226,14 +1268,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: Reported
     variant_inference_reason: 'dataset: fuzzy match to coauthor-cs (score=84)'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on Coauthor dataset
+    protocol_note: Node classification on Coauthor dataset, reported accuracy
     date: Dec 30, 2024
     date_display: Dec 2024
     date_iso: '2024-12-30'
@@ -1265,8 +1307,8 @@ results:
     value_note: ''
     sort_value: 0.933
     sort_std: 0.002
-    global_rank: 73
-    paper_rank: 73
+    global_rank: 62
+    paper_rank: 62
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1293,14 +1335,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: fuzzy match to coauthor-cs (score=84)'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on Coauthor dataset
+    protocol_note: Node classification on Coauthor dataset, PyG-SSL implementation
+      accuracy
     date: Dec 30, 2024
     date_display: Dec 2024
     date_iso: '2024-12-30'
@@ -1333,8 +1376,8 @@ results:
     value_note: ''
     sort_value: 0.929
     sort_std: 0.001
-    global_rank: 103
-    paper_rank: 103
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1371,7 +1414,7 @@ results:
     feature_source_evidence: MLP operating solely on node features can sufficiently
       close the gap
     is_global_top: true
-    global_rank: 112
+    global_rank: 96
     sort_value: 0.928
     sort_std: 0.002
     comparison_type: global_top
@@ -1396,14 +1439,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: fuzzy match to coauthor-cs (score=84)'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on Coauthor dataset
+    protocol_note: Node classification on Coauthor dataset, PyG-SSL implementation
+      accuracy
     date: Dec 30, 2024
     date_display: Dec 2024
     date_iso: '2024-12-30'
@@ -1435,10 +1479,10 @@ results:
     value_note: ''
     sort_value: 0.9211
     sort_std: 0.0012
-    global_rank: 143
-    paper_rank: 221
-    rank_delta: 78
-    rank_delta_abs: 78
+    global_rank: 126
+    paper_rank: 200
+    rank_delta: 74
+    rank_delta_abs: 74
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1463,14 +1507,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: fuzzy match to coauthor-cs (score=84)'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on Coauthor dataset
+    protocol_note: Node classification on Coauthor dataset, PyG-SSL implementation
+      accuracy
     date: Dec 30, 2024
     date_display: Dec 2024
     date_iso: '2024-12-30'
@@ -1502,8 +1547,8 @@ results:
     value_note: ''
     sort_value: 0.84
     sort_std: 0.006
-    global_rank: 228
-    paper_rank: 228
+    global_rank: 207
+    paper_rank: 207
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1522,7 +1567,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id004
   dataset: MUTAG
   rows:
   - model: MSH-GNN
@@ -1547,7 +1592,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -1674,14 +1719,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Reported results from original research papers.
+    protocol_note: Graph classification on Mutag using reported accuracy
     date: Dec 30, 2024
     date_display: Dec 2024
     date_iso: '2024-12-30'
@@ -1743,14 +1788,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Reported results from original research papers.
+    protocol_note: Graph classification on Mutag using PyG-SSL implementation accuracy
     date: Dec 30, 2024
     date_display: Dec 2024
     date_iso: '2024-12-30'
@@ -1784,9 +1829,9 @@ results:
     sort_value: 0.893
     sort_std: 0.011
     global_rank: 274
-    paper_rank: 437
-    rank_delta: 163
-    rank_delta_abs: 163
+    paper_rank: 438
+    rank_delta: 164
+    rank_delta_abs: 164
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1811,14 +1856,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 3
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Reported results from original research papers.
+    protocol_note: Graph classification on Mutag using reported accuracy
     date: Dec 30, 2024
     date_display: Dec 2024
     date_iso: '2024-12-30'
@@ -1851,8 +1896,8 @@ results:
     value_note: ''
     sort_value: 0.8829
     sort_std: 0.0131
-    global_rank: 341
-    paper_rank: 421
+    global_rank: 342
+    paper_rank: 422
     rank_delta: 80
     rank_delta_abs: 80
     rank_delta_direction: worse
@@ -1887,7 +1932,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 429
+    global_rank: 430
     sort_value: 0.866
     sort_std: 0.0495
     comparison_type: global_top
@@ -1904,7 +1949,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id002
   dataset: WikiCS
   rows:
   - model: GCN
@@ -1929,7 +1974,7 @@ results:
     venue: arXiv.org
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -2060,15 +2105,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: Reported
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on WikiCS reported in original research
-      paper.
+    protocol_note: Node classification on WikiCS using reported test accuracy.
     date: Dec 30, 2024
     date_display: Dec 2024
     date_iso: '2024-12-30'
@@ -2100,8 +2144,8 @@ results:
     value_note: ''
     sort_value: 0.8
     sort_std: 0.001
-    global_rank: 103
-    paper_rank: 103
+    global_rank: 100
+    paper_rank: 100
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2128,14 +2172,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on WikiCS using PyG-SSL implementation.
+    protocol_note: Node classification on WikiCS using PyG-SSL implementation test
+      accuracy.
     date: Dec 30, 2024
     date_display: Dec 2024
     date_iso: '2024-12-30'
@@ -2168,10 +2213,10 @@ results:
     value_note: ''
     sort_value: 0.7897
     sort_std: 0.0022
-    global_rank: 142
-    paper_rank: 285
-    rank_delta: 143
-    rank_delta_abs: 143
+    global_rank: 139
+    paper_rank: 269
+    rank_delta: 130
+    rank_delta_abs: 130
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2196,14 +2241,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on WikiCS using PyG-SSL implementation.
+    protocol_note: Node classification on WikiCS using PyG-SSL implementation test
+      accuracy.
     date: Dec 30, 2024
     date_display: Dec 2024
     date_iso: '2024-12-30'
@@ -2235,8 +2281,8 @@ results:
     value_note: ''
     sort_value: 0.789
     sort_std: 0.006
-    global_rank: 147
-    paper_rank: 147
+    global_rank: 144
+    paper_rank: 144
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2263,14 +2309,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on WikiCS using PyG-SSL implementation.
+    protocol_note: Node classification on WikiCS using PyG-SSL implementation test
+      accuracy.
     date: Dec 30, 2024
     date_display: Dec 2024
     date_iso: '2024-12-30'
@@ -2302,8 +2349,8 @@ results:
     value_note: ''
     sort_value: 0.787
     sort_std: 0.007
-    global_rank: 152
-    paper_rank: 152
+    global_rank: 149
+    paper_rank: 149
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2330,14 +2377,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on WikiCS using PyG-SSL implementation.
+    protocol_note: Node classification on WikiCS using PyG-SSL implementation test
+      accuracy.
     date: Dec 30, 2024
     date_display: Dec 2024
     date_iso: '2024-12-30'
@@ -2371,10 +2419,10 @@ results:
     value_note: ''
     sort_value: 0.7865
     sort_std: 0.069
-    global_rank: 156
-    paper_rank: 239
-    rank_delta: 83
-    rank_delta_abs: 83
+    global_rank: 152
+    paper_rank: 230
+    rank_delta: 78
+    rank_delta_abs: 78
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2400,15 +2448,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: Reported
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on WikiCS reported in original research
-      paper.
+    protocol_note: Node classification on WikiCS using reported test accuracy.
     date: Dec 30, 2024
     date_display: Dec 2024
     date_iso: '2024-12-30'
@@ -2441,8 +2488,8 @@ results:
     value_note: ''
     sort_value: 0.784
     sort_std: 0.001
-    global_rank: 169
-    paper_rank: 173
+    global_rank: 163
+    paper_rank: 167
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -2469,14 +2516,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on WikiCS using PyG-SSL implementation.
+    protocol_note: Node classification on WikiCS using PyG-SSL implementation test
+      accuracy.
     date: Dec 30, 2024
     date_display: Dec 2024
     date_iso: '2024-12-30'
@@ -2509,10 +2557,10 @@ results:
     value_note: ''
     sort_value: 0.7837
     sort_std: 0.0077
-    global_rank: 170
-    paper_rank: 203
-    rank_delta: 33
-    rank_delta_abs: 33
+    global_rank: 164
+    paper_rank: 196
+    rank_delta: 32
+    rank_delta_abs: 32
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2537,14 +2585,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Node classification task on WikiCS using PyG-SSL implementation.
+    protocol_note: Node classification on WikiCS using PyG-SSL implementation test
+      accuracy.
     date: Dec 30, 2024
     date_display: Dec 2024
     date_iso: '2024-12-30'
@@ -2577,10 +2626,10 @@ results:
     value_note: ''
     sort_value: 0.7757
     sort_std: 0.0046
-    global_rank: 196
-    paper_rank: 258
-    rank_delta: 62
-    rank_delta_abs: 62
+    global_rank: 190
+    paper_rank: 249
+    rank_delta: 59
+    rank_delta_abs: 59
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2614,7 +2663,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 246
+    global_rank: 237
     sort_value: 0.7469
     sort_std: 0.0085
     comparison_type: global_top
@@ -2636,10 +2685,8 @@ results_grouped:
   datasets:
   - *id001
   - *id002
-- benchmark: TU Dortmund
-  datasets:
   - *id003
-- benchmark: Other Graph Benchmarks
+- benchmark: TU Dortmund
   datasets:
   - *id004
 datasets_by_scope:
@@ -2649,15 +2696,12 @@ datasets_by_scope:
   - benchmark: Classic
     benchmark_slug: classic
     datasets:
+    - dataset: Amazon-Photo
+      dataset_slug: amazon-photo
     - dataset: WikiCS
       dataset_slug: wikics
     - dataset: Coauthor-CS
       dataset_slug: coauthor-cs
-  - benchmark: Other Graph Benchmarks
-    benchmark_slug: other-graph-benchmarks
-    datasets:
-    - dataset: Amazon2M
-      dataset_slug: amazon2m
 - scope: graph-level
   label: Graph-level
   benchmarks:

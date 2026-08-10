@@ -47,8 +47,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - LGSM
-mrr: 0.0141
-adjusted_mrr: 0.0094
+mrr: 0.0165
+adjusted_mrr: 0.011
 mrr_dataset_count: 2
 benchmark_categories:
 - LRGB
@@ -779,10 +779,10 @@ results:
     value_note: ''
     sort_value: 0.715
     sort_std: 0.0044
-    global_rank: 14
-    paper_rank: 41
-    rank_delta: 27
-    rank_delta_abs: 27
+    global_rank: 13
+    paper_rank: 37
+    rank_delta: 24
+    rank_delta_abs: 24
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -822,10 +822,10 @@ results:
     published_conference: ''
     at_pub_value: 0.715
     at_pub_std: 0.0044
-    at_pub_source_arxiv: '2310.07430'
-    at_pub_source_title: Non-backtracking Graph Neural Networks
-    at_pub_source_date_iso: '2023-10-11'
-    at_pub_source_date_label: TMLR 2023
+    at_pub_source_arxiv: '2510.02565'
+    at_pub_source_title: On The Expressive Power of GNN Derivatives
+    at_pub_source_date_iso: '2025-10-02'
+    at_pub_source_date_label: '2025'
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -846,8 +846,8 @@ results:
     value_note: ''
     sort_value: 0.715
     sort_std: 0.0044
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 14
+    paper_rank: 14
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -887,12 +887,12 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.7126
-    at_pub_std: 0.0045
-    at_pub_source_arxiv: '2310.07430'
-    at_pub_source_title: Non-backtracking Graph Neural Networks
-    at_pub_source_date_iso: '2023-10-11'
-    at_pub_source_date_label: TMLR 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -913,8 +913,8 @@ results:
     value_note: ''
     sort_value: 0.7126
     sort_std: 0.0045
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -980,8 +980,8 @@ results:
     value_note: ''
     sort_value: 0.7096
     sort_std: 0.0078
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1048,8 +1048,8 @@ results:
     value_note: ''
     sort_value: 0.7071
     sort_std: 0.0083
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1115,8 +1115,8 @@ results:
     value_note: ''
     sort_value: 0.7059
     sort_std: 0.0089
-    global_rank: 31
-    paper_rank: 31
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1182,8 +1182,8 @@ results:
     value_note: ''
     sort_value: 0.7049
     sort_std: 0.0051
-    global_rank: 32
-    paper_rank: 32
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1249,8 +1249,8 @@ results:
     value_note: ''
     sort_value: 0.7006
     sort_std: 0.0033
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1291,12 +1291,12 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.6977
-    at_pub_std: 0.0026
-    at_pub_source_arxiv: '2310.07430'
-    at_pub_source_title: Non-backtracking Graph Neural Networks
-    at_pub_source_date_iso: '2023-10-11'
-    at_pub_source_date_label: TMLR 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -1317,8 +1317,8 @@ results:
     value_note: ''
     sort_value: 0.6977
     sort_std: 0.0026
-    global_rank: 46
-    paper_rank: 46
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1384,8 +1384,8 @@ results:
     value_note: ''
     sort_value: 0.694
     sort_std: 0.0074
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 50
+    paper_rank: 50
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1427,10 +1427,10 @@ results:
     published_conference: ''
     at_pub_value: 0.6843
     at_pub_std: 0.0049
-    at_pub_source_arxiv: '2310.07430'
-    at_pub_source_title: Non-backtracking Graph Neural Networks
-    at_pub_source_date_iso: '2023-10-11'
-    at_pub_source_date_label: TMLR 2023
+    at_pub_source_arxiv: '2510.02565'
+    at_pub_source_title: On The Expressive Power of GNN Derivatives
+    at_pub_source_date_iso: '2025-10-02'
+    at_pub_source_date_label: '2025'
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -1451,8 +1451,8 @@ results:
     value_note: ''
     sort_value: 0.6843
     sort_std: 0.0049
-    global_rank: 64
-    paper_rank: 64
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1494,10 +1494,10 @@ results:
     published_conference: ''
     at_pub_value: 0.683
     at_pub_std: 0.0026
-    at_pub_source_arxiv: '2310.07430'
-    at_pub_source_title: Non-backtracking Graph Neural Networks
-    at_pub_source_date_iso: '2023-10-11'
-    at_pub_source_date_label: TMLR 2023
+    at_pub_source_arxiv: '2510.02565'
+    at_pub_source_title: On The Expressive Power of GNN Derivatives
+    at_pub_source_date_iso: '2025-10-02'
+    at_pub_source_date_label: '2025'
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -1518,8 +1518,8 @@ results:
     value_note: ''
     sort_value: 0.683
     sort_std: 0.0026
-    global_rank: 66
-    paper_rank: 66
+    global_rank: 57
+    paper_rank: 57
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1559,13 +1559,12 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.6751
-    at_pub_std: 0.0039
-    at_pub_source_arxiv: '2508.05070'
-    at_pub_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
-      Flows'
-    at_pub_source_date_iso: '2025-08-07'
-    at_pub_source_date_label: '2025'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -1586,8 +1585,8 @@ results:
     value_note: ''
     sort_value: 0.6751
     sort_std: 0.0039
-    global_rank: 75
-    paper_rank: 75
+    global_rank: 66
+    paper_rank: 66
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1628,11 +1627,11 @@ results:
     published_venue: ''
     published_conference: ''
     at_pub_value: 0.6739
-    at_pub_std: 0.0087
-    at_pub_source_arxiv: '2310.07430'
-    at_pub_source_title: Non-backtracking Graph Neural Networks
-    at_pub_source_date_iso: '2023-10-11'
-    at_pub_source_date_label: TMLR 2023
+    at_pub_std: null
+    at_pub_source_arxiv: '2601.19094'
+    at_pub_source_title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    at_pub_source_date_iso: '2026-01-27'
+    at_pub_source_date_label: '2026'
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -1653,8 +1652,8 @@ results:
     value_note: ''
     sort_value: 0.6739
     sort_std: 0.0087
-    global_rank: 77
-    paper_rank: 77
+    global_rank: 68
+    paper_rank: 68
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1720,8 +1719,8 @@ results:
     value_note: ''
     sort_value: 0.6733
     sort_std: 0.0094
-    global_rank: 78
-    paper_rank: 78
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1787,8 +1786,8 @@ results:
     value_note: ''
     sort_value: 0.6685
     sort_std: 0.0136
-    global_rank: 86
-    paper_rank: 86
+    global_rank: 77
+    paper_rank: 77
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1856,10 +1855,10 @@ results:
     value_note: ''
     sort_value: 0.663
     sort_std: 0.016
-    global_rank: 89
-    paper_rank: 171
-    rank_delta: 82
-    rank_delta_abs: 82
+    global_rank: 80
+    paper_rank: 161
+    rank_delta: 81
+    rank_delta_abs: 81
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1904,7 +1903,7 @@ results:
     at_pub_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph Benchmark
     at_pub_source_date_iso: '2023-09-01'
     at_pub_source_date_label: TMLR 2023
-    value_gap_source_date_iso: '2026-05-13'
+    value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
@@ -1916,17 +1915,16 @@ results:
     today_delta_significant: false
     true_value: 0.6621
     true_std: 0.0067
-    value_gap_source_arxiv: '2605.13383'
-    value_gap_source_title: 'Beyond Oversquashing: Understanding Signal Propagation
-      in GNNs Via Observables'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2605.12358'
+    value_gap_source_title: From Message-Passing to Linearized Graph Sequence Models
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.6621
     sort_std: 0.0067
-    global_rank: 92
-    paper_rank: 92
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1966,12 +1964,12 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.6592
-    at_pub_std: 0.0036
-    at_pub_source_arxiv: '2310.07430'
-    at_pub_source_title: Non-backtracking Graph Neural Networks
-    at_pub_source_date_iso: '2023-10-11'
-    at_pub_source_date_label: TMLR 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -1992,8 +1990,8 @@ results:
     value_note: ''
     sort_value: 0.6592
     sort_std: 0.0036
-    global_rank: 95
-    paper_rank: 95
+    global_rank: 86
+    paper_rank: 86
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2035,10 +2033,10 @@ results:
     published_conference: ''
     at_pub_value: 0.6535
     at_pub_std: 0.0041
-    at_pub_source_arxiv: '2310.07430'
-    at_pub_source_title: Non-backtracking Graph Neural Networks
-    at_pub_source_date_iso: '2023-10-11'
-    at_pub_source_date_label: TMLR 2023
+    at_pub_source_arxiv: '2510.02565'
+    at_pub_source_title: On The Expressive Power of GNN Derivatives
+    at_pub_source_date_iso: '2025-10-02'
+    at_pub_source_date_label: '2025'
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -2059,8 +2057,8 @@ results:
     value_note: ''
     sort_value: 0.6535
     sort_std: 0.0041
-    global_rank: 106
-    paper_rank: 106
+    global_rank: 97
+    paper_rank: 97
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2100,12 +2098,12 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.6469
-    at_pub_std: 0.0019
-    at_pub_source_arxiv: '2310.07430'
-    at_pub_source_title: Non-backtracking Graph Neural Networks
-    at_pub_source_date_iso: '2023-10-11'
-    at_pub_source_date_label: TMLR 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -2126,8 +2124,8 @@ results:
     value_note: ''
     sort_value: 0.6469
     sort_std: 0.0019
-    global_rank: 122
-    paper_rank: 122
+    global_rank: 112
+    paper_rank: 112
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2193,8 +2191,8 @@ results:
     value_note: ''
     sort_value: 0.6384
     sort_std: 0.0121
-    global_rank: 131
-    paper_rank: 131
+    global_rank: 120
+    paper_rank: 120
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2260,8 +2258,8 @@ results:
     value_note: ''
     sort_value: 0.6326
     sort_std: 0.0126
-    global_rank: 133
-    paper_rank: 133
+    global_rank: 122
+    paper_rank: 122
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2301,13 +2299,12 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.6022
-    at_pub_std: 0.0068
-    at_pub_source_arxiv: '2508.05070'
-    at_pub_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
-      Flows'
-    at_pub_source_date_iso: '2025-08-07'
-    at_pub_source_date_label: '2025'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -2328,8 +2325,8 @@ results:
     value_note: ''
     sort_value: 0.6022
     sort_std: 0.0068
-    global_rank: 151
-    paper_rank: 151
+    global_rank: 141
+    paper_rank: 141
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2369,13 +2366,12 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.5975
-    at_pub_std: 0.0044
-    at_pub_source_arxiv: '2508.05070'
-    at_pub_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
-      Flows'
-    at_pub_source_date_iso: '2025-08-07'
-    at_pub_source_date_label: '2025'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -2396,8 +2392,8 @@ results:
     value_note: ''
     sort_value: 0.5975
     sort_std: 0.0044
-    global_rank: 153
-    paper_rank: 153
+    global_rank: 143
+    paper_rank: 143
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2433,7 +2429,7 @@ results:
     feature_source_evidence: For both datasets, we did not employ any feature augmentation
       such as positional encoding.
     is_global_top: true
-    global_rank: 196
+    global_rank: 186
     sort_value: 0.406
     sort_std: 0.0021
     comparison_type: global_top
@@ -2453,105 +2449,6 @@ results:
 - &id001
   dataset: Peptides-struct
   rows:
-  - model: Energy GNN + attention
-    model_key: energy gnn + attention
-    model_plain: Energy GNN + attention
-    value: 0.036000000000000004
-    std: 0.038
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2407.00494'
-    title: Graph Neural Networks Gone Hogwild
-    date: Jun 29, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-29'
-    venue: International Conference on Learning Representations
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.036000000000000004
-    sort_std: 0.038
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: true
-  - model: Energy GNN edge-wise
-    model_key: energy gnn edge-wise
-    model_plain: Energy GNN edge-wise
-    value: 0.04
-    std: 0.036000000000000004
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.00494'
-    title: Graph Neural Networks Gone Hogwild
-    date: Jun 29, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-29'
-    venue: International Conference on Learning Representations
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.04
-    sort_std: 0.036000000000000004
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: true
-  - model: Energy GNN node-wise
-    model_key: energy gnn node-wise
-    model_plain: Energy GNN node-wise
-    value: 0.195
-    std: 0.017
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.00494'
-    title: Graph Neural Networks Gone Hogwild
-    date: Jun 29, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-29'
-    venue: International Conference on Learning Representations
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.195
-    sort_std: 0.017
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
   - model: GCN
     model_key: gcn
     model_plain: GCN
@@ -2609,8 +2506,8 @@ results:
     value_note: ''
     sort_value: 0.2421
     sort_std: 0.0016
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 1
+    paper_rank: 1
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2618,7 +2515,73 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
+    is_std_outlier: false
+  - model: IPR-MPNN
+    model_key: ipr-mpnn
+    model_plain: IPR-MPNN
+    value: 0.2422
+    std: 0.0007
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.17311'
+    title: Probabilistic Graph Rewiring via Virtual Nodes
+    date: May 27, 2024
+    date_display: May 2024
+    date_iso: '2024-05-27'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/chendiqian/IPR-MPNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.2422
+    sort_std: 0.0007
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: UniGCN
+    model_key: unigcn
+    model_plain: UniGCN
+    value: 0.2425
+    std: 0.0009
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2410.05499'
+    title: Unitary convolutions for learning on graphs and groups
+    date: Oct 7, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-07'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/Weber-GeoML/Unitary_Convolutions
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.2425
+    sort_std: 0.0009
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
     is_std_outlier: false
   - model: GIN
     model_key: gin
@@ -2677,8 +2640,8 @@ results:
     value_note: ''
     sort_value: 0.2429
     sort_std: 0.0019
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 4
+    paper_rank: 4
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2686,7 +2649,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: GatedGCN
     model_key: gatedgcn
@@ -2745,8 +2708,8 @@ results:
     value_note: ''
     sort_value: 0.2431
     sort_std: 0.002
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 6
+    paper_rank: 6
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2754,7 +2717,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: GRAMA_GatedGCN
     model_key: grama_gatedgcn
@@ -2812,8 +2775,8 @@ results:
     value_note: ''
     sort_value: 0.2459
     sort_std: 0.002
-    global_rank: 43
-    paper_rank: 43
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2879,8 +2842,8 @@ results:
     value_note: ''
     sort_value: 0.2463
     sort_std: 0.0005
-    global_rank: 51
-    paper_rank: 51
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2946,8 +2909,8 @@ results:
     value_note: ''
     sort_value: 0.247
     sort_std: 0.0019
-    global_rank: 60
-    paper_rank: 60
+    global_rank: 50
+    paper_rank: 50
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2993,7 +2956,7 @@ results:
     at_pub_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph Benchmark
     at_pub_source_date_iso: '2023-09-01'
     at_pub_source_date_label: TMLR 2023
-    value_gap_source_date_iso: '2026-05-13'
+    value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
@@ -3005,17 +2968,16 @@ results:
     today_delta_significant: false
     true_value: 0.2473
     true_std: 0.0017
-    value_gap_source_arxiv: '2605.13383'
-    value_gap_source_title: 'Beyond Oversquashing: Understanding Signal Propagation
-      in GNNs Via Observables'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2605.12358'
+    value_gap_source_title: From Message-Passing to Linearized Graph Sequence Models
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.2473
     sort_std: 0.0017
-    global_rank: 65
-    paper_rank: 65
+    global_rank: 54
+    paper_rank: 54
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3082,8 +3044,8 @@ results:
     value_note: ''
     sort_value: 0.2473
     sort_std: 0.0025
-    global_rank: 66
-    paper_rank: 66
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3125,10 +3087,11 @@ results:
     published_conference: ''
     at_pub_value: 0.2478
     at_pub_std: 0.0016
-    at_pub_source_arxiv: '2310.07430'
-    at_pub_source_title: Non-backtracking Graph Neural Networks
-    at_pub_source_date_iso: '2023-10-11'
-    at_pub_source_date_label: TMLR 2023
+    at_pub_source_arxiv: '2502.09263'
+    at_pub_source_title: Can Classic GNNs Be Strong Baselines for Graph-level Tasks?
+      Simple Architectures Meet Excellence
+    at_pub_source_date_iso: '2025-02-13'
+    at_pub_source_date_label: ICML 2025
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -3149,8 +3112,8 @@ results:
     value_note: ''
     sort_value: 0.2478
     sort_std: 0.0016
-    global_rank: 81
-    paper_rank: 81
+    global_rank: 70
+    paper_rank: 70
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3190,13 +3153,12 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.2485
-    at_pub_std: 0.0009
-    at_pub_source_arxiv: '2508.05070'
-    at_pub_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
-      Flows'
-    at_pub_source_date_iso: '2025-08-07'
-    at_pub_source_date_label: '2025'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -3217,8 +3179,8 @@ results:
     value_note: ''
     sort_value: 0.2485
     sort_std: 0.0009
-    global_rank: 89
-    paper_rank: 89
+    global_rank: 78
+    paper_rank: 78
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3260,10 +3222,10 @@ results:
     published_conference: ''
     at_pub_value: 0.25
     at_pub_std: 0.0005
-    at_pub_source_arxiv: '2310.07430'
-    at_pub_source_title: Non-backtracking Graph Neural Networks
-    at_pub_source_date_iso: '2023-10-11'
-    at_pub_source_date_label: TMLR 2023
+    at_pub_source_arxiv: '2510.02565'
+    at_pub_source_title: On The Expressive Power of GNN Derivatives
+    at_pub_source_date_iso: '2025-10-02'
+    at_pub_source_date_label: '2025'
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -3284,8 +3246,8 @@ results:
     value_note: ''
     sort_value: 0.25
     sort_std: 0.0005
-    global_rank: 106
-    paper_rank: 106
+    global_rank: 95
+    paper_rank: 95
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3327,10 +3289,10 @@ results:
     published_conference: ''
     at_pub_value: 0.2536
     at_pub_std: 0.0015
-    at_pub_source_arxiv: '2310.07430'
-    at_pub_source_title: Non-backtracking Graph Neural Networks
-    at_pub_source_date_iso: '2023-10-11'
-    at_pub_source_date_label: TMLR 2023
+    at_pub_source_arxiv: '2510.02565'
+    at_pub_source_title: On The Expressive Power of GNN Derivatives
+    at_pub_source_date_iso: '2025-10-02'
+    at_pub_source_date_label: '2025'
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.0019000000000000128
@@ -3351,8 +3313,8 @@ results:
     value_note: ''
     sort_value: 0.2517
     sort_std: 0.0011
-    global_rank: 123
-    paper_rank: 123
+    global_rank: 111
+    paper_rank: 111
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3418,8 +3380,8 @@ results:
     value_note: ''
     sort_value: 0.2529
     sort_std: 0.0016
-    global_rank: 133
-    paper_rank: 133
+    global_rank: 121
+    paper_rank: 121
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3485,10 +3447,10 @@ results:
     value_note: ''
     sort_value: 0.2536
     sort_std: null
-    global_rank: 137
-    paper_rank: 188
-    rank_delta: 51
-    rank_delta_abs: 51
+    global_rank: 124
+    paper_rank: 174
+    rank_delta: 50
+    rank_delta_abs: 50
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3526,12 +3488,12 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.2539
-    at_pub_std: 0.0007
-    at_pub_source_arxiv: '2310.07430'
-    at_pub_source_title: Non-backtracking Graph Neural Networks
-    at_pub_source_date_iso: '2023-10-11'
-    at_pub_source_date_label: TMLR 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -3552,8 +3514,8 @@ results:
     value_note: ''
     sort_value: 0.2539
     sort_std: 0.0007
-    global_rank: 141
-    paper_rank: 141
+    global_rank: 128
+    paper_rank: 128
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3593,12 +3555,12 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.2606
-    at_pub_std: 0.0014
-    at_pub_source_arxiv: '2310.07430'
-    at_pub_source_title: Non-backtracking Graph Neural Networks
-    at_pub_source_date_iso: '2023-10-11'
-    at_pub_source_date_label: TMLR 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -3619,8 +3581,8 @@ results:
     value_note: ''
     sort_value: 0.2606
     sort_std: 0.0014
-    global_rank: 169
-    paper_rank: 169
+    global_rank: 155
+    paper_rank: 155
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3662,10 +3624,10 @@ results:
     published_conference: ''
     at_pub_value: 0.2614
     at_pub_std: 0.0023
-    at_pub_source_arxiv: '2310.07430'
-    at_pub_source_title: Non-backtracking Graph Neural Networks
-    at_pub_source_date_iso: '2023-10-11'
-    at_pub_source_date_label: TMLR 2023
+    at_pub_source_arxiv: '2510.02565'
+    at_pub_source_title: On The Expressive Power of GNN Derivatives
+    at_pub_source_date_iso: '2025-10-02'
+    at_pub_source_date_label: '2025'
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -3686,8 +3648,8 @@ results:
     value_note: ''
     sort_value: 0.2614
     sort_std: 0.0023
-    global_rank: 171
-    paper_rank: 171
+    global_rank: 158
+    paper_rank: 158
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3729,10 +3691,10 @@ results:
     published_conference: ''
     at_pub_value: 0.2616
     at_pub_std: 0.0018
-    at_pub_source_arxiv: '2310.07430'
-    at_pub_source_title: Non-backtracking Graph Neural Networks
-    at_pub_source_date_iso: '2023-10-11'
-    at_pub_source_date_label: TMLR 2023
+    at_pub_source_arxiv: '2510.02565'
+    at_pub_source_title: On The Expressive Power of GNN Derivatives
+    at_pub_source_date_iso: '2025-10-02'
+    at_pub_source_date_label: '2025'
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -3753,8 +3715,8 @@ results:
     value_note: ''
     sort_value: 0.2616
     sort_std: 0.0018
-    global_rank: 172
-    paper_rank: 172
+    global_rank: 159
+    paper_rank: 159
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3822,8 +3784,8 @@ results:
     value_note: ''
     sort_value: 0.268
     sort_std: 0.004
-    global_rank: 178
-    paper_rank: 178
+    global_rank: 164
+    paper_rank: 164
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3863,13 +3825,12 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.2699
-    at_pub_std: 0.0018
-    at_pub_source_arxiv: '2508.05070'
-    at_pub_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
-      Flows'
-    at_pub_source_date_iso: '2025-08-07'
-    at_pub_source_date_label: '2025'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -3890,8 +3851,8 @@ results:
     value_note: ''
     sort_value: 0.2699
     sort_std: 0.0018
-    global_rank: 181
-    paper_rank: 181
+    global_rank: 167
+    paper_rank: 167
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3931,13 +3892,12 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.2778
-    at_pub_std: 0.0018
-    at_pub_source_arxiv: '2508.05070'
-    at_pub_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
-      Flows'
-    at_pub_source_date_iso: '2025-08-07'
-    at_pub_source_date_label: '2025'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -3958,8 +3918,8 @@ results:
     value_note: ''
     sort_value: 0.2778
     sort_std: 0.0018
-    global_rank: 188
-    paper_rank: 188
+    global_rank: 174
+    paper_rank: 174
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3999,13 +3959,12 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.2799
-    at_pub_std: 0.0016
-    at_pub_source_arxiv: '2508.05070'
-    at_pub_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
-      Flows'
-    at_pub_source_date_iso: '2025-08-07'
-    at_pub_source_date_label: '2025'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -4026,8 +3985,8 @@ results:
     value_note: ''
     sort_value: 0.2799
     sort_std: 0.0016
-    global_rank: 189
-    paper_rank: 189
+    global_rank: 175
+    paper_rank: 175
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4067,13 +4026,12 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.2874
-    at_pub_std: 0.0021
-    at_pub_source_arxiv: '2508.05070'
-    at_pub_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
-      Flows'
-    at_pub_source_date_iso: '2025-08-07'
-    at_pub_source_date_label: '2025'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -4094,8 +4052,8 @@ results:
     value_note: ''
     sort_value: 0.2874
     sort_std: 0.0021
-    global_rank: 193
-    paper_rank: 193
+    global_rank: 179
+    paper_rank: 179
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4135,12 +4093,12 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.2921
-    at_pub_std: 0.0023
-    at_pub_source_arxiv: '2310.07430'
-    at_pub_source_title: Non-backtracking Graph Neural Networks
-    at_pub_source_date_iso: '2023-10-11'
-    at_pub_source_date_label: TMLR 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -4161,8 +4119,8 @@ results:
     value_note: ''
     sort_value: 0.2921
     sort_std: 0.0023
-    global_rank: 194
-    paper_rank: 194
+    global_rank: 180
+    paper_rank: 180
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4202,12 +4160,12 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.3173
-    at_pub_std: 0.0007
-    at_pub_source_arxiv: '2310.07430'
-    at_pub_source_title: Non-backtracking Graph Neural Networks
-    at_pub_source_date_iso: '2023-10-11'
-    at_pub_source_date_label: TMLR 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -4228,8 +4186,8 @@ results:
     value_note: ''
     sort_value: 0.3173
     sort_std: 0.0007
-    global_rank: 197
-    paper_rank: 197
+    global_rank: 183
+    paper_rank: 183
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4269,13 +4227,12 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.3418
-    at_pub_std: 0.0015
-    at_pub_source_arxiv: '2508.05070'
-    at_pub_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
-      Flows'
-    at_pub_source_date_iso: '2025-08-07'
-    at_pub_source_date_label: '2025'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -4296,8 +4253,8 @@ results:
     value_note: ''
     sort_value: 0.3418
     sort_std: 0.0015
-    global_rank: 206
-    paper_rank: 206
+    global_rank: 191
+    paper_rank: 191
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4333,7 +4290,7 @@ results:
     feature_source_evidence: For both datasets, we did not employ any feature augmentation
       such as positional encoding.
     is_global_top: true
-    global_rank: 219
+    global_rank: 210
     sort_value: 0.4351
     sort_std: 0.0008
     comparison_type: global_top

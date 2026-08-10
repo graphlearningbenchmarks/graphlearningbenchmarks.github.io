@@ -44,8 +44,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - lapool
-mrr: 0.0476
-adjusted_mrr: 0.0159
+mrr: 0.0526
+adjusted_mrr: 0.0175
 mrr_dataset_count: 1
 benchmark_categories:
 - MoleculeNet
@@ -186,7 +186,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 16
+    global_rank: 14
     sort_value: 0.84
     sort_std: 0.004
     comparison_type: global_top
@@ -252,8 +252,8 @@ results:
     value_note: ''
     sort_value: 0.8342
     sort_std: 0.0097
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -321,8 +321,8 @@ results:
     value_note: ''
     sort_value: 0.829
     sort_std: 0.0069
-    global_rank: 26
-    paper_rank: 26
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -390,8 +390,8 @@ results:
     value_note: ''
     sort_value: 0.8237
     sort_std: 0.009
-    global_rank: 32
-    paper_rank: 32
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -459,8 +459,8 @@ results:
     value_note: ''
     sort_value: 0.8141
     sort_std: 0.006
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

@@ -71,9 +71,9 @@ results:
 - &id002
   dataset: MNIST
   rows:
-  - model: Schrödinger GNN
-    model_key: schrödinger gnn
-    model_plain: Schrödinger GNN
+  - model: Schrödinger
+    model_key: schrödinger
+    model_plain: Schrödinger
     value: 0.9913
     std: 0.0004
     metric: Accuracy
@@ -439,7 +439,7 @@ results:
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
@@ -575,9 +575,9 @@ results:
     sort_value: 0.9637
     sort_std: 0.0215
     global_rank: 8
-    paper_rank: 661
-    rank_delta: 653
-    rank_delta_abs: 653
+    paper_rank: 660
+    rank_delta: 652
+    rank_delta_abs: 652
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -644,7 +644,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 429
+    global_rank: 430
     sort_value: 0.866
     sort_std: 0.0495
     comparison_type: global_top
@@ -710,10 +710,10 @@ results:
     value_note: ''
     sort_value: 0.79
     sort_std: 0.02
-    global_rank: 717
-    paper_rank: 734
-    rank_delta: 17
-    rank_delta_abs: 17
+    global_rank: 718
+    paper_rank: 736
+    rank_delta: 18
+    rank_delta_abs: 18
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null

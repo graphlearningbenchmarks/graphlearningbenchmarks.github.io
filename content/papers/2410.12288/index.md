@@ -43,8 +43,8 @@ paper_type: method
 proposed_models:
 - KG-ICL pre-train
 - KG-ICL finetune
-mrr: 0.0091
-adjusted_mrr: 0.003
+mrr: 0.0098
+adjusted_mrr: 0.0033
 mrr_dataset_count: 1
 benchmark_categories:
 - Knowledge Graphs
@@ -182,45 +182,6 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    metric_values:
-    - 0.637
-    - null
-    metric_stds:
-    - 0.017
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2603.00618'
-    title: Multi-domain Riemannian Graph Gluing for Building Graph Foundation Models
-    published_venue: ''
-    date: Feb 28, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-28'
-    codebase_url: https://github.com/RiemannGraph/GraphGlue
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 28
-    is_best: false
-    sort_value: 0.637
-    sort_std: 0.017
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
   - model: KG-ICL pre-train
     model_key: kg-icl pre-train
     model_plain: KG-ICL pre-train
@@ -281,7 +242,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 93
+    global_rank: 80
   - model: ULTRA finetune
     model_key: ultra finetune
     model_plain: ULTRA finetune
@@ -342,7 +303,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 97
+    global_rank: 84
   - model: KG-ICL finetune
     model_key: kg-icl finetune
     model_plain: KG-ICL finetune
@@ -403,7 +364,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 101
+    global_rank: 88
   - model: ULTRA pre-train
     model_key: ultra pre-train
     model_plain: ULTRA pre-train
@@ -464,7 +425,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 100
+    global_rank: 87
   - model: Supervised SOTA
     model_key: supervised sota
     model_plain: Supervised SOTA
@@ -525,7 +486,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 105
+    global_rank: 92
   metrics:
   - MRR
   - H@10
@@ -671,7 +632,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 27
+    global_rank: 25
     sort_value: 0.8298
     sort_std: 0.0022
     comparison_type: global_top
@@ -737,8 +698,8 @@ results:
     value_note: ''
     sort_value: 0.64
     sort_std: null
-    global_rank: 48
-    paper_rank: 60
+    global_rank: 40
+    paper_rank: 52
     rank_delta: 12
     rank_delta_abs: 12
     rank_delta_direction: worse
@@ -806,8 +767,8 @@ results:
     value_note: ''
     sort_value: 0.536
     sort_std: null
-    global_rank: 63
-    paper_rank: 63
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -874,8 +835,8 @@ results:
     value_note: ''
     sort_value: 0.48
     sort_std: null
-    global_rank: 87
-    paper_rank: 87
+    global_rank: 79
+    paper_rank: 79
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -942,8 +903,8 @@ results:
     value_note: ''
     sort_value: 0.48
     sort_std: null
-    global_rank: 88
-    paper_rank: 88
+    global_rank: 80
+    paper_rank: 80
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1010,8 +971,8 @@ results:
     value_note: ''
     sort_value: 0.455
     sort_std: null
-    global_rank: 110
-    paper_rank: 110
+    global_rank: 102
+    paper_rank: 102
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

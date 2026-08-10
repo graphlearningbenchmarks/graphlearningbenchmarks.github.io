@@ -40,8 +40,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - APPNP
-mrr: 0.05
-adjusted_mrr: 0.0167
+mrr: 0.0588
+adjusted_mrr: 0.0196
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -99,46 +99,6 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: SAGN
-    model_key: sagn
-    model_plain: SAGN
-    metric_values:
-    - 0.9517
-    - null
-    metric_stds:
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2605.24867'
-    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
-      Graph Learning'
-    published_venue: ''
-    date: May 24, 2026
-    date_display: May 2026
-    date_iso: '2026-05-24'
-    codebase_url: https://github.com/Uncnbb/KCoT
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 2
-    is_best: true
-    sort_value: 0.9517
-    sort_std: null
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
   - model: MixHop (LO)
     model_key: mixhop (lo)
     model_plain: MixHop (LO)
@@ -165,7 +125,7 @@ results:
     codebase_url: https://github.com/QiaoYRan/LOGIN
     uses_external_data: false
     is_global_top: true
-    global_rank: 3
+    global_rank: 2
     is_best: true
     sort_value: 0.9513
     sort_std: 0.0038
@@ -179,14 +139,14 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
+  - model: GraphSAGE (LO)
+    model_key: graphsage (lo)
+    model_plain: GraphSAGE (LO)
     metric_values:
-    - 0.9487
+    - 0.9511
     - null
     metric_stds:
-    - null
+    - 0.0036
     - null
     is_baseline: true
     is_overridden: false
@@ -195,20 +155,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2605.24867'
-    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
-      Graph Learning'
+    arxiv_id: '2405.13902'
+    title: 'LOGIN: A Large Language Model Consulted Graph Neural Network Training
+      Framework'
     published_venue: ''
-    date: May 24, 2026
-    date_display: May 2026
-    date_iso: '2026-05-24'
-    codebase_url: https://github.com/Uncnbb/KCoT
+    date: May 22, 2024
+    date_display: May 2024
+    date_iso: '2024-05-22'
+    codebase_url: https://github.com/QiaoYRan/LOGIN
     uses_external_data: false
     is_global_top: true
-    global_rank: 9
-    is_best: false
-    sort_value: 0.9487
-    sort_std: null
+    global_rank: 3
+    is_best: true
+    sort_value: 0.9511
+    sort_std: 0.0036
     has_value_gap: false
     has_value_note: false
     paper_rank: null
@@ -280,7 +240,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 20
+    global_rank: 17
   - model: GCN
     model_key: gcn
     model_plain: GCN
@@ -298,26 +258,26 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     sort_value: 0.9296
-    sort_std: null
+    sort_std: 0.0015
     true_value: 0.9296
-    true_std: null
+    true_std: 0.0015
     paper_value: 0.7868
     paper_std: 0.0038
     has_value_gap: true
     has_value_note: false
     value_gap: 0.14279999999999993
-    value_gap_source_arxiv: '2605.24867'
-    value_gap_source_title: 'Clustering as Reasoning: A $k$-Means Interpretation of
-      Chain-of-Thought Graph Learning'
+    value_gap_source_arxiv: '2505.15845'
+    value_gap_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem
+      in Tokenized Graph Learning Models'
     value_note: ''
     at_pub_value: 0.79
     at_pub_std: null
-    at_pub_source_arxiv: '1609.02907'
-    at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
-    at_pub_source_date_iso: '2016-09-09'
-    at_pub_source_date_label: ICLR 2016
-    value_gap_source_date_iso: '2026-05-24'
-    value_gap_source_date_label: ICML 2026
+    at_pub_source_arxiv: '1710.10370'
+    at_pub_source_title: Topology Adaptive Graph Convolutional Networks
+    at_pub_source_date_iso: '2017-10-28'
+    at_pub_source_date_label: '2017'
+    value_gap_source_date_iso: '2025-05-19'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: 0.0031999999999999806
     worse_than_at_pub: false
     surpassed_since_pub: true
@@ -342,7 +302,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 21
+    global_rank: 19
   - model: GAT
     model_key: gat
     model_plain: GAT
@@ -360,17 +320,17 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     sort_value: 0.9233
-    sort_std: null
+    sort_std: 0.0018
     true_value: 0.9233
-    true_std: null
+    true_std: 0.0018
     paper_value: 0.7776
     paper_std: 0.0044
     has_value_gap: true
     has_value_note: false
     value_gap: 0.14570000000000005
-    value_gap_source_arxiv: '2605.24867'
-    value_gap_source_title: 'Clustering as Reasoning: A $k$-Means Interpretation of
-      Chain-of-Thought Graph Learning'
+    value_gap_source_arxiv: '2505.15845'
+    value_gap_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem
+      in Tokenized Graph Learning Models'
     value_note: ''
     at_pub_value: 0.79
     at_pub_std: 0.003
@@ -378,8 +338,8 @@ results:
     at_pub_source_title: Topology Adaptive Graph Convolutional Networks
     at_pub_source_date_iso: '2017-10-28'
     at_pub_source_date_label: '2017'
-    value_gap_source_date_iso: '2026-05-24'
-    value_gap_source_date_label: ICML 2026
+    value_gap_source_date_iso: '2025-05-19'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: 0.012400000000000078
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -405,6 +365,46 @@ results:
     is_best: false
     is_std_outlier: false
     global_rank: 23
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    metric_values:
+    - 0.8881
+    - null
+    metric_stds:
+    - 0.0015
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2506.07168'
+    title: Efficient Text-Attributed Graph Learning through Selective Annotation and
+      Graph Alignment
+    published_venue: ''
+    date: Jun 8, 2025
+    date_display: Jun 2025
+    date_iso: '2025-06-08'
+    codebase_url: ''
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 134
+    is_best: false
+    sort_value: 0.8881
+    sort_std: 0.0015
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
   - model: MLP
     model_key: mlp
     model_plain: MLP
@@ -430,7 +430,7 @@ results:
     codebase_url: https://github.com/ahxt/GraphConv_is_Mixup
     uses_external_data: false
     is_global_top: true
-    global_rank: 233
+    global_rank: 243
     is_best: false
     sort_value: 0.869
     sort_std: 0.0074
@@ -505,7 +505,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 729
+    global_rank: 762
   - model: V. GCN
     model_key: v. gcn
     model_plain: V. GCN
@@ -567,7 +567,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 742
+    global_rank: 776
   - model: N-GCN
     model_key: n-gcn
     model_plain: N-GCN
@@ -629,7 +629,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 749
+    global_rank: 787
   - model: Bt. FP
     model_key: bt. fp
     model_plain: Bt. FP
@@ -691,7 +691,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 851
+    global_rank: 902
   metrics:
   - Accuracy
   - F1

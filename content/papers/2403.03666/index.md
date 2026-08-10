@@ -51,8 +51,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - two unsupervised strategies
-mrr: 0.0036
-adjusted_mrr: 0.0024
+mrr: 0.0037
+adjusted_mrr: 0.0025
 mrr_dataset_count: 2
 benchmark_categories:
 - Heterophilic Graphs
@@ -1080,7 +1080,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 27
+    global_rank: 25
     sort_value: 0.9136
     sort_std: 0.007
     comparison_type: global_top
@@ -1114,7 +1114,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 177
+    global_rank: 165
     sort_value: 0.8269
     sort_std: null
     comparison_type: global_top
@@ -1180,10 +1180,10 @@ results:
     value_note: ''
     sort_value: 0.779
     sort_std: 0.031
-    global_rank: 259
-    paper_rank: 435
-    rank_delta: 176
-    rank_delta_abs: 176
+    global_rank: 248
+    paper_rank: 425
+    rank_delta: 177
+    rank_delta_abs: 177
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1248,8 +1248,8 @@ results:
     value_note: ''
     sort_value: 0.6612
     sort_std: 0.0075
-    global_rank: 395
-    paper_rank: 395
+    global_rank: 384
+    paper_rank: 384
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1316,8 +1316,8 @@ results:
     value_note: ''
     sort_value: 0.5886
     sort_std: null
-    global_rank: 471
-    paper_rank: 471
+    global_rank: 460
+    paper_rank: 460
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1384,8 +1384,8 @@ results:
     value_note: ''
     sort_value: 0.5829
     sort_std: null
-    global_rank: 482
-    paper_rank: 482
+    global_rank: 471
+    paper_rank: 471
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1452,8 +1452,8 @@ results:
     value_note: ''
     sort_value: 0.5796
     sort_std: null
-    global_rank: 489
-    paper_rank: 489
+    global_rank: 478
+    paper_rank: 478
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1520,8 +1520,8 @@ results:
     value_note: ''
     sort_value: 0.5744
     sort_std: null
-    global_rank: 496
-    paper_rank: 496
+    global_rank: 485
+    paper_rank: 485
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1588,8 +1588,8 @@ results:
     value_note: ''
     sort_value: 0.5623
     sort_std: null
-    global_rank: 512
-    paper_rank: 512
+    global_rank: 501
+    paper_rank: 501
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1655,8 +1655,8 @@ results:
     value_note: ''
     sort_value: 0.514
     sort_std: null
-    global_rank: 560
-    paper_rank: 560
+    global_rank: 548
+    paper_rank: 548
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1723,8 +1723,8 @@ results:
     value_note: ''
     sort_value: 0.5132
     sort_std: null
-    global_rank: 561
-    paper_rank: 561
+    global_rank: 549
+    paper_rank: 549
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1791,8 +1791,8 @@ results:
     value_note: ''
     sort_value: 0.5077
     sort_std: null
-    global_rank: 571
-    paper_rank: 571
+    global_rank: 558
+    paper_rank: 558
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1859,8 +1859,8 @@ results:
     value_note: ''
     sort_value: 0.4462
     sort_std: null
-    global_rank: 621
-    paper_rank: 621
+    global_rank: 606
+    paper_rank: 606
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1927,8 +1927,8 @@ results:
     value_note: ''
     sort_value: 0.441
     sort_std: null
-    global_rank: 625
-    paper_rank: 625
+    global_rank: 610
+    paper_rank: 610
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1995,8 +1995,8 @@ results:
     value_note: ''
     sort_value: 0.4256
     sort_std: null
-    global_rank: 637
-    paper_rank: 637
+    global_rank: 622
+    paper_rank: 622
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2018,40 +2018,6 @@ results:
 - &id002
   dataset: Roman-empire
   rows:
-  - model: Dir-NT
-    model_key: dir-nt
-    model_plain: Dir-NT
-    value: 0.9477
-    std: 0.0031
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2604.08980'
-    title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware Graph
-      Learning'
-    date: Apr 10, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-10'
-    venue: arXiv.org
-    codebase_url: https://github.com/cf020031308/MoNT
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9477
-    sort_std: 0.0031
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
   - model: Dir-Poly
     model_key: dir-poly
     model_plain: Dir-Poly
@@ -2078,7 +2044,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 1
     sort_value: 0.9451
     sort_std: 0.0022
     comparison_type: global_top
@@ -2111,9 +2077,42 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 2
     sort_value: 0.9387
     sort_std: 0.0041
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: LargeScaleNet
+    model_key: largescalenet
+    model_plain: LargeScaleNet
+    value: 0.9358
+    std: 0.0024
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2411.19392'
+    title: Scale-aware Message Passing For Graph Node Classification
+    date: Nov 28, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-28'
+    venue: null
+    codebase_url: https://github.com/Qin87/ScaleNet
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9358
+    sort_std: 0.0024
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2144,7 +2143,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 29
+    global_rank: 24
     sort_value: 0.9106
     sort_std: 0.0027
     comparison_type: global_top
@@ -2177,7 +2176,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 151
+    global_rank: 141
     sort_value: 0.6665
     sort_std: 0.0047
     comparison_type: global_top
@@ -2242,8 +2241,8 @@ results:
     value_note: ''
     sort_value: 0.388
     sort_std: 0.0087
-    global_rank: 216
-    paper_rank: 216
+    global_rank: 206
+    paper_rank: 206
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2310,8 +2309,8 @@ results:
     value_note: ''
     sort_value: 0.3457
     sort_std: null
-    global_rank: 223
-    paper_rank: 223
+    global_rank: 213
+    paper_rank: 213
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2378,8 +2377,8 @@ results:
     value_note: ''
     sort_value: 0.3257
     sort_std: null
-    global_rank: 226
-    paper_rank: 226
+    global_rank: 216
+    paper_rank: 216
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2445,8 +2444,8 @@ results:
     value_note: ''
     sort_value: 0.3102
     sort_std: null
-    global_rank: 229
-    paper_rank: 229
+    global_rank: 219
+    paper_rank: 219
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2513,8 +2512,8 @@ results:
     value_note: ''
     sort_value: 0.3016
     sort_std: null
-    global_rank: 230
-    paper_rank: 230
+    global_rank: 220
+    paper_rank: 220
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2581,8 +2580,8 @@ results:
     value_note: ''
     sort_value: 0.2123
     sort_std: null
-    global_rank: 238
-    paper_rank: 238
+    global_rank: 228
+    paper_rank: 228
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2649,8 +2648,8 @@ results:
     value_note: ''
     sort_value: 0.1931
     sort_std: null
-    global_rank: 240
-    paper_rank: 240
+    global_rank: 230
+    paper_rank: 230
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2717,8 +2716,8 @@ results:
     value_note: ''
     sort_value: 0.1446
     sort_std: null
-    global_rank: 243
-    paper_rank: 243
+    global_rank: 232
+    paper_rank: 232
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

@@ -75,94 +75,14 @@ results:
   dataset: Cora
   is_multi_metric: true
   rows:
-  - model: Exphormer
-    model_key: exphormer
-    model_plain: Exphormer
+  - model: MATE
+    model_key: mate
+    model_plain: MATE
     metric_values:
-    - 0.9635
+    - 0.946
     - null
     metric_stds:
-    - 0.0019
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    published_venue: ''
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    codebase_url: ''
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 1
-    is_best: true
-    sort_value: 0.9635
-    sort_std: 0.0019
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: SGFormer
-    model_key: sgformer
-    model_plain: SGFormer
-    metric_values:
-    - 0.9629
-    - null
-    metric_stds:
-    - 0.0015
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    published_venue: ''
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    codebase_url: ''
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 2
-    is_best: true
-    sort_value: 0.9629
-    sort_std: 0.0015
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: Coral
-    model_key: coral
-    model_plain: Coral
-    metric_values:
-    - 0.9574
-    - null
-    metric_stds:
-    - 0.0039
+    - 0.007
     - null
     is_baseline: true
     is_overridden: false
@@ -171,20 +91,97 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
+    arxiv_id: '2407.20067'
+    title: 'xAI-Drop: Don''t Use What You Cannot Explain'
     published_venue: ''
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
+    date: Jul 29, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-29'
+    codebase_url: ''
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 1
+    is_best: true
+    sort_value: 0.946
+    sort_std: 0.007
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: GraphSAGE+CNA
+    model_key: graphsage+cna
+    model_plain: GraphSAGE+CNA
+    metric_values:
+    - 0.9418
+    - null
+    metric_stds:
+    - 0.0033
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.04064'
+    title: Graph Neural Networks Need Cluster-Normalize-Activate Modules
+    published_venue: ''
+    date: Dec 5, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-05'
+    codebase_url: https://github.com/ml-research/cna_modules
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 2
+    is_best: true
+    sort_value: 0.9418
+    sort_std: 0.0033
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: DropAggr
+    model_key: dropaggr
+    model_plain: DropAggr
+    metric_values:
+    - 0.938
+    - null
+    metric_stds:
+    - 0.011
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2407.20067'
+    title: 'xAI-Drop: Don''t Use What You Cannot Explain'
+    published_venue: ''
+    date: Jul 29, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-29'
     codebase_url: ''
     uses_external_data: false
     is_global_top: true
     global_rank: 3
-    is_best: false
-    sort_value: 0.9574
-    sort_std: 0.0039
+    is_best: true
+    sort_value: 0.938
+    sort_std: 0.011
     has_value_gap: false
     has_value_note: false
     paper_rank: null
@@ -256,7 +253,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 26
+    global_rank: 16
   - model: GAT_(Llama3)
     model_key: gat_(llama3)
     model_plain: GAT_(Llama3)
@@ -318,7 +315,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 27
+    global_rank: 17
   - model: LinguGraph-Llama3 (8B)
     model_key: lingugraph-llama3 (8b)
     model_plain: LinguGraph-Llama3 (8B)
@@ -380,7 +377,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 28
+    global_rank: 18
   - model: GIN_(Llama3)
     model_key: gin_(llama3)
     model_plain: GIN_(Llama3)
@@ -442,7 +439,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 31
+    global_rank: 21
   - model: GCN_(Llama3)
     model_key: gcn_(llama3)
     model_plain: GCN_(Llama3)
@@ -504,7 +501,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 36
+    global_rank: 26
   - model: GCN
     model_key: gcn
     model_plain: GCN
@@ -564,7 +561,7 @@ results:
     comparison_source_arxiv: '2401.09125'
     is_best: false
     is_std_outlier: false
-    global_rank: 42
+    global_rank: 31
   - model: BernNet
     model_key: bernnet
     model_plain: BernNet
@@ -624,7 +621,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 50
+    global_rank: 37
   - model: ACM-GCN
     model_key: acm-gcn
     model_plain: ACM-GCN
@@ -685,7 +682,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 51
+    global_rank: 38
   - model: RevGAT
     model_key: revgat
     model_plain: RevGAT
@@ -746,7 +743,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 76
+    global_rank: 62
   - model: SAGE
     model_key: sage
     model_plain: SAGE
@@ -773,7 +770,7 @@ results:
     codebase_url: ''
     uses_external_data: false
     is_global_top: true
-    global_rank: 75
+    global_rank: 61
     is_best: false
     sort_value: 0.8911
     sort_std: 0.0012
@@ -804,17 +801,17 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     sort_value: 0.8897
-    sort_std: null
+    sort_std: 0.0014
     true_value: 0.8897
-    true_std: null
+    true_std: 0.0014
     paper_value: 0.8612
     paper_std: 0.0095
     has_value_gap: true
     has_value_note: false
     value_gap: 0.02850000000000008
-    value_gap_source_arxiv: '2605.24867'
-    value_gap_source_title: 'Clustering as Reasoning: A $k$-Means Interpretation of
-      Chain-of-Thought Graph Learning'
+    value_gap_source_arxiv: '2505.15845'
+    value_gap_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem
+      in Tokenized Graph Learning Models'
     value_note: ''
     at_pub_value: 0.889
     at_pub_std: 0.0
@@ -822,8 +819,8 @@ results:
     at_pub_source_title: Learned Low Precision Graph Neural Networks
     at_pub_source_date_iso: '2020-09-19'
     at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2026-05-24'
-    value_gap_source_date_label: ICML 2026
+    value_gap_source_date_iso: '2025-05-19'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: 0.027800000000000047
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -847,7 +844,7 @@ results:
     comparison_source_arxiv: '2009.09232'
     is_best: false
     is_std_outlier: false
-    global_rank: 81
+    global_rank: 67
   - model: GCNII
     model_key: gcnii
     model_plain: GCNII
@@ -908,69 +905,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 83
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    metric_values:
-    - 0.8708
-    - 0.8596
-    metric_stds:
-    - 0.0085
-    - 0.0073
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.8889
-    sort_std: null
-    true_value: 0.8889
-    true_std: null
-    paper_value: 0.8708
-    paper_std: 0.0085
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 0.018100000000000005
-    value_gap_source_arxiv: '2605.24867'
-    value_gap_source_title: 'Clustering as Reasoning: A $k$-Means Interpretation of
-      Chain-of-Thought Graph Learning'
-    value_note: ''
-    at_pub_value: 0.8777
-    at_pub_std: 0.0183
-    at_pub_source_arxiv: '2110.15777'
-    at_pub_source_title: 'GBK-GNN: Gated Bi-Kernel Graph Neural Networks for Modeling
-      Both Homophily and Heterophily'
-    at_pub_source_date_iso: '2021-10-29'
-    at_pub_source_date_label: WWW 2021
-    value_gap_source_date_iso: '2026-05-24'
-    value_gap_source_date_label: ICML 2026
-    gap_vs_at_pub: 0.006900000000000017
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: AAAI 2024
-    date: Feb 8, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-08'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 88
+    global_rank: 69
   - model: FAGCN
     model_key: fagcn
     model_plain: FAGCN
@@ -1031,7 +966,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 90
+    global_rank: 75
   - model: LinguGraph-Llama2 (7B)
     model_key: lingugraph-llama2 (7b)
     model_plain: LinguGraph-Llama2 (7B)
@@ -1093,7 +1028,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 135
+    global_rank: 118
   - model: LinguGraph-Mistral (7B)
     model_key: lingugraph-mistral (7b)
     model_plain: LinguGraph-Mistral (7B)
@@ -1155,7 +1090,69 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 162
+    global_rank: 143
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    metric_values:
+    - 0.8708
+    - 0.8596
+    metric_stds:
+    - 0.0085
+    - 0.0073
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    sort_value: 0.8777
+    sort_std: 0.0183
+    true_value: 0.8777
+    true_std: 0.0183
+    paper_value: 0.8708
+    paper_std: 0.0085
+    has_value_gap: true
+    has_value_note: false
+    value_gap: 0.006900000000000017
+    value_gap_source_arxiv: '2110.15777'
+    value_gap_source_title: 'GBK-GNN: Gated Bi-Kernel Graph Neural Networks for Modeling
+      Both Homophily and Heterophily'
+    value_note: ''
+    at_pub_value: 0.8777
+    at_pub_std: 0.0183
+    at_pub_source_arxiv: '2110.15777'
+    at_pub_source_title: 'GBK-GNN: Gated Bi-Kernel Graph Neural Networks for Modeling
+      Both Homophily and Heterophily'
+    at_pub_source_date_iso: '2021-10-29'
+    at_pub_source_date_label: WWW 2021
+    value_gap_source_date_iso: '2021-10-29'
+    value_gap_source_date_label: WWW 2021
+    gap_vs_at_pub: 0.006900000000000017
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    arxiv_id: ''
+    title: ''
+    published_venue: AAAI 2024
+    date: Feb 8, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-08'
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+    global_rank: 146
   - model: GIN
     model_key: gin
     model_plain: GIN
@@ -1218,7 +1215,7 @@ results:
     comparison_source_arxiv: '2110.15777'
     is_best: false
     is_std_outlier: false
-    global_rank: 238
+    global_rank: 213
   - model: Graphtransformer
     model_key: graphtransformer
     model_plain: Graphtransformer
@@ -1279,7 +1276,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 250
+    global_rank: 221
   - model: SGC-v2
     model_key: sgc-v2
     model_plain: SGC-v2
@@ -1340,7 +1337,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 301
+    global_rank: 259
   - model: Graphormer
     model_key: graphormer
     model_plain: Graphormer
@@ -1357,18 +1354,18 @@ results:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    sort_value: 0.8041
-    sort_std: 0.002
-    true_value: 0.8041
-    true_std: 0.002
+    sort_value: 0.8262
+    sort_std: 0.0012
+    true_value: 0.8262
+    true_std: 0.0012
     paper_value: 0.8041
     paper_std: 0.003
-    has_value_gap: false
+    has_value_gap: true
     has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2506.07168'
-    value_gap_source_title: Efficient Text-Attributed Graph Learning through Selective
-      Annotation and Graph Alignment
+    value_gap: 0.02210000000000001
+    value_gap_source_arxiv: '2510.04522'
+    value_gap_source_title: 'Toward a Unified Geometry Understanding: Riemannian Diffusion
+      Framework for Graph Generation and Prediction'
     value_note: ''
     at_pub_value: 0.8041
     at_pub_std: 0.003
@@ -1376,16 +1373,16 @@ results:
     at_pub_source_title: Language is All a Graph Needs
     at_pub_source_date_iso: '2023-08-14'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2025-06-08'
-    value_gap_source_date_label: TMLR 2025
+    value_gap_source_date_iso: '2025-10-06'
+    value_gap_source_date_label: NeurIPS 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
-    surpassed_since_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
+    today_delta_significant: true
     arxiv_id: ''
     title: ''
     published_venue: AAAI 2024
@@ -1401,7 +1398,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 772
+    global_rank: 535
   - model: MLP
     model_key: mlp
     model_plain: MLP
@@ -1427,7 +1424,7 @@ results:
     codebase_url: ''
     uses_external_data: false
     is_global_top: true
-    global_rank: 853
+    global_rank: 806
     is_best: false
     sort_value: 0.7768
     sort_std: null
@@ -1501,7 +1498,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 1092
+    global_rank: 1020
   - model: Llama2 (7B)
     model_key: llama2 (7b)
     model_plain: Llama2 (7B)
@@ -1562,7 +1559,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 1093
+    global_rank: 1021
   - model: Mistral (7B)
     model_key: mistral (7b)
     model_plain: Mistral (7B)
@@ -1623,7 +1620,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 1094
+    global_rank: 1022
   metrics:
   - Accuracy
   - F1

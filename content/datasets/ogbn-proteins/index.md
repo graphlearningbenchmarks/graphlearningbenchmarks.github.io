@@ -13,7 +13,7 @@ stats:
   avg_nodes: 39561252.0
   avg_edges: null
   num_classes: 112
-result_count: 117
+result_count: 103
 best_model:
   model: LD
   value: 0.8942
@@ -27,11 +27,6 @@ papers:
     via Continuous Phase Transitions'
   date_iso: '2026-04-27'
   venue: ''
-- arxiv_id: '2602.19622'
-  title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with Graph
-    Token Attention'
-  date_iso: '2026-02-23'
-  venue: WWW 2026
 - arxiv_id: '2602.17071'
   title: 'AdvSynGNN: Structure-Adaptive Graph Neural Nets via Adversarial Synthesis
     and Self-Corrective Propagation'
@@ -77,11 +72,6 @@ papers:
     Modeling'
   date_iso: '2023-04-06'
   venue: NeurIPS 2023
-- arxiv_id: '2211.14568'
-  title: 'BeGin: Extensive Benchmark Scenarios and An Easy-to-use Framework for Graph
-    Continual Learning'
-  date_iso: '2022-11-26'
-  venue: ''
 - arxiv_id: '2110.14855'
   title: 'CAP: Co-Adversarial Perturbation on Weights and Features for Improving Generalization
     of Graph Neural Networks'
@@ -857,39 +847,6 @@ variants:
     - null
     - null
     - null
-  - model: PI-GNN
-    model_plain: PI-GNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2211.14568'
-    title: 'BeGin: Extensive Benchmark Scenarios and An Easy-to-use Framework for
-      Graph Continual Learning'
-    date: Nov 26, 2022
-    date_iso: '2022-11-26'
-    date_display: Nov 2022
-    codebase_url: https://github.com/ShinhwanKang/BeGin
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.82
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.003
-    - null
-    - null
-    - null
   - model: GEN
     model_plain: GEN
     is_baseline: true
@@ -1022,72 +979,6 @@ variants:
     - null
     - null
     - null
-  - model: GEM
-    model_plain: GEM
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2211.14568'
-    title: 'BeGin: Extensive Benchmark Scenarios and An Easy-to-use Framework for
-      Graph Continual Learning'
-    date: Nov 26, 2022
-    date_iso: '2022-11-26'
-    date_display: Nov 2022
-    codebase_url: https://github.com/ShinhwanKang/BeGin
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.81
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.003
-    - null
-    - null
-    - null
-  - model: VecFormer
-    model_plain: VecFormer
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_iso: '2026-02-23'
-    date_display: Feb 2026
-    codebase_url: ''
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8052
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.002
-    - null
-    - null
-    - null
   - model: DRAGON
     model_plain: DRAGON
     is_baseline: true
@@ -1196,27 +1087,27 @@ variants:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_iso: '2026-02-23'
-    date_display: Feb 2026
+    arxiv_id: '2604.24293'
+    title: 'Latent-Hysteresis Graph ODEs: Modeling Coupled Topology-Feature Evolution
+      via Continuous Phase Transitions'
+    date: Apr 27, 2026
+    date_iso: '2026-04-27'
+    date_display: Apr 2026
     codebase_url: ''
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
     uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
-    - 0.7953
+    - 0.7984
     - null
     - null
     - null
     metric_stds:
-    - 0.0038
+    - 0.0061
     - null
     - null
     - null
@@ -1777,18 +1668,116 @@ variants:
     - null
     - null
     - null
-  row_count: 117
+  - model: GCN
+    model_plain: GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2604.24293'
+    title: 'Latent-Hysteresis Graph ODEs: Modeling Coupled Topology-Feature Evolution
+      via Continuous Phase Transitions'
+    date: Apr 27, 2026
+    date_iso: '2026-04-27'
+    date_display: Apr 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7784
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0056
+    - null
+    - null
+    - null
+  - model: GraphSAGE
+    model_plain: GraphSAGE
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.193
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.07476'
+    title: Training Graph Neural Networks with 1000 Layers
+    date: Jun 14, 2021
+    date_iso: '2021-06-14'
+    date_display: Jun 2021
+    codebase_url: https://github.com/ShunliRen/dgl
+    published_conference: ICML 2021
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7768
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.002
+    - null
+    - null
+    - null
+  - model: GraphSAGE +CAP
+    model_plain: GraphSAGE +CAP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2110.14855'
+    title: 'CAP: Co-Adversarial Perturbation on Weights and Features for Improving
+      Generalization of Graph Neural Networks'
+    date: Oct 28, 2021
+    date_iso: '2021-10-28'
+    date_display: Oct 2021
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7753
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.007
+    - null
+    - null
+    - null
+  row_count: 103
   rows_json: /data/datasets/ogbn-proteins/standard-split-rows.json
   chart_json: /data/datasets/ogbn-proteins/standard-split-chart.json
   arch_counts:
-    gnn: 81
-    hybrid: 13
-    graph_transformer: 11
+    gnn: 72
+    hybrid: 12
+    graph_transformer: 10
     llm: 0
     walk: 0
-    traditional: 11
+    traditional: 8
   metric_counts:
-  - 90
+  - 76
   - 19
   - 2
   - 8

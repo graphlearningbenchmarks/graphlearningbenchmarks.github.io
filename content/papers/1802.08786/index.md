@@ -50,8 +50,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - SD-VAE
-mrr: 0.0088
-adjusted_mrr: 0.0029
+mrr: 0.0092
+adjusted_mrr: 0.0031
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -123,7 +123,7 @@ results:
     venue: arXiv.org
     codebase_url: https://github.com/ocx-lab/FloydNet
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
@@ -192,7 +192,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 74
+    global_rank: 71
     sort_value: 0.088
     sort_std: 0.002
     comparison_type: global_top
@@ -258,8 +258,8 @@ results:
     value_note: ''
     sort_value: 1.366
     sort_std: 0.023
-    global_rank: 114
-    paper_rank: 114
+    global_rank: 109
+    paper_rank: 109
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -327,8 +327,8 @@ results:
     value_note: ''
     sort_value: 1.404
     sort_std: 0.006
-    global_rank: 115
-    paper_rank: 115
+    global_rank: 110
+    paper_rank: 110
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -396,8 +396,8 @@ results:
     value_note: ''
     sort_value: 1.504
     sort_std: 0.006
-    global_rank: 117
-    paper_rank: 117
+    global_rank: 112
+    paper_rank: 112
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

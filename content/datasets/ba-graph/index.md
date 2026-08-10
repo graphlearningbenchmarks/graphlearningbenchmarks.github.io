@@ -464,19 +464,12 @@ variants:
   metric_counts:
   - 15
   milestones: &id001
-  - value: 0.502
+  - value: 0.94
     std: null
-    model: Zero-shot
-    arxiv_id: '2310.04560'
-    title: 'Talk like a Graph: Encoding Graphs for Large Language Models'
-    date: '2023-10-06'
-  - value: 0.6812
-    std: null
-    model: GraphWiz
-    arxiv_id: '2402.16029'
-    title: 'GraphWiz: An Instruction-Following Language Model for Graph Computational
-      Problems'
-    date: '2024-02-25'
+    model: Diffusion Wavelets
+    arxiv_id: '1710.10321'
+    title: Learning Structural Node Embeddings via Diffusion Wavelets
+    date: '2017-10-27'
   - value: 0.9793
     std: 0.0068
     model: F4-MPNN

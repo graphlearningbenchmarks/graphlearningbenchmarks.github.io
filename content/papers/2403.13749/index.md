@@ -40,8 +40,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GIN
-mrr: 0.0323
-adjusted_mrr: 0.0108
+mrr: 0.0345
+adjusted_mrr: 0.0115
 mrr_dataset_count: 1
 benchmark_categories:
 - LRGB
@@ -215,9 +215,9 @@ results:
     sort_value: 0.7261
     sort_std: 0.0011
     global_rank: 5
-    paper_rank: 156
-    rank_delta: 151
-    rank_delta_abs: 151
+    paper_rank: 146
+    rank_delta: 141
+    rank_delta_abs: 141
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -258,10 +258,11 @@ results:
     published_conference: NeurIPS 2024
     at_pub_value: 0.5498
     at_pub_std: 0.0079
-    at_pub_source_arxiv: '2310.07430'
-    at_pub_source_title: Non-backtracking Graph Neural Networks
-    at_pub_source_date_iso: '2023-10-11'
-    at_pub_source_date_label: TMLR 2023
+    at_pub_source_arxiv: '2402.08678'
+    at_pub_source_title: 'Graph Mamba: Towards Learning on Graphs with State Space
+      Models'
+    at_pub_source_date_iso: '2024-02-13'
+    at_pub_source_date_label: KDD 2024
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.043200000000000016
@@ -282,15 +283,16 @@ results:
     value_note: ''
     sort_value: 0.7059
     sort_std: 0.0089
-    global_rank: 31
-    paper_rank: 156
-    rank_delta: 125
-    rank_delta_abs: 125
+    global_rank: 29
+    paper_rank: 146
+    rank_delta: 117
+    rank_delta_abs: 117
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: Non-backtracking Graph Neural Networks
-    comparison_source_arxiv: '2310.07430'
+    comparison_source_title: 'Graph Mamba: Towards Learning on Graphs with State Space
+      Models'
+    comparison_source_arxiv: '2402.08678'
     is_best: false
     is_std_outlier: false
   - model: 7-ℓGIN
@@ -350,8 +352,8 @@ results:
     value_note: ''
     sort_value: 0.657
     sort_std: 0.006
-    global_rank: 100
-    paper_rank: 100
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -418,8 +420,8 @@ results:
     value_note: ''
     sort_value: 0.5864
     sort_std: 0.0077
-    global_rank: 164
-    paper_rank: 164
+    global_rank: 154
+    paper_rank: 154
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -455,7 +457,7 @@ results:
     feature_source_evidence: For both datasets, we did not employ any feature augmentation
       such as positional encoding.
     is_global_top: true
-    global_rank: 196
+    global_rank: 186
     sort_value: 0.406
     sort_std: 0.0021
     comparison_type: global_top

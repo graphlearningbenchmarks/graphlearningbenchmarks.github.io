@@ -12,7 +12,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 3
-result_count: 1324
+result_count: 1373
 best_model:
   model: LGTL
   value: 0.9518
@@ -24,11 +24,6 @@ papers:
 - arxiv_id: '2606.00757'
   title: 'RADE: Random Add-Drop Edge as a Regularizer'
   date_iso: '2026-05-30'
-  venue: ICML 2026
-- arxiv_id: '2605.24867'
-  title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
-    Graph Learning'
-  date_iso: '2026-05-24'
   venue: ICML 2026
 - arxiv_id: '2605.20248'
   title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
@@ -44,10 +39,6 @@ papers:
     Synthetic Graph Priors
   date_iso: '2026-04-21'
   venue: ICLR 2026
-- arxiv_id: '2604.11257'
-  title: Unified Graph Prompt Learning via Low-Rank Graph Message Prompting
-  date_iso: '2026-04-13'
-  venue: ''
 - arxiv_id: '2604.01878'
   title: 'ASPECT: Node-Level Adaptive Spectral Fusion for Graph Contrastive Learning'
   date_iso: '2026-04-02'
@@ -57,11 +48,15 @@ papers:
     Learning via Ricci Flow'
   date_iso: '2026-03-27'
   venue: ''
-- arxiv_id: '2603.01385'
-  title: Toward Graph-Tokenizing Large Language Models with Reconstructive Graph Instruction
-    Tuning
-  date_iso: '2026-03-02'
-  venue: WWW 2026
+- arxiv_id: '2603.05004'
+  title: Poisoning the Inner Prediction Logic of Graph Neural Networks for Clean-Label
+    Backdoor Attacks
+  date_iso: '2026-03-05'
+  venue: TMLR 2026
+- arxiv_id: '2603.00599'
+  title: Heterophily-Agnostic Hypergraph Neural Networks with Riemannian Local Exchanger
+  date_iso: '2026-02-28'
+  venue: ''
 - arxiv_id: '2602.19622'
   title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with Graph
     Token Attention'
@@ -88,6 +83,11 @@ papers:
   title: Gauge-Equivariant Graph Networks via Self-Interference Cancellation
   date_iso: '2025-11-20'
   venue: ''
+- arxiv_id: '2510.04522'
+  title: 'Toward a Unified Geometry Understanding: Riemannian Diffusion Framework
+    for Graph Generation and Prediction'
+  date_iso: '2025-10-06'
+  venue: NeurIPS 2025
 - arxiv_id: '2508.20906'
   title: Turning Tabular Foundation Models into Graph Foundation Models
   date_iso: '2025-08-28'
@@ -102,6 +102,10 @@ papers:
     with Structured Predictions'
   date_iso: '2025-07-19'
   venue: ''
+- arxiv_id: '2506.19343'
+  title: Discrepancy-Aware Graph Mask Auto-Encoder
+  date_iso: '2025-06-24'
+  venue: KDD 2025
 - arxiv_id: '2506.14291'
   title: 'Equivariance Everywhere All At Once: A Recipe for Graph Foundation Models'
   date_iso: '2025-06-17'
@@ -120,6 +124,11 @@ papers:
     for Node Classification'
   date_iso: '2025-05-23'
   venue: ''
+- arxiv_id: '2505.14033'
+  title: 'Partition-wise Graph Filtering: A Unified Perspective Through the Lens of
+    Graph Coarsening'
+  date_iso: '2025-05-20'
+  venue: KDD 2025
 - arxiv_id: '2505.15845'
   title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
     Learning Models'
@@ -151,6 +160,10 @@ papers:
     Decomposition
   date_iso: '2025-04-16'
   venue: WWW 2025
+- arxiv_id: '2503.19666'
+  title: 'Towards Efficient Training of Graph Neural Networks: A Multiscale Approach'
+  date_iso: '2025-03-25'
+  venue: TMLR 2025
 - arxiv_id: '2503.12563'
   title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
   date_iso: '2025-03-16'
@@ -279,10 +292,11 @@ papers:
     view'
   date_iso: '2024-05-02'
   venue: ''
-- arxiv_id: '2404.19288'
-  title: Training-free Graph Neural Networks and the Power of Labels as Features
-  date_iso: '2024-04-30'
-  venue: TMLR 2024
+- arxiv_id: '2404.15354'
+  title: 'Polynomial Selection in Spectral Graph Neural Networks: An Error-Sum of
+    Function Slices Approach'
+  date_iso: '2024-04-15'
+  venue: WWW 2024
 - arxiv_id: '2403.20221'
   title: Graph Neural Aggregation-diffusion with Metastability
   date_iso: '2024-03-29'
@@ -420,6 +434,10 @@ papers:
   title: 'GC-Flow: A Graph-Based Flow Network for Effective Clustering'
   date_iso: '2023-05-26'
   venue: ICML 2023
+- arxiv_id: '2305.15747'
+  title: Union Subgraph Neural Networks
+  date_iso: '2023-05-25'
+  venue: AAAI 2023
 - arxiv_id: '2305.06142'
   title: Feature Expansion for Graph Neural Networks
   date_iso: '2023-05-10'
@@ -439,6 +457,10 @@ papers:
 - arxiv_id: '2304.07509'
   title: Multi-View Graph Representation Learning Beyond Homophily
   date_iso: '2023-04-15'
+  venue: ''
+- arxiv_id: '2303.06344'
+  title: Graph Contrastive Learning under Heterophily via Graph Filters
+  date_iso: '2023-03-11'
   venue: ''
 - arxiv_id: '2302.14806'
   title: Framelet Message Passing
@@ -481,10 +503,6 @@ papers:
     Chains Perspective
   date_iso: '2022-11-12'
   venue: ''
-- arxiv_id: '2210.13148'
-  title: Transformers over Directed Acyclic Graphs
-  date_iso: '2022-10-24'
-  venue: NeurIPS 2022
 - arxiv_id: '2210.07715'
   title: 'Not All Neighbors Are Worth Attending to: Graph Selective Attention Networks
     for Semi-supervised Learning'
@@ -498,6 +516,10 @@ papers:
   title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
   date_iso: '2022-10-12'
   venue: AAAI 2022
+- arxiv_id: '2210.05382'
+  title: Uplifting Message Passing Neural Network with Graph Original Information
+  date_iso: '2022-10-08'
+  venue: ''
 - arxiv_id: '2210.03801'
   title: 'Augmentations in Hypergraph Contrastive Learning: Fabricated and Generative'
   date_iso: '2022-10-07'
@@ -538,6 +560,11 @@ papers:
   title: Condensing Graphs via One-Step Gradient Matching
   date_iso: '2022-06-15'
   venue: KDD 2022
+- arxiv_id: '2206.04739'
+  title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning on
+    Hypergraphs'
+  date_iso: '2022-06-09'
+  venue: AAAI 2022
 - arxiv_id: '2206.04471'
   title: 'Towards Understanding Graph Neural Networks: An Algorithm Unrolling Perspective'
   date_iso: '2022-06-09'
@@ -553,6 +580,10 @@ papers:
 - arxiv_id: '2204.06127'
   title: 'Reinforcement learning on graphs: A survey'
   date_iso: '2022-04-13'
+  venue: ''
+- arxiv_id: '2204.04874'
+  title: Augmentation-Free Graph Contrastive Learning with Performance Guarantee
+  date_iso: '2022-04-11'
   venue: ''
 - arxiv_id: '2203.12265'
   title: Node Representation Learning in Graph via Node-to-Neighbourhood Mutual Information
@@ -710,10 +741,6 @@ papers:
   title: 'Bi-GCN: Binary Graph Convolutional Network'
   date_iso: '2020-10-15'
   venue: ''
-- arxiv_id: '2010.00238'
-  title: Multi-grained Semantics-aware Graph Neural Networks
-  date_iso: '2020-10-01'
-  venue: ''
 - arxiv_id: '2009.14332'
   title: Multi-hop Attention Graph Neural Networks
   date_iso: '2020-09-29'
@@ -854,6 +881,10 @@ papers:
   title: Attention-based Graph Neural Network for Semi-supervised Learning
   date_iso: '2018-02-15'
   venue: ''
+- arxiv_id: '1710.10903'
+  title: Graph Attention Networks
+  date_iso: '2017-10-30'
+  venue: ICLR 2017
 - arxiv_id: '1710.10370'
   title: Topology Adaptive Graph Convolutional Networks
   date_iso: '2017-10-28'
@@ -862,10 +893,6 @@ papers:
   title: Geometric deep learning on graphs and manifolds using mixture model CNNs
   date_iso: '2016-11-25'
   venue: ''
-- arxiv_id: '1609.02907'
-  title: Semi-Supervised Classification with Graph Convolutional Networks
-  date_iso: '2016-09-09'
-  venue: ICLR 2016
 variants:
 - slug: planetoid-split
   name: Planetoid split
@@ -926,41 +953,6 @@ variants:
     - null
     metric_stds:
     - 0.0011
-    - null
-    - null
-    - null
-    - null
-  - model: SAGN
-    model_plain: SAGN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2605.24867'
-    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
-      Graph Learning'
-    date: May 24, 2026
-    date_iso: '2026-05-24'
-    date_display: May 2026
-    codebase_url: https://github.com/Uncnbb/KCoT
-    published_conference: ICML 2026
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2026
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.9517
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
     - null
     - null
     - null
@@ -1175,41 +1167,6 @@ variants:
     - null
     - null
     - null
-  - model: GraphSAGE
-    model_plain: GraphSAGE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2605.24867'
-    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
-      Graph Learning'
-    date: May 24, 2026
-    date_iso: '2026-05-24'
-    date_display: May 2026
-    codebase_url: https://github.com/Uncnbb/KCoT
-    published_conference: ICML 2026
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9487
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: PromptGFM
     model_plain: PromptGFM
     is_baseline: false
@@ -1379,41 +1336,6 @@ variants:
     - null
     metric_stds:
     - 0.0015
-    - null
-    - null
-    - null
-    - null
-  - model: GraphGPT
-    model_plain: GraphGPT
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2605.24867'
-    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
-      Graph Learning'
-    date: May 24, 2026
-    date_iso: '2026-05-24'
-    date_display: May 2026
-    codebase_url: https://github.com/Uncnbb/KCoT
-    published_conference: ICML 2026
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9423
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
     - null
     - null
     - null
@@ -1592,6 +1514,41 @@ variants:
     - null
     - null
     - null
+  - model: GeoMancer
+    model_plain: GeoMancer
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2510.04522'
+    title: 'Toward a Unified Geometry Understanding: Riemannian Diffusion Framework
+      for Graph Generation and Prediction'
+    date: Oct 6, 2025
+    date_iso: '2025-10-06'
+    date_display: Oct 2025
+    codebase_url: https://github.com/RingBDStack/GeoMancer
+    published_conference: NeurIPS 2025
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.931
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0029
+    - null
+    - null
+    - null
+    - null
   - model: GCN
     model_plain: GCN
     is_baseline: true
@@ -1623,6 +1580,76 @@ variants:
     - null
     metric_stds:
     - 0.0015
+    - null
+    - null
+    - null
+    - null
+  - model: LGD
+    model_plain: LGD
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2510.04522'
+    title: 'Toward a Unified Geometry Understanding: Riemannian Diffusion Framework
+      for Graph Generation and Prediction'
+    date: Oct 6, 2025
+    date_iso: '2025-10-06'
+    date_display: Oct 2025
+    codebase_url: https://github.com/RingBDStack/GeoMancer
+    published_conference: NeurIPS 2025
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9288
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0029
+    - null
+    - null
+    - null
+    - null
+  - model: Graphormer
+    model_plain: Graphormer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2510.04522'
+    title: 'Toward a Unified Geometry Understanding: Riemannian Diffusion Framework
+      for Graph Generation and Prediction'
+    date: Oct 6, 2025
+    date_iso: '2025-10-06'
+    date_display: Oct 2025
+    codebase_url: https://github.com/RingBDStack/GeoMancer
+    published_conference: NeurIPS 2025
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9264
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0096
     - null
     - null
     - null
@@ -1762,6 +1789,41 @@ variants:
     - null
     metric_stds:
     - 0.0116
+    - null
+    - null
+    - null
+    - null
+  - model: NAGphormer
+    model_plain: NAGphormer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2510.04522'
+    title: 'Toward a Unified Geometry Understanding: Riemannian Diffusion Framework
+      for Graph Generation and Prediction'
+    date: Oct 6, 2025
+    date_iso: '2025-10-06'
+    date_display: Oct 2025
+    codebase_url: https://github.com/RingBDStack/GeoMancer
+    published_conference: NeurIPS 2025
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9176
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0049
     - null
     - null
     - null
@@ -2024,6 +2086,41 @@ variants:
     published_conference_short: NeurIPS
     published_conference_slug: neurips
     published_venue: NeurIPS 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9144
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0059
+    - null
+    - null
+    - null
+    - null
+  - model: Exphormer
+    model_plain: Exphormer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2510.04522'
+    title: 'Toward a Unified Geometry Understanding: Riemannian Diffusion Framework
+      for Graph Generation and Prediction'
+    date: Oct 6, 2025
+    date_iso: '2025-10-06'
+    date_display: Oct 2025
+    codebase_url: https://github.com/RingBDStack/GeoMancer
+    published_conference: NeurIPS 2025
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2025
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -2551,99 +2648,29 @@ variants:
     - null
     - null
     - null
-  - model: N2N-TAPS-4 (JL)
-    model_plain: N2N-TAPS-4 (JL)
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2203.12265'
-    title: Node Representation Learning in Graph via Node-to-Neighbourhood Mutual
-      Information Maximization
-    date: Mar 23, 2022
-    date_iso: '2022-03-23'
-    date_display: Mar 2022
-    codebase_url: https://github.com/dongwei156/n2n
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9078
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0007
-    - null
-    - null
-    - null
-    - null
-  - model: N2N-TAPS-5 (JL)
-    model_plain: N2N-TAPS-5 (JL)
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2203.12265'
-    title: Node Representation Learning in Graph via Node-to-Neighbourhood Mutual
-      Information Maximization
-    date: Mar 23, 2022
-    date_iso: '2022-03-23'
-    date_display: Mar 2022
-    codebase_url: https://github.com/dongwei156/n2n
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9078
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.002
-    - null
-    - null
-    - null
-    - null
-  row_count: 1324
+  row_count: 1373
   rows_json: /data/datasets/pubmed/planetoid-split-rows.json
   chart_json: /data/datasets/pubmed/planetoid-split-chart.json
   arch_counts:
-    gnn: 896
-    hybrid: 158
-    graph_transformer: 41
-    llm: 12
-    walk: 24
-    traditional: 116
+    gnn: 939
+    hybrid: 159
+    graph_transformer: 43
+    llm: 9
+    walk: 26
+    traditional: 122
   metric_counts:
-  - 1257
+  - 1306
   - 60
   - 9
   - 9
   - 9
   milestones: &id001
-  - value: 0.79
-    std: null
-    model: GCN
-    arxiv_id: '1609.02907'
-    title: Semi-Supervised Classification with Graph Convolutional Networks
-    date: '2016-09-09'
+  - value: 0.7881
+    std: 0.0044
+    model: mixture model CNNs
+    arxiv_id: '1611.08402'
+    title: Geometric deep learning on graphs and manifolds using mixture model CNNs
+    date: '2016-11-25'
   - value: 0.811
     std: 0.004
     model: TAGCN

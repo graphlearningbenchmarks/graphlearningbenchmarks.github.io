@@ -12,7 +12,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 8
-result_count: 126
+result_count: 124
 best_model:
   model: GANN
   value: 0.9405
@@ -35,10 +35,6 @@ papers:
 - arxiv_id: '2403.03666'
   title: Provable Filter for Real-world Graph Clustering
   date_iso: '2024-03-06'
-  venue: ''
-- arxiv_id: '2308.08963'
-  title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
-  date_iso: '2023-08-17'
   venue: ''
 - arxiv_id: '2308.06827'
   title: Reinforcement Graph Clustering with Unknown Cluster Number
@@ -671,74 +667,6 @@ variants:
     - null
     metric_stds:
     - 0.0018
-    - null
-    - null
-    - null
-    - null
-  - model: CONVERT
-    model_plain: CONVERT
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2308.08963'
-    title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
-    date: Aug 17, 2023
-    date_iso: '2023-08-17'
-    date_display: Aug 2023
-    codebase_url: https://github.com/xihongyang1999/CONVERT
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7403
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.01
-    - null
-    - null
-    - null
-    - null
-  - model: NACL
-    model_plain: NACL
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2308.08963'
-    title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
-    date: Aug 17, 2023
-    date_iso: '2023-08-17'
-    date_display: Aug 2023
-    codebase_url: https://github.com/xihongyang1999/CONVERT
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7304
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0108
     - null
     - null
     - null
@@ -1797,18 +1725,86 @@ variants:
     - null
     - null
     - null
-  row_count: 126
+  - model: GAE
+    model_plain: GAE
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.12533'
+    title: Improved Dual Correlation Reduction Network
+    date: Feb 25, 2022
+    date_iso: '2022-02-25'
+    date_display: Feb 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6121
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0122
+    - null
+    - null
+    - null
+    - null
+  - model: ARGA
+    model_plain: ARGA
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2212.08665'
+    title: Hard Sample Aware Network for Contrastive Deep Graph Clustering [5]
+    date: Dec 16, 2022
+    date_iso: '2022-12-16'
+    date_display: Dec 2022
+    codebase_url: https://github.com/yueliu1999/HSAN
+    published_conference: AAAI 2022
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6107
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0049
+    - null
+    - null
+    - null
+    - null
+  row_count: 124
   rows_json: /data/datasets/amap/standard-split-rows.json
   chart_json: /data/datasets/amap/standard-split-chart.json
   arch_counts:
-    gnn: 110
+    gnn: 108
     hybrid: 7
     graph_transformer: 0
     llm: 0
     walk: 2
     traditional: 7
   metric_counts:
-  - 81
+  - 79
   - 26
   - 19
   - 8
@@ -1820,6 +1816,12 @@ variants:
     arxiv_id: '2202.12533'
     title: Improved Dual Correlation Reduction Network
     date: '2022-02-25'
+  - value: 0.9405
+    std: 0.0037
+    model: GANN
+    arxiv_id: '2303.07778'
+    title: 'GANN: Graph Alignment Neural Network for Semi-Supervised Learning'
+    date: '2023-03-14'
   milestones_by_metric:
     F1: *id001
     ACC:

@@ -33,8 +33,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - EP-B
-mrr: 0.0055
-adjusted_mrr: 0.0018
+mrr: 0.0052
+adjusted_mrr: 0.0017
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -240,13 +240,46 @@ results:
     value_note: ''
     sort_value: 0.529
     sort_std: null
-    global_rank: 166
-    paper_rank: 181
-    rank_delta: 15
-    rank_delta_abs: 15
+    global_rank: 174
+    paper_rank: 190
+    rank_delta: 16
+    rank_delta_abs: 16
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.462
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2407.00494'
+    title: Graph Neural Networks Gone Hogwild
+    date: Jun 29, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-29'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 183
+    sort_value: 0.462
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -307,8 +340,8 @@ results:
     value_note: ''
     sort_value: 0.2528
     sort_std: 0.0168
-    global_rank: 181
-    paper_rank: 181
+    global_rank: 190
+    paper_rank: 190
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -374,8 +407,8 @@ results:
     value_note: ''
     sort_value: 0.2475
     sort_std: 0.0202
-    global_rank: 182
-    paper_rank: 182
+    global_rank: 191
+    paper_rank: 191
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -441,8 +474,8 @@ results:
     value_note: ''
     sort_value: 0.2474
     sort_std: 0.013
-    global_rank: 183
-    paper_rank: 183
+    global_rank: 192
+    paper_rank: 192
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -508,8 +541,8 @@ results:
     value_note: ''
     sort_value: 0.2149
     sort_std: 0.0119
-    global_rank: 184
-    paper_rank: 184
+    global_rank: 193
+    paper_rank: 193
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

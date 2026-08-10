@@ -739,8 +739,8 @@ results:
     value_note: ''
     sort_value: 0.3544
     sort_std: 0.0036
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -775,7 +775,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 72
+    global_rank: 76
     sort_value: 0.3243
     sort_std: null
     comparison_type: global_top

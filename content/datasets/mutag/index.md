@@ -13,7 +13,7 @@ stats:
   avg_nodes: 17.93
   avg_edges: 19.79
   num_classes: 2
-result_count: 1016
+result_count: 1019
 best_model:
   model: MSH-GNN
   value: 0.991
@@ -34,6 +34,11 @@ papers:
   title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
   date_iso: '2026-05-13'
   venue: ''
+- arxiv_id: '2603.05004'
+  title: Poisoning the Inner Prediction Logic of Graph Neural Networks for Clean-Label
+    Backdoor Attacks
+  date_iso: '2026-03-05'
+  venue: TMLR 2026
 - arxiv_id: '2601.07419'
   title: 'Position: Don''t be Afraid of Over-Smoothing And Over-Squashing'
   date_iso: '2026-01-12'
@@ -41,10 +46,6 @@ papers:
 - arxiv_id: '2512.13235'
   title: 'CORE: Contrastive Masked Feature Reconstruction on Graphs'
   date_iso: '2025-12-15'
-  venue: ''
-- arxiv_id: '2510.05750'
-  title: Are Heterogeneous Graph Neural Networks Truly Effective? A Causal Perspective
-  date_iso: '2025-10-07'
   venue: ''
 - arxiv_id: '2510.03987'
   title: 'ICEPool: Enhancing Graph Pooling Networks with Inter-cluster Connectivity'
@@ -219,6 +220,10 @@ papers:
   title: 'DiGRAF: Diffeomorphic Graph-Adaptive Activation Function'
   date_iso: '2024-07-02'
   venue: NeurIPS 2024
+- arxiv_id: '2407.00494'
+  title: Graph Neural Networks Gone Hogwild
+  date_iso: '2024-06-29'
+  venue: ICLR 2024
 - arxiv_id: '2406.11714'
   title: Scalable Expressiveness through Preprocessed Graph Perturbations
   date_iso: '2024-06-17'
@@ -660,10 +665,6 @@ papers:
   title: 'GraphiT: Encoding Graph Structure in Transformers'
   date_iso: '2021-06-10'
   venue: ''
-- arxiv_id: '2106.05819'
-  title: Adversarial Graph Augmentation to Improve Graph Contrastive Learning
-  date_iso: '2021-06-10'
-  venue: NeurIPS 2021
 - arxiv_id: '2106.07594'
   title: Graph Contrastive Learning Automated
   date_iso: '2021-06-10'
@@ -873,7 +874,6 @@ variants:
     num_classes: 2
   metrics:
   - Accuracy
-  - AP
   - AUC
   - AUROC
   - CF-ACC
@@ -886,7 +886,6 @@ variants:
   - Unfaithfulness
   metric_display_names:
   - Accuracy
-  - AP
   - AUC
   - AUROC
   - CF-ACC
@@ -935,10 +934,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.003
-    - null
     - null
     - null
     - null
@@ -983,10 +980,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.036
-    - null
     - null
     - null
     - null
@@ -1031,10 +1026,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.025
-    - null
     - null
     - null
     - null
@@ -1080,10 +1073,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0136
-    - null
     - null
     - null
     - null
@@ -1129,10 +1120,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.017
-    - null
     - null
     - null
     - null
@@ -1178,10 +1167,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0455
-    - null
     - null
     - null
     - null
@@ -1227,10 +1214,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0215
-    - null
     - null
     - null
     - null
@@ -1276,10 +1261,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.026
-    - null
     - null
     - null
     - null
@@ -1324,10 +1307,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.036
-    - null
     - null
     - null
     - null
@@ -1372,10 +1353,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.025
-    - null
     - null
     - null
     - null
@@ -1420,10 +1399,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.046
-    - null
     - null
     - null
     - null
@@ -1469,10 +1446,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0201
-    - null
     - null
     - null
     - null
@@ -1517,10 +1492,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.024
-    - null
     - null
     - null
     - null
@@ -1566,10 +1539,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.02
-    - null
     - null
     - null
     - null
@@ -1615,10 +1586,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0123
-    - null
     - null
     - null
     - null
@@ -1664,10 +1633,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.044
-    - null
     - null
     - null
     - null
@@ -1713,10 +1680,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.006
-    - null
     - null
     - null
     - null
@@ -1761,10 +1726,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.03
-    - null
     - null
     - null
     - null
@@ -1809,10 +1772,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.03
-    - null
     - null
     - null
     - null
@@ -1858,10 +1819,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0447
-    - null
     - null
     - null
     - null
@@ -1906,10 +1865,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0226
-    - null
     - null
     - null
     - null
@@ -1954,9 +1911,7 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
-    - null
     - null
     - null
     - null
@@ -2002,10 +1957,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.019
-    - null
     - null
     - null
     - null
@@ -2050,10 +2003,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.033
-    - null
     - null
     - null
     - null
@@ -2099,10 +2050,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0644
-    - null
     - null
     - null
     - null
@@ -2147,10 +2096,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.027
-    - null
     - null
     - null
     - null
@@ -2195,10 +2142,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.048
-    - null
     - null
     - null
     - null
@@ -2243,10 +2188,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0628
-    - null
     - null
     - null
     - null
@@ -2291,9 +2234,7 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
-    - null
     - null
     - null
     - null
@@ -2339,10 +2280,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.04
-    - null
     - null
     - null
     - null
@@ -2387,10 +2326,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.04
-    - null
     - null
     - null
     - null
@@ -2436,10 +2373,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0524
-    - null
     - null
     - null
     - null
@@ -2485,10 +2420,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.066
-    - null
     - null
     - null
     - null
@@ -2533,10 +2466,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.014
-    - null
     - null
     - null
     - null
@@ -2582,10 +2513,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.058
-    - null
     - null
     - null
     - null
@@ -2630,10 +2559,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.086
-    - null
     - null
     - null
     - null
@@ -2678,10 +2605,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.034
-    - null
     - null
     - null
     - null
@@ -2726,10 +2651,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0068
-    - null
     - null
     - null
     - null
@@ -2774,10 +2697,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.041
-    - null
     - null
     - null
     - null
@@ -2822,10 +2743,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.061
-    - null
     - null
     - null
     - null
@@ -2870,10 +2789,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0533
-    - null
     - null
     - null
     - null
@@ -2918,10 +2835,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.063
-    - null
     - null
     - null
     - null
@@ -2966,10 +2881,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0533
-    - null
     - null
     - null
     - null
@@ -3015,10 +2928,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.03
-    - null
     - null
     - null
     - null
@@ -3064,10 +2975,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.053
-    - null
     - null
     - null
     - null
@@ -3112,10 +3021,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.016
-    - null
     - null
     - null
     - null
@@ -3161,10 +3068,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0074
-    - null
     - null
     - null
     - null
@@ -3209,10 +3114,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.058
-    - null
     - null
     - null
     - null
@@ -3257,10 +3160,8 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.061
-    - null
     - null
     - null
     - null
@@ -3305,7 +3206,6 @@ variants:
     - null
     - null
     - null
-    - null
     metric_stds:
     - 0.0153
     - null
@@ -3318,20 +3218,18 @@ variants:
     - null
     - null
     - null
-    - null
-  row_count: 1016
+  row_count: 1019
   rows_json: /data/datasets/mutag/10-fold-cv-rows.json
   chart_json: /data/datasets/mutag/10-fold-cv-chart.json
   arch_counts:
-    gnn: 591
-    hybrid: 191
+    gnn: 589
+    hybrid: 192
     graph_transformer: 35
     llm: 2
     walk: 13
-    traditional: 136
+    traditional: 139
   metric_counts:
-  - 948
-  - 8
+  - 959
   - 21
   - 13
   - 10
@@ -3349,6 +3247,12 @@ variants:
     arxiv_id: '1410.3314'
     title: Propagation Kernels
     date: '2014-10-13'
+  - value: 0.8794
+    std: 0.0161
+    model: MLG
+    arxiv_id: '1603.06186'
+    title: The Multiscale Laplacian Graph Kernel
+    date: '2016-03-01'
   - value: 0.9263
     std: 0.0421
     model: PSCN k=10E
@@ -3382,13 +3286,6 @@ variants:
     date: '2025-05-21'
   milestones_by_metric:
     Accuracy: *id001
-    AP:
-    - value: 0.7925
-      std: 0.0619
-      model: Schrödinger PMO
-      arxiv_id: '2605.13383'
-      title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
-      date: '2026-05-13'
     AUC:
     - value: 0.969
       std: null
@@ -3434,7 +3331,15 @@ variants:
       title: 'Probing GNN Explainers: A Rigorous Theoretical and Empirical Analysis
         of GNN Explanation Methods'
       date: '2021-06-16'
-    Predicted Class Probability: []
+    Predicted Class Probability:
+    - value: 1.0
+      std: 0.0
+      model: probabilistic generative model-level explanation method for explaining
+        GNNs
+      arxiv_id: '2209.07924'
+      title: 'GNNInterpreter: A Probabilistic Generative Model-Level Explanation for
+        Graph Neural Networks'
+      date: '2022-09-15'
     Size:
     - value: 1.0
       std: 0.0

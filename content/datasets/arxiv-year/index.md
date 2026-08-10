@@ -13,7 +13,7 @@ stats:
   avg_nodes: 169343.0
   avg_edges: 1166243.0
   num_classes: 40
-result_count: 64
+result_count: 71
 best_model:
   model: LargeScaleNet
   value: 0.6582
@@ -25,6 +25,10 @@ papers:
   title: Frequency-Corrupt Based Graph Self-Supervised Learning
   date_iso: '2026-04-17'
   venue: WWW 2026
+- arxiv_id: '2506.19343'
+  title: Discrepancy-Aware Graph Mask Auto-Encoder
+  date_iso: '2025-06-24'
+  venue: KDD 2025
 - arxiv_id: '2504.18273'
   title: Efficient Learning on Large Graphs using a Densifying Regularity Lemma
   date_iso: '2025-04-25'
@@ -58,6 +62,10 @@ papers:
   title: Feature Transportation Improves Graph Neural Networks
   date_iso: '2023-07-29'
   venue: AAAI 2023
+- arxiv_id: '2210.05382'
+  title: Uplifting Message Passing Neural Network with Graph Original Information
+  date_iso: '2022-10-08'
+  venue: ''
 - arxiv_id: '2210.00513'
   title: Gradient Gating for Deep Multi-Rate Learning on Graphs
   date_iso: '2022-10-02'
@@ -404,6 +412,32 @@ variants:
     - 0.5846
     metric_stds:
     - 0.0059
+  - model: INGNN
+    model_plain: INGNN
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.05382'
+    title: Uplifting Message Passing Neural Network with Graph Original Information
+    date: Oct 8, 2022
+    date_iso: '2022-10-08'
+    date_display: Oct 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.5653
+    metric_stds:
+    - 0.0015
   - model: LINKX
     model_plain: LINKX
     is_baseline: true
@@ -613,6 +647,58 @@ variants:
     - 0.5047
     metric_stds:
     - 0.0021
+  - model: AdaGNN
+    model_plain: AdaGNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.05382'
+    title: Uplifting Message Passing Neural Network with Graph Original Information
+    date: Oct 8, 2022
+    date_iso: '2022-10-08'
+    date_display: Oct 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.4949
+    metric_stds:
+    - 0.0016
+  - model: GAT
+    model_plain: GAT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.05382'
+    title: Uplifting Message Passing Neural Network with Graph Original Information
+    date: Oct 8, 2022
+    date_iso: '2022-10-08'
+    date_display: Oct 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.4937
+    metric_stds:
+    - 0.002
   - model: H2GCN
     model_plain: H2GCN
     is_baseline: true
@@ -691,6 +777,32 @@ variants:
     - 0.4853
     metric_stds:
     - 0.0031
+  - model: ACM-GCN
+    model_plain: ACM-GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.05382'
+    title: Uplifting Message Passing Neural Network with Graph Original Information
+    date: Oct 8, 2022
+    date_iso: '2022-10-08'
+    date_display: Oct 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.4841
+    metric_stds:
+    - 0.003
   - model: ACM-GCN
     model_plain: ACM-GCN
     is_baseline: true
@@ -1081,6 +1193,32 @@ variants:
     - 0.4371
     metric_stds:
     - 0.0054
+  - model: DGMAE
+    model_plain: DGMAE
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2506.19343'
+    title: Discrepancy-Aware Graph Mask Auto-Encoder
+    date: Jun 24, 2025
+    date_iso: '2025-06-24'
+    date_display: Jun 2025
+    codebase_url: https://github.com/zhengziyu77/DGMAE
+    published_conference: KDD 2025
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.4341
+    metric_stds:
+    - 0.0064
   - model: BGRL
     model_plain: BGRL
     is_baseline: true
@@ -1263,148 +1401,18 @@ variants:
     - 0.4143
     metric_stds:
     - 0.0004
-  - model: CCA-SSG
-    model_plain: CCA-SSG
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2604.15699'
-    title: Frequency-Corrupt Based Graph Self-Supervised Learning
-    date: Apr 17, 2026
-    date_iso: '2026-04-17'
-    date_display: Apr 2026
-    codebase_url: https://github.com/rookitkitlee/FC-GSSL
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.4078
-    metric_stds:
-    - 0.0001
-  - model: FAGCN
-    model_plain: FAGCN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2110.08128'
-    title: Label-Wise Graph Convolutional Network for Heterophilic Graphs
-    date: Oct 15, 2021
-    date_iso: '2021-10-15'
-    date_display: Oct 2021
-    codebase_url: https://github.com/ChandlerBang/SimP-GCN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.406
-    metric_stds:
-    - 0.004
-  - model: MaskGAE
-    model_plain: MaskGAE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2604.15699'
-    title: Frequency-Corrupt Based Graph Self-Supervised Learning
-    date: Apr 17, 2026
-    date_iso: '2026-04-17'
-    date_display: Apr 2026
-    codebase_url: https://github.com/rookitkitlee/FC-GSSL
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.4059
-    metric_stds:
-    - 0.0004
-  - model: S2GAE
-    model_plain: S2GAE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2604.15699'
-    title: Frequency-Corrupt Based Graph Self-Supervised Learning
-    date: Apr 17, 2026
-    date_iso: '2026-04-17'
-    date_display: Apr 2026
-    codebase_url: https://github.com/rookitkitlee/FC-GSSL
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.4032
-    metric_stds:
-    - 0.0012
-  - model: GraphMAE
-    model_plain: GraphMAE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2604.15699'
-    title: Frequency-Corrupt Based Graph Self-Supervised Learning
-    date: Apr 17, 2026
-    date_iso: '2026-04-17'
-    date_display: Apr 2026
-    codebase_url: https://github.com/rookitkitlee/FC-GSSL
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.403
-    metric_stds:
-    - 0.0004
-  row_count: 64
+  row_count: 71
   rows_json: /data/datasets/arxiv-year/standard-split-rows.json
   chart_json: /data/datasets/arxiv-year/standard-split-chart.json
   arch_counts:
-    gnn: 52
+    gnn: 59
     hybrid: 6
-    graph_transformer: 2
+    graph_transformer: 1
     llm: 0
     walk: 1
     traditional: 2
   metric_counts:
-  - 64
+  - 71
   milestones: &id001
   - value: 0.56
     std: 0.013

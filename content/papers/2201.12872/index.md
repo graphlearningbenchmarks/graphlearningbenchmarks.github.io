@@ -193,7 +193,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 10
+    global_rank: 12
     sort_value: 0.809
     sort_std: 0.016
     comparison_type: global_top
@@ -257,10 +257,77 @@ results:
     value_note: ''
     sort_value: 0.8039
     sort_std: 0.009
-    global_rank: 21
-    paper_rank: 262
+    global_rank: 22
+    paper_rank: 263
     rank_delta: 241
     rank_delta_abs: 241
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: IRM
+    model_key: irm
+    model_plain: IRM
+    value: 0.7446
+    std: 0.0274
+    paper_value: 0.7446
+    paper_std: 0.0274
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: OGB scaffold split
+    date: Jan 30, 2022
+    date_display: Jan 2022
+    date_iso: '2022-01-30'
+    published_venue: ICLR 2022
+    published_conference: ICLR 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-06-06'
+    value_gap_source_date_label: KDD 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7947
+    true_std: 0.0186
+    value_gap_source_arxiv: '2206.02886'
+    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
+    value_gap_source_is_current_paper: false
+    value_gap: 0.05009999999999992
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7947
+    sort_std: 0.0186
+    global_rank: 50
+    paper_rank: 264
+    rank_delta: 214
+    rank_delta_abs: 214
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -357,8 +424,8 @@ results:
     value_note: ''
     sort_value: 0.7744
     sort_std: 0.0127
-    global_rank: 136
-    paper_rank: 226
+    global_rank: 137
+    paper_rank: 227
     rank_delta: 90
     rank_delta_abs: 90
     rank_delta_direction: worse
@@ -425,8 +492,8 @@ results:
     value_note: ''
     sort_value: 0.7705
     sort_std: null
-    global_rank: 164
-    paper_rank: 164
+    global_rank: 165
+    paper_rank: 165
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -493,8 +560,8 @@ results:
     value_note: ''
     sort_value: 0.762
     sort_std: 0.0254
-    global_rank: 206
-    paper_rank: 206
+    global_rank: 207
+    paper_rank: 207
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -560,8 +627,8 @@ results:
     value_note: ''
     sort_value: 0.7605
     sort_std: 0.0086
-    global_rank: 218
-    paper_rank: 218
+    global_rank: 219
+    paper_rank: 219
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -628,8 +695,8 @@ results:
     value_note: ''
     sort_value: 0.7562
     sort_std: 0.0331
-    global_rank: 235
-    paper_rank: 235
+    global_rank: 236
+    paper_rank: 236
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -695,76 +762,8 @@ results:
     value_note: ''
     sort_value: 0.7544
     sort_std: 0.027
-    global_rank: 243
-    paper_rank: 243
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: IRM
-    model_key: irm
-    model_plain: IRM
-    value: 0.7446
-    std: 0.0274
-    paper_value: 0.7446
-    paper_std: 0.0274
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: OGB scaffold split
-    date: Jan 30, 2022
-    date_display: Jan 2022
-    date_iso: '2022-01-30'
-    published_venue: ICLR 2022
-    published_conference: ICLR 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-12-09'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7446
-    true_std: 0.0105
-    value_gap_source_arxiv: '2501.04102'
-    value_gap_source_title: Enhancing Distribution and Label Consistency for Graph
-      Out-of-Distribution Generalization
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7446
-    sort_std: 0.0105
-    global_rank: 264
-    paper_rank: 264
+    global_rank: 244
+    paper_rank: 244
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -830,8 +829,8 @@ results:
     value_note: ''
     sort_value: 0.7381
     sort_std: 0.0117
-    global_rank: 279
-    paper_rank: 279
+    global_rank: 280
+    paper_rank: 280
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -897,8 +896,8 @@ results:
     value_note: ''
     sort_value: 0.7326
     sort_std: 0.0084
-    global_rank: 287
-    paper_rank: 287
+    global_rank: 288
+    paper_rank: 288
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -964,8 +963,8 @@ results:
     value_note: ''
     sort_value: 0.7301
     sort_std: 0.0165
-    global_rank: 292
-    paper_rank: 292
+    global_rank: 293
+    paper_rank: 293
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

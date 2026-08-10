@@ -1421,13 +1421,25 @@ variants:
   metric_counts:
   - 54
   milestones: &id001
-  - value: 0.729
-    std: null
-    model: StarGraph + TripleRE'
-    arxiv_id: '2205.14209'
-    title: 'StarGraph: Knowledge Representation Learning based on Incomplete Two-hop
-      Subgraph'
-    date: '2022-05-27'
+  - value: 0.4332
+    std: 0.0025
+    model: RotatE (5×dim)
+    arxiv_id: '2005.00687'
+    title: OGB
+    date: '2020-05-02'
+  - value: 0.5289
+    std: 0.003
+    model: PairRE
+    arxiv_id: '2011.03798'
+    title: 'PairRE: Knowledge Graph Embeddings via Paired Relation Vectors'
+    date: '2020-11-07'
+  - value: 0.7293
+    std: 0.0018
+    model: InterHT + DigPiece
+    arxiv_id: '2202.04897'
+    title: 'InterHT: Knowledge Graph Embeddings by Interaction between Head and Tail
+      Entities'
+    date: '2022-02-10'
   milestones_by_metric:
     MRR: *id001
 ---

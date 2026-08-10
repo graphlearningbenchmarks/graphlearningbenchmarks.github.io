@@ -52,8 +52,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - RPE-augWL
-mrr: 0.04
-adjusted_mrr: 0.0133
+mrr: 0.0417
+adjusted_mrr: 0.0139
 mrr_dataset_count: 1
 benchmark_categories:
 - GNNBenchmark
@@ -126,8 +126,8 @@ results:
     value_note: ''
     sort_value: 1.0
     sort_std: 0.0
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -193,8 +193,8 @@ results:
     value_note: ''
     sort_value: 1.0
     sort_std: 0.0
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -260,8 +260,8 @@ results:
     value_note: ''
     sort_value: 1.0
     sort_std: 0.0
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -327,8 +327,8 @@ results:
     value_note: ''
     sort_value: 1.0
     sort_std: 0.0
-    global_rank: 26
-    paper_rank: 26
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -526,10 +526,10 @@ results:
     value_note: ''
     sort_value: 0.99333
     sort_std: 0.01333
-    global_rank: 42
-    paper_rank: 79
-    rank_delta: 37
-    rank_delta_abs: 37
+    global_rank: 41
+    paper_rank: 74
+    rank_delta: 33
+    rank_delta_abs: 33
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind

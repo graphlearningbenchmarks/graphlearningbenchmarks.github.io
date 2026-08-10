@@ -79,8 +79,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - NewtonNet
-mrr: 0.0156
-adjusted_mrr: 0.0052
+mrr: 0.0159
+adjusted_mrr: 0.0053
 mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
@@ -88,7 +88,7 @@ benchmark_coverage:
 - benchmark: Quantum Chemistry
   benchmark_slug: quantum-chemistry
   evaluated: 1
-  total: 3
+  total: 1
 task_categories:
 - graph_regression
 experiment_scopes:
@@ -258,9 +258,9 @@ results:
     sort_value: 0.01
     sort_std: null
     global_rank: 22
-    paper_rank: 98
-    rank_delta: 76
-    rank_delta_abs: 76
+    paper_rank: 96
+    rank_delta: 74
+    rank_delta_abs: 74
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -327,9 +327,9 @@ results:
     sort_value: 0.03
     sort_std: null
     global_rank: 29
-    paper_rank: 101
-    rank_delta: 72
-    rank_delta_abs: 72
+    paper_rank: 99
+    rank_delta: 70
+    rank_delta_abs: 70
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -397,9 +397,9 @@ results:
     sort_value: 0.05
     sort_std: null
     global_rank: 46
-    paper_rank: 109
-    rank_delta: 63
-    rank_delta_abs: 63
+    paper_rank: 107
+    rank_delta: 61
+    rank_delta_abs: 61
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -464,10 +464,10 @@ results:
     value_note: ''
     sort_value: 0.06
     sort_std: null
-    global_rank: 62
-    paper_rank: 100
-    rank_delta: 38
-    rank_delta_abs: 38
+    global_rank: 61
+    paper_rank: 98
+    rank_delta: 37
+    rank_delta_abs: 37
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -533,8 +533,8 @@ results:
     value_note: ''
     sort_value: 0.061
     sort_std: null
-    global_rank: 64
-    paper_rank: 64
+    global_rank: 63
+    paper_rank: 63
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -601,10 +601,10 @@ results:
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 65
-    paper_rank: 100
-    rank_delta: 35
-    rank_delta_abs: 35
+    global_rank: 64
+    paper_rank: 98
+    rank_delta: 34
+    rank_delta_abs: 34
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -670,8 +670,8 @@ results:
     value_note: ''
     sort_value: 0.182
     sort_std: null
-    global_rank: 100
-    paper_rank: 100
+    global_rank: 98
+    paper_rank: 98
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

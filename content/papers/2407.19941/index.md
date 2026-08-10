@@ -47,7 +47,7 @@ abstract: Graph models based on large language models (LLMs) have recently garne
   domains and downstream tasks. Experimental results on various datasets and tasks
   demonstrate the superior performance of BooG. We provide our code and data here:.
 codebase_url: https://github.com/cy623/BooG
-extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+extraction_model: google/gemma-4-26B-A4B-it
 has_results: true
 paper_type: method
 proposed_models:
@@ -264,9 +264,9 @@ results:
     sort_value: 0.7391
     sort_std: null
     global_rank: 13
-    paper_rank: 94
-    rank_delta: 81
-    rank_delta_abs: 81
+    paper_rank: 88
+    rank_delta: 75
+    rank_delta_abs: 75
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -376,73 +376,6 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.7055
-    std: null
-    paper_value: 0.7055
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Supervised learning on official OGB split
-    date: Jul 29, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-29'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.7176
-    at_pub_std: null
-    at_pub_source_arxiv: '2010.00238'
-    at_pub_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    at_pub_source_date_iso: '2020-10-01'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2020-10-01'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: 0.0121
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7176
-    true_std: null
-    value_gap_source_arxiv: '2010.00238'
-    value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0121
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7176
-    sort_std: null
-    global_rank: 62
-    paper_rank: 91
-    rank_delta: 29
-    rank_delta_abs: 29
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Multi-grained Semantics-aware Graph Neural Networks
-    comparison_source_arxiv: '2010.00238'
-    is_best: false
-    is_std_outlier: false
   - model: GraphMAE
     model_key: graphmae
     model_plain: GraphMAE
@@ -499,8 +432,8 @@ results:
     value_note: ''
     sort_value: 0.7175
     sort_std: 0.0017
-    global_rank: 63
-    paper_rank: 89
+    global_rank: 56
+    paper_rank: 82
     rank_delta: 26
     rank_delta_abs: 26
     rank_delta_direction: worse
@@ -508,6 +441,74 @@ results:
     comparison_type: behind
     comparison_source_title: Rethinking and Simplifying Bootstrapped Graph Latents
     comparison_source_arxiv: '2312.02619'
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.7055
+    std: null
+    paper_value: 0.7055
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Supervised learning on official OGB split
+    date: Jul 29, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-29'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.6733
+    at_pub_std: 0.0147
+    at_pub_source_arxiv: '2403.12529'
+    at_pub_source_title: Contextualized Messages Boost Graph Representations
+    at_pub_source_date_iso: '2024-03-19'
+    at_pub_source_date_label: TMLR 2024
+    value_gap_source_date_iso: '2024-07-29'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.032200000000000006
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7055
+    true_std: null
+    value_gap_source_arxiv: '2407.19941'
+    value_gap_source_title: Boosting Cross-Domain and Cross-Task Generalization for
+      Text-Attributed Graphs from Structural Perspective
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7055
+    sort_std: null
+    global_rank: 86
+    paper_rank: 86
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Contextualized Messages Boost Graph Representations
+    comparison_source_arxiv: '2403.12529'
     is_best: false
     is_std_outlier: false
   - model: DGI
@@ -568,10 +569,10 @@ results:
     value_note: ''
     sort_value: 0.7034
     sort_std: 0.0016
-    global_rank: 94
-    paper_rank: 115
-    rank_delta: 21
-    rank_delta_abs: 21
+    global_rank: 88
+    paper_rank: 108
+    rank_delta: 20
+    rank_delta_abs: 20
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -637,8 +638,8 @@ results:
     value_note: ''
     sort_value: 0.6831
     sort_std: null
-    global_rank: 104
-    paper_rank: 104
+    global_rank: 97
+    paper_rank: 97
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -705,8 +706,8 @@ results:
     value_note: ''
     sort_value: 0.6094
     sort_std: null
-    global_rank: 121
-    paper_rank: 121
+    global_rank: 114
+    paper_rank: 114
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

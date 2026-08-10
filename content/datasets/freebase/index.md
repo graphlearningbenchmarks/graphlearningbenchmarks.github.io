@@ -420,7 +420,7 @@ variants:
     published_conference_short: ''
     published_conference_slug: ''
     published_venue: ''
-    uses_external_data: true
+    uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
@@ -1520,43 +1520,13 @@ variants:
   - 69
   - 14
   milestones: &id001
-  - value: 0.4772
-    std: 0.0148
-    model: Simple-HGN
-    arxiv_id: '2112.14936'
-    title: Heterogeneous Graph Benchmarks
-    date: '2021-08-14'
-  - value: 0.5187
-    std: 0.0086
-    model: SeHGNN
-    arxiv_id: '2207.02547'
-    title: Simple and Efficient Heterogeneous Graph Neural Network
-    date: '2022-07-06'
-  - value: 0.5326
-    std: 0.0047
-    model: LMSPS
-    arxiv_id: '2307.08430'
-    title: Long-range Meta-path Search on Large-scale Heterogeneous Graphs
-    date: '2023-07-17'
-  - value: 0.5402
-    std: 0.0088
-    model: RpHGNN
-    arxiv_id: '2310.14481'
-    title: Efficient Heterogeneous Graph Learning via Random Projection
-    date: '2023-10-23'
-  - value: 0.5962
+  - value: 0.6475
     std: null
-    model: MuseGraph (LLaMA3-8B)
-    arxiv_id: '2403.04780'
-    title: Graph-oriented Instruction Tuning of Large Language Models for Generic
-      Graph Mining
-    date: '2024-03-02'
-  - value: 0.6247
-    std: 0.0042
-    model: GC-HGNN
-    arxiv_id: '2404.02810'
-    title: Generative-Contrastive Heterogeneous Graph Neural Network
-    date: '2024-04-03'
+    model: ConCH
+    arxiv_id: '2012.10024'
+    title: Leveraging Meta-path Contexts for Classification in Heterogeneous Information
+      Networks
+    date: '2020-12-18'
   milestones_by_metric:
     Macro-F1: *id001
     Micro-F1:

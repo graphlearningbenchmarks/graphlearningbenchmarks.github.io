@@ -12,7 +12,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 5
-result_count: 310
+result_count: 323
 best_model:
   model: ACM-GCN
   value: 0.958
@@ -24,6 +24,11 @@ papers:
   title: Graph Navier–Stokes Networks
   date_iso: '2026-05-20'
   venue: ''
+- arxiv_id: '2604.19028'
+  title: Learning Posterior Predictive Distributions for Node Classification from
+    Synthetic Graph Priors
+  date_iso: '2026-04-21'
+  venue: ICLR 2026
 - arxiv_id: '2603.26178'
   title: 'Geometric Evolution Graph Convolutional Networks: Enhancing Graph Representation
     Learning via Ricci Flow'
@@ -79,6 +84,10 @@ papers:
   title: When Graph Neural Networks Meet Dynamic Mode Decomposition
   date_iso: '2024-10-08'
   venue: ICLR 2024
+- arxiv_id: '2408.13471'
+  title: Disentangled Generative Graph Representation Learning
+  date_iso: '2024-08-24'
+  venue: ''
 - arxiv_id: '2408.07654'
   title: 'Graph Triple Attention Network: A Decoupled Perspective'
   date_iso: '2024-08-14'
@@ -181,6 +190,10 @@ papers:
   title: Restructuring Graphs for Higher Homophily via Adaptive Spectral Clustering
   date_iso: '2022-06-06'
   venue: AAAI 2022
+- arxiv_id: '2106.06134'
+  title: Is Homophily a Necessity for Graph Neural Networks?
+  date_iso: '2021-06-11'
+  venue: ICLR 2021
 - arxiv_id: '2105.07634'
   title: Improving Graph Neural Networks with Simple Architecture Design
   date_iso: '2021-05-17'
@@ -733,6 +746,66 @@ variants:
     - 0.0322
     - null
     - null
+  - model: MUSE
+    model_plain: MUSE
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2408.13471'
+    title: Disentangled Generative Graph Representation Learning
+    date: Aug 24, 2024
+    date_iso: '2024-08-24'
+    date_display: Aug 2024
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8824
+    - null
+    - null
+    metric_stds:
+    - 0.032
+    - null
+    - null
+  - model: LRGNN
+    model_plain: LRGNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2408.13471'
+    title: Disentangled Generative Graph Representation Learning
+    date: Aug 24, 2024
+    date_iso: '2024-08-24'
+    date_display: Aug 2024
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8823
+    - null
+    - null
+    metric_stds:
+    - 0.0354
+    - null
+    - null
   - model: GNRF
     model_plain: GNRF
     is_baseline: true
@@ -853,6 +926,36 @@ variants:
     - null
     metric_stds:
     - 0.036
+    - null
+    - null
+  - model: OGNN
+    model_plain: OGNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2408.13471'
+    title: Disentangled Generative Graph Representation Learning
+    date: Aug 24, 2024
+    date_iso: '2024-08-24'
+    date_display: Aug 2024
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8804
+    - null
+    - null
+    metric_stds:
+    - 0.0363
     - null
     - null
   - model: Auto-HeG
@@ -976,15 +1079,45 @@ variants:
     - 0.043
     - null
     - null
-  - model: A-DGN
-    model_plain: A-DGN
+  - model: DiGGR
+    model_plain: DiGGR
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2408.13471'
+    title: Disentangled Generative Graph Representation Learning
+    date: Aug 24, 2024
+    date_iso: '2024-08-24'
+    date_display: Aug 2024
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8725
+    - null
+    - null
+    metric_stds:
+    - 0.0441
+    - null
+    - null
+  - model: A-DGN(GCN)
+    model_plain: A-DGN(GCN)
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
     arxiv_id: '2210.09789'
     title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph Networks'
     date: Oct 18, 2022
@@ -1338,36 +1471,6 @@ variants:
     - 0.0469
     - null
     - null
-  - model: ODEs
-    model_plain: ODEs
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2210.09789'
-    title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph Networks'
-    date: Oct 18, 2022
-    date_iso: '2022-10-18'
-    date_display: Oct 2022
-    codebase_url: https://github.com/gravins/Anti-SymmetricDGN
-    published_conference: ICLR 2022
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8667
-    - null
-    - null
-    metric_stds:
-    - 0.037
-    - null
-    - null
   - model: BIMP
     model_plain: BIMP
     is_baseline: false
@@ -1396,6 +1499,36 @@ variants:
     - null
     metric_stds:
     - 0.0433
+    - null
+    - null
+  - model: MLP + GCN
+    model_plain: MLP + GCN
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2106.06134'
+    title: Is Homophily a Necessity for Graph Neural Networks?
+    date: Jun 11, 2021
+    date_iso: '2021-06-11'
+    date_display: Jun 2021
+    codebase_url: https://github.com/jianhao2016/GPRGNN
+    published_conference: ICLR 2021
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8643
+    - null
+    - null
+    metric_stds:
+    - 0.04
     - null
     - null
   - model: ACMP
@@ -1437,17 +1570,16 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2211.11761'
-    title: 'From Node Interaction to Hop Interaction: New Effective and Scalable Graph
-      Learning Paradigm'
-    date: Nov 21, 2022
-    date_iso: '2022-11-21'
-    date_display: Nov 2022
-    codebase_url: https://github.com/JC-202/HopGNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
+    arxiv_id: '2106.06134'
+    title: Is Homophily a Necessity for Graph Neural Networks?
+    date: Jun 11, 2021
+    date_iso: '2021-06-11'
+    date_display: Jun 2021
+    codebase_url: https://github.com/jianhao2016/GPRGNN
+    published_conference: ICLR 2021
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2021
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -1610,139 +1742,18 @@ variants:
     - 0.05
     - null
     - null
-  - model: GREAD
-    model_plain: GREAD
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2602.15634'
-    title: 'Beyond ReLU: Bifurcation, Oversmoothing, and Topological Priors'
-    date: Feb 17, 2026
-    date_iso: '2026-02-17'
-    date_display: Feb 2026
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8529
-    - null
-    - null
-    metric_stds:
-    - 0.0449
-    - null
-    - null
-  - model: ResNet
-    model_plain: ResNet
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2305.16780'
-    title: Graph Neural Convection-Diffusion with Heterophily
-    date: May 26, 2023
-    date_iso: '2023-05-26'
-    date_display: May 2023
-    codebase_url: https://github.com/zknus/Graph-Diffusion-CDE
-    published_conference: IJCAI 2023
-    published_conference_short: IJCAI
-    published_conference_slug: ijcai
-    published_venue: IJCAI 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8529
-    - null
-    - null
-    metric_stds:
-    - 0.0331
-    - null
-    - null
-  - model: MLP LO
-    model_plain: MLP LO
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2405.13902'
-    title: 'LOGIN: A Large Language Model Consulted Graph Neural Network Training
-      Framework'
-    date: May 22, 2024
-    date_iso: '2024-05-22'
-    date_display: May 2024
-    codebase_url: https://github.com/QiaoYRan/LOGIN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: true
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8528
-    - null
-    - null
-    metric_stds:
-    - 0.0588
-    - null
-    - null
-  - model: DMD-GCN
-    model_plain: DMD-GCN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2410.05593'
-    title: When Graph Neural Networks Meet Dynamic Mode Decomposition
-    date: Oct 8, 2024
-    date_iso: '2024-10-08'
-    date_display: Oct 2024
-    codebase_url: ''
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.852
-    - null
-    - null
-    metric_stds:
-    - 0.021
-    - null
-    - null
-  row_count: 310
+  row_count: 323
   rows_json: /data/datasets/wisconsin/standard-split-rows.json
   chart_json: /data/datasets/wisconsin/standard-split-chart.json
   arch_counts:
-    gnn: 230
-    hybrid: 50
+    gnn: 238
+    hybrid: 52
     graph_transformer: 10
     llm: 0
     walk: 2
-    traditional: 14
+    traditional: 16
   metric_counts:
-  - 287
+  - 300
   - 11
   - 12
   milestones: &id001

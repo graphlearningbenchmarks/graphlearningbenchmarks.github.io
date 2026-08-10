@@ -9,7 +9,7 @@ primary_metric: ROC-AUC
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.HeterophilousGraphDataset.html
 stats: null
-result_count: 275
+result_count: 274
 best_model:
   model: BuNN
   value: 0.9899
@@ -31,6 +31,11 @@ papers:
     Synthetic Graph Priors
   date_iso: '2026-04-21'
   venue: ICLR 2026
+- arxiv_id: '2604.08980'
+  title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware Graph
+    Learning'
+  date_iso: '2026-04-10'
+  venue: ''
 - arxiv_id: '2603.26178'
   title: 'Geometric Evolution Graph Convolutional Networks: Enhancing Graph Representation
     Learning via Ricci Flow'
@@ -67,15 +72,15 @@ papers:
   title: 'Gumbel-MPNN: Graph Rewiring with Gumbel-Softmax'
   date_iso: '2025-08-24'
   venue: ''
-- arxiv_id: '2508.05070'
-  title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-  date_iso: '2025-08-07'
-  venue: ''
 - arxiv_id: '2507.14484'
   title: 'ReDiSC: A Reparameterized Masked Diffusion Model for Scalable Node Classification
     with Structured Predictions'
   date_iso: '2025-07-19'
   venue: ''
+- arxiv_id: '2506.19343'
+  title: Discrepancy-Aware Graph Mask Auto-Encoder
+  date_iso: '2025-06-24'
+  venue: KDD 2025
 - arxiv_id: '2505.15015'
   title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
   date_iso: '2025-05-21'
@@ -121,11 +126,6 @@ papers:
   title: Bundle Neural Networks for message diffusion on graphs
   date_iso: '2024-05-24'
   venue: ''
-- arxiv_id: '2404.17099'
-  title: Unleashing the Potential of Fractional Calculus in Graph Neural Networks
-    with FROND
-  date_iso: '2024-04-26'
-  venue: ICLR 2024
 - arxiv_id: '2403.12529'
   title: Contextualized Messages Boost Graph Representations
   date_iso: '2024-03-19'
@@ -229,62 +229,6 @@ variants:
     metric_stds:
     - 0.0021
     - null
-  - model: Tango_GPS
-    model_plain: Tango_GPS
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_iso: '2025-08-07'
-    date_display: Aug 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.9839
-    - null
-    metric_stds:
-    - 0.0054
-    - null
-  - model: Tango_GatedGCN
-    model_plain: Tango_GatedGCN
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_iso: '2025-08-07'
-    date_display: Aug 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.9832
-    - null
-    metric_stds:
-    - 0.0059
-    - null
   - model: Polynormer-r
     model_plain: Polynormer-r
     is_baseline: false
@@ -312,34 +256,6 @@ variants:
     - null
     metric_stds:
     - 0.0036
-    - null
-  - model: Co-GNN(μ,μ)
-    model_plain: Co-GNN(μ,μ)
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_iso: '2025-08-07'
-    date_display: Aug 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9731
-    - null
-    metric_stds:
-    - 0.0041
     - null
   - model: Polynormer + Wideformer
     model_plain: Polynormer + Wideformer
@@ -369,6 +285,34 @@ variants:
     metric_stds:
     - 0.0001
     - null
+  - model: Polynormer + Entropy Reg
+    model_plain: Polynormer + Entropy Reg
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2510.21267'
+    title: Relieving the Over-Aggregating Effect in Graph Transformers
+    date: Oct 24, 2025
+    date_iso: '2025-10-24'
+    date_display: Oct 2025
+    codebase_url: https://github.com/sunjss/over-aggregating
+    published_conference: NeurIPS 2025
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.972
+    - null
+    metric_stds:
+    - 0.0032
+    - null
   - model: Polynormer
     model_plain: Polynormer
     is_baseline: false
@@ -396,6 +340,62 @@ variants:
     - null
     metric_stds:
     - 0.0052
+    - null
+  - model: Polynormer-v1
+    model_plain: Polynormer-v1
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2403.01232'
+    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
+    date: Mar 2, 2024
+    date_iso: '2024-03-02'
+    date_display: Mar 2024
+    codebase_url: https://github.com/cornell-zhang/Polynormer
+    published_conference: ICLR 2024
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9696
+    - null
+    metric_stds:
+    - 0.0052
+    - null
+  - model: Polynormer-v2
+    model_plain: Polynormer-v2
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2403.01232'
+    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
+    date: Mar 2, 2024
+    date_iso: '2024-03-02'
+    date_display: Mar 2024
+    codebase_url: https://github.com/cornell-zhang/Polynormer
+    published_conference: ICLR 2024
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9648
+    - null
+    metric_stds:
+    - 0.0037
     - null
   - model: D-CDE
     model_plain: D-CDE
@@ -819,34 +819,6 @@ variants:
     metric_stds:
     - 0.0058
     - null
-  - model: GCN (LapPE)
-    model_plain: GCN (LapPE)
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_iso: '2025-08-07'
-    date_display: Aug 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9426
-    - null
-    metric_stds:
-    - 0.0049
-    - null
   - model: BGRL-ECG-GAT-sep
     model_plain: BGRL-ECG-GAT-sep
     is_baseline: true
@@ -1155,34 +1127,6 @@ variants:
     metric_stds:
     - 0.0035
     - null
-  - model: GPS_GCN+Performer (LapPE)
-    model_plain: GPS_GCN+Performer (LapPE)
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_iso: '2025-08-07'
-    date_display: Aug 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9385
-    - null
-    metric_stds:
-    - 0.0041
-    - null
   - model: MLP->GNN-ECG-SAGE
     model_plain: MLP->GNN-ECG-SAGE
     is_baseline: true
@@ -1407,33 +1351,61 @@ variants:
     metric_stds:
     - 0.0057
     - null
-  - model: GAT (LapPE)
-    model_plain: GAT (LapPE)
+  - model: GraphGPS+Entropy Reg
+    model_plain: GraphGPS+Entropy Reg
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_iso: '2025-08-07'
-    date_display: Aug 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2510.21267'
+    title: Relieving the Over-Aggregating Effect in Graph Transformers
+    date: Oct 24, 2025
+    date_iso: '2025-10-24'
+    date_display: Oct 2025
+    codebase_url: https://github.com/sunjss/over-aggregating
+    published_conference: NeurIPS 2025
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2025
     uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
-    - 0.935
+    - 0.9335
     - null
     metric_stds:
-    - 0.0054
+    - 0.0023
+    - null
+  - model: GraphGPS
+    model_plain: GraphGPS
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2510.21267'
+    title: Relieving the Over-Aggregating Effect in Graph Transformers
+    date: Oct 24, 2025
+    date_iso: '2025-10-24'
+    date_display: Oct 2025
+    codebase_url: https://github.com/sunjss/over-aggregating
+    published_conference: NeurIPS 2025
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9326
+    - null
+    metric_stds:
+    - 0.001
     - null
   - model: MLP->GNN-ECG-GT-sep
     model_plain: MLP->GNN-ECG-GT-sep
@@ -1519,34 +1491,6 @@ variants:
     metric_stds:
     - 0.001
     - null
-  - model: GPS_GAT+Performer (LapPE)
-    model_plain: GPS_GAT+Performer (LapPE)
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_iso: '2025-08-07'
-    date_display: Aug 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9262
-    - null
-    metric_stds:
-    - 0.0079
-    - null
   - model: MLP->GNN-ECG-GCN
     model_plain: MLP->GNN-ECG-GCN
     is_baseline: true
@@ -1575,19 +1519,75 @@ variants:
     metric_stds:
     - 0.0023
     - null
-  row_count: 275
+  - model: MLPBGRL-ECG-GCN
+    model_plain: MLPBGRL-ECG-GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2306.12943'
+    title: Evolving Computation Graphs
+    date: Jun 22, 2023
+    date_iso: '2023-06-22'
+    date_display: Jun 2023
+    codebase_url: ''
+    published_conference: ICML 2023
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2023
+    uses_external_data: true
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9247
+    - null
+    metric_stds:
+    - 0.005
+    - null
+  - model: BGRL-ECG-GCN
+    model_plain: BGRL-ECG-GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2306.12943'
+    title: Evolving Computation Graphs
+    date: Jun 22, 2023
+    date_iso: '2023-06-22'
+    date_display: Jun 2023
+    codebase_url: ''
+    published_conference: ICML 2023
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2023
+    uses_external_data: true
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9235
+    - null
+    metric_stds:
+    - 0.001
+    - null
+  row_count: 274
   rows_json: /data/datasets/minesweeper/standard-split-rows.json
   chart_json: /data/datasets/minesweeper/standard-split-chart.json
   arch_counts:
-    gnn: 172
-    hybrid: 41
-    graph_transformer: 30
+    gnn: 163
+    hybrid: 40
+    graph_transformer: 38
     llm: 0
     walk: 0
-    traditional: 12
+    traditional: 11
   metric_counts:
-  - 177
-  - 98
+  - 179
+  - 95
   milestones: &id001
   - value: 0.9403
     std: 0.0045
@@ -1616,13 +1616,25 @@ variants:
   milestones_by_metric:
     ROC-AUC: *id001
     Accuracy:
-    - value: 0.9604
-      std: 0.0025
-      model: F-CDE
-      arxiv_id: '2404.17099'
-      title: Unleashing the Potential of Fractional Calculus in Graph Neural Networks
-        with FROND
-      date: '2024-04-26'
+    - value: 0.8872
+      std: 0.0052
+      model: GCN
+      arxiv_id: '2407.11596'
+      title: 'HyperAggregation: Aggregating over Graph Edges with Hypernetworks'
+      date: '2024-06-30'
+    - value: 0.9478
+      std: 0.0064
+      model: MSH-GNN
+      arxiv_id: '2505.15015'
+      title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
+      date: '2025-05-21'
+    - value: 0.9792
+      std: 0.0028
+      model: NT*
+      arxiv_id: '2604.08980'
+      title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware
+        Graph Learning'
+      date: '2026-04-10'
     - value: 0.9903
       std: 0.0019
       model: GraphTARIF

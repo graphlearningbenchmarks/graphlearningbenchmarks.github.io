@@ -51,33 +51,151 @@ has_results: true
 paper_type: method
 proposed_models:
 - two augmentation methods based on environment subgraphs
-mrr: 0.0
-adjusted_mrr: 0.0
-mrr_dataset_count: 0
+mrr: 0.1667
+adjusted_mrr: 0.0556
+mrr_dataset_count: 1
 benchmark_categories:
 - OGB
 benchmark_coverage:
 - benchmark: OGB
   benchmark_slug: ogb
-  evaluated: 2
+  evaluated: 1
   total: 16
 task_categories:
 - graph_classification
 experiment_scopes:
 - graph-level
 results:
-- &id002
-  dataset: Code
+- &id001
+  dataset: ogbg-molhiv
+  is_multi_metric: true
   rows:
+  - model: Multi-RF Fusion with Multi-GNN Blending
+    model_key: multi-rf fusion with multi-gnn blending
+    model_plain: Multi-RF Fusion with Multi-GNN Blending
+    metric_values:
+    - 0.8476
+    - null
+    metric_stds:
+    - 0.0002
+    - null
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2603.20724'
+    title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
+    published_venue: ''
+    date: Mar 21, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-21'
+    codebase_url: ''
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 1
+    is_best: true
+    sort_value: 0.8476
+    sort_std: 0.0002
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: HyperFusion
+    model_key: hyperfusion
+    model_plain: HyperFusion
+    metric_values:
+    - 0.8475
+    - null
+    metric_stds:
+    - 0.0003
+    - null
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2603.20724'
+    title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
+    published_venue: ''
+    date: Mar 21, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-21'
+    codebase_url: ''
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 2
+    is_best: true
+    sort_value: 0.8475
+    sort_std: 0.0003
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: PAS+FPs
+    model_key: pas+fps
+    model_plain: PAS+FPs
+    metric_values:
+    - 0.842
+    - null
+    metric_stds:
+    - 0.0015
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2603.20724'
+    title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
+    published_venue: ''
+    date: Mar 21, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-21'
+    codebase_url: ''
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 3
+    is_best: false
+    sort_value: 0.842
+    sort_std: 0.0015
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
   - model: two augmentation methods based on environment subgraphs
     model_key: two augmentation methods based on environment subgraphs
     model_plain: two augmentation methods based on environment subgraphs
-    value: 0.8191
-    std: 0.024
-    paper_value: 0.8191
-    paper_std: 0.024
-    metric: ROC-AUC
-    higher_is_better: true
+    metric_values:
+    - 0.8191
+    - null
+    metric_stds:
+    - 0.024
+    - null
     is_baseline: false
     is_overridden: false
     override_reason: ''
@@ -85,87 +203,18 @@ results:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to ogbg-code (score=78)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard OGB-BACE classification task
-    date: Jun 6, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-06'
-    published_venue: KDD 2022
-    published_conference: KDD 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-06-06'
-    value_gap_source_date_label: KDD 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8191
-    true_std: 0.024
-    value_gap_source_arxiv: '2206.02886'
-    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
     sort_value: 0.8191
     sort_std: 0.024
-    global_rank: 1
-    paper_rank: 1
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    true_value: 0.8191
+    true_std: 0.024
+    paper_value: 0.8191
+    paper_std: 0.024
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: OOD-GNN
-    model_key: ood-gnn
-    model_plain: OOD-GNN
-    value: 0.8096
-    std: 0.0132
-    paper_value: 0.8096
-    paper_std: 0.0132
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: li2021ood
-    variant_inference_reason: 'dataset: fuzzy match to ogbg-code (score=78)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard OGB-BACE classification task
-    date: Jun 6, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-06'
-    published_venue: KDD 2022
-    published_conference: KDD 2022
+    has_value_note: false
+    value_gap: null
+    value_gap_source_arxiv: '2206.02886'
+    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
+    value_note: ''
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -182,57 +231,50 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.8096
-    true_std: 0.0132
-    value_gap_source_arxiv: '2206.02886'
-    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
+    arxiv_id: ''
+    title: ''
+    published_venue: KDD 2022
+    date: Jun 6, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-06'
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+    global_rank: 6
+  - model: OOD-GNN
+    model_key: ood-gnn
+    model_plain: OOD-GNN
+    metric_values:
+    - 0.8096
+    - 0.7799
+    metric_stds:
+    - 0.0132
+    - 0.0078
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     sort_value: 0.8096
     sort_std: 0.0132
-    global_rank: 2
-    paper_rank: 2
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    true_value: 0.8096
+    true_std: 0.0132
+    paper_value: 0.8096
+    paper_std: 0.0132
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: IRM
-    model_key: irm
-    model_plain: IRM
-    value: 0.7947
-    std: 0.0186
-    paper_value: 0.7947
-    paper_std: 0.0186
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: arjovsky2019invariant
-    variant_inference_reason: 'dataset: fuzzy match to ogbg-code (score=78)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard OGB-BACE classification task
-    date: Jun 6, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-06'
-    published_venue: KDD 2022
-    published_conference: KDD 2022
+    has_value_note: false
+    value_gap: null
+    value_gap_source_arxiv: '2206.02886'
+    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
+    value_note: ''
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -249,584 +291,130 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.7947
-    true_std: 0.0186
-    value_gap_source_arxiv: '2206.02886'
-    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
-    value_gap_source_is_current_paper: true
-    value_gap: null
+    arxiv_id: ''
+    title: ''
+    published_venue: KDD 2022
+    date: Jun 6, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-06'
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+    global_rank: 10
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    metric_values:
+    - 0.809
+    - null
+    metric_stds:
+    - 0.016
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 2.8
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2309.10131'
+    title: Deep Prompt Tuning for Graph Transformers
+    published_venue: ''
+    date: Sep 18, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-18'
+    codebase_url: ''
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 12
+    is_best: false
+    sort_value: 0.809
+    sort_std: 0.016
+    has_value_gap: false
     has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
     value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: IRM
+    model_key: irm
+    model_plain: IRM
+    metric_values:
+    - 0.7947
+    - 0.7817
+    metric_stds:
+    - 0.0186
+    - 0.012
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     sort_value: 0.7947
     sort_std: 0.0186
-    global_rank: 3
-    paper_rank: 3
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: U-NetsPool
-    model_key: u-netspool
-    model_plain: U-NetsPool
-    value: 0.7757
-    std: 0.0173
-    paper_value: 0.7757
-    paper_std: 0.0173
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: gao2021graph
-    variant_inference_reason: 'dataset: fuzzy match to ogbg-code (score=78)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard OGB-BACE classification task
-    date: Jun 6, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-06'
-    published_venue: KDD 2022
-    published_conference: KDD 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    true_value: 0.7947
+    true_std: 0.0186
+    paper_value: 0.7947
+    paper_std: 0.0186
+    has_value_gap: true
+    has_value_note: false
+    value_gap: null
+    value_gap_source_arxiv: '2206.02886'
+    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
+    value_note: ''
+    at_pub_value: 0.7446
+    at_pub_std: 0.0274
+    at_pub_source_arxiv: '2201.12872'
+    at_pub_source_title: Discovering Invariant Rationales for Graph Neural Networks
+    at_pub_source_date_iso: '2022-01-30'
+    at_pub_source_date_label: ICLR 2022
     value_gap_source_date_iso: '2022-06-06'
     value_gap_source_date_label: KDD 2022
-    gap_vs_at_pub: null
+    gap_vs_at_pub: 0.05009999999999992
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: false
+    better_than_at_pub: true
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.7757
-    true_std: 0.0173
-    value_gap_source_arxiv: '2206.02886'
-    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7757
-    sort_std: 0.0173
-    global_rank: 4
-    paper_rank: 4
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
+    arxiv_id: ''
+    title: ''
+    published_venue: KDD 2022
+    date: Jun 6, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-06'
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: DIR+RepAug
-    model_key: dir+repaug
-    model_plain: DIR+RepAug
-    value: 0.7677
-    std: 0.0226
-    paper_value: 0.7677
-    paper_std: 0.0226
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to ogbg-code (score=78)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard OGB-BACE classification task
-    date: Jun 6, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-06'
-    published_venue: KDD 2022
-    published_conference: KDD 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-06-06'
-    value_gap_source_date_label: KDD 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7677
-    true_std: 0.0226
-    value_gap_source_arxiv: '2206.02886'
-    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7677
-    sort_std: 0.0226
-    global_rank: 5
-    paper_rank: 5
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GREA-RepAug
-    model_key: grea-repaug
-    model_plain: GREA-RepAug
-    value: 0.7655
-    std: 0.0529
-    paper_value: 0.7655
-    paper_std: 0.0529
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to ogbg-code (score=78)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard OGB-BACE classification task
-    date: Jun 6, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-06'
-    published_venue: KDD 2022
-    published_conference: KDD 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-06-06'
-    value_gap_source_date_label: KDD 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7655
-    true_std: 0.0529
-    value_gap_source_arxiv: '2206.02886'
-    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7655
-    sort_std: 0.0529
-    global_rank: 6
-    paper_rank: 6
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SelfAttnPool
-    model_key: selfattnpool
-    model_plain: SelfAttnPool
-    value: 0.7383
-    std: 0.0541
-    paper_value: 0.7383
-    paper_std: 0.0541
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: lee2019self
-    variant_inference_reason: 'dataset: fuzzy match to ogbg-code (score=78)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard OGB-BACE classification task
-    date: Jun 6, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-06'
-    published_venue: KDD 2022
-    published_conference: KDD 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-06-06'
-    value_gap_source_date_label: KDD 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7383
-    true_std: 0.0541
-    value_gap_source_arxiv: '2206.02886'
-    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7383
-    sort_std: 0.0541
-    global_rank: 7
-    paper_rank: 7
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: DIR
-    model_key: dir
-    model_plain: DIR
-    value: 0.6751
-    std: 0.0323
-    paper_value: 0.6751
-    paper_std: 0.0323
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: wu2022discovering
-    variant_inference_reason: 'dataset: fuzzy match to ogbg-code (score=78)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard OGB-BACE classification task
-    date: Jun 6, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-06'
-    published_venue: KDD 2022
-    published_conference: KDD 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-06-06'
-    value_gap_source_date_label: KDD 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.6751
-    true_std: 0.0323
-    value_gap_source_arxiv: '2206.02886'
-    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6751
-    sort_std: 0.0323
-    global_rank: 8
-    paper_rank: 8
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: StableGNN
-    model_key: stablegnn
-    model_plain: StableGNN
-    value: 0.6607
-    std: 0.05
-    paper_value: 0.6607
-    paper_std: 0.05
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: fan2021generalizing
-    variant_inference_reason: 'dataset: fuzzy match to ogbg-code (score=78)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard OGB-BACE classification task
-    date: Jun 6, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-06'
-    published_venue: KDD 2022
-    published_conference: KDD 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-06-06'
-    value_gap_source_date_label: KDD 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.6607
-    true_std: 0.05
-    value_gap_source_arxiv: '2206.02886'
-    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6607
-    sort_std: 0.05
-    global_rank: 9
-    paper_rank: 9
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  rank_metric: ROC-AUC
-  higher_is_better: true
-  experiment_scope: graph-level
-  dataset_primary_metric: F1
-  paper_metrics:
-  - ROC-AUC
-  metric: ROC-AUC
-  uses_non_primary_metric: true
-  paper_has_primary_metric: false
-- &id001
-  dataset: ogbg-molhiv
-  rows:
-  - model: IRM
-    model_key: irm
-    model_plain: IRM
-    value: 0.7817
-    std: 0.012
-    paper_value: 0.7817
-    paper_std: 0.012
-    metric: AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: arjovsky2019invariant
-    variant_inference_reason: 'dataset: fuzzy match to ogbg-molhiv (score=84)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard OGB benchmark task and split for molecule classification.
-    date: Jun 6, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-06'
-    published_venue: KDD 2022
-    published_conference: KDD 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-06-06'
-    value_gap_source_date_label: KDD 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7817
-    true_std: 0.012
-    value_gap_source_arxiv: '2206.02886'
-    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7817
-    sort_std: 0.012
-    global_rank: 1
-    paper_rank: 1
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: OOD-GNN
-    model_key: ood-gnn
-    model_plain: OOD-GNN
-    value: 0.7799
-    std: 0.0078
-    paper_value: 0.7799
-    paper_std: 0.0078
-    metric: AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: li2021ood
-    variant_inference_reason: 'dataset: fuzzy match to ogbg-molhiv (score=84)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard OGB benchmark task and split for molecule classification.
-    date: Jun 6, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-06'
-    published_venue: KDD 2022
-    published_conference: KDD 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-06-06'
-    value_gap_source_date_label: KDD 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7799
-    true_std: 0.0078
-    value_gap_source_arxiv: '2206.02886'
-    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7799
-    sort_std: 0.0078
-    global_rank: 2
-    paper_rank: 2
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
+    global_rank: 50
   - model: GREA
     model_key: grea
     model_plain: GREA
-    value: 0.7794
-    std: 0.0065
-    paper_value: 0.7794
-    paper_std: 0.0065
-    metric: AUC
-    higher_is_better: true
+    metric_values:
+    - null
+    - 0.7794
+    metric_stds:
+    - null
+    - 0.0065
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -834,87 +422,18 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to ogbg-molhiv (score=84)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard OGB benchmark task and split for molecule classification.
-    date: Jun 6, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-06'
-    published_venue: KDD 2022
-    published_conference: KDD 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-06-06'
-    value_gap_source_date_label: KDD 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7794
-    true_std: 0.0065
-    value_gap_source_arxiv: '2206.02886'
-    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
     sort_value: 0.7794
     sort_std: 0.0065
-    global_rank: 3
-    paper_rank: 3
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    true_value: 0.7794
+    true_std: 0.0065
+    paper_value: 0.7794
+    paper_std: 0.0065
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SelfAttnPool
-    model_key: selfattnpool
-    model_plain: SelfAttnPool
-    value: 0.7733
-    std: 0.0187
-    paper_value: 0.7733
-    paper_std: 0.0187
-    metric: AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: lee2019self
-    variant_inference_reason: 'dataset: fuzzy match to ogbg-molhiv (score=84)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard OGB benchmark task and split for molecule classification.
-    date: Jun 6, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-06'
-    published_venue: KDD 2022
-    published_conference: KDD 2022
+    has_value_note: false
+    value_gap: null
+    value_gap_source_arxiv: '2206.02886'
+    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
+    value_note: ''
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -931,103 +450,70 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.7733
-    true_std: 0.0187
-    value_gap_source_arxiv: '2206.02886'
-    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7733
-    sort_std: 0.0187
-    global_rank: 4
-    paper_rank: 4
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: DIR
-    model_key: dir
-    model_plain: DIR
-    value: 0.7533
-    std: 0.0117
-    paper_value: 0.7533
-    paper_std: 0.0117
-    metric: AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: wu2022discovering
-    variant_inference_reason: 'dataset: fuzzy match to ogbg-molhiv (score=84)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard OGB benchmark task and split for molecule classification.
+    arxiv_id: ''
+    title: ''
+    published_venue: KDD 2022
     date: Jun 6, 2022
     date_display: Jun 2022
     date_iso: '2022-06-06'
-    published_venue: KDD 2022
-    published_conference: KDD 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-06-06'
-    value_gap_source_date_label: KDD 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7533
-    true_std: 0.0117
-    value_gap_source_arxiv: '2206.02886'
-    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7533
-    sort_std: 0.0117
-    global_rank: 5
-    paper_rank: 5
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
+    is_std_outlier: false
+    global_rank: 115
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    metric_values:
+    - 0.778
+    - null
+    metric_stds:
+    - 0.0182
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 510.0
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2201.12787'
+    title: 'GRPE: Relative Positional Encoding for Graph Transformer'
+    published_venue: ''
+    date: Jan 30, 2022
+    date_display: Jan 2022
+    date_iso: '2022-01-30'
+    codebase_url: ''
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 120
+    is_best: false
+    sort_value: 0.778
+    sort_std: 0.0182
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_std_outlier: false
   - model: U-NetsPool
     model_key: u-netspool
     model_plain: U-NetsPool
-    value: 0.7527
-    std: 0.0104
-    paper_value: 0.7527
-    paper_std: 0.0104
-    metric: AUC
-    higher_is_better: true
+    metric_values:
+    - 0.7757
+    - 0.7527
+    metric_stds:
+    - 0.0173
+    - 0.0104
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -1035,20 +521,18 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: gao2021graph
-    variant_inference_reason: 'dataset: fuzzy match to ogbg-molhiv (score=84)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard OGB benchmark task and split for molecule classification.
-    date: Jun 6, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-06'
-    published_venue: KDD 2022
-    published_conference: KDD 2022
+    sort_value: 0.7757
+    sort_std: 0.0173
+    true_value: 0.7757
+    true_std: 0.0173
+    paper_value: 0.7757
+    paper_std: 0.0173
+    has_value_gap: false
+    has_value_note: false
+    value_gap: null
+    value_gap_source_arxiv: '2206.02886'
+    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
+    value_note: ''
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -1065,36 +549,31 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.7527
-    true_std: 0.0104
-    value_gap_source_arxiv: '2206.02886'
-    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7527
-    sort_std: 0.0104
-    global_rank: 6
-    paper_rank: 6
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
+    arxiv_id: ''
+    title: ''
+    published_venue: KDD 2022
+    date: Jun 6, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-06'
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: DIR+RepAug
-    model_key: dir+repaug
-    model_plain: DIR+RepAug
-    value: 0.7494
-    std: 0.0225
-    paper_value: 0.7494
-    paper_std: 0.0225
-    metric: AUC
-    higher_is_better: true
+    global_rank: 128
+  - model: DIR
+    model_key: dir
+    model_plain: DIR
+    metric_values:
+    - 0.6751
+    - 0.7533
+    metric_stds:
+    - 0.0323
+    - 0.0117
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -1102,20 +581,79 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to ogbg-molhiv (score=84)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard OGB benchmark task and split for molecule classification.
+    sort_value: 0.7705
+    sort_std: null
+    true_value: 0.7705
+    true_std: null
+    paper_value: 0.6751
+    paper_std: 0.0323
+    has_value_gap: true
+    has_value_note: false
+    value_gap: 0.09539999999999993
+    value_gap_source_arxiv: '2502.07968'
+    value_gap_source_title: Generative Risk Minimization for Out-of-Distribution Generalization
+      on Graphs
+    value_note: ''
+    at_pub_value: 0.7705
+    at_pub_std: 0.0057
+    at_pub_source_arxiv: '2201.12872'
+    at_pub_source_title: Discovering Invariant Rationales for Graph Neural Networks
+    at_pub_source_date_iso: '2022-01-30'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-02-11'
+    value_gap_source_date_label: TMLR 2025
+    gap_vs_at_pub: 0.09539999999999993
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    arxiv_id: ''
+    title: ''
+    published_venue: KDD 2022
     date: Jun 6, 2022
     date_display: Jun 2022
     date_iso: '2022-06-06'
-    published_venue: KDD 2022
-    published_conference: KDD 2022
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+    global_rank: 165
+  - model: DIR+RepAug
+    model_key: dir+repaug
+    model_plain: DIR+RepAug
+    metric_values:
+    - 0.7677
+    - 0.7494
+    metric_stds:
+    - 0.0226
+    - 0.0225
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    sort_value: 0.7677
+    sort_std: 0.0226
+    true_value: 0.7677
+    true_std: 0.0226
+    paper_value: 0.7677
+    paper_std: 0.0226
+    has_value_gap: false
+    has_value_note: false
+    value_gap: null
+    value_gap_source_arxiv: '2206.02886'
+    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
+    value_note: ''
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -1132,36 +670,31 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.7494
-    true_std: 0.0225
-    value_gap_source_arxiv: '2206.02886'
-    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7494
-    sort_std: 0.0225
-    global_rank: 7
-    paper_rank: 7
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
+    arxiv_id: ''
+    title: ''
+    published_venue: KDD 2022
+    date: Jun 6, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-06'
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
+    global_rank: 181
   - model: GREA-RepAug
     model_key: grea-repaug
     model_plain: GREA-RepAug
-    value: 0.7377
-    std: 0.021
-    paper_value: 0.7377
-    paper_std: 0.021
-    metric: AUC
-    higher_is_better: true
+    metric_values:
+    - 0.7655
+    - 0.7377
+    metric_stds:
+    - 0.0529
+    - 0.021
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -1169,20 +702,18 @@ results:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to ogbg-molhiv (score=84)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard OGB benchmark task and split for molecule classification.
-    date: Jun 6, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-06'
-    published_venue: KDD 2022
-    published_conference: KDD 2022
+    sort_value: 0.7655
+    sort_std: 0.0529
+    true_value: 0.7655
+    true_std: 0.0529
+    paper_value: 0.7655
+    paper_std: 0.0529
+    has_value_gap: false
+    has_value_note: false
+    value_gap: null
+    value_gap_source_arxiv: '2206.02886'
+    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
+    value_note: ''
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -1199,36 +730,31 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.7377
-    true_std: 0.021
-    value_gap_source_arxiv: '2206.02886'
-    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7377
-    sort_std: 0.021
-    global_rank: 8
-    paper_rank: 8
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
+    arxiv_id: ''
+    title: ''
+    published_venue: KDD 2022
+    date: Jun 6, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-06'
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: StableGNN
-    model_key: stablegnn
-    model_plain: StableGNN
-    value: 0.7218
-    std: 0.0099
-    paper_value: 0.7218
-    paper_std: 0.0099
-    metric: AUC
-    higher_is_better: true
+    global_rank: 191
+  - model: SelfAttnPool
+    model_key: selfattnpool
+    model_plain: SelfAttnPool
+    metric_values:
+    - 0.7383
+    - 0.7733
+    metric_stds:
+    - 0.0541
+    - 0.0187
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -1236,20 +762,18 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: fan2021generalizing
-    variant_inference_reason: 'dataset: fuzzy match to ogbg-molhiv (score=84)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard OGB benchmark task and split for molecule classification.
-    date: Jun 6, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-06'
-    published_venue: KDD 2022
-    published_conference: KDD 2022
+    sort_value: 0.7383
+    sort_std: 0.0541
+    true_value: 0.7383
+    true_std: 0.0541
+    paper_value: 0.7383
+    paper_std: 0.0541
+    has_value_gap: false
+    has_value_note: false
+    value_gap: null
+    value_gap_source_arxiv: '2206.02886'
+    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
+    value_note: ''
     at_pub_value: null
     at_pub_std: null
     at_pub_source_arxiv: ''
@@ -1266,41 +790,100 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.7218
-    true_std: 0.0099
-    value_gap_source_arxiv: '2206.02886'
-    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7218
-    sort_std: 0.0099
-    global_rank: 9
-    paper_rank: 9
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
+    arxiv_id: ''
+    title: ''
+    published_venue: KDD 2022
+    date: Jun 6, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-06'
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  rank_metric: AUC
+    global_rank: 279
+  - model: StableGNN
+    model_key: stablegnn
+    model_plain: StableGNN
+    metric_values:
+    - 0.6607
+    - 0.7218
+    metric_stds:
+    - 0.05
+    - 0.0099
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    sort_value: 0.6607
+    sort_std: 0.05
+    true_value: 0.6607
+    true_std: 0.05
+    paper_value: 0.6607
+    paper_std: 0.05
+    has_value_gap: false
+    has_value_note: false
+    value_gap: null
+    value_gap_source_arxiv: '2206.02886'
+    value_gap_source_title: Graph Rationalization with Environment-based Augmentations
+    value_note: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-06-06'
+    value_gap_source_date_label: KDD 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    arxiv_id: ''
+    title: ''
+    published_venue: KDD 2022
+    date: Jun 6, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-06'
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+    global_rank: 317
+  metrics:
+  - ROC-AUC
+  - AUC
+  primary_metric: ROC-AUC
+  rank_metric: ROC-AUC
   higher_is_better: true
   experiment_scope: graph-level
   dataset_primary_metric: ROC-AUC
   paper_metrics:
+  - ROC-AUC
   - AUC
-  metric: AUC
-  uses_non_primary_metric: true
-  paper_has_primary_metric: false
+  metric: ROC-AUC
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
 results_grouped:
 - benchmark: OGB
   datasets:
   - *id001
-  - *id002
 datasets_by_scope:
 - scope: graph-level
   label: Graph-level
@@ -1310,8 +893,6 @@ datasets_by_scope:
     datasets:
     - dataset: ogbg-molhiv
       dataset_slug: ogbg-molhiv
-    - dataset: Code
-      dataset_slug: code
 single_proposed_model: two augmentation methods based on environment subgraphs
 main_figure: /figures/2206.02886/main_figure.jpegoptim.jpg
 ---

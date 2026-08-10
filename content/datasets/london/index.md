@@ -467,6 +467,13 @@ variants:
     arxiv_id: '2503.09008'
     title: City-Networks
     date: '2025-03-12'
+  - value: 0.6147
+    std: 0.0014
+    model: GatedGCN
+    arxiv_id: '2604.03815'
+    title: k-Maximum Inner Product Attention for Graph Transformers and the Expressive
+      Power of GraphGPS
+    date: '2026-04-04'
   milestones_by_metric:
     Accuracy: *id001
 ---
