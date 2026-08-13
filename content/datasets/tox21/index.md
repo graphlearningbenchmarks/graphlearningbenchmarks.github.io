@@ -3,7 +3,33 @@ title: Tox21
 slug: tox21
 benchmark: MoleculeNet
 task_type: graph_classification
-description: Multi-task toxicity prediction (12 tasks) on NCI Tox21 challenge compounds.
+short_description: Multi-task toxicity prediction (12 tasks) on NCI Tox21 challenge
+  compounds.
+description: '**12-task multi-label graph classification** Multi-task toxicity prediction
+  (12 tasks) on NCI Tox21 challenge compounds. SMILES and labels are fixed; molecular
+  graph featurization is implementation-defined. Evaluated by ROC-AUC.'
+detailed_description:
+  task: Multi-task toxicity prediction (12 tasks) on NCI Tox21 challenge compounds.
+    The primary catalog metric is ROC-AUC.
+  data: Multi-task toxicity prediction (12 tasks) on NCI Tox21 challenge compounds.
+  features: MoleculeNet distributes SMILES and targets, not one mandatory graph featurization.
+    A graph implementation normally derives atom and bond fields with RDKit or DeepChem;
+    results depend on featurizer, salt handling, stereochemistry, and invalid-molecule
+    policy.
+  splits_and_evaluation: 'The catalog records these protocols or variants: Scaffold
+    split. Evaluation uses ROC-AUC (higher is better). Exact masks or folds must come
+    from the cited release.'
+  quirks_and_pitfalls: Small samples, imbalance, missing assay labels, duplicate compounds,
+    and scaffold leakage are common. Missing labels are not negatives. Always report
+    split algorithm, featurizer, metric aggregation, and dataset version; random and
+    scaffold results are not comparable.
+sources:
+- title: MoleculeNet benchmark
+  arxiv_id: '1703.00564'
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric Tox21 loader documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.MoleculeNet.html
+  kind: implementation_documentation
 primary_metric: ROC-AUC
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.MoleculeNet.html

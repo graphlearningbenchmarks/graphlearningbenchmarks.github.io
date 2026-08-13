@@ -3,8 +3,31 @@ title: HSG-12M
 slug: hsg-12m
 benchmark: HSG-12M
 task_type: graph_classification
-description: Node classification on the HSG-12M large-scale heterogeneous spatial
-  graph (~12M edges).
+short_description: Classify each Hamiltonian spectral graph into one of 1,401 characteristic-polynomial
+  classes.
+description: '**1,401-class graph classification** Classify each Hamiltonian spectral
+  graph into one of 1,401 characteristic-polynomial classes. Parallel spectral trajectories
+  remain distinct edges. Evaluated by Accuracy.'
+detailed_description:
+  task: Classify each Hamiltonian spectral graph into one of 1,401 characteristic-
+    polynomial classes. This is graph-level classification scored by top-1 accuracy.
+  data: Poly2Graph converts complex energy-band spectra of one-dimensional non-Hermitian
+    crystal Hamiltonians into 11,601,681 static spatial multigraphs. Parallel curved
+    trajectories between the same endpoints are retained as distinct edges.
+  features: The provided featurization includes multi-edge geometry such as curve
+    length, endpoint distance, midpoint, average spectral potential, and density of
+    states. The raw release also supports custom featurization.
+  splits_and_evaluation: The official stratified random split is 80/10/10 and preserves
+    class proportions. Results are averaged over three seeds; the paper reports top-1
+    and top-10 accuracy.
+  quirks_and_pitfalls: Collapsing parallel edges destroys information by design. Coefficients
+    within a class can generate deformed but related spectra, so a random split tests
+    recognition within the generated class distribution rather than transfer to unseen
+    polynomials.
+sources:
+- title: HSG-12M benchmark
+  arxiv_id: '2506.08618'
+  kind: benchmark_or_upstream_source
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: ''

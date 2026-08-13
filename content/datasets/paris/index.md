@@ -3,8 +3,36 @@ title: Paris
 slug: paris
 benchmark: City-Networks
 task_type: node_classification
-description: Paris road-network node classification from the City-Networks benchmark.
-  Labels are derived from long-range accessibility statistics on the city graph.
+short_description: Predict an accessibility class for every intersection on the Paris
+  road graph.
+description: '**Node classification** on the Paris road graph, predicting an accessibility
+  class for every intersection. Street segments are edges and labels depend on long-range
+  network structure. Evaluated by Accuracy.'
+detailed_description:
+  task: Paris road-network node classification from the City-Networks benchmark. Labels
+    are derived from long-range accessibility statistics on the city graph. The primary
+    catalog metric is Accuracy.
+  data: Paris road-network node classification from the City-Networks benchmark. Labels
+    are derived from long-range accessibility statistics on the city graph. The cataloged
+    artifact reports 1 graphs.
+  features: Road-network intersections are nodes and street segments are edges. The
+    release derives node inputs and accessibility-based labels from the embedded city
+    network; adding coordinates, centralities, or external map attributes changes
+    the feature set.
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses Accuracy (higher is better). Exact masks or folds must
+    come from the cited release.'
+  quirks_and_pitfalls: The four cities differ in topology, sampling, and label distribution,
+    so they are separate datasets rather than interchangeable folds. Labels are derived
+    from the same graph, creating a risk of target leakage through engineered centrality
+    or accessibility features.
+sources:
+- title: City-Networks benchmark
+  arxiv_id: '2503.09008'
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric Paris loader documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.CityNetwork.html
+  kind: implementation_documentation
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.CityNetwork.html

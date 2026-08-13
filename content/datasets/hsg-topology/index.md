@@ -3,7 +3,30 @@ title: HSG-topology
 slug: hsg-topology
 benchmark: HSG-12M
 task_type: graph_classification
-description: Topology-based classification sub-task of the HSG-12M spatial graph benchmark.
+short_description: Classify each topology-deduplicated Hamiltonian spectral graph
+  into one of 1,401 characteristic-polynomial classes.
+description: '**1,401-class graph classification** Classify each topology-deduplicated
+  Hamiltonian spectral graph into one of 1,401 characteristic-polynomial classes.
+  The variant is designed around unique connectivity patterns. Evaluated by Accuracy.'
+detailed_description:
+  task: Classify each topology-deduplicated Hamiltonian spectral graph into one of
+    1,401 characteristic-polynomial classes.
+  data: HSG-topology retains one representative of every graph-isomorphism class within
+    each polynomial class, leaving 1,812,325 spatial multigraphs with a largest-to-
+    smallest class-size ratio of 660.2.
+  features: The variant is designed around unique connectivity patterns. Spatial multi-edge
+    information remains available in the HSG representation, but topology-only models
+    can deliberately omit it for the combinatorial experiment.
+  splits_and_evaluation: The official stratified random split is 80/10/10 and evaluation
+    reports accuracy averaged over three seeds.
+  quirks_and_pitfalls: This is the only deliberately imbalanced HSG static variant.
+    Plain accuracy is dominated by large classes; balanced metrics are useful diagnostics
+    but are not the published headline. Isomorphism filtering must be performed within
+    each class.
+sources:
+- title: HSG-12M benchmark
+  arxiv_id: '2506.08618'
+  kind: benchmark_or_upstream_source
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: ''

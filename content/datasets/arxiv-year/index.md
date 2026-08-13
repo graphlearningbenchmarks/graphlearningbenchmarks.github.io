@@ -3,8 +3,33 @@ title: arxiv-year
 slug: arxiv-year
 benchmark: LINKX Benchmarks
 task_type: node_classification
-description: OGB-arXiv node classification by publication year (5 classes, heterophilic
+short_description: OGB-arXiv node classification by publication year (5 classes, heterophilic
   variant).
+description: '**5-class node classification** OGB-arXiv node classification by publication
+  year (5 classes, heterophilic variant). Uses the released sparse node features and
+  a low-homophily graph. Evaluated by Accuracy.'
+detailed_description:
+  task: OGB-arXiv node classification by publication year (5 classes, heterophilic
+    variant). The primary catalog metric is Accuracy.
+  data: The LINKX artifact relabels ogbn-arxiv papers into five publication-year bins
+    on the same citation graph.
+  features: Each release supplies a sparse node-feature matrix, graph edges, and node
+    labels. Feature meaning varies by source; structure and features are deliberately
+    evaluated without assuming neighboring labels agree.
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses Accuracy (higher is better). Exact masks or folds must
+    come from the cited release.'
+  quirks_and_pitfalls: These are transductive single-graph tasks with fixed random
+    splits. Label homophily is low and class balance varies; feature-only and structure-only
+    baselines are essential, and similarly named OGB/source datasets may use different
+    labels or splits.
+sources:
+- title: LINKX Benchmarks benchmark
+  arxiv_id: '2110.14446'
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric arxiv-year loader documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.LINKXDataset.html
+  kind: implementation_documentation
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.LINKXDataset.html
@@ -12,7 +37,7 @@ stats:
   num_graphs: 1
   avg_nodes: 169343.0
   avg_edges: 1166243.0
-  num_classes: 40
+  num_classes: 5
 result_count: 71
 best_model:
   model: LargeScaleNet
@@ -90,7 +115,7 @@ variants:
     num_graphs: 1
     avg_nodes: 169343.0
     avg_edges: 1166243.0
-    num_classes: 40
+    num_classes: 5
   metrics:
   - Accuracy
   metric_display_names:

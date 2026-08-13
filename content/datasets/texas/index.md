@@ -3,15 +3,44 @@ title: Texas
 slug: texas
 benchmark: Heterophilic Graphs
 task_type: node_classification
-description: WebKB node classification on Texas university webpages (5 classes).
+short_description: Classify each webpage as student, project, course, staff, or faculty
+  using the page text and hyperlink graph.
+description: '**5-class node classification** Classify each webpage as student, project,
+  course, staff, or faculty using the page text and hyperlink graph. Uses the Geom-GCN/PyG
+  node features and graph. Evaluated by Accuracy.'
+detailed_description:
+  task: Classify each webpage as student, project, course, staff, or faculty using
+    the page text and hyperlink graph. This is transductive node classification on
+    one university-specific subgraph of WebKB.
+  data: Nodes are webpages collected from the University of Texas computer-science
+    department and edges are hyperlinks between pages. The Geom-GCN/PyG processing
+    used in graph-learning papers contains 183 nodes; it is only one processed subset
+    of the broader seven-class, multi-university WebKB collection.
+  features: Each node has a 1,703-dimensional bag-of-words representation of its webpage
+    content. The graph structure records hyperlinks rather than text similarity.
+  splits_and_evaluation: The standard graph-learning protocol uses the 10 fixed Geom-GCN
+    train/validation/test splits and reports mean accuracy across them. Results from
+    newly generated splits or from the larger WebKB/WebKB4 collections are not directly
+    comparable.
+  quirks_and_pitfalls: 'Texas is extremely small and severely class-imbalanced: one
+    of its five classes contains only one node. Accuracy can therefore conceal poor
+    minority-class behavior, and results have high variance across splits. The names
+    WebKB, WebKB4, 4 Universities, and Texas refer to related but different selections
+    and label sets, so the exact processed artifact must be stated.'
+sources:
+- title: CMU Text Learning WebKB dataset description
+  url: https://www.cs.cmu.edu/~TextLearning/datasets.html
+  kind: upstream_data_source
+- title: PyTorch Geometric WebKB documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.WebKB.html
+  kind: loader_documentation
+- title: A critical look at the evaluation of GNNs under heterophily
+  arxiv_id: '2302.11640'
+  kind: dataset_audit
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.WebKB.html
-stats:
-  num_graphs: null
-  avg_nodes: null
-  avg_edges: null
-  num_classes: 5
+stats: null
 result_count: 931
 best_model:
   model: P^2GNN
@@ -703,7 +732,7 @@ variants:
     num_graphs: null
     avg_nodes: null
     avg_edges: null
-    num_classes: 5
+    num_classes: null
   metrics:
   - Accuracy
   metric_display_names:

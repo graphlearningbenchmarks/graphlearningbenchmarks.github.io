@@ -3,7 +3,41 @@ title: PCQM4Mv2
 slug: pcqm4mv2
 benchmark: OGB
 task_type: graph_regression
-description: Quantum chemistry graph regression — predict HOMO-LUMO gap of 3.8M molecules.
+short_description: Predict each molecule's HOMO-LUMO energy gap, a continuous quantum-chemical
+  property calculated with density functional theory.
+description: '**Graph regression** Predict each molecule''s HOMO-LUMO energy gap,
+  a continuous quantum-chemical property calculated with density functional theory.
+  The default 2D graph conversion uses OGB''s nine categorical atom and three categorical
+  bond fields from SMILES. Evaluated by MAE.'
+detailed_description:
+  task: Predict each molecule's HOMO-LUMO energy gap, a continuous quantum-chemical
+    property calculated with density functional theory. Mean absolute error in electron
+    volts is the official metric.
+  data: PCQM4Mv2 contains 3,746,619 PubChemQC molecules. Training molecules also have
+    DFT-optimized 3D structures, while SMILES describe the final optimized connectivity;
+    test labels are held by OGB-LSC.
+  features: The default 2D graph conversion uses OGB's nine categorical atom and three
+    categorical bond fields from SMILES. Coordinates are optional additional inputs
+    for training molecules and are unavailable in the same form for blind test molecules.
+  splits_and_evaluation: Molecules are ordered and split by PubChem compound identifier
+    into 90% train, 2% validation, 4% test-dev, and 4% test-challenge. Despite an
+    original intention to use scaffolds, the released split is CID-based because of
+    a preprocessing bug.
+  quirks_and_pitfalls: PCQM4Mv2 corrected an approximately 10% mismatch in PCQM4M
+    between initial SMILES and gaps computed after geometry optimization, so the versions
+    are not interchangeable. The CID split is not a scaffold split. Test-dev and test-challenge
+    are distinct blind sets, and using supplied training coordinates creates an input-availability
+    asymmetry.
+sources:
+- title: OGB-LSC
+  arxiv_id: '2103.09430'
+  kind: benchmark_definition
+- title: Official PCQM4Mv2 documentation
+  url: https://ogb.stanford.edu/docs/lsc/pcqm4mv2/
+  kind: official_documentation
+- title: PubChemQC project
+  url: https://doi.org/10.1021/acs.jcim.7b00083
+  kind: upstream_data_source
 primary_metric: MAE
 higher_is_better: false
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.PCQM4Mv2.html
@@ -106,7 +140,7 @@ variants:
   metrics:
   - MAE
   metric_display_names:
-  - MAE
+  - HOMO-LUMO gap MAE (eV)
   show_all_metrics_desktop: false
   chart_default_log_scale: false
   chart_hidden_models: []

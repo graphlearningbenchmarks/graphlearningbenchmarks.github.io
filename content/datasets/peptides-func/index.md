@@ -3,14 +3,49 @@ title: Peptides-func
 slug: peptides-func
 benchmark: LRGB
 task_type: graph_classification
-description: Multi-label graph classification on peptide molecules (10 classes).
+short_description: Predict 10 non-exclusive peptide-function labels from OGB-featured
+  molecular graphs without hydrogens.
+description: '**10-dimensional multi-label classification** on molecular graphs without
+  hydrogens. Predict a binary label per peptide function (antibacterial, antiviral,
+  cell-cell communication, antifungal, anticancer, etc.) from OGB features. Positive
+  rates span 1.9%–62.7%; evaluated by AP.'
+detailed_description:
+  task: Predict all applicable therapeutic-function labels for each peptide. A peptide
+    may have several of the 10 labels, so this is graph-level multi-label classification
+    evaluated with the unweighted mean average precision across labels.
+  data: The benchmark contains 15,535 peptides selected from SATPdb, which itself
+    aggregates and manually curates peptide records from 22 source databases. Each
+    peptide is represented as a molecular graph whose nodes are non-hydrogen atoms
+    and whose edges are covalent bonds.
+  features: 'The graphs reuse OGB molecular featurization computed from SMILES: each
+    atom has nine categorical feature fields and each bond has three. The benchmark
+    deliberately omits peptide 2D folding and 3D conformation; its graph describes
+    covalent connectivity rather than the peptide''s folded spatial structure.'
+  splits_and_evaluation: The fixed split is 70% training, 15% validation, and 15%
+    test. It is stratified by the complete 10-label combination, with combinations
+    occurring fewer than 10 times pooled into one meta-class. The labels are strongly
+    imbalanced, which is why average precision rather than accuracy is the primary
+    metric.
+  quirks_and_pitfalls: The 10 labels are correlated and non-exclusive; treating the
+    task as single-label classification is incorrect. SATPdb combines records from
+    many upstream databases, and many peptides have multiple functions. Randomly resplitting
+    the data or adding predicted structural information changes the published LRGB
+    protocol. The benchmark's long atom-level chains should not be mistaken for experimentally
+    determined peptide conformations.
+sources:
+- title: Long Range Graph Benchmark
+  arxiv_id: '2206.08164'
+  kind: benchmark_definition
+- title: SATPdb, a database of structurally annotated therapeutic peptides
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4702810/
+  kind: upstream_data_source
 primary_metric: AP
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.LRGBDataset.html
 stats:
-  num_graphs: null
-  avg_nodes: null
-  avg_edges: null
+  num_graphs: 15535
+  avg_nodes: 150.94
+  avg_edges: 307.3
   num_classes: 10
 result_count: 252
 best_model:
@@ -203,9 +238,9 @@ variants:
   default_metric: AP
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
+    num_graphs: 15535
+    avg_nodes: 150.94
+    avg_edges: 307.3
     num_classes: 10
   metrics:
   - AP

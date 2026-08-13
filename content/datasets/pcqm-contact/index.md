@@ -3,11 +3,47 @@ title: PCQM-Contact
 slug: pcqm-contact
 benchmark: LRGB
 task_type: link_prediction
-description: Link prediction of spatial atom contacts in quantum chemistry molecules.
+short_description: Rank atom pairs that are more than five covalent-bond hops apart
+  but less than 3.5 angstrom apart in the molecule's computed 3D geometry.
+description: '**Long-range link prediction** Rank atom pairs that are more than five
+  covalent-bond hops apart but less than 3.5 angstrom apart in the molecule''s computed
+  3D geometry. Only atom pairs separated by more than five covalent hops are candidates.
+  Evaluated by MRR.'
+detailed_description:
+  task: Rank atom pairs that are more than five covalent-bond hops apart but less
+    than 3.5 angstrom apart in the molecule's computed 3D geometry. The benchmark
+    frames this contact-map problem as link prediction on previously unseen molecules.
+  data: The 529,434 molecules come from PCQM4Mv2 training molecules with available
+    3D structures and at least one qualifying contact. Unlike most molecular graph
+    benchmarks, hydrogen atoms are explicit nodes because hydrogen bonding is relevant
+    to the contact target.
+  features: Inputs are 2D covalent graphs using the OGB nine-field atom encoder and
+    three-field bond encoder. The 3D coordinates determine labels but are not input
+    features, and the predicted contact itself has no edge type.
+  splits_and_evaluation: 'Molecules are randomly divided 90%/5%/5% into 476,490 training,
+    26,472 validation, and 26,472 test graphs. Evaluation uses filtered MRR and Hits@1/3:
+    when ranking a true contact, other known true contacts for the query atom are
+    masked rather than counted as negatives.'
+  quirks_and_pitfalls: Training supplies positive contacts without authoritative hard-negative
+    labels; an unobserved pair is not necessarily a chemically meaningful negative.
+    The random molecule split does not enforce scaffold separation. Results depend
+    on filtered ranking and explicit hydrogens, and therefore are not comparable to
+    generic binary link prediction or PCQM4Mv2 HOMO-LUMO regression.
+sources:
+- title: Long Range Graph Benchmark
+  arxiv_id: '2206.08164'
+  kind: benchmark_definition
+- title: OGB-LSC, A Large-Scale Challenge for Machine Learning on Graphs
+  arxiv_id: '2103.09430'
+  kind: upstream_data_source
 primary_metric: MRR
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.LRGBDataset.html
-stats: null
+stats:
+  num_graphs: 529434
+  avg_nodes: 30.14
+  avg_edges: 61.09
+  num_classes: 1
 result_count: 110
 best_model:
   model: FloydNet
@@ -96,10 +132,10 @@ variants:
   default_metric: MRR
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
-    num_classes: null
+    num_graphs: 529434
+    avg_nodes: 30.14
+    avg_edges: 61.09
+    num_classes: 1
   metrics:
   - MRR
   metric_display_names:

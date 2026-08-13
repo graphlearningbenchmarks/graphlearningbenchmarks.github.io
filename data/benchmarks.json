@@ -268,7 +268,7 @@
     "no_single_introduction_paper": false,
     "is_legacy": false,
     "paper_count": 109,
-    "recent_results_per_dataset": 32.1,
+    "recent_results_per_dataset": 31.3,
     "total_result_count": 2661,
     "datasets": [
       {
@@ -291,7 +291,7 @@
         "task_type": "graph_classification",
         "paper_count": 64,
         "result_count": 416,
-        "recent_result_count": 71,
+        "recent_result_count": 64,
         "variants": [
           {
             "name": "Scaffold split",
@@ -596,7 +596,7 @@
     "no_single_introduction_paper": false,
     "is_legacy": false,
     "paper_count": 72,
-    "recent_results_per_dataset": 96.0,
+    "recent_results_per_dataset": 90.8,
     "total_result_count": 1383,
     "datasets": [
       {
@@ -605,7 +605,7 @@
         "task_type": "node_classification",
         "paper_count": 41,
         "result_count": 317,
-        "recent_result_count": 125,
+        "recent_result_count": 112,
         "variants": [
           {
             "name": "Standard split",
@@ -619,7 +619,7 @@
         "task_type": "node_classification",
         "paper_count": 36,
         "result_count": 279,
-        "recent_result_count": 77,
+        "recent_result_count": 64,
         "variants": [
           {
             "name": "Standard split",
@@ -1246,84 +1246,16 @@
         "arxiv_id": "2512.04475",
         "title": "GraphBench",
         "role": "Benchmark paper",
-        "url": "/papers/2512.04475/",
-        "is_local": true
+        "url": "https://arxiv.org/abs/2512.04475",
+        "is_local": false
       }
     ],
     "no_single_introduction_paper": false,
     "is_legacy": false,
-    "paper_count": 8,
-    "recent_results_per_dataset": 3.6,
-    "total_result_count": 84,
+    "paper_count": 3,
+    "recent_results_per_dataset": 2.6,
+    "total_result_count": 28,
     "datasets": [
-      {
-        "name": "BA graph",
-        "slug": "ba-graph",
-        "task_type": "graph_classification",
-        "paper_count": 4,
-        "result_count": 15,
-        "recent_result_count": 0,
-        "variants": [
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
-      {
-        "name": "ER graph",
-        "slug": "er-graph",
-        "task_type": "graph_classification",
-        "paper_count": 4,
-        "result_count": 21,
-        "recent_result_count": 0,
-        "variants": [
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
-      {
-        "name": "RB graph",
-        "slug": "rb-graph",
-        "task_type": "graph_classification",
-        "paper_count": 3,
-        "result_count": 19,
-        "recent_result_count": 0,
-        "variants": [
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
-      {
-        "name": "SAT Solving",
-        "slug": "sat-solving",
-        "task_type": "node_classification",
-        "paper_count": 1,
-        "result_count": 6,
-        "recent_result_count": 6,
-        "variants": [
-          {
-            "name": "Large",
-            "slug": "large"
-          },
-          {
-            "name": "Medium",
-            "slug": "medium"
-          },
-          {
-            "name": "Small",
-            "slug": "small"
-          },
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
       {
         "name": "Algorithmic Reasoning",
         "slug": "algorithmic-reasoning",
@@ -1339,25 +1271,13 @@
         ]
       },
       {
-        "name": "MST",
-        "slug": "mst",
-        "task_type": "graph_classification",
+        "name": "BA graph",
+        "slug": "ba-graph",
+        "task_type": "graph_regression",
         "paper_count": 1,
         "result_count": 5,
-        "recent_result_count": 5,
+        "recent_result_count": 0,
         "variants": [
-          {
-            "name": "Easy",
-            "slug": "easy"
-          },
-          {
-            "name": "Hard",
-            "slug": "hard"
-          },
-          {
-            "name": "Medium",
-            "slug": "medium"
-          },
           {
             "name": "Standard split",
             "slug": "standard-split"
@@ -1365,25 +1285,27 @@
         ]
       },
       {
-        "name": "Bridges",
-        "slug": "bridges",
-        "task_type": "graph_classification",
+        "name": "ER graph",
+        "slug": "er-graph",
+        "task_type": "graph_regression",
         "paper_count": 1,
         "result_count": 5,
-        "recent_result_count": 5,
+        "recent_result_count": 0,
         "variants": [
           {
-            "name": "Easy",
-            "slug": "easy"
-          },
-          {
-            "name": "Hard",
-            "slug": "hard"
-          },
-          {
-            "name": "Medium",
-            "slug": "medium"
-          },
+            "name": "Standard split",
+            "slug": "standard-split"
+          }
+        ]
+      },
+      {
+        "name": "RB graph",
+        "slug": "rb-graph",
+        "task_type": "graph_regression",
+        "paper_count": 1,
+        "result_count": 5,
+        "recent_result_count": 0,
+        "variants": [
           {
             "name": "Standard split",
             "slug": "standard-split"
@@ -1435,16 +1357,16 @@
     ],
     "no_single_introduction_paper": false,
     "is_legacy": false,
-    "paper_count": 4,
+    "paper_count": 2,
     "recent_results_per_dataset": 0.0,
-    "total_result_count": 59,
+    "total_result_count": 47,
     "datasets": [
       {
-        "name": "Eccentricity",
-        "slug": "eccentricity",
-        "task_type": "graph_regression",
-        "paper_count": 4,
-        "result_count": 31,
+        "name": "SSSP",
+        "slug": "sssp",
+        "task_type": "node_regression",
+        "paper_count": 2,
+        "result_count": 28,
         "recent_result_count": 0,
         "variants": [
           {
@@ -1454,11 +1376,11 @@
         ]
       },
       {
-        "name": "SSSP",
-        "slug": "sssp",
-        "task_type": "graph_regression",
-        "paper_count": 3,
-        "result_count": 28,
+        "name": "Eccentricity",
+        "slug": "eccentricity",
+        "task_type": "node_regression",
+        "paper_count": 2,
+        "result_count": 19,
         "recent_result_count": 0,
         "variants": [
           {
@@ -1486,58 +1408,16 @@
     ],
     "no_single_introduction_paper": false,
     "is_legacy": false,
-    "paper_count": 3,
+    "paper_count": 2,
     "recent_results_per_dataset": 0.0,
-    "total_result_count": 54,
+    "total_result_count": 17,
     "datasets": [
-      {
-        "name": "Ribonanza",
-        "slug": "ribonanza",
-        "task_type": "graph_regression",
-        "paper_count": 2,
-        "result_count": 17,
-        "recent_result_count": 0,
-        "variants": [
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
       {
         "name": "Tc-Ribo",
         "slug": "tc-ribo",
         "task_type": "graph_regression",
         "paper_count": 2,
         "result_count": 17,
-        "recent_result_count": 0,
-        "variants": [
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
-      {
-        "name": "TorsionAngle",
-        "slug": "torsionangle",
-        "task_type": "graph_regression",
-        "paper_count": 2,
-        "result_count": 12,
-        "recent_result_count": 0,
-        "variants": [
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
-      {
-        "name": "COVID",
-        "slug": "covid",
-        "task_type": "graph_regression",
-        "paper_count": 1,
-        "result_count": 8,
         "recent_result_count": 0,
         "variants": [
           {
@@ -1566,8 +1446,8 @@
     "no_single_introduction_paper": false,
     "is_legacy": false,
     "paper_count": 2,
-    "recent_results_per_dataset": 11.7,
-    "total_result_count": 35,
+    "recent_results_per_dataset": 13.0,
+    "total_result_count": 13,
     "datasets": [
       {
         "name": "ECHO-Synth",
@@ -1576,34 +1456,6 @@
         "paper_count": 2,
         "result_count": 13,
         "recent_result_count": 13,
-        "variants": [
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
-      {
-        "name": "ECHO-Charge",
-        "slug": "echo-charge",
-        "task_type": "graph_regression",
-        "paper_count": 1,
-        "result_count": 11,
-        "recent_result_count": 11,
-        "variants": [
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
-      {
-        "name": "ECHO-Energy",
-        "slug": "echo-energy",
-        "task_type": "graph_regression",
-        "paper_count": 1,
-        "result_count": 11,
-        "recent_result_count": 11,
         "variants": [
           {
             "name": "Standard split",
@@ -2076,7 +1928,7 @@
     "no_single_introduction_paper": false,
     "is_legacy": true,
     "paper_count": 284,
-    "recent_results_per_dataset": 24.6,
+    "recent_results_per_dataset": 24.4,
     "total_result_count": 4199,
     "datasets": [
       {
@@ -2085,7 +1937,7 @@
         "task_type": "graph_classification",
         "paper_count": 204,
         "result_count": 1019,
-        "recent_result_count": 60,
+        "recent_result_count": 57,
         "variants": [
           {
             "name": "10-fold CV",
@@ -2260,7 +2112,7 @@
     "no_single_introduction_paper": false,
     "is_legacy": true,
     "paper_count": 222,
-    "recent_results_per_dataset": 113.3,
+    "recent_results_per_dataset": 110.0,
     "total_result_count": 3801,
     "datasets": [
       {
@@ -2269,7 +2121,7 @@
         "task_type": "node_classification",
         "paper_count": 158,
         "result_count": 931,
-        "recent_result_count": 173,
+        "recent_result_count": 164,
         "variants": [
           {
             "name": "Standard split",
@@ -2283,7 +2135,7 @@
         "task_type": "node_classification",
         "paper_count": 137,
         "result_count": 844,
-        "recent_result_count": 134,
+        "recent_result_count": 123,
         "variants": [
           {
             "name": "Standard split",

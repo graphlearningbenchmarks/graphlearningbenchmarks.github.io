@@ -3,8 +3,34 @@ title: Actor
 slug: actor
 benchmark: Heterophilic Graphs
 task_type: node_classification
-description: Actor co-occurrence node classification (5 classes) from the Geom-GCN
-  paper. Also called Film in papers using the same graph.
+short_description: Actor co-occurrence node classification (5 classes) from the Geom-GCN
+  paper.
+description: '**5-class node classification** Actor co-occurrence node classification
+  (5 classes) from the Geom-GCN paper. Uses the Geom-GCN/PyG node features and graph.
+  Evaluated by Accuracy.'
+detailed_description:
+  task: Actor co-occurrence node classification (5 classes) from the Geom-GCN paper.
+    Also called Film in papers using the same graph. The primary catalog metric is
+    Accuracy.
+  data: Actor co-occurrence node classification (5 classes) from the Geom-GCN paper.
+    Also called Film in papers using the same graph.
+  features: 'Features and edges follow the Geom-GCN/PyG artifact: WebKB uses webpage
+    bag-of-words and hyperlinks, Actor uses film-page keywords and co-occurrence links,
+    and WikipediaNetwork uses page features and hyperlinks.'
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses Accuracy (higher is better). Exact masks or folds must
+    come from the cited release.'
+  quirks_and_pitfalls: These small or repurposed graphs have contested preprocessing
+    and split conventions. Results across Geom-GCN, PyG, and corrected heterophily
+    artifacts are not automatically comparable; class imbalance and high variance
+    require multiple splits.
+sources:
+- title: Heterophilic Graphs benchmark
+  arxiv_id: '2110.14446'
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric Actor loader documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Actor.html
+  kind: implementation_documentation
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Actor.html

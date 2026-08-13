@@ -67,7 +67,7 @@ benchmark_coverage:
 - benchmark: ECHO Benchmark
   benchmark_slug: echo-benchmark
   evaluated: 1
-  total: 3
+  total: 1
 - benchmark: LRIM Graph Benchmark
   benchmark_slug: lrim-graph-benchmark
   evaluated: 1

@@ -3,7 +3,32 @@ title: ESOL
 slug: esol
 benchmark: MoleculeNet
 task_type: graph_regression
-description: Aqueous solubility regression (log mol/L) on 1,128 molecules.
+short_description: Aqueous solubility regression (log mol/L) on 1,128 molecules.
+description: '**Graph regression** Aqueous solubility regression (log mol/L) on 1,128
+  molecules. SMILES and labels are fixed; molecular graph featurization is implementation-defined.
+  Random and scaffold splits are not comparable. Evaluated by RMSE.'
+detailed_description:
+  task: Aqueous solubility regression (log mol/L) on 1,128 molecules. The primary
+    catalog metric is RMSE.
+  data: Aqueous solubility regression (log mol/L) on 1,128 molecules.
+  features: MoleculeNet distributes SMILES and targets, not one mandatory graph featurization.
+    A graph implementation normally derives atom and bond fields with RDKit or DeepChem;
+    results depend on featurizer, salt handling, stereochemistry, and invalid-molecule
+    policy.
+  splits_and_evaluation: 'The catalog records these protocols or variants: Scaffold
+    split. Evaluation uses RMSE (lower is better). Exact masks or folds must come
+    from the cited release.'
+  quirks_and_pitfalls: Small samples, imbalance, missing assay labels, duplicate compounds,
+    and scaffold leakage are common. Missing labels are not negatives. Always report
+    split algorithm, featurizer, metric aggregation, and dataset version; random and
+    scaffold results are not comparable.
+sources:
+- title: MoleculeNet benchmark
+  arxiv_id: '1703.00564'
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric ESOL loader documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.MoleculeNet.html
+  kind: implementation_documentation
 primary_metric: RMSE
 higher_is_better: false
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.MoleculeNet.html

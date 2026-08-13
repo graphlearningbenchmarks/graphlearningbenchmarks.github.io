@@ -23,8 +23,6 @@ Detailed table: 105 rows (loaded below).
 ightarrow$D | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | A-Com | 2211.10929 |  |  |  | AP, AUC, F1 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | A-Comp | 2304.10668 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | A-computer | 2604.08980 | Homophilic graph used for node classification. | 11 | node_classification | Accuracy |  | graphs=1, avg nodes=13752.0, avg edges=245861.0, classes=10 | dataset is not in the catalog |
-| pending | unknown_dataset | A-Computers | 2210.05920 | Node classification dataset | 15 | node_classification | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | A-Photo | 2103.02885 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | A-photo | 2110.08727 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | A-Photo | 2208.06743 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
@@ -39,7 +37,6 @@ ightarrow$D | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | A-Photo | 2312.14439 |  |  |  | AP |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | A-photo | 2412.11180 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | A-photo | 2604.08980 | Homophilic graph used for node classification. | 11 | node_classification | Accuracy |  | graphs=1, avg nodes=7650.0, avg edges=119081.0, classes=8 | dataset is not in the catalog |
-| pending | unknown_dataset | A-ratings | 2604.08980 | Heterophilic graph used for node classification. | 12 | node_classification | Accuracy |  | graphs=1, avg nodes=24492.0, avg edges=93050.0, classes=5 | dataset is not in the catalog |
 | pending | unknown_dataset | A.Photo | 2002.10306 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | A.Photo | 2505.20840 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | A.R. | 2406.01899 |  |  |  | Average Rank |  |  | dataset is not in the catalog |
@@ -61,15 +58,12 @@ ightarrow$D | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | Acetylsalicylic acid (N=1k) | 1809.01072 |  |  |  | MAE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Acetylsalicylic acid (N=50k) | 1809.01072 |  |  |  | MAE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ACL Anthology Network | 2408.05822 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_variant | ACM | 2010.00238 | paper citation graph dataset | 16 | node_classification | Accuracy | semi-supervised | avg nodes=3025.0, avg edges=13128.0, classes=3 | variant hint is not tracked: semi-supervised |
 | pending | unknown_dataset | ACT | 2311.11114 |  |  |  | AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ACT | 2511.02354 |  |  |  | AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ACT | 2603.01626 |  |  |  | AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ACTIVSg200 | 2110.15529 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ACTIVSg2000 | 2110.15529 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ACTIVSg500 | 2110.15529 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_variant | Actor | 2205.09389 | Heterophily graph used for node classification. | 10 | node_classification | Accuracy | medium splitting, sparse and dense splittings |  | variant hint is not tracked: medium splitting, sparse and dense splittings |
-| pending | unknown_variant | Actor | 2308.10077 | Mixed graph (heterophilic). | 13 | node_classification | Accuracy | Mixed |  | variant hint is not tracked: Mixed |
 | pending | unknown_dataset | ActsTrack | 2406.07955 |  |  |  | AUC, ROC AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ActsTrack | 2407.00849 |  |  |  | Fidelity AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ActsTrack | 2409.09111 |  |  |  | ROC-AUC |  |  | dataset is not in the catalog |
@@ -238,10 +232,8 @@ ightarrow$D | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | Amazon (Fully-Supervised) | 2306.12251 |  |  |  | AUPRC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Amazon (Music $\rightarrow$ CD) | 2212.08174 |  |  |  | HR@10 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Amazon (Semi-Supervised) | 2306.12251 |  |  |  | AUPRC |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | Amazon Computers | 2210.09789 | Classical graph benchmark for node classification | 6 | node_classification | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Amazon Electronics | 2305.18758 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Amazon movies | 2406.12072 |  |  |  | F1 |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | Amazon Photo | 2210.09789 | Classical graph benchmark for node classification | 6 | node_classification | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Amazon-3M | 2003.13606 |  |  |  | F1 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Amazon-670K | 2003.13606 |  |  |  | F1 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Amazon-all | 2410.08524 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
@@ -253,8 +245,6 @@ ightarrow$D | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | Amazon-CDs | 2312.16563 |  |  |  | Recall@20 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Amazon-CDs | 2503.16927 |  |  |  | ndcg@20 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Amazon-Children | 2501.15755 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | Amazon-Comp | 2604.19028 | Homophily graph benchmark | 8 | node_classification | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | Amazon-Computer | 2206.04355 | Co-purchase graph dataset used for transductive node classification. |  | node_classification | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Amazon-elec | 2412.18731 |  |  |  | Recall |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Amazon-electricity | 2106.10879 |  |  |  | Prec@10 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Amazon-Electronics | 2006.12739 |  |  |  | ACC |  |  | dataset is not in the catalog |
@@ -269,12 +259,9 @@ ightarrow$D | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | Amazon-Luxury | 2307.02813 |  |  |  | AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Amazon-Movies | 2510.25126 |  |  |  | Hits@5, MRR |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Amazon-Physics | 2506.19343 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | Amazon. | 2505.14033 | Medium-to-large graph used for node classification. | 18 | node_classification | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Amazon. (heterophilic) | 2404.15354 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | amazon_cs | 2205.09335 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | AmazonComputers | 2510.21267 | Homophilic dataset | 13 | node_classification | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | AmazonFashion | 2411.01410 |  |  |  | Cumulative regret |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | AmazonPhoto | 2510.21267 | Homophilic dataset | 13 | node_classification | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | AmazonProducts | 2405.15218 |  |  |  | F1, Pearson correlation coefficient |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | American | 2501.14600 |  |  |  | Macro-F1 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | AMES | 2404.11568 | TDC benchmark collection task. | 5 | graph_classification | AUROC |  |  | dataset is not in the catalog |
@@ -333,8 +320,6 @@ ightarrow$D | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | AmzComp | 2402.06737 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | AmzComp | 2511.06443 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | AmzComp | 2512.11561 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | AmzComputers | 2505.15015 | Amazon Computers e-commerce graph used for node classification. | 7 | node_classification | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | AmzPhoto | 2505.15015 | Amazon Photo e-commerce graph used for node classification. | 7 | node_classification | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Anaheim | 2505.17939 |  |  |  | RMSE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | AnchorQuery-10K | 2210.11879 |  |  |  | NMI |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | AnchorQuery-25K | 2210.11879 |  |  |  | NMI |  |  | dataset is not in the catalog |
@@ -360,7 +345,6 @@ ightarrow$D | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | APD | 2501.17901 |  |  |  | F1 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Apo ESMFold proteins | 2210.01776 |  |  |  | RMSD |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | APPNP | 2310.00183 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_variant | AqSol | 2211.14568 | Graph regression dataset used in Domain-IL setting. | 8 | graph_regression | FWT | Domain-IL |  | variant hint is not tracked: Domain-IL |
 | pending | unknown_dataset | AQuA | 2402.08785 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | AR | 2405.19779 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | AR | 2505.20215 |  |  |  | F1 |  |  | dataset is not in the catalog |
@@ -572,7 +556,6 @@ ightarrow$D | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | bay | 2310.15978 |  |  |  | MAE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | bay | 2506.15507 |  |  |  | MAE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Bayesian networks | 1904.11088 |  |  |  | RMSE |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | BBB | 2404.11568 | TDC benchmark collection task. | 5 | graph_classification | AUROC | Martins |  | dataset is not in the catalog |
 | pending | unknown_dataset | BBB_Martins | 2404.11568 |  |  |  | AUROC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | BBBP∓BACE | 2406.15523 |  |  |  | AUROC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | BBH | 2402.08785 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
@@ -976,11 +959,6 @@ ightarrow$D | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | Cham-3 | 2101.00797 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Cham-5 | 2101.00797 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Chame-f | 2412.09805 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_variant | Chameleon | 2106.06134 | Heterophilous dataset used for SSNC | 7 | node_classification | Accuracy |  | graphs=1, avg nodes=2277.0, avg edges=36101.0, classes=5 | variant could not be uniquely resolved from the catalog |
-| pending | unknown_variant | Chameleon | 2205.09389 | Heterophily graph used for node classification. | 10 | node_classification | Accuracy | medium splitting, sparse and dense splittings |  | variant hint is not tracked: medium splitting, sparse and dense splittings |
-| pending | unknown_variant | Chameleon | 2308.10077 | Mixed graph (heterophilic). | 13 | node_classification | Accuracy | Mixed |  | variant hint is not tracked: Mixed |
-| pending | unknown_variant | Chameleon | 2402.15270 | Heterophilic graph for node classification | 7 | node_classification | Accuracy |  | graphs=1, avg nodes=2277.0, avg edges=36101.0, classes=5 | variant could not be uniquely resolved from the catalog |
-| pending | unknown_variant | Chameleon | 2406.01249 | Heterophilic node classification dataset. | 10 | node_classification | Accuracy, Average running time per epoch(ms), average total running time(s) | original and filtered |  | variant hint is not tracked: original and filtered |
 | pending | unknown_dataset | Chameleon-filter | 2408.09490 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Chameleon-filtered | 2409.05755 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Chameleon-Filtered | 2512.00242 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
@@ -1111,13 +1089,6 @@ ightarrow$D | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | Cite. | 2505.02020 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Cite. | 2505.14033 | Medium-to-large graph used for node classification. | 18 | node_classification | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | CiteS | 2407.20067 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_variant | Citeseer | 2010.00238 | paper citation graph dataset | 16 | node_classification | Accuracy | semi-supervised | avg nodes=3327.0, avg edges=4552.0, classes=6 | variant hint is not tracked: semi-supervised |
-| pending | unknown_variant | CiteSeer | 2211.14568 | Node classification dataset used in Class-IL setting. | 12 | node_classification | AP, AF, INT | Class-IL |  | variant hint is not tracked: Class-IL |
-| pending | unknown_variant | Citeseer | 2308.10077 | Proximity graph (homophilic). | 13 | node_classification | Accuracy | Proximity |  | variant hint is not tracked: Proximity |
-| pending | unknown_variant | CiteSeer | 2410.01802 | Homophilic dataset used for link prediction. | 10 | link_prediction | AUC, Hits@20 | 70:10:20 split |  | variant hint is not tracked: 70:10:20 split |
-| pending | unknown_variant | CiteSeer | 2506.08298 | Homogeneous Text-Attributed Graph (HoTAG) | 4 | node_classification | Accuracy | zero-shot/fine-tuning |  | variant hint is not tracked: zero-shot/fine-tuning |
-| pending | unknown_variant | CiteSeer | 2510.04567 | Citation network dataset used for node classification. | 10 | node_classification | Accuracy | 1-shot, 5-shot |  | variant hint is not tracked: 1-shot, 5-shot |
-| pending | unknown_variant | CiteSeer | 2602.19622 | Node classification dataset used for OOD and ID evaluation | 3 | node_classification | Accuracy | OOD/ID |  | variant hint is not tracked: OOD/ID |
 | pending | unknown_dataset | CiteSeer $\rightarrow$ Reddit1 | 2208.09905 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | CiteSeer (feature) | 2202.08816 |  |  |  | F_NS, PN, PS |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | CiteSeer (small) | 2406.16687 |  |  |  | Hits@100, ROC-AUC |  |  | dataset is not in the catalog |
@@ -1216,19 +1187,6 @@ ightarrow$D | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | coauth-MAG-History | 2402.11339 |  |  |  | PR-AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Coauth. | 2206.07743 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Coauthor Chem | 2006.16904 |  |  |  | NMI |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | Coauthor CS | 2210.05382 | Homophilic graph. | 12 | node_classification | Accuracy |  | graphs=1, avg nodes=18333.0 | dataset is not in the catalog |
-| pending | unknown_dataset | Coauthor CS | 2210.09789 | Classical graph benchmark for node classification | 6 | node_classification | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | Coauthor CS | 2604.19028 | Homophily graph benchmark | 8 | node_classification | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | Coauthor CS | 2605.21247 | Homophilic dataset | 1 | node_classification | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | Coauthor Physics | 2210.05382 | Homophilic graph. | 12 | node_classification | Accuracy |  | graphs=1 | dataset is not in the catalog |
-| pending | unknown_dataset | Coauthor Physics | 2210.09789 | Classical graph benchmark for node classification | 6 | node_classification | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | Coauthor Physics | 2604.19028 | Homophily graph benchmark | 8 | node_classification | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | CoauthorCS | 2402.15270 | Medium-scale graph for node classification | 8 | node_classification | Accuracy, mean ± std, running time, Memory consumption |  | graphs=1, avg nodes=18333.0, avg edges=81894.0, classes=15 | dataset is not in the catalog |
-| pending | unknown_dataset | CoauthorCS | 2510.21267 | Homophilic dataset | 13 | node_classification | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | CoauthorCS | 2604.08980 | Homophilic graph used for node classification. | 11 | node_classification | Accuracy |  | graphs=1, avg nodes=18333.0, avg edges=81894.0, classes=15 | dataset is not in the catalog |
-| pending | unknown_dataset | CoauthorPhy | 2505.15015 | Co-authorship network used for node classification. | 7 | node_classification | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | CoauthorPhy | 2604.08980 | Homophilic graph used for node classification. | 11 | node_classification | Accuracy |  | graphs=1, avg nodes=34493.0, avg edges=247962.0, classes=5 | dataset is not in the catalog |
-| pending | unknown_dataset | CoauthorPhysics | 2510.21267 | Homophilic dataset | 13 | node_classification | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | COCO | 2309.09384 |  |  |  | F1 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | COCO | 2410.05499 |  |  |  | F1 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | COCO | 2511.08028 |  |  |  | F1 |  |  | dataset is not in the catalog |
@@ -1392,25 +1350,6 @@ ightarrow$D | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | CoPhysics | 2603.22984 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | CoPurchase | 2306.02592 |  |  |  | MRR |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | copylast | 2506.15507 |  |  |  | Success rate |  |  | dataset is not in the catalog |
-| pending | unknown_variant | Cora | 2010.00238 | paper citation graph dataset | 16 | node_classification | Accuracy | semi-supervised | avg nodes=2708.0, avg edges=5278.0, classes=7 | variant hint is not tracked: semi-supervised |
-| pending | unknown_variant | Cora | 2210.05382 | Homophilic graph. | 12 | node_classification | Accuracy |  | graphs=1, avg nodes=2708.0 | reported statistics do not uniquely identify a tracked variant |
-| pending | unknown_variant | Cora | 2211.14568 | Node classification dataset used in Task-IL setting. | 12 | node_classification | AP, AF, INT | Task-IL |  | variant hint is not tracked: Task-IL |
-| pending | unknown_variant | Cora | 2303.06344 | A homophilic benchmark dataset. | 11 | node_classification | Accuracy |  | graphs=2708, avg nodes=2708.0, avg edges=5278.0, classes=6 | reported statistics do not uniquely identify a tracked variant |
-| pending | unknown_variant | Cora | 2306.15902 | Node classification dataset used for artificial distribution shifts. | 10 | node_classification | Accuracy |  | graphs=1, avg nodes=2708.0, avg edges=10556.0, classes=7 | reported statistics do not uniquely identify a tracked variant |
-| pending | unknown_variant | CORA | 2308.08963 | Graph dataset used for node clustering | 12 | node_classification | ACC, NMI, ARI, F1 |  | graphs=2708, avg edges=5429.0, classes=7 | reported statistics do not uniquely identify a tracked variant |
-| pending | unknown_variant | Cora | 2308.10077 | Proximity graph (homophilic). | 13 | node_classification | Accuracy | Proximity |  | variant hint is not tracked: Proximity |
-| pending | unknown_variant | Cora | 2310.07430 | Citation network dataset for transductive node classification. | 8 | node_classification | Accuracy |  | graphs=1, avg nodes=2708.0, avg edges=10556.0, classes=7 | reported statistics do not uniquely identify a tracked variant |
-| pending | unknown_variant | Cora | 2402.15270 | Small-scale graph for node classification | 8 | node_classification | Accuracy, mean ± std, running time, Memory consumption |  | graphs=1, avg nodes=2708.0, avg edges=5429.0, classes=7 | reported statistics do not uniquely identify a tracked variant |
-| pending | unknown_variant | Cora | 2403.03676 | Homophilic citation network | 10 | node_classification | Accuracy |  | graphs=1, avg nodes=2708.0, avg edges=5278.0, classes=7 | reported statistics do not uniquely identify a tracked variant |
-| pending | unknown_variant | Cora | 2403.04780 | Citation network dataset used for homogeneous node classification. | 10 | node_classification | Micro-F1, Macro-F1 |  | graphs=1, avg nodes=2708.0, avg edges=5429.0, classes=7 | reported statistics do not uniquely identify a tracked variant |
-| pending | unknown_variant | Cora | 2405.20652 |  | 12 | node_classification | Accuracy |  | graphs=1, avg nodes=2708.0, avg edges=5278.0, classes=7 | reported statistics do not uniquely identify a tracked variant |
-| pending | unknown_variant | Cora | 2407.19941 | classic graph dataset widely used in research on GNNs and node classification tasks. It consists of 2708 scientific publications classified into one of 7 classes. | 9 | node_classification | Accuracy |  | graphs=2708, classes=7 | reported statistics do not uniquely identify a tracked variant |
-| pending | unknown_variant | Cora | 2410.01802 | Homophilic dataset used for link prediction. | 10 | link_prediction | AUC, Hits@20 | 70:10:20 split |  | variant hint is not tracked: 70:10:20 split |
-| pending | unknown_variant | Cora | 2411.19392 | Homophilic graph dataset used for node classification. | 10 | node_classification | Accuracy | Cora-ML |  | variant hint is not tracked: Cora-ML |
-| pending | unknown_variant | Cora | 2506.20362 | Citation network node classification benchmark | 10 | node_classification | Clean, Random, DICE, GF-Attack, Mettack | Adversarial attack setting |  | variant hint is not tracked: Adversarial attack setting |
-| pending | unknown_variant | Cora | 2510.04567 | Citation network dataset used for node classification. | 10 | node_classification | Accuracy | 1-shot, 5-shot |  | variant hint is not tracked: 1-shot, 5-shot |
-| pending | unknown_variant | Cora | 2510.21267 | Dataset with broader scales | 12 | node_classification | Accuracy |  | avg nodes=2708.0, classes=7 | reported statistics do not uniquely identify a tracked variant |
-| pending | unknown_variant | Cora | 2602.19622 | Node classification dataset used for OOD and ID evaluation | 3 | node_classification | Accuracy | OOD/ID |  | variant hint is not tracked: OOD/ID |
 | pending | unknown_dataset | Cora $\rightarrow$ Reddit1 | 2208.09905 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Cora ($r=0.5$) | 2502.17614 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Cora (14.9M) | 2402.05962 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
@@ -1440,8 +1379,6 @@ ightarrow$D | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | Cora-50% | 2310.01618 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Cora-7 way | 2603.13434 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Cora-70 | 2605.03514 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | Cora-A | 2206.04739 | Cora Co-authorship dataset | 14 | node_classification | Accuracy, NMI, F1, A.P.D. |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | Cora-C | 2206.04739 | Corrupted version of Cora dataset | 14 | node_classification | Accuracy, NMI, F1, A.P.D. |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | CORA-Full | 1811.05868 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Cora-Full | 1909.11715 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Cora-Full | 1911.07123 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
@@ -1594,11 +1531,8 @@ ightarrow$D | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | Corn. | 2307.16092 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Corn. | 2406.10871 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Corn. | 2505.02020 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_variant | Cornell | 2205.09389 | Heterophily graph used for node classification. | 10 | node_classification | Accuracy | medium splitting, sparse and dense splittings |  | variant hint is not tracked: medium splitting, sparse and dense splittings |
-| pending | unknown_variant | Cornell | 2308.10077 | Structural graph (heterophilic). | 13 | node_classification | Accuracy | Structural |  | variant hint is not tracked: Structural |
 | pending | unknown_dataset | Cornell & Wisconsin | 2412.19419 |  |  |  | Accuracy, Accuracy Improvement |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Cornell (WebKB) | 2505.12027 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | Cornell5 | 2405.16185 | Heterophilous dataset | 15 | node_classification | Accuracy |  | avg nodes=18660.0, avg edges=790777.0 | dataset is not in the catalog |
 | pending | unknown_dataset | Corporate | 1508.00200 |  |  |  | F1 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Cospectral | 2201.13410 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | COUNT | 2407.00494 |  |  |  | RMSE |  |  | dataset is not in the catalog |
@@ -1880,13 +1814,10 @@ ightarrow$D | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | db | 1410.3314 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | DB100k | 2011.03798 |  |  |  | MRR |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | dbAMP | 2501.17901 |  |  |  | F1 |  |  | dataset is not in the catalog |
-| pending | unknown_variant | DBLP | 2010.00238 | author graph dataset from the DBLP dataset | 16 | node_classification | Accuracy | semi-supervised | avg nodes=4057.0, avg edges=3528.0, classes=4 | variant hint is not tracked: semi-supervised |
-| pending | unknown_variant | DBLP | 2103.00959 | DBLP dataset used for network embedding. | 9 | node_classification | Micro-F1 | 5% labeled nodes |  | variant hint is not tracked: 5% labeled nodes |
 | pending | unknown_dataset | DBLP and ACM | 2403.01092 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | DBLP(AuthorCitation) | 1503.03578 |  |  |  | Macro-F1, Micro-F1 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | DBLP(PaperCitation) | 1503.03578 |  |  |  | Macro-F1, Micro-F1 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | DBLP-1000 | 2402.16024 |  |  |  | Micro-F1 |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | DBLP-coauthor | 2202.13538 | A temporal higher-order network recording co-authorship of papers. | 6 | link_prediction |  |  | graphs=1924991, avg nodes=1924991.0, avg edges=7904336.0 | dataset is not in the catalog |
 | pending | unknown_dataset | DBLP-easy | 2006.14422 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | DBLP-easy | 2112.10558 |  |  |  | MCC, Open F1 Macro |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | DBLP-hard | 2006.14422 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
@@ -2014,7 +1945,6 @@ ightarrow$FR | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the cata
 | pending | unknown_dataset | Death | 2406.06642 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | deco_hop | 2206.12411 |  |  |  | AUC Top-10 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | DeepDDI | 2010.11711 |  |  |  | AUROC |  |  | dataset is not in the catalog |
-| pending | unknown_variant | deezer | 2205.09389 | Heterophily graph used for node classification. | 10 | node_classification | Accuracy | medium splitting, sparse and dense splittings |  | variant hint is not tracked: medium splitting, sparse and dense splittings |
 | pending | unknown_dataset | Deezer Europe | 1909.13021 |  |  |  | F1 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Deezer-Album | 2202.00961 |  |  |  | AMI, ROC-AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Deezer-Europe | 2307.16092 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
@@ -2657,7 +2587,6 @@ ightarrow$FR | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the cata
 | pending | unknown_dataset | FB15k | 2011.03798 |  |  |  | MRR |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | FB15k | 2204.13957 |  |  |  | Hit@5, MRR |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | FB15k | 2209.08271 |  |  |  | MRR |  |  | dataset is not in the catalog |
-| pending | unknown_variant | FB15K-237 | 2210.02636 | Knowledge graph dataset for link prediction. | 5 | link_prediction | MRR | transductive |  | variant hint is not tracked: transductive |
 | pending | unknown_dataset | FB15k-401 | 1412.6575 |  |  |  | HITS@10, MRR |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | FB15K237 | 2302.01313 |  |  |  | Hits@1 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | FB15K237 | 2310.00149 |  |  |  | Acc |  |  | dataset is not in the catalog |
@@ -4303,7 +4232,6 @@ ightarrow$FR | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the cata
 | pending | unknown_dataset | Lipo | 2405.10343 |  |  |  | RMSE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Lipo | 2502.12638 |  |  |  | RMSE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Lipo | 2510.16885 |  |  |  | MAE |  |  | dataset is not in the catalog |
-| pending | unknown_variant | Lipophilicity | 2404.11568 | TDC benchmark collection task. | 5 | graph_regression | MAE | AstraZeneca |  | variant hint is not tracked: AstraZeneca |
 | pending | unknown_dataset | Lipophilicity_AstraZeneca | 2404.11568 |  |  |  | MAE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | LiPS | 2101.03164 |  |  |  | MAE, RMSE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | LiPS | 2210.07237 |  |  |  | Li-ion Diffusivity |  |  | dataset is not in the catalog |
@@ -4511,7 +4439,6 @@ ightarrow$E | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | Meta (TRA) | 2601.12903 |  |  |  | NMI |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Meta-acm | 2205.13892 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Meta-Acm | 2403.03676 | Meta-learning variant of ACM | 6 | node_classification | Accuracy | Meta-learning variant |  | dataset is not in the catalog |
-| pending | unknown_dataset | Meta-Citeseer | 2403.03676 | Meta-learning variant of CiteSeer | 6 | node_classification | Accuracy | Meta-learning variant |  | dataset is not in the catalog |
 | pending | unknown_dataset | Meta-cora | 2205.13892 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Meta-Cora | 2205.13892 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Meta-Cora | 2403.03676 | Meta-learning variant of Cora | 6 | node_classification | Accuracy | Meta-learning variant |  | dataset is not in the catalog |
@@ -4712,8 +4639,6 @@ ightarrow$E | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | Molbbbp-scaffold | 2408.01697 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Molbbbp-size | 2408.01697 |  |  |  | ROC-AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | molbesol | 2407.02013 |  |  |  | RMSE |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | molclintox | 2402.07191 | OGB molecular dataset. | 3 | graph_classification | ROC-AUC |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | molclintox | 2405.01350 | OGB chemical molecular dataset for unsupervised classification | 7 | graph_classification | ROC-AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Molecular Dynamics | 2205.07266 |  |  |  | EGNN, Molformer |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Molecular Graph Description | 2601.22384 |  |  |  | BLEU-4 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Molecular Weight | 2503.06337 |  |  |  | Success Percent |  |  | dataset is not in the catalog |
@@ -4754,7 +4679,6 @@ ightarrow$E | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | molesol | 2505.23345 |  |  |  | RMSE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | molesol | 2604.15699 |  |  |  | RMSE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | molesol | 2605.04834 |  |  |  | RMSE |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | molfreesolv | 2405.01350 | OGB chemical molecular dataset for unsupervised graph regression | 7 | graph_regression | RMSE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | MOLHIV | 2010.11418 |  |  |  | ROC-AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | MOLHIV | 2102.07835 |  |  |  | ROC-AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | MolHIV | 2104.01481 |  |  |  | ROC-AUC |  |  | dataset is not in the catalog |
@@ -4798,15 +4722,11 @@ ightarrow$E | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | MolPCBA | 2510.14336 |  |  |  | AP |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | MOLPCBA | 2510.14336 |  |  |  | AP |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | MolPPA | 2509.22100 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | molsider | 2402.07191 | OGB molecular dataset. | 3 | graph_classification | ROC-AUC |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | molsider | 2405.01350 | OGB chemical molecular dataset for unsupervised classification | 7 | graph_classification | ROC-AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | molsol | 2407.02013 |  |  |  | RMSE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Molt-4 | 2007.08663 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | MOLT-4 | 2302.12449 |  |  |  | ROC-AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | moltocx21 | 2505.23345 |  |  |  | ROC-AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | moltocx21 | 2604.15699 |  |  |  | ROC-AUC |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | moltox21 | 2402.07191 | OGB molecular dataset. | 3 | graph_classification | ROC-AUC |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | moltox21 | 2405.01350 | OGB chemical molecular dataset for unsupervised classification | 7 | graph_classification | ROC-AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | MoMu | 2310.12798 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | MoMu | 2403.07179 |  |  |  | Similarity |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | MONDIAL | 2412.00521 |  |  |  | F1 |  |  | dataset is not in the catalog |
@@ -5386,7 +5306,6 @@ ightarrow$E | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | NWR-GAE | 2506.19343 |  |  |  | ACC, ARI, F1, NMI |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | NYC | 2108.11482 |  |  |  | RMSE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | O$_2$Perm | 2401.13858 |  |  |  | MAE |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | O.-Proteins | 2205.09389 | Heterophily graph used for node classification. | 10 | node_classification | Accuracy | medium splitting |  | dataset is not in the catalog |
 | pending | unknown_dataset | O2Perm | 2206.02886 |  |  |  | R^2 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | O2Perm | 2401.13858 |  |  |  | MAE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | OAG | 2003.01332 |  |  |  | NDCG |  |  | dataset is not in the catalog |
@@ -5463,11 +5382,9 @@ ightarrow$E | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | OGBG-BBBP | 2410.05298 |  |  |  | A.L., E.L. |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbg-bbbp | 2510.18825 |  |  |  | ROC-AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbg-ClinTox | 2206.02886 |  |  |  | AUC |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | ogbg-code | 2401.16011 | large-scale OGB dataset for semi-supervised learning |  | graph_classification | F1 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbg-ESOL | 2406.01899 |  |  |  | MAE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbg-Lipo | 2406.01899 |  |  |  | MAE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbg-molbbbbp | 2009.02027 |  |  |  | ROC-AUC |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | ogbg-molbbbp | 2305.15747 | Open Graph Benchmark dataset for graph classification | 2 | graph_classification | ROC-AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbg-molesol | 2009.02027 |  |  |  | RMSE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbg-molesol | 2106.05819 |  |  |  | RMSE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbg-molesol | 2110.00577 |  |  |  | RSMSE |  |  | dataset is not in the catalog |
@@ -5480,7 +5397,6 @@ ightarrow$E | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | ogbg-molfreesolv | 2106.05819 |  |  |  | MAE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbg-molfreesolv | 2110.00577 |  |  |  | RSMSE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbg-molfreesolv | 2304.02806 |  |  |  | RMSE |  |  | dataset is not in the catalog |
-| pending | unknown_variant | ogbg-molhiv | 2211.14568 | Graph classification dataset used in Domain-IL setting. | 8 | graph_classification | FWT | Domain-IL |  | variant hint is not tracked: Domain-IL |
 | pending | unknown_dataset | ogbg-moltox21 | 2502.16233 | large molecular graph dataset from OGB | 6 | graph_classification | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbg-moltoxcast | 2305.19903 | Graph prediction task. |  | graph_classification |  |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbg-moltoxcast | 2502.16233 | large molecular graph dataset from OGB | 6 | graph_classification | Accuracy |  |  | dataset is not in the catalog |
@@ -5488,16 +5404,12 @@ ightarrow$E | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | OGBG-PCQM4Mv1 | 2106.07971 |  |  |  | MAE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbg-pcqm4mv1 | 2206.11941 |  |  |  | MAE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | OGBG-PCQM4Mv1 | 2206.11941 |  |  |  | MAE |  |  | dataset is not in the catalog |
-| pending | unknown_variant | ogbg-ppa | 2211.14568 | Graph classification dataset used in Domain-IL setting. | 8 | graph_classification | FWT | Domain-IL |  | variant hint is not tracked: Domain-IL |
 | pending | unknown_dataset | ogbg-SIDER | 2206.02886 |  |  |  | AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbg-Tox21 | 2206.02886 |  |  |  | AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbg-ToxCast | 2206.02886 |  |  |  | AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbl-vessel | 2301.12562 |  |  |  | ROC-AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbn-100M | 2105.07634 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbn-100M | 2308.11129 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_variant | ogbn-arxiv | 2010.00238 | paper citation graph dataset | 16 | node_classification | Accuracy | semi-supervised | avg nodes=169343.0, avg edges=1166243.0, classes=40 | variant hint is not tracked: semi-supervised |
-| pending | unknown_variant | ogbn-arxiv | 2211.14568 | Node classification dataset used in Task-IL and Class-IL settings. | 12 | node_classification | AP, AF, INT | Task-IL / Class-IL |  | variant hint is not tracked: Task-IL / Class-IL |
-| pending | unknown_variant | ogbn-arxiv | 2408.13471 | Large-scale citation network for node classification. | 2 | node_classification | Accuracy | approximate sampling |  | variant hint is not tracked: approximate sampling |
 | pending | unknown_dataset | ogbn-arxiv-5-way (Transductive) | 2310.00149 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbn-code2 | 2302.00049 |  |  |  | F1-Score |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Ogbn-collab | 2305.12578 |  |  |  | AUC |  |  | dataset is not in the catalog |
@@ -5506,13 +5418,10 @@ ightarrow$E | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | ogbn-ppa | 2405.14260 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbn-ppa + DeeperGCN | 2405.14260 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Ogbn-Product (1412.5M) | 2402.05962 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_variant | ogbn-products | 2408.13471 | Large-scale product network for node classification. | 2 | node_classification | Accuracy | approximate sampling |  | variant hint is not tracked: approximate sampling |
 | pending | unknown_dataset | ogbn-products (Inductive) | 2405.16435 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbn-products (Transductive) | 2405.16435 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_variant | ogbn-proteins | 2211.14568 | Node classification dataset used in Domain-IL setting. | 12 | node_classification | AP, AF, INT, FWT | Domain-IL |  | variant hint is not tracked: Domain-IL |
 | pending | unknown_dataset | ogbn-Tech | 2511.05592 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbn-tech | 2511.05592 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | ogbproteins | 2311.01038 | Large-scale protein dataset used for node classification. | 10 | node_classification | Micro F1 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Ohsumed | 1809.05679 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Ohsumed | 1909.11855 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Ohsumed | 2008.05089 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
@@ -5896,9 +5805,6 @@ ightarrow$E | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | PPB | 2604.06336 |  |  |  | RMSE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | PPBR | 2404.11568 | TDC benchmark collection task. | 5 | graph_regression | MAE | AZ |  | dataset is not in the catalog |
 | pending | unknown_dataset | PPBR_AZ | 2404.11568 |  |  |  | MAE |  |  | dataset is not in the catalog |
-| pending | unknown_variant | PPI | 2103.00959 | Protein-protein interaction dataset used for network embedding and node classification. | 9 | node_classification | Micro-F1 | 50% labeled nodes |  | variant hint is not tracked: 50% labeled nodes |
-| pending | unknown_variant | PPI | 2503.19666 | Protein-Protein Interaction dataset. | 4 | node_classification | FLOPs, Time, Accuracy | transductive/inductive |  | variant hint is not tracked: transductive/inductive |
-| pending | unknown_variant | PPI | 2506.20362 | Protein-protein interaction dataset | 10 | graph_classification | Micro-F1 | Inductive task | classes=121 | variant hint is not tracked: Inductive task |
 | pending | unknown_dataset | PPI (50%) | 2103.00959 |  |  |  | F1 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | PPI (inductive) | 2503.19666 |  |  |  | F1 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | PPI (large version) | 1907.04931 |  |  |  | F1 |  |  | dataset is not in the catalog |
@@ -5940,9 +5846,6 @@ ightarrow$E | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | Product-Reviews | 2304.10668 |  |  |  | Improvement |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Product-Reviews | 2306.02592 |  |  |  | macro-F1 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Product2PT | 2306.02592 |  |  |  | macro-F1 |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | Products | 2404.15354 | Benchmark node classification dataset. |  | node_classification | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | Products | 2506.08298 | Homogeneous Text-Attributed Graph (HoTAG) | 4 | node_classification | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | Products | 2605.24867 | Dataset used for node classification and link prediction (likely refers to ogbn-products). | 11 | link_prediction | Accuracy (%) |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Products/RevGNN | 2410.19723 |  |  |  | F1 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Products/SAGE | 2410.19723 |  |  |  | F1 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Program | 1802.08786 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
@@ -6129,12 +6032,6 @@ ightarrow$E | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | Pubm. | 2205.13892 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Pubm. | 2310.10064 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Pubm. | 2412.19106 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_variant | Pubmed | 2010.00238 | paper citation graph dataset | 16 | node_classification | Accuracy | semi-supervised | avg nodes=19717.0, avg edges=88648.0, classes=3 | variant hint is not tracked: semi-supervised |
-| pending | unknown_variant | Pubmed | 2305.19903 | Node and link prediction task. | 4 | node_classification | Accuracy | layer = 2/3 |  | variant hint is not tracked: layer = 2/3 |
-| pending | unknown_variant | PubMed | 2308.10077 | Proximity graph (homophilic). | 13 | node_classification | Accuracy | Proximity |  | variant hint is not tracked: Proximity |
-| pending | unknown_variant | PubMed | 2410.01802 | Homophilic dataset used for link prediction. | 5 | link_prediction | AUC, Hits@20 | 70:10:20 split |  | variant hint is not tracked: 70:10:20 split |
-| pending | unknown_variant | PubMed | 2506.08298 | Homogeneous Text-Attributed Graph (HoTAG) | 4 | node_classification | Accuracy | zero-shot/fine-tuning |  | variant hint is not tracked: zero-shot/fine-tuning |
-| pending | unknown_variant | Pubmed | 2510.04567 | Citation network dataset used for node classification. | 10 | node_classification | Accuracy | 1-shot, 5-shot |  | variant hint is not tracked: 1-shot, 5-shot |
 | pending | unknown_dataset | PubMed $\rightarrow$ Reddit1 | 2208.09905 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Pubmed (citation) | 2406.10727 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Pubmed (featureless) | 2202.00961 |  |  |  | AMI, AP, ARI, AUC |  |  | dataset is not in the catalog |
@@ -6250,7 +6147,6 @@ ightarrow$E | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | Ques. | 2505.14033 | Medium-to-large graph used for node classification. | 18 | node_classification | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Quest. | 2306.12251 |  |  |  | AUPRC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Quest. | 2504.14250 |  |  |  | ROC-AUC |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | Question | 2506.19343 | Large heterophilic graph dataset used for node classification. | 10 | node_classification | ROC-AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | R-CO | 2410.05298 |  |  |  | F1 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | R/S classification | 2110.04383 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | r3-n12 | 2102.07835 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
@@ -6365,12 +6261,8 @@ ightarrow$E | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | REDD-M12 | 2202.07179 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | REDD-M12 | 2401.09953 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | REDD-M5k | 2202.07179 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | REDDIT-B | 2103.00959 | REDDIT-B dataset used for graph classification. | 1 | graph_classification | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | REDDIT-B | 2404.15806 | Reddit Binary dataset used for unsupervised representation learning. | 10 | graph_classification | Accuracy |  | graphs=2000, avg nodes=429.63, avg edges=497.75, classes=2 | dataset is not in the catalog |
-| pending | unknown_dataset | REDDIT-B | 2408.13471 | Social network dataset for graph classification. | 5 | graph_classification | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | REDDIT-M-12K | 2401.16011 |  |  |  | NMI |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | REDDIT-M12K | 2501.18739 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | REDDIT-MULTI-12K | 2401.16011 | graph property prediction benchmark for clustering | 6 | graph_classification | NMI, ACC, ARI |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Reddit-Title | 2208.07239 |  |  |  | MRR |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Reddit-title | 2501.16002 |  |  |  | MRR |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Reddit-Title | 2605.25548 |  |  |  | MRR |  |  | dataset is not in the catalog |
@@ -6442,7 +6334,6 @@ ightarrow$E | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | RLM | 2604.16586 |  |  |  | Pearson R |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | RLM-Clint | 2112.09899 |  |  |  | Fidelity+, Fidelity-, Property Divergence |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | RLMC | 2604.06336 |  |  |  | RMSE |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | rMD17 | 2210.16518 | 10 small organic molecules for molecular dynamics simulation | 8 | graph_regression | MAE, energy (kcal/mol), force (kcal/mol/Å) |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | rMD17 / Aspirin | 2212.05517 |  |  |  | MAE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | rMD17 / Paracetamol | 2212.05517 |  |  |  | MAE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | RNASolo SASA | 2506.19862 |  |  |  | RMSE |  |  | dataset is not in the catalog |
@@ -6459,7 +6350,6 @@ ightarrow$E | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | Roman | 2512.11561 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Roman | 2601.01207 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Roman | 2603.22984 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | Roman Empire | 2604.08980 | Heterophilic graph used for node classification. | 12 | node_classification | Accuracy |  | graphs=1, avg nodes=22662.0, avg edges=32927.0, classes=18 | dataset is not in the catalog |
 | pending | unknown_dataset | Roman* | 2603.22984 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Roman-E | 2412.09805 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Roman-e. | 2409.05100 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
@@ -6556,7 +6446,6 @@ ightarrow$M | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | SBM | 2603.08825 |  |  |  | Avg Ratio |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | SBM | 2606.05046 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | SBM attributed graphs | 2103.05045 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | SBM graph | 2505.11298 | Stochastic Block Model graphs used for Task 1. |  | graph_classification | Train Accuracy, Test Accuracy |  | graphs=3000, classes=2 | dataset is not in the catalog |
 | pending | unknown_dataset | SBM model | 2209.06177 |  |  |  | LI_edge, LI_node |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | SBM-1 | 2012.07690 |  |  |  | Accuracy, log value |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | SBM-1 | 2208.08302 |  |  |  | Weighted-F1 |  |  | dataset is not in the catalog |
@@ -6622,7 +6511,6 @@ ightarrow$M | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | Shape | 2209.07924 |  |  |  | Predicted Class Probability |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | shape | 2606.05046 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ShapeMol | 2501.02526 |  |  |  | Sim_S |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | Shapenet | 2503.19666 | 3D shape dataset, specifically 'Airplane' category. | 4 | node_regression | Mean test IoU, Average epoch time | Airplane |  | dataset is not in the catalog |
 | pending | unknown_dataset | ShapeNetPart | 2408.05822 |  |  |  | F1 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Shapes | 2210.15304 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Shoes and Accessories | 1506.04757 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
@@ -6783,10 +6671,6 @@ ightarrow$M | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | Squi. | 2202.03580 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Squi. | 2205.13892 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | SQUIR. | 2410.01802 |  |  |  | AUC |  |  | dataset is not in the catalog |
-| pending | unknown_variant | Squirrel | 2106.06134 | Heterophilous dataset used for SSNC | 7 | node_classification | Accuracy |  | graphs=1, avg nodes=5201.0, avg edges=217073.0, classes=5 | variant could not be uniquely resolved from the catalog |
-| pending | unknown_variant | Squirrel | 2205.09389 | Heterophily graph used for node classification. | 10 | node_classification | Accuracy | medium splitting, sparse and dense splittings |  | variant hint is not tracked: medium splitting, sparse and dense splittings |
-| pending | unknown_variant | Squirrel | 2308.10077 | Mixed graph (heterophilic). | 13 | node_classification | Accuracy | Mixed |  | variant hint is not tracked: Mixed |
-| pending | unknown_variant | Squirrel | 2406.01249 | Heterophilic node classification dataset. | 10 | node_classification | Accuracy, Average running time per epoch(ms), average total running time(s) | original and filtered |  | variant hint is not tracked: original and filtered |
 | pending | unknown_dataset | Squirrel-filter | 2408.09490 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Squirrel-filtered | 2409.05755 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Squirrel-Filtered | 2512.00242 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
@@ -7118,8 +7002,6 @@ ightarrow$M | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | Testosterone | 2402.17660 |  |  |  | million steps per day |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Tetrahedron | 2410.11443 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Tetrahedron | 2510.13169 |  |  |  | MSE |  |  | dataset is not in the catalog |
-| pending | unknown_variant | Texas | 2205.09389 | Heterophily graph used for node classification. | 10 | node_classification | Accuracy | medium splitting, sparse and dense splittings |  | variant hint is not tracked: medium splitting, sparse and dense splittings |
-| pending | unknown_variant | Texas | 2308.10077 | Structural graph (heterophilic). | 13 | node_classification | Accuracy | Structural |  | variant hint is not tracked: Structural |
 | pending | unknown_dataset | Texas $\rightarrow$ CO | 2602.07573 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | text8 | 2006.09790 |  |  |  | Likelihood |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | text8 | 2107.03006 |  |  |  | NLL |  |  | dataset is not in the catalog |
@@ -7430,10 +7312,6 @@ ightarrow$M | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | Twitch-explicit | 2505.16860 |  |  |  | AP-AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Twitch-explicit | 2602.05571 |  |  |  | ROC-AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Twitch-FR | 2311.16139 |  |  |  | AUC |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | twitch-gamer | 2210.05382 | Large scale graph with relatively low homophily. | 12 | node_classification | Accuracy |  | graphs=1, avg nodes=168114.0, avg edges=6797557.0, classes=2 | dataset is not in the catalog |
-| pending | unknown_dataset | Twitch-gamer | 2506.19343 | Large heterophilic graph dataset used for node classification. | 10 | node_classification | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | twitch-gamer | 2510.21267 | Dataset with broader scales | 12 | node_classification | Accuracy |  | avg nodes=168114.0, classes=2 | dataset is not in the catalog |
-| pending | unknown_variant | twitch-gamers | 2602.19622 | Node classification dataset used for OOD and ID evaluation | 3 | node_classification | Accuracy | OOD1/OOD2/OOD3/ID |  | variant hint is not tracked: OOD1/OOD2/OOD3/ID |
 | pending | unknown_dataset | Twitch-PTBR | 2412.06173 |  |  |  | ROC-AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Twitch-RU | 2311.16139 |  |  |  | AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | twitch-views | 2409.14500 |  |  |  | R2 |  |  | dataset is not in the catalog |
@@ -7798,8 +7676,6 @@ ightarrow$M | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | Wiki-CS | 2605.12197 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Wiki-Vote | 1906.02319 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Wiki.CS | 2310.00800 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_variant | WikiCS | 2506.08298 | Homogeneous Text-Attributed Graph (HoTAG) | 4 | node_classification | Accuracy | zero-shot/fine-tuning |  | variant hint is not tracked: zero-shot/fine-tuning |
-| pending | unknown_variant | WikiCS | 2510.04567 | Citation network dataset used for node classification. | 10 | node_classification | Accuracy | 1-shot, 5-shot |  | variant hint is not tracked: 1-shot, 5-shot |
 | pending | unknown_dataset | Wikidata | 2402.08785 |  |  |  | Hits@1 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | WikiHop | 2010.00577 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | WikiKG90M | 2106.06935 |  |  |  | MRR |  |  | dataset is not in the catalog |
@@ -7888,8 +7764,6 @@ ightarrow$M | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | WISC. | 2410.02158 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Wisc. | 2505.02020 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Wisc. | 2505.17599 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_variant | Wisconsin | 2205.09389 | Heterophily graph used for node classification. | 10 | node_classification | Accuracy | medium splitting, sparse and dense splittings |  | variant hint is not tracked: medium splitting, sparse and dense splittings |
-| pending | unknown_variant | Wisconsin | 2308.10077 | Structural graph (heterophilic). | 13 | node_classification | Accuracy | Structural |  | variant hint is not tracked: Structural |
 | pending | unknown_dataset | WK-100 | 2305.19987 |  |  |  | MRR |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | WK-100 | 2410.12288 |  |  |  | MRR |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | WK-25 | 2305.19987 |  |  |  | MRR |  |  | dataset is not in the catalog |
@@ -7906,7 +7780,6 @@ ightarrow$M | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | WN V3 | 2410.12288 |  |  |  | MRR |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | WN V4 | 2410.12288 |  |  |  | MRR |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | WN18-IMG | 2212.05767 |  |  |  | Hits@10 |  |  | dataset is not in the catalog |
-| pending | unknown_variant | WN18RR | 2210.02636 | Knowledge graph dataset for link prediction. | 5 | link_prediction | MRR | transductive |  | variant hint is not tracked: transductive |
 | pending | unknown_dataset | WN18RR-10 way | 2603.13434 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | WN18RR-5 way | 2603.13434 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | WN18RR-5-way | 2310.00149 |  |  |  | Acc |  |  | dataset is not in the catalog |
@@ -8120,8 +7993,6 @@ ightarrow$EN | 2104.06608 |  |  |  | Hits@1, Hits@10, Hits@50 |  |  | dataset is
 | pending | unknown_dataset | ZH$\rightarrow$EN | 2104.06608 |  |  |  | Hits@1, Hits@10, Hits@50 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ZH-EN | 2104.06608 |  |  |  | Hits@1, Hits@10, Hits@50 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ZhangDDI | 2010.11711 |  |  |  | AUROC |  |  | dataset is not in the catalog |
-| pending | unknown_variant | ZINC | 2211.14568 | Graph regression dataset used in Domain-IL setting. | 8 | graph_regression | FWT | Domain-IL |  | variant hint is not tracked: Domain-IL |
-| pending | unknown_variant | ZINC | 2502.16233 | molecular solubility regression task (ZINC12K subset) | 11 | graph_regression | MAE | ZINC12K | graphs=12000, avg nodes=23.2, avg edges=24.9 | variant hint is not tracked: ZINC12K |
 | pending | unknown_dataset | ZINC (Acyclic) | 2401.01233 |  |  |  | MAE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ZINC (Cyclic) | 2401.01233 |  |  |  | MAE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ZINC (no edge feat.) | 2106.05667 |  |  |  | MAE |  |  | dataset is not in the catalog |
@@ -8143,8 +8014,88 @@ ightarrow$EN | 2104.06608 |  |  |  | Hits@1, Hits@10, Hits@50 |  |  | dataset is
 | pending | unknown_dataset | Zoo | 2406.06642 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Zuo et al. dataset | 2202.02450 |  |  |  | RMSE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ZWL | 2010.10046 |  |  |  | AUC |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | A-computer | 2604.08980 | Homophilic graph used for node classification. | 11 | node_classification | Accuracy |  | graphs=1, avg nodes=13752.0, avg edges=245861.0, classes=10 | dataset is not in the catalog |
+| resolved | unknown_dataset | A-Computers | 2210.05920 | Node classification dataset | 15 | node_classification | Accuracy |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | A-ratings | 2604.08980 | Heterophilic graph used for node classification. | 12 | node_classification | Accuracy |  | graphs=1, avg nodes=24492.0, avg edges=93050.0, classes=5 | dataset is not in the catalog |
+| resolved | unknown_variant | ACM | 2010.00238 | paper citation graph dataset | 16 | node_classification | Accuracy | semi-supervised | avg nodes=3025.0, avg edges=13128.0, classes=3 | variant hint is not tracked: semi-supervised |
+| resolved | unknown_variant | Actor | 2205.09389 | Heterophily graph used for node classification. | 10 | node_classification | Accuracy | medium splitting, sparse and dense splittings |  | variant hint is not tracked: medium splitting, sparse and dense splittings |
+| resolved | unknown_variant | Actor | 2308.10077 | Mixed graph (heterophilic). | 13 | node_classification | Accuracy | Mixed |  | variant hint is not tracked: Mixed |
+| resolved | unknown_dataset | Amazon Computers | 2210.09789 | Classical graph benchmark for node classification | 6 | node_classification | Accuracy |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | Amazon Photo | 2210.09789 | Classical graph benchmark for node classification | 6 | node_classification | Accuracy |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | Amazon-Comp | 2604.19028 | Homophily graph benchmark | 8 | node_classification | Accuracy |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | Amazon-Computer | 2206.04355 | Co-purchase graph dataset used for transductive node classification. |  | node_classification | Accuracy |  |  | dataset is not in the catalog |
 | resolved | unknown_dataset | amazon-ratings-full | 2604.07492 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | Amazon. | 2505.14033 | Medium-to-large graph used for node classification. | 18 | node_classification | Accuracy |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | AmazonComputers | 2510.21267 | Homophilic dataset | 13 | node_classification | Accuracy |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | AmazonPhoto | 2510.21267 | Homophilic dataset | 13 | node_classification | Accuracy |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | AmzComputers | 2505.15015 | Amazon Computers e-commerce graph used for node classification. | 7 | node_classification | Accuracy |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | AmzPhoto | 2505.15015 | Amazon Photo e-commerce graph used for node classification. | 7 | node_classification | Accuracy |  |  | dataset is not in the catalog |
+| resolved | unknown_variant | AqSol | 2211.14568 | Graph regression dataset used in Domain-IL setting. | 8 | graph_regression | FWT | Domain-IL |  | variant hint is not tracked: Domain-IL |
+| resolved | unknown_dataset | BBB | 2404.11568 | TDC benchmark collection task. | 5 | graph_classification | AUROC | Martins |  | dataset is not in the catalog |
+| resolved | unknown_variant | Chameleon | 2106.06134 | Heterophilous dataset used for SSNC | 7 | node_classification | Accuracy |  | graphs=1, avg nodes=2277.0, avg edges=36101.0, classes=5 | variant could not be uniquely resolved from the catalog |
+| resolved | unknown_variant | Chameleon | 2205.09389 | Heterophily graph used for node classification. | 10 | node_classification | Accuracy | medium splitting, sparse and dense splittings |  | variant hint is not tracked: medium splitting, sparse and dense splittings |
+| resolved | unknown_variant | Chameleon | 2308.10077 | Mixed graph (heterophilic). | 13 | node_classification | Accuracy | Mixed |  | variant hint is not tracked: Mixed |
+| resolved | unknown_variant | Chameleon | 2402.15270 | Heterophilic graph for node classification | 7 | node_classification | Accuracy |  | graphs=1, avg nodes=2277.0, avg edges=36101.0, classes=5 | variant could not be uniquely resolved from the catalog |
+| resolved | unknown_variant | Chameleon | 2406.01249 | Heterophilic node classification dataset. | 10 | node_classification | Accuracy, Average running time per epoch(ms), average total running time(s) | original and filtered |  | variant hint is not tracked: original and filtered |
+| resolved | unknown_variant | Citeseer | 2010.00238 | paper citation graph dataset | 16 | node_classification | Accuracy | semi-supervised | avg nodes=3327.0, avg edges=4552.0, classes=6 | variant hint is not tracked: semi-supervised |
+| resolved | unknown_variant | CiteSeer | 2211.14568 | Node classification dataset used in Class-IL setting. | 12 | node_classification | AP, AF, INT | Class-IL |  | variant hint is not tracked: Class-IL |
+| resolved | unknown_variant | Citeseer | 2308.10077 | Proximity graph (homophilic). | 13 | node_classification | Accuracy | Proximity |  | variant hint is not tracked: Proximity |
+| resolved | unknown_variant | CiteSeer | 2410.01802 | Homophilic dataset used for link prediction. | 10 | link_prediction | AUC, Hits@20 | 70:10:20 split |  | variant hint is not tracked: 70:10:20 split |
+| resolved | unknown_variant | CiteSeer | 2506.08298 | Homogeneous Text-Attributed Graph (HoTAG) | 4 | node_classification | Accuracy | zero-shot/fine-tuning |  | variant hint is not tracked: zero-shot/fine-tuning |
+| resolved | unknown_variant | CiteSeer | 2510.04567 | Citation network dataset used for node classification. | 10 | node_classification | Accuracy | 1-shot, 5-shot |  | variant hint is not tracked: 1-shot, 5-shot |
+| resolved | unknown_variant | CiteSeer | 2602.19622 | Node classification dataset used for OOD and ID evaluation | 3 | node_classification | Accuracy | OOD/ID |  | variant hint is not tracked: OOD/ID |
 | resolved | unknown_dataset | Citeseer-Full | 2505.22362 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | Coauthor CS | 2210.05382 | Homophilic graph. | 12 | node_classification | Accuracy |  | graphs=1, avg nodes=18333.0 | dataset is not in the catalog |
+| resolved | unknown_dataset | Coauthor CS | 2210.09789 | Classical graph benchmark for node classification | 6 | node_classification | Accuracy |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | Coauthor CS | 2604.19028 | Homophily graph benchmark | 8 | node_classification | Accuracy |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | Coauthor CS | 2605.21247 | Homophilic dataset | 1 | node_classification | Accuracy |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | Coauthor Physics | 2210.05382 | Homophilic graph. | 12 | node_classification | Accuracy |  | graphs=1 | dataset is not in the catalog |
+| resolved | unknown_dataset | Coauthor Physics | 2210.09789 | Classical graph benchmark for node classification | 6 | node_classification | Accuracy |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | Coauthor Physics | 2604.19028 | Homophily graph benchmark | 8 | node_classification | Accuracy |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | CoauthorCS | 2402.15270 | Medium-scale graph for node classification | 8 | node_classification | Accuracy, mean ± std, running time, Memory consumption |  | graphs=1, avg nodes=18333.0, avg edges=81894.0, classes=15 | dataset is not in the catalog |
+| resolved | unknown_dataset | CoauthorCS | 2510.21267 | Homophilic dataset | 13 | node_classification | Accuracy |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | CoauthorCS | 2604.08980 | Homophilic graph used for node classification. | 11 | node_classification | Accuracy |  | graphs=1, avg nodes=18333.0, avg edges=81894.0, classes=15 | dataset is not in the catalog |
+| resolved | unknown_dataset | CoauthorPhy | 2505.15015 | Co-authorship network used for node classification. | 7 | node_classification | Accuracy |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | CoauthorPhy | 2604.08980 | Homophilic graph used for node classification. | 11 | node_classification | Accuracy |  | graphs=1, avg nodes=34493.0, avg edges=247962.0, classes=5 | dataset is not in the catalog |
+| resolved | unknown_dataset | CoauthorPhysics | 2510.21267 | Homophilic dataset | 13 | node_classification | Accuracy |  |  | dataset is not in the catalog |
+| resolved | unknown_variant | Cora | 2010.00238 | paper citation graph dataset | 16 | node_classification | Accuracy | semi-supervised | avg nodes=2708.0, avg edges=5278.0, classes=7 | variant hint is not tracked: semi-supervised |
+| resolved | unknown_variant | Cora | 2210.05382 | Homophilic graph. | 12 | node_classification | Accuracy |  | graphs=1, avg nodes=2708.0 | reported statistics do not uniquely identify a tracked variant |
+| resolved | unknown_variant | Cora | 2211.14568 | Node classification dataset used in Task-IL setting. | 12 | node_classification | AP, AF, INT | Task-IL |  | variant hint is not tracked: Task-IL |
+| resolved | unknown_variant | Cora | 2303.06344 | A homophilic benchmark dataset. | 11 | node_classification | Accuracy |  | graphs=2708, avg nodes=2708.0, avg edges=5278.0, classes=6 | reported statistics do not uniquely identify a tracked variant |
+| resolved | unknown_variant | Cora | 2306.15902 | Node classification dataset used for artificial distribution shifts. | 10 | node_classification | Accuracy |  | graphs=1, avg nodes=2708.0, avg edges=10556.0, classes=7 | reported statistics do not uniquely identify a tracked variant |
+| resolved | unknown_variant | CORA | 2308.08963 | Graph dataset used for node clustering | 12 | node_classification | ACC, NMI, ARI, F1 |  | graphs=2708, avg edges=5429.0, classes=7 | reported statistics do not uniquely identify a tracked variant |
+| resolved | unknown_variant | Cora | 2308.10077 | Proximity graph (homophilic). | 13 | node_classification | Accuracy | Proximity |  | variant hint is not tracked: Proximity |
+| resolved | unknown_variant | Cora | 2310.07430 | Citation network dataset for transductive node classification. | 8 | node_classification | Accuracy |  | graphs=1, avg nodes=2708.0, avg edges=10556.0, classes=7 | reported statistics do not uniquely identify a tracked variant |
+| resolved | unknown_variant | Cora | 2402.15270 | Small-scale graph for node classification | 8 | node_classification | Accuracy, mean ± std, running time, Memory consumption |  | graphs=1, avg nodes=2708.0, avg edges=5429.0, classes=7 | reported statistics do not uniquely identify a tracked variant |
+| resolved | unknown_variant | Cora | 2403.03676 | Homophilic citation network | 10 | node_classification | Accuracy |  | graphs=1, avg nodes=2708.0, avg edges=5278.0, classes=7 | reported statistics do not uniquely identify a tracked variant |
+| resolved | unknown_variant | Cora | 2403.04780 | Citation network dataset used for homogeneous node classification. | 10 | node_classification | Micro-F1, Macro-F1 |  | graphs=1, avg nodes=2708.0, avg edges=5429.0, classes=7 | reported statistics do not uniquely identify a tracked variant |
+| resolved | unknown_variant | Cora | 2405.20652 |  | 12 | node_classification | Accuracy |  | graphs=1, avg nodes=2708.0, avg edges=5278.0, classes=7 | reported statistics do not uniquely identify a tracked variant |
+| resolved | unknown_variant | Cora | 2407.19941 | classic graph dataset widely used in research on GNNs and node classification tasks. It consists of 2708 scientific publications classified into one of 7 classes. | 9 | node_classification | Accuracy |  | graphs=2708, classes=7 | reported statistics do not uniquely identify a tracked variant |
+| resolved | unknown_variant | Cora | 2410.01802 | Homophilic dataset used for link prediction. | 10 | link_prediction | AUC, Hits@20 | 70:10:20 split |  | variant hint is not tracked: 70:10:20 split |
+| resolved | unknown_variant | Cora | 2411.19392 | Homophilic graph dataset used for node classification. | 10 | node_classification | Accuracy | Cora-ML |  | variant hint is not tracked: Cora-ML |
+| resolved | unknown_variant | Cora | 2506.20362 | Citation network node classification benchmark | 10 | node_classification | Clean, Random, DICE, GF-Attack, Mettack | Adversarial attack setting |  | variant hint is not tracked: Adversarial attack setting |
+| resolved | unknown_variant | Cora | 2510.04567 | Citation network dataset used for node classification. | 10 | node_classification | Accuracy | 1-shot, 5-shot |  | variant hint is not tracked: 1-shot, 5-shot |
+| resolved | unknown_variant | Cora | 2510.21267 | Dataset with broader scales | 12 | node_classification | Accuracy |  | avg nodes=2708.0, classes=7 | reported statistics do not uniquely identify a tracked variant |
+| resolved | unknown_variant | Cora | 2602.19622 | Node classification dataset used for OOD and ID evaluation | 3 | node_classification | Accuracy | OOD/ID |  | variant hint is not tracked: OOD/ID |
+| resolved | unknown_dataset | Cora-A | 2206.04739 | Cora Co-authorship dataset | 14 | node_classification | Accuracy, NMI, F1, A.P.D. |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | Cora-C | 2206.04739 | Corrupted version of Cora dataset | 14 | node_classification | Accuracy, NMI, F1, A.P.D. |  |  | dataset is not in the catalog |
+| resolved | unknown_variant | Cornell | 2205.09389 | Heterophily graph used for node classification. | 10 | node_classification | Accuracy | medium splitting, sparse and dense splittings |  | variant hint is not tracked: medium splitting, sparse and dense splittings |
+| resolved | unknown_variant | Cornell | 2308.10077 | Structural graph (heterophilic). | 13 | node_classification | Accuracy | Structural |  | variant hint is not tracked: Structural |
+| resolved | unknown_dataset | Cornell5 | 2405.16185 | Heterophilous dataset | 15 | node_classification | Accuracy |  | avg nodes=18660.0, avg edges=790777.0 | dataset is not in the catalog |
+| resolved | unknown_variant | DBLP | 2010.00238 | author graph dataset from the DBLP dataset | 16 | node_classification | Accuracy | semi-supervised | avg nodes=4057.0, avg edges=3528.0, classes=4 | variant hint is not tracked: semi-supervised |
+| resolved | unknown_variant | DBLP | 2103.00959 | DBLP dataset used for network embedding. | 9 | node_classification | Micro-F1 | 5% labeled nodes |  | variant hint is not tracked: 5% labeled nodes |
+| resolved | unknown_dataset | DBLP-coauthor | 2202.13538 | A temporal higher-order network recording co-authorship of papers. | 6 | link_prediction |  |  | graphs=1924991, avg nodes=1924991.0, avg edges=7904336.0 | dataset is not in the catalog |
+| resolved | unknown_variant | deezer | 2205.09389 | Heterophily graph used for node classification. | 10 | node_classification | Accuracy | medium splitting, sparse and dense splittings |  | variant hint is not tracked: medium splitting, sparse and dense splittings |
+| resolved | unknown_variant | FB15K-237 | 2210.02636 | Knowledge graph dataset for link prediction. | 5 | link_prediction | MRR | transductive |  | variant hint is not tracked: transductive |
+| resolved | unknown_variant | Lipophilicity | 2404.11568 | TDC benchmark collection task. | 5 | graph_regression | MAE | AstraZeneca |  | variant hint is not tracked: AstraZeneca |
+| resolved | unknown_dataset | Meta-Citeseer | 2403.03676 | Meta-learning variant of CiteSeer | 6 | node_classification | Accuracy | Meta-learning variant |  | dataset is not in the catalog |
+| resolved | unknown_dataset | molclintox | 2402.07191 | OGB molecular dataset. | 3 | graph_classification | ROC-AUC |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | molclintox | 2405.01350 | OGB chemical molecular dataset for unsupervised classification | 7 | graph_classification | ROC-AUC |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | molfreesolv | 2405.01350 | OGB chemical molecular dataset for unsupervised graph regression | 7 | graph_regression | RMSE |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | molsider | 2402.07191 | OGB molecular dataset. | 3 | graph_classification | ROC-AUC |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | molsider | 2405.01350 | OGB chemical molecular dataset for unsupervised classification | 7 | graph_classification | ROC-AUC |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | moltox21 | 2402.07191 | OGB molecular dataset. | 3 | graph_classification | ROC-AUC |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | moltox21 | 2405.01350 | OGB chemical molecular dataset for unsupervised classification | 7 | graph_classification | ROC-AUC |  |  | dataset is not in the catalog |
 | resolved | unknown_dataset | MovieLen-20M | 2308.05697 |  |  |  | R@5 |  |  | dataset is not in the catalog |
 | resolved | unknown_dataset | MovieLens | 1704.06803 |  |  |  | RMSE |  |  | dataset is not in the catalog |
 | resolved | unknown_dataset | MovieLens | 1705.07664 |  |  |  | RMSE |  |  | dataset is not in the catalog |
@@ -8173,7 +8124,56 @@ ightarrow$EN | 2104.06608 |  |  |  | Hits@1, Hits@10, Hits@50 |  |  | dataset is
 | resolved | unknown_dataset | MovieLens-20M | 1905.04413 |  |  |  | AUC, Recall@10, Recall@100, Recall@2, Recall@50 |  |  | dataset is not in the catalog |
 | resolved | unknown_dataset | Movielens-25M | 2307.05100 |  |  |  | NDCG@20 |  |  | dataset is not in the catalog |
 | resolved | unknown_dataset | MovieLens_1M | 2402.09711 |  |  |  | Hits@10 |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | O.-Proteins | 2205.09389 | Heterophily graph used for node classification. | 10 | node_classification | Accuracy | medium splitting |  | dataset is not in the catalog |
+| resolved | unknown_dataset | ogbg-code | 2401.16011 | large-scale OGB dataset for semi-supervised learning |  | graph_classification | F1 |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | ogbg-molbbbp | 2305.15747 | Open Graph Benchmark dataset for graph classification | 2 | graph_classification | ROC-AUC |  |  | dataset is not in the catalog |
+| resolved | unknown_variant | ogbg-molhiv | 2211.14568 | Graph classification dataset used in Domain-IL setting. | 8 | graph_classification | FWT | Domain-IL |  | variant hint is not tracked: Domain-IL |
+| resolved | unknown_variant | ogbg-ppa | 2211.14568 | Graph classification dataset used in Domain-IL setting. | 8 | graph_classification | FWT | Domain-IL |  | variant hint is not tracked: Domain-IL |
+| resolved | unknown_variant | ogbn-arxiv | 2010.00238 | paper citation graph dataset | 16 | node_classification | Accuracy | semi-supervised | avg nodes=169343.0, avg edges=1166243.0, classes=40 | variant hint is not tracked: semi-supervised |
+| resolved | unknown_variant | ogbn-arxiv | 2211.14568 | Node classification dataset used in Task-IL and Class-IL settings. | 12 | node_classification | AP, AF, INT | Task-IL / Class-IL |  | variant hint is not tracked: Task-IL / Class-IL |
+| resolved | unknown_variant | ogbn-arxiv | 2408.13471 | Large-scale citation network for node classification. | 2 | node_classification | Accuracy | approximate sampling |  | variant hint is not tracked: approximate sampling |
+| resolved | unknown_variant | ogbn-products | 2408.13471 | Large-scale product network for node classification. | 2 | node_classification | Accuracy | approximate sampling |  | variant hint is not tracked: approximate sampling |
+| resolved | unknown_variant | ogbn-proteins | 2211.14568 | Node classification dataset used in Domain-IL setting. | 12 | node_classification | AP, AF, INT, FWT | Domain-IL |  | variant hint is not tracked: Domain-IL |
+| resolved | unknown_dataset | ogbproteins | 2311.01038 | Large-scale protein dataset used for node classification. | 10 | node_classification | Micro F1 |  |  | dataset is not in the catalog |
+| resolved | unknown_variant | PPI | 2103.00959 | Protein-protein interaction dataset used for network embedding and node classification. | 9 | node_classification | Micro-F1 | 50% labeled nodes |  | variant hint is not tracked: 50% labeled nodes |
+| resolved | unknown_variant | PPI | 2503.19666 | Protein-Protein Interaction dataset. | 4 | node_classification | FLOPs, Time, Accuracy | transductive/inductive |  | variant hint is not tracked: transductive/inductive |
+| resolved | unknown_variant | PPI | 2506.20362 | Protein-protein interaction dataset | 10 | graph_classification | Micro-F1 | Inductive task | classes=121 | variant hint is not tracked: Inductive task |
+| resolved | unknown_dataset | Products | 2404.15354 | Benchmark node classification dataset. |  | node_classification | Accuracy |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | Products | 2506.08298 | Homogeneous Text-Attributed Graph (HoTAG) | 4 | node_classification | Accuracy |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | Products | 2605.24867 | Dataset used for node classification and link prediction (likely refers to ogbn-products). | 11 | link_prediction | Accuracy (%) |  |  | dataset is not in the catalog |
 | resolved | unknown_dataset | PROTEINS-full | 2102.07835 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
+| resolved | unknown_variant | Pubmed | 2010.00238 | paper citation graph dataset | 16 | node_classification | Accuracy | semi-supervised | avg nodes=19717.0, avg edges=88648.0, classes=3 | variant hint is not tracked: semi-supervised |
+| resolved | unknown_variant | Pubmed | 2305.19903 | Node and link prediction task. | 4 | node_classification | Accuracy | layer = 2/3 |  | variant hint is not tracked: layer = 2/3 |
+| resolved | unknown_variant | PubMed | 2308.10077 | Proximity graph (homophilic). | 13 | node_classification | Accuracy | Proximity |  | variant hint is not tracked: Proximity |
+| resolved | unknown_variant | PubMed | 2410.01802 | Homophilic dataset used for link prediction. | 5 | link_prediction | AUC, Hits@20 | 70:10:20 split |  | variant hint is not tracked: 70:10:20 split |
+| resolved | unknown_variant | PubMed | 2506.08298 | Homogeneous Text-Attributed Graph (HoTAG) | 4 | node_classification | Accuracy | zero-shot/fine-tuning |  | variant hint is not tracked: zero-shot/fine-tuning |
+| resolved | unknown_variant | Pubmed | 2510.04567 | Citation network dataset used for node classification. | 10 | node_classification | Accuracy | 1-shot, 5-shot |  | variant hint is not tracked: 1-shot, 5-shot |
+| resolved | unknown_dataset | Question | 2506.19343 | Large heterophilic graph dataset used for node classification. | 10 | node_classification | ROC-AUC |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | REDDIT-B | 2103.00959 | REDDIT-B dataset used for graph classification. | 1 | graph_classification | Accuracy |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | REDDIT-B | 2404.15806 | Reddit Binary dataset used for unsupervised representation learning. | 10 | graph_classification | Accuracy |  | graphs=2000, avg nodes=429.63, avg edges=497.75, classes=2 | dataset is not in the catalog |
+| resolved | unknown_dataset | REDDIT-B | 2408.13471 | Social network dataset for graph classification. | 5 | graph_classification | Accuracy |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | REDDIT-MULTI-12K | 2401.16011 | graph property prediction benchmark for clustering | 6 | graph_classification | NMI, ACC, ARI |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | rMD17 | 2210.16518 | 10 small organic molecules for molecular dynamics simulation | 8 | graph_regression | MAE, energy (kcal/mol), force (kcal/mol/Å) |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | Roman Empire | 2604.08980 | Heterophilic graph used for node classification. | 12 | node_classification | Accuracy |  | graphs=1, avg nodes=22662.0, avg edges=32927.0, classes=18 | dataset is not in the catalog |
+| resolved | unknown_dataset | SBM graph | 2505.11298 | Stochastic Block Model graphs used for Task 1. |  | graph_classification | Train Accuracy, Test Accuracy |  | graphs=3000, classes=2 | dataset is not in the catalog |
+| resolved | unknown_dataset | Shapenet | 2503.19666 | 3D shape dataset, specifically 'Airplane' category. | 4 | node_regression | Mean test IoU, Average epoch time | Airplane |  | dataset is not in the catalog |
+| resolved | unknown_variant | Squirrel | 2106.06134 | Heterophilous dataset used for SSNC | 7 | node_classification | Accuracy |  | graphs=1, avg nodes=5201.0, avg edges=217073.0, classes=5 | variant could not be uniquely resolved from the catalog |
+| resolved | unknown_variant | Squirrel | 2205.09389 | Heterophily graph used for node classification. | 10 | node_classification | Accuracy | medium splitting, sparse and dense splittings |  | variant hint is not tracked: medium splitting, sparse and dense splittings |
+| resolved | unknown_variant | Squirrel | 2308.10077 | Mixed graph (heterophilic). | 13 | node_classification | Accuracy | Mixed |  | variant hint is not tracked: Mixed |
+| resolved | unknown_variant | Squirrel | 2406.01249 | Heterophilic node classification dataset. | 10 | node_classification | Accuracy, Average running time per epoch(ms), average total running time(s) | original and filtered |  | variant hint is not tracked: original and filtered |
+| resolved | unknown_variant | Texas | 2205.09389 | Heterophily graph used for node classification. | 10 | node_classification | Accuracy | medium splitting, sparse and dense splittings |  | variant hint is not tracked: medium splitting, sparse and dense splittings |
+| resolved | unknown_variant | Texas | 2308.10077 | Structural graph (heterophilic). | 13 | node_classification | Accuracy | Structural |  | variant hint is not tracked: Structural |
+| resolved | unknown_dataset | twitch-gamer | 2210.05382 | Large scale graph with relatively low homophily. | 12 | node_classification | Accuracy |  | graphs=1, avg nodes=168114.0, avg edges=6797557.0, classes=2 | dataset is not in the catalog |
+| resolved | unknown_dataset | Twitch-gamer | 2506.19343 | Large heterophilic graph dataset used for node classification. | 10 | node_classification | Accuracy |  |  | dataset is not in the catalog |
+| resolved | unknown_dataset | twitch-gamer | 2510.21267 | Dataset with broader scales | 12 | node_classification | Accuracy |  | avg nodes=168114.0, classes=2 | dataset is not in the catalog |
+| resolved | unknown_variant | twitch-gamers | 2602.19622 | Node classification dataset used for OOD and ID evaluation | 3 | node_classification | Accuracy | OOD1/OOD2/OOD3/ID |  | variant hint is not tracked: OOD1/OOD2/OOD3/ID |
+| resolved | unknown_variant | WikiCS | 2506.08298 | Homogeneous Text-Attributed Graph (HoTAG) | 4 | node_classification | Accuracy | zero-shot/fine-tuning |  | variant hint is not tracked: zero-shot/fine-tuning |
+| resolved | unknown_variant | WikiCS | 2510.04567 | Citation network dataset used for node classification. | 10 | node_classification | Accuracy | 1-shot, 5-shot |  | variant hint is not tracked: 1-shot, 5-shot |
+| resolved | unknown_variant | Wisconsin | 2205.09389 | Heterophily graph used for node classification. | 10 | node_classification | Accuracy | medium splitting, sparse and dense splittings |  | variant hint is not tracked: medium splitting, sparse and dense splittings |
+| resolved | unknown_variant | Wisconsin | 2308.10077 | Structural graph (heterophilic). | 13 | node_classification | Accuracy | Structural |  | variant hint is not tracked: Structural |
+| resolved | unknown_variant | WN18RR | 2210.02636 | Knowledge graph dataset for link prediction. | 5 | link_prediction | MRR | transductive |  | variant hint is not tracked: transductive |
+| resolved | unknown_variant | ZINC | 2211.14568 | Graph regression dataset used in Domain-IL setting. | 8 | graph_regression | FWT | Domain-IL |  | variant hint is not tracked: Domain-IL |
+| resolved | unknown_variant | ZINC | 2502.16233 | molecular solubility regression task (ZINC12K subset) | 11 | graph_regression | MAE | ZINC12K | graphs=12000, avg nodes=23.2, avg edges=24.9 | variant hint is not tracked: ZINC12K |
 
 ### Already covered now
 

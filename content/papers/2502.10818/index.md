@@ -96,6 +96,7 @@ task_categories:
 - graph_classification
 - graph_regression
 - node_classification
+- node_regression
 experiment_scopes:
 - graph-level
 - node-level
@@ -419,7 +420,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id006
+- &id007
   dataset: Eccentricity
   rows:
   - model: GCN-SSM + k-hop
@@ -989,8 +990,8 @@ results:
     value_note: ''
     sort_value: 0.4296
     sort_std: 0.1003
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1057,8 +1058,8 @@ results:
     value_note: ''
     sort_value: 0.6077
     sort_std: 0.0282
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1098,13 +1099,12 @@ results:
     date_iso: '2025-02-15'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.6602
-    at_pub_std: 0.1393
-    at_pub_source_arxiv: '2210.09789'
-    at_pub_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    at_pub_source_date_iso: '2022-10-18'
-    at_pub_source_date_label: ICLR 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2025-05-24'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -1126,8 +1126,8 @@ results:
     value_note: ''
     sort_value: 0.6602
     sort_std: 0.1393
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1194,8 +1194,8 @@ results:
     value_note: ''
     sort_value: 0.6833
     sort_std: 0.0074
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1235,13 +1235,12 @@ results:
     date_iso: '2025-02-15'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.764
-    at_pub_std: 0.0355
-    at_pub_source_arxiv: '2210.09789'
-    at_pub_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    at_pub_source_date_iso: '2022-10-18'
-    at_pub_source_date_label: ICLR 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2025-05-24'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -1263,8 +1262,8 @@ results:
     value_note: ''
     sort_value: 0.764
     sort_std: 0.0355
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 14
+    paper_rank: 14
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1304,13 +1303,12 @@ results:
     date_iso: '2025-02-15'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.7863
-    at_pub_std: 0.0207
-    at_pub_source_arxiv: '2210.09789'
-    at_pub_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    at_pub_source_date_iso: '2022-10-18'
-    at_pub_source_date_label: ICLR 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2025-05-24'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -1332,8 +1330,8 @@ results:
     value_note: ''
     sort_value: 0.7863
     sort_std: 0.0207
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1373,13 +1371,12 @@ results:
     date_iso: '2025-02-15'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.7909
-    at_pub_std: 0.0222
-    at_pub_source_arxiv: '2210.09789'
-    at_pub_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    at_pub_source_date_iso: '2022-10-18'
-    at_pub_source_date_label: ICLR 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2025-05-24'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -1401,8 +1398,8 @@ results:
     value_note: ''
     sort_value: 0.7909
     sort_std: 0.0222
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 16
+    paper_rank: 16
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1442,13 +1439,12 @@ results:
     date_iso: '2025-02-15'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.8261
-    at_pub_std: 0.0032
-    at_pub_source_arxiv: '2210.09789'
-    at_pub_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    at_pub_source_date_iso: '2022-10-18'
-    at_pub_source_date_label: ICLR 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2025-05-24'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -1470,8 +1466,8 @@ results:
     value_note: ''
     sort_value: 0.8261
     sort_std: 0.0032
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1511,13 +1507,12 @@ results:
     date_iso: '2025-02-15'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.8468
-    at_pub_std: 0.0028
-    at_pub_source_arxiv: '2210.09789'
-    at_pub_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    at_pub_source_date_iso: '2022-10-18'
-    at_pub_source_date_label: ICLR 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2025-05-24'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -1539,8 +1534,8 @@ results:
     value_note: ''
     sort_value: 0.8468
     sort_std: 0.0028
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1580,13 +1575,12 @@ results:
     date_iso: '2025-02-15'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.9504
-    at_pub_std: 0.0007
-    at_pub_source_arxiv: '2210.09789'
-    at_pub_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    at_pub_source_date_iso: '2022-10-18'
-    at_pub_source_date_label: ICLR 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2025-05-24'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -1608,8 +1602,8 @@ results:
     value_note: ''
     sort_value: 0.9504
     sort_std: 0.0007
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1621,7 +1615,7 @@ results:
     is_std_outlier: false
   rank_metric: MSE
   higher_is_better: false
-  experiment_scope: graph-level
+  experiment_scope: node-level
   dataset_primary_metric: MSE
   paper_metrics:
   - MSE
@@ -2886,7 +2880,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id007
+- &id006
   dataset: SSSP
   rows:
   - model: PH-DGN
@@ -3871,13 +3865,12 @@ results:
     date_iso: '2025-02-15'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.2863
-    at_pub_std: 0.1843
-    at_pub_source_arxiv: '2210.09789'
-    at_pub_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    at_pub_source_date_iso: '2022-10-18'
-    at_pub_source_date_label: ICLR 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2025-02-15'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -3940,13 +3933,12 @@ results:
     date_iso: '2025-02-15'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.6951
-    at_pub_std: 0.1499
-    at_pub_source_arxiv: '2210.09789'
-    at_pub_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    at_pub_source_date_iso: '2022-10-18'
-    at_pub_source_date_label: ICLR 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2025-02-15'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -4009,13 +4001,12 @@ results:
     date_iso: '2025-02-15'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.9499
-    at_pub_std: 9.18e-05
-    at_pub_source_arxiv: '2210.09789'
-    at_pub_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    at_pub_source_date_iso: '2022-10-18'
-    at_pub_source_date_label: ICLR 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2025-02-15'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -4050,7 +4041,7 @@ results:
     is_std_outlier: false
   rank_metric: MSE
   higher_is_better: false
-  experiment_scope: graph-level
+  experiment_scope: node-level
   dataset_primary_metric: MSE
   paper_metrics:
   - MSE
@@ -4084,6 +4075,13 @@ datasets_by_scope:
       dataset_slug: amazon-ratings
     - dataset: Minesweeper
       dataset_slug: minesweeper
+  - benchmark: Algorithmic Graph Tasks
+    benchmark_slug: algorithmic-graph-tasks
+    datasets:
+    - dataset: SSSP
+      dataset_slug: sssp
+    - dataset: Eccentricity
+      dataset_slug: eccentricity
 - scope: graph-level
   label: Graph-level
   benchmarks:
@@ -4094,13 +4092,6 @@ datasets_by_scope:
       dataset_slug: peptides-struct
     - dataset: Peptides-func
       dataset_slug: peptides-func
-  - benchmark: Algorithmic Graph Tasks
-    benchmark_slug: algorithmic-graph-tasks
-    datasets:
-    - dataset: Eccentricity
-      dataset_slug: eccentricity
-    - dataset: SSSP
-      dataset_slug: sssp
 main_figure: /figures/2502.10818/main_figure.jpegoptim.jpg
 ---
 

@@ -3,7 +3,31 @@ title: Wisconsin
 slug: wisconsin
 benchmark: Heterophilic Graphs
 task_type: node_classification
-description: WebKB node classification on Wisconsin university webpages (5 classes).
+short_description: WebKB node classification on Wisconsin university webpages (5 classes).
+description: '**5-class node classification** WebKB node classification on Wisconsin
+  university webpages (5 classes). Uses the Geom-GCN/PyG node features and graph.
+  Evaluated by Accuracy.'
+detailed_description:
+  task: WebKB node classification on Wisconsin university webpages (5 classes). The
+    primary catalog metric is Accuracy.
+  data: WebKB node classification on Wisconsin university webpages (5 classes).
+  features: 'Features and edges follow the Geom-GCN/PyG artifact: WebKB uses webpage
+    bag-of-words and hyperlinks, Actor uses film-page keywords and co-occurrence links,
+    and WikipediaNetwork uses page features and hyperlinks.'
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses Accuracy (higher is better). Exact masks or folds must
+    come from the cited release.'
+  quirks_and_pitfalls: These small or repurposed graphs have contested preprocessing
+    and split conventions. Results across Geom-GCN, PyG, and corrected heterophily
+    artifacts are not automatically comparable; class imbalance and high variance
+    require multiple splits.
+sources:
+- title: Heterophilic Graphs benchmark
+  arxiv_id: '2110.14446'
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric Wisconsin loader documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.WebKB.html
+  kind: implementation_documentation
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.WebKB.html

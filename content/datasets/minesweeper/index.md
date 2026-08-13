@@ -3,8 +3,32 @@ title: Minesweeper
 slug: minesweeper
 benchmark: Heterophily Benchmark
 task_type: node_classification
-description: Synthetic Minesweeper grid graph binary node classification from the
-  heterophilic benchmark.
+short_description: Synthetic Minesweeper grid graph binary node classification from
+  the heterophilic benchmark.
+description: '**Binary node classification** Synthetic Minesweeper grid graph binary
+  node classification from the heterophilic benchmark. Uses the corrected benchmark
+  features and ten official splits. Evaluated by ROC-AUC.'
+detailed_description:
+  task: Synthetic Minesweeper grid graph binary node classification from the heterophilic
+    benchmark. The primary catalog metric is ROC-AUC.
+  data: Synthetic Minesweeper grid graph binary node classification from the heterophilic
+    benchmark.
+  features: The benchmark provides one fixed graph, node features, labels, and ten
+    official splits per dataset. Features are dataset-specific and include text-derived,
+    product, synthetic-grid, or platform-account attributes described by the release.
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses ROC-AUC (higher is better). Exact masks or folds must come
+    from the cited release.'
+  quirks_and_pitfalls: Use the corrected release and its ten masks. Several tasks
+    are imbalanced and use ROC-AUC rather than accuracy; treating missing relationships
+    as negative evidence or tuning on the test masks invalidates comparison.
+sources:
+- title: Heterophily Benchmark benchmark
+  arxiv_id: '2302.11640'
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric Minesweeper loader documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.HeterophilousGraphDataset.html
+  kind: implementation_documentation
 primary_metric: ROC-AUC
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.HeterophilousGraphDataset.html

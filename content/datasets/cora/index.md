@@ -3,15 +3,48 @@ title: Cora
 slug: cora
 benchmark: Classic
 task_type: node_classification
-description: Citation network node classification (7 classes).
+short_description: Predict one of seven research-topic labels for every paper in a
+  single citation network.
+description: '**Node classification** Predict one of seven research-topic labels for
+  every paper in a single citation network. Evaluated by Accuracy.'
+detailed_description:
+  task: Predict one of seven research-topic labels for every paper in a single citation
+    network. The standard Planetoid formulation is transductive, so the features and
+    graph position of validation and test nodes are available during training while
+    their labels are withheld.
+  data: The commonly used Planetoid version contains 2,708 machine-learning papers
+    connected by citation links. It is a processed subset of the larger Cora research-paper
+    collection; other datasets called Cora, including citation-matching corpora and
+    Cora-ML, are not interchangeable with it.
+  features: Each paper has a sparse 1,433-dimensional binary bag-of-words vector indicating
+    selected vocabulary terms. PyG exposes 10,556 directed edge entries after processing
+    the citation relations and reports seven classes.
+  splits_and_evaluation: The fixed public Planetoid split uses 20 labeled training
+    nodes per class, 500 validation nodes, and 1,000 test nodes. Other common protocols
+    include full-label, random, Geom-GCN, and cross-validation splits; their accuracy
+    values should not be pooled with the public split.
+  quirks_and_pitfalls: Cora is small, highly reused, and sensitive to the exact preprocessing
+    and split. Published work sometimes reports results for Cora-ML or a random split
+    simply as Cora. The OGB benchmark paper also reports feature-label leakage and
+    duplicate-node concerns in this processed dataset, reinforcing the need to state
+    the loader and split precisely rather than treating all Cora results as comparable.
+sources:
+- title: Revisiting Semi-Supervised Learning with Graph Embeddings
+  arxiv_id: '1603.08861'
+  kind: split_definition
+- title: PyTorch Geometric Planetoid documentation and loader
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Planetoid.html
+  kind: loader_documentation
+- title: Andrew McCallum's Cora data page
+  url: https://people.cs.umass.edu/mccallum/data.html
+  kind: upstream_data_source
+- title: Open Graph Benchmark
+  arxiv_id: '2005.00687'
+  kind: dataset_audit
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Planetoid.html
-stats:
-  num_graphs: null
-  avg_nodes: null
-  avg_edges: null
-  num_classes: 7
+stats: null
 result_count: 1352
 best_model:
   model: MATE
@@ -955,7 +988,7 @@ variants:
     num_graphs: null
     avg_nodes: null
     avg_edges: null
-    num_classes: 7
+    num_classes: null
   metrics:
   - Accuracy
   - AUC

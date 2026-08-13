@@ -3,8 +3,39 @@ title: ogbn-mag
 slug: ogbn-mag
 benchmark: OGB
 task_type: node_classification
-description: Heterogeneous academic graph node classification (349 venue classes)
-  from OGB.
+short_description: Predict the conference or journal of each paper using paper content,
+  citations, authors, affiliations, and fields of study.
+description: '**349-class node classification** Predict the conference or journal
+  of each paper using paper content, citations, authors, affiliations, and fields
+  of study. Evaluated by Accuracy.'
+detailed_description:
+  task: Predict the conference or journal of each paper using paper content, citations,
+    authors, affiliations, and fields of study. It is a 349-class paper-node classification
+    task scored by accuracy.
+  data: The heterogeneous graph has paper, author, institution, and field-of-study
+    nodes, connected by writes, affiliation, citation, and topic relations. It contains
+    736,389 papers within 1,939,743 total entities.
+  features: Only paper nodes receive standard input features, each a 128-dimensional
+    average word2vec representation of title and abstract. Other entity types must
+    obtain representations from identifiers or graph structure rather than supplied
+    content features.
+  splits_and_evaluation: Papers published before 2018 train the model, 2018 papers
+    validate it, and papers from 2019 onward form test. The complete heterogeneous
+    topology is present in the transductive graph.
+  quirks_and_pitfalls: Venue labels in MAG can be noisy or missing, and the graph
+    snapshot is no longer a live reflection of the scholarly record. Collapsing relation
+    or node types changes the benchmark. Methods using additional author, venue, or
+    text metadata must distinguish it from the standard inputs.
+sources:
+- title: Open Graph Benchmark
+  arxiv_id: '2005.00687'
+  kind: benchmark_definition
+- title: OGB node property prediction documentation
+  url: https://ogb.stanford.edu/docs/nodeprop/#ogbn-mag
+  kind: official_documentation
+- title: Microsoft Academic Graph, When experts are not enough
+  url: https://doi.org/10.1162/qss_a_00021
+  kind: upstream_data_source
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.OGB_MAG.html

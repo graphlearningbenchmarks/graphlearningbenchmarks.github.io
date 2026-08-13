@@ -3,11 +3,45 @@ title: PascalVOC-SP
 slug: pascalvoc-sp
 benchmark: LRGB
 task_type: node_classification
-description: Node classification on superpixel graphs derived from PascalVOC 2011.
+short_description: Assign one of 21 semantic-segmentation labels, including background,
+  to every superpixel node.
+description: '**21-class node classification** Assign one of 21 semantic-segmentation
+  labels, including background, to every superpixel node. Evaluated by F1.'
+detailed_description:
+  task: Assign one of 21 semantic-segmentation labels, including background, to every
+    superpixel node. A superpixel receives the ground-truth class of the pixel at
+    the superpixel's center-of-mass coordinate.
+  data: Each of 11,355 images from the Semantic Boundaries Dataset augmentation of
+    Pascal VOC 2011 becomes one graph. SLIC with compactness 30 produces at most 500
+    image regions, and two regions are connected when they share a boundary in the
+    default region-adjacency graph.
+  features: Each node has 12 RGB summary values—the mean, standard deviation, maximum,
+    and minimum in each channel—plus its two-dimensional center-of-mass coordinate.
+    Each edge stores the average Sobel response and pixel count along the shared boundary.
+  splits_and_evaluation: The original training set remains training data. The original
+    validation set is divided equally into validation and test subsets using a stratified
+    image-level meta-label obtained by majority vote over non-background node labels,
+    yielding 8,498/1,428/1,429 graphs. The score is class-weighted macro F1 over nodes.
+  quirks_and_pitfalls: This is not pixel-level segmentation; labels and predictions
+    are quantized to superpixels, and labeling only from the center pixel can misrepresent
+    mixed regions. LRGB also releases compactness-10 and 8-nearest-neighbor graph
+    variants, whose structures and edge features differ from the default compactness-30
+    region-boundary version.
+sources:
+- title: Long Range Graph Benchmark
+  arxiv_id: '2206.08164'
+  kind: benchmark_definition
+- title: The PASCAL Visual Object Classes Challenge
+  url: http://host.robots.ox.ac.uk/pascal/VOC/pubs/everingham10.pdf
+  kind: upstream_data_source
 primary_metric: F1
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.LRGBDataset.html
-stats: null
+stats:
+  num_graphs: 11355
+  avg_nodes: 479.4
+  avg_edges: 2710.48
+  num_classes: 21
 result_count: 130
 best_model:
   model: NeuralWalker
@@ -119,10 +153,10 @@ variants:
   default_metric: F1
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
-    num_classes: null
+    num_graphs: 11355
+    avg_nodes: 479.4
+    avg_edges: 2710.48
+    num_classes: 21
   metrics:
   - F1
   - fraction of nodes satisfying $\Delta_n(z_m)>0$

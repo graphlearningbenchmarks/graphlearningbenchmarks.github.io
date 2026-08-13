@@ -3,8 +3,32 @@ title: Case 2
 slug: case-2
 benchmark: Power Flow Benchmarks
 task_type: graph_regression
-description: Power flow analysis on IEEE test case 2 (medium power grid, node-level
-  regression).
+short_description: Jointly predict bus active/reactive power and voltage magnitude
+  plus directional branch active/reactive flows on a real provincial grid.
+description: '**Joint node-and-edge regression** Jointly predict bus active/reactive
+  power and voltage magnitude plus directional branch active/reactive flows on a real
+  provincial grid. Evaluated by Accuracy.'
+detailed_description:
+  task: Jointly predict bus active/reactive power and voltage magnitude plus directional
+    branch active/reactive flows on a real provincial grid. Accuracy requires every
+    voltage and branch-error threshold to be met for a sample.
+  data: Case II uses 366 days of operational data from an unnamed Chinese provincial
+    grid. The first 300 days generate 500,000 training and 100,000 test samples; the
+    remaining 66 days yield about 150,000 generalization samples with 300--690 buses.
+  features: Nodes represent buses with electrical quantities and edges represent transmission
+    elements with network parameters. Inputs, targets, units, slack-bus treatment,
+    and feasibility status follow the benchmark case generator.
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses Accuracy (higher is better). Exact masks or folds must
+    come from the cited release.'
+  quirks_and_pitfalls: Only converged, feasible operating points should be compared
+    under the documented policy. Per-unit conventions, topology changes, solver tolerances,
+    and bus-type handling can silently alter labels; these cases do not establish
+    transfer to real grids.
+sources:
+- title: Power Flow Benchmarks benchmark
+  arxiv_id: '2601.01387'
+  kind: benchmark_or_upstream_source
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: ''

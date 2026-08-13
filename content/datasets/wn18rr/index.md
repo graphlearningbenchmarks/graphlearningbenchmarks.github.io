@@ -3,7 +3,33 @@ title: WN18RR
 slug: wn18rr
 benchmark: Knowledge Graphs
 task_type: link_prediction
-description: Knowledge graph link prediction on WordNet (40,943 entities, 11 relations).
+short_description: Knowledge graph link prediction on WordNet (40,943 entities, 11
+  relations).
+description: '**11-relation knowledge-graph completion** Knowledge graph link prediction
+  on WordNet (40,943 entities, 11 relations). Inputs are directed subject-relation-object
+  triples with learned embeddings. Filtered ranking is required; WN18 has inverse-relation
+  leakage. Evaluated by MRR.'
+detailed_description:
+  task: Knowledge graph link prediction on WordNet (40,943 entities, 11 relations).
+    The primary catalog metric is MRR.
+  data: Knowledge graph link prediction on WordNet (40,943 entities, 11 relations).
+    The cataloged artifact reports 1 graphs, 11 target classes or tasks.
+  features: The raw input is a set of directed subject-relation-object triples. Entity
+    and relation embeddings are learned inputs; reciprocal edges, inverse relations,
+    and filtered candidate sets are evaluation or preprocessing choices.
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses MRR (higher is better). Exact masks or folds must come
+    from the cited release.'
+  quirks_and_pitfalls: Filtered ranking removes other known true triples but the graph
+    is incomplete, so sampled corruptions can be false negatives. WN18 and FB15k contain
+    inverse-relation leakage; use WN18RR or FB15k-237 when evaluating relational generalization.
+sources:
+- title: Convolutional 2D Knowledge Graph Embeddings
+  arxiv_id: '1707.01476'
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric WN18RR loader documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.WordNet18RR.html
+  kind: implementation_documentation
 primary_metric: MRR
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.WordNet18RR.html

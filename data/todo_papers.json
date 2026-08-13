@@ -7465,7 +7465,7 @@
     {
       "arxiv_id": "2101.03164",
       "title": "E(3)-Equivariant Graph Neural Networks for Data-Efficient and Accurate Interatomic Potentials",
-      "status": "done",
+      "status": "pending",
       "seen_count": 156,
       "is_manually_important": true,
       "seen_from": [
@@ -13995,7 +13995,7 @@
     {
       "arxiv_id": "2102.05013",
       "title": "Spherical Message Passing for 3D Molecular Graphs",
-      "status": "done",
+      "status": "pending",
       "seen_count": 101,
       "is_manually_important": true,
       "seen_from": [
@@ -29489,7 +29489,7 @@
     {
       "arxiv_id": "2305.18407",
       "title": "A Group Symmetric Stochastic Differential Equation Model for Molecule Multi-modal Pretraining",
-      "status": "done",
+      "status": "pending",
       "seen_count": 44,
       "is_manually_important": true,
       "seen_from": [
@@ -32667,7 +32667,7 @@
     {
       "arxiv_id": "2210.07237",
       "title": "Forces are not Enough: Benchmark and Critical Evaluation for Machine Learning Force Fields with Molecular Simulations",
-      "status": "done",
+      "status": "pending",
       "seen_count": 39,
       "is_manually_important": true,
       "seen_from": [
@@ -36638,7 +36638,7 @@
     {
       "arxiv_id": "2205.06643",
       "title": "The design space of E(3)-equivariant atom-centred interatomic potentials",
-      "status": "done",
+      "status": "pending",
       "seen_count": 33,
       "is_manually_important": true,
       "seen_from": [
@@ -37614,7 +37614,7 @@
     {
       "arxiv_id": "2105.00304",
       "title": "SpookyNet: Learning force fields with electronic degrees of freedom and nonlocal effects",
-      "status": "done",
+      "status": "pending",
       "seen_count": 32,
       "is_manually_important": true,
       "seen_from": [

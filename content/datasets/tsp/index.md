@@ -3,8 +3,33 @@ title: TSP
 slug: tsp
 benchmark: GNNBenchmark
 task_type: link_prediction
-description: Travelling salesman problem — edge classification (in/not in optimal
+short_description: Travelling salesman problem — edge classification (in/not in optimal
   tour).
+description: '**Binary edge classification** Travelling salesman problem — edge classification
+  (in/not in optimal tour). Uses the benchmark-provided synthetic or superpixel node/edge
+  features. Evaluated by F1.'
+detailed_description:
+  task: Travelling salesman problem — edge classification (in/not in optimal tour).
+    The primary catalog metric is F1.
+  data: Travelling salesman problem — edge classification (in/not in optimal tour).
+  features: The benchmark release supplies fixed graph tensors and task-specific node
+    or edge inputs. Image graphs use superpixel appearance and position, synthetic
+    node tasks use generated signals, TSP uses coordinates, and CSL is intentionally
+    featureless.
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses F1 (higher is better). Exact masks or folds must come from
+    the cited release.'
+  quirks_and_pitfalls: Use the released train/validation/test files rather than resplitting.
+    These tasks were designed to expose specific architectural limitations, and preprocessing
+    such as changing superpixels, adding positional encodings, or balancing edge labels
+    changes the benchmark.
+sources:
+- title: GNNBenchmark benchmark
+  arxiv_id: '2003.00982'
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric TSP loader documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.GNNBenchmarkDataset.html
+  kind: implementation_documentation
 primary_metric: F1
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.GNNBenchmarkDataset.html

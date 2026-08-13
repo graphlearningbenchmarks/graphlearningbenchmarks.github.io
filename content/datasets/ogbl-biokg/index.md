@@ -3,7 +3,38 @@ title: ogbl-biokg
 slug: ogbl-biokg
 benchmark: OGB
 task_type: link_prediction
-description: Biological knowledge graph link prediction (5 entity types, 51 relations).
+short_description: Predict missing biomedical triples by ranking the true head or
+  tail above sampled replacements of the same entity type.
+description: '**Link prediction** Predict missing biomedical triples by ranking the
+  true head or tail above sampled replacements of the same entity type. Evaluated
+  by MRR.'
+detailed_description:
+  task: Predict missing biomedical triples by ranking the true head or tail above
+    sampled replacements of the same entity type. The official metric is filtered
+    mean reciprocal rank.
+  data: The aggregate graph has 93,773 diseases, proteins, drugs, side effects, and
+    protein functions joined by 51 directed relation types. These include 38 drug-drug
+    and eight protein-protein relations plus drug-protein, drug-side-effect, and function
+    relations.
+  features: The standard task provides entity types, relation types, and graph structure
+    but no unified molecular, sequence, or textual node feature matrix. Same-type
+    relations are represented symmetrically with both directions.
+  splits_and_evaluation: Triples are randomly split because reliable timestamps for
+    the underlying experiments and observations could not be recovered. Negative heads
+    and tails are sampled only from the correct entity type and filtered against known
+    triples.
+  quirks_and_pitfalls: The source repositories mix experimental measurements, curated
+    annotations, and automatically extracted metadata with different confidence and
+    possible contradictions. Random splitting can place closely related evidence across
+    splits, and missing facts are not reliable negatives. External biomedical features
+    must be disclosed.
+sources:
+- title: Open Graph Benchmark
+  arxiv_id: '2005.00687'
+  kind: benchmark_definition
+- title: OGB link property prediction documentation
+  url: https://ogb.stanford.edu/docs/linkprop/#ogbl-biokg
+  kind: official_documentation
 primary_metric: MRR
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.OGBLinkPropPredDataset.html

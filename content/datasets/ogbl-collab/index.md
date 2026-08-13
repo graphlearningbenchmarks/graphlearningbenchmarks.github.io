@@ -3,7 +3,39 @@ title: ogbl-collab
 slug: ogbl-collab
 benchmark: OGB
 task_type: link_prediction
-description: Link prediction on academic collaboration network (author co-authorship).
+short_description: Rank future author-author collaboration edges above sampled non-edges,
+  given collaborations observed in earlier years.
+description: '**Link prediction** Rank future author-author collaboration edges above
+  sampled non-edges, given collaborations observed in earlier years. Each author has
+  a 128-dimensional vector obtained by averaging word embeddings over that author''s
+  papers. Evaluated by Hits@50.'
+detailed_description:
+  task: Rank future author-author collaboration edges above sampled non-edges, given
+    collaborations observed in earlier years. The official score is Hits@50 against
+    100,000 sampled negative pairs per positive edge.
+  data: The undirected graph is a MAG subset with 235,868 author nodes. Multiple collaborations
+    between the same authors in different years remain separate temporal edges; edge
+    weight records the number of jointly authored papers in that year.
+  features: Each author has a 128-dimensional vector obtained by averaging word embeddings
+    over that author's papers. Edges carry year and collaboration-count metadata.
+  splits_and_evaluation: Edges through 2017 are training data, 2018 collaborations
+    validate the model, and 2019 collaborations form test. OGB permits adding validation
+    edges when making test predictions, so evaluation code must state which historical
+    graph is used.
+  quirks_and_pitfalls: Sampled-negative Hits@50 is not equivalent to ranking every
+    absent edge, and absence of an edge does not prove two authors will never collaborate.
+    Treating yearly parallel edges as one static edge loses timing and weight information.
+    Random edge splits leak future collaboration patterns.
+sources:
+- title: Open Graph Benchmark
+  arxiv_id: '2005.00687'
+  kind: benchmark_definition
+- title: OGB link property prediction documentation
+  url: https://ogb.stanford.edu/docs/linkprop/#ogbl-collab
+  kind: official_documentation
+- title: Microsoft Academic Graph, When experts are not enough
+  url: https://doi.org/10.1162/qss_a_00021
+  kind: upstream_data_source
 primary_metric: Hits@50
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.OGBLinkPropPredDataset.html

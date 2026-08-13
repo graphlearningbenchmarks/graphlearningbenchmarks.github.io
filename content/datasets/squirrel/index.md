@@ -3,7 +3,32 @@ title: Squirrel
 slug: squirrel
 benchmark: Heterophilic Graphs
 task_type: node_classification
-description: Wikipedia Squirrel page node classification (5 classes, heterophilic).
+short_description: Wikipedia Squirrel page node classification (5 classes, heterophilic).
+description: '**5-class node classification** Wikipedia Squirrel page node classification
+  (5 classes, heterophilic). Uses the Geom-GCN/PyG node features and graph. Evaluated
+  by Accuracy.'
+detailed_description:
+  task: Wikipedia Squirrel page node classification (5 classes, heterophilic). The
+    primary catalog metric is Accuracy.
+  data: Wikipedia Squirrel page node classification (5 classes, heterophilic). The
+    cataloged artifact reports 1 graphs, 5 target classes or tasks.
+  features: 'Features and edges follow the Geom-GCN/PyG artifact: WebKB uses webpage
+    bag-of-words and hyperlinks, Actor uses film-page keywords and co-occurrence links,
+    and WikipediaNetwork uses page features and hyperlinks.'
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split, Filtered split. Evaluation uses Accuracy (higher is better). Exact masks
+    or folds must come from the cited release.'
+  quirks_and_pitfalls: These small or repurposed graphs have contested preprocessing
+    and split conventions. Results across Geom-GCN, PyG, and corrected heterophily
+    artifacts are not automatically comparable; class imbalance and high variance
+    require multiple splits.
+sources:
+- title: Heterophilic Graphs benchmark
+  arxiv_id: '2110.14446'
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric Squirrel loader documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.WikipediaNetwork.html
+  kind: implementation_documentation
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.WikipediaNetwork.html

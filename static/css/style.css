@@ -2566,6 +2566,59 @@ a.mini-badge-code:focus-visible,
   color: var(--gray-600);
   font-size: 0.92rem;
 }
+.dataset-header .dataset-description p {
+  display: inline;
+  margin: 0;
+}
+.dataset-card-summary {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dataset-research {
+  order: 3;
+  margin-top: 0.35rem;
+}
+.dataset-research-toggle {
+  display: none;
+  margin-left: 0.3rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--blue-600, #2563eb);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+}
+.dataset-research-toggle:hover {
+  text-decoration: underline;
+}
+.dataset-research.is-enhanced .dataset-research-toggle {
+  display: inline-block;
+}
+.dataset-research-details {
+  max-width: 72rem;
+  margin-top: 0.75rem;
+  padding: 1rem;
+  border: 1px solid var(--gray-300);
+  border-radius: 0.5rem;
+}
+.dataset-research-details > h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.15rem;
+}
+.dataset-research-section + .dataset-research-section {
+  margin-top: 0.85rem;
+}
+.dataset-research-section h3 {
+  margin: 0 0 0.2rem;
+  font-size: 0.95rem;
+}
+.dataset-research-section p,
+.dataset-research-sources ul {
+  margin: 0;
+}
 .dataset-header .dataset-stat-blocks {
   flex: 0 0 auto;
   align-items: stretch;
@@ -2777,6 +2830,36 @@ tr.row-historical-sota-match .leaderboard-model-name::before {
 }
 .result-table th.col-value {
   text-align: left;
+}
+@media (min-width: 981px) {
+  .dataset-page .result-table th.col-primary {
+    text-align: left;
+  }
+  .dataset-page .result-table th.col-primary .metric-primary-header-track {
+    display: grid;
+    grid-template-columns: minmax(6.1ch, auto) minmax(6.1ch, auto);
+    justify-content: end;
+    column-gap: 0.28rem;
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  .dataset-page .result-table th.col-primary .metric-primary-header-label {
+    grid-column: 1;
+    justify-self: start;
+    font-size: 0.84rem;
+  }
+  .dataset-page .result-table th.col-primary.sort-asc::after,
+  .dataset-page .result-table th.col-primary.sort-desc::after {
+    content: none;
+  }
+  .dataset-page .result-table th.col-primary.sort-asc .metric-primary-header-label::after {
+    content: " ▲";
+    font-size: 0.75em;
+  }
+  .dataset-page .result-table th.col-primary.sort-desc .metric-primary-header-label::after {
+    content: " ▼";
+    font-size: 0.75em;
+  }
 }
 .result-table td.col-model {
   padding-left: 0.25rem;

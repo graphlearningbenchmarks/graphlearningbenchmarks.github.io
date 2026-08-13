@@ -3,7 +3,39 @@ title: ogbg-ppa
 slug: ogbg-ppa
 benchmark: OGB
 task_type: graph_classification
-description: Protein-protein association subgraph classification (37 taxonomic groups).
+short_description: Given a protein-association neighborhood, predict the broad taxonomic
+  group of its source species.
+description: '**37-class graph classification** Given a protein-association neighborhood,
+  predict the broad taxonomic group of its source species. Nodes carry no intrinsic
+  biological feature in the standard artifact. Evaluated by Accuracy.'
+detailed_description:
+  task: Given a protein-association neighborhood, predict the broad taxonomic group
+    of its source species. The output is one of 37 classes and is scored by accuracy.
+  data: OGB samples 100 center proteins from each of 1,581 STRING species, extracts
+    their two-hop association neighborhoods, removes the center, and subsamples graphs
+    to fewer than 300 protein nodes. The resulting 158,100 graphs cover diverse branches
+    of the tree of life.
+  features: Nodes carry no intrinsic biological feature in the standard artifact.
+    Each association edge has seven confidence values for evidence channels such as
+    co-expression, gene neighborhood, co-occurrence, and gene fusion.
+  splits_and_evaluation: Validation and test graphs come from species absent from
+    training while remaining within the same 37 taxonomic groups. Accuracy therefore
+    measures cross-species generalization rather than memorization of neighborhoods
+    from the same organism.
+  quirks_and_pitfalls: The target is the graph's taxonomic origin, not a protein function.
+    STRING edges mix experimental and computational evidence, and the seven confidence
+    channels can encode species-specific collection patterns. Random graph splits
+    would leak species identity and materially change the task.
+sources:
+- title: Open Graph Benchmark
+  arxiv_id: '2005.00687'
+  kind: benchmark_definition
+- title: STRING v11
+  url: https://doi.org/10.1093/nar/gky1131
+  kind: upstream_data_source
+- title: Evolution of resilience in protein interactomes across the tree of life
+  url: https://doi.org/10.1073/pnas.1818013116
+  kind: construction_source
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://ogb.stanford.edu/docs/graphprop/#ogbg-ppa

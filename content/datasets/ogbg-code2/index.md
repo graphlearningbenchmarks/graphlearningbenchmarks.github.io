@@ -3,7 +3,44 @@ title: ogbg-code2
 slug: ogbg-code2
 benchmark: OGB
 task_type: graph_classification
-description: Code AST-level method name prediction (ogbg-code2). 452k Python snippets.
+short_description: Predict the subtokens in a Python method's name from the method
+  body represented as an abstract syntax tree.
+description: '**Set-valued graph prediction** Predict the subtokens in a Python method''s
+  name from the method body represented as an abstract syntax tree. Evaluated by F1.'
+detailed_description:
+  task: Predict the subtokens in a Python method's name from the method body represented
+    as an abstract syntax tree. The graph-level output is a sequence, but the official
+    F1 score compares sets of predicted and reference subtokens and therefore does
+    not reward the correct subtoken order.
+  data: The 452,741 methods originate from CodeSearchNet and were extracted from 13,587
+    popular GitHub repositories. OGB parses each method into an abstract syntax tree
+    and augments the tree with next-token edges; inverse edges are normally added
+    for bidirectional message passing.
+  features: AST nodes encode a node type drawn from 97 types, an attribute such as
+    a variable name, depth, and preorder traversal position. The target method name
+    on the root function-definition node, including recursive occurrences, is replaced
+    with a special mask token to prevent direct target leakage. Edge features distinguish
+    AST, next-token, and inverse-edge direction information.
+  splits_and_evaluation: The official project split assigns whole repositories to
+    only one of training, validation, or test, testing transfer to unseen codebases.
+    Targets are truncated to five subtokens for the published baseline setup, using
+    a 5,000-subtoken vocabulary plus an unknown token. Performance is the F1 score
+    over predicted and reference subtokens.
+  quirks_and_pitfalls: The predecessor ogbg-code dataset is deprecated because method
+    names leaked through the input AST; results from it are not comparable to ogbg-code2.
+    A random method-level split is substantially easier and permits project-specific
+    naming conventions to cross split boundaries. The usual F1 metric is order-insensitive,
+    so it does not fully measure method-name generation quality.
+sources:
+- title: Open Graph Benchmark
+  arxiv_id: '2005.00687'
+  kind: benchmark_definition
+- title: OGB graph property prediction documentation
+  url: https://ogb.stanford.edu/docs/graphprop/#ogbg-code2
+  kind: official_documentation
+- title: CodeSearchNet Challenge
+  arxiv_id: '1909.09436'
+  kind: upstream_data_source
 primary_metric: F1
 higher_is_better: true
 pyg_url: https://ogb.stanford.edu/docs/leader_graphprop/#ogbg-code2

@@ -20,13 +20,13 @@ Each row also compares against the **best known at publication** (best result fo
 
 | Statistic | Count |
 |---|---:|
-| Flagged papers | 945 |
-| Flagged rows | 12657 |
-| Baseline rows | 12410 |
-| Best at pub | 8299 |
-| Best today only (not best at pub) | 3404 |
-| At-pub best ≠ today's best (different source papers) | 7806 |
-| At-pub best = today's best (same source paper) | 4851 |
+| Flagged papers | 944 |
+| Flagged rows | 12654 |
+| Baseline rows | 12407 |
+| Best at pub | 8298 |
+| Best today only (not best at pub) | 3403 |
+| At-pub best ≠ today's best (different source papers) | 7805 |
+| At-pub best = today's best (same source paper) | 4849 |
 
 ### Today's best source timing
 
@@ -34,8 +34,8 @@ When the **best reported** holder published relative to the viewing paper:
 
 | Timing | Rows |
 |---|---:|
-| Already known at publication | 5409 |
-| Published later (field moved on) | 7248 |
+| Already known at publication | 5407 |
+| Published later (field moved on) | 7247 |
 | Same paper | 0 |
 | Unknown date | 0 |
 
@@ -73,7 +73,7 @@ When the **best reported** holder published relative to the viewing paper:
 
 | Model | Wrong Rows | Best at pub | Best today only | Papers | Datasets | Worst Rank Δ |
 |---|---:|---:|---:|---:|---:|---:|
-| GCN | 1708 | 1267 | 379 | 537 | 77 | 972 |
+| GCN | 1707 | 1266 | 379 | 536 | 76 | 972 |
 | GAT | 1126 | 875 | 217 | 362 | 66 | 937 |
 | GIN | 449 | 301 | 92 | 196 | 55 | 813 |
 | GraphSAGE | 436 | 282 | 102 | 185 | 52 | 914 |
@@ -100,7 +100,7 @@ When the **best reported** holder published relative to the viewing paper:
 | ContextPred | 98 | 74 | 22 | 24 | 9 | 241 |
 
 
-Detailed table: 945 rows (loaded below).
+Detailed table: 944 rows (loaded below).
 
 
 ### Flagged Rows

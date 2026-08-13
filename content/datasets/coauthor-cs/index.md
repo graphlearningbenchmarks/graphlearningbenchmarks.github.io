@@ -3,8 +3,32 @@ title: Coauthor-CS
 slug: coauthor-cs
 benchmark: Classic
 task_type: node_classification
-description: Co-authorship graph (CS) node classification from the "Pitfalls of Graph
-  Neural Network Evaluation" paper.
+short_description: Predict each author’s computer-science field from paper-keyword
+  features on one coauthorship graph.
+description: '**Node classification** on one coauthorship graph, predicting each author’s
+  computer-science field from paper-keyword features. Evaluated by Accuracy.'
+detailed_description:
+  task: Co-authorship graph (CS) node classification from the "Pitfalls of Graph Neural
+    Network Evaluation" paper. The primary catalog metric is Accuracy.
+  data: Co-authorship graph (CS) node classification from the "Pitfalls of Graph Neural
+    Network Evaluation" paper.
+  features: The representation follows the cited PyG loader or benchmark release.
+    Node and edge fields are dataset-specific; preprocessing, graph direction, and
+    any feature normalization must be kept fixed when reproducing a result.
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses Accuracy (higher is better). Exact masks or folds must
+    come from the cited release.'
+  quirks_and_pitfalls: The same short dataset name is used for incompatible processed
+    artifacts and split protocols. Report the loader/version, directedness, feature
+    preprocessing, and exact masks; transductive results should not be described as
+    inductive.
+sources:
+- title: Pitfalls of Graph Neural Network Evaluation
+  arxiv_id: '1811.05868'
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric Coauthor-CS loader documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Coauthor.html
+  kind: implementation_documentation
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Coauthor.html

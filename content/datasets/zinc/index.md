@@ -3,7 +3,32 @@ title: ZINC
 slug: zinc
 benchmark: Classic
 task_type: graph_regression
-description: Molecular property regression (constrained solubility).
+short_description: Predict penalized logP (logP minus synthetic-accessibility and
+  long-cycle penalties) on heavy-atom molecular graphs.
+description: '**Graph regression** on heavy-atom molecular graphs, predicting penalized
+  logP (logP minus synthetic-accessibility and long-cycle penalties). Nodes are atom
+  types and edges are bond types. Evaluated by MAE.'
+detailed_description:
+  task: Molecular property regression (constrained solubility). The primary catalog
+    metric is MAE.
+  data: Molecular property regression (constrained solubility).
+  features: The representation follows the cited PyG loader or benchmark release.
+    Node and edge fields are dataset-specific; preprocessing, graph direction, and
+    any feature normalization must be kept fixed when reproducing a result.
+  splits_and_evaluation: 'The catalog records these protocols or variants: Subset
+    (12k), Full. Evaluation uses MAE (lower is better). Exact masks or folds must
+    come from the cited release.'
+  quirks_and_pitfalls: The same short dataset name is used for incompatible processed
+    artifacts and split protocols. Report the loader/version, directedness, feature
+    preprocessing, and exact masks; transductive results should not be described as
+    inductive.
+sources:
+- title: Benchmarking Graph Neural Networks
+  arxiv_id: '2003.00982'
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric ZINC loader documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.ZINC.html
+  kind: implementation_documentation
 primary_metric: MAE
 higher_is_better: false
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.ZINC.html

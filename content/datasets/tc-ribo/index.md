@@ -3,7 +3,30 @@ title: Tc-Ribo
 slug: tc-ribo
 benchmark: DualEquiNet RNA Benchmarks
 task_type: graph_regression
-description: Thermostable ribosome structure prediction (graph regression, RMSE metric).
+short_description: Predict one sequence-level expression shift induced by tetracycline
+  binding on RNA graphs.
+description: '**Graph regression** on RNA graphs, predicting one sequence-level expression
+  shift induced by tetracycline binding. Evaluated by RMSE.'
+detailed_description:
+  task: Thermostable ribosome structure prediction (graph regression, RMSE metric).
+    The primary catalog metric is RMSE.
+  data: Thermostable ribosome structure prediction (graph regression, RMSE metric).
+    The cataloged artifact reports 355 graphs.
+  features: RNA samples include nucleotide identity, predicted or experimental 3D
+    atomic coordinates as specified by the dataset, and task-specific scalar targets.
+    Euclidean cutoff edges and spherical-harmonic neighborhoods are model construction,
+    not additional measurements.
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses RMSE (lower is better). Exact masks or folds must come
+    from the cited release.'
+  quirks_and_pitfalls: Predicted structures must not be described as experimental
+    ground truth. Random sequence splits can place close motifs in train and test,
+    circular angles require periodic losses, and experimental targets have assay-specific
+    noise and missingness.
+sources:
+- title: DualEquiNet RNA Benchmarks benchmark
+  arxiv_id: '2506.19862'
+  kind: benchmark_or_upstream_source
 primary_metric: RMSE
 higher_is_better: false
 pyg_url: ''

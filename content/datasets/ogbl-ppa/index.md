@@ -3,7 +3,38 @@ title: ogbl-ppa
 slug: ogbl-ppa
 benchmark: OGB
 task_type: link_prediction
-description: Protein-protein association link prediction (Hits@100).
+short_description: Predict held-out biologically meaningful protein-protein association
+  edges.
+description: '**Link prediction** Predict held-out biologically meaningful protein-protein
+  association edges. Each node has only a 58-dimensional one-hot species indicator
+  in the standard artifact. Evaluated by Hits@100.'
+detailed_description:
+  task: Predict held-out biologically meaningful protein-protein association edges.
+    Each positive is ranked against three million sampled negative edges and evaluated
+    by Hits@100.
+  data: The undirected graph contains 576,289 proteins from 58 species and STRING
+    associations arising from physical interaction, co-expression, homology, genomic
+    neighborhood, and other evidence.
+  features: Each node has only a 58-dimensional one-hot species indicator in the standard
+    artifact. The released training graph contains training edges but excludes validation
+    and test associations.
+  splits_and_evaluation: The biological-throughput split uses high-throughput experimental
+    or computationally derived associations for training and reserves resource-intensive
+    low-throughput experimental associations for validation and test.
+  quirks_and_pitfalls: STRING associations are broader than direct physical binding.
+    Randomly sampled absent pairs may include unknown biology rather than confirmed
+    negatives, while Hits@100 against millions of candidates is much stricter than
+    ROC-AUC. A random edge split would discard the intended evidence-quality shift.
+sources:
+- title: Open Graph Benchmark
+  arxiv_id: '2005.00687'
+  kind: benchmark_definition
+- title: OGB link property prediction documentation
+  url: https://ogb.stanford.edu/docs/linkprop/#ogbl-ppa
+  kind: official_documentation
+- title: STRING v11
+  url: https://doi.org/10.1093/nar/gky1131
+  kind: upstream_data_source
 primary_metric: Hits@100
 higher_is_better: true
 pyg_url: https://ogb.stanford.edu/docs/linkprop/#ogbl-ppa

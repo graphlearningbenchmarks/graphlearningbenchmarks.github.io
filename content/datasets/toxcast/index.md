@@ -3,8 +3,34 @@ title: ToxCast
 slug: toxcast
 benchmark: MoleculeNet
 task_type: graph_classification
-description: Multi-task toxicological profile prediction (617 tasks) from the EPA
-  ToxCast program.
+short_description: Multi-task toxicological profile prediction (617 tasks) from the
+  EPA ToxCast program.
+description: '**617-task multi-label graph classification** Multi-task toxicological
+  profile prediction (617 tasks) from the EPA ToxCast program. SMILES and labels are
+  fixed; molecular graph featurization is implementation-defined. Evaluated by ROC-AUC.'
+detailed_description:
+  task: Multi-task toxicological profile prediction (617 tasks) from the EPA ToxCast
+    program. The primary catalog metric is ROC-AUC.
+  data: Multi-task toxicological profile prediction (617 tasks) from the EPA ToxCast
+    program.
+  features: MoleculeNet distributes SMILES and targets, not one mandatory graph featurization.
+    A graph implementation normally derives atom and bond fields with RDKit or DeepChem;
+    results depend on featurizer, salt handling, stereochemistry, and invalid-molecule
+    policy.
+  splits_and_evaluation: 'The catalog records these protocols or variants: Scaffold
+    split. Evaluation uses ROC-AUC (higher is better). Exact masks or folds must come
+    from the cited release.'
+  quirks_and_pitfalls: Small samples, imbalance, missing assay labels, duplicate compounds,
+    and scaffold leakage are common. Missing labels are not negatives. Always report
+    split algorithm, featurizer, metric aggregation, and dataset version; random and
+    scaffold results are not comparable.
+sources:
+- title: MoleculeNet benchmark
+  arxiv_id: '1703.00564'
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric ToxCast loader documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.MoleculeNet.html
+  kind: implementation_documentation
 primary_metric: ROC-AUC
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.MoleculeNet.html

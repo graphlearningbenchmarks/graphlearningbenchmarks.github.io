@@ -3,7 +3,35 @@ title: AMAP
 slug: amap
 benchmark: Hypergraph Benchmarks
 task_type: node_classification
-description: Amazon Photography co-purchase hypergraph node classification (8 categories).
+short_description: Amazon Photography co-purchase hypergraph node classification (8
+  categories).
+description: '**8-class node classification** Amazon Photography co-purchase hypergraph
+  node classification (8 categories). Uses node-hyperedge incidence and the released
+  node features. Clique expansion changes the input by discarding hyperedge identity.
+  Evaluated by F1.'
+detailed_description:
+  task: Amazon Photography co-purchase hypergraph node classification (8 categories).
+    The primary catalog metric is F1.
+  data: Amazon Photography co-purchase hypergraph node classification (8 categories).
+    The cataloged artifact reports 1 graphs, 8 target classes or tasks.
+  features: The release represents higher-order membership with a node-hyperedge incidence
+    relation and supplies node features where available. Some source datasets have
+    no measured features and use documented synthetic features; clique expansion is
+    an alternative representation that discards hyperedge identity.
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses F1 (higher is better). Exact masks or folds must come from
+    the cited release.'
+  quirks_and_pitfalls: Do not silently replace incidence propagation with clique expansion
+    or merge distinct releases sharing a short name. Random synthetic features, split
+    seeds, hyperedge multiplicity, and isolated-node handling can dominate results
+    and must be reported.
+sources:
+- title: Hypergraph Benchmarks benchmark
+  arxiv_id: '2106.13264'
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric AMAP loader documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Amazon.html
+  kind: implementation_documentation
 primary_metric: F1
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Amazon.html

@@ -3,7 +3,38 @@ title: ogbn-arxiv
 slug: ogbn-arxiv
 benchmark: OGB
 task_type: node_classification
-description: Node classification on arXiv citation network (40 subject areas).
+short_description: Predict each paper's primary arXiv computer-science category from
+  its content representation and citation context.
+description: '**40-class node classification** Predict each paper''s primary arXiv
+  computer-science category from its content representation and citation context.
+  Evaluated by Accuracy.'
+detailed_description:
+  task: Predict each paper's primary arXiv computer-science category from its content
+    representation and citation context. The task is transductive 40-class node classification
+    scored by accuracy.
+  data: The directed graph contains 169,343 arXiv CS papers indexed by Microsoft Academic
+    Graph; a directed edge represents a citation. Labels are primary categories assigned
+    through arXiv submission and moderation, and publication years accompany nodes.
+  features: Each paper has a 128-dimensional vector formed by averaging skip-gram
+    word embeddings from its title and abstract, trained on the MAG corpus. Raw text
+    is available separately but is not the standard node feature matrix.
+  splits_and_evaluation: Papers published through 2017 are training nodes, 2018 papers
+    are validation, and papers from 2019 onward are test. The full graph is visible,
+    so the protocol is transductive despite its temporal label split.
+  quirks_and_pitfalls: The label is only the primary category even when a paper has
+    cross-lists. Reversing or symmetrizing citation edges changes the input graph
+    and must be disclosed. Random splits remove the intended temporal shift, and newer
+    MAG or arXiv snapshots are not the fixed OGB artifact.
+sources:
+- title: Open Graph Benchmark
+  arxiv_id: '2005.00687'
+  kind: benchmark_definition
+- title: OGB node property prediction documentation
+  url: https://ogb.stanford.edu/docs/nodeprop/#ogbn-arxiv
+  kind: official_documentation
+- title: Microsoft Academic Graph, When experts are not enough
+  url: https://doi.org/10.1162/qss_a_00021
+  kind: upstream_data_source
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.OGBNodePropPredDataset.html
@@ -11,7 +42,7 @@ stats:
   num_graphs: 169343
   avg_nodes: 1166243.0
   avg_edges: null
-  num_classes: 40
+  num_classes: 1
 result_count: 160
 best_model:
   model: OFA
@@ -150,7 +181,7 @@ variants:
     num_graphs: 169343
     avg_nodes: 1166243.0
     avg_edges: null
-    num_classes: 40
+    num_classes: 1
   metrics:
   - Accuracy
   - F1

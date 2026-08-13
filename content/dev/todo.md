@@ -35,7 +35,7 @@ type: dev
 | 1310.4546 | yes | 159 | rejected | Distributed Representations of Words and Phrases and their Compositionality |
 | 1502.03167 | yes | 159 | rejected | Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift |
 | 1805.11973 | yes | 159 | done | MolGAN: An implicit generative model for small molecular graphs |
-| 2101.03164 | yes | 156 | done | E(3)-Equivariant Graph Neural Networks for Data-Efficient and Accurate Interatomic Potentials |
+| 2101.03164 | yes | 156 | pending | E(3)-Equivariant Graph Neural Networks for Data-Efficient and Accurate Interatomic Potentials |
 | 2012.08752 | yes | 155 | done | Graph Neural Networks: Taxonomy, Advances, and Trends |
 | 2202.08235 | yes | 154 | done | Data Augmentation for Deep Graph Learning |
 | 2104.13478 | yes | 150 | done | Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges |
@@ -83,7 +83,7 @@ type: dev
 | 0912.3848 | yes | 103 | done | Wavelets on Graphs via Spectral Graph Theory |
 | 2201.12987 | yes | 103 | done | Interpretable and Generalizable Graph Learning via Stochastic Attention Mechanism |
 | 2302.02941 | yes | 102 | rejected | On Over-Squashing in Message Passing Neural Networks: The Impact of Width, Depth, and Topology |
-| 2102.05013 | yes | 101 | done | Spherical Message Passing for 3D Molecular Graphs |
+| 2102.05013 | yes | 101 | pending | Spherical Message Passing for 3D Molecular Graphs |
 | 2203.14500 | yes | 101 | rejected | MolGenSurvey: A Systematic Survey in Machine Learning Models for Molecule Design |
 | 2404.14928 | yes | 101 | done | Graph Machine Learning in the Era of Large Language Models (LLMs) |
 | 1905.11485 | yes | 98 | done | Representation Learning for Dynamic Graphs: A Survey |
@@ -295,7 +295,7 @@ type: dev
 | 2105.13137 | yes | 44 | done | Graph-Based Deep Learning for Medical Diagnosis and Analysis: Past, Present and Future |
 | 2210.04124 | yes | 44 | done | Generalized energy and gradient flow via graph framelets |
 | 2210.16966 | yes | 44 | done | Interpretable Geometric Deep Learning via Learnable Randomness Injection |
-| 2305.18407 | yes | 44 | done | A Group Symmetric Stochastic Differential Equation Model for Molecule Multi-modal Pretraining |
+| 2305.18407 | yes | 44 | pending | A Group Symmetric Stochastic Differential Equation Model for Molecule Multi-modal Pretraining |
 | 2408.12594 | yes | 44 | done | Non-Homophilic Graph Pre-Training and Prompt Learning |
 | 2409.09888 | yes | 44 | done | Flexible Diffusion Scopes with Parameterized Laplacian for Heterophilic Graph Learning |
 | 2503.09363 | yes | 44 | done | Towards Graph Foundation Models: A Transferability Perspective |
@@ -357,7 +357,7 @@ type: dev
 | 2201.01288 | yes | 39 | done | Automated Graph Machine Learning: Approaches, Libraries, Benchmarks and Directions |
 | 2202.07114 | yes | 39 | done | Recent Advances in Reliable Deep Graph Learning: Inherent Noise, Distribution Shift, and Adversarial Attack |
 | 2209.01084 | yes | 39 | rejected | Neighborhood-aware Scalable Temporal Network Representation Learning |
-| 2210.07237 | yes | 39 | done | Forces are not Enough: Benchmark and Critical Evaluation for Machine Learning Force Fields with Molecular Simulations |
+| 2210.07237 | yes | 39 | pending | Forces are not Enough: Benchmark and Critical Evaluation for Machine Learning Force Fields with Molecular Simulations |
 | 2211.05368 | yes | 39 | done | A Comprehensive Survey on Distributed Training of Graph Neural Networks |
 | 2212.05767 | yes | 39 | done | A Survey of Knowledge Graph Reasoning on Graph Types: Static, Dynamic, and Multi-Modal |
 | 2301.08210 | yes | 39 | done | Everything is Connected: Graph Neural Networks |
@@ -444,7 +444,7 @@ type: dev
 | 2104.08691 | yes | 33 | rejected | The Power of Scale for Parameter-Efficient Prompt Tuning |
 | 2108.11022 | yes | 33 | rejected | Tree Decomposed Graph Neural Network |
 | 2201.13410 | yes | 33 | done | Weisfeiler and Leman Go Infinite: Spectral and Combinatorial Pre-Colorings |
-| 2205.06643 | yes | 33 | done | The design space of E(3)-equivariant atom-centred interatomic potentials |
+| 2205.06643 | yes | 33 | pending | The design space of E(3)-equivariant atom-centred interatomic potentials |
 | 2209.13232 | yes | 33 | done | A Survey on Graph Neural Networks and Graph Transformers in Computer Vision: A Task-Oriented Perspective |
 | 2210.13695 | yes | 33 | done | Structure-based drug design with equivariant diffusion models |
 | 2211.08854 | yes | 33 | done | Graph Filters for Signal Processing and Machine Learning on Graphs |
@@ -467,7 +467,7 @@ type: dev
 | 2010.04592 | yes | 32 | rejected | Contrastive Learning with Hard Negative Samples |
 | 2010.13902 | yes | 32 | done | Graph Contrastive Learning with Augmentations |
 | 2101.05974 | yes | 32 | done | Inductive Representation Learning in Temporal Networks via Causal Anonymous Walks |
-| 2105.00304 | yes | 32 | done | SpookyNet: Learning force fields with electronic degrees of freedom and nonlocal effects |
+| 2105.00304 | yes | 32 | pending | SpookyNet: Learning force fields with electronic degrees of freedom and nonlocal effects |
 | 2107.00272 | yes | 32 | done | A Survey on Graph-Based Deep Learning for Computational Histopathology |
 | 2203.13913 | yes | 32 | done | SpeqNets: Sparsity-aware Permutation-equivariant Graph Networks |
 | 2212.03559 | yes | 32 | done | GraphLearner: Graph Node Clustering with Fully Learnable Augmentation |

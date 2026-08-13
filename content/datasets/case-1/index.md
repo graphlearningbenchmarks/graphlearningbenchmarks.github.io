@@ -3,8 +3,33 @@ title: Case 1
 slug: case-1
 benchmark: Power Flow Benchmarks
 task_type: graph_regression
-description: Power flow analysis on IEEE test case 1 (small power grid, node-level
-  regression).
+short_description: Jointly predict active power, reactive power, and voltage magnitude
+  at buses plus active and reactive flow in both directions on every branch.
+description: '**Joint node-and-edge regression** Jointly predict active power, reactive
+  power, and voltage magnitude at buses plus active and reactive flow in both directions
+  on every branch. Evaluated by Accuracy.'
+detailed_description:
+  task: Jointly predict active power, reactive power, and voltage magnitude at buses
+    plus active and reactive flow in both directions on every branch. The headline
+    accuracy is the fraction of operating samples satisfying all stated error thresholds.
+  data: Case I starts from the IEEE 39-bus, 46-branch system. Local Topology Slicing
+    expands 5,000 selected operating scenarios into one million training subgraphs;
+    separate 100,000-sample test, downscaled, and upscaled sets probe unseen operating
+    conditions.
+  features: Nodes represent buses with electrical quantities and edges represent transmission
+    elements with network parameters. Inputs, targets, units, slack-bus treatment,
+    and feasibility status follow the benchmark case generator.
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses Accuracy (higher is better). Exact masks or folds must
+    come from the cited release.'
+  quirks_and_pitfalls: Only converged, feasible operating points should be compared
+    under the documented policy. Per-unit conventions, topology changes, solver tolerances,
+    and bus-type handling can silently alter labels; these cases do not establish
+    transfer to real grids.
+sources:
+- title: Power Flow Benchmarks benchmark
+  arxiv_id: '2601.01387'
+  kind: benchmark_or_upstream_source
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: ''

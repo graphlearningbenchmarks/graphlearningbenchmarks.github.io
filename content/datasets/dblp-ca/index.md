@@ -3,7 +3,30 @@ title: DBLP-CA
 slug: dblp-ca
 benchmark: Hypergraph Benchmarks
 task_type: node_classification
-description: DBLP co-authorship hypergraph node classification (research area).
+short_description: DBLP co-authorship hypergraph node classification (research area).
+description: '**Node classification** DBLP co-authorship hypergraph node classification
+  (research area). Uses node-hyperedge incidence and the released node features. Clique
+  expansion changes the input by discarding hyperedge identity. Evaluated by Accuracy.'
+detailed_description:
+  task: DBLP co-authorship hypergraph node classification (research area). The primary
+    catalog metric is Accuracy.
+  data: DBLP co-authorship hypergraph node classification (research area). The cataloged
+    artifact reports 1 graphs.
+  features: The release represents higher-order membership with a node-hyperedge incidence
+    relation and supplies node features where available. Some source datasets have
+    no measured features and use documented synthetic features; clique expansion is
+    an alternative representation that discards hyperedge identity.
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses Accuracy (higher is better). Exact masks or folds must
+    come from the cited release.'
+  quirks_and_pitfalls: Do not silently replace incidence propagation with clique expansion
+    or merge distinct releases sharing a short name. Random synthetic features, split
+    seeds, hyperedge multiplicity, and isolated-node handling can dominate results
+    and must be reported.
+sources:
+- title: Hypergraph Benchmarks benchmark
+  arxiv_id: '2106.13264'
+  kind: benchmark_or_upstream_source
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: ''

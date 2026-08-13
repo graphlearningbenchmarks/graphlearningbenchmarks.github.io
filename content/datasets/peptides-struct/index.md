@@ -3,14 +3,46 @@ title: Peptides-struct
 slug: peptides-struct
 benchmark: LRGB
 task_type: graph_regression
-description: Multi-task graph regression on peptide structural properties (11 targets).
+short_description: Predict 11 graph-level geometric descriptors computed from each
+  peptide's 3D structure.
+description: '**11-target graph regression** Predict 11 graph-level geometric descriptors
+  computed from each peptide''s 3D structure. Inputs use OGB''s nine categorical atom
+  fields and three categorical bond fields derived from SMILES. Evaluated by MAE.'
+detailed_description:
+  task: Predict 11 graph-level geometric descriptors computed from each peptide's
+    3D structure. The targets cover three mass-weighted inertias, three valence-weighted
+    inertias, three principal-axis lengths, sphericity, and distance from a best-fit
+    plane; each target is standardized to zero mean and unit variance.
+  data: The 15,535 peptides are the same SATPdb-derived molecules used by Peptides-func.
+    Nodes are non-hydrogen atoms and edges are covalent bonds, giving much larger
+    molecular graphs than typical small-molecule benchmarks.
+  features: Inputs use OGB's nine categorical atom fields and three categorical bond
+    fields derived from SMILES. Although the targets were computed from 3D peptide
+    structures, neither coordinates nor other 2D/3D structural information are included
+    in the input graphs.
+  splits_and_evaluation: Peptides-struct uses the same fixed 70%/15%/15% stratified
+    split as Peptides-func, where stratification is based on pooled combinations of
+    the functional labels. The primary score is the unweighted mean absolute error
+    across the 11 standardized targets; per-target R-squared is supplementary.
+  quirks_and_pitfalls: The task asks a model to infer global 3D properties from covalent
+    connectivity without a supplied conformation. Target standardization is part of
+    the benchmark, so MAE on unstandardized physical quantities is not comparable.
+    The split is stratified by function rather than structural scaffold, and correlated
+    geometric targets must not be treated as independent datasets.
+sources:
+- title: Long Range Graph Benchmark
+  arxiv_id: '2206.08164'
+  kind: benchmark_definition
+- title: SATPdb, a database of structurally annotated therapeutic peptides
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4702810/
+  kind: upstream_data_source
 primary_metric: MAE
 higher_is_better: false
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.LRGBDataset.html
 stats:
-  num_graphs: null
-  avg_nodes: null
-  avg_edges: null
+  num_graphs: 15535
+  avg_nodes: 150.94
+  avg_edges: 307.3
   num_classes: 11
 result_count: 243
 best_model:
@@ -204,9 +236,9 @@ variants:
   default_metric: MAE
   higher_is_better: false
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
+    num_graphs: 15535
+    avg_nodes: 150.94
+    avg_edges: 307.3
     num_classes: 11
   metrics:
   - MAE

@@ -3,8 +3,32 @@ title: ECHO-Synth
 slug: echo-synth
 benchmark: ECHO Benchmark
 task_type: graph_regression
-description: ECHO synthetic propagation task — node-level regression on synthetic
-  long-range graphs.
+short_description: Predict graph diameter, node eccentricity, and single-source shortest-path
+  distances on synthetic graphs.
+description: '**Mixed graph/node regression suite** covering diameter (graph-level),
+  eccentricity (node-level), and SSSP (node-level) on synthetic long-range graphs.
+  Inputs expose only local graph state while targets require long-range information.
+  Evaluated by MAE.'
+detailed_description:
+  task: ECHO synthetic propagation task — node-level regression on synthetic long-range
+    graphs. The primary catalog metric is MAE.
+  data: ECHO synthetic propagation task — node-level regression on synthetic long-range
+    graphs. The cataloged artifact reports 10,080 graphs.
+  features: Each synthetic or physical graph supplies local node/edge state and a
+    target created by controlled long-range propagation. The exact signal channels
+    and propagation parameters are part of the named ECHO task and should not be mixed
+    across variants.
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses MAE (lower is better). Exact masks or folds must come from
+    the cited release.'
+  quirks_and_pitfalls: Performance is sensitive to propagation radius, graph size,
+    and train/test distance regime. Randomly mixing configurations can turn a long-range
+    extrapolation task into interpolation; report the named variant and fixed generation
+    parameters.
+sources:
+- title: ECHO Benchmark benchmark
+  arxiv_id: '2512.17762'
+  kind: benchmark_or_upstream_source
 primary_metric: MAE
 higher_is_better: false
 pyg_url: ''

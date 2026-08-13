@@ -3,10 +3,37 @@ title: Algorithmic Reasoning
 slug: algorithmic-reasoning
 benchmark: GraphBench
 task_type: graph_classification
-description: 'Graphs from 6 generators with 7 algorithmic reasoning tasks (e.g. MST).
-  Size generalisation: train on size 16, test up to 2048 nodes.
-
-  '
+short_description: Predict task-specific node, edge, or graph outputs for seven classical
+  graph algorithms.
+description: '**Mixed node/edge/graph prediction suite** covering topological sorting,
+  maximum flow, MST, bridges, Steiner tree, maximum clique, and matching with task-specific
+  node, edge, or graph targets. Evaluated by Accuracy.'
+detailed_description:
+  task: 'Simulate seven graph algorithms through node regression, node classification,
+    or edge classification: topological sorting, maximum flow, minimum spanning tree,
+    bridge finding, Steiner tree, maximum clique, and maximum matching.'
+  data: Each algorithm has easy, medium, and hard synthetic datasets whose train and
+    test graphs differ in generator distribution. Training graphs have 16 nodes while
+    held-out graphs include 128 nodes, with additional size-generalization tests up
+    to 512 nodes in the published experiments.
+  features: Inputs encode the graph, algorithm-specific weights or designated vertices,
+    and task-relevant node or edge attributes. Unlike CLRS-style processor supervision,
+    these datasets focus on final outputs rather than providing a full sequence of
+    algorithmic hints.
+  splits_and_evaluation: Fixed 98%/1%/1% splits contain about one million graphs per
+    difficulty for each algorithm. Classification tasks use accuracy and F1; flow
+    and topological-order targets use MAE.
+  quirks_and_pitfalls: Difficulty changes both generator distribution and graph size,
+    so failures cannot be attributed to only one axis. Edge tasks are transformed
+    for some node-token baselines. The old YAML's 21-million count is the approximate
+    total across seven tasks, not the size of every individual task.
+sources:
+- title: GraphBench
+  arxiv_id: '2512.04475'
+  kind: benchmark_definition
+- title: The CLRS Algorithmic Reasoning Benchmark
+  arxiv_id: '2205.15659'
+  kind: related_protocol
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://graphbench.github.io/website/datasets.html

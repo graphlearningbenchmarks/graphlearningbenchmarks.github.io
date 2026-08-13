@@ -3,10 +3,35 @@ title: MalNet-Tiny
 slug: malnet-tiny
 benchmark: Other Graph Benchmarks
 task_type: graph_classification
-description: 'Malware detection graph classification on a tiny (balanced 5-class)
-  subset of the MalNet-Large dataset. Graphs are function call graphs of Android apps.
-
-  '
+short_description: Predict one of five balanced malware families; nodes have no attributes
+  on Android function-call graphs.
+description: '**5-class graph classification** on Android function-call graphs, predicting
+  one of five balanced malware families; nodes have no attributes. Evaluated by Accuracy.'
+detailed_description:
+  task: Malware detection graph classification on a tiny (balanced 5-class) subset
+    of the MalNet-Large dataset. Graphs are function call graphs of Android apps.
+    The primary catalog metric is Accuracy.
+  data: Malware detection graph classification on a tiny (balanced 5-class) subset
+    of the MalNet-Large dataset. Graphs are function call graphs of Android apps.
+    The cataloged artifact reports 5,000 graphs, 5 target classes or tasks.
+  features: 'Input construction is dataset-specific and follows the cited release:
+    program call graphs, 3D point coordinates, text-derived vectors, product attributes,
+    or movie metadata. Added edges, neighborhood graphs, and feature normalization
+    are preprocessing choices.'
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses Accuracy (higher is better). Exact masks or folds must
+    come from the cited release.'
+  quirks_and_pitfalls: These entries come from unrelated upstream benchmarks and have
+    no shared protocol. Report the exact graph construction, split, feature pipeline,
+    and label granularity; similarly named Film, Actor, IMDB, or Amazon artifacts
+    are not interchangeable.
+sources:
+- title: MalNet, a large-scale cybersecurity graph database
+  arxiv_id: '2106.04590'
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric MalNet-Tiny loader documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.MalNetTiny.html
+  kind: implementation_documentation
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.MalNetTiny.html

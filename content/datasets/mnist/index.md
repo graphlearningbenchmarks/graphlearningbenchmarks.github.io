@@ -3,8 +3,33 @@ title: MNIST
 slug: mnist
 benchmark: GNNBenchmark
 task_type: graph_classification
-description: Graph classification on MNIST superpixel graphs (10 digit classes, 70k
-  graphs).
+short_description: Graph classification on MNIST superpixel graphs (10 digit classes,
+  70k graphs).
+description: '**10-class graph classification** Graph classification on MNIST superpixel
+  graphs (10 digit classes, 70k graphs). Uses the benchmark-provided synthetic or
+  superpixel node/edge features. Evaluated by Accuracy.'
+detailed_description:
+  task: Graph classification on MNIST superpixel graphs (10 digit classes, 70k graphs).
+    The primary catalog metric is Accuracy.
+  data: Graph classification on MNIST superpixel graphs (10 digit classes, 70k graphs).
+  features: The benchmark release supplies fixed graph tensors and task-specific node
+    or edge inputs. Image graphs use superpixel appearance and position, synthetic
+    node tasks use generated signals, TSP uses coordinates, and CSL is intentionally
+    featureless.
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses Accuracy (higher is better). Exact masks or folds must
+    come from the cited release.'
+  quirks_and_pitfalls: Use the released train/validation/test files rather than resplitting.
+    These tasks were designed to expose specific architectural limitations, and preprocessing
+    such as changing superpixels, adding positional encodings, or balancing edge labels
+    changes the benchmark.
+sources:
+- title: GNNBenchmark benchmark
+  arxiv_id: '2003.00982'
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric MNIST loader documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.GNNBenchmarkDataset.html
+  kind: implementation_documentation
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.GNNBenchmarkDataset.html

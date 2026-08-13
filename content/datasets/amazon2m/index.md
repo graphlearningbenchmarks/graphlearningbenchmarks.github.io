@@ -3,10 +3,32 @@ title: Amazon2M
 slug: amazon2m
 benchmark: Other Graph Benchmarks
 task_type: node_classification
-description: 'Large-scale Amazon co-purchase graph with ~2M nodes. Node classification
-  (product category). Used to benchmark scalable GNNs and graph transformers.
-
-  '
+short_description: Predict each product’s category on a roughly two-million-node co-purchase
+  graph.
+description: '**Node classification** on a roughly two-million-node co-purchase graph,
+  predicting each product’s category. Evaluated by Accuracy.'
+detailed_description:
+  task: Large-scale Amazon co-purchase graph with ~2M nodes. Node classification (product
+    category). Used to benchmark scalable GNNs and graph transformers. The primary
+    catalog metric is Accuracy.
+  data: Large-scale Amazon co-purchase graph with ~2M nodes. Node classification (product
+    category). Used to benchmark scalable GNNs and graph transformers. The cataloged
+    artifact reports 1 graphs.
+  features: 'Input construction is dataset-specific and follows the cited release:
+    program call graphs, 3D point coordinates, text-derived vectors, product attributes,
+    or movie metadata. Added edges, neighborhood graphs, and feature normalization
+    are preprocessing choices.'
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses Accuracy (higher is better). Exact masks or folds must
+    come from the cited release.'
+  quirks_and_pitfalls: These entries come from unrelated upstream benchmarks and have
+    no shared protocol. Report the exact graph construction, split, feature pipeline,
+    and label granularity; similarly named Film, Actor, IMDB, or Amazon artifacts
+    are not interchangeable.
+sources:
+- title: Cluster-GCN
+  arxiv_id: '1905.07953'
+  kind: benchmark_or_upstream_source
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: ''

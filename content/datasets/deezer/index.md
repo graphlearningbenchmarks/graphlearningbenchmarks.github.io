@@ -3,8 +3,11 @@ title: Deezer
 slug: deezer
 benchmark: LINKX Benchmarks
 task_type: node_classification
+short_description: ''
 description: Deezer Europe user friendship graph binary node classification (like/dislike),
   used in LINKX-style non-homophily evaluations.
+detailed_description: {}
+sources: []
 primary_metric: ROC-AUC
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.HeterophilousGraphDataset.html

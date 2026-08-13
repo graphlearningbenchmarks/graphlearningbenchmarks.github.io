@@ -3,7 +3,39 @@ title: ogbg-molpcba
 slug: ogbg-molpcba
 benchmark: OGB
 task_type: graph_classification
-description: Multi-label classification (128 tasks) on PubChem BioAssay.
+short_description: Predict activity separately for 128 PubChem BioAssay tasks.
+description: '**128-task multi-label graph classification** Predict activity separately
+  for 128 PubChem BioAssay tasks. Inputs use the standard OGB nine-field categorical
+  atom representation and three-field categorical bond representation generated from
+  SMILES. Evaluated by AP.'
+detailed_description:
+  task: Predict activity separately for 128 PubChem BioAssay tasks. Labels are binary
+    where measured, but many molecule-task pairs are unassayed and stored as missing
+    rather than negative.
+  data: OGB adopts 437,929 RDKit-processable compounds from MoleculeNet's PCBA collection.
+    Graphs represent atoms and covalent bonds; assay outcomes originate from PubChem's
+    heterogeneous high-throughput screening records.
+  features: Inputs use the standard OGB nine-field categorical atom representation
+    and three-field categorical bond representation generated from SMILES. Assay identifiers
+    and labels are targets, not molecular input features.
+  splits_and_evaluation: Molecules are separated by two-dimensional scaffold into
+    the official train, validation, and test sets. Average precision is calculated
+    for each evaluable assay and averaged across the 128 tasks, ignoring missing labels.
+  quirks_and_pitfalls: Only about 1.4% of assigned labels are positive, so accuracy
+    and unweighted treatment of missing labels are misleading. The assays measure
+    different biological endpoints and have different coverage; a missing label means
+    unknown, not inactive. Random splits and per-task metrics are not directly comparable
+    to the official mean AP.
+sources:
+- title: Open Graph Benchmark
+  arxiv_id: '2005.00687'
+  kind: benchmark_definition
+- title: OGB graph property prediction documentation
+  url: https://ogb.stanford.edu/docs/graphprop/#ogbg-mol
+  kind: official_documentation
+- title: MoleculeNet
+  arxiv_id: '1703.00564'
+  kind: upstream_benchmark
 primary_metric: AP
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.OGBDataset.html

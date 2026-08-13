@@ -3,7 +3,38 @@ title: ogbn-papers100M
 slug: ogbn-papers100m
 benchmark: OGB
 task_type: node_classification
-description: Node classification on 111M academic paper citation network (172 subjects).
+short_description: Predict a primary arXiv subject area for the approximately 1.5
+  million labeled arXiv papers while using the full 111-million-node citation network.
+description: '**172-class node classification** Predict a primary arXiv subject area
+  for the approximately 1.5 million labeled arXiv papers while using the full 111-million-node
+  citation network. Evaluated by Accuracy.'
+detailed_description:
+  task: Predict a primary arXiv subject area for the approximately 1.5 million labeled
+    arXiv papers while using the full 111-million-node citation network. Accuracy
+    over 172 classes is the official measure.
+  data: Nodes are papers indexed by Microsoft Academic Graph and directed edges are
+    citations. Most nodes are not arXiv papers and have no class label, but remain
+    available as unlabeled graph context.
+  features: As in ogbn-arxiv, every paper has a 128-dimensional average of skip-gram
+    embeddings for title and abstract words. The fixed features and graph come from
+    the released MAG snapshot.
+  splits_and_evaluation: Labeled arXiv papers through 2017 train the model, papers
+    from 2018 validate it, and papers from 2019 onward form test. The task is transductive
+    because features and topology for all nodes are supplied.
+  quirks_and_pitfalls: 'Dataset scale makes full-batch processing impractical and
+    often forces sampling or partitioning choices that affect results. The overwhelming
+    majority of nodes are unlabeled. This is not simply a scaled ogbn-arxiv: it uses
+    172 subjects and a much broader MAG graph.'
+sources:
+- title: Open Graph Benchmark
+  arxiv_id: '2005.00687'
+  kind: benchmark_definition
+- title: OGB node property prediction documentation
+  url: https://ogb.stanford.edu/docs/nodeprop/#ogbn-papers100M
+  kind: official_documentation
+- title: Microsoft Academic Graph, When experts are not enough
+  url: https://doi.org/10.1162/qss_a_00021
+  kind: upstream_data_source
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.OGBNodePropPredDataset.html
@@ -11,7 +42,7 @@ stats:
   num_graphs: 111059956
   avg_nodes: 1615685872.0
   avg_edges: null
-  num_classes: 172
+  num_classes: 1
 result_count: 141
 best_model:
   model: SGC
@@ -178,7 +209,7 @@ variants:
     num_graphs: 111059956
     avg_nodes: 1615685872.0
     avg_edges: null
-    num_classes: 172
+    num_classes: 1
   metrics:
   - Accuracy
   - F1

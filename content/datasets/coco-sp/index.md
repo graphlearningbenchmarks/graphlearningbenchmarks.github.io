@@ -3,11 +3,44 @@ title: COCO-SP
 slug: coco-sp
 benchmark: LRGB
 task_type: node_classification
-description: Node classification on superpixel graphs derived from MS-COCO.
+short_description: Predict one of 81 semantic labels for each superpixel node.
+description: '**81-class node classification** Predict one of 81 semantic labels for
+  each superpixel node. Nodes contain 12 per-region RGB statistics—mean, standard
+  deviation, maximum, and minimum per channel—and two center-of-mass coordinates.
+  Evaluated by F1.'
+detailed_description:
+  task: Predict one of 81 semantic labels for each superpixel node. The assigned target
+    is the pixel annotation at the mean coordinate of the superpixel region.
+  data: The benchmark converts 123,286 MS COCO images into graphs. Its default construction
+    uses SLIC superpixels with compactness 30 and at most 500 regions per image, joined
+    by edges when the regions share a boundary.
+  features: Nodes contain 12 per-region RGB statistics—mean, standard deviation, maximum,
+    and minimum per channel—and two center-of-mass coordinates. Region-boundary edges
+    contain the mean Sobel response and the number of boundary pixels.
+  splits_and_evaluation: The original COCO validation set becomes a 5,000-image test
+    set; 5,000 images sampled from the original training set form validation, leaving
+    113,286 for training. The official score is class-weighted macro F1 over superpixel
+    nodes.
+  quirks_and_pitfalls: The task differs from original COCO instance segmentation and
+    inherits approximation error from superpixelization and center-pixel labels. Optional
+    LRGB variants change SLIC compactness or replace region-boundary edges with coordinate-
+    or feature-based 8-nearest-neighbor graphs; results across these graph constructions
+    are not directly comparable.
+sources:
+- title: Long Range Graph Benchmark
+  arxiv_id: '2206.08164'
+  kind: benchmark_definition
+- title: Microsoft COCO, Common Objects in Context
+  arxiv_id: '1405.0312'
+  kind: upstream_data_source
 primary_metric: F1
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.LRGBDataset.html
-stats: null
+stats:
+  num_graphs: 123286
+  avg_nodes: 476.88
+  avg_edges: 2693.67
+  num_classes: 81
 result_count: 107
 best_model:
   model: FloydNet
@@ -88,10 +121,10 @@ variants:
   default_metric: F1
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
-    num_classes: null
+    num_graphs: 123286
+    avg_nodes: 476.88
+    avg_edges: 2693.67
+    num_classes: 81
   metrics:
   - F1
   - AULC

@@ -3,7 +3,33 @@ title: WikiCS
 slug: wikics
 benchmark: Classic
 task_type: node_classification
-description: Wikipedia-based node classification (10 classes) with 20 train splits.
+short_description: Predict each article’s computer-science category from text-derived
+  features on a Wikipedia hyperlink graph.
+description: '**10-class node classification** on a Wikipedia hyperlink graph, predicting
+  each article’s computer-science category from text-derived features. Evaluated by
+  Accuracy.'
+detailed_description:
+  task: Wikipedia-based node classification (10 classes) with 20 train splits. The
+    primary catalog metric is Accuracy.
+  data: Wikipedia-based node classification (10 classes) with 20 train splits. The
+    cataloged artifact reports 1 graphs, 10 target classes or tasks.
+  features: The representation follows the cited PyG loader or benchmark release.
+    Node and edge fields are dataset-specific; preprocessing, graph direction, and
+    any feature normalization must be kept fixed when reproducing a result.
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses Accuracy (higher is better). Exact masks or folds must
+    come from the cited release.'
+  quirks_and_pitfalls: The same short dataset name is used for incompatible processed
+    artifacts and split protocols. Report the loader/version, directedness, feature
+    preprocessing, and exact masks; transductive results should not be described as
+    inductive.
+sources:
+- title: 'Wiki-CS: A Wikipedia-Based Benchmark for Graph Neural Networks'
+  arxiv_id: '2007.02901'
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric WikiCS loader documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.WikiCS.html
+  kind: implementation_documentation
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.WikiCS.html

@@ -2,9 +2,29 @@
 title: SSSP
 slug: sssp
 benchmark: Algorithmic Graph Tasks
-task_type: graph_regression
-description: Single Source Shortest Path prediction on synthetic graphs (node-level
-  distances).
+task_type: node_regression
+short_description: Predict every node’s shortest-path distance from a marked source
+  on synthetic graphs.
+description: '**Node regression** on synthetic graphs, predicting every node’s shortest-path
+  distance from a marked source. Uses synthetic topology plus task-specific source
+  indicators or random node features. Evaluated by MSE.'
+detailed_description:
+  task: Single Source Shortest Path prediction on synthetic graphs (node-level distances).
+    The primary catalog metric is MSE.
+  data: 'The release has 7,040 synthetic graphs with 25--35 nodes sampled from multiple
+    graph generators: 5,120 train, 640 validation, and 1,280 test graphs.'
+  features: Synthetic graphs provide task-specific structural inputs such as a designated
+    source. Targets are numeric node quantities computed by the reference algorithm;
+    positional encodings or extra structural features are model additions.
+  splits_and_evaluation: The fixed split is 5,120/640/1,280 graphs. The paper selects
+    models by validation MSE and reports mean log10(MSE) over 20 runs; lower is better.
+  quirks_and_pitfalls: Targets are deterministic functions of generated topology,
+    so generator overlap and size range determine difficulty. Random splits test interpolation;
+    claims about algorithmic generalization require held-out sizes or graph families.
+sources:
+- title: Algorithmic Graph Tasks benchmark
+  arxiv_id: '2312.16560'
+  kind: benchmark_or_upstream_source
 primary_metric: MSE
 higher_is_better: false
 pyg_url: ''
@@ -32,10 +52,6 @@ papers:
     Recurrent and Graph Learning'
   date_iso: '2025-02-15'
   venue: ''
-- arxiv_id: '2210.09789'
-  title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph Networks'
-  date_iso: '2022-10-18'
-  venue: ICLR 2022
 variants:
 - slug: standard-split
   name: Standard split
@@ -467,23 +483,24 @@ variants:
     - null
   - model: GraphSAGE
     model_plain: GraphSAGE
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2210.09789'
-    title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph Networks'
-    date: Oct 18, 2022
-    date_iso: '2022-10-18'
-    date_display: Oct 2022
-    codebase_url: https://github.com/gravins/Anti-SymmetricDGN
-    published_conference: ICLR 2022
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2022
+    arxiv_id: '2502.10818'
+    title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing in GNNs: Bridging
+      Recurrent and Graph Learning'
+    date: Feb 15, 2025
+    date_iso: '2025-02-15'
+    date_display: Feb 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -502,16 +519,17 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2210.09789'
-    title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph Networks'
-    date: Oct 18, 2022
-    date_iso: '2022-10-18'
-    date_display: Oct 2022
-    codebase_url: https://github.com/gravins/Anti-SymmetricDGN
-    published_conference: ICLR 2022
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2022
+    arxiv_id: '2502.10818'
+    title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing in GNNs: Bridging
+      Recurrent and Graph Learning'
+    date: Feb 15, 2025
+    date_iso: '2025-02-15'
+    date_display: Feb 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -523,23 +541,24 @@ variants:
     - null
   - model: GCN
     model_plain: GCN
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2210.09789'
-    title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph Networks'
-    date: Oct 18, 2022
-    date_iso: '2022-10-18'
-    date_display: Oct 2022
-    codebase_url: https://github.com/gravins/Anti-SymmetricDGN
-    published_conference: ICLR 2022
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2022
+    arxiv_id: '2502.10818'
+    title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing in GNNs: Bridging
+      Recurrent and Graph Learning'
+    date: Feb 15, 2025
+    date_iso: '2025-02-15'
+    date_display: Feb 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -547,7 +566,7 @@ variants:
     - 0.9499
     - null
     metric_stds:
-    - 9.18e-05
+    - 0.0001
     - null
   - model: A-DGN
     model_plain: A-DGN
@@ -882,12 +901,6 @@ variants:
   - 17
   - 11
   milestones: &id001
-  - value: 0.2863
-    std: 0.1843
-    model: GraphSAGE
-    arxiv_id: '2210.09789'
-    title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph Networks'
-    date: '2022-10-18'
   - value: -4.2993
     std: 0.0721
     model: PH-DGN

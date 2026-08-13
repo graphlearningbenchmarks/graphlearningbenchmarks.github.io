@@ -3,7 +3,39 @@ title: ogbn-products
 slug: ogbn-products
 benchmark: OGB
 task_type: node_classification
-description: Node classification on Amazon product co-purchase graph (47 categories).
+short_description: Predict one of 47 top-level product categories for every product
+  node using its description representation and co-purchase neighborhood.
+description: '**47-class node classification** Predict one of 47 top-level product
+  categories for every product node using its description representation and co-purchase
+  neighborhood. Evaluated by Accuracy.'
+detailed_description:
+  task: Predict one of 47 top-level product categories for every product node using
+    its description representation and co-purchase neighborhood. Accuracy is the official
+    metric.
+  data: The undirected, unweighted graph contains 2,449,029 Amazon products; an edge
+    indicates that two products are frequently purchased together. Categories and
+    preprocessing follow the Cluster-GCN version of the source collection.
+  features: Product descriptions are converted to bag-of-words vectors and reduced
+    by principal component analysis to 100 numeric node features. Sales rank is split
+    metadata, not part of the standard feature vector.
+  splits_and_evaluation: 'Products are sorted by sales rank: the most popular 8% train
+    the model, the next 2% form validation, and the remaining 90% form test. This
+    deliberately tests transfer from heavily labeled popular items to less popular
+    ones.'
+  quirks_and_pitfalls: The split is highly asymmetric and distribution-shifted; a
+    conventional random 90/10 split is a different, easier protocol. The graph contains
+    a very small number of repeated self-loops. Co-purchase edges reflect platform
+    behavior and exposure as well as product similarity.
+sources:
+- title: Open Graph Benchmark
+  arxiv_id: '2005.00687'
+  kind: benchmark_definition
+- title: OGB node property prediction documentation
+  url: https://ogb.stanford.edu/docs/nodeprop/#ogbn-products
+  kind: official_documentation
+- title: Cluster-GCN
+  arxiv_id: '1905.07953'
+  kind: processing_source
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.OGBNodePropPredDataset.html
@@ -11,7 +43,7 @@ stats:
   num_graphs: 2449029
   avg_nodes: 61859140.0
   avg_edges: null
-  num_classes: 47
+  num_classes: 1
 result_count: 546
 best_model:
   model: Jacobi
@@ -401,7 +433,7 @@ variants:
     num_graphs: 2449029
     avg_nodes: 61859140.0
     avg_edges: null
-    num_classes: 47
+    num_classes: 1
   metrics:
   - Accuracy
   - ACC

@@ -3,8 +3,33 @@ title: MovieLens Film
 slug: movielens-film
 benchmark: Other Graph Benchmarks
 task_type: node_classification
-description: Movie graph with genre labels from the MovieLens/IMDb film benchmark;
-  distinct from the five-class Actor graph sometimes called Film.
+short_description: Predict one or more of nine genre labels per film; this is not
+  the Actor/Film dataset on a MovieLens/IMDb movie graph.
+description: '**9-class node classification** on a MovieLens/IMDb movie graph, predicting
+  one or more of nine genre labels per film; this is not the Actor/Film dataset. Evaluated
+  by Micro-F1.'
+detailed_description:
+  task: Movie graph with genre labels from the MovieLens/IMDb film benchmark; distinct
+    from the five-class Actor graph sometimes called Film. The primary catalog metric
+    is Micro-F1.
+  data: Movie graph with genre labels from the MovieLens/IMDb film benchmark; distinct
+    from the five-class Actor graph sometimes called Film. The cataloged artifact
+    reports 1 graphs, 9 target classes or tasks.
+  features: 'Input construction is dataset-specific and follows the cited release:
+    program call graphs, 3D point coordinates, text-derived vectors, product attributes,
+    or movie metadata. Added edges, neighborhood graphs, and feature normalization
+    are preprocessing choices.'
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses Micro-F1 (higher is better). Exact masks or folds must
+    come from the cited release.'
+  quirks_and_pitfalls: These entries come from unrelated upstream benchmarks and have
+    no shared protocol. Report the exact graph construction, split, feature pipeline,
+    and label granularity; similarly named Film, Actor, IMDB, or Amazon artifacts
+    are not interchangeable.
+sources:
+- title: MovieLens datasets
+  url: https://grouplens.org/datasets/movielens/
+  kind: benchmark_or_upstream_source
 primary_metric: Micro-F1
 higher_is_better: true
 pyg_url: ''

@@ -3,16 +3,36 @@ title: Reddit
 slug: reddit
 benchmark: Classic
 task_type: node_classification
-description: Reddit posts node classification (41 community labels) from the GraphSAGE
-  paper.
+short_description: Predict the subreddit/community of each post from text-derived
+  features on a post-interaction graph.
+description: '**41-class node classification** on a post-interaction graph, predicting
+  the subreddit/community of each post from text-derived features. Evaluated by F1.'
+detailed_description:
+  task: Reddit posts node classification (41 community labels) from the GraphSAGE
+    paper. The primary catalog metric is F1.
+  data: Reddit posts node classification (41 community labels) from the GraphSAGE
+    paper.
+  features: The representation follows the cited PyG loader or benchmark release.
+    Node and edge fields are dataset-specific; preprocessing, graph direction, and
+    any feature normalization must be kept fixed when reproducing a result.
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses F1 (higher is better). Exact masks or folds must come from
+    the cited release.'
+  quirks_and_pitfalls: The same short dataset name is used for incompatible processed
+    artifacts and split protocols. Report the loader/version, directedness, feature
+    preprocessing, and exact masks; transductive results should not be described as
+    inductive.
+sources:
+- title: Inductive Representation Learning on Large Graphs
+  arxiv_id: '1706.02216'
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric Reddit loader documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Reddit.html
+  kind: implementation_documentation
 primary_metric: F1
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Reddit.html
-stats:
-  num_graphs: null
-  avg_nodes: null
-  avg_edges: null
-  num_classes: 41
+stats: null
 result_count: 621
 best_model:
   model: Node Sampled Soup
@@ -429,7 +449,7 @@ variants:
     num_graphs: null
     avg_nodes: null
     avg_edges: null
-    num_classes: 41
+    num_classes: null
   metrics:
   - F1
   - AUC

@@ -3,10 +3,30 @@ title: 20News
 slug: 20news
 benchmark: Other Graph Benchmarks
 task_type: graph_classification
-description: '20 Newsgroups text classification represented as a graph (nodes = documents,
-  edges = TF-IDF similarity). 20 classes.
-
-  '
+short_description: Predict one of 20 newsgroup topics on text-derived document graphs.
+description: '**20-class graph classification** on text-derived document graphs, predicting
+  one of 20 newsgroup topics. Evaluated by Accuracy.'
+detailed_description:
+  task: 20 Newsgroups text classification represented as a graph (nodes = documents,
+    edges = TF-IDF similarity). 20 classes. The primary catalog metric is Accuracy.
+  data: 20 Newsgroups text classification represented as a graph (nodes = documents,
+    edges = TF-IDF similarity). 20 classes. The cataloged artifact reports 20 target
+    classes or tasks.
+  features: 'Input construction is dataset-specific and follows the cited release:
+    program call graphs, 3D point coordinates, text-derived vectors, product attributes,
+    or movie metadata. Added edges, neighborhood graphs, and feature normalization
+    are preprocessing choices.'
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses Accuracy (higher is better). Exact masks or folds must
+    come from the cited release.'
+  quirks_and_pitfalls: These entries come from unrelated upstream benchmarks and have
+    no shared protocol. Report the exact graph construction, split, feature pipeline,
+    and label granularity; similarly named Film, Actor, IMDB, or Amazon artifacts
+    are not interchangeable.
+sources:
+- title: 20 Newsgroups corpus documentation
+  url: https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_20newsgroups.html
+  kind: benchmark_or_upstream_source
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: ''

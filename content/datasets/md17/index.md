@@ -3,8 +3,32 @@ title: MD17
 slug: md17
 benchmark: Quantum Chemistry
 task_type: graph_regression
-description: Ab-initio molecular dynamics — predict energy and forces for small organic
-  molecules.
+short_description: Ab-initio molecular dynamics — predict energy and forces for small
+  organic molecules.
+description: '**Energy-and-force regression** Ab-initio molecular dynamics — predict
+  energy and forces for small organic molecules. Inputs are atomic species and molecular
+  geometries. Evaluated by MAE.'
+detailed_description:
+  task: Ab-initio molecular dynamics — predict energy and forces for small organic
+    molecules. The primary catalog metric is MAE.
+  data: Ab-initio molecular dynamics — predict energy and forces for small organic
+    molecules.
+  features: Atoms, nuclear species, and molecular geometries are the core inputs.
+    Graph edges or neighbor lists are model preprocessing choices; energy units, force
+    signs, target normalization, and coordinate conventions must match the release.
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses MAE (lower is better). Exact masks or folds must come from
+    the cited release.'
+  quirks_and_pitfalls: Near-duplicate conformations and molecule-wise versus conformation-wise
+    splits can cause leakage. Units and reference-energy conventions differ across
+    implementations, and MD trajectories are strongly autocorrelated.
+sources:
+- title: Machine Learning of Accurate Energy-Conserving Molecular Force Fields
+  arxiv_id: '1611.04678'
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric MD17 loader documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.MD17.html
+  kind: implementation_documentation
 primary_metric: MAE
 higher_is_better: false
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.MD17.html
@@ -270,16 +294,16 @@ variants:
   - MAE
   - ADE
   - E
-  - Energy
+  - Energy MAE (kcal mol⁻¹)
   - F
   - FDE
-  - Force
+  - Force MAE (kcal mol⁻¹ Å⁻¹)
   - H
   - RMSD
   - epsilon
   - psi
   show_all_metrics_desktop: false
-  chart_default_log_scale: false
+  chart_default_log_scale: true
   chart_hidden_models: []
   rows:
   - model: QHNet

@@ -3,7 +3,33 @@ title: twitch-gamers
 slug: twitch-gamers
 benchmark: LINKX Benchmarks
 task_type: node_classification
-description: Twitch streamer network binary node classification (streaming language).
+short_description: Twitch streamer network binary node classification (streaming language).
+description: '**Binary node classification** Twitch streamer network binary node classification
+  (streaming language). Uses the released sparse node features and a low-homophily
+  graph. Feature-only baselines are essential because structure can be weakly predictive.
+  Evaluated by Accuracy.'
+detailed_description:
+  task: Twitch streamer network binary node classification (streaming language). The
+    primary catalog metric is Accuracy.
+  data: Twitch streamer network binary node classification (streaming language). The
+    cataloged artifact reports 1 graphs, 2 target classes or tasks.
+  features: Each release supplies a sparse node-feature matrix, graph edges, and node
+    labels. Feature meaning varies by source; structure and features are deliberately
+    evaluated without assuming neighboring labels agree.
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses Accuracy (higher is better). Exact masks or folds must
+    come from the cited release.'
+  quirks_and_pitfalls: These are transductive single-graph tasks with fixed random
+    splits. Label homophily is low and class balance varies; feature-only and structure-only
+    baselines are essential, and similarly named OGB/source datasets may use different
+    labels or splits.
+sources:
+- title: LINKX Benchmarks benchmark
+  arxiv_id: '2110.14446'
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric twitch-gamers loader documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.LINKXDataset.html
+  kind: implementation_documentation
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.LINKXDataset.html

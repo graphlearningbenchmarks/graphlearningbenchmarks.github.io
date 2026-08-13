@@ -3,15 +3,36 @@ title: PubMed
 slug: pubmed
 benchmark: Classic
 task_type: node_classification
-description: Citation network node classification (3 classes).
+short_description: Predict one of three diabetes-related paper classes from TF-IDF
+  features and citations on one citation graph.
+description: '**Node classification** on one citation graph, predicting one of three
+  diabetes-related paper classes from TF-IDF features and citations. Evaluated by
+  Accuracy.'
+detailed_description:
+  task: Citation network node classification (3 classes). The primary catalog metric
+    is Accuracy.
+  data: Citation network node classification (3 classes).
+  features: The representation follows the cited PyG loader or benchmark release.
+    Node and edge fields are dataset-specific; preprocessing, graph direction, and
+    any feature normalization must be kept fixed when reproducing a result.
+  splits_and_evaluation: 'The catalog records these protocols or variants: Planetoid
+    split. Evaluation uses Accuracy (higher is better). Exact masks or folds must
+    come from the cited release.'
+  quirks_and_pitfalls: The same short dataset name is used for incompatible processed
+    artifacts and split protocols. Report the loader/version, directedness, feature
+    preprocessing, and exact masks; transductive results should not be described as
+    inductive.
+sources:
+- title: Revisiting Semi-Supervised Learning with Graph Embeddings
+  arxiv_id: '1603.08861'
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric PubMed loader documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Planetoid.html
+  kind: implementation_documentation
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Planetoid.html
-stats:
-  num_graphs: null
-  avg_nodes: null
-  avg_edges: null
-  num_classes: 3
+stats: null
 result_count: 1373
 best_model:
   model: LGTL
@@ -905,7 +926,7 @@ variants:
     num_graphs: null
     avg_nodes: null
     avg_edges: null
-    num_classes: 3
+    num_classes: null
   metrics:
   - Accuracy
   - F1

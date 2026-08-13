@@ -3,7 +3,31 @@ title: IMDB
 slug: imdb
 benchmark: Heterogeneous Graph Benchmarks
 task_type: node_classification
-description: Heterogeneous IMDB graph — classify movie nodes (3 genres).
+short_description: Heterogeneous IMDB graph — classify movie nodes (3 genres).
+description: '**3-class node classification** Heterogeneous IMDB graph — classify
+  movie nodes (3 genres). Uses typed nodes, typed relations, and available type-specific
+  features. Evaluated by Micro-F1.'
+detailed_description:
+  task: Heterogeneous IMDB graph — classify movie nodes (3 genres). The primary catalog
+    metric is Micro-F1.
+  data: Heterogeneous IMDB graph — classify movie nodes (3 genres). The cataloged
+    artifact reports 1 graphs, 3 target classes or tasks.
+  features: Inputs are typed graphs with relation-specific edges and type-specific
+    feature matrices where available. Some node types lack native features, so learned
+    embeddings or propagated features are modeling choices rather than measured attributes.
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses Micro-F1 (higher is better). Exact masks or folds must
+    come from the cited release.'
+  quirks_and_pitfalls: Schema, reverse-edge creation, feature propagation, and negative
+    sampling materially affect results. Report the exact release and target type;
+    random edge splits may leak future or reciprocal information.
+sources:
+- title: Heterogeneous Graph Benchmarks benchmark
+  arxiv_id: '2112.14936'
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric IMDB loader documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.IMDB.html
+  kind: implementation_documentation
 primary_metric: Micro-F1
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.IMDB.html

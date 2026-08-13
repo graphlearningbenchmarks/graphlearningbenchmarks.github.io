@@ -3,7 +3,37 @@ title: ogbl-wikikg2
 slug: ogbl-wikikg2
 benchmark: OGB
 task_type: link_prediction
-description: Knowledge graph link prediction on Wikidata (2.5M entities, 535 relations).
+short_description: Predict missing heads or tails of Wikidata triples.
+description: '**Link prediction** Predict missing heads or tails of Wikidata triples.
+  Entities are identifiers with learned representations in the standard task; no text
+  or image features are supplied by the core artifact. Evaluated by MRR.'
+detailed_description:
+  task: Predict missing heads or tails of Wikidata triples. Filtered MRR ranks each
+    true entity against 500 sampled corrupt heads and 500 sampled corrupt tails that
+    do not form known triples.
+  data: The graph contains 2,500,604 retained entities, 535 directed relation types,
+    and 17,137,181 triples extracted from historical Wikidata dumps after filtering
+    rare entities.
+  features: Entities are identifiers with learned representations in the standard
+    task; no text or image features are supplied by the core artifact. Relations are
+    typed directed edges.
+  splits_and_evaluation: Triples in the May 2015 snapshot train the model, additions
+    present by August validate it, and additions by November form test. Only entities
+    and relation types already present in May are retained.
+  quirks_and_pitfalls: Wikidata is incomplete and collaboratively edited, so an absent
+    triple is not necessarily false. The predecessor ogbl-wikikg had a negative-sampling
+    bug and is deprecated. Sampled MRR differs from ranking all entities, and inverse-relation
+    augmentation changes the model input.
+sources:
+- title: Open Graph Benchmark
+  arxiv_id: '2005.00687'
+  kind: benchmark_definition
+- title: OGB link property prediction documentation
+  url: https://ogb.stanford.edu/docs/linkprop/#ogbl-wikikg2
+  kind: official_documentation
+- title: Wikidata, a free collaborative knowledgebase
+  url: https://doi.org/10.1145/2629489
+  kind: upstream_data_source
 primary_metric: MRR
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.OGBLinkPropPredDataset.html

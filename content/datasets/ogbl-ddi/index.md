@@ -3,7 +3,39 @@ title: ogbl-ddi
 slug: ogbl-ddi
 benchmark: OGB
 task_type: link_prediction
-description: Drug-drug interaction link prediction (binary, homogeneous graph).
+short_description: Rank true drug-drug interaction edges above sampled non-interacting
+  pairs.
+description: '**Link prediction** Rank true drug-drug interaction edges above sampled
+  non-interacting pairs. The standard graph supplies topology but no intrinsic drug
+  node features or typed interaction labels. Evaluated by Hits@20.'
+detailed_description:
+  task: Rank true drug-drug interaction edges above sampled non-interacting pairs.
+    OGB reports Hits@20 with each positive ranked among approximately 100,000 random
+    negatives.
+  data: The homogeneous, undirected, unweighted DrugBank graph contains 4,267 drugs.
+    An edge means the combined effect of the drug pair differs substantially from
+    the effect expected if the drugs acted independently.
+  features: The standard graph supplies topology but no intrinsic drug node features
+    or typed interaction labels. Models using molecular structures, targets, or descriptions
+    are adding external data.
+  splits_and_evaluation: OGB groups edges using drug protein targets so test drugs
+    predominantly act on proteins different from those associated with train and validation
+    drugs. This tests transfer across mechanisms of action rather than a random edge
+    holdout.
+  quirks_and_pitfalls: No edge is not the same as a clinically verified safe combination,
+    and DrugBank includes both approved and experimental compounds. The graph collapses
+    interaction types and direction. External chemical features can radically change
+    the task and must be reported.
+sources:
+- title: Open Graph Benchmark
+  arxiv_id: '2005.00687'
+  kind: benchmark_definition
+- title: OGB link property prediction documentation
+  url: https://ogb.stanford.edu/docs/linkprop/#ogbl-ddi
+  kind: official_documentation
+- title: DrugBank 5.0
+  url: https://doi.org/10.1093/nar/gkx1037
+  kind: upstream_data_source
 primary_metric: Hits@20
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.OGBLinkPropPredDataset.html

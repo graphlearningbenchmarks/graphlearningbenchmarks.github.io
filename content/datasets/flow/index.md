@@ -3,7 +3,33 @@ title: Flow
 slug: flow
 benchmark: GraphBench
 task_type: graph_regression
-description: Network flow value prediction (GraphBench / CLRS-style algorithmic reasoning).
+short_description: 'Predict one scalar per graph: the maximum feasible flow between
+  designated source and sink vertices under the supplied edge capacities.'
+description: '**Graph regression** Predict one scalar per graph: the maximum feasible
+  flow between designated source and sink vertices under the supplied edge capacities.
+  Evaluated by MAE.'
+detailed_description:
+  task: 'Predict one scalar per graph: the maximum feasible flow between designated
+    source and sink vertices under the supplied edge capacities.'
+  data: Unique synthetic graphs are drawn from ER, stochastic-block, power-law-cluster,
+    Newman-Watts-Strogatz, BA, and dual-BA generators. Generator mixtures define easy,
+    medium, and hard distribution shifts.
+  features: Edge attributes encode capacities or weights needed by the flow problem,
+    while node information identifies source and sink. The target is the NetworkX
+    reference maximum-flow value.
+  splits_and_evaluation: Each difficulty provides one million 16-node training graphs
+    plus 10,000 validation and 10,000 128-node test graphs. Graph-level MAE is the
+    metric under the fixed 98/1/1 split.
+  quirks_and_pitfalls: GraphBench omits flow from its 128-to-512-node size study because
+    target magnitude, and therefore raw MAE, scales with network size. Capacity distribution
+    and generator shift must be held fixed when comparing errors.
+sources:
+- title: GraphBench
+  arxiv_id: '2512.04475'
+  kind: benchmark_definition
+- title: A New Approach to the Maximum-Flow Problem
+  url: https://doi.org/10.1145/12130.12144
+  kind: algorithm_source
 primary_metric: MAE
 higher_is_better: false
 pyg_url: https://graphbench.github.io/website/datasets.html

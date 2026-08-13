@@ -3,9 +3,37 @@ title: ogbg-molhiv
 slug: ogbg-molhiv
 benchmark: OGB
 task_type: graph_classification
-description: 'Binary graph classification on HIV inhibition (molecules). Highly imbalanced
-  dataset: only ~3.5% of molecules are active (HIV inhibitors). Evaluated with ROC-AUC
-  to account for class imbalance.'
+short_description: Predict whether a compound inhibits HIV replication.
+description: '**Binary graph classification** Predict whether a compound inhibits
+  HIV replication. Evaluated by ROC-AUC.'
+detailed_description:
+  task: Predict whether a compound inhibits HIV replication. This is one binary graph-classification
+    task scored by ROC-AUC because active compounds are rare.
+  data: The 41,127 compounds are OGB's RDKit-processed version of the MoleculeNet
+    HIV dataset. Each graph is one molecule, with atoms as nodes and covalent bonds
+    as edges; the activity labels ultimately come from the Drug Therapeutics Program
+    AIDS antiviral screen.
+  features: OGB converts SMILES into nine categorical atom fields, including atomic
+    number, chirality, formal charge, aromaticity, and ring membership, and three
+    categorical bond fields describing bond type, stereochemistry, and conjugation.
+  splits_and_evaluation: The official split separates compounds by Bemis-Murcko-style
+    two-dimensional molecular scaffolds rather than assigning molecules independently
+    at random. ROC-AUC is computed on the held-out scaffold groups.
+  quirks_and_pitfalls: The assay is highly imbalanced and a random split is easier
+    because close structural analogues can occur on both sides. The label reports
+    activity in a particular screening pipeline, not clinical efficacy, binding mechanism,
+    or general antiviral action. RDKit parsing and OGB feature versions should be
+    held fixed for comparison.
+sources:
+- title: Open Graph Benchmark
+  arxiv_id: '2005.00687'
+  kind: benchmark_definition
+- title: OGB graph property prediction documentation
+  url: https://ogb.stanford.edu/docs/graphprop/#ogbg-mol
+  kind: official_documentation
+- title: MoleculeNet
+  arxiv_id: '1703.00564'
+  kind: upstream_benchmark
 primary_metric: ROC-AUC
 higher_is_better: true
 pyg_url: https://ogb.stanford.edu/docs/leader_graphprop/#ogbg-molhiv

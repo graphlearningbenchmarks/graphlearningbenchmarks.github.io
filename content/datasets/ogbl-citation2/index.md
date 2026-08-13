@@ -3,7 +3,39 @@ title: ogbl-citation2
 slug: ogbl-citation2
 benchmark: OGB
 task_type: link_prediction
-description: Citation link prediction on arXiv/PubMed papers (directed).
+short_description: For each 2019 source paper, rank a withheld true reference above
+  1,000 older, uncited candidate papers.
+description: '**Link prediction** For each 2019 source paper, rank a withheld true
+  reference above 1,000 older, uncited candidate papers. Papers have 128-dimensional
+  averages of skip-gram embeddings from their titles and abstracts. Evaluated by MRR.'
+detailed_description:
+  task: For each 2019 source paper, rank a withheld true reference above 1,000 older,
+    uncited candidate papers. Mean reciprocal rank is averaged over the source-paper
+    queries.
+  data: The directed MAG subset contains 2,927,963 papers and 30,561,187 citation
+    edges. Each node has its publication year and citations point from the citing
+    paper to the referenced paper.
+  features: Papers have 128-dimensional averages of skip-gram embeddings from their
+    titles and abstracts. Candidate negatives are restricted to previous papers not
+    already cited by the source.
+  splits_and_evaluation: Two references are randomly removed from each eligible 2019
+    source paper, one for validation and one for test; all remaining citations train
+    the model. Evaluation ranks each held-out target separately against its fixed
+    negative candidates.
+  quirks_and_pitfalls: The deprecated ogbl-citation dataset had faulty negative sampling
+    and must not be combined with ogbl-citation2. Sampled MRR is not full-corpus retrieval,
+    and sampled uncited papers are not necessarily irrelevant. Edge direction and
+    temporal eligibility are essential to the protocol.
+sources:
+- title: Open Graph Benchmark
+  arxiv_id: '2005.00687'
+  kind: benchmark_definition
+- title: OGB link property prediction documentation
+  url: https://ogb.stanford.edu/docs/linkprop/#ogbl-citation2
+  kind: official_documentation
+- title: Microsoft Academic Graph, When experts are not enough
+  url: https://doi.org/10.1162/qss_a_00021
+  kind: upstream_data_source
 primary_metric: MRR
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.OGBLinkPropPredDataset.html

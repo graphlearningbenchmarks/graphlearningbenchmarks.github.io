@@ -3,7 +3,32 @@ title: FB15k-237
 slug: fb15k-237
 benchmark: Knowledge Graphs
 task_type: link_prediction
-description: Knowledge graph link prediction on Freebase (14,541 entities, 237 relations).
+short_description: Knowledge graph link prediction on Freebase (14,541 entities, 237
+  relations).
+description: '**237-relation knowledge-graph completion** Knowledge graph link prediction
+  on Freebase (14,541 entities, 237 relations). Inputs are directed subject-relation-object
+  triples with learned embeddings. Evaluated by MRR.'
+detailed_description:
+  task: Knowledge graph link prediction on Freebase (14,541 entities, 237 relations).
+    The primary catalog metric is MRR.
+  data: Knowledge graph link prediction on Freebase (14,541 entities, 237 relations).
+    The cataloged artifact reports 1 graphs, 237 target classes or tasks.
+  features: The raw input is a set of directed subject-relation-object triples. Entity
+    and relation embeddings are learned inputs; reciprocal edges, inverse relations,
+    and filtered candidate sets are evaluation or preprocessing choices.
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses MRR (higher is better). Exact masks or folds must come
+    from the cited release.'
+  quirks_and_pitfalls: Filtered ranking removes other known true triples but the graph
+    is incomplete, so sampled corruptions can be false negatives. WN18 and FB15k contain
+    inverse-relation leakage; use WN18RR or FB15k-237 when evaluating relational generalization.
+sources:
+- title: Observed versus latent features for knowledge base and text inference
+  arxiv_id: '1506.00379'
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric FB15k-237 loader documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.FB15k_237.html
+  kind: implementation_documentation
 primary_metric: MRR
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.FB15k_237.html

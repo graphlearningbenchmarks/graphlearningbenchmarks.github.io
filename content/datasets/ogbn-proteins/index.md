@@ -3,8 +3,42 @@ title: ogbn-proteins
 slug: ogbn-proteins
 benchmark: OGB
 task_type: node_classification
-description: Multi-label binary node classification on protein association network
-  (112 tasks).
+short_description: Predict all applicable Gene Ontology-derived function labels for
+  each protein.
+description: '**112-label node classification** Predict all applicable Gene Ontology-derived
+  function labels for each protein. Edges have eight confidence values between zero
+  and one, one per association evidence channel. Evaluated by ROC-AUC.'
+detailed_description:
+  task: Predict all applicable Gene Ontology-derived function labels for each protein.
+    This is 112-task multi-label node classification evaluated by mean ROC-AUC across
+    tasks.
+  data: One undirected graph contains 132,534 proteins from eight species and biologically
+    meaningful STRING associations including physical interaction, co-expression,
+    and homology.
+  features: Edges have eight confidence values between zero and one, one per association
+    evidence channel. The standard OGB baseline derives node inputs by aggregating
+    incident edge features; users must not assume that independent sequence features
+    are supplied.
+  splits_and_evaluation: Protein nodes are divided by species so validation and test
+    require transfer to species not represented by training nodes. ROC-AUC is computed
+    for each of the 112 function labels and then averaged.
+  quirks_and_pitfalls: Associations are evidence-weighted rather than verified physical
+    contacts, and confidence channels can reflect database coverage. Function annotation
+    is incomplete, so unannotated functions may not be true biological negatives.
+    Random node splitting breaks the intended cross-species test.
+sources:
+- title: Open Graph Benchmark
+  arxiv_id: '2005.00687'
+  kind: benchmark_definition
+- title: OGB node property prediction documentation
+  url: https://ogb.stanford.edu/docs/nodeprop/#ogbn-proteins
+  kind: official_documentation
+- title: STRING v11
+  url: https://doi.org/10.1093/nar/gky1131
+  kind: upstream_data_source
+- title: The Gene Ontology resource, 20 years and still GOing strong
+  url: https://doi.org/10.1093/nar/gky1055
+  kind: label_source
 primary_metric: ROC-AUC
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.OGBNodePropPredDataset.html

@@ -3,8 +3,36 @@ title: LRIM
 slug: lrim
 benchmark: LRIM Graph Benchmark
 task_type: node_regression
-description: Long-Range Ising Model benchmark for per-node energy prediction on periodic
-  2D grid graphs with controllable long-range interactions.
+short_description: Long-Range Ising Model benchmark for per-node energy prediction
+  on periodic 2D grid graphs with controllable long-range interactions.
+description: '**Node regression** Long-Range Ising Model benchmark for per-node energy
+  prediction on periodic 2D grid graphs with controllable long-range interactions.
+  Uses spins on a periodic 2D grid with controllable long-range couplings. Evaluated
+  by log-MSE.'
+detailed_description:
+  task: Long-Range Ising Model benchmark for per-node energy prediction on periodic
+    2D grid graphs with controllable long-range interactions. The primary catalog
+    metric is log-MSE.
+  data: Long-Range Ising Model benchmark for per-node energy prediction on periodic
+    2D grid graphs with controllable long-range interactions. The cataloged artifact
+    reports 100,000 graphs.
+  features: Nodes occupy a periodic two-dimensional grid and carry spin/state inputs.
+    Edges or interaction terms encode distance-dependent Ising couplings; the release
+    controls interaction range and system size.
+  splits_and_evaluation: 'The catalog records these protocols or variants: LRIM-16-hard,
+    LRIM-16-easy, LRIM-32-hard, LRIM-32-easy, LRIM-64-hard, LRIM-64-easy, LRIM-128-hard,
+    LRIM-128-easy, LRIM-256-hard, LRIM-256-easy. Evaluation uses log-MSE (lower is
+    better). Exact masks or folds must come from the cited release.'
+  quirks_and_pitfalls: Periodic boundaries and long-range couplings distinguish this
+    benchmark from nearest-neighbor grids. Energy conventions, coupling normalization,
+    lattice size, temperature sampling, and interaction cutoff must be reported.
+sources:
+- title: LRIM Graph Benchmark benchmark
+  url: https://openreview.net/forum?id=IAZXEX1dVV
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric LRIM loader documentation
+  url: https://lrim-graphbenchmark.com/
+  kind: implementation_documentation
 primary_metric: log-MSE
 higher_is_better: false
 pyg_url: https://lrim-graphbenchmark.com/

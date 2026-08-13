@@ -3,8 +3,30 @@ title: AQSOL
 slug: aqsol
 benchmark: Classic
 task_type: graph_regression
-description: Aqueous solubility regression on 9,982 molecular graphs from the LRGB
-  paper.
+short_description: Predict measured aqueous solubility on molecular graphs.
+description: '**Graph regression** on molecular graphs, predicting measured aqueous
+  solubility. Atom and bond types form the graph input. Evaluated by MAE.'
+detailed_description:
+  task: Aqueous solubility regression on 9,982 molecular graphs from the LRGB paper.
+    The primary catalog metric is MAE.
+  data: Aqueous solubility regression on 9,982 molecular graphs from the LRGB paper.
+  features: The representation follows the cited PyG loader or benchmark release.
+    Node and edge fields are dataset-specific; preprocessing, graph direction, and
+    any feature normalization must be kept fixed when reproducing a result.
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses MAE (lower is better). Exact masks or folds must come from
+    the cited release.'
+  quirks_and_pitfalls: The same short dataset name is used for incompatible processed
+    artifacts and split protocols. Report the loader/version, directedness, feature
+    preprocessing, and exact masks; transductive results should not be described as
+    inductive.
+sources:
+- title: AqSolDB, a curated reference set of aqueous solubility
+  url: https://doi.org/10.1038/s41597-019-0151-1
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric AQSOL loader documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.AQSOL.html
+  kind: implementation_documentation
 primary_metric: MAE
 higher_is_better: false
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.AQSOL.html

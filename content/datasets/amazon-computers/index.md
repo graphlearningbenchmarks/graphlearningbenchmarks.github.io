@@ -3,7 +3,31 @@ title: Amazon-Computers
 slug: amazon-computers
 benchmark: Classic
 task_type: node_classification
-description: Amazon co-purchase graph (Computers) node classification.
+short_description: Predict each product’s category from review-derived features and
+  product links on one co-purchase graph.
+description: '**Node classification** on one co-purchase graph, predicting each product’s
+  category from review-derived features and product links. Evaluated by Accuracy.'
+detailed_description:
+  task: Amazon co-purchase graph (Computers) node classification. The primary catalog
+    metric is Accuracy.
+  data: Amazon co-purchase graph (Computers) node classification.
+  features: The representation follows the cited PyG loader or benchmark release.
+    Node and edge fields are dataset-specific; preprocessing, graph direction, and
+    any feature normalization must be kept fixed when reproducing a result.
+  splits_and_evaluation: 'The catalog records these protocols or variants: Standard
+    split. Evaluation uses Accuracy (higher is better). Exact masks or folds must
+    come from the cited release.'
+  quirks_and_pitfalls: The same short dataset name is used for incompatible processed
+    artifacts and split protocols. Report the loader/version, directedness, feature
+    preprocessing, and exact masks; transductive results should not be described as
+    inductive.
+sources:
+- title: Pitfalls of Graph Neural Network Evaluation
+  arxiv_id: '1811.05868'
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric Amazon-Computers loader documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Amazon.html
+  kind: implementation_documentation
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Amazon.html

@@ -14,8 +14,8 @@ Checks currently included:
 - bounded metrics such as Accuracy/AP/AUC/F1/MRR/Hits@K must not exceed 1
 - values roughly 20x away from the dataset-metric median are flagged as likely scale issues
 
-**Flagged papers:** 44
-**Flagged rows:** 104
+**Flagged papers:** 42
+**Flagged rows:** 102
 
 
-Detailed table: 104 rows (loaded below).
+Detailed table: 102 rows (loaded below).

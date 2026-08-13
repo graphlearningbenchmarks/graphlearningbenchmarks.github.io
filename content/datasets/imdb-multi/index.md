@@ -3,7 +3,34 @@ title: IMDB-MULTI
 slug: imdb-multi
 benchmark: TU Dortmund
 task_type: graph_classification
-description: Multi-class graph classification of movie collaboration networks (3 genres).
+short_description: Multi-class graph classification of movie collaboration networks
+  (3 genres).
+description: '**3-class graph classification** Multi-class graph classification of
+  movie collaboration networks (3 genres). Uses the released node/edge labels or attributes;
+  several social datasets are featureless. Evaluated by Accuracy.'
+detailed_description:
+  task: Multi-class graph classification of movie collaboration networks (3 genres).
+    The primary catalog metric is Accuracy.
+  data: Multi-class graph classification of movie collaboration networks (3 genres).
+    The cataloged artifact reports 1,500 graphs, 3 target classes or tasks.
+  features: The TU text format may contain discrete node or edge labels and optional
+    continuous attributes. Social-network datasets commonly have no intrinsic node
+    attributes, so papers often add constant or degree features; that choice changes
+    the input.
+  splits_and_evaluation: 'The catalog records these protocols or variants: 10-fold
+    CV. Evaluation uses Accuracy (higher is better). Exact masks or folds must come
+    from the cited release.'
+  quirks_and_pitfalls: TU datasets have no canonical train/test split. Report cross-validation
+    folds, seeds, feature construction, and whether duplicate or isomorphic graphs
+    were removed; published results can otherwise differ for protocol rather than
+    model quality.
+sources:
+- title: TU Dortmund benchmark
+  arxiv_id: '2007.08663'
+  kind: benchmark_or_upstream_source
+- title: PyTorch Geometric IMDB-MULTI loader documentation
+  url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.TUDataset.html
+  kind: implementation_documentation
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.TUDataset.html
