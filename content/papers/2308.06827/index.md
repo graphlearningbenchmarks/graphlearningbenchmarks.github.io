@@ -1392,14 +1392,14 @@ results:
     is_std_outlier: false
     global_rank: 35
   metrics:
-  - F1
+  - Accuracy
   - NMI
   - ARI
-  primary_metric: F1
+  primary_metric: Accuracy
   rank_metric: NMI
   higher_is_better: true
   experiment_scope: node-level
-  dataset_primary_metric: F1
+  dataset_primary_metric: Accuracy
   paper_metrics:
   - NMI
   - ARI

@@ -34,9 +34,18 @@ higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.DBLP.html
 stats:
   num_graphs: 1
-  avg_nodes: null
-  avg_edges: null
+  avg_nodes: 26128.0
+  avg_edges: 239566.0
   num_classes: 4
+  extra_stats:
+    edge_feature_dim: 0
+    feature_type: type-specific; target author features are 334-dimensional
+    node_feature_dim: 334
+    num_edge_types: 6
+    num_node_types: 4
+    statistic_notes: 'HGB release: 26,128 nodes and 239,566 typed edges; Table 1 of
+      Lv et al. (2021).'
+    target_node_type: author
 result_count: 557
 best_model:
   model: LMSPS
@@ -328,9 +337,18 @@ variants:
   higher_is_better: true
   stats:
     num_graphs: 1
-    avg_nodes: null
-    avg_edges: null
+    avg_nodes: 26128.0
+    avg_edges: 239566.0
     num_classes: 4
+    extra_stats:
+      edge_feature_dim: 0
+      feature_type: type-specific; target author features are 334-dimensional
+      node_feature_dim: 334
+      num_edge_types: 6
+      num_node_types: 4
+      statistic_notes: 'HGB release: 26,128 nodes and 239,566 typed edges; Table 1
+        of Lv et al. (2021).'
+      target_node_type: author
   metrics:
   - Micro-F1
   - ACC

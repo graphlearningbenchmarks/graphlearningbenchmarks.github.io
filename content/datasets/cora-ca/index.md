@@ -33,9 +33,20 @@ higher_is_better: true
 pyg_url: ''
 stats:
   num_graphs: 1
-  avg_nodes: null
-  avg_edges: null
+  avg_nodes: 2708.0
+  avg_edges: 1072.0
   num_classes: 7
+  extra_stats:
+    avg_hyperedge_size: 4.277
+    avg_node_degree: 1.693
+    clique_expansion_homophily: 0.803
+    edge_count_semantics: hyperedges
+    edge_feature_dim: 0
+    feature_type: bag_of_words
+    median_hyperedge_size: 3
+    node_feature_dim: 1433
+    statistic_notes: 'AllSet supplementary table: 2,708 nodes, 1,072 hyperedges, and
+      1,433-dimensional document features.'
 result_count: 26
 best_model:
   model: HAN (full batch)
@@ -70,9 +81,20 @@ variants:
   higher_is_better: true
   stats:
     num_graphs: 1
-    avg_nodes: null
-    avg_edges: null
+    avg_nodes: 2708.0
+    avg_edges: 1072.0
     num_classes: 7
+    extra_stats:
+      avg_hyperedge_size: 4.277
+      avg_node_degree: 1.693
+      clique_expansion_homophily: 0.803
+      edge_count_semantics: hyperedges
+      edge_feature_dim: 0
+      feature_type: bag_of_words
+      median_hyperedge_size: 3
+      node_feature_dim: 1433
+      statistic_notes: 'AllSet supplementary table: 2,708 nodes, 1,072 hyperedges,
+        and 1,433-dimensional document features.'
   metrics:
   - Accuracy
   metric_display_names:

@@ -42,6 +42,16 @@ stats:
   avg_nodes: 479.4
   avg_edges: 2710.48
   num_classes: 21
+  extra_stats:
+    avg_degree: 11.31
+    edge_feature_dim: 2
+    edge_feature_type: mean Sobel response and boundary-pixel count
+    feature_type: 12 RGB summary values plus 2D superpixel center-of-mass coordinates
+    label_imbalance: semantic-segmentation labels are strongly dominated by background;
+      official score is class-weighted macro F1
+    node_feature_dim: 14
+    statistic_notes: LRGB default compactness-30 region-boundary graph; alternate
+      kNN and compactness variants have different topology.
 result_count: 130
 best_model:
   model: NeuralWalker
@@ -157,6 +167,16 @@ variants:
     avg_nodes: 479.4
     avg_edges: 2710.48
     num_classes: 21
+    extra_stats:
+      avg_degree: 11.31
+      edge_feature_dim: 2
+      edge_feature_type: mean Sobel response and boundary-pixel count
+      feature_type: 12 RGB summary values plus 2D superpixel center-of-mass coordinates
+      label_imbalance: semantic-segmentation labels are strongly dominated by background;
+        official score is class-weighted macro F1
+      node_feature_dim: 14
+      statistic_notes: LRGB default compactness-30 region-boundary graph; alternate
+        kNN and compactness variants have different topology.
   metrics:
   - F1
   - fraction of nodes satisfying $\Delta_n(z_m)>0$

@@ -1923,6 +1923,15 @@
     node.cy = node.preferredCy + dy * maxDrift / distance;
   }
 
+  // Moving a label farther from its preferred position should become
+  // progressively more expensive. This quadratic cost makes a short move
+  // around a crowded point preferable to sending one label across the plot.
+  function _labelDriftCost(node, cx, cy) {
+    var dx = cx - node.preferredCx;
+    var dy = cy - node.preferredCy;
+    return dx * dx + dy * dy;
+  }
+
   function _constrainLabelDirection(node) {
     var clearance = 4;
     if (node.directionLocked && node.preferredSide < 0) {
@@ -1961,6 +1970,31 @@
     return true;
   }
 
+  function _separateProtectedLabelPair(protectedLabel, other, gap) {
+    gap = gap == null ? 0.5 : gap;
+    var dx = other.cx - protectedLabel.cx;
+    var dy = other.cy - protectedLabel.cy;
+    var overlapX = (protectedLabel.width + other.width) / 2 + gap - Math.abs(dx);
+    var overlapY = (protectedLabel.height + other.height) / 2 + gap - Math.abs(dy);
+    if (overlapX <= 0 || overlapY <= 0) return false;
+
+    var directionX = dx === 0
+      ? Math.sign(other.preferredCx - protectedLabel.cx) || 1
+      : Math.sign(dx);
+    var directionY = dy === 0
+      ? Math.sign(other.preferredCy - protectedLabel.cy) || 1
+      : Math.sign(dy);
+    var horizontalX = other.cx + directionX * overlapX;
+    var verticalY = other.cy + directionY * overlapY;
+    if (_labelDriftCost(other, horizontalX, other.cy) <
+        _labelDriftCost(other, other.cx, verticalY)) {
+      other.cx = horizontalX;
+    } else {
+      other.cy = verticalY;
+    }
+    return true;
+  }
+
   function _labelNodesOverlap(a, b, gap) {
     gap = gap || 0;
     return Math.abs(a.cx - b.cx) < (a.width + b.width) / 2 + gap &&
@@ -1984,16 +2018,23 @@
     var overlapY = label.height / 2 + obstacle.radius - Math.abs(dy);
     if (overlapX <= 0 || overlapY <= 0) return false;
 
-    if (obstacle.preferHorizontal || (!obstacle.preferVertical && overlapX < overlapY)) {
-      var directionX = dx === 0
-        ? Math.sign(label.preferredCx - obstacle.x) || 1
-        : Math.sign(dx);
-      label.cx += directionX * (overlapX + 0.2);
+    var directionX = dx === 0
+      ? Math.sign(label.preferredCx - obstacle.x) || 1
+      : Math.sign(dx);
+    var directionY = dy === 0
+      ? Math.sign(label.preferredCy - obstacle.y) || -1
+      : Math.sign(dy);
+    var horizontalX = label.cx + directionX * (overlapX + 0.2);
+    var verticalY = label.cy + directionY * (overlapY + 0.2);
+    var moveHorizontally = obstacle.preferHorizontal ||
+      (!obstacle.preferVertical &&
+        (overlapX < overlapY ||
+          _labelDriftCost(label, horizontalX, label.cy) <=
+          _labelDriftCost(label, label.cx, verticalY)));
+    if (moveHorizontally) {
+      label.cx = horizontalX;
     } else {
-      var directionY = dy === 0
-        ? Math.sign(label.preferredCy - obstacle.y) || -1
-        : Math.sign(dy);
-      label.cy += directionY * (overlapY + 0.2);
+      label.cy = verticalY;
     }
     return true;
   }
@@ -2051,6 +2092,7 @@
         }
       }
       labels.forEach(function (label) {
+        _limitLabelDrift(label, 36);
         _constrainLabelDirection(label);
         _clampLabelNode(label, area, margin);
       });
@@ -2075,6 +2117,7 @@
         }
       }
       labels.forEach(function (label) {
+        _limitLabelDrift(label, 36);
         _constrainLabelDirection(label);
         _clampLabelNode(label, area, margin);
       });
@@ -2406,8 +2449,12 @@
           labels[1].anchorX - labels[0].anchorX < denseGapLimit &&
           labels[2].anchorX - labels[1].anchorX < denseGapLimit;
         if (denseLeadingCluster) {
-          labels[0].preferredSide = 1;
-          labels[0].preferredVertical = 1;
+          // The first point is close to the left edge, but the top-left
+          // corner is open. Keep its long label there instead of sending it
+          // through the dense lower-left point cloud.
+          labels[0].preferredSide = 0;
+          labels[0].preferredVertical = -1;
+          labels[0].protectDirection = true;
 
           labels[1].preferredSide = -1;
           labels[1].preferredVertical = 0;
@@ -2417,10 +2464,40 @@
           labels[2].preferredDistanceY = 32;
         }
 
+        // A few recurring method names need a stable direction in the dense
+        // leading cluster. Their locally best generic direction can cross the
+        // step lines even though a nearby open basin is available.
+        var labelPlacementOverrides = {
+          "WL + Virtual Node + AutoML": {
+            preferredSide: 0,
+            preferredVertical: -1,
+            preferredDistanceY: 52,
+          },
+          Graphormer: {
+            preferredSide: -1,
+            preferredVertical: 0,
+            directionLocked: true,
+            wrap: true,
+          },
+          GraphSAINT: { preferredSide: 0, preferredVertical: 1, preferredDistanceY: 10 },
+          UniMP: { preferredSide: 0, preferredVertical: -1, preferredDistanceY: 6 },
+          "FDiff-scale (MLP)": {
+            preferredSide: 0,
+            preferredVertical: -1,
+            preferredDistanceY: 34,
+          },
+        };
+        labels.forEach(function (label) {
+          var override = labelPlacementOverrides[label.model];
+          if (!override) return;
+          Object.assign(label, override, { protectDirection: true });
+          if (override.wrap) Object.assign(label, measureLabel([label.model, label.valueText]));
+        });
+
         // Prefer the larger empty time interval. When neither side clearly has
         // more room, keep the label centered immediately above its milestone.
         labels.forEach(function (label, index) {
-          if (label.directionLocked || (denseLeadingCluster && index < 3)) return;
+          if (label.directionLocked || label.protectDirection || (denseLeadingCluster && index < 3)) return;
           var previous = labels[index - 1];
           var next = labels[index + 1];
           if (!previous) {
@@ -2433,16 +2510,13 @@
               label.preferredVertical = 0;
               label.directionLocked = true;
             } else {
-              var nearLeftBoundary = label.anchorX - chartArea.left < label.width / 2 + 14;
-              var hasRoomBelow = chartArea.bottom - label.anchorY > label.height + 14;
               var hasRoomAbove = label.anchorY - chartArea.top > label.height + 14;
-              if (label.width > 120 && nearLeftBoundary && hasRoomBelow) {
-                label.preferredSide = 0;
-                label.preferredVertical = 1;
-              } else {
-                label.preferredSide = hasRoomAbove ? 0 : 1;
-                label.preferredVertical = hasRoomAbove ? -1 : 0;
-              }
+              // The first milestone often sits near the lower-left corner.
+              // Prefer the open top-left basin when it fits; the crowded area
+              // below the first point is a poor fallback even when it has room.
+              label.preferredSide = hasRoomAbove ? 0 : 1;
+              label.preferredVertical = hasRoomAbove ? -1 : 0;
+              label.protectDirection = hasRoomAbove;
             }
             return;
           }
@@ -2492,11 +2566,12 @@
         // When the dots have useful horizontal separation, fan them upper-left
         // and upper-right; truly coincident dots remain top/bottom.
         labels.forEach(function (label, index) {
-          if (label.directionLocked || (denseLeadingCluster && index < 3)) return;
+          if (label.directionLocked || label.protectDirection || (denseLeadingCluster && index < 3)) return;
           for (var otherIndex = index + 1; otherIndex < labels.length; otherIndex++) {
             if (denseLeadingCluster && otherIndex < 3) continue;
+            if (label.protectDirection) continue;
             var other = labels[otherIndex];
-            if (other.directionLocked) continue;
+            if (other.directionLocked || other.protectDirection) continue;
             var dx = other.anchorX - label.anchorX;
             var dy = other.anchorY - label.anchorY;
             var closeX = Math.abs(dx) < (label.width + other.width) / 2 + 12;
@@ -2679,6 +2754,9 @@
           overlaps.forEach(function (pair) {
             var first = pair[0];
             var second = pair[1];
+            if (first.protectDirection || second.protectDirection) {
+              return;
+            }
             var dx = second.anchorX - first.anchorX;
             if (Math.abs(dx) >= 20) {
               var earlier = first.anchorX <= second.anchorX ? first : second;
@@ -2719,6 +2797,9 @@
           overlaps.forEach(function (pair, pairIndex) {
             var first = pair[0];
             var second = pair[1];
+            if (first.protectDirection || second.protectDirection) {
+              return;
+            }
             var higher = first.anchorY <= second.anchorY ? first : second;
             var lower = higher === first ? second : first;
             if (Math.abs(first.anchorY - second.anchorY) < 1) {
@@ -2733,7 +2814,26 @@
             lower.preferredDistanceY = 14;
           });
           _relaxChartLabels(labels, obstacles, chartArea);
-          overlaps = _overlappingLabelPairs(labels, 0.5);
+          overlaps = _overlappingLabelPairs(labels, 4);
+        }
+        for (var finalSeparationPass = 0; finalSeparationPass < 12 && overlaps.length;
+            finalSeparationPass++) {
+          var finalSeparationMoved = false;
+          overlaps.forEach(function (pair) {
+            finalSeparationMoved = (pair[0].protectDirection || pair[1].protectDirection
+              ? _separateProtectedLabelPair(
+                pair[0].protectDirection ? pair[0] : pair[1],
+                pair[0].protectDirection ? pair[1] : pair[0],
+                4
+              )
+              : _separateLabelPair(pair[0], pair[1], pair[0].index || 0, 4)) ||
+              finalSeparationMoved;
+          });
+          labels.forEach(function (label) {
+            _clampLabelNode(label, chartArea, 3);
+          });
+          overlaps = _overlappingLabelPairs(labels, 4);
+          if (!finalSeparationMoved) break;
         }
         chart.canvas.dataset.labelOverlapCount = String(overlaps.length);
         labels.forEach(function (label) {

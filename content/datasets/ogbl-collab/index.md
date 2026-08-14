@@ -40,10 +40,22 @@ primary_metric: Hits@50
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.OGBLinkPropPredDataset.html
 stats:
-  num_graphs: 235868
-  avg_nodes: 1285465.0
-  avg_edges: null
+  num_graphs: 1
+  avg_nodes: 235868.0
+  avg_edges: 1285465.0
   num_classes: null
+  extra_stats:
+    avg_degree: 10.9
+    degree_convention: derived as 2 × avg_edges / avg_nodes for the undirected temporal
+      multigraph
+    edge_feature_dim: 2
+    edge_feature_type: collaboration year and yearly co-authored-paper count
+    label_imbalance: no fixed binary label distribution; evaluation ranks positives
+      against 100000 sampled negatives per positive
+    node_feature_dim: 128
+    node_feature_type: averaged word embeddings of author papers
+    statistic_notes: clustering coefficient and diameter are not reported in the canonical
+      OGB/PyG metadata
 result_count: 163
 best_model:
   model: PROXI
@@ -177,10 +189,22 @@ variants:
   default_metric: Hits@50
   higher_is_better: true
   stats:
-    num_graphs: 235868
-    avg_nodes: 1285465.0
-    avg_edges: null
+    num_graphs: 1
+    avg_nodes: 235868.0
+    avg_edges: 1285465.0
     num_classes: null
+    extra_stats:
+      avg_degree: 10.9
+      degree_convention: derived as 2 × avg_edges / avg_nodes for the undirected temporal
+        multigraph
+      edge_feature_dim: 2
+      edge_feature_type: collaboration year and yearly co-authored-paper count
+      label_imbalance: no fixed binary label distribution; evaluation ranks positives
+        against 100000 sampled negatives per positive
+      node_feature_dim: 128
+      node_feature_type: averaged word embeddings of author papers
+      statistic_notes: clustering coefficient and diameter are not reported in the
+        canonical OGB/PyG metadata
   metrics:
   - Hits@50
   - MRR

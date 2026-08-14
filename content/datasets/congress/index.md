@@ -34,9 +34,20 @@ higher_is_better: true
 pyg_url: ''
 stats:
   num_graphs: 1
-  avg_nodes: null
-  avg_edges: null
+  avg_nodes: 1718.0
+  avg_edges: 83105.0
   num_classes: 2
+  extra_stats:
+    avg_hyperedge_size: 8.656
+    avg_node_degree: 427.237
+    clique_expansion_homophily: 0.555
+    edge_count_semantics: hyperedges
+    edge_feature_dim: 0
+    feature_type: synthetic Gaussian features, dimension 100
+    median_hyperedge_size: 5
+    node_feature_dim: 100
+    statistic_notes: 'Congress bills/co-sponsorship release: 1,718 nodes and 83,105
+      hyperedges.'
 result_count: 13
 best_model:
   model: HealHGNN
@@ -60,9 +71,20 @@ variants:
   higher_is_better: true
   stats:
     num_graphs: 1
-    avg_nodes: null
-    avg_edges: null
+    avg_nodes: 1718.0
+    avg_edges: 83105.0
     num_classes: 2
+    extra_stats:
+      avg_hyperedge_size: 8.656
+      avg_node_degree: 427.237
+      clique_expansion_homophily: 0.555
+      edge_count_semantics: hyperedges
+      edge_feature_dim: 0
+      feature_type: synthetic Gaussian features, dimension 100
+      median_hyperedge_size: 5
+      node_feature_dim: 100
+      statistic_notes: 'Congress bills/co-sponsorship release: 1,718 nodes and 83,105
+        hyperedges.'
   metrics:
   - Accuracy
   metric_display_names:

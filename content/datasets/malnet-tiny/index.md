@@ -37,9 +37,16 @@ higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.MalNetTiny.html
 stats:
   num_graphs: 5000
-  avg_nodes: null
-  avg_edges: null
+  avg_nodes: 1410.3
+  avg_edges: 2859.9
   num_classes: 5
+  extra_stats:
+    avg_degree: 4.06
+    edge_feature_dim: 0
+    label_imbalance: balanced
+    node_feature_dim: 0
+    statistic_notes: MalNet-Tiny contains 1,000 graphs in each of five families; each
+      graph has at most 5,000 nodes.
 result_count: 37
 best_model:
   model: GMN
@@ -82,9 +89,16 @@ variants:
   higher_is_better: true
   stats:
     num_graphs: 5000
-    avg_nodes: null
-    avg_edges: null
+    avg_nodes: 1410.3
+    avg_edges: 2859.9
     num_classes: 5
+    extra_stats:
+      avg_degree: 4.06
+      edge_feature_dim: 0
+      label_imbalance: balanced
+      node_feature_dim: 0
+      statistic_notes: MalNet-Tiny contains 1,000 graphs in each of five families;
+        each graph has at most 5,000 nodes.
   metrics:
   - Accuracy
   metric_display_names:

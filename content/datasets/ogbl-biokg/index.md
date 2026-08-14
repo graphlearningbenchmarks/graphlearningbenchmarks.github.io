@@ -39,10 +39,22 @@ primary_metric: MRR
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.OGBLinkPropPredDataset.html
 stats:
-  num_graphs: 93773
-  avg_nodes: 5088434.0
-  avg_edges: null
+  num_graphs: 1
+  avg_nodes: 93773.0
+  avg_edges: 5088434.0
   num_classes: null
+  extra_stats:
+    avg_degree: 54.263
+    degree_convention: derived as avg_edges / avg_nodes for directed knowledge-graph
+      triples (average out-degree)
+    edge_feature_type: 51 categorical directed relation types
+    label_imbalance: no fixed binary label distribution; same-type negative samples
+      are used for evaluation
+    node_feature_type: no unified molecular, sequence, or textual node features
+    num_node_types: 5
+    num_relation_types: 51
+    statistic_notes: clustering coefficient and diameter are not reported; the graph
+      combines heterogeneous biomedical sources
 result_count: 12
 best_model:
   model: PairRE+LRE
@@ -88,10 +100,22 @@ variants:
   default_metric: MRR
   higher_is_better: true
   stats:
-    num_graphs: 93773
-    avg_nodes: 5088434.0
-    avg_edges: null
+    num_graphs: 1
+    avg_nodes: 93773.0
+    avg_edges: 5088434.0
     num_classes: null
+    extra_stats:
+      avg_degree: 54.263
+      degree_convention: derived as avg_edges / avg_nodes for directed knowledge-graph
+        triples (average out-degree)
+      edge_feature_type: 51 categorical directed relation types
+      label_imbalance: no fixed binary label distribution; same-type negative samples
+        are used for evaluation
+      node_feature_type: no unified molecular, sequence, or textual node features
+      num_node_types: 5
+      num_relation_types: 51
+      statistic_notes: clustering coefficient and diameter are not reported; the graph
+        combines heterogeneous biomedical sources
   metrics:
   - MRR
   metric_display_names:

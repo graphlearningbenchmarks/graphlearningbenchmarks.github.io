@@ -33,7 +33,29 @@ sources:
 primary_metric: ROC-AUC
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.HeterophilousGraphDataset.html
-stats: null
+stats:
+  num_graphs: 1
+  avg_nodes: 48921.0
+  avg_edges: 153540.0
+  num_classes: 2
+  extra_stats:
+    adjusted_homophily: 0.02
+    avg_degree: 6.28
+    avg_local_clustering: 0.03
+    clustering_coefficient: 0.02
+    diameter: 16
+    edge_feature_dim: 0
+    edge_feature_type: unweighted answer relationships
+    edge_homophily: 0.84
+    heterophily: 0.16
+    label_imbalance: 97% of users are active; the active class is positive
+    label_informativeness: 0.0
+    node_feature_dim: 301
+    node_feature_type: 300-dimensional fastText user-description mean plus missing-description
+      flag
+    positive_label_rate: 0.97
+    statistic_notes: All graph statistics are from Table 2 of the heterophily benchmark
+      paper
 result_count: 265
 best_model:
   model: UniGAP
@@ -183,10 +205,28 @@ variants:
   default_metric: ROC-AUC
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
-    num_classes: null
+    num_graphs: 1
+    avg_nodes: 48921.0
+    avg_edges: 153540.0
+    num_classes: 2
+    extra_stats:
+      adjusted_homophily: 0.02
+      avg_degree: 6.28
+      avg_local_clustering: 0.03
+      clustering_coefficient: 0.02
+      diameter: 16
+      edge_feature_dim: 0
+      edge_feature_type: unweighted answer relationships
+      edge_homophily: 0.84
+      heterophily: 0.16
+      label_imbalance: 97% of users are active; the active class is positive
+      label_informativeness: 0.0
+      node_feature_dim: 301
+      node_feature_type: 300-dimensional fastText user-description mean plus missing-description
+        flag
+      positive_label_rate: 0.97
+      statistic_notes: All graph statistics are from Table 2 of the heterophily benchmark
+        paper
   metrics:
   - ROC-AUC
   - Accuracy

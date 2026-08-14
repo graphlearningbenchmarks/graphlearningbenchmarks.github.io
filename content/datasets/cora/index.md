@@ -44,7 +44,16 @@ sources:
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Planetoid.html
-stats: null
+stats:
+  num_graphs: 1
+  avg_nodes: 2708.0
+  avg_edges: 5429.0
+  num_classes: 7
+  extra_stats:
+    avg_degree: 4.014
+    edge_feature_dim: 0
+    edge_homophily: 0.8252
+    node_feature_dim: 1433
 result_count: 1352
 best_model:
   model: MATE
@@ -985,10 +994,15 @@ variants:
   default_metric: Accuracy
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
-    num_classes: null
+    num_graphs: 1
+    avg_nodes: 2708.0
+    avg_edges: 5429.0
+    num_classes: 7
+    extra_stats:
+      avg_degree: 4.014
+      edge_feature_dim: 0
+      edge_homophily: 0.8252
+      node_feature_dim: 1433
   metrics:
   - Accuracy
   - AUC

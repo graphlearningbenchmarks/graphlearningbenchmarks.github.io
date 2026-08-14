@@ -37,6 +37,16 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: null
+  extra_stats:
+    edge_feature_dim: 3
+    edge_feature_type: branch admittance, tap-ratio, and topology-derived branch attributes
+    feature_type: active/reactive power, voltage magnitude, reactive bounds, self-admittance,
+      and bus-type encoding
+    node_count_range: 300--690 buses across operational/generalization samples
+    node_feature_dim: 7
+    sample_semantics: operating-point samples/subgraphs, not independent graph topologies
+    statistic_notes: Case II uses 500,000 training samples, 100,000 test samples,
+      and about 150,000 generalization samples from 366 days of provincial-grid data.
 result_count: 4
 best_model:
   model: RMGL
@@ -62,6 +72,18 @@ variants:
     avg_nodes: null
     avg_edges: null
     num_classes: null
+    extra_stats:
+      edge_feature_dim: 3
+      edge_feature_type: branch admittance, tap-ratio, and topology-derived branch
+        attributes
+      feature_type: active/reactive power, voltage magnitude, reactive bounds, self-admittance,
+        and bus-type encoding
+      node_count_range: 300--690 buses across operational/generalization samples
+      node_feature_dim: 7
+      sample_semantics: operating-point samples/subgraphs, not independent graph topologies
+      statistic_notes: Case II uses 500,000 training samples, 100,000 test samples,
+        and about 150,000 generalization samples from 366 days of provincial-grid
+        data.
   metrics:
   - Accuracy
   metric_display_names:

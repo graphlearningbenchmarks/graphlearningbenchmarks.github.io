@@ -44,6 +44,17 @@ stats:
   avg_nodes: 243.4
   avg_edges: 2266.1
   num_classes: 37
+  extra_stats:
+    avg_degree: 18.62
+    degree_convention: derived as 2 × avg_edges / avg_nodes for canonical undirected
+      graphs
+    edge_feature_dim: 7
+    edge_feature_type: STRING association confidence channels
+    label_imbalance: class distribution is not reported in the canonical OGB documentation
+    node_feature_type: no intrinsic node features
+    num_species: 1581
+    statistic_notes: clustering coefficient and diameter are not reported; graphs
+      are sampled two-hop neighborhoods
 result_count: 47
 best_model:
   model: A-NLSF
@@ -131,6 +142,17 @@ variants:
     avg_nodes: 243.4
     avg_edges: 2266.1
     num_classes: 37
+    extra_stats:
+      avg_degree: 18.62
+      degree_convention: derived as 2 × avg_edges / avg_nodes for canonical undirected
+        graphs
+      edge_feature_dim: 7
+      edge_feature_type: STRING association confidence channels
+      label_imbalance: class distribution is not reported in the canonical OGB documentation
+      node_feature_type: no intrinsic node features
+      num_species: 1581
+      statistic_notes: clustering coefficient and diameter are not reported; graphs
+        are sampled two-hop neighborhoods
   metrics:
   - Accuracy
   metric_display_names:

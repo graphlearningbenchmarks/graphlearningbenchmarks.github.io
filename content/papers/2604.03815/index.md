@@ -60,7 +60,7 @@ benchmark_coverage:
 - benchmark: Other Graph Benchmarks
   benchmark_slug: other-graph-benchmarks
   evaluated: 1
-  total: 5
+  total: 4
 - benchmark: City-Networks
   benchmark_slug: city-networks
   evaluated: 3

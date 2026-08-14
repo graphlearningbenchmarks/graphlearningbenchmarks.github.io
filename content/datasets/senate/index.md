@@ -32,9 +32,20 @@ higher_is_better: true
 pyg_url: ''
 stats:
   num_graphs: 1
-  avg_nodes: null
-  avg_edges: null
+  avg_nodes: 282.0
+  avg_edges: 315.0
   num_classes: 2
+  extra_stats:
+    avg_hyperedge_size: 17.168
+    avg_node_degree: 19.177
+    clique_expansion_homophily: 0.498
+    edge_count_semantics: hyperedges
+    edge_feature_dim: 0
+    feature_type: synthetic Gaussian features, dimension 100
+    median_hyperedge_size: 19
+    node_feature_dim: 100
+    statistic_notes: 'Senate committee hypergraph: 282 nodes and 315 hyperedges; the
+      Cornell source reports mean hyperedge size 17.2.'
 result_count: 14
 best_model:
   model: HealHGNN
@@ -58,9 +69,20 @@ variants:
   higher_is_better: true
   stats:
     num_graphs: 1
-    avg_nodes: null
-    avg_edges: null
+    avg_nodes: 282.0
+    avg_edges: 315.0
     num_classes: 2
+    extra_stats:
+      avg_hyperedge_size: 17.168
+      avg_node_degree: 19.177
+      clique_expansion_homophily: 0.498
+      edge_count_semantics: hyperedges
+      edge_feature_dim: 0
+      feature_type: synthetic Gaussian features, dimension 100
+      median_hyperedge_size: 19
+      node_feature_dim: 100
+      statistic_notes: 'Senate committee hypergraph: 282 nodes and 315 hyperedges;
+        the Cornell source reports mean hyperedge size 17.2.'
   metrics:
   - Accuracy
   metric_display_names:

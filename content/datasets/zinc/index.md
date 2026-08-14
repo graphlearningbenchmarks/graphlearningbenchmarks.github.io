@@ -36,7 +36,15 @@ stats:
   num_graphs: 249456
   avg_nodes: 23.2
   avg_edges: 24.9
-  num_classes: null
+  num_classes: None
+  extra_stats:
+    avg_degree: 2.151
+    edge_feature_dim: 4
+    edge_feature_type: categorical bond type
+    node_feature_dim: 28
+    node_feature_type: categorical heavy-atom type
+    statistic_notes: 12k subset used by Benchmarking Graph Neural Networks; the full
+      ZINC release has 249,456 graphs
 result_count: 142
 best_model:
   model: TIGT
@@ -178,7 +186,15 @@ variants:
     num_graphs: 249456
     avg_nodes: 23.2
     avg_edges: 24.9
-    num_classes: null
+    num_classes: None
+    extra_stats:
+      avg_degree: 2.151
+      edge_feature_dim: 4
+      edge_feature_type: categorical bond type
+      node_feature_dim: 28
+      node_feature_type: categorical heavy-atom type
+      statistic_notes: 12k subset used by Benchmarking Graph Neural Networks; the
+        full ZINC release has 249,456 graphs
   metrics:
   - MAE
   - QED

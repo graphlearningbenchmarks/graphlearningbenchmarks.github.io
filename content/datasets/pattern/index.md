@@ -34,10 +34,17 @@ primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.GNNBenchmarkDataset.html
 stats:
-  num_graphs: null
-  avg_nodes: null
-  avg_edges: null
+  num_graphs: 14000
+  avg_nodes: 117.47
+  avg_edges: 4749.15
   num_classes: 2
+  extra_stats:
+    edge_feature_dim: 0
+    edge_feature_type: unweighted SBM edges
+    node_feature_dim: 3
+    node_feature_type: categorical synthetic node attributes
+    statistic_notes: The benchmark paper reports 14,000 graphs and 4,749.15 average
+      edge entries
 result_count: 161
 best_model:
   model: DeepGraph (48)
@@ -158,10 +165,17 @@ variants:
   default_metric: Accuracy
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
+    num_graphs: 14000
+    avg_nodes: 117.47
+    avg_edges: 4749.15
     num_classes: 2
+    extra_stats:
+      edge_feature_dim: 0
+      edge_feature_type: unweighted SBM edges
+      node_feature_dim: 3
+      node_feature_type: categorical synthetic node attributes
+      statistic_notes: The benchmark paper reports 14,000 graphs and 4,749.15 average
+        edge entries
   metrics:
   - Accuracy
   - ACC

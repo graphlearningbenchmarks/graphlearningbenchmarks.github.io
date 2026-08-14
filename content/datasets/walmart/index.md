@@ -34,9 +34,20 @@ higher_is_better: true
 pyg_url: ''
 stats:
   num_graphs: 1
-  avg_nodes: null
-  avg_edges: null
+  avg_nodes: 88860.0
+  avg_edges: 69906.0
   num_classes: 11
+  extra_stats:
+    avg_hyperedge_size: 6.589
+    avg_node_degree: 5.184
+    clique_expansion_homophily: 0.53
+    edge_count_semantics: hyperedges
+    edge_feature_dim: 0
+    feature_type: synthetic Gaussian features, dimension 100
+    median_hyperedge_size: 5
+    node_feature_dim: 100
+    statistic_notes: 'Walmart purchase hypergraph: 88,860 products and 69,906 hyperedges
+      in the AllSet release.'
 result_count: 17
 best_model:
   model: HealHGNN
@@ -64,9 +75,20 @@ variants:
   higher_is_better: true
   stats:
     num_graphs: 1
-    avg_nodes: null
-    avg_edges: null
+    avg_nodes: 88860.0
+    avg_edges: 69906.0
     num_classes: 11
+    extra_stats:
+      avg_hyperedge_size: 6.589
+      avg_node_degree: 5.184
+      clique_expansion_homophily: 0.53
+      edge_count_semantics: hyperedges
+      edge_feature_dim: 0
+      feature_type: synthetic Gaussian features, dimension 100
+      median_hyperedge_size: 5
+      node_feature_dim: 100
+      statistic_notes: 'Walmart purchase hypergraph: 88,860 products and 69,906 hyperedges
+        in the AllSet release.'
   metrics:
   - Accuracy
   metric_display_names:

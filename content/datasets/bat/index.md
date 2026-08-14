@@ -37,6 +37,11 @@ stats:
   avg_nodes: 131.0
   avg_edges: null
   num_classes: 4
+  extra_stats:
+    edge_count_semantics: hyperedges
+    statistic_notes: The catalog has 131 nodes and four classes, but the cited AllSet
+      paper does not publish a BAT row or canonical hyperedge/feature counts. Missing
+      values are intentionally not treated as zero.
 result_count: 55
 best_model:
   model: GraphLearner
@@ -78,6 +83,11 @@ variants:
     avg_nodes: 131.0
     avg_edges: null
     num_classes: 4
+    extra_stats:
+      edge_count_semantics: hyperedges
+      statistic_notes: The catalog has 131 nodes and four classes, but the cited AllSet
+        paper does not publish a BAT row or canonical hyperedge/feature counts. Missing
+        values are intentionally not treated as zero.
   metrics:
   - F1
   - ARI

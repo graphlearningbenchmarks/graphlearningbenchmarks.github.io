@@ -38,6 +38,16 @@ stats:
   avg_nodes: 169343.0
   avg_edges: 1166243.0
   num_classes: 5
+  extra_stats:
+    adjusted_homophily: 0.272
+    edge_feature_dim: 0
+    edge_feature_type: unweighted citation links
+    edge_homophily: 0.222
+    feature_type: OGB-arXiv paper representations
+    heterophily: 0.778
+    node_feature_dim: 128
+    statistic_notes: LINKX Table 5 reports 169,343 nodes, 1,166,243 edges, 128 attributes,
+      and five publication-year classes.
 result_count: 71
 best_model:
   model: LargeScaleNet
@@ -116,6 +126,16 @@ variants:
     avg_nodes: 169343.0
     avg_edges: 1166243.0
     num_classes: 5
+    extra_stats:
+      adjusted_homophily: 0.272
+      edge_feature_dim: 0
+      edge_feature_type: unweighted citation links
+      edge_homophily: 0.222
+      feature_type: OGB-arXiv paper representations
+      heterophily: 0.778
+      node_feature_dim: 128
+      statistic_notes: LINKX Table 5 reports 169,343 nodes, 1,166,243 edges, 128 attributes,
+        and five publication-year classes.
   metrics:
   - Accuracy
   metric_display_names:

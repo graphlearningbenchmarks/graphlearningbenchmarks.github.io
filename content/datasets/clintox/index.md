@@ -35,10 +35,18 @@ primary_metric: ROC-AUC
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.MoleculeNet.html
 stats:
-  num_graphs: null
-  avg_nodes: null
-  avg_edges: null
+  num_graphs: 1484
+  avg_nodes: 26.1
+  avg_edges: 27.75
   num_classes: 2
+  extra_stats:
+    edge_feature_dim: 3
+    edge_feature_type: categorical RDKit bond features in the PyG loader
+    label_imbalance: two-task clinical toxicity/FDA status data with task-specific
+      imbalance
+    node_feature_dim: 9
+    node_feature_type: categorical RDKit atom features in the PyG loader
+    statistic_notes: Average edge count is half of the PyG bidirected edge-entry table
 result_count: 315
 best_model:
   model: SE(3)-I MPPH
@@ -287,10 +295,19 @@ variants:
   default_metric: ROC-AUC
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
+    num_graphs: 1484
+    avg_nodes: 26.1
+    avg_edges: 27.75
     num_classes: 2
+    extra_stats:
+      edge_feature_dim: 3
+      edge_feature_type: categorical RDKit bond features in the PyG loader
+      label_imbalance: two-task clinical toxicity/FDA status data with task-specific
+        imbalance
+      node_feature_dim: 9
+      node_feature_type: categorical RDKit atom features in the PyG loader
+      statistic_notes: Average edge count is half of the PyG bidirected edge-entry
+        table
   metrics:
   - ROC-AUC
   - Accuracy

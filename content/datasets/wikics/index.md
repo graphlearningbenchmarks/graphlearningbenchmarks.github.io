@@ -36,8 +36,18 @@ pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geom
 stats:
   num_graphs: 1
   avg_nodes: 11701.0
-  avg_edges: 297350.0
+  avg_edges: 216123.0
   num_classes: 10
+  extra_stats:
+    edge_feature_dim: 0
+    edge_feature_type: Wikipedia hyperlinks; no edge attributes
+    edge_homophily: 0.74
+    label_imbalance: the 10 article categories are not perfectly balanced; exact fractions
+      are not retained in PyG metadata
+    node_feature_dim: 300
+    node_feature_type: average of pretrained GloVe article-text embeddings
+    statistic_notes: The Wiki-CS paper and PyG module document 216,123 unique hyperlink
+      edges; 297,350 in the old seed was incorrect
 result_count: 440
 best_model:
   model: GCN
@@ -296,8 +306,18 @@ variants:
   stats:
     num_graphs: 1
     avg_nodes: 11701.0
-    avg_edges: 297350.0
+    avg_edges: 216123.0
     num_classes: 10
+    extra_stats:
+      edge_feature_dim: 0
+      edge_feature_type: Wikipedia hyperlinks; no edge attributes
+      edge_homophily: 0.74
+      label_imbalance: the 10 article categories are not perfectly balanced; exact
+        fractions are not retained in PyG metadata
+      node_feature_dim: 300
+      node_feature_type: average of pretrained GloVe article-text embeddings
+      statistic_notes: The Wiki-CS paper and PyG module document 216,123 unique hyperlink
+        edges; 297,350 in the old seed was incorrect
   metrics:
   - Accuracy
   - F1

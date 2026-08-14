@@ -33,7 +33,19 @@ sources:
 primary_metric: ROC-AUC
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.MoleculeNet.html
-stats: null
+stats:
+  num_graphs: 2050
+  avg_nodes: 23.9
+  avg_edges: 25.8
+  num_classes: 1
+  extra_stats:
+    edge_feature_dim: 3
+    edge_feature_type: categorical RDKit bond features in the PyG loader
+    label_imbalance: binary blood-brain-barrier assay with missing labels; exact positive
+      rate is not reported in PyG metadata
+    node_feature_dim: 9
+    node_feature_type: categorical RDKit atom features in the PyG loader
+    statistic_notes: Average edge count is half of the PyG bidirected edge-entry table
 result_count: 407
 best_model:
   model: MAGPrompt+
@@ -328,10 +340,19 @@ variants:
   default_metric: ROC-AUC
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
-    num_classes: null
+    num_graphs: 2050
+    avg_nodes: 23.9
+    avg_edges: 25.8
+    num_classes: 1
+    extra_stats:
+      edge_feature_dim: 3
+      edge_feature_type: categorical RDKit bond features in the PyG loader
+      label_imbalance: binary blood-brain-barrier assay with missing labels; exact
+        positive rate is not reported in PyG metadata
+      node_feature_dim: 9
+      node_feature_type: categorical RDKit atom features in the PyG loader
+      statistic_notes: Average edge count is half of the PyG bidirected edge-entry
+        table
   metrics:
   - ROC-AUC
   - Accuracy

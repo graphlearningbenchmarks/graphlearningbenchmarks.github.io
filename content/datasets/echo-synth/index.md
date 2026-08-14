@@ -34,9 +34,18 @@ higher_is_better: false
 pyg_url: ''
 stats:
   num_graphs: 10080
-  avg_nodes: null
-  avg_edges: null
+  avg_nodes: 83.69
+  avg_edges: 211.63
   num_classes: null
+  extra_stats:
+    avg_degree: 2.53
+    diameter: 28.5
+    edge_feature_dim: 0
+    feature_type: uniform random scalar; SSSP additionally has a binary source indicator
+    node_feature_dim: 2
+    num_targets: 3
+    statistic_notes: 'ECHO Table: 10,080 synthetic graphs spanning line, ladder, grid,
+      tree, caterpillar, and lobster topologies with target diameters 17--40.'
 result_count: 13
 best_model:
   model: GHR
@@ -63,9 +72,18 @@ variants:
   higher_is_better: false
   stats:
     num_graphs: 10080
-    avg_nodes: null
-    avg_edges: null
+    avg_nodes: 83.69
+    avg_edges: 211.63
     num_classes: null
+    extra_stats:
+      avg_degree: 2.53
+      diameter: 28.5
+      edge_feature_dim: 0
+      feature_type: uniform random scalar; SSSP additionally has a binary source indicator
+      node_feature_dim: 2
+      num_targets: 3
+      statistic_notes: 'ECHO Table: 10,080 synthetic graphs spanning line, ladder,
+        grid, tree, caterpillar, and lobster topologies with target diameters 17--40.'
   metrics:
   - MAE
   metric_display_names:

@@ -47,6 +47,16 @@ stats:
   avg_nodes: 150.94
   avg_edges: 307.3
   num_classes: 10
+  extra_stats:
+    avg_degree: 4.07
+    edge_feature_dim: 3
+    edge_feature_type: OGB categorical bond features
+    feature_type: OGB categorical atom features
+    label_imbalance: 10-label multi-label task; positive rates range from 1.9% to
+      62.7%
+    node_feature_dim: 9
+    statistic_notes: LRGB benchmark statistics; hydrogen atoms are omitted and labels
+      are non-exclusive.
 result_count: 252
 best_model:
   model: S^2 GCN + PE
@@ -242,6 +252,16 @@ variants:
     avg_nodes: 150.94
     avg_edges: 307.3
     num_classes: 10
+    extra_stats:
+      avg_degree: 4.07
+      edge_feature_dim: 3
+      edge_feature_type: OGB categorical bond features
+      feature_type: OGB categorical atom features
+      label_imbalance: 10-label multi-label task; positive rates range from 1.9% to
+        62.7%
+      node_feature_dim: 9
+      statistic_notes: LRGB benchmark statistics; hydrogen atoms are omitted and labels
+        are non-exclusive.
   metrics:
   - AP
   - AUPRC

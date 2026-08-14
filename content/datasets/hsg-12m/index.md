@@ -33,9 +33,20 @@ higher_is_better: true
 pyg_url: ''
 stats:
   num_graphs: 11601681
-  avg_nodes: null
-  avg_edges: null
+  avg_nodes: 13.8
+  avg_edges: 28.9
   num_classes: 1401
+  extra_stats:
+    edge_feature_dim: 6
+    edge_feature_type: curved length, straight-line distance, midpoint coordinates,
+      average spectral potential, and average DOS
+    edge_semantics: spatial_multigraph
+    feature_type: 2D complex-plane coordinates, spectral potential, and density of
+      states
+    label_imbalance: balanced
+    node_feature_dim: 4
+    statistic_notes: The reference conversion uses 4 node features and 6 fixed-size
+      edge-summary features; parallel geometrically distinct edges are retained.
 result_count: 8
 best_model:
   model: GraphSAGE
@@ -58,9 +69,20 @@ variants:
   higher_is_better: true
   stats:
     num_graphs: 11601681
-    avg_nodes: null
-    avg_edges: null
+    avg_nodes: 13.8
+    avg_edges: 28.9
     num_classes: 1401
+    extra_stats:
+      edge_feature_dim: 6
+      edge_feature_type: curved length, straight-line distance, midpoint coordinates,
+        average spectral potential, and average DOS
+      edge_semantics: spatial_multigraph
+      feature_type: 2D complex-plane coordinates, spectral potential, and density
+        of states
+      label_imbalance: balanced
+      node_feature_dim: 4
+      statistic_notes: The reference conversion uses 4 node features and 6 fixed-size
+        edge-summary features; parallel geometrically distinct edges are retained.
   metrics:
   - Accuracy
   - Top-10 Acc.

@@ -44,6 +44,19 @@ stats:
   avg_nodes: 26.0
   avg_edges: 28.1
   num_classes: 128
+  extra_stats:
+    avg_degree: 2.162
+    degree_convention: derived as 2 × avg_edges / avg_nodes for canonical undirected
+      graphs
+    edge_feature_dim: 3
+    edge_feature_type: categorical bond features from RDKit
+    label_imbalance: only about 1.4% of assigned labels are positive; unassigned molecule-task
+      labels are NaN, not negative
+    node_feature_dim: 9
+    node_feature_type: categorical atom features from RDKit
+    positive_label_rate: 0.014
+    statistic_notes: clustering coefficient and diameter are not reported in the canonical
+      OGB/PyG metadata
 result_count: 177
 best_model:
   model: HIG with Graphormer
@@ -194,6 +207,19 @@ variants:
     avg_nodes: 26.0
     avg_edges: 28.1
     num_classes: 128
+    extra_stats:
+      avg_degree: 2.162
+      degree_convention: derived as 2 × avg_edges / avg_nodes for canonical undirected
+        graphs
+      edge_feature_dim: 3
+      edge_feature_type: categorical bond features from RDKit
+      label_imbalance: only about 1.4% of assigned labels are positive; unassigned
+        molecule-task labels are NaN, not negative
+      node_feature_dim: 9
+      node_feature_type: categorical atom features from RDKit
+      positive_label_rate: 0.014
+      statistic_notes: clustering coefficient and diameter are not reported in the
+        canonical OGB/PyG metadata
   metrics:
   - AP
   - Accuracy

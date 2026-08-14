@@ -49,6 +49,16 @@ stats:
   avg_nodes: 125.2
   avg_edges: 124.2
   num_classes: 1
+  extra_stats:
+    avg_degree: 1.984
+    degree_convention: derived as 2 × avg_edges / avg_nodes for the augmented graph
+      treated as undirected
+    edge_feature_type: AST, next-token, and inverse-edge relation metadata
+    label_imbalance: not applicable; the target is a variable-length set of method-name
+      subtokens
+    node_feature_type: AST node type, attribute, depth, and preorder metadata
+    statistic_notes: no fixed numeric feature dimension is exposed because AST attributes
+      are heterogeneous; clustering coefficient and diameter are not reported
 result_count: 43
 best_model:
   model: GMN
@@ -139,6 +149,16 @@ variants:
     avg_nodes: 125.2
     avg_edges: 124.2
     num_classes: 1
+    extra_stats:
+      avg_degree: 1.984
+      degree_convention: derived as 2 × avg_edges / avg_nodes for the augmented graph
+        treated as undirected
+      edge_feature_type: AST, next-token, and inverse-edge relation metadata
+      label_imbalance: not applicable; the target is a variable-length set of method-name
+        subtokens
+      node_feature_type: AST node type, attribute, depth, and preorder metadata
+      statistic_notes: no fixed numeric feature dimension is exposed because AST attributes
+        are heterogeneous; clustering coefficient and diameter are not reported
   metrics:
   - F1
   metric_display_names:

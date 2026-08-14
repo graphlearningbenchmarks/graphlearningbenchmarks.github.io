@@ -32,7 +32,26 @@ sources:
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.HeterophilousGraphDataset.html
-stats: null
+stats:
+  num_graphs: 1
+  avg_nodes: 22662.0
+  avg_edges: 32927.0
+  num_classes: 18
+  extra_stats:
+    adjusted_homophily: -0.05
+    avg_degree: 2.91
+    avg_local_clustering: 0.39
+    clustering_coefficient: 0.29
+    diameter: 6824
+    edge_feature_dim: 0
+    edge_feature_type: unweighted word-order/dependency edges
+    edge_homophily: 0.05
+    heterophily: 0.95
+    label_informativeness: 0.11
+    node_feature_dim: 300
+    node_feature_type: fastText word embeddings
+    statistic_notes: All graph statistics are from Table 2 of the heterophily benchmark
+      paper
 result_count: 317
 best_model:
   model: Dir-Poly
@@ -224,10 +243,25 @@ variants:
   default_metric: Accuracy
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
-    num_classes: null
+    num_graphs: 1
+    avg_nodes: 22662.0
+    avg_edges: 32927.0
+    num_classes: 18
+    extra_stats:
+      adjusted_homophily: -0.05
+      avg_degree: 2.91
+      avg_local_clustering: 0.39
+      clustering_coefficient: 0.29
+      diameter: 6824
+      edge_feature_dim: 0
+      edge_feature_type: unweighted word-order/dependency edges
+      edge_homophily: 0.05
+      heterophily: 0.95
+      label_informativeness: 0.11
+      node_feature_dim: 300
+      node_feature_type: fastText word embeddings
+      statistic_notes: All graph statistics are from Table 2 of the heterophily benchmark
+        paper
   metrics:
   - Accuracy
   - AP

@@ -33,6 +33,9 @@ sources:
 - title: OGB node property prediction documentation
   url: https://ogb.stanford.edu/docs/nodeprop/#ogbn-products
   kind: official_documentation
+- title: New Benchmarks for Learning on Non-Homophilous Graphs
+  arxiv_id: '2104.01404'
+  kind: statistics_source
 - title: Cluster-GCN
   arxiv_id: '1905.07953'
   kind: processing_source
@@ -40,10 +43,23 @@ primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.OGBNodePropPredDataset.html
 stats:
-  num_graphs: 2449029
-  avg_nodes: 61859140.0
-  avg_edges: null
-  num_classes: 1
+  num_graphs: 1
+  avg_nodes: 2449029.0
+  avg_edges: 61859140.0
+  num_classes: 47
+  extra_stats:
+    adjusted_homophily: 0.459
+    avg_degree: 50.517
+    degree_convention: derived as 2 × avg_edges / avg_nodes for the canonical undirected
+      graph
+    edge_feature_dim: 0
+    edge_feature_type: none; co-purchase edges are unweighted
+    edge_homophily: 0.81
+    heterophily: 0.19
+    label_imbalance: class distribution is not reported in the canonical OGB documentation;
+      the sales-rank split is 8% train, 2% validation, 90% test
+    node_feature_dim: 100
+    node_feature_type: PCA-reduced bag-of-words product-description features
 result_count: 546
 best_model:
   model: Jacobi
@@ -430,10 +446,23 @@ variants:
   default_metric: Accuracy
   higher_is_better: true
   stats:
-    num_graphs: 2449029
-    avg_nodes: 61859140.0
-    avg_edges: null
-    num_classes: 1
+    num_graphs: 1
+    avg_nodes: 2449029.0
+    avg_edges: 61859140.0
+    num_classes: 47
+    extra_stats:
+      adjusted_homophily: 0.459
+      avg_degree: 50.517
+      degree_convention: derived as 2 × avg_edges / avg_nodes for the canonical undirected
+        graph
+      edge_feature_dim: 0
+      edge_feature_type: none; co-purchase edges are unweighted
+      edge_homophily: 0.81
+      heterophily: 0.19
+      label_imbalance: class distribution is not reported in the canonical OGB documentation;
+        the sales-rank split is 8% train, 2% validation, 90% test
+      node_feature_dim: 100
+      node_feature_type: PCA-reduced bag-of-words product-description features
   metrics:
   - Accuracy
   - ACC

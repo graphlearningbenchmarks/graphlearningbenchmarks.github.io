@@ -39,6 +39,13 @@ stats:
   avg_nodes: 17.93
   avg_edges: 19.79
   num_classes: 2
+  extra_stats:
+    edge_feature_dim: 4
+    edge_feature_type: categorical bond label
+    node_feature_dim: 7
+    node_feature_type: categorical atom label
+    statistic_notes: TUDataset reports 188 graphs, 17.93 nodes, and 19.79 undirected
+      edges per graph
 result_count: 1019
 best_model:
   model: MSH-GNN
@@ -898,6 +905,13 @@ variants:
     avg_nodes: 17.93
     avg_edges: 19.79
     num_classes: 2
+    extra_stats:
+      edge_feature_dim: 4
+      edge_feature_type: categorical bond label
+      node_feature_dim: 7
+      node_feature_type: categorical atom label
+      statistic_notes: TUDataset reports 188 graphs, 17.93 nodes, and 19.79 undirected
+        edges per graph
   metrics:
   - Accuracy
   - AUC

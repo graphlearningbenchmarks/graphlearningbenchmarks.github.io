@@ -2404,5 +2404,6 @@ datasets_by_scope:
     - dataset: Texas
       dataset_slug: texas
 single_proposed_model: GCNIII
+main_figure: /figures/2505.02020/main_figure.jpegoptim.jpg
 ---
 

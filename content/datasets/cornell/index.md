@@ -32,10 +32,21 @@ primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.WebKB.html
 stats:
-  num_graphs: null
-  avg_nodes: null
-  avg_edges: null
+  num_graphs: 1
+  avg_nodes: 183.0
+  avg_edges: 295.0
   num_classes: 5
+  extra_stats:
+    edge_feature_dim: 0
+    edge_feature_type: webpage hyperlinks; no edge attributes
+    edge_homophily: 0.3
+    heterophily: 0.7
+    label_imbalance: strong class imbalance; class counts are reported in the heterophily
+      benchmark appendix
+    node_feature_dim: 1703
+    node_feature_type: sparse bag-of-words webpage features
+    statistic_notes: Geom-GCN/WebKB preprocessing; exact edge counts can vary across
+      cleaned versions
 result_count: 844
 best_model:
   model: P^2GNN
@@ -647,10 +658,21 @@ variants:
   default_metric: Accuracy
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
+    num_graphs: 1
+    avg_nodes: 183.0
+    avg_edges: 295.0
     num_classes: 5
+    extra_stats:
+      edge_feature_dim: 0
+      edge_feature_type: webpage hyperlinks; no edge attributes
+      edge_homophily: 0.3
+      heterophily: 0.7
+      label_imbalance: strong class imbalance; class counts are reported in the heterophily
+        benchmark appendix
+      node_feature_dim: 1703
+      node_feature_type: sparse bag-of-words webpage features
+      statistic_notes: Geom-GCN/WebKB preprocessing; exact edge counts can vary across
+        cleaned versions
   metrics:
   - Accuracy
   - Avg MemScore

@@ -39,10 +39,24 @@ primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.OGBNodePropPredDataset.html
 stats:
-  num_graphs: 111059956
-  avg_nodes: 1615685872.0
-  avg_edges: null
-  num_classes: 1
+  num_graphs: 1
+  avg_nodes: 111059956.0
+  avg_edges: 1615685872.0
+  num_classes: 172
+  extra_stats:
+    avg_degree: 14.548
+    degree_convention: derived as avg_edges / avg_nodes for the directed citation
+      graph (average out-degree)
+    edge_feature_dim: 0
+    edge_feature_type: none; publication year is node metadata
+    label_coverage: 0.0135
+    label_imbalance: only approximately 1.5 million of 111 million nodes have arXiv
+      labels; class distribution is not reported in the canonical OGB documentation
+    labeled_node_count: 1500000
+    node_feature_dim: 128
+    node_feature_type: averaged skip-gram title and abstract embeddings
+    statistic_notes: label coverage is derived from the OGB documentation's approximately
+      1.5 million labeled nodes; clustering coefficient and diameter are not reported
 result_count: 141
 best_model:
   model: SGC
@@ -206,10 +220,24 @@ variants:
   default_metric: Accuracy
   higher_is_better: true
   stats:
-    num_graphs: 111059956
-    avg_nodes: 1615685872.0
-    avg_edges: null
-    num_classes: 1
+    num_graphs: 1
+    avg_nodes: 111059956.0
+    avg_edges: 1615685872.0
+    num_classes: 172
+    extra_stats:
+      avg_degree: 14.548
+      degree_convention: derived as avg_edges / avg_nodes for the directed citation
+        graph (average out-degree)
+      edge_feature_dim: 0
+      edge_feature_type: none; publication year is node metadata
+      label_coverage: 0.0135
+      label_imbalance: only approximately 1.5 million of 111 million nodes have arXiv
+        labels; class distribution is not reported in the canonical OGB documentation
+      labeled_node_count: 1500000
+      node_feature_dim: 128
+      node_feature_type: averaged skip-gram title and abstract embeddings
+      statistic_notes: label coverage is derived from the OGB documentation's approximately
+        1.5 million labeled nodes; clustering coefficient and diameter are not reported
   metrics:
   - Accuracy
   - F1

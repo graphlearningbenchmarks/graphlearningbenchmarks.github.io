@@ -33,7 +33,18 @@ sources:
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.GNNBenchmarkDataset.html
-stats: null
+stats:
+  num_graphs: 70000
+  avg_nodes: 70.57
+  avg_edges: 564.53
+  num_classes: 10
+  extra_stats:
+    edge_feature_dim: 1
+    edge_feature_type: Euclidean distance between superpixels
+    node_feature_dim: 3
+    node_feature_type: pixel intensity plus 2D superpixel coordinates
+    statistic_notes: The benchmark paper reports 70,000 graphs; split-specific PyG
+      tables may report only the train partition
 result_count: 179
 best_model:
   model: Schrödinger
@@ -192,10 +203,17 @@ variants:
   default_metric: Accuracy
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
-    num_classes: null
+    num_graphs: 70000
+    avg_nodes: 70.57
+    avg_edges: 564.53
+    num_classes: 10
+    extra_stats:
+      edge_feature_dim: 1
+      edge_feature_type: Euclidean distance between superpixels
+      node_feature_dim: 3
+      node_feature_type: pixel intensity plus 2D superpixel coordinates
+      statistic_notes: The benchmark paper reports 70,000 graphs; split-specific PyG
+        tables may report only the train partition
   metrics:
   - Accuracy
   metric_display_names:

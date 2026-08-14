@@ -32,7 +32,20 @@ sources:
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Coauthor.html
-stats: null
+stats:
+  num_graphs: 1
+  avg_nodes: 34493.0
+  avg_edges: 247962.0
+  num_classes: 5
+  extra_stats:
+    avg_degree: 14.378
+    edge_feature_dim: 0
+    edge_feature_type: co-authorship links; no edge attributes
+    edge_homophily: 0.9153
+    node_feature_dim: 8415
+    node_feature_type: sparse paper-keyword features aggregated per author
+    statistic_notes: PyG exposes 495,924 bidirected edge entries; this record stores
+      247,962 unique undirected links
 result_count: 410
 best_model:
   model: GrokFormer
@@ -330,10 +343,19 @@ variants:
   default_metric: Accuracy
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
-    num_classes: null
+    num_graphs: 1
+    avg_nodes: 34493.0
+    avg_edges: 247962.0
+    num_classes: 5
+    extra_stats:
+      avg_degree: 14.378
+      edge_feature_dim: 0
+      edge_feature_type: co-authorship links; no edge attributes
+      edge_homophily: 0.9153
+      node_feature_dim: 8415
+      node_feature_type: sparse paper-keyword features aggregated per author
+      statistic_notes: PyG exposes 495,924 bidirected edge entries; this record stores
+        247,962 unique undirected links
   metrics:
   - Accuracy
   - ACC

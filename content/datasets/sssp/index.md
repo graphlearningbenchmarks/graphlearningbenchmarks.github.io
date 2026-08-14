@@ -33,6 +33,13 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: null
+  extra_stats:
+    edge_feature_dim: 0
+    feature_type: one random normal feature plus a binary source-node indicator
+    node_count_range: 25--35
+    node_feature_dim: 2
+    statistic_notes: Synthetic algorithmic benchmark; fixed split is 5,120/640/1,280
+      graphs.
 result_count: 28
 best_model:
   model: PH-DGN
@@ -65,6 +72,13 @@ variants:
     avg_nodes: null
     avg_edges: null
     num_classes: null
+    extra_stats:
+      edge_feature_dim: 0
+      feature_type: one random normal feature plus a binary source-node indicator
+      node_count_range: 25--35
+      node_feature_dim: 2
+      statistic_notes: Synthetic algorithmic benchmark; fixed split is 5,120/640/1,280
+        graphs.
   metrics:
   - MSE
   - log10(MSE)

@@ -31,7 +31,21 @@ sources:
 primary_metric: MRR
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.WordNet18.html
-stats: null
+stats:
+  num_graphs: 1
+  avg_nodes: 40943.0
+  avg_edges: 151442.0
+  num_classes: 18
+  extra_stats:
+    edge_feature_dim: 0
+    edge_type: categorical_relation
+    node_feature_dim: 0
+    num_relation_types: 18
+    statistic_notes: WN18 contains 151,442 total triples and is a legacy benchmark
+      with severe inverse-relation leakage; use WN18RR for a cleaner comparison.
+    test_edges: 5000
+    train_edges: 141442
+    validation_edges: 5000
 result_count: 16
 best_model:
   model: Inverse Model
@@ -69,10 +83,20 @@ variants:
   default_metric: MRR
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
-    num_classes: null
+    num_graphs: 1
+    avg_nodes: 40943.0
+    avg_edges: 151442.0
+    num_classes: 18
+    extra_stats:
+      edge_feature_dim: 0
+      edge_type: categorical_relation
+      node_feature_dim: 0
+      num_relation_types: 18
+      statistic_notes: WN18 contains 151,442 total triples and is a legacy benchmark
+        with severe inverse-relation leakage; use WN18RR for a cleaner comparison.
+      test_edges: 5000
+      train_edges: 141442
+      validation_edges: 5000
   metrics:
   - MRR
   - Hit@10

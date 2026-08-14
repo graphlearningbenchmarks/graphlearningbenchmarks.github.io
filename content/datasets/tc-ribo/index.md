@@ -32,9 +32,16 @@ higher_is_better: false
 pyg_url: ''
 stats:
   num_graphs: 355
-  avg_nodes: null
+  avg_nodes: 216.0
   avg_edges: null
   num_classes: null
+  extra_stats:
+    edge_feature_dim: 0
+    feature_type: RNA nucleotide identity plus predicted 3D atomic coordinates
+    node_count_range: 66--75 nucleotides; 216 atoms on average
+    num_targets: 1
+    statistic_notes: 'DualEquiNet Table: 355 sequences; graph-level tetracycline switching-factor
+      target.'
 result_count: 17
 best_model:
   model: G-Heyna
@@ -61,9 +68,16 @@ variants:
   higher_is_better: false
   stats:
     num_graphs: 355
-    avg_nodes: null
+    avg_nodes: 216.0
     avg_edges: null
     num_classes: null
+    extra_stats:
+      edge_feature_dim: 0
+      feature_type: RNA nucleotide identity plus predicted 3D atomic coordinates
+      node_count_range: 66--75 nucleotides; 216 atoms on average
+      num_targets: 1
+      statistic_notes: 'DualEquiNet Table: 355 sequences; graph-level tetracycline
+        switching-factor target.'
   metrics:
   - RMSE
   metric_display_names:

@@ -65,9 +65,9 @@ has_results: true
 paper_type: method
 proposed_models:
 - SCGC
-mrr: 0.248
-adjusted_mrr: 0.248
-mrr_dataset_count: 4
+mrr: 0.3148
+adjusted_mrr: 0.3148
+mrr_dataset_count: 3
 benchmark_categories:
 - Hypergraph Benchmarks
 benchmark_coverage:
@@ -1090,12 +1090,12 @@ results:
   rank_metric: F1
   higher_is_better: true
   experiment_scope: node-level
-  dataset_primary_metric: F1
+  dataset_primary_metric: Accuracy
   paper_metrics:
   - F1
   metric: F1
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
+  uses_non_primary_metric: true
+  paper_has_primary_metric: false
 - &id003
   dataset: BAT
   rows:

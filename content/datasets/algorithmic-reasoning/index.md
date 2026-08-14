@@ -37,7 +37,15 @@ sources:
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://graphbench.github.io/website/datasets.html
-stats: null
+stats:
+  num_graphs: 21420000
+  avg_nodes: null
+  avg_edges: null
+  num_classes: null
+  extra_stats:
+    statistic_notes: Seven algorithms × three difficulty settings × 1,020,000 instances
+      per setting; Table 2 gives 16-node train/validation and 128-node test regimes,
+      with task-specific node/edge inputs.
 result_count: 8
 best_model:
   model: Naive multi-task
@@ -59,10 +67,14 @@ variants:
   default_metric: Accuracy
   higher_is_better: true
   stats:
-    num_graphs: null
+    num_graphs: 21420000
     avg_nodes: null
     avg_edges: null
     num_classes: null
+    extra_stats:
+      statistic_notes: Seven algorithms × three difficulty settings × 1,020,000 instances
+        per setting; Table 2 gives 16-node train/validation and 128-node test regimes,
+        with task-specific node/edge inputs.
   metrics:
   - Accuracy
   metric_display_names:

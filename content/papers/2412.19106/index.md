@@ -57,7 +57,7 @@ benchmark_coverage:
 - benchmark: Other Graph Benchmarks
   benchmark_slug: other-graph-benchmarks
   evaluated: 1
-  total: 5
+  total: 4
 task_categories:
 - node_classification
 experiment_scopes:

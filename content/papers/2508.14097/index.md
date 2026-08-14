@@ -44,9 +44,9 @@ has_results: true
 paper_type: method
 proposed_models:
 - uAGNN
-mrr: 0.0533
-adjusted_mrr: 0.0533
-mrr_dataset_count: 4
+mrr: 0.0645
+adjusted_mrr: 0.0645
+mrr_dataset_count: 3
 benchmark_categories:
 - Heterophilic Graphs
 - Heterogeneous Graph Benchmarks
@@ -80,8 +80,10 @@ results:
     - 0.9405
     - null
     - null
+    - null
     metric_stds:
     - 0.0037
+    - null
     - null
     - null
     is_baseline: false
@@ -121,8 +123,10 @@ results:
     - 0.9308
     - null
     - null
+    - null
     metric_stds:
     - 0.0026
+    - null
     - null
     - null
     is_baseline: true
@@ -162,8 +166,10 @@ results:
     - 0.9238
     - null
     - null
+    - null
     metric_stds:
     - 0.0014
+    - null
     - null
     - null
     is_baseline: true
@@ -203,8 +209,10 @@ results:
     - 0.8115
     - null
     - null
+    - null
     metric_stds:
     - 0.0105
+    - null
     - null
     - null
     is_baseline: true
@@ -241,10 +249,12 @@ results:
     model_key: daegc
     model_plain: DAEGC
     metric_values:
+    - null
     - 0.34
     - 0.53
     - 0.92
     metric_stds:
+    - null
     - 0.02
     - 0.02
     - 0.14
@@ -303,10 +313,12 @@ results:
     model_key: dmon
     model_plain: DMoN
     metric_values:
+    - null
     - 0.67
     - 0.61
     - 0.6
     metric_stds:
+    - null
     - 0.1
     - 0.08
     - 0.49
@@ -366,10 +378,12 @@ results:
     model_key: sublime
     model_plain: SUBLIME
     metric_values:
+    - null
     - 0.65
     - 0.6
     - 0.23
     metric_stds:
+    - null
     - 0.07
     - 0.04
     - 0.18
@@ -431,10 +445,12 @@ results:
     model_key: mvgrl
     model_plain: MVGRL
     metric_values:
+    - null
     - 0.25
     - 0.27
     - 0.3
     metric_stds:
+    - null
     - 0.03
     - 0.08
     - 0.02
@@ -496,10 +512,12 @@ results:
     model_key: vgaer
     model_plain: VGAER
     metric_values:
+    - null
     - 0.61
     - 0.55
     - 0.7
     metric_stds:
+    - null
     - 0.16
     - 0.18
     - 0.18
@@ -559,10 +577,12 @@ results:
     model_key: grace
     model_plain: GRACE
     metric_values:
+    - null
     - 0.51
     - 0.6
     - 0.87
     metric_stds:
+    - null
     - 0.09
     - 0.04
     - 0.13
@@ -622,10 +642,12 @@ results:
     model_key: uagnn
     model_plain: uAGNN
     metric_values:
+    - null
     - 0.48
     - 0.5
     - 0.87
     metric_stds:
+    - null
     - 0.09
     - 0.1
     - 0.08
@@ -685,10 +707,12 @@ results:
     model_key: bgrl
     model_plain: BGRL
     metric_values:
+    - null
     - 0.48
     - 0.54
     - 0.79
     metric_stds:
+    - null
     - 0.1
     - 0.02
     - 0.06
@@ -748,10 +772,12 @@ results:
     model_key: dgi
     model_plain: DGI
     metric_values:
+    - null
     - 0.34
     - 0.24
     - 0.84
     metric_stds:
+    - null
     - 0.06
     - 0.08
     - 0.26
@@ -808,21 +834,22 @@ results:
     is_std_outlier: false
     global_rank: 53
   metrics:
+  - Accuracy
   - F1
   - NMI
   - Conductance
-  primary_metric: F1
+  primary_metric: Accuracy
   rank_metric: F1
   higher_is_better: true
   experiment_scope: node-level
-  dataset_primary_metric: F1
+  dataset_primary_metric: Accuracy
   paper_metrics:
   - F1
   - NMI
   - Conductance
   metric: F1
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
+  uses_non_primary_metric: true
+  paper_has_primary_metric: false
 - &id006
   dataset: BAT
   is_multi_metric: true

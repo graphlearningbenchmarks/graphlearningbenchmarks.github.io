@@ -33,6 +33,9 @@ sources:
 - title: OGB node property prediction documentation
   url: https://ogb.stanford.edu/docs/nodeprop/#ogbn-mag
   kind: official_documentation
+- title: When Heterophily Meets Heterogeneity
+  url: https://jshun.csail.mit.edu/H2GB.pdf
+  kind: statistics_source
 - title: Microsoft Academic Graph, When experts are not enough
   url: https://doi.org/10.1162/qss_a_00021
   kind: upstream_data_source
@@ -40,10 +43,30 @@ primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.OGB_MAG.html
 stats:
-  num_graphs: 1939743
-  avg_nodes: 21111007.0
-  avg_edges: null
-  num_classes: 1
+  num_graphs: 1
+  avg_nodes: 1939743.0
+  avg_edges: 21111007.0
+  num_classes: 349
+  extra_stats:
+    adjusted_heterophily: 0.9312
+    avg_degree: 10.883
+    degree_convention: derived as avg_edges / avg_nodes for the canonical heterogeneous
+      directed graph
+    edge_feature_dim: 0
+    edge_feature_type: none; four typed relations are structural metadata
+    featureless_node_types: 3
+    h2_index: 0.8773
+    heterophily: 0.9205
+    label_imbalance: venue-label distribution is not reported in the canonical OGB
+      documentation
+    metapath_heterophily: 0.8731
+    node_feature_dim: 128
+    node_feature_type: paper-only averaged skip-gram title and abstract embeddings
+    node_heterophily: 0.9539
+    num_node_types: 4
+    num_relation_types: 4
+    statistic_notes: clustering coefficient and diameter are not reported; heterogeneous
+      graph statistics depend on relation homogenization
 result_count: 105
 best_model:
   model: LMSPS+LP+MS
@@ -132,10 +155,30 @@ variants:
   default_metric: Accuracy
   higher_is_better: true
   stats:
-    num_graphs: 1939743
-    avg_nodes: 21111007.0
-    avg_edges: null
-    num_classes: 1
+    num_graphs: 1
+    avg_nodes: 1939743.0
+    avg_edges: 21111007.0
+    num_classes: 349
+    extra_stats:
+      adjusted_heterophily: 0.9312
+      avg_degree: 10.883
+      degree_convention: derived as avg_edges / avg_nodes for the canonical heterogeneous
+        directed graph
+      edge_feature_dim: 0
+      edge_feature_type: none; four typed relations are structural metadata
+      featureless_node_types: 3
+      h2_index: 0.8773
+      heterophily: 0.9205
+      label_imbalance: venue-label distribution is not reported in the canonical OGB
+        documentation
+      metapath_heterophily: 0.8731
+      node_feature_dim: 128
+      node_feature_type: paper-only averaged skip-gram title and abstract embeddings
+      node_heterophily: 0.9539
+      num_node_types: 4
+      num_relation_types: 4
+      statistic_notes: clustering coefficient and diameter are not reported; heterogeneous
+        graph statistics depend on relation homogenization
   metrics:
   - Accuracy
   - Instability

@@ -41,6 +41,13 @@ stats:
   avg_nodes: 429.63
   avg_edges: 497.75
   num_classes: 2
+  extra_stats:
+    edge_feature_dim: 0
+    edge_feature_type: no edge attributes in the standard TU artifact
+    node_feature_dim: 0
+    node_feature_type: no intrinsic node features
+    statistic_notes: The TU benchmark reports 2,000 graphs, 429.63 nodes, and 497.75
+      undirected edges per graph
 result_count: 55
 best_model:
   model: GIN-0
@@ -90,6 +97,13 @@ variants:
     avg_nodes: 429.63
     avg_edges: 497.75
     num_classes: 2
+    extra_stats:
+      edge_feature_dim: 0
+      edge_feature_type: no edge attributes in the standard TU artifact
+      node_feature_dim: 0
+      node_feature_type: no intrinsic node features
+      statistic_notes: The TU benchmark reports 2,000 graphs, 429.63 nodes, and 497.75
+        undirected edges per graph
   metrics:
   - Accuracy
   metric_display_names:

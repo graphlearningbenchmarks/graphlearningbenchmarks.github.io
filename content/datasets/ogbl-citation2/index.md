@@ -40,10 +40,22 @@ primary_metric: MRR
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.OGBLinkPropPredDataset.html
 stats:
-  num_graphs: 2927963
-  avg_nodes: 30561187.0
-  avg_edges: null
+  num_graphs: 1
+  avg_nodes: 2927963.0
+  avg_edges: 30561187.0
   num_classes: null
+  extra_stats:
+    avg_degree: 10.438
+    degree_convention: derived as avg_edges / avg_nodes for the directed citation
+      graph (average out-degree)
+    edge_feature_dim: 0
+    edge_feature_type: none; publication year is node metadata
+    label_imbalance: no fixed binary label distribution; each held-out citation is
+      ranked against 1000 sampled negatives
+    node_feature_dim: 128
+    node_feature_type: averaged skip-gram title and abstract embeddings
+    statistic_notes: clustering coefficient and diameter are not reported in the canonical
+      OGB/PyG metadata
 result_count: 106
 best_model:
   model: CFG
@@ -146,10 +158,22 @@ variants:
   default_metric: MRR
   higher_is_better: true
   stats:
-    num_graphs: 2927963
-    avg_nodes: 30561187.0
-    avg_edges: null
+    num_graphs: 1
+    avg_nodes: 2927963.0
+    avg_edges: 30561187.0
     num_classes: null
+    extra_stats:
+      avg_degree: 10.438
+      degree_convention: derived as avg_edges / avg_nodes for the directed citation
+        graph (average out-degree)
+      edge_feature_dim: 0
+      edge_feature_type: none; publication year is node metadata
+      label_imbalance: no fixed binary label distribution; each held-out citation
+        is ranked against 1000 sampled negatives
+      node_feature_dim: 128
+      node_feature_type: averaged skip-gram title and abstract embeddings
+      statistic_notes: clustering coefficient and diameter are not reported in the
+        canonical OGB/PyG metadata
   metrics:
   - MRR
   - Hits@200

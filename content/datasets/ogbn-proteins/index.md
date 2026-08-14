@@ -33,6 +33,9 @@ sources:
 - title: OGB node property prediction documentation
   url: https://ogb.stanford.edu/docs/nodeprop/#ogbn-proteins
   kind: official_documentation
+- title: New Benchmarks for Learning on Non-Homophilous Graphs
+  arxiv_id: '2104.01404'
+  kind: statistics_source
 - title: STRING v11
   url: https://doi.org/10.1093/nar/gky1131
   kind: upstream_data_source
@@ -43,10 +46,28 @@ primary_metric: ROC-AUC
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.OGBNodePropPredDataset.html
 stats:
-  num_graphs: 132534
-  avg_nodes: 39561252.0
-  avg_edges: null
+  num_graphs: 1
+  avg_nodes: 132534.0
+  avg_edges: 39561252.0
   num_classes: 112
+  extra_stats:
+    adjusted_homophily_max: 0.26
+    adjusted_homophily_min: 0.09
+    avg_degree: 596.998
+    degree_convention: derived as 2 × avg_edges / avg_nodes for the canonical undirected
+      graph
+    edge_feature_dim: 8
+    edge_feature_type: STRING association confidence channels
+    edge_homophily_max: 0.94
+    edge_homophily_min: 0.623
+    heterophily_max: 0.377
+    heterophily_min: 0.06
+    label_imbalance: per-task majority class ranges from 52.7% to 98.0% across the
+      112 binary tasks
+    majority_class_fraction_max: 0.98
+    majority_class_fraction_min: 0.527
+    node_feature_dim: 8
+    node_feature_type: incident-edge confidence means used as node inputs
 result_count: 103
 best_model:
   model: LD
@@ -143,10 +164,28 @@ variants:
   default_metric: ROC-AUC
   higher_is_better: true
   stats:
-    num_graphs: 132534
-    avg_nodes: 39561252.0
-    avg_edges: null
+    num_graphs: 1
+    avg_nodes: 132534.0
+    avg_edges: 39561252.0
     num_classes: 112
+    extra_stats:
+      adjusted_homophily_max: 0.26
+      adjusted_homophily_min: 0.09
+      avg_degree: 596.998
+      degree_convention: derived as 2 × avg_edges / avg_nodes for the canonical undirected
+        graph
+      edge_feature_dim: 8
+      edge_feature_type: STRING association confidence channels
+      edge_homophily_max: 0.94
+      edge_homophily_min: 0.623
+      heterophily_max: 0.377
+      heterophily_min: 0.06
+      label_imbalance: per-task majority class ranges from 52.7% to 98.0% across the
+        112 binary tasks
+      majority_class_fraction_max: 0.98
+      majority_class_fraction_min: 0.527
+      node_feature_dim: 8
+      node_feature_type: incident-edge confidence means used as node inputs
   metrics:
   - ROC-AUC
   - Accuracy

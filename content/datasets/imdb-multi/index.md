@@ -39,6 +39,13 @@ stats:
   avg_nodes: 13.0
   avg_edges: 65.9
   num_classes: 3
+  extra_stats:
+    edge_feature_dim: 0
+    edge_feature_type: no edge attributes in the standard TU artifact
+    node_feature_dim: 0
+    node_feature_type: no intrinsic node features
+    statistic_notes: The TU benchmark reports 1,500 graphs, 13.00 nodes, and 65.94
+      undirected edges per graph
 result_count: 123
 best_model:
   model: GraphSNN
@@ -136,6 +143,13 @@ variants:
     avg_nodes: 13.0
     avg_edges: 65.9
     num_classes: 3
+    extra_stats:
+      edge_feature_dim: 0
+      edge_feature_type: no edge attributes in the standard TU artifact
+      node_feature_dim: 0
+      node_feature_type: no intrinsic node features
+      statistic_notes: The TU benchmark reports 1,500 graphs, 13.00 nodes, and 65.94
+        undirected edges per graph
   metrics:
   - Accuracy
   - equivalence classes

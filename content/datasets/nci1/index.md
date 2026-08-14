@@ -39,6 +39,12 @@ stats:
   avg_nodes: 29.87
   avg_edges: 32.3
   num_classes: 2
+  extra_stats:
+    edge_feature_dim: 0
+    edge_feature_type: no edge labels or attributes
+    node_feature_dim: 37
+    node_feature_type: categorical atom label
+    statistic_notes: The TU benchmark reports 37 node labels and 4,110 graphs
 result_count: 803
 best_model:
   model: WL-MLP
@@ -640,6 +646,12 @@ variants:
     avg_nodes: 29.87
     avg_edges: 32.3
     num_classes: 2
+    extra_stats:
+      edge_feature_dim: 0
+      edge_feature_type: no edge labels or attributes
+      node_feature_dim: 37
+      node_feature_type: categorical atom label
+      statistic_notes: The TU benchmark reports 37 node labels and 4,110 graphs
   metrics:
   - Accuracy
   - AUROC

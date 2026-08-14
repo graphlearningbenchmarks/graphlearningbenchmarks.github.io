@@ -31,7 +31,20 @@ sources:
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Planetoid.html
-stats: null
+stats:
+  num_graphs: 1
+  avg_nodes: 3327.0
+  avg_edges: 4732.0
+  num_classes: 6
+  extra_stats:
+    avg_degree: 2.845
+    edge_feature_dim: 0
+    edge_feature_type: citation links; no edge attributes
+    edge_homophily: 0.7062
+    node_feature_dim: 3703
+    node_feature_type: sparse binary bag-of-words paper features
+    statistic_notes: PyG exposes 9,104 bidirected edge entries; this record stores
+      4,732 unique undirected citation links
 result_count: 1371
 best_model:
   model: CNA
@@ -915,10 +928,19 @@ variants:
   default_metric: Accuracy
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
-    num_classes: null
+    num_graphs: 1
+    avg_nodes: 3327.0
+    avg_edges: 4732.0
+    num_classes: 6
+    extra_stats:
+      avg_degree: 2.845
+      edge_feature_dim: 0
+      edge_feature_type: citation links; no edge attributes
+      edge_homophily: 0.7062
+      node_feature_dim: 3703
+      node_feature_type: sparse binary bag-of-words paper features
+      statistic_notes: PyG exposes 9,104 bidirected edge entries; this record stores
+        4,732 unique undirected citation links
   metrics:
   - Accuracy
   - AUC

@@ -33,6 +33,13 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: null
+  extra_stats:
+    edge_feature_dim: 0
+    feature_type: one random normal feature per node
+    node_count_range: 25--35
+    node_feature_dim: 1
+    statistic_notes: Synthetic algorithmic benchmark; eccentricity is the maximum
+      shortest-path distance to another node.
 result_count: 19
 best_model:
   model: GCN-SSM + k-hop
@@ -65,6 +72,13 @@ variants:
     avg_nodes: null
     avg_edges: null
     num_classes: null
+    extra_stats:
+      edge_feature_dim: 0
+      feature_type: one random normal feature per node
+      node_count_range: 25--35
+      node_feature_dim: 1
+      statistic_notes: Synthetic algorithmic benchmark; eccentricity is the maximum
+        shortest-path distance to another node.
   metrics:
   - MSE
   metric_display_names:

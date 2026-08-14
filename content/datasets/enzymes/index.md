@@ -41,6 +41,14 @@ stats:
   avg_nodes: 32.6
   avg_edges: 62.1
   num_classes: 6
+  extra_stats:
+    additional_node_attr_dim: 18
+    edge_feature_dim: 0
+    edge_feature_type: no edge labels or attributes
+    node_feature_dim: 3
+    node_feature_type: categorical enzyme node label
+    statistic_notes: TUDataset reports 18 additional continuous node attributes; default
+      PyG features are the 3 node labels
 result_count: 445
 best_model:
   model: GMN
@@ -331,6 +339,14 @@ variants:
     avg_nodes: 32.6
     avg_edges: 62.1
     num_classes: 6
+    extra_stats:
+      additional_node_attr_dim: 18
+      edge_feature_dim: 0
+      edge_feature_type: no edge labels or attributes
+      node_feature_dim: 3
+      node_feature_type: categorical enzyme node label
+      statistic_notes: TUDataset reports 18 additional continuous node attributes;
+        default PyG features are the 3 node labels
   metrics:
   - Accuracy
   - AUC

@@ -37,6 +37,11 @@ stats:
   avg_nodes: 1190.0
   avg_edges: null
   num_classes: 4
+  extra_stats:
+    edge_count_semantics: hyperedges
+    statistic_notes: The catalog has 1,190 nodes and four classes, but the cited AllSet
+      paper does not publish a UAT row or canonical hyperedge/feature counts. Missing
+      values are intentionally not treated as zero.
 result_count: 79
 best_model:
   model: SCAGC
@@ -87,6 +92,11 @@ variants:
     avg_nodes: 1190.0
     avg_edges: null
     num_classes: 4
+    extra_stats:
+      edge_count_semantics: hyperedges
+      statistic_notes: The catalog has 1,190 nodes and four classes, but the cited
+        AllSet paper does not publish a UAT row or canonical hyperedge/feature counts.
+        Missing values are intentionally not treated as zero.
   metrics:
   - F1
   - ACC

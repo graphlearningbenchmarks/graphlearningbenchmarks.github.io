@@ -32,7 +32,19 @@ sources:
 primary_metric: F1
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Reddit.html
-stats: null
+stats:
+  num_graphs: 1
+  avg_nodes: 232965.0
+  avg_edges: 11606919.0
+  num_classes: 41
+  extra_stats:
+    avg_degree: 99.655
+    edge_feature_dim: 0
+    edge_feature_type: post interaction links; no edge attributes
+    node_feature_dim: 602
+    node_feature_type: averaged post text features
+    statistic_notes: The standard GraphSAGE artifact is a single graph with unique
+      undirected links
 result_count: 621
 best_model:
   model: Node Sampled Soup
@@ -446,10 +458,18 @@ variants:
   default_metric: F1
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
-    num_classes: null
+    num_graphs: 1
+    avg_nodes: 232965.0
+    avg_edges: 11606919.0
+    num_classes: 41
+    extra_stats:
+      avg_degree: 99.655
+      edge_feature_dim: 0
+      edge_feature_type: post interaction links; no edge attributes
+      node_feature_dim: 602
+      node_feature_type: averaged post text features
+      statistic_notes: The standard GraphSAGE artifact is a single graph with unique
+        undirected links
   metrics:
   - F1
   - AUC

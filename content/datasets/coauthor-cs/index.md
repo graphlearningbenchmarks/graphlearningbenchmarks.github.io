@@ -32,7 +32,20 @@ sources:
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Coauthor.html
-stats: null
+stats:
+  num_graphs: 1
+  avg_nodes: 18333.0
+  avg_edges: 81894.0
+  num_classes: 15
+  extra_stats:
+    avg_degree: 8.932
+    edge_feature_dim: 0
+    edge_feature_type: co-authorship links; no edge attributes
+    edge_homophily: 0.832
+    node_feature_dim: 6805
+    node_feature_type: sparse paper-keyword features aggregated per author
+    statistic_notes: PyG exposes 163,788 bidirected edge entries; this record stores
+      81,894 unique undirected links
 result_count: 300
 best_model:
   model: DoG
@@ -253,10 +266,19 @@ variants:
   default_metric: Accuracy
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
-    num_classes: null
+    num_graphs: 1
+    avg_nodes: 18333.0
+    avg_edges: 81894.0
+    num_classes: 15
+    extra_stats:
+      avg_degree: 8.932
+      edge_feature_dim: 0
+      edge_feature_type: co-authorship links; no edge attributes
+      edge_homophily: 0.832
+      node_feature_dim: 6805
+      node_feature_type: sparse paper-keyword features aggregated per author
+      statistic_notes: PyG exposes 163,788 bidirected edge entries; this record stores
+        81,894 unique undirected links
   metrics:
   - Accuracy
   - F1

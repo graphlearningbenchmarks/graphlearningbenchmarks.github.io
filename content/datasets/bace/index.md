@@ -34,7 +34,19 @@ sources:
 primary_metric: ROC-AUC
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.MoleculeNet.html
-stats: null
+stats:
+  num_graphs: 1513
+  avg_nodes: 34.1
+  avg_edges: 36.85
+  num_classes: 1
+  extra_stats:
+    edge_feature_dim: 3
+    edge_feature_type: categorical RDKit bond features in the PyG loader
+    label_imbalance: binary BACE-1 activity assay; exact positive rate is not reported
+      in PyG metadata
+    node_feature_dim: 9
+    node_feature_type: categorical RDKit atom features in the PyG loader
+    statistic_notes: Average edge count is half of the PyG bidirected edge-entry table
 result_count: 416
 best_model:
   model: ProtoMol
@@ -336,10 +348,19 @@ variants:
   default_metric: ROC-AUC
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
-    num_classes: null
+    num_graphs: 1513
+    avg_nodes: 34.1
+    avg_edges: 36.85
+    num_classes: 1
+    extra_stats:
+      edge_feature_dim: 3
+      edge_feature_type: categorical RDKit bond features in the PyG loader
+      label_imbalance: binary BACE-1 activity assay; exact positive rate is not reported
+        in PyG metadata
+      node_feature_dim: 9
+      node_feature_type: categorical RDKit atom features in the PyG loader
+      statistic_notes: Average edge count is half of the PyG bidirected edge-entry
+        table
   metrics:
   - ROC-AUC
   - AU-ROC

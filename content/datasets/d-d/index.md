@@ -39,6 +39,13 @@ stats:
   avg_nodes: 284.3
   avg_edges: 715.7
   num_classes: 2
+  extra_stats:
+    edge_feature_dim: 0
+    edge_feature_type: no edge labels or attributes
+    node_feature_dim: 82
+    node_feature_type: categorical protein node label
+    statistic_notes: The TU benchmark reports 82 node labels; graph-level counts use
+      1,178 graphs, 284.32 nodes, and 715.66 edges
 result_count: 226
 best_model:
   model: GC-GNN (GCN)
@@ -224,6 +231,13 @@ variants:
     avg_nodes: 284.3
     avg_edges: 715.7
     num_classes: 2
+    extra_stats:
+      edge_feature_dim: 0
+      edge_feature_type: no edge labels or attributes
+      node_feature_dim: 82
+      node_feature_type: categorical protein node label
+      statistic_notes: The TU benchmark reports 82 node labels; graph-level counts
+        use 1,178 graphs, 284.32 nodes, and 715.66 edges
   metrics:
   - Accuracy
   metric_display_names:

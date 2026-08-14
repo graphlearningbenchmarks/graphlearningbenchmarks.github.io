@@ -15,7 +15,7 @@ detailed_description:
     metric is log-MSE.
   data: Long-Range Ising Model benchmark for per-node energy prediction on periodic
     2D grid graphs with controllable long-range interactions. The cataloged artifact
-    reports 100,000 graphs.
+    reports 10,000 graphs.
   features: Nodes occupy a periodic two-dimensional grid and carry spin/state inputs.
     Edges or interaction terms encode distance-dependent Ising couplings; the release
     controls interaction range and system size.
@@ -37,10 +37,18 @@ primary_metric: log-MSE
 higher_is_better: false
 pyg_url: https://lrim-graphbenchmark.com/
 stats:
-  num_graphs: 10000
+  num_graphs: 1000
   avg_nodes: 256.0
   avg_edges: 512.0
   num_classes: null
+  extra_stats:
+    avg_degree: 4
+    avg_effective_resistance: 0.49
+    avg_shortest_path: 8.03
+    diameter: 16
+    edge_feature_dim: 0
+    node_feature_dim: 1
+    sigma: 0.6
 result_count: 8
 best_model:
   model: GPS-RWSE
@@ -66,10 +74,18 @@ variants:
   default_metric: log-MSE
   higher_is_better: false
   stats:
-    num_graphs: 10000
+    num_graphs: 1000
     avg_nodes: 256.0
     avg_edges: 512.0
     num_classes: null
+    extra_stats:
+      avg_degree: 4
+      avg_effective_resistance: 0.49
+      avg_shortest_path: 8.03
+      diameter: 16
+      edge_feature_dim: 0
+      node_feature_dim: 1
+      sigma: 0.6
   metrics:
   - log-MSE
   metric_display_names:
@@ -314,10 +330,18 @@ variants:
   primary_metric: log-MSE
   higher_is_better: false
   stats:
-    num_graphs: 10000
+    num_graphs: 1000
     avg_nodes: 256.0
     avg_edges: 512.0
     num_classes: null
+    extra_stats:
+      avg_degree: 4
+      avg_effective_resistance: 0.49
+      avg_shortest_path: 8.03
+      diameter: 16
+      edge_feature_dim: 0
+      node_feature_dim: 1
+      sigma: 1.6
   metrics:
   - log-MSE
   rows: []
@@ -329,10 +353,18 @@ variants:
   primary_metric: log-MSE
   higher_is_better: false
   stats:
-    num_graphs: 10000
+    num_graphs: 1000
     avg_nodes: 1024.0
     avg_edges: 2048.0
     num_classes: null
+    extra_stats:
+      avg_degree: 4
+      avg_effective_resistance: 0.6
+      avg_shortest_path: 16.01
+      diameter: 32
+      edge_feature_dim: 0
+      node_feature_dim: 1
+      sigma: 1.6
   metrics:
   - log-MSE
   rows: []
@@ -344,10 +376,18 @@ variants:
   primary_metric: log-MSE
   higher_is_better: false
   stats:
-    num_graphs: 10000
+    num_graphs: 1000
     avg_nodes: 1024.0
     avg_edges: 2048.0
     num_classes: null
+    extra_stats:
+      avg_degree: 4
+      avg_effective_resistance: 0.6
+      avg_shortest_path: 16.01
+      diameter: 32
+      edge_feature_dim: 0
+      node_feature_dim: 1
+      sigma: 0.6
   metrics:
   - log-MSE
   rows: []
@@ -359,10 +399,18 @@ variants:
   primary_metric: log-MSE
   higher_is_better: false
   stats:
-    num_graphs: 10000
+    num_graphs: 1000
     avg_nodes: 4096.0
     avg_edges: 8192.0
     num_classes: null
+    extra_stats:
+      avg_degree: 4
+      avg_effective_resistance: 0.71
+      avg_shortest_path: 32.01
+      diameter: 64
+      edge_feature_dim: 0
+      node_feature_dim: 1
+      sigma: 1.6
   metrics:
   - log-MSE
   rows: []
@@ -374,10 +422,18 @@ variants:
   primary_metric: log-MSE
   higher_is_better: false
   stats:
-    num_graphs: 10000
+    num_graphs: 1000
     avg_nodes: 4096.0
     avg_edges: 8192.0
     num_classes: null
+    extra_stats:
+      avg_degree: 4
+      avg_effective_resistance: 0.71
+      avg_shortest_path: 32.01
+      diameter: 64
+      edge_feature_dim: 0
+      node_feature_dim: 1
+      sigma: 0.6
   metrics:
   - log-MSE
   rows: []
@@ -389,10 +445,18 @@ variants:
   primary_metric: log-MSE
   higher_is_better: false
   stats:
-    num_graphs: 10000
+    num_graphs: 1000
     avg_nodes: 16384.0
     avg_edges: 32768.0
     num_classes: null
+    extra_stats:
+      avg_degree: 4
+      avg_effective_resistance: 0.82
+      avg_shortest_path: 64.0
+      diameter: 128
+      edge_feature_dim: 0
+      node_feature_dim: 1
+      sigma: 1.6
   metrics:
   - log-MSE
   rows: []
@@ -404,10 +468,18 @@ variants:
   primary_metric: log-MSE
   higher_is_better: false
   stats:
-    num_graphs: 10000
+    num_graphs: 1000
     avg_nodes: 16384.0
     avg_edges: 32768.0
     num_classes: null
+    extra_stats:
+      avg_degree: 4
+      avg_effective_resistance: 0.82
+      avg_shortest_path: 64.0
+      diameter: 128
+      edge_feature_dim: 0
+      node_feature_dim: 1
+      sigma: 0.6
   metrics:
   - log-MSE
   rows: []
@@ -419,10 +491,18 @@ variants:
   primary_metric: log-MSE
   higher_is_better: false
   stats:
-    num_graphs: 10000
+    num_graphs: 1000
     avg_nodes: 65536.0
     avg_edges: 131072.0
     num_classes: null
+    extra_stats:
+      avg_degree: 4
+      avg_effective_resistance: 0.93
+      avg_shortest_path: 128.0
+      diameter: 256
+      edge_feature_dim: 0
+      node_feature_dim: 1
+      sigma: 1.6
   metrics:
   - log-MSE
   rows: []
@@ -434,10 +514,18 @@ variants:
   primary_metric: log-MSE
   higher_is_better: false
   stats:
-    num_graphs: 10000
+    num_graphs: 1000
     avg_nodes: 65536.0
     avg_edges: 131072.0
     num_classes: null
+    extra_stats:
+      avg_degree: 4
+      avg_effective_resistance: 0.93
+      avg_shortest_path: 128.0
+      diameter: 256
+      edge_feature_dim: 0
+      node_feature_dim: 1
+      sigma: 0.6
   metrics:
   - log-MSE
   rows: []

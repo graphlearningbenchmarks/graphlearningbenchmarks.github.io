@@ -32,7 +32,19 @@ sources:
 primary_metric: F1
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.PPI.html
-stats: null
+stats:
+  num_graphs: 20
+  avg_nodes: 2245.3
+  avg_edges: 61318.4
+  num_classes: 121
+  extra_stats:
+    edge_feature_dim: 0
+    edge_feature_type: protein interaction links; no edge attributes
+    label_imbalance: 121-label multi-label task; no single binary class fraction
+    node_feature_dim: 50
+    node_feature_type: positional gene sets, motif gene sets, and immunological signatures
+    statistic_notes: 20 protein-interaction graphs; averages are from the PyG dataset
+      table
 result_count: 310
 best_model:
   model: GAMLP(JK)
@@ -289,10 +301,19 @@ variants:
   default_metric: F1
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
-    num_classes: null
+    num_graphs: 20
+    avg_nodes: 2245.3
+    avg_edges: 61318.4
+    num_classes: 121
+    extra_stats:
+      edge_feature_dim: 0
+      edge_feature_type: protein interaction links; no edge attributes
+      label_imbalance: 121-label multi-label task; no single binary class fraction
+      node_feature_dim: 50
+      node_feature_type: positional gene sets, motif gene sets, and immunological
+        signatures
+      statistic_notes: 20 protein-interaction graphs; averages are from the PyG dataset
+        table
   metrics:
   - F1
   - AUROC

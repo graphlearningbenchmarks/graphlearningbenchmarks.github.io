@@ -11,7 +11,7 @@ dev_table_json: /data/development/paper-status.json
 
 This page tracks the extraction pipeline status for all papers in the benchmarking dataset. Each paper goes through several stages: first it must be downloaded from arXiv, then the full text is extracted and parsed (either from HTML, LaTeX source, or PDF), and finally results are extracted using an LLM. The extraction model shown indicates which LLM (if any) was used to extract results.
 
-### Downloaded (32)
+### Downloaded (33)
 
 Papers that have been downloaded but not yet processed for extraction.
 
@@ -47,15 +47,16 @@ Papers that have been downloaded but not yet processed for extraction.
 | 2305.17311 | arXiv:2305.17311 | — |
 | 2403.06560 | arXiv:2403.06560 | — |
 | 2408.05391 | arXiv:2408.05391 | — |
+| 2505.02020 | Wide & Deep Learning for Node Classification | cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit |
 | 2512.08274 | arXiv:2512.08274 | — |
 | 2604.00199 | arXiv:2604.00199 | — |
 
-### Extracted (1637)
+### Extracted (1636)
 
 Papers with successfully extracted results. These papers contribute to the leaderboards.
 
 
-Detailed table: 1637 rows (loaded below).
+Detailed table: 1636 rows (loaded below).
 
 
 ### Failed (1)

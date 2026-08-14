@@ -44,6 +44,16 @@ stats:
   avg_nodes: 150.94
   avg_edges: 307.3
   num_classes: 11
+  extra_stats:
+    avg_degree: 4.07
+    edge_feature_dim: 3
+    edge_feature_type: OGB categorical bond features
+    feature_type: OGB categorical atom features
+    label_imbalance: 11 continuous graph-level structural targets; class imbalance
+      is not applicable
+    node_feature_dim: 9
+    statistic_notes: LRGB benchmark statistics; structural targets are continuous
+      and the molecular graph omits hydrogens.
 result_count: 243
 best_model:
   model: GCN
@@ -240,6 +250,16 @@ variants:
     avg_nodes: 150.94
     avg_edges: 307.3
     num_classes: 11
+    extra_stats:
+      avg_degree: 4.07
+      edge_feature_dim: 3
+      edge_feature_type: OGB categorical bond features
+      feature_type: OGB categorical atom features
+      label_imbalance: 11 continuous graph-level structural targets; class imbalance
+        is not applicable
+      node_feature_dim: 9
+      statistic_notes: LRGB benchmark statistics; structural targets are continuous
+        and the molecular graph omits hydrogens.
   metrics:
   - MAE
   metric_display_names:

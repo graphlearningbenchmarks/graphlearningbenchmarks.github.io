@@ -38,6 +38,16 @@ stats:
   avg_nodes: 168114.0
   avg_edges: 6797557.0
   num_classes: 2
+  extra_stats:
+    adjusted_homophily: 0.09
+    edge_feature_dim: 0
+    edge_feature_type: unweighted mutual-follower links
+    edge_homophily: 0.545
+    feature_type: streaming-language indicator and Twitch user metadata
+    heterophily: 0.455
+    node_feature_dim: 7
+    statistic_notes: LINKX Table 5 and the Twitch Gamers source report 168,114 nodes
+      and 6,797,557 edges.
 result_count: 62
 best_model:
   model: GloGNN
@@ -99,6 +109,16 @@ variants:
     avg_nodes: 168114.0
     avg_edges: 6797557.0
     num_classes: 2
+    extra_stats:
+      adjusted_homophily: 0.09
+      edge_feature_dim: 0
+      edge_feature_type: unweighted mutual-follower links
+      edge_homophily: 0.545
+      feature_type: streaming-language indicator and Twitch user metadata
+      heterophily: 0.455
+      node_feature_dim: 7
+      statistic_notes: LINKX Table 5 and the Twitch Gamers source report 168,114 nodes
+        and 6,797,557 edges.
   metrics:
   - Accuracy
   metric_display_names:

@@ -38,6 +38,16 @@ stats:
   avg_nodes: 41554.0
   avg_edges: 1362229.0
   num_classes: 2
+  extra_stats:
+    adjusted_homophily: 0.046
+    edge_feature_dim: 0
+    edge_feature_type: unweighted social-network links
+    edge_homophily: 0.47
+    feature_type: Facebook100 demographic attributes
+    heterophily: 0.53
+    node_feature_dim: 5
+    statistic_notes: LINKX Table 5 reports 41,554 nodes, 1,362,229 edges, 5 attributes,
+      and homophily 0.47.
 result_count: 109
 best_model:
   model: ChebNet2D
@@ -145,6 +155,16 @@ variants:
     avg_nodes: 41554.0
     avg_edges: 1362229.0
     num_classes: 2
+    extra_stats:
+      adjusted_homophily: 0.046
+      edge_feature_dim: 0
+      edge_feature_type: unweighted social-network links
+      edge_homophily: 0.47
+      feature_type: Facebook100 demographic attributes
+      heterophily: 0.53
+      node_feature_dim: 5
+      statistic_notes: LINKX Table 5 reports 41,554 nodes, 1,362,229 edges, 5 attributes,
+        and homophily 0.47.
   metrics:
   - Accuracy
   metric_display_names:

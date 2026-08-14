@@ -32,9 +32,20 @@ higher_is_better: true
 pyg_url: ''
 stats:
   num_graphs: 1
-  avg_nodes: null
-  avg_edges: null
-  num_classes: null
+  avg_nodes: 41302.0
+  avg_edges: 22363.0
+  num_classes: 6
+  extra_stats:
+    avg_hyperedge_size: 4.452
+    avg_node_degree: 2.411
+    clique_expansion_homophily: 0.869
+    edge_count_semantics: hyperedges
+    edge_feature_dim: 0
+    feature_type: bag_of_words
+    median_hyperedge_size: 3
+    node_feature_dim: 1425
+    statistic_notes: 'AllSet supplementary table: 41,302 nodes, 22,363 hyperedges,
+      and 1,425-dimensional document features.'
 result_count: 21
 best_model:
   model: HealHGNN
@@ -66,9 +77,20 @@ variants:
   higher_is_better: true
   stats:
     num_graphs: 1
-    avg_nodes: null
-    avg_edges: null
-    num_classes: null
+    avg_nodes: 41302.0
+    avg_edges: 22363.0
+    num_classes: 6
+    extra_stats:
+      avg_hyperedge_size: 4.452
+      avg_node_degree: 2.411
+      clique_expansion_homophily: 0.869
+      edge_count_semantics: hyperedges
+      edge_feature_dim: 0
+      feature_type: bag_of_words
+      median_hyperedge_size: 3
+      node_feature_dim: 1425
+      statistic_notes: 'AllSet supplementary table: 41,302 nodes, 22,363 hyperedges,
+        and 1,425-dimensional document features.'
   metrics:
   - Accuracy
   metric_display_names:

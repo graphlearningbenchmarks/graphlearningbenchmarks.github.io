@@ -35,6 +35,15 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 1401
+  extra_stats:
+    edge_feature_dim: 6
+    edge_feature_type: same six-dimensional spatial edge summaries as HSG-12M
+    edge_semantics: spatial_multigraph
+    feature_type: same spatial node representation as HSG-12M
+    label_imbalance: largest/smallest class ratio 660.2
+    node_feature_dim: 4
+    statistic_notes: Topology variant keeps one representative per connectivity isomorphism
+      class within each polynomial class.
 result_count: 8
 best_model:
   model: GraphSAGE
@@ -60,6 +69,15 @@ variants:
     avg_nodes: null
     avg_edges: null
     num_classes: 1401
+    extra_stats:
+      edge_feature_dim: 6
+      edge_feature_type: same six-dimensional spatial edge summaries as HSG-12M
+      edge_semantics: spatial_multigraph
+      feature_type: same spatial node representation as HSG-12M
+      label_imbalance: largest/smallest class ratio 660.2
+      node_feature_dim: 4
+      statistic_notes: Topology variant keeps one representative per connectivity
+        isomorphism class within each polynomial class.
   metrics:
   - Accuracy
   - Loss

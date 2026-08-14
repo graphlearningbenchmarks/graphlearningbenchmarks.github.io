@@ -32,7 +32,26 @@ sources:
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.HeterophilousGraphDataset.html
-stats: null
+stats:
+  num_graphs: 1
+  avg_nodes: 24492.0
+  avg_edges: 93050.0
+  num_classes: 5
+  extra_stats:
+    adjusted_homophily: 0.14
+    avg_degree: 7.6
+    avg_local_clustering: 0.58
+    clustering_coefficient: 0.32
+    diameter: 46
+    edge_feature_dim: 0
+    edge_feature_type: unweighted co-purchase edges
+    edge_homophily: 0.38
+    heterophily: 0.62
+    label_informativeness: 0.04
+    node_feature_dim: 300
+    node_feature_type: fastText product-description embeddings
+    statistic_notes: Largest connected component of the 5-core; all graph statistics
+      are from Table 2 of the heterophily benchmark paper
 result_count: 279
 best_model:
   model: UniGAP
@@ -205,10 +224,25 @@ variants:
   default_metric: Accuracy
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
-    num_classes: null
+    num_graphs: 1
+    avg_nodes: 24492.0
+    avg_edges: 93050.0
+    num_classes: 5
+    extra_stats:
+      adjusted_homophily: 0.14
+      avg_degree: 7.6
+      avg_local_clustering: 0.58
+      clustering_coefficient: 0.32
+      diameter: 46
+      edge_feature_dim: 0
+      edge_feature_type: unweighted co-purchase edges
+      edge_homophily: 0.38
+      heterophily: 0.62
+      label_informativeness: 0.04
+      node_feature_dim: 300
+      node_feature_type: fastText product-description embeddings
+      statistic_notes: Largest connected component of the 5-core; all graph statistics
+        are from Table 2 of the heterophily benchmark paper
   metrics:
   - Accuracy
   - ACC

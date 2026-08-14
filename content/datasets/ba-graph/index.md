@@ -38,10 +38,21 @@ primary_metric: MAE
 higher_is_better: true
 pyg_url: https://graphbench.github.io/website/datasets.html
 stats:
-  num_graphs: 21000000
-  avg_nodes: 264.0
-  avg_edges: 3667.0
+  num_graphs: 100000
+  avg_nodes: 500.0
+  avg_edges: 1992.0
   num_classes: null
+  extra_stats:
+    avg_degree: 7.97
+    edge_feature_dim: 0
+    feature_type: no intrinsic node features; topology is the optimization input
+    label_imbalance: objective and decoded-solution targets vary by MIS, max-cut,
+      or coloring protocol
+    node_feature_dim: 0
+    size_regimes: 'small: 50,000 graphs, 249.9 nodes, 991.6 edges; large: 50,000 graphs,
+      750.1 nodes, 2,992.4 edges'
+    statistic_notes: GraphBench Table 2 reports separate small and large BA graph
+      populations.
 result_count: 5
 best_model:
   model: Diffusion Wavelets
@@ -63,10 +74,21 @@ variants:
   default_metric: Accuracy
   higher_is_better: true
   stats:
-    num_graphs: 21000000
-    avg_nodes: 264.0
-    avg_edges: 3667.0
+    num_graphs: 100000
+    avg_nodes: 500.0
+    avg_edges: 1992.0
     num_classes: null
+    extra_stats:
+      avg_degree: 7.97
+      edge_feature_dim: 0
+      feature_type: no intrinsic node features; topology is the optimization input
+      label_imbalance: objective and decoded-solution targets vary by MIS, max-cut,
+        or coloring protocol
+      node_feature_dim: 0
+      size_regimes: 'small: 50,000 graphs, 249.9 nodes, 991.6 edges; large: 50,000
+        graphs, 750.1 nodes, 2,992.4 edges'
+      statistic_notes: GraphBench Table 2 reports separate small and large BA graph
+        populations.
   metrics:
   - Accuracy
   metric_display_names:

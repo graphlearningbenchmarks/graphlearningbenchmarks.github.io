@@ -32,7 +32,21 @@ sources:
 primary_metric: MAE
 higher_is_better: false
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.MD17.html
-stats: null
+stats:
+  num_graphs: null
+  avg_nodes: null
+  avg_edges: null
+  num_classes: null
+  extra_stats:
+    edge_feature_dim: 0
+    edge_feature_type: no intrinsic edges; RadiusGraph or another neighbor construction
+      is a model choice
+    node_feature_dim: 1
+    node_feature_type: atomic number per atom plus Cartesian positions
+    num_targets: 2
+    statistic_notes: MD17 is a parameterized family of molecule trajectories, not
+      one fixed graph collection; PyG reports separate counts per molecule and revision
+    target_units: kcal/mol and kcal/mol/Å
 result_count: 275
 best_model:
   model: QHNet
@@ -278,6 +292,16 @@ variants:
     avg_nodes: null
     avg_edges: null
     num_classes: null
+    extra_stats:
+      edge_feature_dim: 0
+      edge_feature_type: no intrinsic edges; RadiusGraph or another neighbor construction
+        is a model choice
+      node_feature_dim: 1
+      node_feature_type: atomic number per atom plus Cartesian positions
+      num_targets: 2
+      statistic_notes: MD17 is a parameterized family of molecule trajectories, not
+        one fixed graph collection; PyG reports separate counts per molecule and revision
+      target_units: kcal/mol and kcal/mol/Å
   metrics:
   - MAE
   - ADE

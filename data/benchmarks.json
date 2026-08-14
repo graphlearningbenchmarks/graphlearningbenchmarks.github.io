@@ -931,9 +931,9 @@
     "source_papers": [],
     "no_single_introduction_paper": true,
     "is_legacy": false,
-    "paper_count": 41,
-    "recent_results_per_dataset": 12.0,
-    "total_result_count": 337,
+    "paper_count": 38,
+    "recent_results_per_dataset": 15.0,
+    "total_result_count": 316,
     "datasets": [
       {
         "name": "Amazon2M",
@@ -970,20 +970,6 @@
         "paper_count": 4,
         "result_count": 24,
         "recent_result_count": 16,
-        "variants": [
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
-      {
-        "name": "20News",
-        "slug": "20news",
-        "task_type": "graph_classification",
-        "paper_count": 3,
-        "result_count": 21,
-        "recent_result_count": 0,
         "variants": [
           {
             "name": "Standard split",

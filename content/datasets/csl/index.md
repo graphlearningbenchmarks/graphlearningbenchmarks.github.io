@@ -34,10 +34,18 @@ primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.GNNBenchmarkDataset.html
 stats:
-  num_graphs: null
-  avg_nodes: null
-  avg_edges: null
+  num_graphs: 150
+  avg_nodes: 41.0
+  avg_edges: 164.0
   num_classes: 10
+  extra_stats:
+    diameter: 10
+    edge_feature_dim: 0
+    edge_feature_type: unweighted 4-regular graph edges
+    label_imbalance: 'class-balanced: 15 graphs for each of 10 isomorphism classes'
+    node_feature_dim: 0
+    node_feature_type: anonymous nodes
+    statistic_notes: Each graph is a 41-node 4-regular circular skip-link graph
 result_count: 104
 best_model:
   model: PPGN
@@ -138,10 +146,18 @@ variants:
   default_metric: Accuracy
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
+    num_graphs: 150
+    avg_nodes: 41.0
+    avg_edges: 164.0
     num_classes: 10
+    extra_stats:
+      diameter: 10
+      edge_feature_dim: 0
+      edge_feature_type: unweighted 4-regular graph edges
+      label_imbalance: 'class-balanced: 15 graphs for each of 10 isomorphism classes'
+      node_feature_dim: 0
+      node_feature_type: anonymous nodes
+      statistic_notes: Each graph is a 41-node 4-regular circular skip-link graph
   metrics:
   - Accuracy
   metric_display_names:

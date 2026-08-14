@@ -34,7 +34,19 @@ sources:
 primary_metric: RMSE
 higher_is_better: false
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.MoleculeNet.html
-stats: null
+stats:
+  num_graphs: 4200
+  avg_nodes: 27.0
+  avg_edges: 29.5
+  num_classes: 1
+  extra_stats:
+    edge_feature_dim: 3
+    edge_feature_type: categorical RDKit bond features in the PyG loader
+    label_imbalance: not applicable; experimental logD is a continuous regression
+      target
+    node_feature_dim: 9
+    node_feature_type: categorical RDKit atom features in the PyG loader
+    statistic_notes: Average edge count is half of the PyG bidirected edge-entry table
 result_count: 123
 best_model:
   model: MemGNN
@@ -111,10 +123,19 @@ variants:
   default_metric: RMSE
   higher_is_better: false
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
-    num_classes: null
+    num_graphs: 4200
+    avg_nodes: 27.0
+    avg_edges: 29.5
+    num_classes: 1
+    extra_stats:
+      edge_feature_dim: 3
+      edge_feature_type: categorical RDKit bond features in the PyG loader
+      label_imbalance: not applicable; experimental logD is a continuous regression
+        target
+      node_feature_dim: 9
+      node_feature_type: categorical RDKit atom features in the PyG loader
+      statistic_notes: Average edge count is half of the PyG bidirected edge-entry
+        table
   metrics:
   - RMSE
   metric_display_names:

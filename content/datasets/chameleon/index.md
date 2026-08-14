@@ -37,6 +37,17 @@ stats:
   avg_nodes: 2277.0
   avg_edges: 36101.0
   num_classes: 5
+  extra_stats:
+    edge_feature_dim: 0
+    edge_feature_type: Wikipedia hyperlinks; no edge attributes
+    edge_homophily: 0.23
+    heterophily: 0.77
+    label_imbalance: five traffic-based classes; duplicate nodes create train-test
+      leakage in the original artifact
+    node_feature_dim: 2325
+    node_feature_type: sparse Wikipedia noun features
+    statistic_notes: WikipediaNetwork preprocessing; duplicate-node filtering produces
+      a different benchmark
 result_count: 469
 best_model:
   model: Hetero-S (GAT 8-layer)
@@ -347,6 +358,17 @@ variants:
     avg_nodes: 2277.0
     avg_edges: 36101.0
     num_classes: 5
+    extra_stats:
+      edge_feature_dim: 0
+      edge_feature_type: Wikipedia hyperlinks; no edge attributes
+      edge_homophily: 0.23
+      heterophily: 0.77
+      label_imbalance: five traffic-based classes; duplicate nodes create train-test
+        leakage in the original artifact
+      node_feature_dim: 2325
+      node_feature_type: sparse Wikipedia noun features
+      statistic_notes: WikipediaNetwork preprocessing; duplicate-node filtering produces
+        a different benchmark
   metrics:
   - Accuracy
   - F1 Score

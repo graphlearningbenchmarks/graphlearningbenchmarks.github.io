@@ -34,10 +34,18 @@ primary_metric: MAE
 higher_is_better: false
 pyg_url: https://graphbench.github.io/website/datasets.html
 stats:
-  num_graphs: 21000000
-  avg_nodes: 264.0
-  avg_edges: 3667.0
+  num_graphs: 1020000
+  avg_nodes: 17.1
+  avg_edges: 48.27
   num_classes: null
+  extra_stats:
+    avg_degree: 5.64
+    edge_feature_dim: 1
+    edge_feature_type: capacity
+    feature_type: source/sink indicators
+    node_feature_dim: 1
+    statistic_notes: GraphBench Table 2 reports 16-node training/validation and 64-node
+      test regimes for Flow.
 result_count: 5
 best_model:
   model: RRWP
@@ -59,10 +67,18 @@ variants:
   default_metric: MAE
   higher_is_better: false
   stats:
-    num_graphs: 21000000
-    avg_nodes: 264.0
-    avg_edges: 3667.0
+    num_graphs: 1020000
+    avg_nodes: 17.1
+    avg_edges: 48.27
     num_classes: null
+    extra_stats:
+      avg_degree: 5.64
+      edge_feature_dim: 1
+      edge_feature_type: capacity
+      feature_type: source/sink indicators
+      node_feature_dim: 1
+      statistic_notes: GraphBench Table 2 reports 16-node training/validation and
+        64-node test regimes for Flow.
   metrics:
   - MAE
   metric_display_names:

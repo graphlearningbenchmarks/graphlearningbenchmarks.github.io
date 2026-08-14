@@ -39,10 +39,23 @@ primary_metric: Hits@100
 higher_is_better: true
 pyg_url: https://ogb.stanford.edu/docs/linkprop/#ogbl-ppa
 stats:
-  num_graphs: 576289
-  avg_nodes: 30326273.0
-  avg_edges: null
+  num_graphs: 1
+  avg_nodes: 576289.0
+  avg_edges: 30326273.0
   num_classes: null
+  extra_stats:
+    avg_degree: 105.247
+    degree_convention: derived as 2 × avg_edges / avg_nodes for the canonical undirected
+      graph
+    edge_feature_dim: 0
+    edge_feature_type: none; associations are unweighted in the standard artifact
+    label_imbalance: no fixed binary label distribution; each positive is ranked against
+      3000000 sampled negatives
+    node_feature_dim: 58
+    node_feature_type: one-hot species indicator
+    num_species: 58
+    statistic_notes: clustering coefficient and diameter are not reported in the canonical
+      OGB/PyG metadata
 result_count: 88
 best_model:
   model: OGB Leader
@@ -147,10 +160,23 @@ variants:
   default_metric: Hits@100
   higher_is_better: true
   stats:
-    num_graphs: 576289
-    avg_nodes: 30326273.0
-    avg_edges: null
+    num_graphs: 1
+    avg_nodes: 576289.0
+    avg_edges: 30326273.0
     num_classes: null
+    extra_stats:
+      avg_degree: 105.247
+      degree_convention: derived as 2 × avg_edges / avg_nodes for the canonical undirected
+        graph
+      edge_feature_dim: 0
+      edge_feature_type: none; associations are unweighted in the standard artifact
+      label_imbalance: no fixed binary label distribution; each positive is ranked
+        against 3000000 sampled negatives
+      node_feature_dim: 58
+      node_feature_type: one-hot species indicator
+      num_species: 58
+      statistic_notes: clustering coefficient and diameter are not reported in the
+        canonical OGB/PyG metadata
   metrics:
   - Hits@100
   - Hits@50

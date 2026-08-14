@@ -32,6 +32,9 @@ sources:
 - title: OGB node property prediction documentation
   url: https://ogb.stanford.edu/docs/nodeprop/#ogbn-arxiv
   kind: official_documentation
+- title: New Benchmarks for Learning on Non-Homophilous Graphs
+  arxiv_id: '2104.01404'
+  kind: statistics_source
 - title: Microsoft Academic Graph, When experts are not enough
   url: https://doi.org/10.1162/qss_a_00021
   kind: upstream_data_source
@@ -39,10 +42,24 @@ primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.OGBNodePropPredDataset.html
 stats:
-  num_graphs: 169343
-  avg_nodes: 1166243.0
-  avg_edges: null
-  num_classes: 1
+  num_graphs: 1
+  avg_nodes: 169343.0
+  avg_edges: 1166243.0
+  num_classes: 40
+  extra_stats:
+    adjusted_homophily: 0.416
+    avg_degree: 6.887
+    degree_convention: derived as avg_edges / avg_nodes for the directed citation
+      graph (average out-degree)
+    edge_feature_dim: 0
+    edge_feature_type: none; publication year is node metadata
+    edge_homophily: 0.66
+    heterophily: 0.34
+    label_imbalance: class distribution is not reported in the canonical OGB documentation
+    node_feature_dim: 128
+    node_feature_type: averaged skip-gram title and abstract embeddings
+    statistic_notes: clustering coefficient and diameter are not reported in the canonical
+      OGB/PyG metadata
 result_count: 160
 best_model:
   model: OFA
@@ -178,10 +195,24 @@ variants:
   default_metric: Accuracy
   higher_is_better: true
   stats:
-    num_graphs: 169343
-    avg_nodes: 1166243.0
-    avg_edges: null
-    num_classes: 1
+    num_graphs: 1
+    avg_nodes: 169343.0
+    avg_edges: 1166243.0
+    num_classes: 40
+    extra_stats:
+      adjusted_homophily: 0.416
+      avg_degree: 6.887
+      degree_convention: derived as avg_edges / avg_nodes for the directed citation
+        graph (average out-degree)
+      edge_feature_dim: 0
+      edge_feature_type: none; publication year is node metadata
+      edge_homophily: 0.66
+      heterophily: 0.34
+      label_imbalance: class distribution is not reported in the canonical OGB documentation
+      node_feature_dim: 128
+      node_feature_type: averaged skip-gram title and abstract embeddings
+      statistic_notes: clustering coefficient and diameter are not reported in the
+        canonical OGB/PyG metadata
   metrics:
   - Accuracy
   - F1

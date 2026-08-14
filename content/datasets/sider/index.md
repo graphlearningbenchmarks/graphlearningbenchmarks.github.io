@@ -34,10 +34,18 @@ primary_metric: ROC-AUC
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.MoleculeNet.html
 stats:
-  num_graphs: null
-  avg_nodes: null
-  avg_edges: null
+  num_graphs: 1427
+  avg_nodes: 33.6
+  avg_edges: 35.35
   num_classes: 27
+  extra_stats:
+    edge_feature_dim: 3
+    edge_feature_type: categorical RDKit bond features in the PyG loader
+    label_imbalance: 27-task multi-label adverse-reaction data with missingness and
+      task-specific imbalance
+    node_feature_dim: 9
+    node_feature_type: categorical RDKit atom features in the PyG loader
+    statistic_notes: Average edge count is half of the PyG bidirected edge-entry table
 result_count: 303
 best_model:
   model: KA-GAT
@@ -274,10 +282,19 @@ variants:
   default_metric: ROC-AUC
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
+    num_graphs: 1427
+    avg_nodes: 33.6
+    avg_edges: 35.35
     num_classes: 27
+    extra_stats:
+      edge_feature_dim: 3
+      edge_feature_type: categorical RDKit bond features in the PyG loader
+      label_imbalance: 27-task multi-label adverse-reaction data with missingness
+        and task-specific imbalance
+      node_feature_dim: 9
+      node_feature_type: categorical RDKit atom features in the PyG loader
+      statistic_notes: Average edge count is half of the PyG bidirected edge-entry
+        table
   metrics:
   - ROC-AUC
   - Accuracy

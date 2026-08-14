@@ -35,8 +35,19 @@ pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geom
 stats:
   num_graphs: 1
   avg_nodes: 14541.0
-  avg_edges: 272115.0
+  avg_edges: 310116.0
   num_classes: 237
+  extra_stats:
+    edge_feature_dim: 0
+    edge_type: categorical_relation
+    node_feature_dim: 0
+    num_relation_types: 237
+    statistic_notes: 'Total triples across the standard split: 310,116 = 272,115 train
+      + 17,535 validation + 20,466 test; PyG edge counts must not be mistaken for
+      the training-only graph.'
+    test_edges: 20466
+    train_edges: 272115
+    validation_edges: 17535
 result_count: 151
 best_model:
   model: sum, Msg_r^3, f(t)=0
@@ -139,8 +150,19 @@ variants:
   stats:
     num_graphs: 1
     avg_nodes: 14541.0
-    avg_edges: 272115.0
+    avg_edges: 310116.0
     num_classes: 237
+    extra_stats:
+      edge_feature_dim: 0
+      edge_type: categorical_relation
+      node_feature_dim: 0
+      num_relation_types: 237
+      statistic_notes: 'Total triples across the standard split: 310,116 = 272,115
+        train + 17,535 validation + 20,466 test; PyG edge counts must not be mistaken
+        for the training-only graph.'
+      test_edges: 20466
+      train_edges: 272115
+      validation_edges: 17535
   metrics:
   - MRR
   - AUC

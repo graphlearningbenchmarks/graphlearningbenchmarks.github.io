@@ -38,6 +38,16 @@ stats:
   avg_nodes: 40943.0
   avg_edges: 93003.0
   num_classes: 11
+  extra_stats:
+    edge_feature_dim: 0
+    edge_type: categorical_relation
+    node_feature_dim: 0
+    num_relation_types: 11
+    statistic_notes: WordNet18RR has 93,003 total triples and removes the inverse-relation
+      leakage affecting WN18.
+    test_edges: 3134
+    train_edges: 86835
+    validation_edges: 3034
 result_count: 228
 best_model:
   model: PNA, Msg_r^2, f(t)=t
@@ -183,6 +193,16 @@ variants:
     avg_nodes: 40943.0
     avg_edges: 93003.0
     num_classes: 11
+    extra_stats:
+      edge_feature_dim: 0
+      edge_type: categorical_relation
+      node_feature_dim: 0
+      num_relation_types: 11
+      statistic_notes: WordNet18RR has 93,003 total triples and removes the inverse-relation
+        leakage affecting WN18.
+      test_edges: 3134
+      train_edges: 86835
+      validation_edges: 3034
   metrics:
   - MRR
   - ACC

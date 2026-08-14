@@ -35,10 +35,19 @@ primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Actor.html
 stats:
-  num_graphs: null
-  avg_nodes: null
-  avg_edges: null
+  num_graphs: 1
+  avg_nodes: 7600.0
+  avg_edges: 29926.0
   num_classes: 5
+  extra_stats:
+    edge_feature_dim: 0
+    edge_feature_type: actor co-occurrence links; no edge attributes
+    edge_homophily: 0.22
+    heterophily: 0.78
+    node_feature_dim: 931
+    node_feature_type: sparse bag-of-words actor co-occurrence features
+    statistic_notes: The LINKX paper calls this dataset Film; the PyG loader calls
+      it Actor
 result_count: 789
 best_model:
   model: NodeFormer
@@ -617,10 +626,19 @@ variants:
   default_metric: Accuracy
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
+    num_graphs: 1
+    avg_nodes: 7600.0
+    avg_edges: 29926.0
     num_classes: 5
+    extra_stats:
+      edge_feature_dim: 0
+      edge_feature_type: actor co-occurrence links; no edge attributes
+      edge_homophily: 0.22
+      heterophily: 0.78
+      node_feature_dim: 931
+      node_feature_type: sparse bag-of-words actor co-occurrence features
+      statistic_notes: The LINKX paper calls this dataset Film; the PyG loader calls
+        it Actor
   metrics:
   - Accuracy
   - Avg MemScore

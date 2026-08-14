@@ -982,14 +982,14 @@ results:
     is_std_outlier: false
     global_rank: 15
   metrics:
-  - F1
+  - Accuracy
   - ACC
   - NMI
-  primary_metric: F1
+  primary_metric: Accuracy
   rank_metric: ACC
   higher_is_better: true
   experiment_scope: node-level
-  dataset_primary_metric: F1
+  dataset_primary_metric: Accuracy
   paper_metrics:
   - ACC
   - NMI

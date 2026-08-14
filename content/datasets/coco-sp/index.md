@@ -41,6 +41,16 @@ stats:
   avg_nodes: 476.88
   avg_edges: 2693.67
   num_classes: 81
+  extra_stats:
+    avg_degree: 11.3
+    edge_feature_dim: 2
+    edge_feature_type: mean Sobel response and boundary-pixel count
+    feature_type: 12 RGB summary values plus 2D superpixel center-of-mass coordinates
+    label_imbalance: 81 semantic labels have a long-tailed pixel/superpixel distribution;
+      official score is class-weighted macro F1
+    node_feature_dim: 14
+    statistic_notes: LRGB default compactness-30 region-boundary graph; alternate
+      graph constructions are not interchangeable.
 result_count: 107
 best_model:
   model: FloydNet
@@ -125,6 +135,16 @@ variants:
     avg_nodes: 476.88
     avg_edges: 2693.67
     num_classes: 81
+    extra_stats:
+      avg_degree: 11.3
+      edge_feature_dim: 2
+      edge_feature_type: mean Sobel response and boundary-pixel count
+      feature_type: 12 RGB summary values plus 2D superpixel center-of-mass coordinates
+      label_imbalance: 81 semantic labels have a long-tailed pixel/superpixel distribution;
+        official score is class-weighted macro F1
+      node_feature_dim: 14
+      statistic_notes: LRGB default compactness-30 region-boundary graph; alternate
+        graph constructions are not interchangeable.
   metrics:
   - F1
   - AULC

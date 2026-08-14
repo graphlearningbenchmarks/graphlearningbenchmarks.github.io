@@ -38,6 +38,13 @@ stats:
   avg_nodes: 429.63
   avg_edges: 497.75
   num_classes: 2
+  extra_stats:
+    edge_feature_dim: 0
+    edge_feature_type: no edge attributes in the standard TU artifact
+    node_feature_dim: 0
+    node_feature_type: no intrinsic node features
+    statistic_notes: RDT-B is the standard REDDIT-BINARY artifact under an alternate
+      catalog alias
 result_count: 108
 best_model:
   model: OEPG
@@ -163,6 +170,13 @@ variants:
     avg_nodes: 429.63
     avg_edges: 497.75
     num_classes: 2
+    extra_stats:
+      edge_feature_dim: 0
+      edge_feature_type: no edge attributes in the standard TU artifact
+      node_feature_dim: 0
+      node_feature_type: no intrinsic node features
+      statistic_notes: RDT-B is the standard REDDIT-BINARY artifact under an alternate
+        catalog alias
   metrics:
   - Accuracy
   metric_display_names:

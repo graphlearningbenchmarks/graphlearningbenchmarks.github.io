@@ -41,6 +41,20 @@ stats:
   avg_nodes: 184000.0
   avg_edges: 263000.0
   num_classes: null
+  extra_stats:
+    avg_degree: 2.9
+    clustering_coefficient: 0.04
+    diameter: 123
+    edge_feature_dim: 25
+    edge_feature_type: road length, speed limit, one-way, reversed, lanes, and road
+      type; 25 dimensions after one-hot encoding
+    edge_homophily: 0.75
+    feature_type: OpenStreetMap junction features plus averaged incident-road features;
+      37 dimensions after one-hot encoding and aggregation
+    node_feature_dim: 37
+    statistic_notes: 'City-Networks Table 1: largest connected component of the undirected
+      Shanghai road graph; counts and topology statistics are rounded.'
+    transitivity: 0.04
 result_count: 18
 best_model:
   model: GAT
@@ -72,6 +86,20 @@ variants:
     avg_nodes: 184000.0
     avg_edges: 263000.0
     num_classes: null
+    extra_stats:
+      avg_degree: 2.9
+      clustering_coefficient: 0.04
+      diameter: 123
+      edge_feature_dim: 25
+      edge_feature_type: road length, speed limit, one-way, reversed, lanes, and road
+        type; 25 dimensions after one-hot encoding
+      edge_homophily: 0.75
+      feature_type: OpenStreetMap junction features plus averaged incident-road features;
+        37 dimensions after one-hot encoding and aggregation
+      node_feature_dim: 37
+      statistic_notes: 'City-Networks Table 1: largest connected component of the
+        undirected Shanghai road graph; counts and topology statistics are rounded.'
+      transitivity: 0.04
   metrics:
   - Accuracy
   metric_display_names:

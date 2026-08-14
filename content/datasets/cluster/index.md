@@ -34,10 +34,17 @@ primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.GNNBenchmarkDataset.html
 stats:
-  num_graphs: null
-  avg_nodes: null
-  avg_edges: null
+  num_graphs: 12000
+  avg_nodes: 117.2
+  avg_edges: 4301.72
   num_classes: 6
+  extra_stats:
+    edge_feature_dim: 0
+    edge_feature_type: unweighted SBM edges
+    node_feature_dim: 7
+    node_feature_type: synthetic cluster features with one labeled seed per cluster
+    statistic_notes: The benchmark paper reports 12,000 graphs and 4,301.72 average
+      edge entries
 result_count: 172
 best_model:
   model: GRPE-Small
@@ -162,10 +169,17 @@ variants:
   default_metric: Accuracy
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
+    num_graphs: 12000
+    avg_nodes: 117.2
+    avg_edges: 4301.72
     num_classes: 6
+    extra_stats:
+      edge_feature_dim: 0
+      edge_feature_type: unweighted SBM edges
+      node_feature_dim: 7
+      node_feature_type: synthetic cluster features with one labeled seed per cluster
+      statistic_notes: The benchmark paper reports 12,000 graphs and 4,301.72 average
+        edge entries
   metrics:
   - Accuracy
   - ACC

@@ -36,8 +36,17 @@ pyg_url: ''
 stats:
   num_graphs: 1
   avg_nodes: 18352.0
-  avg_edges: null
+  avg_edges: 1104162.0
   num_classes: 9
+  extra_stats:
+    avg_degree: 120.33
+    diameter: 8
+    edge_feature_dim: 0
+    feature_type: bag_of_words_from_IMDb_plot_summaries
+    label_imbalance: multi-label; class frequencies range from 10.4% to 46.3%
+    node_feature_dim: 1000
+    statistic_notes: 'Column Networks film-genre graph: 18,352 movies after filtering
+      missing plot summaries; relations are same-actor and same-director.'
 result_count: 7
 best_model:
   model: CLN-HWN-mini
@@ -61,8 +70,17 @@ variants:
   stats:
     num_graphs: 1
     avg_nodes: 18352.0
-    avg_edges: null
+    avg_edges: 1104162.0
     num_classes: 9
+    extra_stats:
+      avg_degree: 120.33
+      diameter: 8
+      edge_feature_dim: 0
+      feature_type: bag_of_words_from_IMDb_plot_summaries
+      label_imbalance: multi-label; class frequencies range from 10.4% to 46.3%
+      node_feature_dim: 1000
+      statistic_notes: 'Column Networks film-genre graph: 18,352 movies after filtering
+        missing plot summaries; relations are same-actor and same-director.'
   metrics:
   - Micro-F1
   metric_display_names:

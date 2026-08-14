@@ -44,6 +44,18 @@ stats:
   avg_nodes: 30.14
   avg_edges: 61.09
   num_classes: 1
+  extra_stats:
+    avg_degree: 4.05
+    edge_feature_dim: 3
+    edge_feature_type: OGB categorical covalent-bond features
+    feature_type: OGB categorical atom features; explicit hydrogens are present in
+      the contact artifact
+    label_imbalance: positive long-range contacts are sparse among candidate atom
+      pairs; filtered ranking is used rather than binary accuracy
+    node_feature_dim: 9
+    statistic_notes: 3D coordinates define the contact labels but are not input features;
+      candidates are non-covalent pairs within 3.5 Å and more than five covalent hops
+      apart.
 result_count: 110
 best_model:
   model: FloydNet
@@ -136,6 +148,18 @@ variants:
     avg_nodes: 30.14
     avg_edges: 61.09
     num_classes: 1
+    extra_stats:
+      avg_degree: 4.05
+      edge_feature_dim: 3
+      edge_feature_type: OGB categorical covalent-bond features
+      feature_type: OGB categorical atom features; explicit hydrogens are present
+        in the contact artifact
+      label_imbalance: positive long-range contacts are sparse among candidate atom
+        pairs; filtered ranking is used rather than binary accuracy
+      node_feature_dim: 9
+      statistic_notes: 3D coordinates define the contact labels but are not input
+        features; candidates are non-covalent pairs within 3.5 Å and more than five
+        covalent hops apart.
   metrics:
   - MRR
   metric_display_names:

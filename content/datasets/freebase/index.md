@@ -31,7 +31,21 @@ sources:
 primary_metric: Macro-F1
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.HGBDataset.html
-stats: null
+stats:
+  num_graphs: 1
+  avg_nodes: 180098.0
+  avg_edges: 1057688.0
+  num_classes: 7
+  extra_stats:
+    edge_feature_dim: 0
+    feature_type: no native features retained for the target task; one-hot/learned
+      type embeddings are preprocessing choices
+    node_feature_dim: 0
+    num_edge_types: 36
+    num_node_types: 8
+    statistic_notes: HGB release samples eight Freebase entity genres; Table 1 of
+      Lv et al. (2021).
+    target_node_type: book
 result_count: 83
 best_model:
   model: ConCH
@@ -93,10 +107,20 @@ variants:
   default_metric: Macro-F1
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
-    num_classes: null
+    num_graphs: 1
+    avg_nodes: 180098.0
+    avg_edges: 1057688.0
+    num_classes: 7
+    extra_stats:
+      edge_feature_dim: 0
+      feature_type: no native features retained for the target task; one-hot/learned
+        type embeddings are preprocessing choices
+      node_feature_dim: 0
+      num_edge_types: 36
+      num_node_types: 8
+      statistic_notes: HGB release samples eight Freebase entity genres; Table 1 of
+        Lv et al. (2021).
+      target_node_type: book
   metrics:
   - Macro-F1
   - Micro-F1

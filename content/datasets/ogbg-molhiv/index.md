@@ -42,6 +42,18 @@ stats:
   avg_nodes: 25.5
   avg_edges: 27.5
   num_classes: 2
+  extra_stats:
+    avg_degree: 2.157
+    degree_convention: derived as 2 × avg_edges / avg_nodes for canonical undirected
+      graphs
+    edge_feature_dim: 3
+    edge_feature_type: categorical bond features from RDKit
+    label_imbalance: exact positive rate is not reported in the OGB documentation;
+      the HIV assay is highly imbalanced
+    node_feature_dim: 9
+    node_feature_type: categorical atom features from RDKit
+    statistic_notes: clustering coefficient and diameter are not reported in the canonical
+      OGB/PyG metadata
 result_count: 370
 best_model:
   model: Multi-RF Fusion with Multi-GNN Blending
@@ -368,6 +380,18 @@ variants:
     avg_nodes: 25.5
     avg_edges: 27.5
     num_classes: 2
+    extra_stats:
+      avg_degree: 2.157
+      degree_convention: derived as 2 × avg_edges / avg_nodes for canonical undirected
+        graphs
+      edge_feature_dim: 3
+      edge_feature_type: categorical bond features from RDKit
+      label_imbalance: exact positive rate is not reported in the OGB documentation;
+        the HIV assay is highly imbalanced
+      node_feature_dim: 9
+      node_feature_type: categorical atom features from RDKit
+      statistic_notes: clustering coefficient and diameter are not reported in the
+        canonical OGB/PyG metadata
   metrics:
   - ROC-AUC
   - AUC

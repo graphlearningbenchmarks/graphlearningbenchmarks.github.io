@@ -39,6 +39,14 @@ stats:
   avg_nodes: 39.06
   avg_edges: 72.82
   num_classes: 2
+  extra_stats:
+    additional_node_attr_dim: 1
+    edge_feature_dim: 0
+    edge_feature_type: no edge labels or attributes
+    node_feature_dim: 3
+    node_feature_type: categorical amino-acid node label
+    statistic_notes: TUDataset also exposes one continuous node attribute; default
+      PyG features are the 3 node labels
 result_count: 641
 best_model:
   model: MSH-GNN
@@ -526,6 +534,14 @@ variants:
     avg_nodes: 39.06
     avg_edges: 72.82
     num_classes: 2
+    extra_stats:
+      additional_node_attr_dim: 1
+      edge_feature_dim: 0
+      edge_feature_type: no edge labels or attributes
+      node_feature_dim: 3
+      node_feature_type: categorical amino-acid node label
+      statistic_notes: TUDataset also exposes one continuous node attribute; default
+        PyG features are the 3 node labels
   metrics:
   - Accuracy
   - AP

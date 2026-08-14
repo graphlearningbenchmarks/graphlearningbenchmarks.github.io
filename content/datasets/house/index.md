@@ -34,9 +34,20 @@ higher_is_better: true
 pyg_url: ''
 stats:
   num_graphs: 1
-  avg_nodes: null
-  avg_edges: null
+  avg_nodes: 1290.0
+  avg_edges: 340.0
   num_classes: 2
+  extra_stats:
+    avg_hyperedge_size: 34.73
+    avg_node_degree: 9.181
+    clique_expansion_homophily: 0.509
+    edge_count_semantics: hyperedges
+    edge_feature_dim: 0
+    feature_type: synthetic Gaussian features, dimension 100
+    median_hyperedge_size: 40
+    node_feature_dim: 100
+    statistic_notes: 'House committee hypergraph: 1,290 nodes and 340 hyperedges in
+      AllSet; the raw committee source can contain 341 before deduplication.'
 result_count: 44
 best_model:
   model: HealHGNN
@@ -73,9 +84,20 @@ variants:
   higher_is_better: true
   stats:
     num_graphs: 1
-    avg_nodes: null
-    avg_edges: null
+    avg_nodes: 1290.0
+    avg_edges: 340.0
     num_classes: 2
+    extra_stats:
+      avg_hyperedge_size: 34.73
+      avg_node_degree: 9.181
+      clique_expansion_homophily: 0.509
+      edge_count_semantics: hyperedges
+      edge_feature_dim: 0
+      feature_type: synthetic Gaussian features, dimension 100
+      median_hyperedge_size: 40
+      node_feature_dim: 100
+      statistic_notes: 'House committee hypergraph: 1,290 nodes and 340 hyperedges
+        in AllSet; the raw committee source can contain 341 before deduplication.'
   metrics:
   - Accuracy
   - Completeness

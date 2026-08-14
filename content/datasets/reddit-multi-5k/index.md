@@ -39,6 +39,13 @@ stats:
   avg_nodes: 508.52
   avg_edges: 594.87
   num_classes: 5
+  extra_stats:
+    edge_feature_dim: 0
+    edge_feature_type: no edge attributes in the standard TU artifact
+    node_feature_dim: 0
+    node_feature_type: no intrinsic node features
+    statistic_notes: The TU benchmark reports 4,999 graphs, 508.52 nodes, and 594.87
+      undirected edges per graph
 result_count: 42
 best_model:
   model: SpeGCL
@@ -87,6 +94,13 @@ variants:
     avg_nodes: 508.52
     avg_edges: 594.87
     num_classes: 5
+    extra_stats:
+      edge_feature_dim: 0
+      edge_feature_type: no edge attributes in the standard TU artifact
+      node_feature_dim: 0
+      node_feature_type: no intrinsic node features
+      statistic_notes: The TU benchmark reports 4,999 graphs, 508.52 nodes, and 594.87
+        undirected edges per graph
   metrics:
   - Accuracy
   metric_display_names:

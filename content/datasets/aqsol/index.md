@@ -30,7 +30,19 @@ sources:
 primary_metric: MAE
 higher_is_better: false
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.AQSOL.html
-stats: null
+stats:
+  num_graphs: 9823
+  avg_nodes: 17.57
+  avg_edges: 17.88
+  num_classes: None
+  extra_stats:
+    avg_degree: 2.036
+    edge_feature_dim: 5
+    edge_feature_type: categorical bond type
+    node_feature_dim: 65
+    node_feature_type: categorical heavy-atom type
+    statistic_notes: The benchmark artifact filters AqSolDB to 9,823 molecules with
+      valid features and at least one bond
 result_count: 34
 best_model:
   model: Ours(100K)
@@ -61,10 +73,18 @@ variants:
   default_metric: MAE
   higher_is_better: false
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
-    num_classes: null
+    num_graphs: 9823
+    avg_nodes: 17.57
+    avg_edges: 17.88
+    num_classes: None
+    extra_stats:
+      avg_degree: 2.036
+      edge_feature_dim: 5
+      edge_feature_type: categorical bond type
+      node_feature_dim: 65
+      node_feature_type: categorical heavy-atom type
+      statistic_notes: The benchmark artifact filters AqSolDB to 9,823 molecules with
+        valid features and at least one bond
   metrics:
   - MAE
   metric_display_names:

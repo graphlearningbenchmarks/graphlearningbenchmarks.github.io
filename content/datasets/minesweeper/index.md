@@ -32,7 +32,28 @@ sources:
 primary_metric: ROC-AUC
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.HeterophilousGraphDataset.html
-stats: null
+stats:
+  num_graphs: 1
+  avg_nodes: 10000.0
+  avg_edges: 39402.0
+  num_classes: 2
+  extra_stats:
+    adjusted_homophily: 0.01
+    avg_degree: 7.88
+    avg_local_clustering: 0.44
+    clustering_coefficient: 0.43
+    diameter: 99
+    edge_feature_dim: 0
+    edge_feature_type: unweighted 8-neighbor grid edges
+    edge_homophily: 0.68
+    heterophily: 0.32
+    label_imbalance: 20% of grid cells are mines; features are hidden for 50% of nodes
+    label_informativeness: 0.0
+    node_feature_dim: 7
+    node_feature_type: one-hot neighboring-mine count plus unknown-feature flag
+    positive_label_rate: 0.2
+    statistic_notes: Synthetic 100×100 grid; all graph statistics are from Table 2
+      of the heterophily benchmark paper
 result_count: 274
 best_model:
   model: BuNN
@@ -183,10 +204,28 @@ variants:
   default_metric: ROC-AUC
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
-    num_classes: null
+    num_graphs: 1
+    avg_nodes: 10000.0
+    avg_edges: 39402.0
+    num_classes: 2
+    extra_stats:
+      adjusted_homophily: 0.01
+      avg_degree: 7.88
+      avg_local_clustering: 0.44
+      clustering_coefficient: 0.43
+      diameter: 99
+      edge_feature_dim: 0
+      edge_feature_type: unweighted 8-neighbor grid edges
+      edge_homophily: 0.68
+      heterophily: 0.32
+      label_imbalance: 20% of grid cells are mines; features are hidden for 50% of
+        nodes
+      label_informativeness: 0.0
+      node_feature_dim: 7
+      node_feature_type: one-hot neighboring-mine count plus unknown-feature flag
+      positive_label_rate: 0.2
+      statistic_notes: Synthetic 100×100 grid; all graph statistics are from Table
+        2 of the heterophily benchmark paper
   metrics:
   - ROC-AUC
   - Accuracy

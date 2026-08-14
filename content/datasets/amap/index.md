@@ -3,43 +3,41 @@ title: AMAP
 slug: amap
 benchmark: Hypergraph Benchmarks
 task_type: node_classification
-short_description: Amazon Photography co-purchase hypergraph node classification (8
-  categories).
-description: '**8-class node classification** Amazon Photography co-purchase hypergraph
-  node classification (8 categories). Uses node-hyperedge incidence and the released
-  node features. Clique expansion changes the input by discarding hyperedge identity.
-  Evaluated by F1.'
+short_description: Amazon Photography co-purchase graph node classification (8 categories).
+description: '**8-class node classification** Amazon Photography co-purchase graph
+  node classification (8 categories). Uses the PyG sparse product features and ordinary
+  co-purchase links. Evaluated by Accuracy.'
 detailed_description:
-  task: Amazon Photography co-purchase hypergraph node classification (8 categories).
-    The primary catalog metric is F1.
-  data: Amazon Photography co-purchase hypergraph node classification (8 categories).
-    The cataloged artifact reports 1 graphs, 8 target classes or tasks.
-  features: The release represents higher-order membership with a node-hyperedge incidence
-    relation and supplies node features where available. Some source datasets have
-    no measured features and use documented synthetic features; clique expansion is
-    an alternative representation that discards hyperedge identity.
+  task: Amazon Photography co-purchase graph node classification (8 categories). The
+    primary catalog metric is Accuracy.
+  data: Amazon Photography co-purchase graph node classification (8 categories). The
+    cataloged artifact reports 1 graph and 8 target classes.
+  features: Nodes are products, edges are co-purchase links, and node features are
+    sparse bag-of-words review features from the PyG Amazon-Photo release.
   splits_and_evaluation: 'The catalog records these protocols or variants: Standard
     split. Evaluation uses F1 (higher is better). Exact masks or folds must come from
     the cited release.'
-  quirks_and_pitfalls: Do not silently replace incidence propagation with clique expansion
-    or merge distinct releases sharing a short name. Random synthetic features, split
-    seeds, hyperedge multiplicity, and isolated-node handling can dominate results
-    and must be reported.
+  quirks_and_pitfalls: This is an ordinary graph in the PyG release, not an incidence
+    hypergraph; treating each co-purchase edge as a hyperedge changes the dataset.
 sources:
-- title: Hypergraph Benchmarks benchmark
-  arxiv_id: '2106.13264'
-  kind: benchmark_or_upstream_source
 - title: PyTorch Geometric AMAP loader documentation
   url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Amazon.html
   kind: implementation_documentation
-primary_metric: F1
+primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Amazon.html
 stats:
   num_graphs: 1
-  avg_nodes: null
-  avg_edges: null
+  avg_nodes: 7650.0
+  avg_edges: 119081.0
   num_classes: 8
+  extra_stats:
+    edge_count_semantics: ordinary_graph_edges
+    edge_feature_dim: 0
+    feature_type: Amazon co-purchase node features
+    node_feature_dim: 745
+    statistic_notes: AMAP is the Amazon Photography graph artifact (7,650 nodes, 119,081
+      undirected edges in the PyG Amazon release); it is not a hypergraph.
 result_count: 124
 best_model:
   model: GANN
@@ -102,9 +100,16 @@ variants:
   higher_is_better: true
   stats:
     num_graphs: 1
-    avg_nodes: null
-    avg_edges: null
+    avg_nodes: 7650.0
+    avg_edges: 119081.0
     num_classes: 8
+    extra_stats:
+      edge_count_semantics: ordinary_graph_edges
+      edge_feature_dim: 0
+      feature_type: Amazon co-purchase node features
+      node_feature_dim: 745
+      statistic_notes: AMAP is the Amazon Photography graph artifact (7,650 nodes,
+        119,081 undirected edges in the PyG Amazon release); it is not a hypergraph.
   metrics:
   - F1
   - ACC

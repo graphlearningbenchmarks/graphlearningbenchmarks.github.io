@@ -38,6 +38,23 @@ stats:
   avg_nodes: 11758.0
   avg_edges: 519000.0
   num_classes: 2
+  extra_stats:
+    adjusted_homophily: 0.09
+    avg_degree: 88.28
+    avg_local_clustering: 0.53
+    clustering_coefficient: 0.23
+    diameter: 11
+    edge_feature_dim: 0
+    edge_feature_type: unweighted same-task worker edges
+    edge_homophily: 0.59
+    heterophily: 0.41
+    label_imbalance: about 22% of tolokers are banned
+    label_informativeness: 0.01
+    node_feature_dim: 10
+    node_feature_type: worker profile and task-performance features
+    positive_label_rate: 0.22
+    statistic_notes: All graph statistics are from Table 2 of the heterophily benchmark
+      paper
 result_count: 248
 best_model:
   model: Polynormer-r
@@ -192,6 +209,23 @@ variants:
     avg_nodes: 11758.0
     avg_edges: 519000.0
     num_classes: 2
+    extra_stats:
+      adjusted_homophily: 0.09
+      avg_degree: 88.28
+      avg_local_clustering: 0.53
+      clustering_coefficient: 0.23
+      diameter: 11
+      edge_feature_dim: 0
+      edge_feature_type: unweighted same-task worker edges
+      edge_homophily: 0.59
+      heterophily: 0.41
+      label_imbalance: about 22% of tolokers are banned
+      label_informativeness: 0.01
+      node_feature_dim: 10
+      node_feature_type: worker profile and task-performance features
+      positive_label_rate: 0.22
+      statistic_notes: All graph statistics are from Table 2 of the heterophily benchmark
+        paper
   metrics:
   - ROC-AUC
   - AP

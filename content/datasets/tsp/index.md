@@ -33,7 +33,21 @@ sources:
 primary_metric: F1
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.GNNBenchmarkDataset.html
-stats: null
+stats:
+  num_graphs: 12000
+  avg_nodes: 275.76
+  avg_edges: 6894.04
+  num_classes: 2
+  extra_stats:
+    edge_feature_dim: 1
+    edge_feature_type: Euclidean distance
+    label_imbalance: only tour edges are positive in a sparse 25-nearest-neighbor
+      graph; the exact rate varies with graph size
+    node_feature_dim: 2
+    node_feature_type: 2D coordinates sampled in the unit square
+    positive_label_rate: 0.04
+    statistic_notes: Binary edge classification; the benchmark paper uses F1 for the
+      positive class
 result_count: 27
 best_model:
   model: TGT-Agx4
@@ -69,10 +83,20 @@ variants:
   default_metric: F1
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
-    num_classes: null
+    num_graphs: 12000
+    avg_nodes: 275.76
+    avg_edges: 6894.04
+    num_classes: 2
+    extra_stats:
+      edge_feature_dim: 1
+      edge_feature_type: Euclidean distance
+      label_imbalance: only tour edges are positive in a sparse 25-nearest-neighbor
+        graph; the exact rate varies with graph size
+      node_feature_dim: 2
+      node_feature_type: 2D coordinates sampled in the unit square
+      positive_label_rate: 0.04
+      statistic_notes: Binary edge classification; the benchmark paper uses F1 for
+        the positive class
   metrics:
   - F1
   metric_display_names:

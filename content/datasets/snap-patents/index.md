@@ -35,9 +35,19 @@ higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.LINKXDataset.html
 stats:
   num_graphs: 1
-  avg_nodes: 2745480.0
-  avg_edges: 12800500.0
+  avg_nodes: 2923922.0
+  avg_edges: 13975788.0
   num_classes: 5
+  extra_stats:
+    adjusted_homophily: 0.1
+    edge_feature_dim: 0
+    edge_feature_type: unweighted patent citation links
+    edge_homophily: 0.073
+    feature_type: patent metadata and grant-time attributes
+    heterophily: 0.927
+    node_feature_dim: 269
+    statistic_notes: LINKX Table 5 reports 2,923,922 nodes and 13,975,788 edges for
+      snap-patents.
 result_count: 41
 best_model:
   model: FaberNet
@@ -88,9 +98,19 @@ variants:
   higher_is_better: true
   stats:
     num_graphs: 1
-    avg_nodes: 2745480.0
-    avg_edges: 12800500.0
+    avg_nodes: 2923922.0
+    avg_edges: 13975788.0
     num_classes: 5
+    extra_stats:
+      adjusted_homophily: 0.1
+      edge_feature_dim: 0
+      edge_feature_type: unweighted patent citation links
+      edge_homophily: 0.073
+      feature_type: patent metadata and grant-time attributes
+      heterophily: 0.927
+      node_feature_dim: 269
+      statistic_notes: LINKX Table 5 reports 2,923,922 nodes and 13,975,788 edges
+        for snap-patents.
   metrics:
   - Accuracy
   metric_display_names:

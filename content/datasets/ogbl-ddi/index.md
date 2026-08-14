@@ -40,10 +40,21 @@ primary_metric: Hits@20
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.OGBLinkPropPredDataset.html
 stats:
-  num_graphs: 4267
-  avg_nodes: 1334889.0
-  avg_edges: null
+  num_graphs: 1
+  avg_nodes: 4267.0
+  avg_edges: 1334889.0
   num_classes: null
+  extra_stats:
+    avg_degree: 625.68
+    degree_convention: derived as 2 × avg_edges / avg_nodes for the canonical undirected
+      graph
+    edge_feature_dim: 0
+    edge_feature_type: none; homogeneous unweighted interaction edges
+    label_imbalance: no fixed binary label distribution; each positive is ranked against
+      approximately 100000 sampled negatives
+    node_feature_type: no intrinsic node features
+    statistic_notes: clustering coefficient and diameter are not reported in the canonical
+      OGB/PyG metadata
 result_count: 135
 best_model:
   model: ELGNN
@@ -153,10 +164,21 @@ variants:
   default_metric: Hits@20
   higher_is_better: true
   stats:
-    num_graphs: 4267
-    avg_nodes: 1334889.0
-    avg_edges: null
+    num_graphs: 1
+    avg_nodes: 4267.0
+    avg_edges: 1334889.0
     num_classes: null
+    extra_stats:
+      avg_degree: 625.68
+      degree_convention: derived as 2 × avg_edges / avg_nodes for the canonical undirected
+        graph
+      edge_feature_dim: 0
+      edge_feature_type: none; homogeneous unweighted interaction edges
+      label_imbalance: no fixed binary label distribution; each positive is ranked
+        against approximately 100000 sampled negatives
+      node_feature_type: no intrinsic node features
+      statistic_notes: clustering coefficient and diameter are not reported in the
+        canonical OGB/PyG metadata
   metrics:
   - Hits@20
   - MRR

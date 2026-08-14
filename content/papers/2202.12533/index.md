@@ -55,9 +55,9 @@ has_results: true
 paper_type: method
 proposed_models:
 - IDCRN
-mrr: 0.0833
-adjusted_mrr: 0.0278
-mrr_dataset_count: 1
+mrr: 0.0
+adjusted_mrr: 0.0
+mrr_dataset_count: 0
 benchmark_categories:
 - Heterogeneous Graph Benchmarks
 - Hypergraph Benchmarks
@@ -2500,12 +2500,12 @@ results:
   rank_metric: F1
   higher_is_better: true
   experiment_scope: node-level
-  dataset_primary_metric: F1
+  dataset_primary_metric: Accuracy
   paper_metrics:
   - F1
   metric: F1
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
+  uses_non_primary_metric: true
+  paper_has_primary_metric: false
 - &id001
   dataset: DBLP
   rows:

@@ -32,7 +32,20 @@ sources:
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Planetoid.html
-stats: null
+stats:
+  num_graphs: 1
+  avg_nodes: 19717.0
+  avg_edges: 44338.0
+  num_classes: 3
+  extra_stats:
+    avg_degree: 4.497
+    edge_feature_dim: 0
+    edge_feature_type: citation links; no edge attributes
+    edge_homophily: 0.7924
+    node_feature_dim: 500
+    node_feature_type: sparse TF-IDF paper features
+    statistic_notes: PyG exposes 88,648 bidirected edge entries; this record stores
+      44,338 unique undirected citation links
 result_count: 1373
 best_model:
   model: LGTL
@@ -923,10 +936,19 @@ variants:
   default_metric: Accuracy
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
-    num_classes: null
+    num_graphs: 1
+    avg_nodes: 19717.0
+    avg_edges: 44338.0
+    num_classes: 3
+    extra_stats:
+      avg_degree: 4.497
+      edge_feature_dim: 0
+      edge_feature_type: citation links; no edge attributes
+      edge_homophily: 0.7924
+      node_feature_dim: 500
+      node_feature_type: sparse TF-IDF paper features
+      statistic_notes: PyG exposes 88,648 bidirected edge entries; this record stores
+        44,338 unique undirected citation links
   metrics:
   - Accuracy
   - F1

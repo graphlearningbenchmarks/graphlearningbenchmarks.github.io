@@ -33,9 +33,18 @@ higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.HGBDataset.html
 stats:
   num_graphs: 1
-  avg_nodes: null
-  avg_edges: null
+  avg_nodes: 10942.0
+  avg_edges: 547872.0
   num_classes: 3
+  extra_stats:
+    edge_feature_dim: 0
+    feature_type: type-specific; target paper features are 1902-dimensional
+    node_feature_dim: 1902
+    num_edge_types: 8
+    num_node_types: 4
+    statistic_notes: HGB release preserves ACM citation and reference edges; Table
+      1 of Lv et al. (2021).
+    target_node_type: paper
 result_count: 359
 best_model:
   model: LMSPS
@@ -213,9 +222,18 @@ variants:
   higher_is_better: true
   stats:
     num_graphs: 1
-    avg_nodes: null
-    avg_edges: null
+    avg_nodes: 10942.0
+    avg_edges: 547872.0
     num_classes: 3
+    extra_stats:
+      edge_feature_dim: 0
+      feature_type: type-specific; target paper features are 1902-dimensional
+      node_feature_dim: 1902
+      num_edge_types: 8
+      num_node_types: 4
+      statistic_notes: HGB release preserves ACM citation and reference edges; Table
+        1 of Lv et al. (2021).
+      target_node_type: paper
   metrics:
   - Micro-F1
   - ACC

@@ -38,6 +38,13 @@ stats:
   avg_nodes: 74.5
   avg_edges: 2457.8
   num_classes: 3
+  extra_stats:
+    edge_feature_dim: 0
+    edge_feature_type: no edge attributes in the standard TU artifact
+    node_feature_dim: 0
+    node_feature_type: no intrinsic node features
+    statistic_notes: The TU benchmark reports 5,000 graphs, 74.49 nodes, and 2,457.78
+      undirected edges per graph
 result_count: 520
 best_model:
   model: WL-MLP
@@ -449,6 +456,13 @@ variants:
     avg_nodes: 74.5
     avg_edges: 2457.8
     num_classes: 3
+    extra_stats:
+      edge_feature_dim: 0
+      edge_feature_type: no edge attributes in the standard TU artifact
+      node_feature_dim: 0
+      node_feature_type: no intrinsic node features
+      statistic_notes: The TU benchmark reports 5,000 graphs, 74.49 nodes, and 2,457.78
+        undirected edges per graph
   metrics:
   - Accuracy
   - AUROC

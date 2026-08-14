@@ -43,9 +43,24 @@ higher_is_better: false
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.PCQM4Mv2.html
 stats:
   num_graphs: 3746619
-  avg_nodes: null
-  avg_edges: null
+  avg_nodes: 14.14
+  avg_edges: 14.56
   num_classes: null
+  extra_stats:
+    avg_degree: 2.05
+    clustering_coefficient: 0.011
+    degree_convention: reported in OGB-LSC Table 8 after standardizing graphs to undirected
+      unlabeled graphs
+    diameter: 7.95
+    edge_feature_dim: 3
+    edge_feature_type: categorical bond features from RDKit
+    label_imbalance: not applicable; the target is continuous HOMO-LUMO gap regression
+    node_feature_dim: 9
+    node_feature_type: categorical atom features from RDKit
+    statistic_notes: OGB-LSC Table 8 reports average degree, clustering coefficient,
+      and diameter on standardized graphs; training molecules additionally have 3D
+      coordinates
+    target_unit: eV
 result_count: 112
 best_model:
   model: DeMol
@@ -134,9 +149,24 @@ variants:
   higher_is_better: false
   stats:
     num_graphs: 3746619
-    avg_nodes: null
-    avg_edges: null
+    avg_nodes: 14.14
+    avg_edges: 14.56
     num_classes: null
+    extra_stats:
+      avg_degree: 2.05
+      clustering_coefficient: 0.011
+      degree_convention: reported in OGB-LSC Table 8 after standardizing graphs to
+        undirected unlabeled graphs
+      diameter: 7.95
+      edge_feature_dim: 3
+      edge_feature_type: categorical bond features from RDKit
+      label_imbalance: not applicable; the target is continuous HOMO-LUMO gap regression
+      node_feature_dim: 9
+      node_feature_type: categorical atom features from RDKit
+      statistic_notes: OGB-LSC Table 8 reports average degree, clustering coefficient,
+        and diameter on standardized graphs; training molecules additionally have
+        3D coordinates
+      target_unit: eV
   metrics:
   - MAE
   metric_display_names:

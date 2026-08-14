@@ -20,13 +20,13 @@ Each row also compares against the **best known at publication** (best result fo
 
 | Statistic | Count |
 |---|---:|
-| Flagged papers | 944 |
-| Flagged rows | 12654 |
-| Baseline rows | 12407 |
-| Best at pub | 8298 |
-| Best today only (not best at pub) | 3403 |
-| At-pub best ≠ today's best (different source papers) | 7805 |
-| At-pub best = today's best (same source paper) | 4849 |
+| Flagged papers | 942 |
+| Flagged rows | 12622 |
+| Baseline rows | 12375 |
+| Best at pub | 8275 |
+| Best today only (not best at pub) | 3395 |
+| At-pub best ≠ today's best (different source papers) | 7791 |
+| At-pub best = today's best (same source paper) | 4831 |
 
 ### Today's best source timing
 
@@ -34,8 +34,8 @@ When the **best reported** holder published relative to the viewing paper:
 
 | Timing | Rows |
 |---|---:|
-| Already known at publication | 5407 |
-| Published later (field moved on) | 7247 |
+| Already known at publication | 5388 |
+| Published later (field moved on) | 7234 |
 | Same paper | 0 |
 | Unknown date | 0 |
 
@@ -83,9 +83,9 @@ When the **best reported** holder published relative to the viewing paper:
 | SGC | 250 | 189 | 58 | 98 | 22 | 848 |
 | GraphCL | 237 | 136 | 45 | 71 | 24 | 646 |
 | GCNII | 221 | 138 | 73 | 87 | 18 | 787 |
-| MVGRL | 205 | 122 | 74 | 78 | 24 | 771 |
 | GRACE | 205 | 113 | 80 | 73 | 21 | 696 |
 | H2GCN | 204 | 137 | 47 | 79 | 20 | 825 |
+| MVGRL | 199 | 117 | 73 | 76 | 23 | 771 |
 | GPRGNN | 196 | 126 | 58 | 65 | 22 | 830 |
 | InfoGraph | 136 | 85 | 17 | 53 | 12 | 233 |
 | BGRL | 134 | 99 | 15 | 46 | 22 | 726 |
@@ -96,11 +96,11 @@ When the **best reported** holder published relative to the viewing paper:
 | WL | 122 | 104 | 9 | 59 | 6 | 696 |
 | DeepWalk | 108 | 71 | 36 | 42 | 16 | 691 |
 | SAGE | 100 | 51 | 43 | 52 | 25 | 802 |
-| GAE | 100 | 61 | 28 | 34 | 18 | 570 |
+| GAE | 99 | 61 | 27 | 33 | 17 | 570 |
 | ContextPred | 98 | 74 | 22 | 24 | 9 | 241 |
 
 
-Detailed table: 944 rows (loaded below).
+Detailed table: 942 rows (loaded below).
 
 
 ### Flagged Rows

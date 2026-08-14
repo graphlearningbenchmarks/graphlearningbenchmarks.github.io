@@ -36,9 +36,19 @@ higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.LINKXDataset.html
 stats:
   num_graphs: 1
-  avg_nodes: 662143.0
-  avg_edges: 13806079.0
+  avg_nodes: 1632803.0
+  avg_edges: 30622564.0
   num_classes: 2
+  extra_stats:
+    adjusted_homophily: 0.0
+    edge_feature_dim: 0
+    edge_feature_type: unweighted social-network links
+    edge_homophily: 0.445
+    feature_type: Pokec user attributes
+    heterophily: 0.555
+    node_feature_dim: 65
+    statistic_notes: LINKX Table 5 reports 1,632,803 nodes and 30,622,564 edges; this
+      is the full Pokec artifact, not a filtered subgraph.
 result_count: 67
 best_model:
   model: MoE-H2GCN
@@ -94,9 +104,19 @@ variants:
   higher_is_better: true
   stats:
     num_graphs: 1
-    avg_nodes: 662143.0
-    avg_edges: 13806079.0
+    avg_nodes: 1632803.0
+    avg_edges: 30622564.0
     num_classes: 2
+    extra_stats:
+      adjusted_homophily: 0.0
+      edge_feature_dim: 0
+      edge_feature_type: unweighted social-network links
+      edge_homophily: 0.445
+      feature_type: Pokec user attributes
+      heterophily: 0.555
+      node_feature_dim: 65
+      statistic_notes: LINKX Table 5 reports 1,632,803 nodes and 30,622,564 edges;
+        this is the full Pokec artifact, not a filtered subgraph.
   metrics:
   - Accuracy
   metric_display_names:

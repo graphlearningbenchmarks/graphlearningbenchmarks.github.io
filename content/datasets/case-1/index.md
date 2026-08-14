@@ -38,6 +38,19 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: null
+  extra_stats:
+    edge_count_range: branch count varies with topology slicing; base case has 46
+      branches
+    edge_feature_dim: 3
+    edge_feature_type: branch admittance, tap-ratio, and topology-derived branch attributes
+    feature_type: active/reactive power, voltage magnitude, reactive bounds, self-admittance,
+      and bus-type encoding
+    node_count_range: 36--41 buses in the non-LTS training regime; base case is IEEE
+      39-bus
+    node_feature_dim: 7
+    sample_semantics: operating-point samples/subgraphs, not independent graph topologies
+    statistic_notes: Case I expands 5,000 selected operating scenarios into one million
+      training samples and uses 100,000-sample evaluation/generalization sets.
 result_count: 17
 best_model:
   model: RMGL
@@ -67,6 +80,21 @@ variants:
     avg_nodes: null
     avg_edges: null
     num_classes: null
+    extra_stats:
+      edge_count_range: branch count varies with topology slicing; base case has 46
+        branches
+      edge_feature_dim: 3
+      edge_feature_type: branch admittance, tap-ratio, and topology-derived branch
+        attributes
+      feature_type: active/reactive power, voltage magnitude, reactive bounds, self-admittance,
+        and bus-type encoding
+      node_count_range: 36--41 buses in the non-LTS training regime; base case is
+        IEEE 39-bus
+      node_feature_dim: 7
+      sample_semantics: operating-point samples/subgraphs, not independent graph topologies
+      statistic_notes: Case I expands 5,000 selected operating scenarios into one
+        million training samples and uses 100,000-sample evaluation/generalization
+        sets.
   metrics:
   - Accuracy
   - Pearson correlation

@@ -3,15 +3,15 @@ title: IMDB
 slug: imdb
 benchmark: Heterogeneous Graph Benchmarks
 task_type: node_classification
-short_description: Heterogeneous IMDB graph — classify movie nodes (3 genres).
-description: '**3-class node classification** Heterogeneous IMDB graph — classify
-  movie nodes (3 genres). Uses typed nodes, typed relations, and available type-specific
+short_description: Heterogeneous IMDB graph — classify movie nodes (5 genres).
+description: '**5-label node classification** Heterogeneous IMDB graph — classify
+  movie nodes (5 genres). Uses typed nodes, typed relations, and available type-specific
   features. Evaluated by Micro-F1.'
 detailed_description:
-  task: Heterogeneous IMDB graph — classify movie nodes (3 genres). The primary catalog
+  task: Heterogeneous IMDB graph — classify movie nodes (5 genres). The primary catalog
     metric is Micro-F1.
-  data: Heterogeneous IMDB graph — classify movie nodes (3 genres). The cataloged
-    artifact reports 1 graphs, 3 target classes or tasks.
+  data: Heterogeneous IMDB graph — classify movie nodes (5 genres). The cataloged
+    artifact reports 1 graphs, 5 target classes or tasks.
   features: Inputs are typed graphs with relation-specific edges and type-specific
     feature matrices where available. Some node types lack native features, so learned
     embeddings or propagated features are modeling choices rather than measured attributes.
@@ -33,9 +33,19 @@ higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.IMDB.html
 stats:
   num_graphs: 1
-  avg_nodes: null
-  avg_edges: null
-  num_classes: 3
+  avg_nodes: 21420.0
+  avg_edges: 86642.0
+  num_classes: 5
+  extra_stats:
+    edge_feature_dim: 0
+    feature_type: type-specific; target movie features are 3066-dimensional
+    label_type: multi-label
+    node_feature_dim: 3066
+    num_edge_types: 6
+    num_node_types: 4
+    statistic_notes: 'HGB release: 21,420 nodes and 86,642 typed edges; 28% of movie
+      nodes have more than one label.'
+    target_node_type: movie
 result_count: 230
 best_model:
   model: ELLA
@@ -159,9 +169,19 @@ variants:
   higher_is_better: true
   stats:
     num_graphs: 1
-    avg_nodes: null
-    avg_edges: null
-    num_classes: 3
+    avg_nodes: 21420.0
+    avg_edges: 86642.0
+    num_classes: 5
+    extra_stats:
+      edge_feature_dim: 0
+      feature_type: type-specific; target movie features are 3066-dimensional
+      label_type: multi-label
+      node_feature_dim: 3066
+      num_edge_types: 6
+      num_node_types: 4
+      statistic_notes: 'HGB release: 21,420 nodes and 86,642 typed edges; 28% of movie
+        nodes have more than one label.'
+      target_node_type: movie
   metrics:
   - Micro-F1
   - Accuracy

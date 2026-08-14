@@ -41,6 +41,20 @@ stats:
   avg_nodes: 241000.0
   avg_edges: 343000.0
   num_classes: null
+  extra_stats:
+    avg_degree: 2.8
+    clustering_coefficient: 0.04
+    diameter: 171
+    edge_feature_dim: 25
+    edge_feature_type: road length, speed limit, one-way, reversed, lanes, and road
+      type; 25 dimensions after one-hot encoding
+    edge_homophily: 0.75
+    feature_type: OpenStreetMap junction features plus averaged incident-road features;
+      37 dimensions after one-hot encoding and aggregation
+    node_feature_dim: 37
+    statistic_notes: 'City-Networks Table 1: largest connected component of the undirected
+      Los Angeles road graph; counts and topology statistics are rounded.'
+    transitivity: 0.05
 result_count: 10
 best_model:
   model: Exphormer
@@ -66,6 +80,20 @@ variants:
     avg_nodes: 241000.0
     avg_edges: 343000.0
     num_classes: null
+    extra_stats:
+      avg_degree: 2.8
+      clustering_coefficient: 0.04
+      diameter: 171
+      edge_feature_dim: 25
+      edge_feature_type: road length, speed limit, one-way, reversed, lanes, and road
+        type; 25 dimensions after one-hot encoding
+      edge_homophily: 0.75
+      feature_type: OpenStreetMap junction features plus averaged incident-road features;
+        37 dimensions after one-hot encoding and aggregation
+      node_feature_dim: 37
+      statistic_notes: 'City-Networks Table 1: largest connected component of the
+        undirected Los Angeles road graph; counts and topology statistics are rounded.'
+      transitivity: 0.05
   metrics:
   - Accuracy
   metric_display_names:

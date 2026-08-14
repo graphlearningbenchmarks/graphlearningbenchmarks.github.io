@@ -36,10 +36,21 @@ primary_metric: MAE
 higher_is_better: true
 pyg_url: https://graphbench.github.io/website/datasets.html
 stats:
-  num_graphs: 21000000
-  avg_nodes: 264.0
-  avg_edges: 3667.0
+  num_graphs: 100000
+  avg_nodes: 500.0
+  avg_edges: 46956.8
   num_classes: null
+  extra_stats:
+    avg_degree: 187.83
+    edge_feature_dim: 0
+    feature_type: no intrinsic node features; topology is the optimization input
+    label_imbalance: objective and decoded-solution targets vary by MIS, max-cut,
+      or coloring protocol
+    node_feature_dim: 0
+    size_regimes: 'small: 50,000 graphs, 249.9 nodes, 9,463.5 edges; large: 50,000
+      graphs, 750.2 nodes, 84,450.1 edges'
+    statistic_notes: GraphBench Table 2 reports separate small and large ER graph
+      populations.
 result_count: 5
 best_model:
   model: Diffusion Wavelets
@@ -61,10 +72,21 @@ variants:
   default_metric: Accuracy
   higher_is_better: true
   stats:
-    num_graphs: 21000000
-    avg_nodes: 264.0
-    avg_edges: 3667.0
+    num_graphs: 100000
+    avg_nodes: 500.0
+    avg_edges: 46956.8
     num_classes: null
+    extra_stats:
+      avg_degree: 187.83
+      edge_feature_dim: 0
+      feature_type: no intrinsic node features; topology is the optimization input
+      label_imbalance: objective and decoded-solution targets vary by MIS, max-cut,
+        or coloring protocol
+      node_feature_dim: 0
+      size_regimes: 'small: 50,000 graphs, 249.9 nodes, 9,463.5 edges; large: 50,000
+        graphs, 750.2 nodes, 84,450.1 edges'
+      statistic_notes: GraphBench Table 2 reports separate small and large ER graph
+        populations.
   metrics:
   - Accuracy
   metric_display_names:

@@ -31,7 +31,20 @@ sources:
 primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Amazon.html
-stats: null
+stats:
+  num_graphs: 1
+  avg_nodes: 13752.0
+  avg_edges: 245861.0
+  num_classes: 10
+  extra_stats:
+    avg_degree: 35.758
+    edge_feature_dim: 0
+    edge_feature_type: co-purchase links; no edge attributes
+    edge_homophily: 0.7853
+    node_feature_dim: 767
+    node_feature_type: sparse bag-of-words product-review features
+    statistic_notes: PyG exposes 491,722 bidirected edge entries; this record stores
+      245,861 unique undirected links
 result_count: 789
 best_model:
   model: GraphTARIF
@@ -597,10 +610,19 @@ variants:
   default_metric: Accuracy
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
-    num_classes: null
+    num_graphs: 1
+    avg_nodes: 13752.0
+    avg_edges: 245861.0
+    num_classes: 10
+    extra_stats:
+      avg_degree: 35.758
+      edge_feature_dim: 0
+      edge_feature_type: co-purchase links; no edge attributes
+      edge_homophily: 0.7853
+      node_feature_dim: 767
+      node_feature_type: sparse bag-of-words product-review features
+      statistic_notes: PyG exposes 491,722 bidirected edge entries; this record stores
+        245,861 unique undirected links
   metrics:
   - Accuracy
   - ACC

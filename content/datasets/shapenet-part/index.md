@@ -34,10 +34,20 @@ primary_metric: F1
 higher_is_better: true
 pyg_url: ''
 stats:
-  num_graphs: null
-  avg_nodes: null
-  avg_edges: null
+  num_graphs: 16881
+  avg_nodes: 2048.0
+  avg_edges: 0.0
   num_classes: 50
+  extra_stats:
+    edge_feature_dim: 0
+    feature_type: 3D point coordinates plus surface normals; position-only loaders
+      expose dimension 3
+    node_feature_dim: 6
+    num_object_categories: 16
+    num_part_labels: 50
+    statistic_notes: ShapeNet-Part has 16,881 shapes; the common benchmark samples
+      2,048 points per shape. Point-cloud samples have no intrinsic edges; k-NN/radius
+      edges are preprocessing choices.
 result_count: 24
 best_model:
   model: GPS + k-MIP
@@ -74,10 +84,20 @@ variants:
   default_metric: F1
   higher_is_better: true
   stats:
-    num_graphs: null
-    avg_nodes: null
-    avg_edges: null
+    num_graphs: 16881
+    avg_nodes: 2048.0
+    avg_edges: 0.0
     num_classes: 50
+    extra_stats:
+      edge_feature_dim: 0
+      feature_type: 3D point coordinates plus surface normals; position-only loaders
+        expose dimension 3
+      node_feature_dim: 6
+      num_object_categories: 16
+      num_part_labels: 50
+      statistic_notes: ShapeNet-Part has 16,881 shapes; the common benchmark samples
+        2,048 points per shape. Point-cloud samples have no intrinsic edges; k-NN/radius
+        edges are preprocessing choices.
   metrics:
   - F1
   - mIoU

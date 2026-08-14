@@ -34,9 +34,16 @@ higher_is_better: true
 pyg_url: ''
 stats:
   num_graphs: 1
-  avg_nodes: 2000000.0
-  avg_edges: 61000000.0
-  num_classes: null
+  avg_nodes: 2449029.0
+  avg_edges: 61859140.0
+  num_classes: 47
+  extra_stats:
+    avg_degree: 50.52
+    edge_feature_dim: 0
+    feature_type: bag_of_words
+    node_feature_dim: 100
+    statistic_notes: 'Cluster-GCN release: 2,449,029 products, 61,859,140 co-purchase
+      edges, 47 top-level classes, and 100-dimensional product-description features.'
 result_count: 248
 best_model:
   model: MA-GCL
@@ -171,9 +178,16 @@ variants:
   higher_is_better: true
   stats:
     num_graphs: 1
-    avg_nodes: 2000000.0
-    avg_edges: 61000000.0
-    num_classes: null
+    avg_nodes: 2449029.0
+    avg_edges: 61859140.0
+    num_classes: 47
+    extra_stats:
+      avg_degree: 50.52
+      edge_feature_dim: 0
+      feature_type: bag_of_words
+      node_feature_dim: 100
+      statistic_notes: 'Cluster-GCN release: 2,449,029 products, 61,859,140 co-purchase
+        edges, 47 top-level classes, and 100-dimensional product-description features.'
   metrics:
   - Accuracy
   - AUC

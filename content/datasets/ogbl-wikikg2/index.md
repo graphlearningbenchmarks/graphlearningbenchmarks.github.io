@@ -38,10 +38,22 @@ primary_metric: MRR
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.OGBLinkPropPredDataset.html
 stats:
-  num_graphs: 2500604
-  avg_nodes: 17137181.0
-  avg_edges: null
+  num_graphs: 1
+  avg_nodes: 2500604.0
+  avg_edges: 17137181.0
   num_classes: null
+  extra_stats:
+    avg_degree: 6.853
+    degree_convention: derived as avg_edges / avg_nodes for directed knowledge-graph
+      triples (average out-degree)
+    edge_feature_type: 535 categorical relation types
+    label_imbalance: no fixed binary label distribution; relation and entity frequencies
+      are not summarized in the canonical OGB documentation
+    node_feature_type: no supplied node features; entity IDs are represented by learned
+      embeddings
+    num_relation_types: 535
+    statistic_notes: clustering coefficient and diameter are not reported; relation
+      multiplicity and direction are part of the task
 result_count: 54
 best_model:
   model: InterHT + DigPiece
@@ -100,10 +112,22 @@ variants:
   default_metric: MRR
   higher_is_better: true
   stats:
-    num_graphs: 2500604
-    avg_nodes: 17137181.0
-    avg_edges: null
+    num_graphs: 1
+    avg_nodes: 2500604.0
+    avg_edges: 17137181.0
     num_classes: null
+    extra_stats:
+      avg_degree: 6.853
+      degree_convention: derived as avg_edges / avg_nodes for directed knowledge-graph
+        triples (average out-degree)
+      edge_feature_type: 535 categorical relation types
+      label_imbalance: no fixed binary label distribution; relation and entity frequencies
+        are not summarized in the canonical OGB documentation
+      node_feature_type: no supplied node features; entity IDs are represented by
+        learned embeddings
+      num_relation_types: 535
+      statistic_notes: clustering coefficient and diameter are not reported; relation
+        multiplicity and direction are part of the task
   metrics:
   - MRR
   metric_display_names:
