@@ -64,7 +64,7 @@ task_categories:
 experiment_scopes:
 - node-level
 results:
-- &id002
+- &id001
   dataset: Minesweeper
   rows:
   - model: GraphTARIF
@@ -1891,7 +1891,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id001
+- &id002
   dataset: Tolokers
   rows:
   - model: NT*
@@ -2698,10 +2698,10 @@ datasets_by_scope:
   - benchmark: Heterophily Benchmark
     benchmark_slug: heterophily-benchmark
     datasets:
-    - dataset: Tolokers
-      dataset_slug: tolokers
     - dataset: Minesweeper
       dataset_slug: minesweeper
+    - dataset: Tolokers
+      dataset_slug: tolokers
     - dataset: Questions
       dataset_slug: questions
 single_proposed_model: NT*

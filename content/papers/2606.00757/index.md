@@ -5025,9 +5025,9 @@ results:
     sort_value: 0.7717
     sort_std: 0.0137
     global_rank: 153
-    paper_rank: 310
-    rank_delta: 157
-    rank_delta_abs: 157
+    paper_rank: 311
+    rank_delta: 158
+    rank_delta_abs: 158
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind

@@ -8557,8 +8557,8 @@ results:
     value_note: ''
     sort_value: 0.6759
     sort_std: 0.0183
-    global_rank: 314
-    paper_rank: 314
+    global_rank: 316
+    paper_rank: 316
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8625,8 +8625,8 @@ results:
     value_note: ''
     sort_value: 0.668
     sort_std: 0.0218
-    global_rank: 316
-    paper_rank: 316
+    global_rank: 319
+    paper_rank: 319
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8693,8 +8693,8 @@ results:
     value_note: ''
     sort_value: 0.6522
     sort_std: 0.0552
-    global_rank: 319
-    paper_rank: 319
+    global_rank: 322
+    paper_rank: 322
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8761,8 +8761,8 @@ results:
     value_note: ''
     sort_value: 0.651
     sort_std: 0.0176
-    global_rank: 320
-    paper_rank: 320
+    global_rank: 323
+    paper_rank: 323
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8829,8 +8829,8 @@ results:
     value_note: ''
     sort_value: 0.6422
     sort_std: 0.0494
-    global_rank: 321
-    paper_rank: 321
+    global_rank: 324
+    paper_rank: 324
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8897,8 +8897,8 @@ results:
     value_note: ''
     sort_value: 0.5995
     sort_std: 0.0391
-    global_rank: 323
-    paper_rank: 323
+    global_rank: 326
+    paper_rank: 326
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8965,8 +8965,8 @@ results:
     value_note: ''
     sort_value: 0.5377
     sort_std: 0.0273
-    global_rank: 327
-    paper_rank: 327
+    global_rank: 330
+    paper_rank: 330
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9033,8 +9033,8 @@ results:
     value_note: ''
     sort_value: 0.535
     sort_std: 0.0589
-    global_rank: 328
-    paper_rank: 328
+    global_rank: 331
+    paper_rank: 331
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

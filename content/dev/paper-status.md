@@ -7,7 +7,7 @@ dev_table_json: /data/development/paper-status.json
 
 ## Paper Extraction Status
 
-**Total:** 2741 papers
+**Total:** 2742 papers
 
 This page tracks the extraction pipeline status for all papers in the benchmarking dataset. Each paper goes through several stages: first it must be downloaded from arXiv, then the full text is extracted and parsed (either from HTML, LaTeX source, or PDF), and finally results are extracted using an LLM. The extraction model shown indicates which LLM (if any) was used to extract results.
 
@@ -75,10 +75,10 @@ Papers that have been identified but not yet downloaded from arXiv.
 |-------|-------|-------|
 | 2104.07477 | Lorentzian Graph Convolutional Networks | cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit |
 
-### Quarantined_extraction_quality (771)
+### Quarantined_extraction_quality (772)
 
 
-Detailed table: 771 rows (loaded below).
+Detailed table: 772 rows (loaded below).
 
 
 ### Quarantined_method_name (283)

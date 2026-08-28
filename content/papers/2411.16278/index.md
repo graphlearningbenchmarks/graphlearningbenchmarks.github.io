@@ -80,74 +80,6 @@ results:
 - &id005
   dataset: Actor
   rows:
-  - model: NodeFormer
-    model_key: nodeformer
-    model_plain: NodeFormer
-    value: 0.369
-    std: 0.01
-    paper_value: 0.369
-    paper_std: 0.01
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Geom-GCN 10 fixed splits.
-    date: Nov 25, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-25'
-    published_venue: NeurIPS 2024
-    published_conference: NeurIPS 2024
-    at_pub_value: 0.3628
-    at_pub_std: 0.012
-    at_pub_source_arxiv: '2408.07654'
-    at_pub_source_title: 'Graph Triple Attention Network: A Decoupled Perspective'
-    at_pub_source_date_iso: '2024-08-14'
-    at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2025-05-19'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.006199999999999983
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: true
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7623
-    true_std: 0.0042
-    value_gap_source_arxiv: '2505.15845'
-    value_gap_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem
-      in Tokenized Graph Learning Models'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.3933
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7623
-    sort_std: 0.0042
-    global_rank: 1
-    paper_rank: 165
-    rank_delta: 164
-    rank_delta_abs: 164
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
   - model: DiGGR
     model_key: diggr
     model_plain: DiGGR
@@ -173,13 +105,13 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 1
     sort_value: 0.4535
     sort_std: 0.0353
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: TRIGON
     model_key: trigon
@@ -206,13 +138,47 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 2
     sort_value: 0.4402
     sort_std: 0.0028
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
+    is_std_outlier: false
+  - model: DoG
+    model_key: dog
+    model_plain: DoG
+    value: 0.432
+    std: 0.012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2503.12563'
+    title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
+    date: Mar 16, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-16'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/Statistical-Deep-Learning/DoG
+    uses_external_data: true
+    input_feature_source: raw_features
+    feature_source_evidence: DoG generates synthetic graph structures to boost the
+      performance of GNNs.
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.432
+    sort_std: 0.012
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
     is_std_outlier: false
   - model: MLP
     model_key: mlp
@@ -239,7 +205,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 55
+    global_rank: 54
     sort_value: 0.4026
     sort_std: 0.0108
     comparison_type: global_top
@@ -305,10 +271,10 @@ results:
     value_note: ''
     sort_value: 0.3959
     sort_std: 0.0029
-    global_rank: 74
-    paper_rank: 201
-    rank_delta: 127
-    rank_delta_abs: 127
+    global_rank: 73
+    paper_rank: 199
+    rank_delta: 126
+    rank_delta_abs: 126
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -373,8 +339,8 @@ results:
     value_note: ''
     sort_value: 0.3901
     sort_std: 0.0069
-    global_rank: 86
-    paper_rank: 86
+    global_rank: 85
+    paper_rank: 85
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -409,7 +375,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 87
+    global_rank: 86
     sort_value: 0.3899
     sort_std: 0.0085
     comparison_type: global_top
@@ -473,8 +439,8 @@ results:
     value_note: ''
     sort_value: 0.3868
     sort_std: 0.0038
-    global_rank: 92
-    paper_rank: 92
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -540,8 +506,8 @@ results:
     value_note: ''
     sort_value: 0.3859
     sort_std: 0.0081
-    global_rank: 95
-    paper_rank: 95
+    global_rank: 94
+    paper_rank: 94
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -607,8 +573,8 @@ results:
     value_note: ''
     sort_value: 0.3768
     sort_std: 0.0094
-    global_rank: 131
-    paper_rank: 155
+    global_rank: 129
+    paper_rank: 153
     rank_delta: 24
     rank_delta_abs: 24
     rank_delta_direction: worse
@@ -675,16 +641,83 @@ results:
     value_note: ''
     sort_value: 0.369
     sort_std: null
-    global_rank: 166
-    paper_rank: 336
-    rank_delta: 170
-    rank_delta_abs: 170
+    global_rank: 164
+    paper_rank: 333
+    rank_delta: 169
+    rank_delta_abs: 169
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Beyond Low-frequency Information in Graph Convolutional
       Networks
     comparison_source_arxiv: '2101.00797'
+    is_best: false
+    is_std_outlier: false
+  - model: NodeFormer
+    model_key: nodeformer
+    model_plain: NodeFormer
+    value: 0.369
+    std: 0.01
+    paper_value: 0.369
+    paper_std: 0.01
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Geom-GCN 10 fixed splits.
+    date: Nov 25, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-25'
+    published_venue: NeurIPS 2024
+    published_conference: NeurIPS 2024
+    at_pub_value: 0.3628
+    at_pub_std: 0.012
+    at_pub_source_arxiv: '2408.07654'
+    at_pub_source_title: 'Graph Triple Attention Network: A Decoupled Perspective'
+    at_pub_source_date_iso: '2024-08-14'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2024-11-25'
+    value_gap_source_date_label: NeurIPS 2024
+    gap_vs_at_pub: 0.006199999999999983
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.369
+    true_std: 0.01
+    value_gap_source_arxiv: '2411.16278'
+    value_gap_source_title: Even Sparser Graph Transformers
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.369
+    sort_std: 0.01
+    global_rank: 165
+    paper_rank: 165
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   rank_metric: Accuracy
@@ -2968,9 +3001,9 @@ results:
     sort_value: 0.4988
     sort_std: 0.004
     global_rank: 96
-    paper_rank: 207
-    rank_delta: 111
-    rank_delta_abs: 111
+    paper_rank: 210
+    rank_delta: 114
+    rank_delta_abs: 114
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3035,9 +3068,9 @@ results:
     sort_value: 0.4548
     sort_std: 0.005
     global_rank: 151
-    paper_rank: 168
-    rank_delta: 17
-    rank_delta_abs: 17
+    paper_rank: 170
+    rank_delta: 19
+    rank_delta_abs: 19
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3982,7 +4015,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id009
+- &id008
   dataset: Minesweeper
   rows:
   - model: BuNN
@@ -4656,8 +4689,8 @@ results:
     value_note: ''
     sort_value: 0.8109
     sort_std: 0.0102
-    global_rank: 110
-    paper_rank: 110
+    global_rank: 111
+    paper_rank: 111
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4724,8 +4757,8 @@ results:
     value_note: ''
     sort_value: 0.6253
     sort_std: 0.0134
-    global_rank: 139
-    paper_rank: 146
+    global_rank: 142
+    paper_rank: 149
     rank_delta: 7
     rank_delta_abs: 7
     rank_delta_direction: worse
@@ -4761,7 +4794,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 147
+    global_rank: 150
     sort_value: 0.5099
     sort_std: 0.0147
     comparison_type: global_top
@@ -6369,7 +6402,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id008
+- &id009
   dataset: Tolokers
   rows:
   - model: Polynormer-r
@@ -7976,10 +8009,10 @@ datasets_by_scope:
       dataset_slug: roman-empire
     - dataset: Amazon-ratings
       dataset_slug: amazon-ratings
-    - dataset: Tolokers
-      dataset_slug: tolokers
     - dataset: Minesweeper
       dataset_slug: minesweeper
+    - dataset: Tolokers
+      dataset_slug: tolokers
     - dataset: Questions
       dataset_slug: questions
 main_figure: /figures/2411.16278/main_figure.jpegoptim.jpg

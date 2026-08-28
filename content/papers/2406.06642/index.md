@@ -1552,7 +1552,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id001
   dataset: Minesweeper
   rows:
   - model: BuNN
@@ -2287,8 +2287,8 @@ results:
     value_note: ''
     sort_value: 0.8114
     sort_std: 0.0005
-    global_rank: 109
-    paper_rank: 109
+    global_rank: 110
+    paper_rank: 110
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2355,8 +2355,8 @@ results:
     value_note: ''
     sort_value: 0.7802
     sort_std: 0.0
-    global_rank: 113
-    paper_rank: 113
+    global_rank: 114
+    paper_rank: 114
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2392,7 +2392,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 147
+    global_rank: 150
     sort_value: 0.5099
     sort_std: 0.0147
     comparison_type: global_top
@@ -2409,7 +2409,7 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id002
   dataset: Tolokers
   rows:
   - model: Polynormer-r
@@ -3015,10 +3015,10 @@ datasets_by_scope:
   - benchmark: Heterophily Benchmark
     benchmark_slug: heterophily-benchmark
     datasets:
-    - dataset: Tolokers
-      dataset_slug: tolokers
     - dataset: Minesweeper
       dataset_slug: minesweeper
+    - dataset: Tolokers
+      dataset_slug: tolokers
   - benchmark: Other Graph Benchmarks
     benchmark_slug: other-graph-benchmarks
     datasets:

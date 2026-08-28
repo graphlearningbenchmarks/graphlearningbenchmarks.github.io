@@ -2852,8 +2852,8 @@ results:
     value_note: ''
     sort_value: 0.6945
     sort_std: 0.0168
-    global_rank: 309
-    paper_rank: 309
+    global_rank: 310
+    paper_rank: 310
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

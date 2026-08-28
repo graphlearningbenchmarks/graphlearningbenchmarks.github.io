@@ -910,9 +910,9 @@ results:
     sort_value: 0.8918
     sort_std: 0.0396
     global_rank: 39
-    paper_rank: 629
-    rank_delta: 590
-    rank_delta_abs: 590
+    paper_rank: 625
+    rank_delta: 586
+    rank_delta_abs: 586
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1015,9 +1015,9 @@ results:
     sort_value: 0.819
     sort_std: 0.054
     global_rank: 190
-    paper_rank: 600
-    rank_delta: 410
-    rank_delta_abs: 410
+    paper_rank: 596
+    rank_delta: 406
+    rank_delta_abs: 406
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1085,9 +1085,9 @@ results:
     sort_value: 0.8082
     sort_std: 0.036
     global_rank: 203
-    paper_rank: 633
-    rank_delta: 430
-    rank_delta_abs: 430
+    paper_rank: 629
+    rank_delta: 426
+    rank_delta_abs: 426
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1154,9 +1154,9 @@ results:
     sort_value: 0.8033
     sort_std: 0.0333
     global_rank: 210
-    paper_rank: 614
-    rank_delta: 404
-    rank_delta_abs: 404
+    paper_rank: 610
+    rank_delta: 400
+    rank_delta_abs: 400
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1400,9 +1400,9 @@ results:
     sort_value: 0.8918
     sort_std: 0.0443
     global_rank: 91
-    paper_rank: 645
-    rank_delta: 554
-    rank_delta_abs: 554
+    paper_rank: 643
+    rank_delta: 552
+    rank_delta_abs: 552
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1470,9 +1470,9 @@ results:
     sort_value: 0.8162
     sort_std: 0.0645
     global_rank: 266
-    paper_rank: 667
-    rank_delta: 401
-    rank_delta_abs: 401
+    paper_rank: 665
+    rank_delta: 399
+    rank_delta_abs: 399
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1539,9 +1539,9 @@ results:
     sort_value: 0.7933
     sort_std: 0.0447
     global_rank: 323
-    paper_rank: 599
-    rank_delta: 276
-    rank_delta_abs: 276
+    paper_rank: 597
+    rank_delta: 274
+    rank_delta_abs: 274
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1607,9 +1607,9 @@ results:
     sort_value: 0.7929
     sort_std: 0.0403
     global_rank: 324
-    paper_rank: 560
-    rank_delta: 236
-    rank_delta_abs: 236
+    paper_rank: 558
+    rank_delta: 234
+    rank_delta_abs: 234
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1821,9 +1821,9 @@ results:
     sort_value: 0.843
     sort_std: 0.037
     global_rank: 67
-    paper_rank: 242
-    rank_delta: 175
-    rank_delta_abs: 175
+    paper_rank: 238
+    rank_delta: 171
+    rank_delta_abs: 171
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1892,9 +1892,9 @@ results:
     sort_value: 0.831
     sort_std: 0.032
     global_rank: 79
-    paper_rank: 242
-    rank_delta: 163
-    rank_delta_abs: 163
+    paper_rank: 238
+    rank_delta: 159
+    rank_delta_abs: 159
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1963,9 +1963,9 @@ results:
     sort_value: 0.8157
     sort_std: null
     global_rank: 85
-    paper_rank: 235
-    rank_delta: 150
-    rank_delta_abs: 150
+    paper_rank: 231
+    rank_delta: 146
+    rank_delta_abs: 146
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1999,7 +1999,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 90
+    global_rank: 89
     sort_value: 0.8118
     sort_std: 0.0556
     comparison_type: global_top
@@ -2064,10 +2064,10 @@ results:
     value_note: ''
     sort_value: 0.791
     sort_std: 0.02
-    global_rank: 106
-    paper_rank: 224
-    rank_delta: 118
-    rank_delta_abs: 118
+    global_rank: 104
+    paper_rank: 220
+    rank_delta: 116
+    rank_delta_abs: 116
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null

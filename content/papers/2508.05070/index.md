@@ -37,7 +37,7 @@ abstract: We introduce TANGO -- a dynamical systems inspired framework for graph
   the effectiveness of jointly learned energy functions and tangential flows for graph
   neural networks.
 codebase_url: ''
-extraction_model: google/gemma-4-31B-it
+extraction_model: google/gemma-4-26B-A4B-it
 has_results: true
 paper_type: method
 proposed_models:

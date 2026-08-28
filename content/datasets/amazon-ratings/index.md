@@ -52,7 +52,7 @@ stats:
     node_feature_type: fastText product-description embeddings
     statistic_notes: Largest connected component of the 5-core; all graph statistics
       are from Table 2 of the heterophily benchmark paper
-result_count: 279
+result_count: 282
 best_model:
   model: UniGAP
   value: 0.6375
@@ -122,6 +122,10 @@ papers:
   title: Heterophily-informed Message Passing
   date_iso: '2025-04-28'
   venue: TMLR 2025
+- arxiv_id: '2502.14546'
+  title: 'Position: Graph Learning Will Lose Relevance Due To Poor Benchmarks'
+  date_iso: '2025-02-20'
+  venue: ICML 2025
 - arxiv_id: '2502.11394'
   title: A Signed Graph Approach to Understanding and Mitigating Oversmoothing in
     GNNs
@@ -1879,7 +1883,7 @@ variants:
     - null
     - null
     - null
-  row_count: 279
+  row_count: 282
   rows_json: /data/datasets/amazon-ratings/standard-split-rows.json
   chart_json: /data/datasets/amazon-ratings/standard-split-chart.json
   arch_counts:
@@ -1890,7 +1894,7 @@ variants:
     walk: 2
     traditional: 15
   metric_counts:
-  - 271
+  - 274
   - 8
   - 13
   - 13

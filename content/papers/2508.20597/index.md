@@ -3009,9 +3009,9 @@ results:
     sort_value: 0.8082
     sort_std: 0.036
     global_rank: 203
-    paper_rank: 581
-    rank_delta: 378
-    rank_delta_abs: 378
+    paper_rank: 577
+    rank_delta: 374
+    rank_delta_abs: 374
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3077,10 +3077,10 @@ results:
     value_note: ''
     sort_value: 0.5826
     sort_std: 0.005
-    global_rank: 473
-    paper_rank: 576
-    rank_delta: 103
-    rank_delta_abs: 103
+    global_rank: 471
+    paper_rank: 572
+    rank_delta: 101
+    rank_delta_abs: 101
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3147,10 +3147,10 @@ results:
     value_note: ''
     sort_value: 0.546
     sort_std: 0.0039
-    global_rank: 509
-    paper_rank: 585
-    rank_delta: 76
-    rank_delta_abs: 76
+    global_rank: 506
+    paper_rank: 581
+    rank_delta: 75
+    rank_delta_abs: 75
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3217,8 +3217,8 @@ results:
     value_note: ''
     sort_value: 0.508
     sort_std: 0.011
-    global_rank: 557
-    paper_rank: 558
+    global_rank: 553
+    paper_rank: 554
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -3287,8 +3287,8 @@ results:
     value_note: ''
     sort_value: 0.4921
     sort_std: 0.0189
-    global_rank: 572
-    paper_rank: 572
+    global_rank: 568
+    paper_rank: 568
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3356,8 +3356,8 @@ results:
     value_note: ''
     sort_value: 0.483
     sort_std: 0.0161
-    global_rank: 581
-    paper_rank: 609
+    global_rank: 577
+    paper_rank: 605
     rank_delta: 28
     rank_delta_abs: 28
     rank_delta_direction: worse
@@ -3425,8 +3425,8 @@ results:
     value_note: ''
     sort_value: 0.4249
     sort_std: 0.0259
-    global_rank: 623
-    paper_rank: 623
+    global_rank: 619
+    paper_rank: 619
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6714,9 +6714,9 @@ results:
     sort_value: 0.7933
     sort_std: 0.0447
     global_rank: 323
-    paper_rank: 670
-    rank_delta: 347
-    rank_delta_abs: 347
+    paper_rank: 668
+    rank_delta: 345
+    rank_delta_abs: 345
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -6783,9 +6783,9 @@ results:
     sort_value: 0.7488
     sort_std: 0.0012
     global_rank: 395
-    paper_rank: 676
-    rank_delta: 281
-    rank_delta_abs: 281
+    paper_rank: 674
+    rank_delta: 279
+    rank_delta_abs: 279
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -6852,10 +6852,10 @@ results:
     value_note: ''
     sort_value: 0.6446
     sort_std: 0.0038
-    global_rank: 533
-    paper_rank: 670
-    rank_delta: 137
-    rank_delta_abs: 137
+    global_rank: 530
+    paper_rank: 668
+    rank_delta: 138
+    rank_delta_abs: 138
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -6922,8 +6922,8 @@ results:
     value_note: ''
     sort_value: 0.6203
     sort_std: 0.0043
-    global_rank: 567
-    paper_rank: 670
+    global_rank: 565
+    paper_rank: 668
     rank_delta: 103
     rank_delta_abs: 103
     rank_delta_direction: worse
@@ -6992,8 +6992,8 @@ results:
     value_note: ''
     sort_value: 0.6185
     sort_std: 0.0141
-    global_rank: 570
-    paper_rank: 670
+    global_rank: 568
+    paper_rank: 668
     rank_delta: 100
     rank_delta_abs: 100
     rank_delta_direction: worse
@@ -7061,8 +7061,8 @@ results:
     value_note: ''
     sort_value: 0.6137
     sort_std: 0.0203
-    global_rank: 573
-    paper_rank: 573
+    global_rank: 571
+    paper_rank: 571
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7129,8 +7129,8 @@ results:
     value_note: ''
     sort_value: 0.5411
     sort_std: 0.0215
-    global_rank: 667
-    paper_rank: 667
+    global_rank: 665
+    paper_rank: 665
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

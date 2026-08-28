@@ -775,8 +775,8 @@ results:
     value_note: ''
     sort_value: 0.4276
     sort_std: 0.0054
-    global_rank: 182
-    paper_rank: 182
+    global_rank: 185
+    paper_rank: 185
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -795,7 +795,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id007
+- &id006
   dataset: Minesweeper
   rows:
   - model: BuNN
@@ -1461,7 +1461,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 147
+    global_rank: 150
     sort_value: 0.5099
     sort_std: 0.0147
     comparison_type: global_top
@@ -5206,7 +5206,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id006
+- &id007
   dataset: Tolokers
   rows:
   - model: Polynormer-r
@@ -5954,10 +5954,10 @@ datasets_by_scope:
       dataset_slug: roman-empire
     - dataset: Amazon-ratings
       dataset_slug: amazon-ratings
-    - dataset: Tolokers
-      dataset_slug: tolokers
     - dataset: Minesweeper
       dataset_slug: minesweeper
+    - dataset: Tolokers
+      dataset_slug: tolokers
     - dataset: Questions
       dataset_slug: questions
 - scope: graph-level

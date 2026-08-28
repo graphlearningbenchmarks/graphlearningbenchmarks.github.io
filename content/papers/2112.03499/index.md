@@ -1670,9 +1670,9 @@ results:
     sort_value: 0.8082
     sort_std: 0.036
     global_rank: 203
-    paper_rank: 422
-    rank_delta: 219
-    rank_delta_abs: 219
+    paper_rank: 420
+    rank_delta: 217
+    rank_delta_abs: 217
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1804,8 +1804,8 @@ results:
     value_note: ''
     sort_value: 0.6412
     sort_std: null
-    global_rank: 409
-    paper_rank: 436
+    global_rank: 407
+    paper_rank: 434
     rank_delta: 27
     rank_delta_abs: 27
     rank_delta_direction: worse
@@ -1872,8 +1872,8 @@ results:
     value_note: ''
     sort_value: 0.6252
     sort_std: 0.051
-    global_rank: 424
-    paper_rank: 425
+    global_rank: 422
+    paper_rank: 423
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -1940,8 +1940,8 @@ results:
     value_note: ''
     sort_value: 0.573
     sort_std: 0.0853
-    global_rank: 490
-    paper_rank: 490
+    global_rank: 488
+    paper_rank: 488
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2763,9 +2763,9 @@ results:
     sort_value: 0.7933
     sort_std: 0.0447
     global_rank: 323
-    paper_rank: 570
-    rank_delta: 247
-    rank_delta_abs: 247
+    paper_rank: 568
+    rank_delta: 245
+    rank_delta_abs: 245
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2829,8 +2829,8 @@ results:
     value_note: ''
     sort_value: 0.676
     sort_std: null
-    global_rank: 493
-    paper_rank: 493
+    global_rank: 491
+    paper_rank: 491
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2897,8 +2897,8 @@ results:
     value_note: ''
     sort_value: 0.6243
     sort_std: 0.0443
-    global_rank: 558
-    paper_rank: 558
+    global_rank: 556
+    paper_rank: 556
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2965,8 +2965,8 @@ results:
     value_note: ''
     sort_value: 0.6108
     sort_std: 0.0497
-    global_rank: 580
-    paper_rank: 580
+    global_rank: 578
+    paper_rank: 578
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

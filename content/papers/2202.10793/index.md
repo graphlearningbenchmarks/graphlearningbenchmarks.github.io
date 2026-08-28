@@ -363,8 +363,8 @@ results:
     value_note: ''
     sort_value: 0.551
     sort_std: 0.097
-    global_rank: 662
-    paper_rank: 662
+    global_rank: 660
+    paper_rank: 660
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

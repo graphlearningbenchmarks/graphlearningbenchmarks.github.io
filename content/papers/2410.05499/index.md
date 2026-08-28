@@ -72,7 +72,7 @@ experiment_scopes:
 - graph-level
 - node-level
 results:
-- &id005
+- &id004
   dataset: Minesweeper
   rows:
   - model: BuNN
@@ -637,7 +637,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 147
+    global_rank: 150
     sort_value: 0.5099
     sort_std: 0.0147
     comparison_type: global_top
@@ -4033,7 +4033,7 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id005
   dataset: Tolokers
   rows:
   - model: Polynormer-r
@@ -4637,10 +4637,10 @@ datasets_by_scope:
   - benchmark: Heterophily Benchmark
     benchmark_slug: heterophily-benchmark
     datasets:
-    - dataset: Tolokers
-      dataset_slug: tolokers
     - dataset: Minesweeper
       dataset_slug: minesweeper
+    - dataset: Tolokers
+      dataset_slug: tolokers
     - dataset: Questions
       dataset_slug: questions
 - scope: graph-level

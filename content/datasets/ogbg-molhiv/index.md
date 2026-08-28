@@ -54,7 +54,7 @@ stats:
     node_feature_type: categorical atom features from RDKit
     statistic_notes: clustering coefficient and diameter are not reported in the canonical
       OGB/PyG metadata
-result_count: 370
+result_count: 373
 best_model:
   model: Multi-RF Fusion with Multi-GNN Blending
   value: 0.8476
@@ -100,6 +100,10 @@ papers:
   title: Graph Self-Supervised Learning with Learnable Structural and Positional Encodings
   date_iso: '2025-02-22'
   venue: WWW 2025
+- arxiv_id: '2502.14546'
+  title: 'Position: Graph Learning Will Lose Relevance Due To Poor Benchmarks'
+  date_iso: '2025-02-20'
+  venue: ICML 2025
 - arxiv_id: '2502.07968'
   title: Generative Risk Minimization for Out-of-Distribution Generalization on Graphs
   date_iso: '2025-02-11'
@@ -2326,18 +2330,18 @@ variants:
     - null
     - null
     - null
-  row_count: 370
+  row_count: 373
   rows_json: /data/datasets/ogbg-molhiv/standard-split-rows.json
   chart_json: /data/datasets/ogbg-molhiv/standard-split-chart.json
   arch_counts:
-    gnn: 214
+    gnn: 217
     hybrid: 80
     graph_transformer: 32
     llm: 4
     walk: 0
     traditional: 22
   metric_counts:
-  - 348
+  - 351
   - 9
   - 8
   - 10

@@ -231,9 +231,9 @@ results:
     sort_value: 0.5681
     sort_std: 0.009
     global_rank: 7
-    paper_rank: 207
-    rank_delta: 200
-    rank_delta_abs: 200
+    paper_rank: 210
+    rank_delta: 203
+    rank_delta_abs: 203
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -841,9 +841,9 @@ results:
     sort_value: 0.4988
     sort_std: 0.004
     global_rank: 96
-    paper_rank: 207
-    rank_delta: 111
-    rank_delta_abs: 111
+    paper_rank: 210
+    rank_delta: 114
+    rank_delta_abs: 114
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -860,7 +860,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id003
   dataset: Minesweeper
   rows:
   - model: BuNN
@@ -1524,8 +1524,8 @@ results:
     value_note: ''
     sort_value: 0.8002
     sort_std: 0.0003
-    global_rank: 112
-    paper_rank: 112
+    global_rank: 113
+    paper_rank: 113
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1591,8 +1591,8 @@ results:
     value_note: ''
     sort_value: 0.6253
     sort_std: 0.0134
-    global_rank: 139
-    paper_rank: 146
+    global_rank: 142
+    paper_rank: 149
     rank_delta: 7
     rank_delta_abs: 7
     rank_delta_direction: worse
@@ -1628,7 +1628,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 147
+    global_rank: 150
     sort_value: 0.5099
     sort_std: 0.0147
     comparison_type: global_top
@@ -3121,7 +3121,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id004
   dataset: Tolokers
   rows:
   - model: Polynormer-r
@@ -3929,10 +3929,10 @@ datasets_by_scope:
       dataset_slug: roman-empire
     - dataset: Amazon-ratings
       dataset_slug: amazon-ratings
-    - dataset: Tolokers
-      dataset_slug: tolokers
     - dataset: Minesweeper
       dataset_slug: minesweeper
+    - dataset: Tolokers
+      dataset_slug: tolokers
     - dataset: Questions
       dataset_slug: questions
 main_figure: /figures/2202.07082/main_figure.jpegoptim.jpg

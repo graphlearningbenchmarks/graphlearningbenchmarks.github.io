@@ -94,75 +94,6 @@ results:
 - &id005
   dataset: Actor
   rows:
-  - model: NodeFormer
-    model_key: nodeformer
-    model_plain: NodeFormer
-    value: 0.3628
-    std: 0.012
-    paper_value: 0.3628
-    paper_std: 0.012
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: nodeformer
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Geom-GCN 10 fixed splits
-    date: Aug 14, 2024
-    date_display: Aug 2024
-    date_iso: '2024-08-14'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.3462
-    at_pub_std: 0.0082
-    at_pub_source_arxiv: '2310.11025'
-    at_pub_source_title: 'SignGT: Signed Attention-based Graph Transformer for Graph
-      Representation Learning'
-    at_pub_source_date_iso: '2023-10-17'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2025-05-19'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.016600000000000004
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: true
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7623
-    true_std: 0.0042
-    value_gap_source_arxiv: '2505.15845'
-    value_gap_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem
-      in Tokenized Graph Learning Models'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.39949999999999997
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7623
-    sort_std: 0.0042
-    global_rank: 1
-    paper_rank: 208
-    rank_delta: 207
-    rank_delta_abs: 207
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
   - model: DiGGR
     model_key: diggr
     model_plain: DiGGR
@@ -188,13 +119,13 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 1
     sort_value: 0.4535
     sort_std: 0.0353
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: TRIGON
     model_key: trigon
@@ -221,13 +152,47 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 2
     sort_value: 0.4402
     sort_std: 0.0028
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
+    is_std_outlier: false
+  - model: DoG
+    model_key: dog
+    model_plain: DoG
+    value: 0.432
+    std: 0.012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2503.12563'
+    title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
+    date: Mar 16, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-16'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/Statistical-Deep-Learning/DoG
+    uses_external_data: true
+    input_feature_source: raw_features
+    feature_source_evidence: DoG generates synthetic graph structures to boost the
+      performance of GNNs.
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.432
+    sort_std: 0.012
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
     is_std_outlier: false
   - model: SGFormer
     model_key: sgformer
@@ -285,16 +250,16 @@ results:
     value_note: ''
     sort_value: 0.4169
     sort_std: 0.0063
-    global_rank: 29
-    paper_rank: 113
-    rank_delta: 84
-    rank_delta_abs: 84
+    global_rank: 28
+    paper_rank: 111
+    rank_delta: 83
+    rank_delta_abs: 83
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: GCNII
     model_key: gcnii
@@ -352,16 +317,16 @@ results:
     value_note: ''
     sort_value: 0.4082
     sort_std: 0.0179
-    global_rank: 48
-    paper_rank: 235
-    rank_delta: 187
-    rank_delta_abs: 187
+    global_rank: 47
+    paper_rank: 233
+    rank_delta: 186
+    rank_delta_abs: 186
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Feature Expansion for Graph Neural Networks
     comparison_source_arxiv: '2305.06142'
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: MLP
     model_key: mlp
@@ -388,7 +353,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 55
+    global_rank: 54
     sort_value: 0.4026
     sort_std: 0.0108
     comparison_type: global_top
@@ -454,10 +419,10 @@ results:
     value_note: ''
     sort_value: 0.401
     sort_std: null
-    global_rank: 58
-    paper_rank: 303
-    rank_delta: 245
-    rank_delta_abs: 245
+    global_rank: 57
+    paper_rank: 300
+    rank_delta: 243
+    rank_delta_abs: 243
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -523,10 +488,10 @@ results:
     value_note: ''
     sort_value: 0.4008
     sort_std: 0.015
-    global_rank: 62
-    paper_rank: 306
-    rank_delta: 244
-    rank_delta_abs: 244
+    global_rank: 61
+    paper_rank: 303
+    rank_delta: 242
+    rank_delta_abs: 242
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -590,10 +555,10 @@ results:
     value_note: ''
     sort_value: 0.3992
     sort_std: 0.0067
-    global_rank: 67
-    paper_rank: 252
-    rank_delta: 185
-    rank_delta_abs: 185
+    global_rank: 66
+    paper_rank: 249
+    rank_delta: 183
+    rank_delta_abs: 183
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -657,10 +622,10 @@ results:
     value_note: ''
     sort_value: 0.3899
     sort_std: 0.0085
-    global_rank: 87
-    paper_rank: 306
-    rank_delta: 219
-    rank_delta_abs: 219
+    global_rank: 86
+    paper_rank: 303
+    rank_delta: 217
+    rank_delta_abs: 217
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -724,8 +689,8 @@ results:
     value_note: ''
     sort_value: 0.3787
     sort_std: 0.01
-    global_rank: 118
-    paper_rank: 118
+    global_rank: 116
+    paper_rank: 116
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -791,8 +756,8 @@ results:
     value_note: ''
     sort_value: 0.3768
     sort_std: 0.0094
-    global_rank: 131
-    paper_rank: 219
+    global_rank: 129
+    paper_rank: 217
     rank_delta: 88
     rank_delta_abs: 88
     rank_delta_direction: worse
@@ -859,16 +824,84 @@ results:
     value_note: ''
     sort_value: 0.369
     sort_std: null
-    global_rank: 166
-    paper_rank: 392
-    rank_delta: 226
-    rank_delta_abs: 226
+    global_rank: 164
+    paper_rank: 389
+    rank_delta: 225
+    rank_delta_abs: 225
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Beyond Low-frequency Information in Graph Convolutional
       Networks
     comparison_source_arxiv: '2101.00797'
+    is_best: false
+    is_std_outlier: false
+  - model: NodeFormer
+    model_key: nodeformer
+    model_plain: NodeFormer
+    value: 0.3628
+    std: 0.012
+    paper_value: 0.3628
+    paper_std: 0.012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: nodeformer
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Geom-GCN 10 fixed splits
+    date: Aug 14, 2024
+    date_display: Aug 2024
+    date_iso: '2024-08-14'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.3462
+    at_pub_std: 0.0082
+    at_pub_source_arxiv: '2310.11025'
+    at_pub_source_title: 'SignGT: Signed Attention-based Graph Transformer for Graph
+      Representation Learning'
+    at_pub_source_date_iso: '2023-10-17'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-11-25'
+    value_gap_source_date_label: NeurIPS 2024
+    gap_vs_at_pub: 0.016600000000000004
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.369
+    true_std: 0.01
+    value_gap_source_arxiv: '2411.16278'
+    value_gap_source_title: Even Sparser Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: 0.006199999999999983
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.369
+    sort_std: 0.01
+    global_rank: 165
+    paper_rank: 206
+    rank_delta: 41
+    rank_delta_abs: 41
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: AERO-GNN
@@ -928,8 +961,8 @@ results:
     value_note: ''
     sort_value: 0.3657
     sort_std: 0.011
-    global_rank: 192
-    paper_rank: 192
+    global_rank: 190
+    paper_rank: 190
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -995,10 +1028,10 @@ results:
     value_note: ''
     sort_value: 0.3605
     sort_std: 0.0035
-    global_rank: 218
-    paper_rank: 396
-    rank_delta: 178
-    rank_delta_abs: 178
+    global_rank: 216
+    paper_rank: 393
+    rank_delta: 177
+    rank_delta_abs: 177
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1062,8 +1095,8 @@ results:
     value_note: ''
     sort_value: 0.351
     sort_std: 0.002
-    global_rank: 275
-    paper_rank: 398
+    global_rank: 272
+    paper_rank: 395
     rank_delta: 123
     rank_delta_abs: 123
     rank_delta_direction: worse
@@ -1129,8 +1162,8 @@ results:
     value_note: ''
     sort_value: 0.3468
     sort_std: 0.009
-    global_rank: 292
-    paper_rank: 292
+    global_rank: 289
+    paper_rank: 289
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1165,7 +1198,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 314
+    global_rank: 311
     sort_value: 0.341
     sort_std: 0.003
     comparison_type: global_top

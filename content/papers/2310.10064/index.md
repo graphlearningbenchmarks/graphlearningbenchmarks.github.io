@@ -2658,9 +2658,9 @@ results:
     sort_value: 0.7933
     sort_std: 0.0447
     global_rank: 323
-    paper_rank: 665
-    rank_delta: 342
-    rank_delta_abs: 342
+    paper_rank: 663
+    rank_delta: 340
+    rank_delta_abs: 340
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2727,9 +2727,9 @@ results:
     sort_value: 0.7784
     sort_std: 0.0773
     global_rank: 342
-    paper_rank: 467
-    rank_delta: 125
-    rank_delta_abs: 125
+    paper_rank: 465
+    rank_delta: 123
+    rank_delta_abs: 123
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null

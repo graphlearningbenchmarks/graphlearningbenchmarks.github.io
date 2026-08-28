@@ -16,9 +16,9 @@
     ],
     "no_single_introduction_paper": false,
     "is_legacy": false,
-    "paper_count": 272,
-    "recent_results_per_dataset": 13.1,
-    "total_result_count": 2362,
+    "paper_count": 273,
+    "recent_results_per_dataset": 12.6,
+    "total_result_count": 2365,
     "datasets": [
       {
         "name": "ogbn-products",
@@ -26,7 +26,7 @@
         "task_type": "node_classification",
         "paper_count": 85,
         "result_count": 546,
-        "recent_result_count": 18,
+        "recent_result_count": 17,
         "variants": [
           {
             "name": "Standard split",
@@ -38,8 +38,8 @@
         "name": "ogbg-molhiv",
         "slug": "ogbg-molhiv",
         "task_type": "graph_classification",
-        "paper_count": 73,
-        "result_count": 370,
+        "paper_count": 74,
+        "result_count": 373,
         "recent_result_count": 19,
         "variants": [
           {
@@ -96,7 +96,7 @@
         "task_type": "link_prediction",
         "paper_count": 27,
         "result_count": 163,
-        "recent_result_count": 4,
+        "recent_result_count": 2,
         "variants": [
           {
             "name": "Standard split",
@@ -138,7 +138,7 @@
         "task_type": "link_prediction",
         "paper_count": 21,
         "result_count": 106,
-        "recent_result_count": 3,
+        "recent_result_count": 0,
         "variants": [
           {
             "name": "Standard split",
@@ -166,7 +166,7 @@
         "task_type": "node_classification",
         "paper_count": 17,
         "result_count": 103,
-        "recent_result_count": 30,
+        "recent_result_count": 27,
         "variants": [
           {
             "name": "Standard split",
@@ -268,7 +268,7 @@
     "no_single_introduction_paper": false,
     "is_legacy": false,
     "paper_count": 109,
-    "recent_results_per_dataset": 31.3,
+    "recent_results_per_dataset": 28.8,
     "total_result_count": 2661,
     "datasets": [
       {
@@ -291,7 +291,7 @@
         "task_type": "graph_classification",
         "paper_count": 64,
         "result_count": 416,
-        "recent_result_count": 64,
+        "recent_result_count": 55,
         "variants": [
           {
             "name": "Scaffold split",
@@ -305,7 +305,7 @@
         "task_type": "graph_classification",
         "paper_count": 63,
         "result_count": 407,
-        "recent_result_count": 59,
+        "recent_result_count": 45,
         "variants": [
           {
             "name": "Scaffold split",
@@ -595,9 +595,9 @@
     ],
     "no_single_introduction_paper": false,
     "is_legacy": false,
-    "paper_count": 72,
-    "recent_results_per_dataset": 90.8,
-    "total_result_count": 1383,
+    "paper_count": 73,
+    "recent_results_per_dataset": 80.8,
+    "total_result_count": 1389,
     "datasets": [
       {
         "name": "Roman-empire",
@@ -605,7 +605,7 @@
         "task_type": "node_classification",
         "paper_count": 41,
         "result_count": 317,
-        "recent_result_count": 112,
+        "recent_result_count": 97,
         "variants": [
           {
             "name": "Standard split",
@@ -617,9 +617,23 @@
         "name": "Amazon-ratings",
         "slug": "amazon-ratings",
         "task_type": "node_classification",
-        "paper_count": 36,
-        "result_count": 279,
-        "recent_result_count": 64,
+        "paper_count": 37,
+        "result_count": 282,
+        "recent_result_count": 59,
+        "variants": [
+          {
+            "name": "Standard split",
+            "slug": "standard-split"
+          }
+        ]
+      },
+      {
+        "name": "Minesweeper",
+        "slug": "minesweeper",
+        "task_type": "node_classification",
+        "paper_count": 32,
+        "result_count": 277,
+        "recent_result_count": 108,
         "variants": [
           {
             "name": "Standard split",
@@ -633,21 +647,7 @@
         "task_type": "node_classification",
         "paper_count": 32,
         "result_count": 248,
-        "recent_result_count": 72,
-        "variants": [
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
-      {
-        "name": "Minesweeper",
-        "slug": "minesweeper",
-        "task_type": "node_classification",
-        "paper_count": 31,
-        "result_count": 274,
-        "recent_result_count": 112,
+        "recent_result_count": 60,
         "variants": [
           {
             "name": "Standard split",
@@ -661,7 +661,7 @@
         "task_type": "node_classification",
         "paper_count": 31,
         "result_count": 265,
-        "recent_result_count": 94,
+        "recent_result_count": 80,
         "variants": [
           {
             "name": "Standard split",
@@ -931,17 +931,17 @@
     "source_papers": [],
     "no_single_introduction_paper": true,
     "is_legacy": false,
-    "paper_count": 38,
-    "recent_results_per_dataset": 15.0,
-    "total_result_count": 316,
+    "paper_count": 37,
+    "recent_results_per_dataset": 12.5,
+    "total_result_count": 312,
     "datasets": [
       {
         "name": "Amazon2M",
         "slug": "amazon2m",
         "task_type": "node_classification",
-        "paper_count": 27,
-        "result_count": 248,
-        "recent_result_count": 30,
+        "paper_count": 26,
+        "result_count": 244,
+        "recent_result_count": 20,
         "variants": [
           {
             "name": "Standard split",
@@ -1715,7 +1715,7 @@
     "no_single_introduction_paper": true,
     "is_legacy": true,
     "paper_count": 523,
-    "recent_results_per_dataset": 62.3,
+    "recent_results_per_dataset": 60.6,
     "total_result_count": 8013,
     "datasets": [
       {
@@ -1724,7 +1724,7 @@
         "task_type": "node_classification",
         "paper_count": 217,
         "result_count": 1352,
-        "recent_result_count": 166,
+        "recent_result_count": 160,
         "variants": [
           {
             "name": "Random 10-fold",
@@ -1742,7 +1742,7 @@
         "task_type": "node_classification",
         "paper_count": 208,
         "result_count": 1373,
-        "recent_result_count": 127,
+        "recent_result_count": 123,
         "variants": [
           {
             "name": "Planetoid split",
@@ -1756,7 +1756,7 @@
         "task_type": "node_classification",
         "paper_count": 207,
         "result_count": 1371,
-        "recent_result_count": 125,
+        "recent_result_count": 114,
         "variants": [
           {
             "name": "Planetoid split",
@@ -1914,7 +1914,7 @@
     "no_single_introduction_paper": false,
     "is_legacy": true,
     "paper_count": 284,
-    "recent_results_per_dataset": 24.4,
+    "recent_results_per_dataset": 18.7,
     "total_result_count": 4199,
     "datasets": [
       {
@@ -1923,7 +1923,7 @@
         "task_type": "graph_classification",
         "paper_count": 204,
         "result_count": 1019,
-        "recent_result_count": 57,
+        "recent_result_count": 37,
         "variants": [
           {
             "name": "10-fold CV",
@@ -1937,7 +1937,7 @@
         "task_type": "graph_classification",
         "paper_count": 142,
         "result_count": 803,
-        "recent_result_count": 57,
+        "recent_result_count": 52,
         "variants": [
           {
             "name": "10-fold CV",
@@ -1951,7 +1951,7 @@
         "task_type": "graph_classification",
         "paper_count": 114,
         "result_count": 641,
-        "recent_result_count": 26,
+        "recent_result_count": 22,
         "variants": [
           {
             "name": "10-fold CV",
@@ -1965,7 +1965,7 @@
         "task_type": "graph_classification",
         "paper_count": 96,
         "result_count": 520,
-        "recent_result_count": 15,
+        "recent_result_count": 4,
         "variants": [
           {
             "name": "10-fold CV",
@@ -1979,7 +1979,7 @@
         "task_type": "graph_classification",
         "paper_count": 65,
         "result_count": 445,
-        "recent_result_count": 49,
+        "recent_result_count": 43,
         "variants": [
           {
             "name": "10-fold CV",
@@ -2007,7 +2007,7 @@
         "task_type": "graph_classification",
         "paper_count": 29,
         "result_count": 217,
-        "recent_result_count": 10,
+        "recent_result_count": 1,
         "variants": [
           {
             "name": "10-fold CV",
@@ -2049,7 +2049,7 @@
         "task_type": "graph_classification",
         "paper_count": 7,
         "result_count": 55,
-        "recent_result_count": 25,
+        "recent_result_count": 18,
         "variants": [
           {
             "name": "10-fold CV",
@@ -2098,16 +2098,16 @@
     "no_single_introduction_paper": false,
     "is_legacy": true,
     "paper_count": 222,
-    "recent_results_per_dataset": 110.0,
-    "total_result_count": 3801,
+    "recent_results_per_dataset": 100.8,
+    "total_result_count": 3786,
     "datasets": [
       {
         "name": "Texas",
         "slug": "texas",
         "task_type": "node_classification",
         "paper_count": 158,
-        "result_count": 931,
-        "recent_result_count": 164,
+        "result_count": 928,
+        "recent_result_count": 146,
         "variants": [
           {
             "name": "Standard split",
@@ -2120,8 +2120,8 @@
         "slug": "cornell",
         "task_type": "node_classification",
         "paper_count": 137,
-        "result_count": 844,
-        "recent_result_count": 123,
+        "result_count": 840,
+        "recent_result_count": 107,
         "variants": [
           {
             "name": "Standard split",
@@ -2133,9 +2133,9 @@
         "name": "Actor",
         "slug": "actor",
         "task_type": "node_classification",
-        "paper_count": 135,
-        "result_count": 789,
-        "recent_result_count": 108,
+        "paper_count": 134,
+        "result_count": 785,
+        "recent_result_count": 93,
         "variants": [
           {
             "name": "Standard split",
@@ -2149,7 +2149,7 @@
         "task_type": "node_classification",
         "paper_count": 68,
         "result_count": 469,
-        "recent_result_count": 112,
+        "recent_result_count": 106,
         "variants": [
           {
             "name": "Filtered split",
@@ -2184,7 +2184,7 @@
         "slug": "wisconsin",
         "task_type": "node_classification",
         "paper_count": 43,
-        "result_count": 323,
+        "result_count": 319,
         "recent_result_count": 54,
         "variants": [
           {

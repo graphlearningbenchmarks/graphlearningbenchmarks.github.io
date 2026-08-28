@@ -11,25 +11,25 @@ type: dev
 |---|---:|---:|---|---
 | 1706.03762 | yes | 634 | rejected | Attention is All you Need |
 | 1412.6980 | yes | 631 | done | Adam: A Method for Stochastic Optimization |
-| 1806.03536 | yes | 488 | done | Representation Learning on Graphs with Jumping Knowledge Networks |
+| 1806.03536 | yes | 489 | done | Representation Learning on Graphs with Jumping Knowledge Networks |
 | 1312.6203 | yes | 484 | done | Spectral Networks and Locally Connected Networks on Graphs |
 | 1812.08434 | yes | 472 | done | Graph Neural Networks: A Review of Methods and Applications |
 | 1912.01703 | yes | 337 | rejected | PyTorch: An Imperative Style, High-Performance Deep Learning Library |
 | 1810.04805 | yes | 312 | rejected | BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding |
 | 1512.03385 | yes | 265 | rejected | Deep Residual Learning for Image Recognition |
-| 1806.01261 | yes | 264 | done | Relational inductive biases, deep learning, and graph networks |
+| 1806.01261 | yes | 265 | done | Relational inductive biases, deep learning, and graph networks |
 | 2106.03893 | yes | 262 | done | Rethinking Graph Transformers with Spectral Attention |
 | 2002.05709 | yes | 258 | rejected | A Simple Framework for Contrastive Learning of Visual Representations |
 | 2004.05718 | yes | 237 | done | Principal Neighbourhood Aggregation for Graph Nets |
-| 1611.08097 | yes | 235 | done | Geometric Deep Learning: Going beyond Euclidean data |
-| 2011.02260 | yes | 203 | done | Graph Neural Networks in Recommender Systems: A Survey |
+| 1611.08097 | yes | 236 | done | Geometric Deep Learning: Going beyond Euclidean data |
+| 2011.02260 | yes | 204 | done | Graph Neural Networks in Recommender Systems: A Survey |
 | 1807.03748 | yes | 197 | rejected | Representation Learning with Contrastive Predictive Coding |
 | 2403.16137 | yes | 192 | done | A Survey on Self-Supervised Graph Foundation Models: Knowledge-Based Perspective |
-| 1610.02415 | yes | 189 | done | Automatic Chemical Design Using a Data-Driven Continuous Representation of Molecules |
+| 1610.02415 | yes | 190 | done | Automatic Chemical Design Using a Data-Driven Continuous Representation of Molecules |
 | 1709.05584 | yes | 189 | done | Representation Learning on Graphs: Methods and Applications |
 | 1806.02473 | yes | 183 | done | Graph Convolutional Policy Network for Goal-Directed Molecular Graph Generation |
+| 2103.09430 | yes | 179 | done | OGB-LSC: A Large-Scale Challenge for Machine Learning on Graphs |
 | 2005.14165 | yes | 178 | rejected | Language Models are Few-Shot Learners |
-| 2103.09430 | yes | 178 | done | OGB-LSC: A Large-Scale Challenge for Machine Learning on Graphs |
 | 1711.07553 | yes | 173 | done | Residual Gated Graph ConvNets |
 | 1911.05722 | yes | 161 | rejected | Momentum Contrast for Unsupervised Visual Representation Learning |
 | 1310.4546 | yes | 159 | rejected | Distributed Representations of Words and Phrases and their Compositionality |
@@ -38,14 +38,14 @@ type: dev
 | 2101.03164 | yes | 156 | pending | E(3)-Equivariant Graph Neural Networks for Data-Efficient and Accurate Interatomic Potentials |
 | 2012.08752 | yes | 155 | done | Graph Neural Networks: Taxonomy, Advances, and Trends |
 | 2202.08235 | yes | 154 | done | Data Augmentation for Deep Graph Learning |
-| 2104.13478 | yes | 150 | done | Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges |
+| 2104.13478 | yes | 151 | done | Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges |
 | 1211.0053 | yes | 149 | done | The emerging field of signal processing on graphs: Extending high-dimensional data analysis to networks and other irregular domains |
 | 2205.07424 | yes | 148 | done | Trustworthy Graph Neural Networks: Aspects, Methods, and Trends |
 | 2010.11929 | yes | 143 | rejected | An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale |
 | 2407.03125 | yes | 143 | rejected | Foundations and Frontiers of Graph Learning Theory |
+| 1703.06114 | yes | 143 | rejected | Deep Sets |
 | 1808.06670 | yes | 143 | rejected | Learning deep representations by mutual information estimation and maximization |
 | 2304.05055 | yes | 143 | done | A Comprehensive Survey on Deep Graph Representation Learning |
-| 1703.06114 | yes | 142 | rejected | Deep Sets |
 | 2210.07606 | yes | 139 | done | Revisiting Heterophily For Graph Neural Networks |
 | 2204.01855 | yes | 136 | done | A Survey on Graph Representation Learning Methods |
 | 2310.04987 | yes | 136 | done | Data-Centric Graph Learning: A Survey |
@@ -57,7 +57,7 @@ type: dev
 | 2111.14522 | yes | 129 | done | Understanding over-squashing and bottlenecks on graphs via curvature |
 | 2006.07739 | yes | 128 | done | DeeperGCN: All You Need to Train Deeper GCNs |
 | 2006.10503 | yes | 127 | done | SE(3)-Transformers: 3D Roto-Translation Equivariant Attention Networks |
-| 2208.09481 | yes | 126 | done | Graph neural networks for materials science and chemistry |
+| 2208.09481 | yes | 127 | done | Graph neural networks for materials science and chemistry |
 | 2403.00485 | yes | 124 | done | A survey of geometric graph neural networks: data structures, models and applications |
 | 2002.06157 | yes | 123 | rejected | Generalization and Representational Limits of Graph Neural Networks |
 | 2006.11239 | yes | 123 | rejected | Denoising Diffusion Probabilistic Models |
@@ -69,8 +69,8 @@ type: dev
 | 2204.08570 | yes | 117 | done | A Comprehensive Survey on Trustworthy Graph Neural Networks: Privacy, Robustness, Fairness, and Explainability |
 | 2202.07987 | yes | 116 | done | Out-of-Distribution Generalization on Graphs: A Survey |
 | 2301.05860 | yes | 116 | done | State of the Art and Potentialities of Graph-level Learning |
+| 2402.02216 | yes | 115 | done | Position: Graph Foundation Models Are Already Here |
 | 2202.08871 | yes | 114 | done | Graph Data Augmentation for Graph Machine Learning: A Survey |
-| 2402.02216 | yes | 114 | done | Position: Graph Foundation Models Are Already Here |
 | 1611.01144 | yes | 113 | rejected | Categorical Reparameterization with Gumbel-Softmax |
 | 1806.02371 | yes | 112 | rejected | Adversarial Attack on Graph Structured Data |
 | 2107.10234 | yes | 110 | done | Bridging the Gap between Spatial and Spectral Domains: A Unified Framework for Graph Neural Networks |
@@ -93,7 +93,7 @@ type: dev
 | 1409.0473 | yes | 93 | rejected | Neural Machine Translation by Jointly Learning to Align and Translate |
 | 2403.04468 | yes | 93 | done | A Survey of Graph Neural Networks in Real World: Imbalance, Noise, Privacy and OOD Challenges |
 | 2505.15547 | yes | 92 | rejected | Oversmoothing, "Oversquashing", Heterophily, Long-Range, and more: Demystifying Common Beliefs in Graph Machine Learning |
-| 2502.14546 | yes | 92 | rejected | Position: Graph Learning Will Lose Relevance Due To Poor Benchmarks |
+| 2502.14546 | yes | 92 | done | Position: Graph Learning Will Lose Relevance Due To Poor Benchmarks |
 | 2010.00130 | yes | 92 | done | Computing Graph Neural Networks: A Survey from Algorithms to Accelerators |
 | 2206.11990 | yes | 92 | done | Equiformer: Equivariant Graph Attention Transformer for 3D Atomistic Graphs |
 | 2106.12484 | yes | 91 | done | From Canonical Correlation Analysis to Self-supervised Graph Neural Networks |
@@ -138,10 +138,10 @@ type: dev
 | 1906.04214 | yes | 73 | rejected | Topology Attack and Defense for Graph Neural Networks: An Optimization Perspective |
 | 2311.16534 | yes | 73 | done | Graph Prompt Learning: A Comprehensive Survey and Beyond |
 | 2405.11034 | yes | 73 | done | Safety in Graph Machine Learning: Threats and Safeguards |
+| 2311.07073 | yes | 71 | done | Exposition on over-squashing problem on GNNs: Current Methods, Benchmarks and Challenges |
 | 2310.10121 | yes | 71 | done | From Continuous Dynamics to Graph Neural Networks: Neural Diffusion and Beyond |
 | 1503.02531 | yes | 71 | rejected | Distilling the Knowledge in a Neural Network |
 | 2311.12399 | yes | 70 | done | A Survey of Graph Meets Large Language Model: Progress and Future Directions |
-| 2311.07073 | yes | 70 | done | Exposition on over-squashing problem on GNNs: Current Methods, Benchmarks and Challenges |
 | 1907.05600 | yes | 70 | rejected | Generative Modeling by Estimating Gradients of the Data Distribution |
 | 2105.00696 | yes | 70 | done | Graph Learning: A Survey |
 | 2205.09702 | yes | 70 | done | Parallel and Distributed Graph Neural Networks: An In-Depth Concurrency Analysis |
@@ -222,12 +222,12 @@ type: dev
 | 1705.10843 | yes | 53 | rejected | Objective-Reinforced Generative Adversarial Networks (ORGAN) for Sequence Generation Models |
 | 1905.13177 | yes | 53 | rejected | Graph Normalizing Flows |
 | 1910.10683 | yes | 53 | rejected | Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer |
+| 2102.09544 | yes | 53 | done | Combinatorial optimization and reasoning with graph neural networks |
 | 2111.10772 | yes | 53 | done | Network representation learning: A macro and micro view |
 | 2202.09212 | yes | 53 | done | Molecule generation for drug design: A graph learning perspective |
 | 2303.08774 | yes | 53 | rejected | GPT-4 Technical Report |
 | 2405.04114 | yes | 53 | done | Acceleration Algorithms in GNNs: A Survey |
 | 1412.6572 | yes | 52 | rejected | Explaining and Harnessing Adversarial Examples |
-| 2102.09544 | yes | 52 | done | Combinatorial optimization and reasoning with graph neural networks |
 | 2409.01931 | yes | 52 | done | On the design space between molecular mechanics and machine learning force fields |
 | 0910.1019 | yes | 51 | rejected | Gaussian approximation potentials: the accuracy of quantum mechanics, without the electrons. |
 | 1905.01004 | yes | 51 | done | Stability and Generalization of Graph Convolutional Neural Networks |
@@ -337,6 +337,7 @@ type: dev
 | 2406.04336 | yes | 41 | rejected | On the Expressive Power of Spectral Invariant Graph Neural Networks |
 | 2605.08291 | yes | 41 | done | Graph Computation Meets Circuit Algebra: A Task-Aligned Analysis of Graph Neural Networks for Electronic Design Automation |
 | 2605.18893 | yes | 41 | rejected | Position: Graph Condensation Needs a Reset - Move Beyond Full-dataset Training and Model-Dependence |
+| 2411.17429 | yes | 40 | done | Graph Rewiring in GNNs to Mitigate Over-Squashing and Over-Smoothing: A Survey |
 | 2303.00613 | yes | 40 | rejected | Diffusing Graph Attention |
 | 1206.5538 | yes | 40 | rejected | Representation Learning: A Review and New Perspectives |
 | 1906.05849 | yes | 40 | rejected | Contrastive Multiview Coding |
@@ -345,10 +346,10 @@ type: dev
 | 2202.10688 | yes | 40 | done | Graph Lifelong Learning: A Survey |
 | 2209.00796 | yes | 40 | done | Diffusion Models: A Comprehensive Survey of Methods and Applications |
 | 2212.10701 | yes | 40 | done | A Non-Asymptotic Analysis of Oversmoothing in Graph Neural Networks |
+| 2301.08210 | yes | 40 | done | Everything is Connected: Graph Neural Networks |
 | 2405.09591 | yes | 40 | rejected | A Comprehensive Survey on Data Augmentation |
 | 2410.21006 | yes | 40 | done | A Review of Graph-Powered Data Quality Applications for IoT Monitoring Sensor Networks |
 | 2506.11869 | yes | 39 | done | How do probabilistic graphical models and graph neural networks look at network data? |
-| 2411.17429 | yes | 39 | done | Graph Rewiring in GNNs to Mitigate Over-Squashing and Over-Smoothing: A Survey |
 | 2403.11199 | yes | 39 | done | Graph Unitary Message Passing |
 | 1802.03690 | yes | 39 | rejected | On the Generalization of Equivariance and Convolution in Neural Networks to the Action of Compact Groups |
 | 1806.09055 | yes | 39 | rejected | DARTS: Differentiable Architecture Search |
@@ -360,7 +361,6 @@ type: dev
 | 2210.07237 | yes | 39 | pending | Forces are not Enough: Benchmark and Critical Evaluation for Machine Learning Force Fields with Molecular Simulations |
 | 2211.05368 | yes | 39 | done | A Comprehensive Survey on Distributed Training of Graph Neural Networks |
 | 2212.05767 | yes | 39 | done | A Survey of Knowledge Graph Reasoning on Graph Types: Static, Dynamic, and Multi-Modal |
-| 2301.08210 | yes | 39 | done | Everything is Connected: Graph Neural Networks |
 | 2505.22402 | yes | 39 | done | Machine-learned potentials for solvation modeling |
 | 1503.03578 | yes | 38 | done | LINE: Large-scale Information Network Embedding |
 | 1605.08803 | yes | 38 | rejected | Density estimation using Real NVP |
@@ -386,6 +386,7 @@ type: dev
 | 2306.10456 | yes | 37 | done | Advancing Biomedicine with Graph Representation Learning: Recent Progress, Challenges, and Future Directions |
 | 2412.01849 | yes | 37 | done | Toward Data-Centric Machine Learning on Directed Graphs: A Survey |
 | 2504.11699 | yes | 37 | done | H3GNNs: Harmonizing Heterophily and Homophily in GNNs via Joint Structural Node Encoding and Self-Supervised Learning |
+| 2509.10337 | yes | 37 | done | Exact Generalisation Error Exposes Benchmarks Skew Graph Neural Networks Success (or Failure) |
 | 1502.01852 | yes | 36 | rejected | Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification |
 | 1602.01585 | yes | 36 | rejected | Ups and Downs: Modeling the Visual Evolution of Fashion Trends with One-Class Collaborative Filtering |
 | 1602.04938 | yes | 36 | rejected | “Why Should I Trust You?”: Explaining the Predictions of Any Classifier |
@@ -402,7 +403,6 @@ type: dev
 | 2502.21185 | yes | 36 | done | A Survey of Link Prediction in Temporal Networks |
 | 2506.06582 | yes | 36 | done | Demystifying Topological Message-Passing with Relational Structures: A Case Study on Oversquashing in Simplicial Message-Passing |
 | 2508.00304 | yes | 36 | done | Invariant Graph Transformer for Out-of-Distribution Generalization |
-| 2509.10337 | yes | 36 | done | Exact Generalisation Error Exposes Benchmarks Skew Graph Neural Networks Success (or Failure) |
 | 1505.05770 | yes | 35 | rejected | Variational Inference with Normalizing Flows |
 | 1607.00653 | yes | 35 | done | node2vec: Scalable Feature Learning for Networks |
 | 1906.12269 | yes | 35 | done | Certifiable Robustness and Robust Training for Graph Convolutional Networks |
@@ -514,7 +514,7 @@ type: dev
 
 The standalone S2 crawl page was removed to keep the development surface smaller. These counts retain the only high-signal summary from that page.
 
-**DB papers total:** 2741
-**Crawled:** 3077
+**DB papers total:** 2742
+**Crawled:** 3078
 **Uncrawled:** 0
 **Hit crawl limits:** 18

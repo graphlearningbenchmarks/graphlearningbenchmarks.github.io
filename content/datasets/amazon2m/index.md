@@ -44,7 +44,7 @@ stats:
     node_feature_dim: 100
     statistic_notes: 'Cluster-GCN release: 2,449,029 products, 61,859,140 co-purchase
       edges, 47 top-level classes, and 100-dimensional product-description features.'
-result_count: 248
+result_count: 244
 best_model:
   model: MA-GCL
   value: 0.8883
@@ -126,10 +126,6 @@ papers:
   title: Node-wise Diffusion for Scalable Graph Learning
   date_iso: '2023-04-30'
   venue: WWW 2023
-- arxiv_id: '2401.14155'
-  title: Alleviating Structural Distribution Shift in Graph Anomaly Detection
-  date_iso: '2023-02-27'
-  venue: ''
 - arxiv_id: '2212.07035'
   title: 'MA-GCL: Model Augmentation Tricks for Graph Contrastive Learning'
   date_iso: '2022-12-14'
@@ -2424,11 +2420,11 @@ variants:
     - null
     - null
     - null
-  row_count: 248
+  row_count: 244
   rows_json: /data/datasets/amazon2m/standard-split-rows.json
   chart_json: /data/datasets/amazon2m/standard-split-chart.json
   arch_counts:
-    gnn: 189
+    gnn: 185
     hybrid: 16
     graph_transformer: 13
     llm: 5
@@ -2436,7 +2432,7 @@ variants:
     traditional: 16
   metric_counts:
   - 109
-  - 35
+  - 31
   - 25
   - 26
   - 9

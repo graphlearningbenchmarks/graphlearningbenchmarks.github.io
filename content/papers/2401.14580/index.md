@@ -3212,9 +3212,9 @@ results:
     sort_value: 0.8082
     sort_std: 0.036
     global_rank: 203
-    paper_rank: 379
-    rank_delta: 176
-    rank_delta_abs: 176
+    paper_rank: 378
+    rank_delta: 175
+    rank_delta_abs: 175
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null

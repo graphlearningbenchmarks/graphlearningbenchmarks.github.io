@@ -888,74 +888,6 @@ results:
 - &id006
   dataset: Actor
   rows:
-  - model: NodeFormer
-    model_key: nodeformer
-    model_plain: NodeFormer
-    value: 0.3462
-    std: 0.0082
-    paper_value: 0.3462
-    paper_std: 0.0082
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard node classification task on Actor dataset.
-    date: Oct 17, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-17'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-05-19'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7623
-    true_std: 0.0042
-    value_gap_source_arxiv: '2505.15845'
-    value_gap_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem
-      in Tokenized Graph Learning Models'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.41609999999999997
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7623
-    sort_std: 0.0042
-    global_rank: 1
-    paper_rank: 294
-    rank_delta: 293
-    rank_delta_abs: 293
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
   - model: DiGGR
     model_key: diggr
     model_plain: DiGGR
@@ -981,13 +913,13 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 1
     sort_value: 0.4535
     sort_std: 0.0353
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: TRIGON
     model_key: trigon
@@ -1014,13 +946,47 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 2
     sort_value: 0.4402
     sort_std: 0.0028
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
+    is_std_outlier: false
+  - model: DoG
+    model_key: dog
+    model_plain: DoG
+    value: 0.432
+    std: 0.012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2503.12563'
+    title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
+    date: Mar 16, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-16'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/Statistical-Deep-Learning/DoG
+    uses_external_data: true
+    input_feature_source: raw_features
+    feature_source_evidence: DoG generates synthetic graph structures to boost the
+      performance of GNNs.
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.432
+    sort_std: 0.012
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
     is_std_outlier: false
   - model: Specformer
     model_key: specformer
@@ -1079,8 +1045,8 @@ results:
     value_note: ''
     sort_value: 0.4193
     sort_std: 0.0104
-    global_rank: 23
-    paper_rank: 101
+    global_rank: 22
+    paper_rank: 100
     rank_delta: 78
     rank_delta_abs: 78
     rank_delta_direction: worse
@@ -1088,7 +1054,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: MLP
     model_key: mlp
@@ -1115,7 +1081,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 55
+    global_rank: 54
     sort_value: 0.4026
     sort_std: 0.0108
     comparison_type: global_top
@@ -1179,10 +1145,10 @@ results:
     value_note: ''
     sort_value: 0.3992
     sort_std: 0.0067
-    global_rank: 67
-    paper_rank: 118
-    rank_delta: 51
-    rank_delta_abs: 51
+    global_rank: 66
+    paper_rank: 116
+    rank_delta: 50
+    rank_delta_abs: 50
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1247,10 +1213,10 @@ results:
     value_note: ''
     sort_value: 0.397
     sort_std: null
-    global_rank: 71
-    paper_rank: 134
-    rank_delta: 63
-    rank_delta_abs: 63
+    global_rank: 70
+    paper_rank: 132
+    rank_delta: 62
+    rank_delta_abs: 62
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1317,8 +1283,8 @@ results:
     value_note: ''
     sort_value: 0.3959
     sort_std: 0.0029
-    global_rank: 74
-    paper_rank: 74
+    global_rank: 73
+    paper_rank: 73
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1353,7 +1319,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 87
+    global_rank: 86
     sort_value: 0.3899
     sort_std: 0.0085
     comparison_type: global_top
@@ -1418,8 +1384,8 @@ results:
     value_note: ''
     sort_value: 0.3865
     sort_std: 0.0032
-    global_rank: 93
-    paper_rank: 93
+    global_rank: 92
+    paper_rank: 92
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1486,16 +1452,83 @@ results:
     value_note: ''
     sort_value: 0.369
     sort_std: null
-    global_rank: 166
-    paper_rank: 256
-    rank_delta: 90
-    rank_delta_abs: 90
+    global_rank: 164
+    paper_rank: 253
+    rank_delta: 89
+    rank_delta_abs: 89
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Beyond Low-frequency Information in Graph Convolutional
       Networks
     comparison_source_arxiv: '2101.00797'
+    is_best: false
+    is_std_outlier: false
+  - model: NodeFormer
+    model_key: nodeformer
+    model_plain: NodeFormer
+    value: 0.3462
+    std: 0.0082
+    paper_value: 0.3462
+    paper_std: 0.0082
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Actor dataset.
+    date: Oct 17, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-17'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-11-25'
+    value_gap_source_date_label: NeurIPS 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.369
+    true_std: 0.01
+    value_gap_source_arxiv: '2411.16278'
+    value_gap_source_title: Even Sparser Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: 0.022799999999999987
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.369
+    sort_std: 0.01
+    global_rank: 165
+    paper_rank: 291
+    rank_delta: 126
+    rank_delta_abs: 126
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GAT
@@ -1554,10 +1587,10 @@ results:
     value_note: ''
     sort_value: 0.3605
     sort_std: 0.0035
-    global_rank: 218
-    paper_rank: 402
-    rank_delta: 184
-    rank_delta_abs: 184
+    global_rank: 216
+    paper_rank: 399
+    rank_delta: 183
+    rank_delta_abs: 183
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1622,8 +1655,8 @@ results:
     value_note: ''
     sort_value: 0.3586
     sort_std: null
-    global_rank: 233
-    paper_rank: 233
+    global_rank: 231
+    paper_rank: 231
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1691,8 +1724,8 @@ results:
     value_note: ''
     sort_value: 0.349
     sort_std: 0.007
-    global_rank: 282
-    paper_rank: 410
+    global_rank: 279
+    paper_rank: 407
     rank_delta: 128
     rank_delta_abs: 128
     rank_delta_direction: worse
@@ -1760,8 +1793,8 @@ results:
     value_note: ''
     sort_value: 0.3467
     sort_std: null
-    global_rank: 293
-    paper_rank: 293
+    global_rank: 290
+    paper_rank: 290
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

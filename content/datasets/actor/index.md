@@ -48,14 +48,13 @@ stats:
     node_feature_type: sparse bag-of-words actor co-occurrence features
     statistic_notes: The LINKX paper calls this dataset Film; the PyG loader calls
       it Actor
-result_count: 789
+result_count: 785
 best_model:
-  model: NodeFormer
-  value: 0.7623
+  model: DiGGR
+  value: 0.4535
   metric: Accuracy
-  arxiv_id: '2505.15845'
-  paper_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized
-    Graph Learning Models'
+  arxiv_id: '2408.13471'
+  paper_title: Disentangled Generative Graph Representation Learning
 papers:
 - arxiv_id: '2605.21247'
   title: Graph Navier–Stokes Networks
@@ -178,11 +177,6 @@ papers:
     A System of Hyperbolic Partial Differential Equations'
   date_iso: '2025-05-29'
   venue: ICML 2025
-- arxiv_id: '2505.15845'
-  title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
-    Learning Models'
-  date_iso: '2025-05-19'
-  venue: ''
 - arxiv_id: '2505.11346'
   title: What Can We Learn From MIMO Graph Convolutions?
   date_iso: '2025-05-16'
@@ -659,45 +653,6 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
-  - model: NodeFormer
-    model_plain: NodeFormer
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2505.15845'
-    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
-      Learning Models'
-    date: May 19, 2025
-    date_iso: '2025-05-19'
-    date_display: May 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.7623
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0042
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: DiGGR
     model_plain: DiGGR
     is_baseline: false
@@ -718,7 +673,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4535
@@ -756,7 +711,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4402
@@ -794,7 +749,7 @@ variants:
     published_conference_slug: tmlr
     published_venue: TMLR 2025
     uses_external_data: true
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.432
@@ -832,7 +787,7 @@ variants:
     published_conference_slug: icml
     published_venue: ICML 2023
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4305
@@ -870,7 +825,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4305
@@ -908,7 +863,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2024
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4301
@@ -946,7 +901,7 @@ variants:
     published_conference_slug: icml
     published_venue: ICML 2024
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4298
@@ -985,7 +940,7 @@ variants:
     published_conference_slug: www
     published_venue: WWW 2024
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.427
@@ -1023,7 +978,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4264
@@ -1061,7 +1016,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.425
@@ -1099,7 +1054,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.425
@@ -1137,7 +1092,7 @@ variants:
     published_conference_slug: icml
     published_venue: ICML 2023
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4247
@@ -1175,7 +1130,7 @@ variants:
     published_conference_slug: icml
     published_venue: ICML 2023
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4239
@@ -1214,7 +1169,7 @@ variants:
     published_conference_slug: www
     published_venue: WWW 2024
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4225
@@ -1252,7 +1207,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4216
@@ -1290,7 +1245,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4216
@@ -1328,7 +1283,7 @@ variants:
     published_conference_slug: www
     published_venue: WWW 2025
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4203
@@ -1367,7 +1322,7 @@ variants:
     published_conference_slug: icml
     published_venue: ICML 2025
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4203
@@ -1405,7 +1360,7 @@ variants:
     published_conference_slug: icml
     published_venue: ICML 2023
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4197
@@ -1443,7 +1398,7 @@ variants:
     published_conference_slug: www
     published_venue: WWW 2026
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4194
@@ -1481,7 +1436,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4193
@@ -1519,7 +1474,7 @@ variants:
     published_conference_slug: iclr
     published_venue: ICLR 2024
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: true
     metric_values:
     - 0.4189
@@ -1557,7 +1512,7 @@ variants:
     published_conference_slug: icml
     published_venue: ICML 2024
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4181
@@ -1595,7 +1550,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2022
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4175
@@ -1633,7 +1588,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4173
@@ -1671,7 +1626,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2022
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4171
@@ -1709,7 +1664,7 @@ variants:
     published_conference_slug: icml
     published_venue: ICML 2024
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4169
@@ -1747,7 +1702,7 @@ variants:
     published_conference_slug: tmlr
     published_venue: TMLR 2025
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4161
@@ -1785,7 +1740,7 @@ variants:
     published_conference_slug: tmlr
     published_venue: TMLR 2025
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.416
@@ -1824,7 +1779,7 @@ variants:
     published_conference_slug: www
     published_venue: WWW 2024
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4158
@@ -1863,7 +1818,7 @@ variants:
     published_conference_slug: www
     published_venue: WWW 2024
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4158
@@ -1902,7 +1857,7 @@ variants:
     published_conference_slug: www
     published_venue: WWW 2024
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4154
@@ -1940,7 +1895,7 @@ variants:
     published_conference_slug: icml
     published_venue: ICML 2024
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4151
@@ -1979,7 +1934,7 @@ variants:
     published_conference_slug: icml
     published_venue: ICML 2025
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4149
@@ -2055,7 +2010,7 @@ variants:
     published_conference_slug: www
     published_venue: WWW 2023
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4137
@@ -2170,7 +2125,7 @@ variants:
     published_conference_slug: www
     published_venue: WWW 2024
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4126
@@ -2208,7 +2163,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4122
@@ -2284,7 +2239,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2024
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4115
@@ -2323,7 +2278,7 @@ variants:
     published_conference_slug: www
     published_venue: WWW 2024
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4096
@@ -2437,7 +2392,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4084
@@ -2475,7 +2430,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4082
@@ -2553,7 +2508,7 @@ variants:
     published_conference_slug: icml
     published_venue: ICML 2025
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.4063
@@ -2571,18 +2526,56 @@ variants:
     - null
     - null
     - null
-  row_count: 789
+  - model: NFGNN
+    model_plain: NFGNN
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2212.03654'
+    title: Node-oriented Spectral Filtering for Graph Neural Networks
+    date: Dec 7, 2022
+    date_iso: '2022-12-07'
+    date_display: Dec 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.4062
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0038
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  row_count: 785
   rows_json: /data/datasets/actor/standard-split-rows.json
   chart_json: /data/datasets/actor/standard-split-chart.json
   arch_counts:
     gnn: 525
-    hybrid: 121
-    graph_transformer: 48
+    hybrid: 120
+    graph_transformer: 45
     llm: 2
     walk: 8
     traditional: 38
   metric_counts:
-  - 744
+  - 740
   - 3
   - 24
   - 3
@@ -2632,13 +2625,6 @@ variants:
     arxiv_id: '2408.13471'
     title: Disentangled Generative Graph Representation Learning
     date: '2024-08-24'
-  - value: 0.7623
-    std: 0.0042
-    model: NodeFormer
-    arxiv_id: '2505.15845'
-    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
-      Learning Models'
-    date: '2025-05-19'
   milestones_by_metric:
     Accuracy: *id001
     Avg MemScore:

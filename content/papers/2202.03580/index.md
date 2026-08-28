@@ -45,8 +45,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - ChebNetII
-mrr: 0.0743
-adjusted_mrr: 0.0743
+mrr: 0.0745
+adjusted_mrr: 0.0745
 mrr_dataset_count: 10
 benchmark_categories:
 - Classic
@@ -78,40 +78,6 @@ results:
 - &id006
   dataset: Actor
   rows:
-  - model: NodeFormer
-    model_key: nodeformer
-    model_plain: NodeFormer
-    value: 0.7623
-    std: 0.0042
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2505.15845'
-    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
-      Learning Models'
-    date: May 19, 2025
-    date_display: May 2025
-    date_iso: '2025-05-19'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.7623
-    sort_std: 0.0042
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
   - model: DiGGR
     model_key: diggr
     model_plain: DiGGR
@@ -137,13 +103,13 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 1
     sort_value: 0.4535
     sort_std: 0.0353
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: TRIGON
     model_key: trigon
@@ -170,13 +136,47 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 2
     sort_value: 0.4402
     sort_std: 0.0028
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
+    is_std_outlier: false
+  - model: DoG
+    model_key: dog
+    model_plain: DoG
+    value: 0.432
+    std: 0.012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2503.12563'
+    title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
+    date: Mar 16, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-16'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/Statistical-Deep-Learning/DoG
+    uses_external_data: true
+    input_feature_source: raw_features
+    feature_source_evidence: DoG generates synthetic graph structures to boost the
+      performance of GNNs.
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.432
+    sort_std: 0.012
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
     is_std_outlier: false
   - model: BernNet
     model_key: bernnet
@@ -234,8 +234,8 @@ results:
     value_note: ''
     sort_value: 0.4179
     sort_std: 0.0101
-    global_rank: 26
-    paper_rank: 28
+    global_rank: 25
+    paper_rank: 27
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -243,7 +243,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: ChebNetII
     model_key: chebnetii
@@ -302,8 +302,8 @@ results:
     value_note: ''
     sort_value: 0.4175
     sort_std: 0.0107
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -311,7 +311,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: GCNII
     model_key: gcnii
@@ -370,8 +370,8 @@ results:
     value_note: ''
     sort_value: 0.4082
     sort_std: 0.0179
-    global_rank: 48
-    paper_rank: 167
+    global_rank: 47
+    paper_rank: 166
     rank_delta: 119
     rank_delta_abs: 119
     rank_delta_direction: worse
@@ -380,7 +380,7 @@ results:
     comparison_source_title: 'Bag of Tricks for Training Deeper Graph Neural Networks:
       A Comprehensive Benchmark Study'
     comparison_source_arxiv: '2108.10521'
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: APPNP
     model_key: appnp
@@ -439,8 +439,8 @@ results:
     value_note: ''
     sort_value: 0.4046
     sort_std: 0.0064
-    global_rank: 54
-    paper_rank: 69
+    global_rank: 53
+    paper_rank: 68
     rank_delta: 15
     rank_delta_abs: 15
     rank_delta_direction: worse
@@ -507,8 +507,8 @@ results:
     value_note: ''
     sort_value: 0.4026
     sort_std: 0.0108
-    global_rank: 55
-    paper_rank: 57
+    global_rank: 54
+    paper_rank: 56
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -575,8 +575,8 @@ results:
     value_note: ''
     sort_value: 0.3992
     sort_std: 0.0067
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -642,8 +642,8 @@ results:
     value_note: ''
     sort_value: 0.3976
     sort_std: 0.0074
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -678,7 +678,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 87
+    global_rank: 86
     sort_value: 0.3899
     sort_std: 0.0085
     comparison_type: global_top
@@ -742,8 +742,8 @@ results:
     value_note: ''
     sort_value: 0.3813
     sort_std: 0.0081
-    global_rank: 104
-    paper_rank: 104
+    global_rank: 103
+    paper_rank: 103
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -809,8 +809,8 @@ results:
     value_note: ''
     sort_value: 0.3802
     sort_std: 0.0023
-    global_rank: 108
-    paper_rank: 138
+    global_rank: 106
+    paper_rank: 136
     rank_delta: 30
     rank_delta_abs: 30
     rank_delta_direction: worse
@@ -877,8 +877,8 @@ results:
     value_note: ''
     sort_value: 0.3767
     sort_std: 0.0054
-    global_rank: 133
-    paper_rank: 133
+    global_rank: 131
+    paper_rank: 131
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -945,10 +945,10 @@ results:
     value_note: ''
     sort_value: 0.369
     sort_std: null
-    global_rank: 166
-    paper_rank: 336
-    rank_delta: 170
-    rank_delta_abs: 170
+    global_rank: 164
+    paper_rank: 333
+    rank_delta: 169
+    rank_delta_abs: 169
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1013,8 +1013,8 @@ results:
     value_note: ''
     sort_value: 0.3516
     sort_std: 0.0064
-    global_rank: 267
-    paper_rank: 267
+    global_rank: 264
+    paper_rank: 264
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2284,9 +2284,9 @@ results:
     sort_value: 0.8082
     sort_std: 0.036
     global_rank: 203
-    paper_rank: 387
-    rank_delta: 184
-    rank_delta_abs: 184
+    paper_rank: 385
+    rank_delta: 182
+    rank_delta_abs: 182
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null

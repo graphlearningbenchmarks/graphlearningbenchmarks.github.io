@@ -2914,8 +2914,8 @@ results:
     value_note: ''
     sort_value: 0.648
     sort_std: null
-    global_rank: 532
-    paper_rank: 532
+    global_rank: 529
+    paper_rank: 529
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2983,8 +2983,8 @@ results:
     value_note: ''
     sort_value: 0.622
     sort_std: null
-    global_rank: 561
-    paper_rank: 561
+    global_rank: 559
+    paper_rank: 559
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

@@ -47,7 +47,7 @@ stats:
     node_feature_type: sparse bag-of-words webpage features
     statistic_notes: Geom-GCN/WebKB preprocessing; exact edge counts can vary across
       cleaned versions
-result_count: 323
+result_count: 319
 best_model:
   model: ACM-GCN
   value: 0.958
@@ -1788,18 +1788,18 @@ variants:
     - 0.05
     - null
     - null
-  row_count: 323
+  row_count: 319
   rows_json: /data/datasets/wisconsin/standard-split-rows.json
   chart_json: /data/datasets/wisconsin/standard-split-chart.json
   arch_counts:
     gnn: 238
-    hybrid: 52
-    graph_transformer: 10
+    hybrid: 51
+    graph_transformer: 7
     llm: 0
     walk: 2
     traditional: 16
   metric_counts:
-  - 300
+  - 296
   - 11
   - 12
   milestones: &id001

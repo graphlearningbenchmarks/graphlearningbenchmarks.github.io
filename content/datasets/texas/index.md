@@ -55,7 +55,7 @@ stats:
     node_feature_type: sparse bag-of-words webpage features
     statistic_notes: Geom-GCN/WebKB preprocessing; exact edge counts can vary across
       cleaned versions
-result_count: 931
+result_count: 928
 best_model:
   model: P^2GNN
   value: 0.9672
@@ -2077,18 +2077,18 @@ variants:
     - 0.9197
     metric_stds:
     - 0.0419
-  row_count: 931
+  row_count: 928
   rows_json: /data/datasets/texas/standard-split-rows.json
   chart_json: /data/datasets/texas/standard-split-chart.json
   arch_counts:
     gnn: 635
-    hybrid: 158
-    graph_transformer: 35
+    hybrid: 157
+    graph_transformer: 33
     llm: 2
     walk: 6
     traditional: 60
   metric_counts:
-  - 861
+  - 858
   milestones: &id001
   - value: 0.6757
     std: null

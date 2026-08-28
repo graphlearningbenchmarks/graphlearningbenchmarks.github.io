@@ -291,8 +291,8 @@ results:
     value_note: ''
     sort_value: 0.5625
     sort_std: 0.0013
-    global_rank: 651
-    paper_rank: 651
+    global_rank: 649
+    paper_rank: 649
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -360,8 +360,8 @@ results:
     value_note: ''
     sort_value: 0.5612
     sort_std: 0.0042
-    global_rank: 653
-    paper_rank: 653
+    global_rank: 651
+    paper_rank: 651
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

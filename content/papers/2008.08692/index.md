@@ -235,9 +235,9 @@ results:
     sort_value: 0.9316
     sort_std: 0.0087
     global_rank: 13
-    paper_rank: 26
-    rank_delta: 13
-    rank_delta_abs: 13
+    paper_rank: 23
+    rank_delta: 10
+    rank_delta_abs: 10
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -303,9 +303,9 @@ results:
     sort_value: 0.913
     sort_std: 0.006
     global_rank: 14
-    paper_rank: 26
-    rank_delta: 12
-    rank_delta_abs: 12
+    paper_rank: 23
+    rank_delta: 9
+    rank_delta_abs: 9
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -371,9 +371,9 @@ results:
     sort_value: 0.911
     sort_std: 0.006
     global_rank: 15
-    paper_rank: 26
-    rank_delta: 11
-    rank_delta_abs: 11
+    paper_rank: 23
+    rank_delta: 8
+    rank_delta_abs: 8
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -714,8 +714,8 @@ results:
     value_note: ''
     sort_value: 0.855
     sort_std: null
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -783,8 +783,8 @@ results:
     value_note: ''
     sort_value: 0.7686
     sort_std: null
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -852,8 +852,8 @@ results:
     value_note: ''
     sort_value: 0.7621
     sort_std: null
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -921,46 +921,13 @@ results:
     value_note: ''
     sort_value: 0.7558
     sort_std: null
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SAGE
-    model_key: sage
-    model_plain: SAGE
-    value: 0.7535
-    std: null
-    metric: AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2401.14155'
-    title: Alleviating Structural Distribution Shift in Graph Anomaly Detection
-    date: Feb 27, 2023
-    date_display: Feb 2023
-    date_iso: '2023-02-27'
-    venue: Web Search and Data Mining
-    codebase_url: https://github.com/blacksingular/wsdm_GDN
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 26
-    sort_value: 0.7535
-    sort_std: null
-    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1023,8 +990,8 @@ results:
     value_note: ''
     sort_value: 0.7265
     sort_std: null
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

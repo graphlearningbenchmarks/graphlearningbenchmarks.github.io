@@ -1805,9 +1805,9 @@ results:
     sort_value: 0.8162
     sort_std: 0.0645
     global_rank: 266
-    paper_rank: 525
-    rank_delta: 259
-    rank_delta_abs: 259
+    paper_rank: 522
+    rank_delta: 256
+    rank_delta_abs: 256
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1873,9 +1873,9 @@ results:
     sort_value: 0.7933
     sort_std: 0.0447
     global_rank: 323
-    paper_rank: 653
-    rank_delta: 330
-    rank_delta_abs: 330
+    paper_rank: 651
+    rank_delta: 328
+    rank_delta_abs: 328
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2284,9 +2284,9 @@ results:
     sort_value: 0.746
     sort_std: 0.008
     global_rank: 400
-    paper_rank: 688
-    rank_delta: 288
-    rank_delta_abs: 288
+    paper_rank: 686
+    rank_delta: 286
+    rank_delta_abs: 286
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2354,9 +2354,9 @@ results:
     sort_value: 0.743
     sort_std: 0.0138
     global_rank: 406
-    paper_rank: 458
-    rank_delta: 52
-    rank_delta_abs: 52
+    paper_rank: 456
+    rank_delta: 50
+    rank_delta_abs: 50
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2490,8 +2490,8 @@ results:
     value_note: ''
     sort_value: 0.7333
     sort_std: 0.0127
-    global_rank: 426
-    paper_rank: 426
+    global_rank: 424
+    paper_rank: 424
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2558,8 +2558,8 @@ results:
     value_note: ''
     sort_value: 0.7207
     sort_std: 0.0156
-    global_rank: 446
-    paper_rank: 446
+    global_rank: 444
+    paper_rank: 444
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2567,76 +2567,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: VCR-Graphormer
-    model_key: vcr-graphormer
-    model_plain: VCR-Graphormer
-    value: 0.6263
-    std: 0.005
-    paper_value: 0.6263
-    paper_std: 0.005
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 20, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-20'
-    published_venue: NeurIPS 2025
-    published_conference: NeurIPS 2025
-    at_pub_value: 0.6579
-    at_pub_std: 0.0178
-    at_pub_source_arxiv: '2505.15845'
-    at_pub_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in
-      Tokenized Graph Learning Models'
-    at_pub_source_date_iso: '2025-05-19'
-    at_pub_source_date_label: '2025'
-    value_gap_source_date_iso: '2025-05-19'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.03160000000000007
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.6579
-    true_std: 0.0178
-    value_gap_source_arxiv: '2505.15845'
-    value_gap_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem
-      in Tokenized Graph Learning Models'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.03160000000000007
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6579
-    sort_std: 0.0178
-    global_rank: 516
-    paper_rank: 553
-    rank_delta: 37
-    rank_delta_abs: 37
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem
-      in Tokenized Graph Learning Models'
-    comparison_source_arxiv: '2505.15845'
     is_best: false
     is_std_outlier: false
   - model: HGCN
@@ -2696,6 +2626,74 @@ results:
     value_note: ''
     sort_value: 0.6278
     sort_std: 0.0178
+    global_rank: 548
+    paper_rank: 548
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: VCR-Graphormer
+    model_key: vcr-graphormer
+    model_plain: VCR-Graphormer
+    value: 0.6263
+    std: 0.005
+    paper_value: 0.6263
+    paper_std: 0.005
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Oct 20, 2025
+    date_display: Oct 2025
+    date_iso: '2025-10-20'
+    published_venue: NeurIPS 2025
+    published_conference: NeurIPS 2025
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-10-20'
+    value_gap_source_date_label: NeurIPS 2025
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6263
+    true_std: 0.005
+    value_gap_source_arxiv: '2510.17457'
+    value_gap_source_title: 'Deeper with Riemannian Geometry: Overcoming Oversmoothing
+      and Oversquashing for Graph Foundation Models'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6263
+    sort_std: 0.005
     global_rank: 551
     paper_rank: 551
     rank_delta: 0

@@ -11,9 +11,9 @@ This page distinguishes between entries that are truly unresolved and stale pend
 
 Source: pending_datasets table in benchmarks.db
 
-**Tracked entries in DB:** 8616
-**Still unresolved:** 8249
-**Already covered now:** 367
+**Tracked entries in DB:** 8621
+**Still unresolved:** 7955
+**Already covered now:** 666
 
 ### Still unresolved
 
@@ -2006,7 +2006,7 @@ ightarrow$FR | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the cata
 | pending | unknown_dataset | Diameter | 2505.18088 |  |  |  | MAE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Diameter | 2505.18728 |  |  |  | MSE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Diameter | 2506.07624 |  |  |  | MAE |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | Diameter | 2508.05070 |  |  |  | MSE |  |  | dataset is not in the catalog |
+| pending | unknown_dataset | Diameter | 2508.05070 | Synthetic graph property prediction task | 10 | graph_regression | log10(MSE) |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Diameter | 2605.18387 |  |  |  | MAE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Diameter | 2605.23467 |  |  |  | MSE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Dianping | 2002.00844 |  |  |  | HR |  |  | dataset is not in the catalog |
@@ -3634,307 +3634,8 @@ ightarrow$FR | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the cata
 | pending | unknown_dataset | ImageNet-1K | 2510.12111 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ImageNet1k | 2303.06562 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ImbNode | 2212.08689 |  |  |  | MacroF |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 1605.05273 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 1805.11921 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 1810.00826 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 1812.09902 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 1905.04579 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 1905.11136 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 1905.12560 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 1905.13192 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 1905.13728 |  |  |  | F1 |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 1906.01277 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 1909.11855 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 1910.12091 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 1912.09893 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2006.09252 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2006.09430 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2006.09963 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2006.12138 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2007.08349 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2008.05089 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2009.03294 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2009.10564 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2010.01804 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2010.05421 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2010.08853 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2010.09834 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2010.11418 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2010.12609 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2010.13902 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2012.08734 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2102.07835 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2102.10757 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2103.00111 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2103.00959 | IMDB-B dataset used for graph classification. | 1 | graph_classification | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2103.03212 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2103.13125 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2104.04987 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2104.05960 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2105.07519 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2106.05819 | TU Benchmark Dataset used for unsupervised learning. | 3 | graph_classification | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2106.07594 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2106.12575 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2107.01495 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2107.01952 |  |  |  | negative log likelihood |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2110.02910 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2110.03753 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2110.07875 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2110.09344 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2110.15438 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2111.03220 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2111.06283 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2111.11840 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2112.01064 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2112.07436 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2112.08903 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2112.09899 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2112.15089 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2201.00491 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2201.01288 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2201.09830 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2201.13410 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2202.00519 |  |  |  | Fidelity |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2202.02989 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2202.03104 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2202.07179 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2202.08333 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2202.10156 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2203.07678 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2203.09141 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2205.10803 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2205.12245 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2205.13328 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2205.14368 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2205.15746 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2206.02059 | TUDatasets graph classification dataset (IMDB-BINARY) | 7 | graph_classification | Accuracy | 10-fold CV | graphs=1000, avg nodes=19.8, avg edges=96.5, classes=2 | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2206.07869 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2206.11010 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2206.11140 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2206.12933 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2209.06560 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2209.14402 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2209.15240 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2210.00643 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2210.11879 |  |  |  | NMI |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2210.12020 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2211.02501 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2211.04208 |  |  |  | AUC |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2301.13340 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2302.02909 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2302.12449 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2304.01575 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2305.06102 | TUDataset for graph classification. | 10 | graph_classification |  |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2305.17437 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2306.03506 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2306.05955 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2306.06788 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2306.10767 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2306.12726 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2306.13210 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2306.15963 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2307.01053 | TUDataset for graph classification | 12 | graph_classification | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2308.06838 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2308.08344 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2309.02304 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2309.16014 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2310.01267 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2310.01794 |  |  |  | Size, Sparsity, Suffic. |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2310.02156 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2310.05174 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2310.10434 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2310.15523 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2311.01038 | IMDB binary dataset used for graph classification. | 2 | graph_classification | Micro F1 |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2311.02687 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2312.08671 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2312.13583 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2401.03638 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2401.09953 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2401.16011 |  |  |  | ACC, Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2401.17580 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2402.07225 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2402.08023 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2402.08085 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2403.05064 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2404.15806 | IMDB Binary dataset used for unsupervised representation learning. | 10 | graph_classification | Accuracy |  | graphs=1000, avg nodes=19.8, avg edges=96.5, classes=2 | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2405.01350 | TU dataset for unsupervised graph classification | 8 | graph_classification | Accuracy |  | graphs=1000, avg nodes=19.8, avg edges=96.5, classes=2 | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2405.02795 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2405.10642 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2405.14742 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2406.00403 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2406.01249 | Graph classification dataset (IMDB-BINARY). | 8 | graph_classification | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2406.01899 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2406.03164 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2406.05346 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2406.08897 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2406.09031 |  |  |  | Accuracy, Macro-F1 |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2406.11714 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2406.15523 |  |  |  | AUROC |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2406.17251 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2406.18380 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2406.19244 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2407.02057 |  |  |  | AUC |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2407.18480 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2408.00165 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2408.11370 | IMDB-BINARY dataset for graph classification. | 12 | graph_classification | Accuracy, Training Accuracy, Testing Accuracy |  | graphs=1000, avg nodes=19.8, avg edges=96.5, classes=2 | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2408.13471 | Social network dataset for graph classification. | 6 | graph_classification | Accuracy, NMI |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2409.19117 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2409.19414 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2410.01778 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2410.10241 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2410.10365 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2410.12609 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2410.23686 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2412.03864 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2412.21151 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2501.18739 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2502.09263 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2502.16233 | social network dataset | 14 | graph_classification | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2502.18771 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2504.12011 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2504.13426 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2505.04956 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2505.09361 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2505.15015 | Social network graph dataset (IMDB-Binary) used for graph classification. | 16 | graph_classification | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2505.18088 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2505.19188 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2505.21285 |  |  |  | AUROC |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2506.06212 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2506.06571 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2506.06582 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2506.20362 | IMDB-Binary dataset for graph classification | 5 | graph_classification | Accuracy |  | graphs=1000, avg nodes=19.8, avg edges=96.5, classes=2 | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2508.16995 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2510.22643 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2512.04530 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2512.13235 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | imdb-b | 2601.01123 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2602.04244 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2603.02025 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2603.27529 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | imdb-b | 2605.04834 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-b | 2605.06462 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2605.08689 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2605.14884 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-B | 2606.00757 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | IMDB-C | 2010.11418 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | IMDB-Douban | 2401.03597 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 1605.05273 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 1805.11921 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 1810.00826 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 1812.09902 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 1905.04579 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 1905.11136 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 1905.12560 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 1905.13192 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 1905.13728 |  |  |  | F1 |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 1909.11855 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 1910.12091 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 1912.09893 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2006.09252 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2006.09430 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2006.09963 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2007.08349 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2008.05089 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2009.10564 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2010.01804 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2010.12609 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2012.08734 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2103.00111 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2103.00959 | IMDB-M dataset used for graph classification. | 1 | graph_classification | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2103.03212 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2103.13125 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2104.05960 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2106.12575 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2107.01495 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2107.01952 |  |  |  | negative log likelihood |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2109.01116 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2110.02910 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2110.09344 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2110.15438 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2111.06283 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2111.11840 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2112.07436 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2112.08903 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2112.15089 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2201.00491 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2201.09830 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2201.13410 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2202.02989 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2202.07179 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2202.10156 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2203.07678 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2203.09141 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2205.10803 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2205.12245 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2205.14368 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2206.02059 | TUDatasets graph classification dataset (IMDB-MULTI) | 7 | graph_classification | Accuracy | 10-fold CV | graphs=1500, avg nodes=13.0, avg edges=65.9, classes=3 | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2206.11010 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2206.11140 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2206.12933 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2209.14402 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2209.15240 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2210.00643 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2210.08443 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2210.12020 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2211.02501 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2211.04208 |  |  |  | AUC |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2302.02909 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2302.12449 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2306.03506 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2306.05955 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2306.10767 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2306.13210 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2306.15963 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2308.08344 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2310.01267 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2310.02156 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2310.05174 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2310.15523 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2311.01038 | IMDB multi dataset used for graph classification. | 2 | graph_classification | Micro F1 |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2311.02687 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2312.13583 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2401.16011 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2401.17580 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2402.07225 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2402.08023 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2404.15806 | IMDB Multi dataset used for unsupervised representation learning. | 10 | graph_classification | Accuracy |  | graphs=1500, avg nodes=13.0, avg edges=65.9, classes=3 | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2405.10642 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2405.14742 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2406.01249 | Graph classification dataset (IMDB-MULTI). | 8 | graph_classification | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2406.01899 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2406.08897 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2406.09031 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2406.11714 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2406.17251 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2406.18380 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2406.19244 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2407.18480 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2408.11370 | IMDB-MULTI dataset for graph classification. | 12 | graph_classification | Accuracy, Training Accuracy, Testing Accuracy |  | graphs=1500, avg nodes=13.0, avg edges=65.9, classes=3 | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2408.13471 | Social network dataset for graph classification. | 4 | graph_classification | Accuracy, NMI |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2409.19117 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2409.19414 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2410.01778 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2410.10241 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2410.23686 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2412.03864 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2412.21151 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2502.09263 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2502.16233 | social network dataset | 14 | graph_classification | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2504.12011 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2504.13426 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2505.04956 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2505.15015 | Social network graph dataset (IMDB-Multi) used for graph classification. | 16 | graph_classification | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2505.18088 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2505.19188 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2506.19343 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2506.20362 | IMDB-Multi dataset for graph classification | 5 | graph_classification | Accuracy |  | graphs=1500, avg nodes=13.0, avg edges=65.9, classes=3 | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2508.16995 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2512.13235 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2602.04244 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2603.02025 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2603.27529 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2605.14884 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
-| pending | unknown_dataset | IMDB-M | 2606.00757 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | IMDB-MULTI-IMDB-BINARY | 2406.15523 |  |  |  | AUROC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | IMDB-MULTI/IMDB-BINARY | 2406.15523 |  |  |  | AUROC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | IMDB-MULTI∓IMDB-BINARY | 2406.15523 |  |  |  | AUROC |  |  | dataset is not in the catalog |
@@ -4333,6 +4034,7 @@ ightarrow$E | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | MalNet | 2011.07682 |  |  |  | Macro-F1 |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | MalNet | 2407.14106 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | MALNET | 2510.14336 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
+| pending | unknown_dataset | MalNetTiny | 2502.14546 | Upstream dataset for pre-training | 4 | graph_classification |  |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | malonaldehyde | 1611.04678 |  |  |  | MAE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Malonaldehyde | 2209.14865 |  |  |  | MAE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Malonaldehyde | 2305.18407 |  |  |  | MAE |  |  | dataset is not in the catalog |
@@ -5384,7 +5086,9 @@ ightarrow$E | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | ogbg-ClinTox | 2206.02886 |  |  |  | AUC |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbg-ESOL | 2406.01899 |  |  |  | MAE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbg-Lipo | 2406.01899 |  |  |  | MAE |  |  | dataset is not in the catalog |
+| pending | unknown_dataset | ogbg-molbace | 2502.14546 | Molecular graph dataset for classification | 5 | graph_classification |  |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbg-molbbbbp | 2009.02027 |  |  |  | ROC-AUC |  |  | dataset is not in the catalog |
+| pending | unknown_dataset | ogbg-molbbbp | 2502.14546 | Molecular graph dataset for classification | 5 | graph_classification |  |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbg-molesol | 2009.02027 |  |  |  | RMSE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbg-molesol | 2106.05819 |  |  |  | RMSE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ogbg-molesol | 2110.00577 |  |  |  | RSMSE |  |  | dataset is not in the catalog |
@@ -5549,6 +5253,7 @@ ightarrow$E | 2403.01467 |  |  |  | Accuracy |  |  | dataset is not in the catal
 | pending | unknown_dataset | Pcqm4m_g25_n4 | 2310.04292 |  |  |  | MAE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | Pcqm4m_n4 | 2310.04292 |  |  |  | MAE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | PCQM4M_N4 | 2404.11568 | Dataset used for pretraining scaling analysis (node-level). |  |  | Power law constants | N4 |  | dataset is not in the catalog |
+| pending | unknown_variant | PCQM4Mv2 | 2502.14546 | Large scale molecular graph regression dataset | 6 | graph_regression | Val. MAE | validation split |  | variant hint is not tracked: validation split |
 | pending | unknown_dataset | PCQM4Mv2 (subset) | 2505.13087 |  |  |  | MAE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | PCQM4Mv2-subset | 2410.18676 |  |  |  | MAE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | PCQv2 | 2203.04810 |  |  |  | MAE |  |  | dataset is not in the catalog |
@@ -7998,6 +7703,7 @@ ightarrow$EN | 2104.06608 |  |  |  | Hits@1, Hits@10, Hits@50 |  |  | dataset is
 | pending | unknown_dataset | ZINC (no edge feat.) | 2106.05667 |  |  |  | MAE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ZINC 2M | 2405.01350 | MoleculeNet dataset for transfer learning | 1 | graph_classification | ROC-AUC |  | graphs=249456, avg nodes=23.2, avg edges=24.9 | dataset is not in the catalog |
 | pending | unknown_dataset | Zinc SMILES | 1802.08786 |  |  |  | Accuracy |  |  | dataset is not in the catalog |
+| pending | unknown_dataset | ZINC-12k | 2508.05070 | GNN benchmark dataset | 14 | graph_regression | MAE |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | zinc-250k | 2504.19785 | Molecule generation benchmark dataset | 3 | graph_generation | FCD, Validity, Novelty, SNN, Frag, Scaf, IntDiv_1, Uniqueness |  |  | dataset is not in the catalog |
 | pending | unknown_dataset | ZINC-2M | 2506.20362 | Large-scale molecular dataset for transfer learning | 9 | graph_classification | Accuracy | Pre-trained on ZINC-2M | graphs=249456, avg nodes=23.2, avg edges=24.9 | dataset is not in the catalog |
 | pending | unknown_dataset | ZINC-full | 2305.15747 | ZINC dataset for graph regression | 2 | graph_regression | MAE | full |  | dataset is not in the catalog |
@@ -8180,4 +7886,4 @@ ightarrow$EN | 2104.06608 |  |  |  | Hits@1, Hits@10, Hits@50 |  |  | dataset is
 These rows remain in pending_datasets, but they already resolve against the current DB and should not be treated as missing coverage.
 
 
-Detailed table: 367 rows (loaded below).
+Detailed table: 666 rows (loaded below).

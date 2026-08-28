@@ -70,48 +70,6 @@ results:
   dataset: Actor
   is_multi_metric: true
   rows:
-  - model: NodeFormer
-    model_key: nodeformer
-    model_plain: NodeFormer
-    metric_values:
-    - 0.7623
-    - null
-    - null
-    metric_stds:
-    - 0.0042
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2505.15845'
-    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
-      Learning Models'
-    published_venue: ''
-    date: May 19, 2025
-    date_display: May 2025
-    date_iso: '2025-05-19'
-    codebase_url: ''
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 1
-    is_best: true
-    sort_value: 0.7623
-    sort_std: 0.0042
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
   - model: DiGGR
     model_key: diggr
     model_plain: DiGGR
@@ -139,8 +97,8 @@ results:
     codebase_url: ''
     uses_external_data: false
     is_global_top: true
-    global_rank: 2
-    is_best: false
+    global_rank: 1
+    is_best: true
     sort_value: 0.4535
     sort_std: 0.0353
     has_value_gap: false
@@ -180,10 +138,51 @@ results:
     codebase_url: https://github.com/Hugo-Attali/TRIGON-CIKM-2025
     uses_external_data: false
     is_global_top: true
-    global_rank: 3
-    is_best: false
+    global_rank: 2
+    is_best: true
     sort_value: 0.4402
     sort_std: 0.0028
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: DoG
+    model_key: dog
+    model_plain: DoG
+    metric_values:
+    - 0.432
+    - null
+    - null
+    metric_stds:
+    - 0.012
+    - null
+    - null
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2503.12563'
+    title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
+    published_venue: ''
+    date: Mar 16, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-16'
+    codebase_url: https://github.com/Statistical-Deep-Learning/DoG
+    uses_external_data: true
+    is_global_top: true
+    global_rank: 3
+    is_best: true
+    sort_value: 0.432
+    sort_std: 0.012
     has_value_gap: false
     has_value_note: false
     paper_rank: null
@@ -221,7 +220,7 @@ results:
     codebase_url: ''
     uses_external_data: false
     is_global_top: true
-    global_rank: 55
+    global_rank: 54
     is_best: false
     sort_value: 0.4026
     sort_std: 0.0108
@@ -298,7 +297,7 @@ results:
     comparison_source_arxiv: '2111.06748'
     is_best: false
     is_std_outlier: false
-    global_rank: 67
+    global_rank: 66
   - model: FAGCN
     model_key: fagcn
     model_plain: FAGCN
@@ -362,7 +361,7 @@ results:
     comparison_source_arxiv: '2101.00797'
     is_best: false
     is_std_outlier: false
-    global_rank: 71
+    global_rank: 70
   - model: GraphSAGE
     model_key: graphsage
     model_plain: GraphSAGE
@@ -390,7 +389,7 @@ results:
     codebase_url: https://github.com/SDS-Lab/QW_Loss
     uses_external_data: false
     is_global_top: true
-    global_rank: 87
+    global_rank: 86
     is_best: false
     sort_value: 0.3899
     sort_std: 0.0085
@@ -466,7 +465,7 @@ results:
     comparison_source_arxiv: '2103.06064'
     is_best: false
     is_std_outlier: false
-    global_rank: 90
+    global_rank: 89
   - model: DGI
     model_key: dgi
     model_plain: DGI
@@ -529,7 +528,7 @@ results:
     comparison_source_arxiv: '2201.12843'
     is_best: false
     is_std_outlier: false
-    global_rank: 353
+    global_rank: 350
   - model: SAGE
     model_key: sage
     model_plain: SAGE
@@ -592,7 +591,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 384
+    global_rank: 381
   - model: GMI
     model_key: gmi
     model_plain: GMI
@@ -655,7 +654,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 405
+    global_rank: 402
   - model: NE
     model_key: ne
     model_plain: NE
@@ -717,7 +716,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 431
+    global_rank: 428
   - model: GAE
     model_key: gae
     model_plain: GAE
@@ -780,7 +779,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 443
+    global_rank: 440
   - model: N2V
     model_key: n2v
     model_plain: N2V
@@ -842,7 +841,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 494
+    global_rank: 491
   - model: GBT
     model_key: gbt
     model_plain: GBT
@@ -904,7 +903,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 498
+    global_rank: 495
   - model: AE
     model_key: ae
     model_plain: AE
@@ -966,7 +965,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 501
+    global_rank: 498
   - model: SDCN
     model_key: sdcn
     model_plain: SDCN
@@ -1028,7 +1027,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 511
+    global_rank: 508
   - model: S2V
     model_key: s2v
     model_plain: S2V
@@ -1090,7 +1089,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 525
+    global_rank: 522
   metrics:
   - Accuracy
   - F1

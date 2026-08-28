@@ -289,8 +289,8 @@ results:
     value_note: ''
     sort_value: 0.44
     sort_std: 0.01
-    global_rank: 165
-    paper_rank: 165
+    global_rank: 167
+    paper_rank: 167
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -359,8 +359,8 @@ results:
     value_note: ''
     sort_value: 0.43
     sort_std: 0.01
-    global_rank: 176
-    paper_rank: 176
+    global_rank: 179
+    paper_rank: 179
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -429,8 +429,8 @@ results:
     value_note: ''
     sort_value: 0.42
     sort_std: 0.01
-    global_rank: 192
-    paper_rank: 192
+    global_rank: 195
+    paper_rank: 195
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -499,8 +499,8 @@ results:
     value_note: ''
     sort_value: 0.4
     sort_std: 0.02
-    global_rank: 199
-    paper_rank: 199
+    global_rank: 202
+    paper_rank: 202
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -569,8 +569,8 @@ results:
     value_note: ''
     sort_value: 0.38
     sort_std: 0.01
-    global_rank: 204
-    paper_rank: 204
+    global_rank: 207
+    paper_rank: 207
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -589,7 +589,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id006
+- &id005
   dataset: Minesweeper
   rows:
   - model: BuNN
@@ -782,8 +782,8 @@ results:
     value_note: ''
     sort_value: 0.78
     sort_std: 0.05
-    global_rank: 114
-    paper_rank: 114
+    global_rank: 115
+    paper_rank: 115
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -851,8 +851,8 @@ results:
     value_note: ''
     sort_value: 0.71
     sort_std: 0.01
-    global_rank: 130
-    paper_rank: 130
+    global_rank: 133
+    paper_rank: 133
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -920,8 +920,8 @@ results:
     value_note: ''
     sort_value: 0.66
     sort_std: 0.02
-    global_rank: 136
-    paper_rank: 136
+    global_rank: 139
+    paper_rank: 139
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -989,8 +989,8 @@ results:
     value_note: ''
     sort_value: 0.63
     sort_std: 0.04
-    global_rank: 138
-    paper_rank: 138
+    global_rank: 141
+    paper_rank: 141
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1058,8 +1058,8 @@ results:
     value_note: ''
     sort_value: 0.62
     sort_std: 0.01
-    global_rank: 140
-    paper_rank: 140
+    global_rank: 143
+    paper_rank: 143
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1095,7 +1095,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 147
+    global_rank: 150
     sort_value: 0.5099
     sort_std: 0.0147
     comparison_type: global_top
@@ -5006,7 +5006,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id006
   dataset: Tolokers
   rows:
   - model: Polynormer-r
@@ -5551,10 +5551,10 @@ datasets_by_scope:
       dataset_slug: roman-empire
     - dataset: Amazon-ratings
       dataset_slug: amazon-ratings
-    - dataset: Tolokers
-      dataset_slug: tolokers
     - dataset: Minesweeper
       dataset_slug: minesweeper
+    - dataset: Tolokers
+      dataset_slug: tolokers
     - dataset: Questions
       dataset_slug: questions
 - scope: graph-level

@@ -774,8 +774,8 @@ results:
     value_note: ''
     sort_value: 0.43
     sort_std: 0.0032
-    global_rank: 177
-    paper_rank: 177
+    global_rank: 180
+    paper_rank: 180
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3956,7 +3956,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id008
+- &id007
   dataset: Minesweeper
   rows:
   - model: BuNN
@@ -4620,8 +4620,8 @@ results:
     value_note: ''
     sort_value: 0.8109
     sort_std: 0.0102
-    global_rank: 110
-    paper_rank: 110
+    global_rank: 111
+    paper_rank: 111
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4657,7 +4657,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 147
+    global_rank: 150
     sort_value: 0.5099
     sort_std: 0.0147
     comparison_type: global_top
@@ -8950,7 +8950,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id007
+- &id008
   dataset: Tolokers
   rows:
   - model: Polynormer-r
@@ -9707,10 +9707,10 @@ datasets_by_scope:
       dataset_slug: roman-empire
     - dataset: Amazon-ratings
       dataset_slug: amazon-ratings
-    - dataset: Tolokers
-      dataset_slug: tolokers
     - dataset: Minesweeper
       dataset_slug: minesweeper
+    - dataset: Tolokers
+      dataset_slug: tolokers
   - benchmark: GNNBenchmark
     benchmark_slug: gnnbenchmark
     datasets:

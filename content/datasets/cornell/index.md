@@ -47,7 +47,7 @@ stats:
     node_feature_type: sparse bag-of-words webpage features
     statistic_notes: Geom-GCN/WebKB preprocessing; exact edge counts can vary across
       cleaned versions
-result_count: 844
+result_count: 840
 best_model:
   model: P^2GNN
   value: 0.9541
@@ -2603,18 +2603,18 @@ variants:
     - null
     - null
     - null
-  row_count: 844
+  row_count: 840
   rows_json: /data/datasets/cornell/standard-split-rows.json
   chart_json: /data/datasets/cornell/standard-split-chart.json
   arch_counts:
     gnn: 591
-    hybrid: 144
-    graph_transformer: 22
+    hybrid: 143
+    graph_transformer: 19
     llm: 1
     walk: 4
     traditional: 46
   metric_counts:
-  - 808
+  - 804
   - 3
   - 9
   - 20

@@ -54,7 +54,7 @@ stats:
     positive_label_rate: 0.2
     statistic_notes: Synthetic 100×100 grid; all graph statistics are from Table 2
       of the heterophily benchmark paper
-result_count: 274
+result_count: 277
 best_model:
   model: BuNN
   value: 0.9899
@@ -134,6 +134,10 @@ papers:
   title: Heterophily-informed Message Passing
   date_iso: '2025-04-28'
   venue: TMLR 2025
+- arxiv_id: '2502.14546'
+  title: 'Position: Graph Learning Will Lose Relevance Due To Poor Benchmarks'
+  date_iso: '2025-02-20'
+  venue: ICML 2025
 - arxiv_id: '2502.10818'
   title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing in GNNs: Bridging
     Recurrent and Graph Learning'
@@ -1638,7 +1642,7 @@ variants:
     metric_stds:
     - 0.001
     - null
-  row_count: 274
+  row_count: 277
   rows_json: /data/datasets/minesweeper/standard-split-rows.json
   chart_json: /data/datasets/minesweeper/standard-split-chart.json
   arch_counts:
@@ -1649,7 +1653,7 @@ variants:
     walk: 0
     traditional: 11
   metric_counts:
-  - 179
+  - 182
   - 95
   milestones: &id001
   - value: 0.9403
